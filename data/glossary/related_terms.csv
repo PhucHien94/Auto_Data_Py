@@ -1,0 +1,2 @@
+term,variant,relation_type,lang,confidence,verified_by
+sữa tươi,bữa sáng dinh dưỡng,related,vi,low,"EXAMPLE ONLY - placeholder seeded 2026-08-18, not verified - relation_type=related needs a BA-confirmed definition (co-purchase vs category-sibling vs complementary) before real curation, see test-strategy artifact 1.2"

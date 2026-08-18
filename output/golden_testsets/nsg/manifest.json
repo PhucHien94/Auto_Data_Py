@@ -1,0 +1,31 @@
+{
+  "store": "nsg",
+  "anchor_lang": "vi",
+  "lang_record_counts": {
+    "en": 16311,
+    "vi": 16340,
+    "kr": 16173
+  },
+  "products_sampled": 300,
+  "max_products": 300,
+  "search_result_rows": 2934,
+  "search_result_by_dimension": {
+    "exact": 896,
+    "partial": 853,
+    "typo": 888,
+    "no_diacritics": 289,
+    "synonym": 5,
+    "regional": 2,
+    "related": 1
+  },
+  "autocomplete_prefix_groups": 612,
+  "glossary_loaded": {
+    "synonyms": 6,
+    "regional_terms": 2,
+    "related_terms": 1
+  },
+  "assumptions": [
+    "Autocomplete expected_suggestions ranking uses a popularity PROXY (best_sellings + ext_viewed), not real search logs.",
+    "regional/related dimensions only cover terms present in data/glossary/*.csv, which ship with placeholder rows only."
+  ]
+}

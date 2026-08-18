@@ -1,0 +1,30 @@
+TestSet,TestCaseID,ImageFile,InputMethod,Description,ExpectedResult,PassCriteria,Priority,Notes
+SetA,TC-A-001,setA_product_exact_01.jpg,Upload,High-quality product image that exactly matches catalog item,Exact product returned,Top-1 result matches product ID,High,
+SetA,TC-A-002,setA_product_exact_02.jpg,Upload,Another exact frontal product image,Exact product returned,Top-1 result matches product ID,High,
+SetB,TC-B-001,setB_angle_side_01.jpg,Upload,Same product different side angle,Product matched with high similarity,Top-3 contains product,Medium,
+SetB,TC-B-002,setB_angle_angled_02.jpg,Upload,Angled view with different background,Product matched with high similarity,Top-3 contains product,Medium,
+SetC,TC-C-001,setC_logo_only_01.jpg,Upload,Image contains only brand logo,Return brand or product family,Top-5 contains brand products,Low,
+SetD,TC-D-001,setD_blurred_01.jpg,Upload,Blurred low-quality photo,Return similar products or 'no confident match',Either acceptable (similar list or no result),Medium,Check confidence threshold
+SetD,TC-D-002,setD_noisy_01.jpg,Upload,Image with noise/low light,Similar product suggested,Top-5 contains correct product,Medium,
+SetE,TC-E-001,setE_nonproduct_scene_01.jpg,Upload,Image of room / scene not containing a product,No product found or irrelevant,No results or appropriate message,Low,
+SetF,TC-F-001,setF_color_variant_01.jpg,Upload,Same model different color,Return same model with color variants,Top-3 includes model variants,High,
+SetG,TC-G-001,setG_lowres_01.jpg,Upload,Very low-resolution thumbnail,Return similar products or fail gracefully,Top-5 contains product or show helpful message,Medium,
+SetH,TC-H-001,setH_duplicate_01.jpg,Upload,Duplicate of an existing catalog image,Return original product,Top-1 matches product ID,High,
+SetI,TC-I-001,setI_partial_crop_01.jpg,Upload,Partial crop showing only part of product,Return matching product or similar list,Top-5 contains correct product,Medium,
+SetJ,TC-J-001,setJ_corrupt_01.jpg,Upload,Corrupted image file that cannot be decoded,Error handled gracefully,User shown error message,Low,No crash
+SetK,TC-K-001,setK_sketch_01.jpg,Upload,Hand-drawn sketch of product,Return visually similar products or 'no match',Top-10 contains visually similar items,Low,
+SetL,TC-L-001,setL_multi_product_01.jpg,Upload,Image containing multiple products,Return list of recognized products,At least one correct product in results,Medium,
+SetM,TC-M-001,setM_occluded_01.jpg,Upload,Product partially occluded by other object,Return correct product within top results,Top-5 contains product,Medium,
+SetN,TC-N-001,setN_text_overlay_01.jpg,Upload,Image with text overlay/watermark,Return product ignoring overlay,Top-3 contains product,Medium,
+SetO,TC-O-001,setO_transformed_01.jpg,Upload,Image with rotation/flip transform,Return correct product,Top-3 contains product,Medium,
+SetP,TC-P-001,setP_similar_different_brand_01.jpg,Upload,Product visually similar but different brand,Return visually similar items and indicate brand difference,Top-5 contains similar items,Low,
+SetQ,TC-Q-001,setQ_background_clutter_01.jpg,Upload,Busy background,Return product ignoring background,Top-3 contains correct product,Medium,
+SetR,TC-R-001,setR_ocr_text_only_01.jpg,Upload,Photograph of product label (text-heavy),Match by OCR to product codes,Top-1 matches based on text,High,Verify OCR extraction
+SetS,TC-S-001,setS_reversed_colors_01.jpg,Upload,Image with color inversion or filters,Return visually similar products,Top-5 contains correct product,Low,
+SetT,TC-T-001,setT_preset_camera_mobile_01.jpg,Camera,Live mobile camera input of product,Real-time match with low latency,Top-3 contains product and response < target latency,High,Measure latency
+SetU,TC-U-001,setU_similar_category_01.jpg,Upload,Image with generic shape (e.g., shoe silhouette),Return category-level suggestions,Top-5 relevant category items,Low,
+SetV,TC-V-001,setV_multiple_angles_01.jpg,Upload,Bundle of images (3 angles),Return consolidated single product match,Aggregated result matches product ID,High,Test batch upload
+SetW,TC-W-001,setW_edge_case_large_01.jpg,Upload,Extremely large image file (>10MB),Handle size limits or downsample,Processed successfully or instruct user to reduce size,Low,Performance test
+SetX,TC-X-001,setX_format_webp_01.webp,Upload,WebP format image,Support WebP decoding and match result,Top-3 contains product,Medium,
+SetY,TC-Y-001,setY_transparent_png_01.png,Upload,Transparent-background PNG,Ignore transparency and match product,Top-3 contains product,Low,
+SetZ,TC-Z-001,setZ_similar_pattern_01.jpg,Upload,Products with same pattern but different items,Distinguish correct SKU where possible,Top-5 contains correct SKU or similar patterns,Medium,

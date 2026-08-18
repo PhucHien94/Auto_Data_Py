@@ -1,0 +1,7 @@
+term,variant,relation_type,lang,confidence,verified_by
+lợn,heo,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"
+heo,lợn,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"
+rau mùi,rau húng,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"
+rau mùi,ngò,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"
+rau húng,rau mùi,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"
+rau húng,ngò,synonym,vi,medium,"migrated from scripts/generate_multilang_queries.py SYNONYMS_VI 2026-08-18 - needs QA/BA re-verification"

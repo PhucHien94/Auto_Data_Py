@@ -1,0 +1,32 @@
+# Search API environments for scripts/run_autoscript.py.
+#
+# Fill in search_api / autocomplete_api once the URL is provided, or skip
+# this file entirely and pass --search-api / --autocomplete-api directly on
+# the command line for a one-off run.
+#
+# Auth tokens are read from an environment variable named by auth_header_env
+# (never store a real token in this file).
+
+staging:
+  search_api: null            # e.g. https://staging-search.internal/api/v1/search
+  autocomplete_api: null      # e.g. https://staging-search.internal/api/v1/suggest
+  method: GET                 # GET or POST
+  search_param: q
+  autocomplete_param: q
+  search_result_path: results
+  autocomplete_result_path: suggestions
+  auth_header_env: STAGING_SEARCH_TOKEN
+  topn: 10
+  tier3_threshold: 0.5
+
+production:
+  search_api: null
+  autocomplete_api: null
+  method: GET
+  search_param: q
+  autocomplete_param: q
+  search_result_path: results
+  autocomplete_result_path: suggestions
+  auth_header_env: PROD_SEARCH_TOKEN
+  topn: 10
+  tier3_threshold: 0.5

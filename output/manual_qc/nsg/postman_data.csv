@@ -1,0 +1,51 @@
+test_id,query,lang,dimension,expected_top1
+GS-NSG-002132,Men's unknown men 147-A02 onoff (random color delivery),en,exact,8936032982033
+GS-NSG-001652,Daily Sanitary,en,partial,P2316BVSDIANA8M
+GS-NSG-001093,Alask aCod Fish 200g,en,typo,8936188606135
+GS-NSG-001513,Thung 24 Chai Bia 1664 Blanc 5% ABV 330ml,vi,no_diacritics,8934692090068
+GS-NSG-001246,lưỡi lợn g-kitchen 500g,vi,synonym,2088890000001
+GS-NSG-002495,cá thơm một nắng cần giờ cắt khúc 500g,vi,regional,8936187610072
+GS-NSG-002934,bữa sáng dinh dưỡng,vi,related,8934841901849
+GS-NSG-000376,Nạc Bò Úc Cắt Lát Xào MR.T 250G,en,exact,8936230750571
+GS-NSG-001688,Emivest Happy Egg Song,kr,partial,8938511817294
+GS-NSG-002048,Lorenz Natura lSea Salt And Pepper Potato Chips 100G,en,typo,4018077712999
+GS-NSG-001884,Bot Tao Phong Cho Toc Got2b Volumania Mousse 24h Chai 250ml,vi,no_diacritics,7332531063456
+GS-NSG-000155,gói lợn tuyết nướng mỏng 100g,vi,synonym,P2404HEOTUYET100G
+GS-NSG-002496,cá khóm một nắng cần giờ cắt khúc 500g,vi,regional,8936187610072
+GS-NSG-000082,Cà Tím Dài 650G,vi,exact,2292170000005
+GS-NSG-001545,Vina Authentic SVT04B 남성용,kr,partial,8936202551465
+GS-NSG-001616,Bột Phụ Gai Làm Nở Bánh StFood Gói 250G,vi,typo,8859405999202
+GS-NSG-001144,Mon Qua Bat Ki,vi,no_diacritics,ONLSPECIALGIFT
+GS-NSG-001905,thăn chuột lợn 365 fresh 300g,vi,synonym,2089070000002
+GS-NSG-002478,Basic Icon Men's Brief BI009 Grey Size S-XL (EA),en,exact,8938527961271
+GS-NSG-001192,Khăn Ướt Baby Care,en,partial,8936072190672
+GS-NSG-001704,Đậu Cvoe 365 Fresh 350G,vi,typo,8936049694028
+GS-NSG-001137,Coc Cay Loai 1 500G,vi,no_diacritics,2039540000001
+GS-NSG-002375,nạc nọng lợn 365 fresh 200g,vi,synonym,2288700000003
+GS-NSG-000928,Vedette Grape Yogurt Mask 120ml (EA),en,exact,8936077412540
+GS-NSG-000645,Khổ Qua Rừng (Mướp,vi,partial,0412134240007
+GS-NSG-000511,Dép Quai Ngan gTrẻ Em Hù Kiệt HK3157 Màu Xám Size 29-34,vi,typo,8936070125638
+GS-NSG-000687,Nuoc Mam Chua Ngot Lang Chai Xua 300G,vi,no_diacritics,8938519953987
+GS-NSG-002454,kimbap lợn bulgogi big size yorihada,vi,synonym,0400291270005
+GS-NSG-000828,Golden Farm 패션후르츠 스무디 1L,kr,exact,8935118320134
+GS-NSG-000180,Choice L Clean,en,partial,8936186273322
+GS-NSG-000210,Hu Kiet Wome’ns Slippers HK3157 Black Size 35-38,en,typo,8936070126079
+GS-NSG-002484,Quan Lot Nam Basic Icon BI009 Size S-XL Mau Xam,vi,no_diacritics,8938527961271
+GS-NSG-000754,Kẹp Bướm Flexoffice 25mm FO-DC03,vi,exact,8935219482021
+GS-NSG-000878,Laurier Fresh&Free 초스림,kr,partial,8851818565029
+GS-NSG-001532,Tỏi khô âTy Ban Nha Koja 250g (ea),vi,typo,8712924008995
+GS-NSG-000787,Đo Choi Mo Hinh Kuromi The Witch's Feast S Figures TOP TOY (Giao Mau Ngau Nhien),vi,no_diacritics,6936785428057
+GS-NSG-000469,Lô 3 Quần Lót Nữ Su iBasic PA3V188 Size M-XL (Giao Màu Ngẫu Nhiên),vi,exact,8935310653757
+GS-NSG-001684,Trứng Gà Song Hỷ,vi,partial,8938511817294
+GS-NSG-000350,9 Phe Rbuy Pomelo Segments 1kg,en,typo,2312800000004
+GS-NSG-002354,Noi Next Style Đay Tu Hop Kim Nhom Chong Dinh Kims Cook 24cm (EA),vi,no_diacritics,8935283500850
+GS-NSG-002461,Mũ Bảo Hiểm Asia Nửa Đầu MT-117 Size L,vi,exact,8936115290079
+GS-NSG-000400,Trứng Gà Không Phôi,vi,partial,8936192440244
+GS-NSG-002743,Nước Raử Chén Mỹ Hảo 200g,vi,typo,P2404NRCMYHAO200G
+GS-NSG-001915,Mo Bia Hinh Phong Canh Viet Nam (Giao Mau Ngau Nhien),vi,no_diacritics,8936192562397
+GS-NSG-000345,요리하다 프리미엄 새우 & 니기리 스시 세트 2호 347G,kr,exact,0400283720006
+GS-NSG-002893,Blue 쌀겨,kr,partial,8936156730473
+GS-NSG-002834,NUOC TANGL UC BOOM+ HUONG CHANH 325ML,kr,typo,9556103135350
+GS-NSG-002138,Vo Nam Khong Co ONOFF 147-CA02,vi,no_diacritics,8936032982033
+GS-NSG-002256,Vivazz Sangria Light White 7% ABV Chai 750ml,kr,exact,8935020290110
+GS-NSG-000229,POONGMISO Matcha Sesame,en,partial,0400295750008
