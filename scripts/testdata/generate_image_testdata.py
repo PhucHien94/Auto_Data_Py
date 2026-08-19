@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 Generate image-search test input/output from an NDJSON product file.
 
 Usage:

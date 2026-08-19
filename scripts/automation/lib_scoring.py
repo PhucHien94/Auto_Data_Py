@@ -54,6 +54,24 @@ def score_autocomplete_row(expected_suggestions, actual_suggestions, tier3_thres
     return 4, recall
 
 
+def summarize_repeats(tiers, pass_tier=3):
+    """tiers: list of per-call tier ints (1 = best ... 4 = worst) for the SAME keyword,
+    captured from N separate actual-output calls. Returns a matching-ratio summary
+    answering "how often did this keyword's actual output match the expected output",
+    not just "did it match once"."""
+    n = len(tiers)
+    if n == 0:
+        return {"repeat_n": 0, "matching_ratio": None, "best_tier": None, "worst_tier": None, "stable": None}
+    matches = sum(1 for t in tiers if t <= pass_tier)
+    return {
+        "repeat_n": n,
+        "matching_ratio": round(matches / n, 3),
+        "best_tier": min(tiers),
+        "worst_tier": max(tiers),
+        "stable": len(set(tiers)) == 1,
+    }
+
+
 def reciprocal_rank(expected_top1, actual_topn):
     if not expected_top1 or not actual_topn:
         return 0.0
@@ -82,6 +100,9 @@ def aggregate_metrics(rows):
         idx = min(len(sorted_vals) - 1, int(len(sorted_vals) * pct_))
         return sorted_vals[idx]
 
+    ratios = [r["matching_ratio"] for r in rows if r.get("matching_ratio") is not None]
+    unstable = sum(1 for r in rows if r.get("stable_across_repeats") is False)
+
     return {
         "n": n,
         "precision_at_1_pct": pct(tier1),
@@ -93,4 +114,6 @@ def aggregate_metrics(rows):
         "latency_p95_ms": p_at(latencies, 0.95),
         "latency_median_ms": round(median(latencies), 1) if latencies else None,
         "tier4_count": sum(1 for r in rows if r["tier"] == 4),
+        "avg_matching_ratio": round(sum(ratios) / len(ratios), 3) if ratios else None,
+        "unstable_count": unstable if ratios else None,
     }

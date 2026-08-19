@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 import re
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TC_DIR = ROOT / 'output' / 'test_cases'
 KEYWORDS = [
     'recent', 'recent search', 'recent searches', 'clear all', 'clear history', 'history', 'login', 'device', 'account',

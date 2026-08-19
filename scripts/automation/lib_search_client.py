@@ -73,7 +73,7 @@ def extract_id_list(payload, result_path, id_keys=("product_id", "productId", "i
     return out
 
 
-def extract_keyword_list(payload, result_path):
+def extract_keyword_list(payload, result_path, keyword_keys=("keyword", "query", "text", "suggestion", "title")):
     """Extract a flat list of suggestion keyword strings from an autocomplete response."""
     items = None
     if result_path and isinstance(payload, dict) and isinstance(payload.get(result_path), list):
@@ -90,7 +90,7 @@ def extract_keyword_list(payload, result_path):
         if isinstance(item, str):
             out.append(item)
         elif isinstance(item, dict):
-            for k in ("keyword", "query", "text", "suggestion", "title"):
+            for k in keyword_keys:
                 if item.get(k):
                     out.append(str(item[k]))
                     break

@@ -7,14 +7,22 @@
 # Auth tokens are read from an environment variable named by auth_header_env
 # (never store a real token in this file).
 
+# Search and Autocomplete are two independent functions/APIs (separate endpoints,
+# separate response shapes) - every field below is namespaced search_* / autocomplete_*
+# on purpose, never shared, because REQ can (and does) define different response
+# schemas for each. Fill in *_id_fields / *_keyword_fields with the real field names
+# once the API contract is known; the defaults below are generic guesses only.
+
 staging:
   search_api: null            # e.g. https://staging-search.internal/api/v1/search
   autocomplete_api: null      # e.g. https://staging-search.internal/api/v1/suggest
   method: GET                 # GET or POST
   search_param: q
   autocomplete_param: q
-  search_result_path: results
-  autocomplete_result_path: suggestions
+  search_result_path: results          # top-level key in the Search response holding the result list
+  autocomplete_result_path: suggestions  # top-level key in the Autocomplete response holding the suggestion list
+  search_id_fields: [product_id, productId, id, sku]       # per-item key holding the product id, tried in order
+  autocomplete_keyword_fields: [keyword, query, text, suggestion, title]  # per-item key holding the suggested keyword
   auth_header_env: STAGING_SEARCH_TOKEN
   topn: 10
   tier3_threshold: 0.5
@@ -27,6 +35,8 @@ production:
   autocomplete_param: q
   search_result_path: results
   autocomplete_result_path: suggestions
+  search_id_fields: [product_id, productId, id, sku]
+  autocomplete_keyword_fields: [keyword, query, text, suggestion, title]
   auth_header_env: PROD_SEARCH_TOKEN
   topn: 10
   tier3_threshold: 0.5

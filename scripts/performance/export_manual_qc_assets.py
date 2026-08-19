@@ -5,7 +5,7 @@ ready-to-use manual-QC assets: a Postman collection + environment + data CSV,
 and a k6 load-test script + query fixture.
 
 Usage:
-  python scripts/export_manual_qc_assets.py --dataset-dir output/golden_testsets/nsg --out-dir output/manual_qc/nsg
+  python scripts/performance/export_manual_qc_assets.py --dataset-dir output/golden_testsets/nsg --out-dir output/manual_qc/nsg
 """
 import argparse
 import csv
@@ -137,15 +137,15 @@ def build_postman_environment():
 
 K6_SCRIPT_TEMPLATE = """\
 // k6 script for MART Smart Search - search endpoint spot-check / light load test.
-// Queries come from k6_queries.json (exported by scripts/export_manual_qc_assets.py),
+// Queries come from k6_queries.json (exported by scripts/performance/export_manual_qc_assets.py),
 // so this file itself never needs hand-editing per store/dataset.
 //
 // Usage:
 //   BASE_URL=https://staging-search.internal SEARCH_PATH=/api/v1/search \\
-//     k6 run scripts/loadtest/k6_search_test.js
+//     k6 run scripts/performance/k6_search_test.js
 //
 //   # control load shape from the CLI, no script edits needed:
-//   k6 run --vus 10 --duration 30s scripts/loadtest/k6_search_test.js
+//   k6 run --vus 10 --duration 30s scripts/performance/k6_search_test.js
 
 import http from 'k6/http';
 import { check, sleep } from 'k6';
@@ -218,8 +218,7 @@ def main():
             writer.writerow({k: r.get(k) for k in writer.fieldnames})
 
     # --- k6 ---
-    loadtest_dir = Path("scripts/loadtest")
-    loadtest_dir.mkdir(parents=True, exist_ok=True)
+    loadtest_dir = Path(__file__).resolve().parent
     k6_script_path = loadtest_dir / "k6_search_test.js"
     if not k6_script_path.exists():
         k6_script_path.write_text(K6_SCRIPT_TEMPLATE, encoding="utf-8")

@@ -1,13 +1,13 @@
 // k6 script for MART Smart Search - search endpoint spot-check / light load test.
-// Queries come from k6_queries.json (exported by scripts/export_manual_qc_assets.py),
+// Queries come from k6_queries.json (exported by scripts/performance/export_manual_qc_assets.py),
 // so this file itself never needs hand-editing per store/dataset.
 //
 // Usage:
 //   BASE_URL=https://staging-search.internal SEARCH_PATH=/api/v1/search \
-//     k6 run scripts/loadtest/k6_search_test.js
+//     k6 run scripts/performance/k6_search_test.js
 //
 //   # control load shape from the CLI, no script edits needed:
-//   k6 run --vus 10 --duration 30s scripts/loadtest/k6_search_test.js
+//   k6 run --vus 10 --duration 30s scripts/performance/k6_search_test.js
 
 import http from 'k6/http';
 import { check, sleep } from 'k6';

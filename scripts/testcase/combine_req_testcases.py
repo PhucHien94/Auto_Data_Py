@@ -24,7 +24,7 @@ except Exception:
     print("Missing python-docx. Please install with: pip install python-docx")
     sys.exit(1)
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 REQ_DIR = ROOT / "output" / "REQ"
 TESTCASE_DIR = ROOT / "output" / "test_cases"
 OUT_FILE = TESTCASE_DIR / "Combined_TestCases_auto.csv"
