@@ -5,7 +5,7 @@ ready-to-use manual-QC assets: a Postman collection + environment + data CSV,
 and a k6 load-test script + query fixture.
 
 Usage:
-  python scripts/performance/export_manual_qc_assets.py --dataset-dir output/golden_testsets/nsg --out-dir output/manual_qc/nsg
+  python scripts/performance/export_manual_qc_assets.py --dataset-dir SmartSearch/golden_testsets/nsg --out-dir SmartSearch/manual_qc/nsg
 """
 import argparse
 import csv

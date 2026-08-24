@@ -69,7 +69,7 @@ def stream_ndjson(path):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--ndjson', required=True)
-    p.add_argument('--out-dir', default='output/image_testdata')
+    p.add_argument('--out-dir', default='SmartSearch/image_testdata')
     p.add_argument('--max-products', type=int, default=1000)
     p.add_argument('--sample-per-product', type=int, default=1)
     p.add_argument('--topn', type=int, default=5)

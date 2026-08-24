@@ -1,0 +1,12 @@
+[
+  {
+    "store": "nsg",
+    "count": 16340,
+    "size_mb": 5.03
+  },
+  {
+    "store": "wle",
+    "count": 15508,
+    "size_mb": 4.7
+  }
+]

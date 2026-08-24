@@ -152,7 +152,7 @@ def make_variants_for_title(title, lang):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--v1', required=True, help='Path to v1 folder')
-    p.add_argument('--out', default='output/text_testdata/multilang_queries.xlsx')
+    p.add_argument('--out', default='SmartSearch/text_testdata/multilang_queries.xlsx')
     p.add_argument('--max-per-file', type=int, default=500)
     args = p.parse_args()
 

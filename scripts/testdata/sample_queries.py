@@ -34,7 +34,7 @@ def stratified_sample(df, by='variant_type', n=1000):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--in', dest='infile', required=True)
-    p.add_argument('--out', dest='outfile', default='output/text_testdata/sample_queries.xlsx')
+    p.add_argument('--out', dest='outfile', default='SmartSearch/text_testdata/sample_queries.xlsx')
     p.add_argument('--size', type=int, default=1000)
     args = p.parse_args()
 

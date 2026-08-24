@@ -1,9 +1,9 @@
 """
 Combine REQ documents and test case Excel files into a single combined CSV.
-- Reads .docx files from output/REQ
-- Reads .xlsx files from output/test_cases
+- Reads .docx files from SmartSearch/REQ
+- Reads .xlsx files from SmartSearch/testcases
 - Attempts to extract Requirement IDs and attach them to testcases
-- Writes output/test_cases/Combined_TestCases_auto.csv
+- Writes SmartSearch/testcases/Combined_TestCases_auto.csv
 
 Dependencies: pandas, python-docx, openpyxl
 """
@@ -25,8 +25,8 @@ except Exception:
     sys.exit(1)
 
 ROOT = Path(__file__).resolve().parents[2]
-REQ_DIR = ROOT / "output" / "REQ"
-TESTCASE_DIR = ROOT / "output" / "test_cases"
+REQ_DIR = ROOT / "SmartSearch" / "REQ"
+TESTCASE_DIR = ROOT / "SmartSearch" / "testcases"
 OUT_FILE = TESTCASE_DIR / "Combined_TestCases_auto.csv"
 
 REQ_PATTERN = re.compile(r'(REQ[-_ ]?\d+|R[EQ]?\d{2,}|Requirement\s*[:#-]?\s*(\w+))', re.IGNORECASE)

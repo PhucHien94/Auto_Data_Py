@@ -15,7 +15,7 @@ def preview(path, max_rows=10):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('path', nargs='?', default='output/test_cases/MART_SmartSearch_Combined_TestCases_v3.0_20260818_EN.xlsx')
+    ap.add_argument('path', nargs='?', default='SmartSearch/testcases/MART_SmartSearch_Combined_TestCases_v3.0_20260818_EN.xlsx')
     ap.add_argument('--max-rows', type=int, default=15)
     args = ap.parse_args()
 

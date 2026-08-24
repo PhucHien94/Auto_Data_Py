@@ -8,16 +8,16 @@ dataset directory and an API, get back a report - one command, one artifact.
 
 Usage:
   # one-off run, URL passed directly (e.g. right after it's shared in chat)
-  python scripts/run_autoscript.py --dataset-dir output/golden_testsets/nsg `
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg `
     --search-api https://staging-search.internal/api/v1/search `
     --autocomplete-api https://staging-search.internal/api/v1/suggest `
     --header "Authorization: Bearer <TOKEN>"
 
   # using a saved environment from config/environments.yaml
-  python scripts/run_autoscript.py --dataset-dir output/golden_testsets/nsg --env staging
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env staging
 
   # quick smoke test against a handful of rows before a full run
-  python scripts/run_autoscript.py --dataset-dir output/golden_testsets/nsg --env staging --limit 20
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env staging --limit 20
 """
 import argparse
 import json
@@ -295,7 +295,7 @@ def main():
 
     dataset_dir = Path(args.dataset_dir)
     ts = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    out_dir = Path(args.out_dir) if args.out_dir else Path("output/runs") / f"{dataset_dir.name}_{ts}"
+    out_dir = Path(args.out_dir) if args.out_dir else Path("SmartSearch/runs") / f"{dataset_dir.name}_{ts}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     wb = openpyxl.Workbook()

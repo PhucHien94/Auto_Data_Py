@@ -49,7 +49,7 @@ def translate_workbook(path: Path):
 
 
 def main():
-    default_dir = Path('output') / 'test_cases'
+    default_dir = Path('SmartSearch') / 'testcases'
     args = sys.argv[1:]
     files = []
     if args:

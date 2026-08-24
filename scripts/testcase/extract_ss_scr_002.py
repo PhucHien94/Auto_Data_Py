@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TC_DIR = ROOT / 'output' / 'test_cases'
+TC_DIR = ROOT / 'SmartSearch' / 'testcases'
 
 for xlsx in TC_DIR.glob('MART_SmartSearch_Combined_TestCases_v3.0_20260818*.xlsx'):
     if xlsx.name.startswith('~$'):

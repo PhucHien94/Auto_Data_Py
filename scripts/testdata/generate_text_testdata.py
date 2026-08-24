@@ -76,7 +76,7 @@ def make_variants(title, max_variants=3):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--ndjson', required=True)
-    p.add_argument('--out-dir', default='output/text_testdata')
+    p.add_argument('--out-dir', default='SmartSearch/text_testdata')
     p.add_argument('--max-products', type=int, default=500)
     p.add_argument('--variants', type=int, default=3)
     p.add_argument('--topn', type=int, default=5)

@@ -10,8 +10,8 @@ differently (SS-SCR-002-SC1-TC3: autocomplete suggests search keywords, not
 product titles).
 
 Usage:
-  python scripts/generate_master_testset.py --store nsg --out-dir output/golden_testsets/nsg
-  python scripts/generate_master_testset.py --all-stores --out-dir output/golden_testsets
+  python scripts/generate_master_testset.py --store nsg --out-dir SmartSearch/golden_testsets/nsg
+  python scripts/generate_master_testset.py --all-stores --out-dir SmartSearch/golden_testsets
 
 Known assumptions (see manifest.json written alongside the output):
   - Autocomplete "expected_suggestions" popularity is a PROXY built from
@@ -232,7 +232,7 @@ def main():
     p.add_argument("--glossary-dir", default="data/glossary")
     p.add_argument("--max-products", type=int, default=300)
     p.add_argument("--topn", type=int, default=10, help="suggestion list size for autocomplete_expected")
-    p.add_argument("--out-dir", default="output/golden_testsets")
+    p.add_argument("--out-dir", default="SmartSearch/golden_testsets")
     args = p.parse_args()
 
     if not args.store and not args.all_stores:

@@ -22,7 +22,7 @@ def add_template(excel_path: Path):
 
 
 if __name__ == '__main__':
-    p = Path('output') / 'text_testdata' / 'text_testdata.xlsx'
+    p = Path('SmartSearch') / 'text_testdata' / 'text_testdata.xlsx'
     if not p.exists():
         print('Excel file not found:', p)
     else:
