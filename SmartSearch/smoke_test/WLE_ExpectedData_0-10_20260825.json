@@ -1,0 +1,4978 @@
+{
+  "generatedDate": "2026-08-25",
+  "store": "wle",
+  "batchRange": "0-10",
+  "totalScenarios": 9,
+  "scenarios": [
+    {
+      "test_id": "WLE-TD-000001",
+      "sku": null,
+      "dimension": "intent",
+      "query": "gym",
+      "note": "Mục đích/ngữ cảnh sử dụng: \"gym\" (kiểm chứng có kết quả thật trong catalog WLE).",
+      "confidence": 65,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Bình Nước",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 2.6
+        },
+        {
+          "keyword": "Bình Nước Thể",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 1
+        },
+        {
+          "keyword": "bình nước thể thao",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 1
+        },
+        {
+          "keyword": "Thảm Tập Yoga",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 0.4
+        },
+        {
+          "keyword": "Thảm Tập",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 0.4
+        },
+        {
+          "keyword": "thực phẩm khô",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 0.4
+        },
+        {
+          "keyword": "gym",
+          "verified_product_count": "5+",
+          "best_score": 65,
+          "popularity": 1
+        },
+        {
+          "keyword": "tập gym",
+          "verified_product_count": "5+",
+          "best_score": 45,
+          "popularity": 0.4
+        },
+        {
+          "keyword": "hàng phi thực phẩm / nhà cửa đời sống",
+          "verified_product_count": "5+",
+          "best_score": 35,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "thời trang / thể thao",
+          "verified_product_count": "5+",
+          "best_score": 35,
+          "popularity": 2.6
+        },
+        {
+          "keyword": "quần short",
+          "verified_product_count": "5+",
+          "best_score": 20,
+          "popularity": 16.8
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8936059000864",
+          "score": 65,
+          "tier": "description"
+        },
+        {
+          "sku": "8936192561529",
+          "score": 45,
+          "tier": "intent"
+        },
+        {
+          "sku": "8936192561536",
+          "score": 45,
+          "tier": "intent"
+        },
+        {
+          "sku": "8936059004107",
+          "score": 45,
+          "tier": "intent"
+        },
+        {
+          "sku": "P2325BINHNUOCTHETHAO",
+          "score": 45,
+          "tier": "intent"
+        }
+      ],
+      "search_results_total_before_cap": 5,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000061",
+      "sku": null,
+      "dimension": "category",
+      "query": "bánh kẹo",
+      "note": "Duyệt theo danh mục: \"bánh kẹo\" (kiểm chứng có kết quả thật trong catalog WLE).",
+      "confidence": 65,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Yến Mạch",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 133429.6
+        },
+        {
+          "keyword": "Bánh Mì",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 31
+        },
+        {
+          "keyword": "Bánh Quy Richy",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 27.8
+        },
+        {
+          "keyword": "Bánh Quy",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 27.8
+        },
+        {
+          "keyword": "Bánh Orion Chocopie",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 26.400000000000002
+        },
+        {
+          "keyword": "Bánh Orion",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 26.400000000000002
+        },
+        {
+          "keyword": "Bánh Gạo Oishi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 25
+        },
+        {
+          "keyword": "Bánh Gạo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 25
+        },
+        {
+          "keyword": "Rong Biển",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 25
+        },
+        {
+          "keyword": "Rong Biển Kẹp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 22
+        },
+        {
+          "keyword": "Thanh Gạo Lứt",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 17.6
+        },
+        {
+          "keyword": "Thanh Gạo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 17.6
+        },
+        {
+          "keyword": "Bánh Quy Margaret",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.8
+        },
+        {
+          "keyword": "Kẹo Dynamite Chews",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Kẹo Dynamite",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Snack Lay's Vị",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Snack Lay's",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Bánh Mì Hoa",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.200000000000001
+        },
+        {
+          "keyword": "Bánh Quế Cal",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.4
+        },
+        {
+          "keyword": "Bánh Quế",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.4
+        },
+        {
+          "keyword": "Bánh Que Pocky",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.8
+        },
+        {
+          "keyword": "Bánh Que",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.8
+        },
+        {
+          "keyword": "Bánh Que Lotte",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.4
+        },
+        {
+          "keyword": "Bánh Quy Nhân",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.200000000000001
+        },
+        {
+          "keyword": "Bánh Gạo Nướng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.200000000000001
+        },
+        {
+          "keyword": "Bánh Gạo An",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12
+        },
+        {
+          "keyword": "Bánh Cá Bống",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        },
+        {
+          "keyword": "Bánh Cá",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        },
+        {
+          "keyword": "Bánh Ăn Sáng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        },
+        {
+          "keyword": "Bánh Ăn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8801019206351",
+          "score": 65,
+          "tier": "description"
+        },
+        {
+          "sku": "8936047444250",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936029424317",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803058420",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8935319204790",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938553884148",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062873418",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934564130014",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936079121839",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938532962720",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8996001353592",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8990044000222",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062641260",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062859054",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036028300",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036026535",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936029421781",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036028850",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8886467100260",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8996001350577",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036028676",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "6942836703301",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938530499372",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936172871174",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062634453",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8993175533157",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803056129",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936188490734",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8859559600962",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036020137",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036020380",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936074609646",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8935273679108",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803056112",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936029425710",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938530499969",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934680033114",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803054590",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "9556001027252",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934680042888",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062521258",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934677000358",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936079122256",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8935342400084",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062634415",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "7622300761349",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938532962515",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036026375",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934609802388",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803028393",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936079120092",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036026191",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934609471355",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936172870917",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938506170779",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938510550116",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934677038016",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936047448777",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8998389162025",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803043730",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934680012652",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938501118011",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936036028379",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936081295078",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8996001303658",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801204204407",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062273294",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936074609950",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "4901330742959",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936079126100",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8935032202622",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8996001320136",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8934803046212",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8935011805820",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8801062868742",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938510550123",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936226200561",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936047443444",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8936029421439",
+          "score": 35,
+          "tier": "category"
+        },
+        {
+          "sku": "8938530499358",
+          "score": 35,
+          "tier": "category"
+        }
+      ],
+      "search_results_total_before_cap": 2318,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000090",
+      "sku": "4000856003404",
+      "dimension": "typo",
+      "query": "Bia Warsetiner 4.8% ABV Lon 500ml",
+      "note": "Gõ sai 1 ký tự trong \"Bia Warsteiner 4.8% ABV Lon 500ml\" (SKU 4000856003404).",
+      "confidence": 20,
+      "route": "keyword_ai",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Lốc 6",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 29898
+        },
+        {
+          "keyword": "Lốc 4",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 29898
+        },
+        {
+          "keyword": "hộp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 2525.8
+        },
+        {
+          "keyword": "Bia Tiger Crystal",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Bia Tiger",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Thùng 20 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Thùng 20",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Thùng 6",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Bia Tiger 5%",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Thùng 24",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 29.200000000000003
+        },
+        {
+          "keyword": "Bia Hà Nội",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Bia Hà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Thùng 24 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Thùng 12",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Thức Uống",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.800000000000001
+        },
+        {
+          "keyword": "Bia Budweiser",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Bia Budweiser 5%",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Bia Budweiser Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Bia 333 5.3%",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.800000000000001
+        },
+        {
+          "keyword": "Bia 333",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.800000000000001
+        },
+        {
+          "keyword": "Bia Red Horse",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.4
+        },
+        {
+          "keyword": "Bia Red",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.4
+        },
+        {
+          "keyword": "Lốc 6 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.2
+        },
+        {
+          "keyword": "Bia Sapporo Premium",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6
+        },
+        {
+          "keyword": "Bia Sapporo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6
+        },
+        {
+          "keyword": "Bia Sài Gòn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.6000000000000005
+        },
+        {
+          "keyword": "Bia Sài",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.6000000000000005
+        },
+        {
+          "keyword": "Bia Huda Xanh",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Bia Huda",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Thùng 12 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8936094291326",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260454",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772115070",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936036201642",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772227070",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291333",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8594403310115",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291395",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4000856003404",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291302",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822842338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000440053",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012413338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772225076",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "48935012443388",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260249",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012413328",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692070114",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692090037",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291210",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012413339",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443397",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201319",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000440862",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443366",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692090099",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012413322",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4962656136013",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012443394",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012443301",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012442581",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260058",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000442064",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822213336",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012443305",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8902246004984",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201371",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201616",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260355",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772286046",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822123253",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020072",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4901004021076",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443304",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4066600601920",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822116330",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291234",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822124250",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260508",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260447",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260232",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936036202458",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822363116",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012413321",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000440039",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772115049",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443342",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692040124",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692040056",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "6901035617628",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692011063",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822801335",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012442598",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000176",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692090051",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822112332",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291647",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000152",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020249",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822392116",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291678",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772745048",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291654",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4066600211815",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772285094",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "58935012443361",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020218",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201272",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 2393,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000091",
+      "sku": "8935058962098",
+      "dimension": "exact",
+      "query": "Dựng Heo CP 500G",
+      "note": "Tên sản phẩm chính xác: \"Dựng Heo CP 500G\" (SKU 8935058962098).",
+      "confidence": 100,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Phi Lê",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 40.400000000000006
+        },
+        {
+          "keyword": "Phi Lê Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 36
+        },
+        {
+          "keyword": "Cánh Tỏi Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20.6
+        },
+        {
+          "keyword": "Cánh Tỏi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20.6
+        },
+        {
+          "keyword": "Đùi Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20
+        },
+        {
+          "keyword": "Lạp Xưởng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20
+        },
+        {
+          "keyword": "Lạp xưởng tươi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20
+        },
+        {
+          "keyword": "Xúc Xích Vealz",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Xúc Xích",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Sườn Non",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18
+        },
+        {
+          "keyword": "Hạt Điều",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 17.6
+        },
+        {
+          "keyword": "Nạc Dăm Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Nạc Dăm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Vai Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Vai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Heo Xay",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Thịt Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Ba Rọi Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Ba Rọi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Cánh Giữa Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13
+        },
+        {
+          "keyword": "Cánh Giữa",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13
+        },
+        {
+          "keyword": "Má Đùi Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.8
+        },
+        {
+          "keyword": "Má Đùi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.8
+        },
+        {
+          "keyword": "Đùi Gà Rút",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.8
+        },
+        {
+          "keyword": "Cánh Gà CP",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12
+        },
+        {
+          "keyword": "Cánh Gà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12
+        },
+        {
+          "keyword": "Thịt Bắp Giò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Thịt Bắp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Bắp Giò Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Bắp Giò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8935058962098",
+          "score": 100,
+          "tier": "exact"
+        },
+        {
+          "sku": "2088970000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962128",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962067",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058963347",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970390",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962104",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058963330",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971052",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971083",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971069",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962081",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971045",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089120000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088890000001",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204250000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045452073",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058963316",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962111",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2288760000005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962043",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204320000001",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962050",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058963323",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962074",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058912529",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2080280000004",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962012",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089070000002",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936150842127",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971038",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058963354",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936125671554",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962029",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089130000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935319711267",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058930004",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934777008018",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938510494014",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045450147",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058912109",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936006930039",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935059940736",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058971090",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045451540",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936150842103",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938529045238",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936043370065",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938502710597",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936035441179",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058961145",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936125671547",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045450116",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572290540",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2614CAVIENCP",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2523XUCXICHHOACTHIT",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936035440943",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2523HEOXAY500G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962319",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2518UCGACP500G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2516MADUI500G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2422XUONGCP",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2613CHÂNGCP",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938503131971",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936205330036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "9300658407840",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936190861850",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101608508",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938510875165",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936123410254",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204350000002",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2220360000009",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216430602",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938503131377",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2040830000007",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204240000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2198660000008",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 903,
+      "is_single_exact_match": true,
+      "you_might_like": [
+        {
+          "sku": "2274980000000",
+          "name": "Thịt Heo Xay 350G",
+          "source": "substitute"
+        },
+        {
+          "sku": "8935058962029",
+          "name": "Thịt Đùi Heo CP 300G",
+          "source": "substitute"
+        },
+        {
+          "sku": "8935058962074",
+          "name": "Nạc Đùi Heo CP 300G",
+          "source": "substitute"
+        },
+        {
+          "sku": "8936190862086",
+          "name": "Thịt Ba Chỉ Bò Úc Thái Mỏng 365 Fresh 700G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "8936205330036",
+          "name": "Phi Lê Gà Green Chicken 500G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "8936207131723",
+          "name": "Ba Chỉ Bò Canada Meaty Chopshop 300G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "8936190861850",
+          "name": "Thịt Ba Chỉ Heo Thái Mỏng 365 Fresh 700G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "8936207132041",
+          "name": "Lõi Vai Bò Úc Aukobe 200G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "8935058963347",
+          "name": "Cánh Tỏi Gà CP 500G",
+          "source": "best_seller"
+        },
+        {
+          "sku": "2080330000008",
+          "name": "Xương Đùi Gà CP 520G",
+          "source": "best_seller"
+        }
+      ]
+    },
+    {
+      "test_id": "WLE-TD-000092",
+      "sku": "8852199189118",
+      "dimension": "regional",
+      "query": "snack cá full fish vị mực nướng bịch 70g",
+      "note": "Từ địa phương \"gói\"->\"bịch\" trong \"Snack Cá Full Fish Vị Mực Nướng Gói 70G\" (SKU 8852199189118).",
+      "confidence": 60,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "gói",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 133429.6
+        },
+        {
+          "keyword": "Cà Phê",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 41.800000000000004
+        },
+        {
+          "keyword": "Bánh Gạo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 25
+        },
+        {
+          "keyword": "Rong Biển",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 25
+        },
+        {
+          "keyword": "Snack Lay's Vị",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Snack Lay's",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Bánh Gạo Nướng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.200000000000001
+        },
+        {
+          "keyword": "Cá Bống",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        },
+        {
+          "keyword": "Snack Khoai Tây",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Snack Khoai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Bánh Xốp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Gia Vị",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.8
+        },
+        {
+          "keyword": "Cà Phê Hòa",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.200000000000001
+        },
+        {
+          "keyword": "Bánh Snack",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.200000000000001
+        },
+        {
+          "keyword": "Snack Que",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.6000000000000005
+        },
+        {
+          "keyword": "Bánh Dừa Nướng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Bánh Dừa",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Đậu Phộng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7
+        },
+        {
+          "keyword": "Sốt Ướp Thịt",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Sốt Ướp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Snack Swing Vị",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Snack Swing",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Bánh Khoai Tây",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.2
+        },
+        {
+          "keyword": "Bánh Khoai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.2
+        },
+        {
+          "keyword": "Snack Oishi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.2
+        },
+        {
+          "keyword": "Snack Hải Sản",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.800000000000001
+        },
+        {
+          "keyword": "Snack Hải",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.800000000000001
+        },
+        {
+          "keyword": "Snack Lay's Wavy",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Gia Vị Nêm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Đậu Phộng Ròn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.4
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8852199189118",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8852199186117",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8859157700521",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859157720369",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859157700996",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859157700514",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8852199182119",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8859157720352",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8852199180115",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079123291",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936132380159",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936149340481",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859178100249",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936149340368",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935297104716",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936149340061",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936149340047",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936006344430",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938509558031",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936132380111",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938509558024",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935297105133",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079120108",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934637514871",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079121778",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079122348",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936029422542",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8801062380213",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936191314737",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8850157407007",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079121013",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935039514209",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934803071054",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935311110921",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079287511",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936036027129",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934803070064",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8858702411790",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935039514278",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936132380074",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934803024883",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936006342511",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8938544489635",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934683002162",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936049052613",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935039514261",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936136168326",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079121815",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935342401715",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859178100256",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936036026160",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079121761",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936029423907",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935067703644",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934803070446",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935149550883",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935342401203",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "P2613RBNGENKAIHS",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "P2613BRNGENKAIBBQ",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8850157530910",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8859470510128",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936191317806",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936079124922",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936109181994",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8938500810770",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850157409551",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079126032",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8809099642762",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934803044027",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934680011488",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934803071238",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850157408554",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079126476",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079126070",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934803012880",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850157401494",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850157408523",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936079126025",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850157402231",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850718816057",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 2961,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000096",
+      "sku": "P2501XXCOCKTAIL250G",
+      "dimension": "no_diacritics",
+      "query": "Xuc Xich Cocktail 250G",
+      "note": "Gõ không dấu cho \"Xúc Xích Cocktail 250G\" (SKU P2501XXCOCKTAIL250G).",
+      "confidence": 92,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "lạp xưởng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 20
+        },
+        {
+          "keyword": "Xúc Xích",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Xúc Xích Vealz",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Xúc Xích Bắp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 17.8
+        },
+        {
+          "keyword": "Xúc Xích Đức",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Xúc Xích Việt",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 11.4
+        },
+        {
+          "keyword": "Xúc Xích Vòng",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.4
+        },
+        {
+          "keyword": "Xúc Xích Mavin",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.200000000000001
+        },
+        {
+          "keyword": "Xúc Xích Romas",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.600000000000001
+        },
+        {
+          "keyword": "Xúc Xích Mỹ",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9
+        },
+        {
+          "keyword": "Xúc Xích Tiệt",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8
+        },
+        {
+          "keyword": "Xúc Xích Yummy",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.800000000000001
+        },
+        {
+          "keyword": "Xúc Xích Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.6000000000000005
+        },
+        {
+          "keyword": "Xúc Xích Vườn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Xúc Xích Arabiki",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Xúc Xích Roma",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Xúc Xích Truyền",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Xúc Xích Xông",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.2
+        },
+        {
+          "keyword": "Cơm Chiên",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7
+        },
+        {
+          "keyword": "Cơm Chiên Kimchi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Xúc Xích Phô",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.2
+        },
+        {
+          "keyword": "Xúc Xích Ponnie",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.2
+        },
+        {
+          "keyword": "Xúc Xích Vienna",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5
+        },
+        {
+          "keyword": "Xúc Xích Sụn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5
+        },
+        {
+          "keyword": "Xúc Xích Bò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.2
+        },
+        {
+          "keyword": "Xúc Xích School",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4
+        },
+        {
+          "keyword": "Xúc Xích Pháp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4
+        },
+        {
+          "keyword": "Xúc xích Frankfurter",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.8000000000000003
+        },
+        {
+          "keyword": "Xúc Xích Cocktail",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.6
+        },
+        {
+          "keyword": "Xúc Xích Bockwurst",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.6
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "P2423XX250G",
+          "score": 92,
+          "tier": "no_diacritics"
+        },
+        {
+          "sku": "P2501XXCOCKTAIL250G",
+          "score": 92,
+          "tier": "no_diacritics"
+        },
+        {
+          "sku": "8935101608348",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216430428",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572192301",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970291",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101607938",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034878068",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938500490231",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938500490279",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019500055",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045450895",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019509010",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019599776",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572240514",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2413XXCUON",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2412XUCXICH250G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2414XXCHEESY",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2612XXDUCVIET",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2418XUCXICHLC250G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2415XX250G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2417XXCUON250G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970390",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216430602",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019599868",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034876743",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936082676333",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101608492",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101605804",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875258",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216431074",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174352",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045452073",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970451",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938524577185",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101605118",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216431609",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101600250",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101600625",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935297102866",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019598748",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034876767",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938529985930",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875487",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938529985947",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101608072",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875272",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936216431593",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058910259",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058910860",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572194350",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938524577390",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058911683",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058912529",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970505",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970284",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875708",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938500490033",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8424736901288",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572194343",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034877641",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174413",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174345",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938524577239",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034876798",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875357",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875333",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "0400307660004",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058913359",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938500490118",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572249548",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058960131",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058970406",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "3466250501235",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058911744",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938500490408",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935019520299",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572352224",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "3579260039398",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 502,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000097",
+      "sku": "2288700000003",
+      "dimension": "partial",
+      "query": "Nạc Nọng Heo",
+      "note": "Gõ một phần tên \"Nạc Nọng Heo 365 Fresh 200G\" (SKU 2288700000003).",
+      "confidence": 100,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Thịt Ba Chỉ",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 39.2
+        },
+        {
+          "keyword": "Thịt Ba",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 39.2
+        },
+        {
+          "keyword": "Mì Xào Khô",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 23.400000000000002
+        },
+        {
+          "keyword": "Mì Xào",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 23.400000000000002
+        },
+        {
+          "keyword": "Xúc Xích",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Sườn Non",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18
+        },
+        {
+          "keyword": "Nạc Dăm Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Nạc Dăm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Vai Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Vai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Heo Xay",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Thịt Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Bánh Bao",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15
+        },
+        {
+          "keyword": "Ba Rọi Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Ba Rọi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Sườn sụn heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Sườn sụn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Sụn heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Bánh Bao Nhân",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.600000000000001
+        },
+        {
+          "keyword": "Hạt Nêm Meizan",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.4
+        },
+        {
+          "keyword": "Hạt Nêm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.4
+        },
+        {
+          "keyword": "Thịt Bắp Giò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Thịt Bắp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Chà Bông",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.4
+        },
+        {
+          "keyword": "Sữa Tắm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.8
+        },
+        {
+          "keyword": "Dựng heo 500g",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.200000000000001
+        },
+        {
+          "keyword": "Dựng Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.200000000000001
+        },
+        {
+          "keyword": "Xương Đuôi Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.4
+        },
+        {
+          "keyword": "Xương Đuôi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.4
+        },
+        {
+          "keyword": "Xúc Xích Tiệt",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "2288700000003",
+          "score": 100,
+          "tier": "exact"
+        },
+        {
+          "sku": "2220360000009",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962111",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2288760000005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2220370000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962050",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962074",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2263950000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936190861850",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204350000002",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962104",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204240000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2198660000008",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938502525016",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936134363112",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962081",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2274980000000",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088970000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2220340000005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089120000006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875258",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088890000001",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2252070000000",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204250000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934563301156",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174352",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045452073",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2264030000005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088860000000",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2306280000005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088850000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962043",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2234380000000",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2263970000007",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204320000001",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936049053429",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2288780000009",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034877856",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934868173212",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875272",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934673424035",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962128",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089170000001",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572070012",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "0089686011036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8018896890348",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935039573602",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2088870000007",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936134363259",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875708",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962012",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962098",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938549018366",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089070000002",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936150842127",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936049053290",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034877641",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174413",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935101607211",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936134363198",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962029",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935039571028",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572174345",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935039508222",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8801007176338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2089130000003",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934563458140",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875357",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2306290000002",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936043370058",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8850987128622",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2204280000004",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936024241766",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936045450130",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8018896890218",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935058962067",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935001462545",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936034875630",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 199,
+      "is_single_exact_match": true,
+      "you_might_like": [
+        {
+          "sku": "2088850000003",
+          "name": "Tim heo 400g",
+          "source": "substitute"
+        },
+        {
+          "sku": "2088860000000",
+          "name": "Gan heo 400g",
+          "source": "substitute"
+        },
+        {
+          "sku": "2088870000007",
+          "name": "Cật heo 300g",
+          "source": "substitute"
+        },
+        {
+          "sku": "2089120000006",
+          "name": "Xương Đuôi Heo 500G",
+          "source": "substitute"
+        },
+        {
+          "sku": "2089130000003",
+          "name": "Xương ống heo 500g",
+          "source": "substitute"
+        },
+        {
+          "sku": "2198660000008",
+          "name": "Sườn sụn heo 300g",
+          "source": "substitute"
+        },
+        {
+          "sku": "8935058962128",
+          "name": "Xương Đuôi Heo CP 500G",
+          "source": "substitute"
+        },
+        {
+          "sku": "8935058962104",
+          "name": "Thịt Heo Xay CP 300G",
+          "source": "substitute"
+        },
+        {
+          "sku": "8935058962159",
+          "name": "Sụn Sườn Thái Lát CP 200G",
+          "source": "substitute"
+        },
+        {
+          "sku": "2263950000003",
+          "name": "Nạc Nọng 450G",
+          "source": "substitute"
+        }
+      ]
+    },
+    {
+      "test_id": "WLE-TD-000101",
+      "sku": "2274980000000",
+      "dimension": "synonym",
+      "query": "thịt lợn xay 350g",
+      "note": "Đồng nghĩa \"heo\"->\"lợn\" trong \"Thịt Heo Xay 350G\" (SKU 2274980000000).",
+      "confidence": 60,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Bánh Xếp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 54.2
+        },
+        {
+          "keyword": "Bánh Xếp Mandu",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 54.2
+        },
+        {
+          "keyword": "Thịt Ba Chỉ",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 39.2
+        },
+        {
+          "keyword": "Thịt Ba",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 39.2
+        },
+        {
+          "keyword": "heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 23.6
+        },
+        {
+          "keyword": "Bánh Xếp bibigo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 21.400000000000002
+        },
+        {
+          "keyword": "Xúc Xích",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 19
+        },
+        {
+          "keyword": "Sườn Non",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18
+        },
+        {
+          "keyword": "Thịt Bò Xay",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.8
+        },
+        {
+          "keyword": "Thịt Bò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.8
+        },
+        {
+          "keyword": "Thịt Vai Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Vai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Nạc Dăm Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Nạc Dăm",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 16.6
+        },
+        {
+          "keyword": "Thịt Heo Xay",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Thịt Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15.600000000000001
+        },
+        {
+          "keyword": "Bánh Bao",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 15
+        },
+        {
+          "keyword": "Ba Rọi Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Ba Rọi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Sườn sụn heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Sườn sụn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Sụn heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 13.200000000000001
+        },
+        {
+          "keyword": "Bánh Bao Nhân",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 12.600000000000001
+        },
+        {
+          "keyword": "Thịt Bắp Giò",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Thịt Bắp",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 10.8
+        },
+        {
+          "keyword": "Bánh Xếp Hàn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.200000000000001
+        },
+        {
+          "keyword": "Dựng heo 500g",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 9.200000000000001
+        },
+        {
+          "keyword": "Xương Đuôi Heo",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.4
+        },
+        {
+          "keyword": "Xương Đuôi",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8.4
+        },
+        {
+          "keyword": "Lưỡi heo 500g",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 8
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "2274980000000",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962104",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2264030000005",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "P2523XUCXICHHOACTHIT",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "P2523HEOXAY500G",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8934717401350",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "9333702155299",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934717402302",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934717401299",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "2310550000008",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936209420610",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936209420689",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936210411706",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "9333702155213",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "9333702155244",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934572021014",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935347400652",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935001462194",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935347400669",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936114065111",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "ONLVINABEEF1025",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2523BIBIGO350G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2519BBGO350G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2603BIBIGOTHIT350G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2608BIBIGO350G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2411MANDU",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2609LCFOOD350G",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "0412198540006",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2324THITXAY",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936190861850",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2204350000002",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2220360000009",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2204240000006",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2198660000008",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8938502525016",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962081",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2088970000006",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2220340000005",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2089120000006",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2088890000001",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2252070000000",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2204250000003",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962111",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2288760000005",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2088860000000",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2088850000003",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962036",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962043",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2234380000000",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2263970000007",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2204320000001",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2220370000006",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962050",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936034875272",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962128",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2089170000001",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962074",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8018896890348",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962005",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935039573602",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2088870000007",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962012",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962098",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2089070000002",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936150842127",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936049053290",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935101607211",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962029",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935039571028",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8801007176338",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2089130000003",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936034875357",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8850987128622",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2204280000004",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8018896890218",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935058962067",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935342400077",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8936021360057",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "8935311113748",
+          "score": 60,
+          "tier": "synonym"
+        },
+        {
+          "sku": "2212270000002",
+          "score": 60,
+          "tier": "synonym"
+        }
+      ],
+      "search_results_total_before_cap": 940,
+      "is_single_exact_match": false
+    },
+    {
+      "test_id": "WLE-TD-000105",
+      "sku": "8936000440039",
+      "dimension": "multilang",
+      "query": "Ha Noi 맥주 4.6% ABV 330ml",
+      "note": "Gõ tên tiếng Hàn cho \"Bia Hà Nội 4.6% ABV Lon 330ml\" (SKU 8936000440039).",
+      "confidence": 88,
+      "route": "keyword",
+      "autocomplete_suggestions": [
+        {
+          "keyword": "Lốc 6",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 29898
+        },
+        {
+          "keyword": "Bia Tiger Crystal",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Bia Tiger",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 33.2
+        },
+        {
+          "keyword": "Thùng 24",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 29.200000000000003
+        },
+        {
+          "keyword": "Bia Hà Nội",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Bia Hà",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Thùng 24 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 18.8
+        },
+        {
+          "keyword": "Thùng 12 Chai",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Thùng 12",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 14.600000000000001
+        },
+        {
+          "keyword": "Bia Budweiser Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Bia Budweiser",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 7.4
+        },
+        {
+          "keyword": "Bia 333 5.3%",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.800000000000001
+        },
+        {
+          "keyword": "Bia 333",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.800000000000001
+        },
+        {
+          "keyword": "Lốc 6 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 6.2
+        },
+        {
+          "keyword": "Bia Sài Gòn",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.6000000000000005
+        },
+        {
+          "keyword": "Bia Sài",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.6000000000000005
+        },
+        {
+          "keyword": "Bia Huda Xanh",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Bia Huda",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 5.4
+        },
+        {
+          "keyword": "Bia 333 Pilsner",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Bia Heineken Silver",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Bia Heineken",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Bia Tiger Sleek",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Thùng 12 Lon",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 4.6000000000000005
+        },
+        {
+          "keyword": "Bia Trúc Bạch",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.6
+        },
+        {
+          "keyword": "Bia Trúc",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.6
+        },
+        {
+          "keyword": "San Miguel Pale",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.2
+        },
+        {
+          "keyword": "San Miguel",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.2
+        },
+        {
+          "keyword": "Bia San Miguel",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.2
+        },
+        {
+          "keyword": "Bia San",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3.2
+        },
+        {
+          "keyword": "Bia Asahi Super",
+          "verified_product_count": "5+",
+          "best_score": 100,
+          "popularity": 3
+        }
+      ],
+      "search_results": [
+        {
+          "sku": "8936000440862",
+          "score": 88,
+          "tier": "multilang"
+        },
+        {
+          "sku": "8936000440039",
+          "score": 88,
+          "tier": "multilang"
+        },
+        {
+          "sku": "8936000440053",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822842338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822204716",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291005",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012413338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260249",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012413328",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692070114",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692090037",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291210",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012413339",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443397",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201319",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443366",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692090099",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012413322",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012443394",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "18935012443301",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000442064",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "38935012443305",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772118040",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201616",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772286046",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020072",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443304",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934591001042",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822116330",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291234",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260508",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260232",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012413321",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772115049",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443342",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "5410908000036",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692011063",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822801335",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934591001196",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000176",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822112332",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291647",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000152",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020249",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772745048",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000022",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "4901004002457",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936094291654",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938503070935",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934772285094",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "58935012443361",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020218",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822223410",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822220112",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260485",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692010011",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000039",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692020270",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934591001264",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822201210",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692040063",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822223014",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000183",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935012443380",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822391218",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "5410908000029",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000169",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "5391516872720",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934692040032",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "5410908000128",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8934822235338",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8935337000015",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8938503070041",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260478",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936000441029",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8936061260218",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8594403310122",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "8594403110128",
+          "score": 20,
+          "tier": "partial"
+        },
+        {
+          "sku": "P2525SAPPOROPRE",
+          "score": 20,
+          "tier": "partial"
+        }
+      ],
+      "search_results_total_before_cap": 390,
+      "is_single_exact_match": false
+    }
+  ]
+}

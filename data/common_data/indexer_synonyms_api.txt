@@ -1,0 +1,313 @@
+{
+    "items": [
+        {
+            "id": 23,
+            "word": "sữa tươi",
+            "synonyms": [
+                "sữa tươi tiệt trùng"
+            ],
+            "category": "beverages",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 22,
+            "word": "ký",
+            "synonyms": [
+                "kg"
+            ],
+            "category": "product-terms",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 21,
+            "word": "dĩa",
+            "synonyms": [
+                "đĩa"
+            ],
+            "category": "kitchen-household",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 20,
+            "word": "trái",
+            "synonyms": [
+                "quả"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 19,
+            "word": "chén",
+            "synonyms": [
+                "bát"
+            ],
+            "category": "kitchen-household",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 18,
+            "word": "vịt",
+            "synonyms": [
+                "ngan"
+            ],
+            "category": "animals-meat",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 17,
+            "word": "bắp",
+            "synonyms": [
+                "ngô"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 16,
+            "word": "thơm",
+            "synonyms": [
+                "dứa"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 15,
+            "word": "hộp",
+            "synonyms": [
+                "lon"
+            ],
+            "category": "product-terms",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 14,
+            "word": "sapoche",
+            "synonyms": [
+                "hồng xiêm"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 13,
+            "word": "hành",
+            "synonyms": [
+                "hành tây"
+            ],
+            "category": "spices-seasonings",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 12,
+            "word": "khoai mì",
+            "synonyms": [
+                "sắn"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 11,
+            "word": "bầu",
+            "synonyms": [
+                "bí"
+            ],
+            "category": "vegetables",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 10,
+            "word": "đậu phộng",
+            "synonyms": [
+                "lạc"
+            ],
+            "category": "vegetables",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 9,
+            "word": "heo",
+            "synonyms": [
+                "lợn"
+            ],
+            "category": "animals-meat",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 8,
+            "word": "mè",
+            "synonyms": [
+                "vừng"
+            ],
+            "category": "spices-seasonings",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 7,
+            "word": "gói",
+            "synonyms": [
+                "bịch"
+            ],
+            "category": "product-terms",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 6,
+            "word": "nồi",
+            "synonyms": [
+                "xoong"
+            ],
+            "category": "kitchen-household",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 5,
+            "word": "mận",
+            "synonyms": [
+                "roi"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        },
+        {
+            "id": 4,
+            "word": "chanh dây",
+            "synonyms": [
+                "chanh leo"
+            ],
+            "category": "fruits",
+            "active": true,
+            "createdBy": "system-seed",
+            "updatedBy": "system-seed",
+            "createdAt": "2026-08-25T07:12:29.067662Z",
+            "updatedAt": "2026-08-25T07:12:29.067662Z"
+        }
+    ],
+    "total": 23,
+    "page": 1,
+    "pageSize": 20,
+    "draftRevision": 1,
+    "appliedRevision": 0,
+    "hasPendingChanges": true
+}
+
+-----
+[
+    {
+        "id": 3,
+        "word": "nước ngọt",
+        "synonyms": [
+            "nước giải khát"
+        ],
+        "category": "beverages",
+        "active": true,
+        "createdBy": "system-seed",
+        "updatedBy": "system-seed",
+        "createdAt": "2026-08-25T07:44:33.237570Z",
+        "updatedAt": "2026-08-25T07:44:33.237570Z"
+    },
+    {
+        "id": 2,
+        "word": "chai",
+        "synonyms": [
+            "lọ"
+        ],
+        "category": "product-terms",
+        "active": true,
+        "createdBy": "system-seed",
+        "updatedBy": "system-seed",
+        "createdAt": "2026-08-25T07:44:33.237570Z",
+        "updatedAt": "2026-08-25T07:44:33.237570Z"
+    },
+    {
+        "id": 1,
+        "word": "mãng cầu",
+        "synonyms": [
+            "na"
+        ],
+        "category": "fruits",
+        "active": true,
+        "createdBy": "system-seed",
+        "updatedBy": "system-seed",
+        "createdAt": "2026-08-25T07:44:33.237570Z",
+        "updatedAt": "2026-08-25T07:44:33.237570Z"
+    }
+]

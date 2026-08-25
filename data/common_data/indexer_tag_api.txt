@@ -1,0 +1,5 @@
+REDACTED — original curl contained a live Incapsula WAF session cookie (visid_incap_*, incap_ses_*, GATEWAY_TOKENS) for dev-gateway.martonline.lotte.vn. Removed per credential-handling policy; endpoint contract kept below for reference.
+
+Endpoint: GET https://dev-gateway.martonline.lotte.vn/api/v1/indexer/tags?page=1&pageSize=100
+Auth: Incapsula WAF session cookie (Cookie header) — same session/cookie mechanism as config/environments.yaml's `dev` entry (see DEV_SEARCH_COOKIE). Not a bearer token.
+Response shape: not yet captured — paste the real JSON response body here (or a redacted sample) when available.

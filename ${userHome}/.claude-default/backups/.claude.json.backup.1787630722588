@@ -1,0 +1,58 @@
+{
+  "firstStartTime": "2026-08-25T04:00:06.599Z",
+  "machineID": "9d3b0e43b839e2646b9284422d161d067fc0b823bdbd9ba8441d111ebac3f27c",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "seenNotifications": {},
+  "hasResetAutoModeOptInForDefaultOffer": true,
+  "migrationVersion": 13,
+  "userID": "0092e10f2403eadd9ad57b0017db5d16d267e0fafcb92edc91e9007c1d2931c9",
+  "oauthAccount": {
+    "accountUuid": "2f4b9b0f-6c75-4984-9018-1c880bc8002a",
+    "emailAddress": "phuchien94@gmail.com",
+    "organizationUuid": "2f01dd8a-7571-4e55-806b-d6f6e3d156b1",
+    "hasExtraUsageEnabled": false,
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2025-04-09T07:55:02.384139Z",
+    "subscriptionCreatedAt": "2026-07-21T06:48:41.547547Z",
+    "ccOnboardingFlags": {},
+    "claudeCodeTrialEndsAt": null,
+    "claudeCodeTrialDurationDays": null,
+    "seatTier": null,
+    "displayName": "Mei",
+    "profileFetchedAt": 1787630419041,
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "phuchien94@gmail.com's Organization",
+    "organizationType": "claude_pro",
+    "organizationRateLimitTier": "default_claude_ai",
+    "userRateLimitTier": null
+  },
+  "claudeCodeFirstTokenDate": "2026-07-21T06:59:22.160649Z",
+  "clientDataCacheSlots": {
+    "bi1-88bd5aad7b7b40e2": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1787630420406,
+      "entrypoint": "cli",
+      "model": "claude-sonnet-5",
+      "org": "2f01dd8a-7571-4e55-806b-d6f6e3d156b1"
+    }
+  },
+  "additionalModelOptionsCache": [
+    {
+      "value": "claude-fable-5[1m]",
+      "label": "Fable",
+      "description": "Fable 5 · Most capable for your hardest and longest-running tasks"
+    }
+  ],
+  "additionalModelCostsCache": {},
+  "modelAccessCache": [],
+  "orgModelDefaultCache": null,
+  "autoCompactWindowsCache": null
+}

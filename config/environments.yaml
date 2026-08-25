@@ -13,6 +13,45 @@
 # schemas for each. Fill in *_id_fields / *_keyword_fields with the real field names
 # once the API contract is known; the defaults below are generic guesses only.
 
+# "dev" - the real MART dev-gateway contract, captured 2026-08-24 from a working browser
+# session (curl copied from devtools) and confirmed against live responses. Search and
+# Autocomplete really are shaped differently here, per the rule above:
+#   - Autocomplete: GET, query string, {"suggestions":[{"text":...}], "products":[...]}
+#   - Search: POST JSON body, extra static fields alongside the query text, a dedicated
+#     "x-search-mode: adaptive" header, response {"products":[{"sku":..., "productId":...}]}
+#     with resolvedMode telling you which branch of the BM25-first/AI-fallback flow answered
+#     (see SmartSearch/REQ/OVERVIEW-FLOW-VI_Phase1.pdf).
+# {store} in the URLs/extra-params below is filled from --dataset-dir's folder name (e.g.
+# "nsg"); {lang} from the `lang` key here (override with --lang).
+#
+# Auth here is a browser session cookie behind an Incapsula WAF (visid_incap_*,
+# incap_ses_*), NOT a bearer token - it expires/rotates, so there is nothing fixed to store
+# in this file. Before a run, copy the Cookie header value from a real browser session
+# (devtools Network tab -> a products/search or /autocomplete request -> Request Headers)
+# into the DEV_SEARCH_COOKIE env var (value only, no "Cookie:" prefix), then run with
+# --env dev - auth_header_name below routes it into the Cookie header automatically:
+#   $env:DEV_SEARCH_COOKIE = "visid_incap_XXX=...; incap_ses_XXX=..."
+#   python scripts/automation/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env dev --limit 20
+dev:
+  lang: vi
+  search_api: "https://dev-gateway.martonline.lotte.vn/api/v2/{lang}/{store}/products/search"
+  autocomplete_api: "https://dev-gateway.martonline.lotte.vn/api/v2/{lang}/{store}/products/autocomplete"
+  search_method: POST
+  autocomplete_method: GET
+  search_param: query                  # JSON body field carrying the query text
+  autocomplete_param: q                 # query-string field carrying the query text
+  search_extra_params: {storeId: "{store}", page: 1, pageSize: 20, sort: relevance, filters: {}, lang: "{lang}", trace: false}
+  autocomplete_extra_params: {limit: 8}
+  search_headers: {x-search-mode: adaptive}
+  search_result_path: products
+  autocomplete_result_path: suggestions
+  search_id_fields: [sku, productId, id, product_id]   # dataset SKUs are the barcode-style sku field, not the internal productId
+  autocomplete_keyword_fields: [text, keyword, query, suggestion, title]
+  auth_header_env: DEV_SEARCH_COOKIE
+  auth_header_name: Cookie
+  topn: 10
+  tier3_threshold: 0.5
+
 staging:
   search_api: null            # e.g. https://staging-search.internal/api/v1/search
   autocomplete_api: null      # e.g. https://staging-search.internal/api/v1/suggest

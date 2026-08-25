@@ -131,9 +131,88 @@
     ["cục pin", "pin"],
     ["bao tay", "găng tay"], ["găng tay", "bao tay"],
     ["dây sạc", "cáp sạc"],
+    // found via real 6-month search history (top-searched, all-zero-result
+    // query in the old system): "bi bi" is how users write the Korean brand
+    // "bibigo" split across a space — the 2-token phrase "bi"+"bi" doesn't
+    // literally appear in any product name (it's always "bibigo" as one
+    // word), so redirect to the working joined form (82 real grounded hits).
+    ["bi bi", "bibigo"],
+    // "heniken" (real 6-month search history, score 895, all-zero in the old
+    // system) is edit-distance-2 from "heineken" (missing + transposed
+    // letter) — outside the typo tier's edit-distance-1 tolerance — redirect
+    // explicitly rather than loosening the typo threshold catalog-wide.
+    ["heniken", "heineken"],
+    // "sô cô la" (spelled-out loanword, legacy/rare form — only 11 products
+    // literally carry this exact spelling) vs "socola" (the compressed form
+    // almost every product actually uses, 320 hits) — real search history
+    // showed "sô cô la đen" (dark chocolate) as a top all-zero query even
+    // though "sô cô la" alone has some hits, because none of those 11 also
+    // say "đen"; redirecting to "socola" surfaces the real dark-chocolate SKUs.
+    ["sô cô la", "socola"],
+    // "th 1l" (brand+size shorthand, real search history score 693,
+    // all-zero) for "TH true Milk" 1-liter cartons (43 real hits) — too
+    // compressed for any existing tier to parse as brand+quantity.
+    ["th 1l", "th true milk"],
+    // Real Indexer Service synonyms API, 2026-08-25 (data/common_data/
+    // indexer_synonyms_api.txt, ids 23/22/14 — DRAFT, appliedRevision=0,
+    // not yet live in production). Grounded against mart_vi_nsg_product.ndjson
+    // before adding (see [[project-real-search-history-data]] follow-up).
+    ["sữa tươi", "sữa tươi tiệt trùng"],
+    ["ký", "kg"], ["kg", "ký"],
+    // "sapoche" (1 hit, real) / "hồng xiêm" (same 1 product, dual-labeled) —
+    // alt-name pair, not dialect.
+    ["sapoche", "hồng xiêm"], ["hồng xiêm", "sapoche"],
+    // Page 2 of the same real API (ids 3/2/1, fetched 2026-08-25 later same
+    // day — id 3 "nước ngọt"/"nước giải khát" already existed above, skipped).
+    ["chai", "lọ"], ["lọ", "chai"],
+    // id 1 "mãng cầu"<->"na": one-direction only. "mãng cầu" is cleanly
+    // grounded (11 hits, all genuine fruit products). Bare "na" also matches
+    // "Cá Hồi NA UY..." (Norway, unrelated) — a real homograph, same class as
+    // the "roi"/"ngan" rejections above — so only na->mãng cầu is kept
+    // (expanding a "na" query toward the fruit is safe; the reverse would
+    // inject Norwegian-salmon noise into "mãng cầu" searches).
+    ["na", "mãng cầu"],
   ];
 
   const REGIONAL = [
+    // Real Indexer Service synonyms API, 2026-08-25 (see SYNONYMS comment
+    // above for provenance/caveat). These read as Bắc/Nam dialect pairs so
+    // grouped here rather than in SYNONYMS.
+    ["dĩa", "đĩa"],
+    // id 18 "vịt"<->"ngan": catalog has ZERO products literally named "ngan"
+    // (grounded check: 0 whole-token hits) — only the ngan->vịt direction is
+    // useful (real target), reverse direction would resolve to nothing.
+    ["ngan", "vịt"],
+    // id 15 "hộp"<->"lon": both grounded (hộp 1,750 hits, lon 326 hits) but
+    // "hộp" is an extremely generic packaging word — accepted per real dev
+    // data, flagged as a noise-risk (a "lon" search may surface unrelated
+    // boxed items via this pair), not independently verified query-by-query.
+    ["hộp", "lon"], ["lon", "hộp"],
+    ["bầu", "bí"], ["bí", "bầu"],
+    // id 7 "gói"<->"bịch": same generic-word caveat as hộp/lon ("gói" =
+    // 2,391 hits).
+    ["gói", "bịch"], ["bịch", "gói"],
+    // id 6 "nồi"<->"xoong": bare-token pair, both grounded (nồi 57, xoong 2)
+    // — REGIONAL already redirects "cái xoong" -> "nồi" but had no bare-word
+    // pair; this covers a plain "xoong" query too.
+    ["nồi", "xoong"], ["xoong", "nồi"],
+    // id 5 "mận"<->"roi": catalog's 2 "roi" whole-token hits are both
+    // unrelated homographs ("Bưởi Năm Roi" pomelo cultivar, "Roi Thai"
+    // coconut brand line) — NOT the wax-apple fruit. Only roi->mận kept
+    // (target "mận", 18 real hits); reverse omitted (ungrounded target).
+    ["roi", "mận"],
+    // id 4 "chanh dây"<->"chanh leo": catalog carries 0 products literally
+    // named "chanh leo" (Northern term) — only chanh leo->chanh dây kept
+    // (target grounded, 33 hits); reverse omitted.
+    ["chanh leo", "chanh dây"],
+    // Rejected candidate (NOT added), same call as the pre-existing
+    // "tập"/"vở" and "cặp tóc" rejections: id 20 real API pair "trái"<->
+    // "quả" is a bare single-token homograph risk — "quả" is a real, common
+    // token inside unrelated abstract-noun compounds ("hiệu quả"=effective,
+    // "kết quả"=result, "hậu quả"=consequence), so replacing "trái"->"quả"
+    // in a query would surface unrelated non-food products. The specific
+    // quả-X / trái-X pairs already in this file (quả xoài/trái xoài, etc.)
+    // remain — those are multi-word and don't have this collision.
     ["dứa", "thơm"], ["dứa", "khóm"],
     ["ngô", "bắp"],
     ["lạc", "đậu phộng"],
@@ -189,6 +268,8 @@
     "bơi lội": ["kính bơi"],
     "em bé": ["tã", "bỉm", "sữa bột", "khăn ướt", "bánh ăn dặm", "đồ chơi"],
     "trẻ sơ sinh": ["tã", "bỉm", "sữa bột", "khăn ướt"],
+    "đồ ăn cho bé": ["bánh ăn dặm", "sữa bột"],
+    "thức ăn cho bé": ["bánh ăn dặm", "sữa bột"],
     "sơ sinh": ["tã", "bỉm", "khăn ướt"],
     "nấu ăn": ["gạo", "dầu ăn", "nước mắm", "gia vị"],
     "vào bếp": ["gạo", "dầu ăn", "nước mắm", "gia vị"],
@@ -401,6 +482,10 @@
     "trà cà phê": "Trà, Cà Phê", "đồ uống nóng": "Trà, Cà Phê",
     "đồ dùng mẹ và bé": "Mẹ Và Bé", "đồ sơ sinh": "Mẹ Và Bé",
     "chăm sóc sức khoẻ": "Sức Khỏe, Làm Đẹp", "làm đẹp": "Sức Khỏe, Làm Đẹp",
+    // "mỹ phẩm" (cosmetics) is a top-searched real term (6-month history)
+    // with zero name/brand/description hits — no SKU is literally named or
+    // tagged "mỹ phẩm", but it's the natural umbrella term for this category.
+    "mỹ phẩm": "Sức Khỏe, Làm Đẹp",
     "rau củ tươi": "Rau Củ", "rau xanh": "Rau Củ",
     "thịt tươi sống": "Thịt", "thịt các loại": "Thịt",
     "quần áo": "Thời Trang", "đồ thời trang": "Thời Trang",
@@ -460,11 +545,18 @@
       .normalize("NFC");
   }
   function normalize(s) {
-    // "&" is dropped (not treated as a separator) so brand-style acronyms
-    // like "P&G"/"H&M" collapse into one token ("pg"/"hm") instead of two
-    // 1-char tokens that the length>=2 filter below would silently discard,
-    // which made those brands completely unsearchable.
-    return stripDiacritics(String(s || "").toLowerCase()).replace(/&/g, "").trim();
+    // "&"/"/" are dropped (not treated as separators) ONLY when they sit
+    // directly between two characters with no surrounding space, so a
+    // brand-style acronym like "P&G"/"H&M"/"P/S" collapses into one token
+    // ("pg"/"hm"/"ps") instead of two 1-char tokens the length>=2 filter
+    // below would silently discard (found via real 6-month search history:
+    // "p/s" — P/S toothpaste — was a top-searched, all-zero-result query in
+    // the old system). Deliberately NOT stripped when spaced ("A / B", "X &
+    // Y") — that would wrongly fuse unrelated words together, e.g. the
+    // "THỰC PHẨM KHÔ / Bánh Kẹo" category-path separator, or real product
+    // names like "Xương Ống & Tủy" (bone & marrow) / "Trà & Hoa Lài" (tea &
+    // jasmine) where "&" genuinely joins two distinct searchable words.
+    return stripDiacritics(String(s || "").toLowerCase()).replace(/(?<=\S)[&/](?=\S)/g, "").trim();
   }
   // Word-char class: ASCII alnum + Hangul syllables (가-힣), so Korean
   // catalog/query text tokenizes into real syllable tokens instead of being
@@ -474,8 +566,21 @@
   }
   function tokensCaseFold(s) {
     // like tokens(), but keeps diacritics — for the strict "exact" tier
-    return String(s || "").toLowerCase().replace(/&/g, "").split(/[^a-z0-9à-ỹ]+/i).filter((t) => t.length >= 2);
+    return String(s || "").toLowerCase().replace(/(?<=\S)[&/](?=\S)/g, "").split(/[^a-z0-9à-ỹ]+/i).filter((t) => t.length >= 2);
   }
+  // No-diacritics Vietnamese function words (prepositions/conjunctions/etc.)
+  // — same list used by export_full_store_catalog.py's description-keyword
+  // extraction. Excluded from the "partial" last-resort tier: a bare function
+  // word like "cho" (for) is >=3 chars and appears in huge numbers of
+  // unrelated product names, so letting it count as a match makes "partial"
+  // fire on essentially any query, not just ones sharing real subject words.
+  const STOPWORDS_VI = new Set([
+    "va", "hoac", "la", "cua", "cho", "voi", "tai", "trong", "khi", "sau", "truoc",
+    "de", "duoc", "khong", "co", "mot", "cac", "nhung", "nay", "do", "nen", "the",
+    "san", "pham", "theo", "tu", "den", "neu", "hay", "vao", "ra", "len", "xuong",
+    "nhu", "boi", "vi", "ma", "thi", "day", "kia", "moi", "rat", "qua", "con",
+    "chi", "ban", "quy", "khach", "vui", "long", "xem", "chinh", "sach",
+  ]);
 
   // Phrase-prefix containment: does `needle` (token array) appear as a
   // CONSECUTIVE run inside `hay` (token array), where every needle token
@@ -681,7 +786,25 @@
     return out;
   }
 
+  // Rule 2 (BA meeting 2026-08-24): "OpenSearch + Elasticsearch phối hợp...
+  // Elasticsearch chỉ cho hiển thị sản phẩm đang Active" - an inactive
+  // product must never surface at all, regardless of match quality, so it's
+  // filtered out of the CANDIDATE POOL here (buildIndex), not just scored low.
+  // Field choice: `status` (Magento's own catalog_product status attribute -
+  // 1=Enabled, 2=Disabled, matches this system's real "Sign in with Magento"
+  // SSO stack) per the user's explicit call - "tạm lấy status... TBC BA/Dev"
+  // (temporarily use `status`, still To-Be-Confirmed with BA/Dev; the raw
+  // catalog also carries ec_status/visibility_search/visibility_catalog,
+  // which might turn out to be the more correct field - revisit if BA/Dev say
+  // otherwise, see AI_CONTEXT.md §3e). Products missing `status` entirely
+  // (older exported fixtures without this field) are treated as Active, for
+  // backward compatibility with catalogs that predate this rule.
+  function isActiveProduct(p) {
+    return p.status === undefined || p.status === null || p.status === 1;
+  }
+
   function buildIndex(products) {
+    products = products.filter(isActiveProduct);
     const entries = products.map((p) => ({
       p,
       nameCaseFoldTokens: tokensCaseFold(p.name),
@@ -738,7 +861,7 @@
   // "tã"->"ta", "dù"->"du") collide with unrelated common words once their
   // diacritics are stripped ("ta" in "Gà Ta", "du" in "Đu Đủ"). The glossary
   // author (me) already knows the exact target spelling, so match it exactly.
-  function expandQueryTerms(qTokens, qCaseFoldTokens) {
+  function expandQueryTerms(qTokens, qCaseFoldTokens, qNorm) {
     const out = [];
     const seen = new Set();
     const add = (phrase) => {
@@ -785,6 +908,12 @@
       if (qCaseFoldTokens.includes("chó")) add("thức ăn cho chó");
       if (qCaseFoldTokens.includes("mèo")) add("thức ăn cho mèo");
     }
+    // "m & m" (spaced ampersand, found via real 6-month search history as a
+    // top-searched all-zero-result query): each side is a single letter, so
+    // tokens()/tokensCaseFold() drop both as <2-char tokens and the normal
+    // SYNONYMS/token-based matching above can never see this source phrase
+    // at all — check the un-tokenized normalized string directly instead.
+    if (qNorm && /(?:^|[^a-z0-9])m\s*&\s*m(?:[^a-z0-9]|$)/.test(qNorm)) add("m&m");
     return out;
   }
 
@@ -828,6 +957,28 @@
       }
     }
     return out;
+  }
+
+  // Rule 5 (BA meeting 2026-08-24): "matching từ nhiều nhất thì hiển thị lên
+  // đầu" - a NEW ranking dimension standing ALONGSIDE the tier system (per
+  // user: "đứng ngang/trên tier"), not just a same-tier tiebreak. Counts how
+  // many DISTINCT query tokens (no-diacritics form) appear anywhere in the
+  // product's name/translated-name/category - deliberately NOT descTokens
+  // (kept diacritics-strict elsewhere for real collision reasons; mixing
+  // strictness levels here would make the count inconsistent). In practice
+  // this mostly discriminates WITHIN the weaker bag-style tiers (description/
+  // synonym/intent/category/partial), since exact/no_diacritics/multilang/
+  // typo/brand all require matching the (near-)full query phrase already, so
+  // their count is already at/near the query's own token length - the
+  // existing "Tên sản phẩm chính xác > Description > Synonym" priority the
+  // user set at the very start of this project is preserved as a natural
+  // consequence, not overridden.
+  function matchedWordCount(entry, qTokens) {
+    if (!qTokens.length) return 0;
+    const bag = new Set(entry.nameTokens.concat(entry.nameEnTokens, entry.nameKrTokens, entry.catTokens));
+    let n = 0;
+    for (const t of new Set(qTokens)) if (bag.has(t)) n++;
+    return n;
   }
 
   // Score one product against a query. Returns {score, tier, note} or null.
@@ -898,11 +1049,18 @@
     // with nothing surfacing the literal name hit at all. A real BM25-style
     // engine (see OVERVIEW-FLOW-VI_Phase1.pdf) gives partial term-overlap
     // credit instead of an all-or-nothing phrase match. Scored low (20, below
-    // category=35) and diacritics-preserved (short single-token matching is a
-    // known collision risk with no-diacritics stripping, same reasoning as
-    // brand/exact) so it only ever supplements, never outranks, a real match.
-    if (!best && qCaseFoldTokens.length > 1) {
-      const matched = qCaseFoldTokens.filter((t) => t.length >= 3 && entry.nameCaseFoldTokens.includes(t));
+    // category=35). Matches on the NO-DIACRITICS form (qTokens/nameTokens,
+    // not the case-fold form) so this safety net also covers no-diacritics
+    // queries — a diacritics-preserved version left a no-diacritics query
+    // like "sua nhap khau" with ZERO results, since none of its tokens can
+    // ever equal an accented catalog token. Common Vietnamese function words
+    // (STOPWORDS_VI) are excluded from counting as a match: "cho" (for) alone
+    // is >=3 chars and appears in huge numbers of unrelated product names
+    // ("...Cho Máy Giặt...") — without this filter, any query containing a
+    // stray preposition/conjunction spuriously matched hundreds of products
+    // that share nothing with the query's actual subject.
+    if (!best && qTokens.length > 1) {
+      const matched = qTokens.filter((t) => t.length >= 3 && !STOPWORDS_VI.has(t) && entry.nameTokens.includes(t));
       if (matched.length) {
         consider(20, "partial", `Khớp một phần từ khoá trong tên sản phẩm: "${matched.join(", ")}".`);
       }
@@ -940,7 +1098,7 @@
     const qCaseFoldTokens = tokensCaseFold(raw);
     const qTokens = tokens(raw);
     const qNorm = normalize(raw);
-    const expanded = expandQueryTerms(qTokens, qCaseFoldTokens);
+    const expanded = expandQueryTerms(qTokens, qCaseFoldTokens, qNorm);
     const intents = intentTargets(qTokens);
     const categories = categoryTargets(qTokens);
 
@@ -958,11 +1116,13 @@
     // Union (not intersection) of individual-token postings — candidate feed
     // for the "partial" last-resort tier in scoreProduct(), which needs ANY
     // single matching token considered, not just products matching every
-    // token as one consecutive/AND run like the paths above.
-    if (qCaseFoldTokens.length > 1) {
-      for (const t of qCaseFoldTokens) {
-        if (t.length < 3) continue;
-        const arr = idxCaseFold.map.get(t);
+    // token as one consecutive/AND run like the paths above. No-diacritics
+    // form (idxNorm/qTokens), matching scoreProduct's partial-tier check, so
+    // a no-diacritics query also benefits from this safety net.
+    if (qTokens.length > 1) {
+      for (const t of qTokens) {
+        if (t.length < 3 || STOPWORDS_VI.has(t)) continue;
+        const arr = idxNorm.map.get(t);
         if (arr) for (const i of arr) candidates.add(i);
       }
     }
@@ -984,7 +1144,8 @@
       const entry = entries[i];
       const m = scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, false, categories);
       if (m) {
-        results.push({ product: entry.p, score: m.score, tier: m.tier, note: m.note, popularity: entry.popularity });
+        results.push({ product: entry.p, score: m.score, tier: m.tier, note: m.note, popularity: entry.popularity,
+                       matchedWords: matchedWordCount(entry, qTokens) });
         mainScoreByIdx.set(i, m.score);
         if (m.score > bestMainScore) bestMainScore = m.score;
       }
@@ -1017,11 +1178,13 @@
             const dupIdx = results.findIndex((r) => r.product === entry.p);
             if (dupIdx !== -1) results.splice(dupIdx, 1);
           }
-          results.push({ product: entry.p, score: 80, tier: "typo", note: "Khớp qua bước chuẩn hoá & sửa lỗi chính tả (sai lệch tối đa 1 ký tự) với tên sản phẩm — chỉ áp dụng vì từ khoá chính không tìm thấy kết quả nào.", popularity: entry.popularity });
+          results.push({ product: entry.p, score: 80, tier: "typo", note: "Khớp qua bước chuẩn hoá & sửa lỗi chính tả (sai lệch tối đa 1 ký tự) với tên sản phẩm — chỉ áp dụng vì từ khoá chính không tìm thấy kết quả nào.", popularity: entry.popularity,
+                         matchedWords: matchedWordCount(entry, qTokens) });
         }
       }
     }
-    results.sort((a, b) => b.score - a.score || b.popularity - a.popularity);
+    // Rule 5: matchedWords ranks ABOVE tier score (see matchedWordCount comment).
+    results.sort((a, b) => b.matchedWords - a.matchedWords || b.score - a.score || b.popularity - a.popularity);
     return limit === Infinity ? results : results.slice(0, limit);
   }
 
@@ -1047,7 +1210,7 @@
     }
 
     // 2) glossary-driven expansions relevant to the query (exact-phrase gated, see expandQueryTerms)
-    for (const alt of expandQueryTerms(qTokens, qCaseFoldTokens)) out.add(alt.phrase);
+    for (const alt of expandQueryTerms(qTokens, qCaseFoldTokens, qNorm)) out.add(alt.phrase);
     for (const it of intentTargets(qTokens)) out.add(it.phrase);
     for (const ct of categoryTargets(qTokens)) out.add(ct.label);
     // 2b) intent/category PHRASES themselves as autocomplete-style prefix
@@ -1115,6 +1278,66 @@
   // would already find (synonym expansion and translated-field matching
   // both happen inside OpenSearch's keyword analyzer per the doc, not a
   // separate weaker pass), so they stay in the keyword branch.
+  // Rule 6 (BA meeting 2026-08-24): "search đúng tên (100% matching) -> chỉ
+  // hiện đúng sản phẩm đó + 'Có thể bạn sẽ thích'". Per user confirmation,
+  // this reuses the EXACT SAME algorithm already spec'd for the Zero Result
+  // page's "Có thể bạn sẽ thích" block (BRD FR-ZR-02 / Storyboard SS-SCR-012,
+  // slide 17): Substitute (Vector/Category similarity) -> Cross-sell (Basket
+  // Analysis) -> deepest fallback: best-seller. Real NSG catalog data check
+  // (2026-08-24): substitute_product_sku is populated on ~82% of SKUs;
+  // cross_sell_product_sku and upsell_product_sku are populated on 0% of
+  // SKUs (always empty arrays) - kept in the chain anyway per spec, in case
+  // that changes or another store's data populates it; in practice today it
+  // always falls through to substitute -> best-seller. related_product_sku
+  // (7.8% populated) is deliberately NOT used here - FR-ZR-02 does not
+  // mention it, so it's out of scope for this specific "Có thể bạn sẽ thích"
+  // block (it may back some other feature, e.g. a PDP page, not this one).
+  // Literal "results.length === 1" (zero OTHER matches anywhere, at any tier)
+  // is unrealistic given the "partial" last-resort tier exists specifically to
+  // avoid zero-results by picking up weak single-token overlaps - almost any
+  // multi-word query ends up with some trailing partial-tier noise. The
+  // business-meaningful reading of "search đúng tên (100% matching)" is: is
+  // there exactly ONE unambiguous top exact-tier match (no tie with another
+  // exact-tier product) - real UI would still short-circuit to the single-
+  // product view even if a few weak, lower-tier matches also technically
+  // exist below it.
+  function isSingleExactMatch(results) {
+    if (!results.length || results[0].tier !== "exact" || results[0].score !== 100) return false;
+    return results.length === 1 || results[1].tier !== "exact";
+  }
+
+  function pickYouMightLike(index, targetProduct, topN) {
+    topN = topN || 10;
+    const bySku = new Map();
+    for (const e of index.entries) bySku.set(e.p.sku, e.p);
+    const out = [];
+    const seen = new Set([targetProduct.sku]);
+    const addFromSkuList = (skuList, source) => {
+      if (!skuList) return;
+      for (const sku of skuList) {
+        if (out.length >= topN) break;
+        if (seen.has(sku)) continue;
+        const p = bySku.get(sku);
+        if (!p) continue; // not in this store's catalog, or filtered out as inactive
+        seen.add(sku);
+        out.push({ sku, name: p.name, source });
+      }
+    };
+    addFromSkuList(targetProduct.substitute_product_sku, "substitute");
+    addFromSkuList(targetProduct.cross_sell_product_sku, "cross_sell");
+    if (out.length < topN) {
+      const sameCat = index.entries
+        .filter((e) => e.p.cat === targetProduct.cat && !seen.has(e.p.sku))
+        .sort((a, b) => b.popularity - a.popularity);
+      for (const e of sameCat) {
+        if (out.length >= topN) break;
+        seen.add(e.p.sku);
+        out.push({ sku: e.p.sku, name: e.p.name, source: "best_seller" });
+      }
+    }
+    return out;
+  }
+
   const CONFIDENCE_THRESHOLD = 50;
   const TIER_BRANCH = {
     exact: "keyword", brand: "keyword", no_diacritics: "keyword", multilang: "keyword", typo: "keyword",
@@ -1129,5 +1352,5 @@
     return { confidence, route, routeLabel };
   }
 
-  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword };
+  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, matchedWordCount, isSingleExactMatch, pickYouMightLike };
 });

@@ -70,9 +70,10 @@ def fmt_price(v) -> str:
     return f"{v:,.0f}".replace(",", ".") + "đ"
 
 
-def load_catalog() -> dict[str, dict]:
+def load_catalog(store: str = "nsg") -> dict[str, dict]:
     out: dict[str, dict] = {}
-    with open(PRODUCT_NDJSON, encoding="utf-8") as f:
+    product_ndjson = ROOT / "data" / "ProductInfo" / f"mart_vi_{store}_product.ndjson"
+    with open(product_ndjson, encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if not line:
@@ -153,12 +154,13 @@ def results_cell(scenario: dict) -> str:
     return "\n".join(lines)
 
 
-def write_cover(wb, generated_date: str, total: int):
+def write_cover(wb, generated_date: str, total: int, store: str = "nsg", catalog_size: int = 0):
     ws = wb.create_sheet("Cover", 0)
     ws.column_dimensions["A"].width = 100
     lines = [
-        ("MART Smart Search – Autocomplete & Search Result Test Data (2.000 kịch bản)", 16, True),
-        (f"Ngày tạo: {generated_date}    |    Nguồn: NSG Search Test Data Artifact (toàn bộ 16.340 SKU store nsg)", 11, False),
+        (f"MART Smart Search – Autocomplete & Search Result Test Data ({total:,} kịch bản)", 16, True),
+        (f"Ngày tạo: {generated_date}    |    Nguồn: {store.upper()} Search Test Data Artifact "
+         f"(toàn bộ {catalog_size:,} SKU store {store})", 11, False),
         ("", 11, False),
         ("Cách đọc file:", 12, True),
         ("- Sheet 'Scenarios': 1 dòng = 1 kịch bản tìm kiếm thực tế (sai chính tả, không dấu, theo mục đích "
@@ -258,13 +260,14 @@ def resolve_source(name: str) -> Path:
     raise FileNotFoundError(f"'{name}' not found in _source/ or batches/")
 
 
-def load_source_dataset(path: Path) -> tuple[list[dict], str | None]:
-    """Returns (scenarios, batch_range). Handles both dataset_2000.json's
-    bare-array shape and a batch file's {scenarios:[...], batchRange} shape."""
+def load_source_dataset(path: Path) -> tuple[list[dict], str | None, str | None]:
+    """Returns (scenarios, batch_range, store). Handles both dataset_2000.json's
+    bare-array shape (no store field - caller defaults to nsg) and a batch
+    file's {scenarios:[...], batchRange, store} shape."""
     raw = json.loads(path.read_text(encoding="utf-8"))
     if isinstance(raw, list):
-        return raw, None
-    return raw["scenarios"], raw.get("batchRange")
+        return raw, None, None
+    return raw["scenarios"], raw.get("batchRange"), raw.get("store")
 
 
 def main():
@@ -281,24 +284,25 @@ def main():
 
     print("loading source dataset...")
     source_path = resolve_source(args.source)
-    dataset, batch_range = load_source_dataset(source_path)
-    print(f"  {len(dataset)} scenarios (from {source_path.relative_to(ROOT)})")
+    dataset, batch_range, dataset_store = load_source_dataset(source_path)
+    store = dataset_store or "nsg"
+    print(f"  {len(dataset)} scenarios (from {source_path.relative_to(ROOT)}, store={store})")
 
     print("loading catalog for denormalization...")
-    catalog = load_catalog()
+    catalog = load_catalog(store)
     print(f"  {len(catalog)} SKUs")
 
     print("denormalizing search_results (sku -> name/price/category)...")
     dataset = denormalize(dataset, catalog)
 
-    base_name = (f"MART_SmartSearch_AutocompleteSearch_TestData_v1.0_{batch_range}_{TODAY}"
-                 if batch_range else f"MART_SmartSearch_AutocompleteSearch_TestData_v1.0_{TODAY}")
+    prefix = "MART_SmartSearch_AutocompleteSearch_TestData_v1.0" if store == "nsg" else f"MART_SmartSearch_AutocompleteSearch_TestData_{store.upper()}_v1.0"
+    base_name = f"{prefix}_{batch_range}_{TODAY}" if batch_range else f"{prefix}_{TODAY}"
 
     OUT_DIR_DEV.mkdir(parents=True, exist_ok=True)
     json_path = OUT_DIR_DEV / f"{base_name}.json"
     payload = {
         "generatedDate": date.today().isoformat(),
-        "store": "nsg",
+        "store": store,
         "totalScenarios": len(dataset),
         "scenarios": dataset,
     }
@@ -312,7 +316,7 @@ def main():
     print("building Excel workbook...")
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    write_cover(wb, date.today().isoformat(), len(dataset))
+    write_cover(wb, date.today().isoformat(), len(dataset), store, len(catalog))
     write_summary(wb, dataset)
     write_scenarios(wb, dataset)
     OUT_DIR_XLSX.mkdir(parents=True, exist_ok=True)

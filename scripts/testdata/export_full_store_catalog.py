@@ -148,6 +148,23 @@ def export_store(store, product_dir, out_dir, with_desc_keywords=False, desc_kw_
             "store": store,
             "name_en": (en or {}).get("name") or "",
             "name_kr": (kr or {}).get("name") or "",
+            # Business rule 2 (BA meeting 2026-08-24): Elasticsearch only shows
+            # Active products. `status` is Magento's own catalog_product status
+            # (1=Enabled, 2=Disabled) - the field the user picked ("tạm lấy
+            # status"), still TBC against ec_status/visibility_search/
+            # visibility_catalog (also exported below for reference/future
+            # use, not currently used for filtering - see search_engine.js's
+            # isActiveProduct()).
+            "status": rec.get("status"),
+            "ec_status": rec.get("ec_status"),
+            "visibility_search": rec.get("visibility_search"),
+            "visibility_catalog": rec.get("visibility_catalog"),
+            # Business rule 6: "Có thể bạn sẽ thích" (FR-ZR-02 / SS-SCR-012) -
+            # substitute/cross-sell SKU lists straight from the source catalog.
+            # cross_sell_product_sku is 0% populated in real NSG data (checked
+            # 2026-08-24) but exported anyway per spec, in case that changes.
+            "substitute_product_sku": rec.get("substitute_product_sku") or [],
+            "cross_sell_product_sku": rec.get("cross_sell_product_sku") or [],
         }
         if with_desc_keywords:
             name_tokens_norm = {norm_ascii(w) for w in WORD_RE.findall(row["name"])}

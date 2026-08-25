@@ -8,24 +8,27 @@
   },
   "products_sampled": 300,
   "max_products": 300,
-  "search_result_rows": 2934,
+  "search_result_rows": 3342,
   "search_result_by_dimension": {
     "exact": 896,
     "partial": 853,
     "typo": 888,
     "no_diacritics": 289,
+    "regional": 6,
     "synonym": 5,
-    "regional": 2,
+    "tag": 404,
     "related": 1
   },
   "autocomplete_prefix_groups": 612,
   "glossary_loaded": {
     "synonyms": 6,
-    "regional_terms": 2,
-    "related_terms": 1
+    "regional_terms": 6,
+    "related_terms": 1,
+    "tags": 1522
   },
   "assumptions": [
     "Autocomplete expected_suggestions ranking uses a popularity PROXY (best_sellings + ext_viewed), not real search logs.",
-    "regional/related dimensions only cover terms present in data/glossary/*.csv, which ship with placeholder rows only."
+    "regional/related dimensions only cover terms present in data/glossary/*.csv, which ship with placeholder rows only.",
+    "tag dimension (data/glossary/tags.csv) is grounded the same way as related - title-substring match only, NOT a real per-SKU tag assignment (none exists yet). The real search-service config (ServiceConfig_SearchService.png, 2026-08-25) weights the tag field at 0 - tag matches are not expected to affect ranking in production, only presence/absence coverage is meaningful here."
   ]
 }

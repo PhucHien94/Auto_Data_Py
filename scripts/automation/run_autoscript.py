@@ -7,21 +7,27 @@ This is the "run autoscript" entrypoint from the test strategy: point it at a
 dataset directory and an API, get back a report - one command, one artifact.
 
 Usage:
-  # one-off run, URL passed directly (e.g. right after it's shared in chat)
-  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg `
-    --search-api https://staging-search.internal/api/v1/search `
-    --autocomplete-api https://staging-search.internal/api/v1/suggest `
-    --header "Authorization: Bearer <TOKEN>"
-
-  # using a saved environment from config/environments.yaml
-  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env staging
+  # using a saved environment from config/environments.yaml (recommended - see the
+  # "dev" entry there for the real MART gateway contract: per-endpoint method,
+  # extra static fields, headers, and {store}/{lang} URL templating)
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env dev
 
   # quick smoke test against a handful of rows before a full run
-  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env staging --limit 20
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg --env dev --limit 20
+
+  # one-off run, URL/contract passed directly (no --env), e.g. right after it's
+  # shared ad hoc in chat - GET autocomplete + POST search with extra fields
+  python scripts/run_autoscript.py --dataset-dir SmartSearch/golden_testsets/nsg `
+    --autocomplete-api "https://dev-gateway.martonline.lotte.vn/api/v2/vi/nsg/products/autocomplete" `
+    --autocomplete-method GET --autocomplete-param q --autocomplete-extra-params "{\"limit\":8}" `
+    --search-api "https://dev-gateway.martonline.lotte.vn/api/v2/vi/nsg/products/search" `
+    --search-method POST --search-param query `
+    --search-extra-params "{\"storeId\":\"nsg\",\"page\":1,\"pageSize\":20,\"sort\":\"relevance\",\"filters\":{},\"lang\":\"vi\",\"trace\":false}" `
+    --search-headers "{\"x-search-mode\":\"adaptive\"}" `
+    --header "Cookie: <fresh session cookie copied from the browser>"
 """
 import argparse
 import json
-import os
 import sys
 import time
 from datetime import datetime
@@ -38,28 +44,9 @@ for _stream in (sys.stdout, sys.stderr):
 sys.path.insert(0, str(Path(__file__).parent))
 from lib_scoring import (score_search_row, score_autocomplete_row, reciprocal_rank,  # noqa: E402
                           aggregate_metrics, summarize_repeats)
-from lib_search_client import call_api, extract_id_list, extract_keyword_list, parse_headers, ApiError  # noqa: E402
-
-
-def load_env_config(env_name, config_path="config/environments.yaml"):
-    if not env_name:
-        return {}
-    import yaml
-    path = Path(config_path)
-    if not path.exists():
-        raise SystemExit(f"--env given but {config_path} not found")
-    with path.open("r", encoding="utf-8") as fh:
-        all_envs = yaml.safe_load(fh)
-    if env_name not in all_envs:
-        raise SystemExit(f"environment {env_name!r} not found in {config_path}")
-    return all_envs[env_name]
-
-
-def resolve_headers(cli_headers, auth_header_env):
-    headers = parse_headers(cli_headers)
-    if auth_header_env and auth_header_env in os.environ and "Authorization" not in headers:
-        headers["Authorization"] = os.environ[auth_header_env]
-    return headers
+from lib_search_client import (call_api, extract_id_list, extract_keyword_list,  # noqa: E402
+                                ApiError, load_env_config, resolve_headers, resolve_template,
+                                resolve_extra_params, build_request, preflight_check)
 
 
 def stream_ndjson(path):
@@ -70,7 +57,7 @@ def stream_ndjson(path):
                 yield json.loads(line)
 
 
-def run_search_stream(rows, api_url, method, param, result_path, id_fields, headers,
+def run_search_stream(rows, api_url, method, param, extra_params, result_path, id_fields, headers,
                        tier3_threshold, limit, topn, repeat):
     scored = []
     for i, row in enumerate(rows):
@@ -79,7 +66,8 @@ def run_search_stream(rows, api_url, method, param, result_path, id_fields, head
         captures = []
         for _ in range(repeat):
             try:
-                payload, latency_ms = call_api(api_url, method, param, row["query"], headers)
+                params, json_body = build_request(method, param, row["query"], extra_params)
+                payload, latency_ms = call_api(api_url, method, headers, params, json_body)
                 actual_topn = extract_id_list(payload, result_path, id_fields)[:topn]
                 error = None
             except ApiError as e:
@@ -108,7 +96,7 @@ def run_search_stream(rows, api_url, method, param, result_path, id_fields, head
     return scored
 
 
-def run_autocomplete_stream(rows, api_url, method, param, result_path, keyword_fields, headers,
+def run_autocomplete_stream(rows, api_url, method, param, extra_params, result_path, keyword_fields, headers,
                              tier3_threshold, limit, topn, repeat):
     scored = []
     for i, row in enumerate(rows):
@@ -118,7 +106,8 @@ def run_autocomplete_stream(rows, api_url, method, param, result_path, keyword_f
         captures = []
         for _ in range(repeat):
             try:
-                payload, latency_ms = call_api(api_url, method, param, query, headers)
+                params, json_body = build_request(method, param, query, extra_params)
+                payload, latency_ms = call_api(api_url, method, headers, params, json_body)
                 actual_suggestions = extract_keyword_list(payload, result_path, keyword_fields)[:topn]
                 error = None
             except ApiError as e:
@@ -250,14 +239,26 @@ def main():
     p.add_argument("--env")
     p.add_argument("--search-api")
     p.add_argument("--autocomplete-api")
-    p.add_argument("--method", choices=["GET", "POST"])
-    p.add_argument("--search-param")
+    p.add_argument("--method", choices=["GET", "POST"], help="fallback method if --search-method/--autocomplete-method aren't given")
+    p.add_argument("--search-method", choices=["GET", "POST"])
+    p.add_argument("--autocomplete-method", choices=["GET", "POST"])
+    p.add_argument("--search-param", help="JSON body field (POST) or query-string field (GET) that carries the query text")
     p.add_argument("--autocomplete-param")
+    p.add_argument("--search-extra-params", help="JSON object of extra static fields merged in alongside --search-param, "
+                                                  "e.g. '{\"storeId\":\"{store}\",\"page\":1,\"pageSize\":20,\"lang\":\"{lang}\"}' "
+                                                  "- {store}/{lang} are filled from --dataset-dir's folder name / --lang")
+    p.add_argument("--autocomplete-extra-params", help="JSON object, e.g. '{\"limit\":8}'")
+    p.add_argument("--search-headers", help="JSON object of extra headers sent only on the search call, e.g. '{\"x-search-mode\":\"adaptive\"}'")
+    p.add_argument("--autocomplete-headers", help="JSON object of extra headers sent only on the autocomplete call")
+    p.add_argument("--lang", help="fills {lang} in --search-api/--autocomplete-api/extra-params templates (default vi)")
+    p.add_argument("--store", help="fills {store} in URL/extra-params templates; defaults to --dataset-dir's folder name")
     p.add_argument("--search-result-path")
     p.add_argument("--autocomplete-result-path")
-    p.add_argument("--search-id-fields", help="comma-separated field names, e.g. product_id,sku")
-    p.add_argument("--autocomplete-keyword-fields", help="comma-separated field names, e.g. keyword,text")
-    p.add_argument("--header", action="append", help="Key:Value, repeatable")
+    p.add_argument("--search-id-fields", help="comma-separated field names, e.g. sku,productId")
+    p.add_argument("--autocomplete-keyword-fields", help="comma-separated field names, e.g. text,keyword")
+    p.add_argument("--header", action="append", help="Key:Value, repeatable, applied to both calls")
+    p.add_argument("--auth-header-name", help="header name that --env's auth_header_env value is placed into (default Authorization; "
+                                                "use Cookie for a WAF/session-cookie-protected API)")
     p.add_argument("--topn", type=int)
     p.add_argument("--tier3-threshold", type=float)
     p.add_argument("--limit", type=int, help="cap rows tested per stream, for a quick smoke run")
@@ -265,16 +266,33 @@ def main():
                     help="capture each keyword's actual output this many times and report a "
                          "matching_ratio against the expected output, instead of a single pass/fail")
     p.add_argument("--out-dir")
+    p.add_argument("--skip-preflight", action="store_true",
+                    help="skip the one-request login/connectivity check done before running the full dataset")
     args = p.parse_args()
 
     cfg = load_env_config(args.env)
-    search_api = args.search_api or cfg.get("search_api")
-    autocomplete_api = args.autocomplete_api or cfg.get("autocomplete_api")
+    dataset_dir = Path(args.dataset_dir)
+    store = args.store or cfg.get("store") or dataset_dir.name
+    lang = args.lang or cfg.get("lang", "vi")
+
+    search_api = resolve_template(args.search_api or cfg.get("search_api"), store, lang)
+    autocomplete_api = resolve_template(args.autocomplete_api or cfg.get("autocomplete_api"), store, lang)
     method = args.method or cfg.get("method", "GET")
+    search_method = args.search_method or cfg.get("search_method") or method
+    autocomplete_method = args.autocomplete_method or cfg.get("autocomplete_method") or method
     search_param = args.search_param or cfg.get("search_param", "q")
     autocomplete_param = args.autocomplete_param or cfg.get("autocomplete_param", "q")
     # Search and Autocomplete are two independent functions/APIs with potentially different
-    # response shapes - each gets its own result_path + field-name mapping, never shared.
+    # request shapes (method, extra static fields, headers) and response shapes - each gets
+    # its own everything below, never shared.
+    search_extra_params = resolve_extra_params(
+        json.loads(args.search_extra_params) if args.search_extra_params else cfg.get("search_extra_params", {}),
+        store, lang)
+    autocomplete_extra_params = resolve_extra_params(
+        json.loads(args.autocomplete_extra_params) if args.autocomplete_extra_params else cfg.get("autocomplete_extra_params", {}),
+        store, lang)
+    search_headers = json.loads(args.search_headers) if args.search_headers else cfg.get("search_headers", {})
+    autocomplete_headers = json.loads(args.autocomplete_headers) if args.autocomplete_headers else cfg.get("autocomplete_headers", {})
     search_result_path = args.search_result_path or cfg.get("search_result_path", "results")
     autocomplete_result_path = args.autocomplete_result_path or cfg.get("autocomplete_result_path", "suggestions")
     search_id_fields = (
@@ -287,13 +305,31 @@ def main():
     )
     topn = args.topn or cfg.get("topn", 10)
     tier3_threshold = args.tier3_threshold if args.tier3_threshold is not None else cfg.get("tier3_threshold", 0.5)
-    headers = resolve_headers(args.header, cfg.get("auth_header_env"))
+    auth_header_name = args.auth_header_name or cfg.get("auth_header_name", "Authorization")
+    base_headers = resolve_headers(args.header, cfg.get("auth_header_env"), auth_header_name)
+    search_headers = {**base_headers, **search_headers}
+    autocomplete_headers = {**base_headers, **autocomplete_headers}
     repeat = max(1, args.repeat)
 
     if not search_api and not autocomplete_api:
         raise SystemExit("give --search-api and/or --autocomplete-api (directly, or via --env)")
 
-    dataset_dir = Path(args.dataset_dir)
+    if not args.skip_preflight:
+        preflight_api = search_api or autocomplete_api
+        preflight_method = search_method if search_api else autocomplete_method
+        preflight_headers = search_headers if search_api else autocomplete_headers
+        preflight_param = search_param if search_api else autocomplete_param
+        preflight_extra = search_extra_params if search_api else autocomplete_extra_params
+        preflight_result_path = search_result_path if search_api else autocomplete_result_path
+        params, json_body = build_request(preflight_method, preflight_param, "test", preflight_extra)
+        print("Preflight: kiểm tra đăng nhập/kết nối trước khi chạy cả dataset...")
+        try:
+            preflight_check(preflight_api, preflight_method, preflight_headers, params, json_body,
+                             required_keys=(preflight_result_path,))
+        except ApiError as e:
+            raise SystemExit(str(e))
+        print("Preflight OK - bắt đầu chạy dataset.")
+
     ts = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     out_dir = Path(args.out_dir) if args.out_dir else Path("SmartSearch/runs") / f"{dataset_dir.name}_{ts}"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -308,8 +344,9 @@ def main():
     if search_api and search_path.exists():
         rows = list(stream_ndjson(search_path))
         print(f"Running search stream: {len(rows)} rows (limit={args.limit or 'none'}, repeat={repeat}) against {search_api}")
-        scored = run_search_stream(rows, search_api, method, search_param, search_result_path, search_id_fields,
-                                    headers, tier3_threshold, args.limit, topn, repeat)
+        scored = run_search_stream(rows, search_api, search_method, search_param, search_extra_params,
+                                    search_result_path, search_id_fields,
+                                    search_headers, tier3_threshold, args.limit, topn, repeat)
         with (out_dir / "search_raw_results.ndjson").open("w", encoding="utf-8") as fh:
             for r in scored:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -334,9 +371,9 @@ def main():
     if autocomplete_api and auto_path.exists():
         rows = list(stream_ndjson(auto_path))
         print(f"Running autocomplete stream: {len(rows)} rows (limit={args.limit or 'none'}, repeat={repeat}) against {autocomplete_api}")
-        scored = run_autocomplete_stream(rows, autocomplete_api, method, autocomplete_param,
-                                          autocomplete_result_path, autocomplete_keyword_fields,
-                                          headers, tier3_threshold, args.limit, topn, repeat)
+        scored = run_autocomplete_stream(rows, autocomplete_api, autocomplete_method, autocomplete_param,
+                                          autocomplete_extra_params, autocomplete_result_path, autocomplete_keyword_fields,
+                                          autocomplete_headers, tier3_threshold, args.limit, topn, repeat)
         with (out_dir / "autocomplete_raw_results.ndjson").open("w", encoding="utf-8") as fh:
             for r in scored:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")

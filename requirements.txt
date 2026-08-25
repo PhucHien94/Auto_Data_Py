@@ -2,3 +2,9 @@ openpyxl
 pandas
 requests
 pyyaml
+
+# Optional - only for `run_batch_test.py --headed-login` (opens a real browser for
+# manual login + auto cookie capture). Not needed for normal use. Also run
+# `playwright install chromium` after installing. See SmartSearch/AI_CONTEXT.md
+# for why this currently doesn't work against the dev-gateway WAF.
+# playwright

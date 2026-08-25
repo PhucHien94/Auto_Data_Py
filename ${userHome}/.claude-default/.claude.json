@@ -1,0 +1,58 @@
+{
+  "firstStartTime": "2026-08-25T04:00:06.599Z",
+  "machineID": "9d3b0e43b839e2646b9284422d161d067fc0b823bdbd9ba8441d111ebac3f27c",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "seenNotifications": {},
+  "hasResetAutoModeOptInForDefaultOffer": true,
+  "migrationVersion": 13,
+  "userID": "0092e10f2403eadd9ad57b0017db5d16d267e0fafcb92edc91e9007c1d2931c9",
+  "claudeCodeFirstTokenDate": "2026-07-21T06:59:22.160649Z",
+  "oauthAccount": {
+    "accountUuid": "3d634b23-7e84-41a0-b997-cc0f456e99f9",
+    "emailAddress": "ldcc.hiennguyen@lotte.vn",
+    "organizationUuid": "60ac8ed2-dea2-42d9-8bc9-835ff2133ceb",
+    "hasExtraUsageEnabled": false,
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2026-08-21T08:29:02.158954Z",
+    "subscriptionCreatedAt": "2026-08-19T07:08:54.616615Z",
+    "ccOnboardingFlags": {},
+    "claudeCodeTrialEndsAt": null,
+    "claudeCodeTrialDurationDays": null,
+    "seatTier": "team_standard",
+    "displayName": "Mei",
+    "profileFetchedAt": 1787630724411,
+    "organizationRole": "user",
+    "workspaceRole": null,
+    "organizationName": "Lotte Innovate Vietnam Company Limited",
+    "organizationType": "claude_team",
+    "organizationRateLimitTier": "default_raven",
+    "userRateLimitTier": "default_raven"
+  },
+  "clientDataCacheSlots": {
+    "bi1-3905cf3cd0a8d725": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1787630725382,
+      "entrypoint": "cli",
+      "model": "claude-sonnet-5",
+      "org": "60ac8ed2-dea2-42d9-8bc9-835ff2133ceb"
+    }
+  },
+  "additionalModelOptionsCache": [
+    {
+      "value": "claude-fable-5[1m]",
+      "label": "Fable",
+      "description": "Fable 5 · Most capable for your hardest and longest-running tasks"
+    }
+  ],
+  "additionalModelCostsCache": {},
+  "modelAccessCache": [],
+  "orgModelDefaultCache": null,
+  "autoCompactWindowsCache": null
+}

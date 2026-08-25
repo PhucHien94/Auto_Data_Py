@@ -209,9 +209,15 @@ def variant_rows(lang, title, synonyms, regionals):
     return [c for c in candidates if c]
 
 
-def build_related_rows(joined_by_sku, related_glossary, lang_key):
-    """relation_type=related rows: variant phrase -> acceptable_set of SKUs whose
-    title (in lang_key) contains `term`."""
+def build_related_rows(joined_by_sku, related_glossary, lang_key, dimension="related"):
+    """relation_type=related/tag rows: variant phrase -> acceptable_set of SKUs whose
+    title (in lang_key) contains `term`.
+
+    Reused for the "tag" dimension: no per-SKU tag assignment data exists yet
+    (see data/glossary/tags.csv's verified_by note), so a tag query can only be
+    grounded the same way as "related" - by checking whether the tag's VI name
+    literally appears in the product title, not a real tag-field lookup.
+    """
     out = []
     for row in related_glossary:
         term_l = row["term"].lower()
@@ -220,7 +226,8 @@ def build_related_rows(joined_by_sku, related_glossary, lang_key):
             if rec.get(lang_key) and term_l in find_title(rec[lang_key]).lower()
         ]
         if matches:
-            out.append({"query": row["variant"], "acceptable_set": matches, "note": row.get("verified_by", "")})
+            out.append({"query": row["variant"], "acceptable_set": matches, "note": row.get("verified_by", ""),
+                        "dimension": dimension})
     return out
 
 
@@ -250,15 +257,16 @@ def main():
     synonyms = load_glossary(args.glossary_dir, "synonyms.csv", "synonym")
     regionals = load_glossary(args.glossary_dir, "regional_terms.csv", "regional")
     relateds = load_glossary(args.glossary_dir, "related_terms.csv", "related")
+    tags = load_glossary(args.glossary_dir, "tags.csv", "tag")
 
     for store in stores:
         store_out_dir = Path(args.out_dir) / store if args.all_stores else Path(args.out_dir)
         run_for_store(store, product_dir, args.max_products,
-                       args.topn, store_out_dir, synonyms, regionals, relateds)
+                       args.topn, store_out_dir, synonyms, regionals, relateds, tags)
 
 
 def run_for_store(store, product_dir, max_products, topn, out_dir,
-                   synonyms, regionals, relateds):
+                   synonyms, regionals, relateds, tags):
     per_lang = {lang: load_store_lang(product_dir, lang, store) for lang in LANGS}
     counts = {lang: len(v) for lang, v in per_lang.items()}
     if not any(counts.values()):
@@ -323,19 +331,21 @@ def run_for_store(store, product_dir, max_products, topn, out_dir,
                     fsearch.write(json.dumps(row, ensure_ascii=False) + "\n")
                     keyword_pop.append((dim, lang, query, sku, pop))
 
-        # related-term dimension: query -> multiple acceptable SKUs, not tied to 1 product
+        # related-term and tag dimensions: query -> multiple acceptable SKUs, not tied to 1 product.
+        # "tag" reuses the exact same title-substring grounding as "related" -
+        # see build_related_rows()'s docstring for why (no per-SKU tag data yet).
         for lang in LANGS:
-            related_rows = build_related_rows(
-                {sku: joined_by_sku[sku] for sku in sampled_skus}, relateds, lang
-            )
-            for r in related_rows:
+            sampled_joined = {sku: joined_by_sku[sku] for sku in sampled_skus}
+            related_rows = build_related_rows(sampled_joined, relateds, lang, dimension="related")
+            tag_rows = build_related_rows(sampled_joined, tags, lang, dimension="tag")
+            for r in related_rows + tag_rows:
                 test_id += 1
-                dim_counts["related"] += 1
+                dim_counts[r["dimension"]] += 1
                 row = {
                     "test_id": f"GS-{store.upper()}-{test_id:06d}",
                     "sku": None,
                     "lang": lang,
-                    "dimension": "related",
+                    "dimension": r["dimension"],
                     "query": r["query"],
                     "expected_top1": r["acceptable_set"][0],
                     "acceptable_set": r["acceptable_set"],
@@ -392,12 +402,19 @@ def run_for_store(store, product_dir, max_products, topn, out_dir,
             "synonyms": len(synonyms),
             "regional_terms": len(regionals),
             "related_terms": len(relateds),
+            "tags": len(tags),
         },
         "assumptions": [
             "Autocomplete expected_suggestions ranking uses a popularity PROXY "
             "(best_sellings + ext_viewed), not real search logs.",
             "regional/related dimensions only cover terms present in "
             "data/glossary/*.csv, which ship with placeholder rows only.",
+            "tag dimension (data/glossary/tags.csv) is grounded the same way as "
+            "related - title-substring match only, NOT a real per-SKU tag "
+            "assignment (none exists yet). The real search-service config "
+            "(ServiceConfig_SearchService.png, 2026-08-25) weights the tag "
+            "field at 0 - tag matches are not expected to affect ranking in "
+            "production, only presence/absence coverage is meaningful here.",
         ],
     }
     with (out_dir / "manifest.json").open("w", encoding="utf-8") as fh:

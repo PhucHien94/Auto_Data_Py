@@ -1,0 +1,762 @@
+﻿tag,product_count,tag_en,tag_ko,description_vi
+Việt Nam,6444,Vietnam,베트남,Sản phẩm có xuất xứ từ Việt Nam.
+Hàng Nhập Khẩu,3039,Imported Goods,수입 상품,Sản phẩm được nhập khẩu từ thị trường nước ngoài.
+Ăn Vặt,1040,Snacks,간식,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Ăn Vặt”."
+Trung Quốc,959,China,중국,Sản phẩm có xuất xứ từ Trung Quốc.
+Mỹ Phẩm,896,Cosmetics,화장품,Sản phẩm thuộc nhóm mỹ phẩm và chăm sóc sắc đẹp.
+Thực Phẩm Tươi,770,Fresh Food,신선식품,Thực phẩm tươi sống hoặc sản phẩm cần ưu tiên độ tươi.
+Gia Vị,744,Seasonings,조미료,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Gia Vị”.
+Hàn Quốc,687,South Korea,한국,Sản phẩm có xuất xứ từ Hàn Quốc.
+Choice L,591,Choice L,Choice L,Sản phẩm thuộc thương hiệu riêng Choice L của LOTTE.
+Dụng Cụ Nhà Bếp,582,Kitchen Utensils,주방용품,"Dụng cụ dùng trong chế biến, nấu nướng hoặc phục vụ món ăn."
+Đông Lạnh,491,Frozen Food,냉동식품,Thực phẩm hoặc sản phẩm được bảo quản ở trạng thái đông lạnh.
+Kẹo,467,Candy,사탕,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo”.
+Sữa Tắm,455,Body Wash,바디워시,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Sữa Tắm”.
+Ăn Liền,426,Ready to Eat,즉석식품,Thực phẩm có thể dùng ngay hoặc chỉ cần chuẩn bị rất ít trước khi ăn.
+Thái Lan,413,Thailand,태국,Sản phẩm có xuất xứ từ Thái Lan.
+Đồ Chơi,360,Toys,장난감,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Đồ Chơi”.
+Dầu Gội,343,Shampoo,샴푸,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Dầu Gội”.
+Mì Ăn Liền,340,Instant Noodles,인스턴트 면,Các sản phẩm mì ăn liền.
+Nam Giới,339,Men,남성,Sản phẩm dành cho nam giới.
+Giải Khát,338,Beverages,음료,Đồ uống phục vụ nhu cầu giải khát.
+Bánh Quy,336,Cookies,쿠키,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Quy”.
+Nước Ngọt,302,Soft Drinks,탄산음료,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Ngọt”.
+Cà Phê,278,Coffee,커피,Sản phẩm cà phê thuộc nhóm hoặc cách chế biến “Cà Phê”.
+Sữa Nước,277,Liquid Milk,액상 우유,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Nước”.
+Đồ Khô,277,Dry Goods,건조식품,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Đồ Khô”."
+Gia Dụng,263,Household Goods,생활용품,Sản phẩm phục vụ sinh hoạt và sử dụng trong gia đình.
+Rau Củ Tươi,210,Fresh Vegetables,신선 채소,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Rau Củ Tươi”."
+Nước Giặt,208,Laundry Detergent,액체 세탁세제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Nước Giặt”."
+Hải Sản,207,Seafood,해산물,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Hải Sản”.
+Ẩm Thực Hàn Quốc,204,Korean Food,한식,"Món ăn, nguyên liệu hoặc sản phẩm mang phong cách ẩm thực Hàn Quốc."
+Trái Cây,202,Fruit,과일,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Trái Cây”.
+Sữa Chua,195,Yogurt,요거트,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Chua”.
+365 Fresh,180,365 Fresh,365 Fresh,Sản phẩm thuộc nhãn hoặc nhóm 365 Fresh.
+Socola,177,Chocolate,초콜릿,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola”.
+Bia,177,Beer,맥주,Đồ uống có cồn thuộc loại “Bia”.
+Dầu Ăn,173,Cooking Oil,식용유,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Dầu Ăn”."
+Rong Biển,158,Seaweed,김·해조류,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Rong Biển”."
+Xúc Xích,156,Sausage,소시지,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xúc Xích”."
+Giặt Máy,154,Machine Wash,세탁기용,Sản phẩm phù hợp hoặc chuyên dùng cho giặt bằng máy.
+Bữa Sáng,153,Breakfast,아침식사,Thực phẩm và đồ uống phù hợp dùng vào bữa sáng.
+Có Cồn,152,Alcoholic,알코올 함유,Sản phẩm có chứa cồn.
+Kẹo Dẻo,151,Gummy Candy,젤리 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Dẻo”.
+Không Đường,147,Sugar Free,무설탕,Sản phẩm được công bố không đường hoặc không bổ sung đường.
+Trà Gói,142,Packaged Tea,포장 차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Gói”."
+Cà Phê Hòa Tan,141,Instant Coffee,인스턴트 커피,Sản phẩm cà phê thuộc nhóm hoặc cách chế biến “Cà Phê Hòa Tan”.
+Nhật Bản,139,Japan,일본,Sản phẩm có xuất xứ từ Nhật Bản.
+Sữa Tươi,130,Fresh Milk,신선 우유,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Tươi”.
+Thời Trang,127,Fashion,패션,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Thời Trang”.
+Hạt Sấy,127,Roasted & Dried Nuts,구운·건조 견과,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Sấy”."
+Phô Mai,126,Cheese,치즈,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Phô Mai”."
+Malaysia,124,Malaysia,말레이시아,Sản phẩm có xuất xứ từ Malaysia.
+Vệ Sinh Bếp,122,Kitchen Cleaning,주방 청소,Sản phẩm dùng để làm sạch hoặc vệ sinh khu vực bếp.
+Tiệt Trùng,121,Sterilizing,살균,Sản phẩm đã qua xử lý tiệt trùng.
+Món Nhanh,121,Quick Meals,간편식,Món ăn hoặc sản phẩm có thời gian chuẩn bị nhanh.
+Lăn Khử Mùi,120,Roll-On Deodorant,롤온 데오도란트,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Lăn Khử Mùi”.
+Nước Mắm,119,Fish Sauce,피시소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Nước Mắm”."
+Nước Rửa Chén,115,Dishwashing Liquid,주방세제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Nước Rửa Chén”."
+Dầu Xả,115,Conditioner,컨디셔너,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Dầu Xả”.
+Khăn Giấy Khô,113,Dry Tissue,마른 티슈,Sản phẩm khăn giấy khô dùng cho vệ sinh và sinh hoạt hằng ngày.
+Thịt Heo,113,Pork,돼지고기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Heo”."
+Chống Nắng,113,Sun Protection,자외선 차단,Sản phẩm giúp bảo vệ da trước tác động của ánh nắng.
+Hộp Đựng Thực Phẩm,111,Food Storage Container,식품 보관용기,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Hộp Đựng Thực Phẩm”.
+Sữa Rửa Mặt,107,Facial Cleanser,클렌저,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Sữa Rửa Mặt”.
+Khăn Giấy Ướt,107,Wet Wipes,물티슈,Sản phẩm khăn giấy ướt dùng cho vệ sinh cá nhân hoặc gia đình.
+Rau Lá,106,Leafy Vegetables,잎채소,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Rau Lá”."
+Bàn Chà,105,Scrub Brush,청소 브러시,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Bàn Chà”."
+Indonesia,104,Indonesia,인도네시아,Sản phẩm có xuất xứ từ Indonesia.
+Thịt Gà,103,Chicken,닭고기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Gà”."
+Thơm Phòng,103,Room Fragrance,실내 방향제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Thơm Phòng”."
+Ngũ Cốc,98,Cereals,시리얼·곡물,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Ngũ Cốc”."
+Thịt Bò,97,Beef,소고기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Bò”."
+Ly Nước,95,Drinking Glass,음료컵,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ly Nước”.
+Rượu Vang,91,Wine,와인,Đồ uống có cồn thuộc loại “Rượu Vang”.
+Sơ Chế Sẵn,91,Pre-Prepared,손질 완료,"Thực phẩm đã được làm sạch, cắt hoặc sơ chế trước khi bán."
+Sữa Hạt,89,Plant-Based Nut Milk,견과 식물성 음료,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Hạt”.
+Đáy Từ,89,Induction-Compatible,인덕션 호환,"Nồi, chảo hoặc dụng cụ nấu tương thích với bếp từ."
+Nước Lau Sàn,88,Floor Cleaner,바닥 세정제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Nước Lau Sàn”."
+Úc,88,Australia,호주,Sản phẩm có xuất xứ từ Úc.
+Ít Đường,88,Low Sugar,저당,Sản phẩm có hàm lượng đường thấp hoặc được công bố ít đường.
+Nhà Tắm,86,Bathroom,욕실,Sản phẩm sử dụng chủ yếu trong khu vực nhà tắm.
+Mỹ,84,United States,미국,Sản phẩm có xuất xứ từ Mỹ.
+Món Chay,82,Vegetarian Food,채식 음식,Món ăn hoặc sản phẩm phù hợp chế độ ăn chay.
+Bình Nước,82,Water Bottle,물병,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Bình Nước”.
+Giặt Xả,80,Laundry Detergent & Softener,세탁세제·섬유유연제,Sản phẩm phục vụ nhu cầu giặt và xả quần áo.
+Khoai Tây,79,Potato,감자,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Khoai Tây”.
+Nhà Bếp,77,Kitchen,주방,Sản phẩm sử dụng chủ yếu trong khu vực nhà bếp.
+Mặt Nạ,77,Face Mask,마스크팩,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Mặt Nạ”.
+Bánh Gạo,76,Rice Crackers,쌀과자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Gạo”.
+Sấy Khô,76,Dried,건조,Thực phẩm hoặc nguyên liệu được làm khô bằng phương pháp sấy.
+Hạt Nêm,75,Seasoning Granules,조미 과립,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Hạt Nêm”.
+Gạo,74,Rice,쌀,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo”."
+Cà Phê Hạt,74,Coffee Beans,원두커피,Sản phẩm cà phê thuộc nhóm hoặc cách chế biến “Cà Phê Hạt”.
+Ý,74,Italy,이탈리아,Sản phẩm có xuất xứ từ Ý.
+Bánh Ngọt,72,Sweet Pastries,디저트 빵,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Ngọt”.
+Chảo,72,Frying Pan,프라이팬,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Chảo”.
+Cá Tươi,72,Fresh Fish,신선 생선,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Tươi”.
+Gối,71,Pillow,베개,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Gối”."
+Inox 304,69,304 Stainless Steel,304 스테인리스,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Inox 304."
+Muối,68,Salt,소금,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối”.
+Pizza,68,Pizza,피자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Pizza”.
+Thú Bông,67,Plush Toys,봉제인형,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Thú Bông”.
+Rổ,67,Basket,바구니,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Rổ”.
+Hữu Cơ,67,Organic,유기농,Sản phẩm hữu cơ hoặc có chứng nhận/tiêu chuẩn hữu cơ.
+Cotton,67,Cotton,면,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Cotton."
+Bánh Que,67,Biscuit Sticks,스틱 과자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Que”.
+Vang Đỏ,67,Red Wine,레드 와인,Đồ uống có cồn thuộc loại “Vang Đỏ”.
+Đồ Sơ Sinh,67,Newborn Essentials,신생아 용품,Sản phẩm dành cho trẻ sơ sinh.
+Đồ Chơi Xe,66,Toy Vehicles,자동차 장난감,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Đồ Chơi Xe”.
+Nước Tẩy Trang,66,Micellar Cleansing Water,클렌징 워터,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Nước Tẩy Trang”.
+Sáp Thơm,66,Scented Wax,방향 왁스,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Sáp Thơm”."
+Diệt Côn Trùng,65,Insect Control,해충 방제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Diệt Côn Trùng”."
+Bông Tẩy Trang,65,Cotton Pads,화장솜,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Bông Tẩy Trang”.
+Tráng Miệng,65,Dessert,디저트,Món ăn hoặc sản phẩm dùng làm món tráng miệng.
+Nước Tương,64,Soy Sauce,간장,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Nước Tương”."
+Tương Ớt,63,Chili Sauce,칠리소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Tương Ớt”."
+Tã Giấy,63,Disposable Diapers,일회용 기저귀,Sản phẩm tã giấy dùng cho trẻ nhỏ hoặc nhu cầu chăm sóc cá nhân.
+Pháp,62,France,프랑스,Sản phẩm có xuất xứ từ Pháp.
+New Zealand,61,New Zealand,뉴질랜드,Sản phẩm có xuất xứ từ New Zealand.
+Chăn Ga Gối,61,Bedding,침구,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Chăn Ga Gối”."
+Trứng,60,Eggs,계란,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Trứng”."
+Mật Ong,60,Honey,꿀,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Mật Ong”."
+Món Việt,60,Vietnamese Food,베트남 음식,Món ăn hoặc sản phẩm thuộc nhóm “Món Việt”.
+Kem Dưỡng Da,60,Moisturizing Cream,보습 크림,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Kem Dưỡng Da”.
+Dao Cạo,60,Razor,면도기,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Dao Cạo”.
+Cá Hộp,59,Canned Fish,생선 통조림,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Hộp”.
+Làm Bánh,59,Baking,베이킹,"Nguyên liệu, dụng cụ hoặc sản phẩm phù hợp để làm bánh."
+Nước Ép Hỗn Hợp,59,Mixed Fruit Juice,혼합 과일주스,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Ép Hỗn Hợp”.
+Thau,58,Basin,대야,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Thau”.
+Sốt Ướp,57,Marinade Sauce,양념 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Ướp”."
+Bánh Xốp,56,Wafer,웨이퍼,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Xốp”.
+Cắt Lát,56,Sliced,슬라이스,Thực phẩm hoặc nguyên liệu được sơ chế dạng lát.
+Xịt Phòng,55,Room Spray,룸 스프레이,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Xịt Phòng”."
+Đồ Ngọt,55,Sweets,단 음식,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Đồ Ngọt”.
+Hạt Điều,54,Cashew,캐슈넛,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Điều”."
+Sữa Tắm Bé,54,Baby Body Wash,베이비 바디워시,Sản phẩm dành cho trẻ em.
+Nồi,54,Pot,냄비,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Nồi”.
+Rượu Mạnh,54,Spirits,증류주,Đồ uống có cồn thuộc loại “Rượu Mạnh”.
+Đĩa Sứ,54,Porcelain Plate,도자기 접시,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Đĩa Sứ”.
+Khô Cá,54,Dried Fish,건어물 생선,Cá được làm khô hoặc sản phẩm chế biến từ cá khô.
+Kẹo Gum,54,Chewing Gum,껌,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Gum”.
+Bút Gel,53,Gel Pen,젤펜,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Gel”.
+Thức Ăn Thú Cưng,52,Pet Food,반려동물 사료,Thức ăn và dinh dưỡng dành cho thú cưng.
+Trà Xanh,52,Green Tea,녹차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Xanh”."
+Móc Treo,52,Hanger,걸이,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Móc Treo”.
+Đậu Phộng,52,Peanut,땅콩,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Phộng”."
+Sữa Bột,51,Powdered Milk,분유·분말 우유,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Bột”.
+Đức,50,Germany,독일,Sản phẩm có xuất xứ từ Đức.
+Thạch,50,Jelly,젤리,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Thạch”.
+Chống Dính,50,Non-Stick,논스틱,Dụng cụ nấu có bề mặt hoặc lớp phủ chống dính.
+Nui,50,Pasta,파스타,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Nui”."
+Chả Giò,49,Spring Rolls,짜조,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Chả Giò”."
+Trị Gàu,49,Anti-Dandruff,비듬 케어,Sản phẩm hỗ trợ giảm hoặc kiểm soát gàu.
+Thịt Tươi,49,Fresh Meat,신선 육류,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Tươi”."
+Anh,48,United Kingdom,영국,Sản phẩm có xuất xứ từ Vương quốc Anh.
+Món Nướng,48,Grilled Food,구이 요리,Món ăn hoặc sản phẩm thuộc nhóm “Món Nướng”.
+Há Cảo,47,Har Gow Dumplings,하가우,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Há Cảo”."
+Thú Cưng,47,Pets,반려동물,Sản phẩm dành cho thú cưng.
+Xông Khói,47,Smoked,훈제,Thực phẩm được chế biến hoặc tạo hương bằng phương pháp xông khói.
+Bánh Bao,47,Steamed Buns,찐빵·바오,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Bao”.
+Tô Sứ,46,Porcelain Bowl,도자기 볼,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Tô Sứ”.
+Nhuộm Tóc,45,Hair Coloring,염색,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Nhuộm Tóc”.
+Tẩy Tế Bào Chết,45,Exfoliating,각질 제거,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Tẩy Tế Bào Chết”.
+Mì Ý,45,Spaghetti,스파게티,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Ý”."
+Có Thạch,45,With Jelly,젤리 함유,Đồ uống hoặc thực phẩm có thành phần thạch.
+Đường,45,Sugar,설탕,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Đường”.
+Dép,44,Slippers,슬리퍼,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Dép”.
+Áo,44,Tops,상의,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Áo”.
+Trị Mụn,44,Acne Care,여드름 케어,Sản phẩm chăm sóc da hướng đến hỗ trợ da mụn.
+Chiên Giòn,44,Crispy Fried,바삭 튀김,Thực phẩm được chế biến theo kiểu chiên giòn.
+Bút Chì,44,Pencil,연필,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Chì”.
+Tiêu,43,Pepper,후추,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Tiêu”.
+Thịt Hộp,43,Canned Meat,육류 통조림,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Hộp”."
+Khăn Tắm,43,Bath Towel,목욕 수건,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Khăn Tắm”."
+Kem Lạnh,43,Ice Cream,아이스크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Lạnh”."
+Lạp Xưởng,43,Chinese Sausage,중국식 소시지,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Lạp Xưởng”."
+Giấy Ghi Chú,42,Sticky Notes,메모지,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Giấy Ghi Chú”.
+Lên Men,42,Fermented,발효,Thực phẩm hoặc đồ uống được chế biến bằng quá trình lên men.
+Cola,40,Cola,콜라,Nước giải khát có hương vị cola.
+Bánh Tươi,39,Fresh Bakery,신선 베이커리,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Tươi”.
+Bình Giữ Nhiệt,39,Thermos Bottle,보온병,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Bình Giữ Nhiệt”.
+Soju,39,Soju,소주,Đồ uống có cồn thuộc loại “Soju”.
+Bánh Tráng,39,Rice Paper,라이스페이퍼,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Tráng”.
+Bột Mì,39,Wheat Flour,밀가루,"Bột mì dùng làm bánh, nấu ăn hoặc chế biến thực phẩm."
+Nước Năng Lượng,39,Energy Drink,에너지 음료,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Năng Lượng”.
+Đà Lạt,39,Da Lat,달랏,"Sản phẩm có nguồn gốc, đặc sản hoặc liên quan đến khu vực Đà Lạt."
+Dầu Ô Liu,38,Olive Oil,올리브유,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Dầu Ô Liu”."
+Trà Ô Long,38,Oolong Tea,우롱차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Ô Long”."
+Bút Bi,38,Ballpoint Pen,볼펜,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Bi”.
+Khăn Mặt,38,Face Towel,세면 수건,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Khăn Mặt”."
+Cá Viên,38,Fish Balls,어묵볼,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Viên”.
+Miến Gói,38,Instant Glass Noodles,즉석 당면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Miến Gói”."
+Trang Điểm,37,Makeup,메이크업,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Trang Điểm”.
+Đũa,37,Chopsticks,젓가락,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Đũa”.
+Áo Thun,37,T-Shirt,티셔츠,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Áo Thun”.
+Nấu Lẩu,37,Hot Pot Cooking,전골·훠궈 조리,Nguyên liệu hoặc sản phẩm phù hợp để nấu lẩu.
+Niacinamide,37,Niacinamide,나이아신아마이드,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Niacinamide”.
+Trang Trí,37,Decoration,장식,Sản phẩm phục vụ nhu cầu trang trí.
+Siêu Cay,37,Extra Spicy,매우 매운맛,Sản phẩm có mức độ cay rất cao.
+Nước Hoa,36,Perfume,향수,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Nước Hoa”.
+Canh,36,Soup,국·수프,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Canh”."
+Mì Trộn,36,Mixed Noodles,비빔면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Trộn”."
+Muỗng,35,Spoon,숟가락,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Muỗng”.
+Kim Chi,35,Kimchi,김치,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kim Chi”."
+Cục Gôm,35,Eraser,지우개,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Cục Gôm”.
+Nước Tẩy Quần Áo,35,Laundry Bleach,의류 표백제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Nước Tẩy Quần Áo”."
+Mũ Bảo Hiểm,34,Helmet,헬멧,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Mũ Bảo Hiểm”.
+Quần,34,Pants,바지,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Quần”.
+Bánh Mì,34,Bread,빵,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Mì”.
+Quạt Mini,34,Mini Fan,미니 선풍기,"Quạt kích thước nhỏ, phù hợp nhu cầu làm mát cá nhân."
+Vớ,34,Socks,양말,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Vớ”.
+Khăn Rút,33,Pull-Out Tissue,뽑아쓰는 티슈,Khăn giấy hoặc khăn dùng theo dạng rút từng tờ.
+Yến Mạch,33,Oats,귀리,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Yến Mạch”."
+Cháo Gói,33,Instant Porridge,즉석 죽,"Cháo đóng gói, thường dùng theo dạng ăn liền hoặc chế biến nhanh."
+Phi Lê,33,Fillet,필레,Thịt hoặc thủy hải sản đã được phi lê.
+Khăn Lau,32,Cleaning Cloth,행주·청소포,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Khăn Lau”."
+Món Nhật,32,Japanese Food,일식,Món ăn hoặc sản phẩm thuộc nhóm “Món Nhật”.
+Cắt Khúc,32,Cut into Pieces,토막 손질,Thực phẩm hoặc nguyên liệu được sơ chế thành từng khúc.
+Trà Hòa Tan,32,Instant Tea,인스턴트 차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Hòa Tan”."
+Bột Giặt,31,Laundry Powder,가루 세탁세제,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Bột Giặt”."
+Sốt Mayonnaise,31,Mayonnaise,마요네즈,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Mayonnaise”."
+Chả Lụa,31,Vietnamese Pork Sausage,베트남식 돼지고기 소시지,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Chả Lụa”."
+Không Mùi,31,Fragrance Free,무향,Sản phẩm không mùi hoặc được công bố không mùi.
+Nước Khoáng,31,Mineral Water,생수·미네랄워터,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Khoáng”.
+Kẹo Socola,30,Chocolate Candy,초콜릿 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Socola”.
+Bạc Hà,30,Mint,민트,Sản phẩm có thành phần hoặc hương vị bạc hà.
+Giữ Nhiệt,29,Heat Retention,보온,Sản phẩm có khả năng duy trì nhiệt độ nóng hoặc lạnh.
+Sốt Chấm,29,Dipping Sauce,찍어 먹는 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Chấm”."
+Dầu Hào,28,Oyster Sauce,굴소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Dầu Hào”."
+Nước Yến,28,Bird's Nest Drink,제비집 음료,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Yến”.
+Son,27,Lipstick,립스틱,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Son”.
+Chén Cơm,27,Rice Bowl,밥공기,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Chén Cơm”.
+Socola Sữa,27,Milk Chocolate,밀크 초콜릿,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Sữa”.
+Sáp Vuốt Tóc,27,Hair Wax,헤어 왁스,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Sáp Vuốt Tóc”.
+Kẹo Ngậm,27,Lozenges,캔디·목캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Ngậm”.
+Nấm Tươi,27,Fresh Mushrooms,신선 버섯,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Nấm Tươi”."
+Nhân Thịt,26,Meat Filling,고기 소,Thực phẩm có phần nhân làm từ thịt.
+Táo Tươi,26,Fresh Apples,신선 사과,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Táo Tươi”.
+Mì Xào,26,Stir-Fried Noodles,볶음면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Xào”."
+Vitamin C,26,Vitamin C,비타민 C,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Vitamin C”.
+Thảo Dược,26,Herbal,약초 성분,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Thảo Dược."
+Bánh Mochi,26,Mochi,모찌,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Mochi”.
+Thịt Khô,26,Dried Meat,육포,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Khô”."
+Thể Thao,26,Sports,스포츠,Sản phẩm phục vụ hoạt động thể thao hoặc vận động.
+Doraemon,26,Doraemon,도라에몽,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Doraemon”.
+Thảo Mộc,25,Herbs,허브,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Thảo Mộc."
+Lẩu Tại Nhà,25,Home Hot Pot,홈 훠궈·전골,"Thực phẩm, nguyên liệu hoặc bộ sản phẩm phù hợp cho bữa lẩu tại nhà."
+Hộp Quà,25,Gift Box,선물 상자,Sản phẩm được đóng gói theo dạng hộp quà.
+Muối Ớt,25,Chili Salt,칠리 소금,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối Ớt”.
+Đài Loan,24,Taiwan,대만,Sản phẩm có xuất xứ từ Đài Loan.
+Ruột Gối,24,Pillow Insert,베개 속통,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Ruột Gối”."
+Ly Nhựa,24,Plastic Cup,플라스틱 컵,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ly Nhựa”.
+Đậu Hũ,24,Tofu,두부,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Hũ”."
+Viên Giặt,23,Laundry Detergent Pods,세탁 캡슐,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Viên Giặt”."
+Đồ Lót,23,Underwear,속옷,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Đồ Lót”.
+Xà Lách,23,Lettuce,상추·양상추,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Xà Lách”."
+Đậu Nành,23,Soybean,대두,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Nành”."
+Thủy Canh,23,Hydroponic,수경재배,"Rau, cây hoặc sản phẩm được trồng theo phương pháp thủy canh."
+Nấu Pasta,23,Pasta Cooking,파스타 조리,Nguyên liệu hoặc sản phẩm phù hợp để nấu pasta.
+Trà Sữa,23,Milk Tea,밀크티,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Sữa”."
+Hạnh Nhân,23,Almond,아몬드,Hạt hạnh nhân hoặc sản phẩm có thành phần hạnh nhân.
+Đuổi Muỗi,22,Mosquito Repellent,모기 기피,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Đuổi Muỗi”."
+Kẹo Mút,22,Lollipop,막대사탕,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Mút”.
+Gà Chiên,22,Fried Chicken,치킨,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Gà Chiên”."
+Socola Thanh,22,Chocolate Bar,초콜릿 바,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Thanh”.
+Thớt,22,Cutting Board,도마,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Thớt”.
+Túi Rác,22,Trash Bags,쓰레기봉투,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Túi Rác”."
+Gạo Lứt,22,Brown Rice,현미,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo Lứt”."
+Sữa Đặc,22,Condensed Milk,연유,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Đặc”.
+Socola Đắng,21,Dark Chocolate,다크 초콜릿,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Đắng”.
+Cháo Tươi,21,Fresh Porridge,신선 죽,Cháo chế biến sẵn dạng tươi hoặc đóng gói dùng nhanh.
+Cà Phê Sữa,21,Milk Coffee,밀크 커피,Sản phẩm cà phê thuộc nhóm hoặc cách chế biến “Cà Phê Sữa”.
+Cà Phê Bột,21,Ground Coffee,분쇄 커피,Sản phẩm cà phê thuộc nhóm hoặc cách chế biến “Cà Phê Bột”.
+Vang Trắng,21,White Wine,화이트 와인,Đồ uống có cồn thuộc loại “Vang Trắng”.
+Thịt Nguội,21,Cold Cuts,콜드컷·햄,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Nguội”."
+Sốt Spaghetti,21,Spaghetti Sauce,스파게티 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Spaghetti”."
+Ngâm Muối,21,Salt-Brined,소금 절임,Thực phẩm được ngâm hoặc bảo quản bằng muối.
+Nấu Phở,21,Pho Cooking,쌀국수 조리,Nguyên liệu hoặc sản phẩm phù hợp để nấu phở.
+Kẹo Marshmallow,20,Marshmallow,마시멜로,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Marshmallow”.
+Khay Đá,20,Ice Tray,얼음틀,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Khay Đá”.
+Phở Bò,20,Beef Pho,소고기 쌀국수,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Phở Bò”."
+Balo,20,Backpack,백팩,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Balo”.
+Dao Bếp,20,Kitchen Knife,주방 칼,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Dao Bếp”.
+Sốt Lẩu,20,Hot Pot Sauce,훠궈·전골 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Lẩu”."
+Tiêu Đen,20,Black Pepper,흑후추,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Tiêu Đen”.
+Bánh Xếp,20,Dumplings,만두,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Xếp”.
+Hạt Macca,20,Macadamia,마카다미아,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Macca”."
+Món Kho,20,Braised Dishes,조림 요리,Món ăn hoặc sản phẩm thuộc nhóm “Món Kho”.
+Thái Nguyên,20,Thai Nguyen,타이응우옌,"Sản phẩm có nguồn gốc, đặc sản hoặc liên quan đến khu vực Thái Nguyên."
+Nước Tinh Khiết,20,Purified Water,정제수,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Tinh Khiết”.
+Mì Khô,19,Dried Noodles,건면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Khô”."
+Phủ Bạc,19,Silver-Coated,은 코팅,Sản phẩm có bề mặt hoặc lớp hoàn thiện phủ bạc.
+Chén Sứ,19,Porcelain Rice Bowl,도자기 밥공기,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Chén Sứ”.
+Khô Mực,19,Dried Squid,마른 오징어,Mực khô hoặc sản phẩm chế biến từ mực khô.
+Màng PE,19,PE Cling Film,PE 랩,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Màng PE."
+Quà Tặng,19,Gifts,선물,Sản phẩm phù hợp dùng làm quà tặng.
+Tay Ngắn,19,Short Sleeve,반팔,Trang phục có thiết kế tay ngắn.
+Bút Màu,19,Coloring Pens,색연필·컬러펜,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Màu”.
+Mì Udon,18,Udon Noodles,우동면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Udon”."
+Kiềm Dầu,18,Oil Control,피지 조절,Sản phẩm hỗ trợ kiểm soát dầu nhờn trên da hoặc tóc.
+Món Nước,18,Soup-Based Dishes,국물 요리,Món ăn hoặc sản phẩm thuộc nhóm “Món Nước”.
+Khăn Tay,18,Handkerchief,손수건,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Khăn Tay”."
+Gối Ôm,18,Body Pillow,바디필로우,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Gối Ôm”."
+Singapore,18,Singapore,싱가포르,Sản phẩm có xuất xứ từ Singapore.
+Philippines,18,Philippines,필리핀,Sản phẩm có xuất xứ từ Philippines.
+Gấu Teddy,18,Teddy Bear,테디베어,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Gấu Teddy”.
+Bột Ngọt,18,MSG,MSG 조미료,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Bột Ngọt”.
+Đi Biển,17,Beachwear & Beach Use,해변용,Sản phẩm phù hợp mang theo hoặc sử dụng khi đi biển.
+Mì Cay,17,Spicy Noodles,매운 면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Cay”."
+Xoài Sấy,17,Dried Mango,건망고,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Xoài Sấy”.
+Rượu Whisky,17,Whisky,위스키,Đồ uống có cồn thuộc loại “Rượu Whisky”.
+Sốt Cay,17,Spicy Sauce,매운 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Cay”."
+Quần Short,17,Shorts,반바지,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Quần Short”.
+Trồng Cây,17,Gardening,원예,Sản phẩm phục vụ nhu cầu trồng và chăm sóc cây.
+Bún Khô,17,Dried Rice Vermicelli,건조 쌀국수면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Bún Khô”."
+Du Lịch,17,Travel,여행,Sản phẩm phù hợp cho nhu cầu du lịch.
+Hủ Tiếu,17,Hu Tieu Noodles,후띠우,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Hủ Tiếu”."
+Bột Cacao,17,Cocoa Powder,코코아 파우더,"Bột cacao dùng cho đồ uống, làm bánh hoặc chế biến thực phẩm."
+Nhựa Melamine,17,Melamine Plastic,멜라민 수지,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Nhựa Melamine."
+Rổ Vuông,17,Square Basket,사각 바구니,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Rổ Vuông”.
+Keratin Biotin,17,Keratin & Biotin,케라틴·비오틴,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Keratin Biotin”.
+Inox 430,16,430 Stainless Steel,430 스테인리스,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Inox 430."
+Cơm Hộp,16,Boxed Meal,도시락,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Cơm Hộp”."
+Nhạy Cảm,16,Sensitive Skin,민감성,Sản phẩm dành cho da hoặc đối tượng nhạy cảm.
+Ly Sứ,16,Ceramic Cup,도자기 컵,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ly Sứ”.
+Cá Trứng,16,Capelin,열빙어,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Trứng”.
+Thùng Rác,16,Trash Bin,쓰레기통,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Thùng Rác”.
+Mắm Tôm,16,Shrimp Paste,새우젓 페이스트,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Mắm Tôm”."
+Xịt Muỗi,16,Mosquito Spray,모기 스프레이,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Xịt Muỗi”."
+Chân Giò,16,Pork Hock,돼지 족,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Chân Giò”."
+Cơm Chiên,16,Fried Rice,볶음밥,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Cơm Chiên”."
+Kẹo Mềm,16,Soft Candy,소프트 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Mềm”.
+Hoa Tươi,16,Fresh Flowers,생화,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Hoa Tươi”."
+Zero Calo,15,Zero Calories,제로 칼로리,Sản phẩm được công bố không hoặc gần như không có calo.
+Rang Xay,15,Roasted & Ground,로스팅·분쇄,Cà phê hoặc nguyên liệu đã được rang và xay.
+Socola Nhân,15,Filled Chocolate,필링 초콜릿,Sản phẩm socola có phần nhân bên trong.
+Trà Chanh,15,Lemon Tea,레몬차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Chanh”."
+Trứng Vịt,15,Duck Eggs,오리알,Trứng vịt và sản phẩm liên quan.
+Quà Tết,15,Tet Gifts,설 명절 선물,Sản phẩm hoặc bộ quà phù hợp cho dịp Tết.
+Dành Cho Người Tiểu Đường,15,Suitable for Diabetics,당뇨 관리용,Sản phẩm dành cho người cần kiểm soát lượng đường trong chế độ ăn.
+Nước Dừa,15,Coconut Water,코코넛 워터,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Dừa”.
+Dầu Mè,15,Sesame Oil,참기름,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Dầu Mè”."
+Cọ Toilet,15,Toilet Brush,변기 브러시,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Cọ Toilet”."
+Nấm Khô,15,Dried Mushrooms,건버섯,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Nấm Khô”."
+Ủ Tóc,15,Hair Treatment,헤어 트리트먼트,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Ủ Tóc”.
+Sốt Cà,15,Tomato Sauce,토마토 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Cà”."
+Nha Đam,15,Aloe Vera,알로에 베라,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Nha Đam”.
+Khô Bò,15,Beef Jerky,소고기 육포,Thịt bò khô hoặc sản phẩm chế biến dạng khô từ bò.
+Bột Nghệ,15,Turmeric Powder,강황가루,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Bột Nghệ”.
+Mì Tương Đen,15,Jajang Noodles,짜장면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Tương Đen”."
+Gốc Thực Vật,15,Plant-Based,식물성,Sản phẩm có nguồn gốc chủ yếu từ thực vật.
+Tương Cà,15,Ketchup,케첩,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Tương Cà”."
+Dép Nữ,14,Women's Slippers,여성 슬리퍼,Sản phẩm dành cho nữ giới.
+Rau Baby,14,Baby Vegetables,어린잎 채소,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Rau Baby”."
+Kẹo Nổ,14,Popping Candy,팝핑 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Nổ”.
+Chân Gà,14,Chicken Feet,닭발,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Chân Gà”."
+Gạo ST25,14,ST25 Rice,ST25 쌀,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo ST25”."
+Bắp Ngọt,14,Sweet Corn,스위트콘,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Bắp Ngọt”.
+Váng Sữa,14,Milk Cream Dessert,우유 크림 디저트,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Váng Sữa”."
+Nĩa,14,Fork,포크,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Nĩa”.
+Khô Gà,14,Dried Chicken,닭고기 육포,Thịt gà khô hoặc sản phẩm chế biến dạng khô từ gà.
+Bò Viên,13,Beef Balls,소고기 완자,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Bò Viên”."
+Cơm Cuộn,13,Rice Rolls,김밥·라이스롤,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Cơm Cuộn”."
+Bút Xóa,13,Correction Pen,수정펜,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Xóa”.
+Trà Đào,13,Peach Tea,복숭아차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Đào”."
+Không Cồn,13,Non-Alcoholic,무알코올,Sản phẩm không chứa cồn hoặc được công bố không cồn.
+Bánh Kem,13,Cake,케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Kem”.
+Rượu Vodka,13,Vodka,보드카,Đồ uống có cồn thuộc loại “Rượu Vodka”.
+Tteokbokki,13,Tteokbokki,떡볶이,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Tteokbokki”."
+Túi Tote,13,Tote Bag,토트백,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Túi Tote”.
+Sấy Giòn,13,Crispy Dried,바삭 건조,Thực phẩm được sấy để tạo độ giòn.
+Kẹo Dừa,12,Coconut Candy,코코넛 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Dừa”.
+Tiêu Sọ,12,White Pepper,백후추,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Tiêu Sọ”.
+Tăm Bông,12,Cotton Swabs,면봉,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Tăm Bông”.
+Khoai Môn,12,Taro,토란,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Khoai Môn”.
+Nước Ép Cam,12,Orange Juice,오렌지 주스,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Ép Cam”.
+Vỏ Gối,12,Pillowcase,베개 커버,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Vỏ Gối”."
+Xoài Tươi,12,Fresh Mango,신선 망고,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Xoài Tươi”.
+Chăn Mền,12,Blanket,담요,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Chăn Mền”."
+Bút Highlight,12,Highlighter,형광펜,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Highlight”.
+Rang Muối,12,Salt-Roasted,소금구이,Thực phẩm được chế biến theo kiểu rang muối.
+Sốt Salad,12,Salad Dressing,샐러드 드레싱,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Salad”."
+Ly Rượu,12,Wine Glass,와인잔,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ly Rượu”.
+Nước Ion,12,Ionized Water,이온수,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Ion”.
+Thùng Đá,12,Ice Box,아이스박스,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Thùng Đá”.
+Mì Chay,12,Vegetarian Noodles,채식 면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Chay”."
+Chuối Tươi,12,Fresh Banana,신선 바나나,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Chuối Tươi”.
+Hạt Chia,12,Chia Seeds,치아씨드,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Chia”."
+Bột Gạo,12,Rice Flour,쌀가루,Bột làm từ gạo dùng trong nấu ăn và chế biến thực phẩm.
+Túi Thơm,12,Scented Sachet,향주머니,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Túi Thơm”."
+Làm Thạch,12,Jelly Making,젤리 만들기,"Nguyên liệu, dụng cụ hoặc sản phẩm phù hợp để làm thạch."
+Bánh Đa,12,Rice Crackers / Rice Sheets,쌀과자·쌀전병,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Đa”.
+Bún Gói,12,Instant Rice Vermicelli,즉석 쌀국수면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Bún Gói”."
+Phở Gà,12,Chicken Pho,닭고기 쌀국수,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Phở Gà”."
+Toner Pad,12,Toner Pad,토너 패드,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Toner Pad”.
+Mực Ống,12,Squid,오징어,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Mực Ống”.
+Muối Tiêu,11,Salt & Pepper,소금·후추,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối Tiêu”.
+Món Salad,11,Salad Dishes,샐러드 요리,Món ăn hoặc sản phẩm thuộc nhóm “Món Salad”.
+Phở Gói,11,Instant Pho,즉석 쌀국수,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Phở Gói”."
+Thảm Chân,11,Doormat,발매트,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Thảm Chân”."
+Dim Sum,11,Dim Sum,딤섬,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Dim Sum”."
+Nui Ống,11,Tube Pasta,튜브 파스타,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Nui Ống”."
+Dưa Leo,11,Cucumber,오이,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Dưa Leo”."
+Cải Ngọt,11,Choy Sum,초이섬,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Cải Ngọt”."
+Mè Rang,11,Roasted Sesame,볶은 참깨,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Mè Rang”."
+Nhang Muỗi,11,Mosquito Coil,모기향,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Nhang Muỗi”."
+Nhựa Bio,11,Bioplastic,바이오 플라스틱,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Nhựa Bio."
+Nấu Xào,11,Stir-Fry Cooking,볶음 요리,Nguyên liệu hoặc sản phẩm phù hợp để nấu xào.
+Cá Nục,11,Mackerel Scad,전갱이,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Nục”.
+Nước Gạo,11,Rice Drink,쌀 음료,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Gạo”.
+Kem Tươi,11,Whipping Cream,휘핑크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Tươi”."
+Đậu Xanh,11,Mung Bean,녹두,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Xanh”."
+Gạo Dẻo,10,Soft & Sticky Rice,찰진 쌀,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo Dẻo”."
+Gạo Thơm,10,Fragrant Rice,향미 쌀,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo Thơm”."
+Xương Gà,10,Chicken Bones,닭뼈,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xương Gà”."
+Ngâm Sốt,10,Marinated in Sauce,소스 절임,Thực phẩm đã được ngâm hoặc ướp trong sốt.
+Bánh Croissant,10,Croissant,크루아상,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Croissant”.
+Món Chiên,10,Fried Food,튀김 요리,Món ăn hoặc sản phẩm thuộc nhóm “Món Chiên”.
+Ấm Siêu Tốc,10,Electric Kettle,전기주전자,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ấm Siêu Tốc”.
+Bí Đỏ,10,Pumpkin,호박,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Bí Đỏ”."
+Tương Đen,10,Black Bean Sauce,춘장·블랙빈 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Tương Đen”."
+Mì Trứng,10,Egg Noodles,계란면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Trứng”."
+Tô Melamine,10,Melamine Bowl,멜라민 볼,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Tô Melamine”.
+Than Tre,10,Bamboo Charcoal,대나무 숯,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Than Tre."
+Nga,10,Russia,러시아,Sản phẩm có xuất xứ từ Nga.
+Thước Kẻ,10,Ruler,자,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Thước Kẻ”.
+Keo Dán,10,Glue,접착제,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Keo Dán”.
+Tảo Biển,10,Sea Algae,해조류,Tảo biển hoặc sản phẩm có thành phần từ tảo biển.
+Thăn Bò,10,Beef Tenderloin,소고기 안심,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thăn Bò”."
+Gối Cổ,10,Neck Pillow,목베개,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Gối Cổ”."
+Yến Sào,10,Edible Bird's Nest,식용 제비집,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Yến Sào”."
+Dược Liệu,10,Medicinal Herbs,약용 식물,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Dược Liệu."
+Ăn Cơm,10,For Rice Meals,밥반찬용,Món ăn hoặc sản phẩm phù hợp dùng kèm cơm.
+Rút Xương,10,Boneless,뼈 제거,Thịt hoặc thủy hải sản đã được loại bỏ xương.
+Thịt Xay,10,Ground Meat,다진 고기,Thịt đã được xay nhỏ.
+Socola Viên,10,Chocolate Bites,초콜릿 볼,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Viên”.
+Trà Gừng,10,Ginger Tea,생강차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Gừng”."
+Cháy Tỏi,10,Garlic-Fried,마늘 볶음,Món hoặc sản phẩm được chế biến với tỏi phi/cháy tỏi.
+Thuần Chay,10,Vegan,비건,Sản phẩm phù hợp chế độ thuần chay.
+Dâu Tây,10,Strawberry,딸기,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Dâu Tây”.
+Mì Gà,10,Chicken Noodles,닭고기 면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Gà”."
+Không Hạt,10,Seedless,씨 없는,Sản phẩm không có hạt hoặc đã được loại bỏ hạt.
+Đất Nặn,10,Modeling Clay,점토,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Đất Nặn”.
+Mít Sấy,10,Dried Jackfruit,건잭프루트,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Mít Sấy”.
+Vali,10,Suitcase,여행가방,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Vali”.
+Dưa Lưới,10,Melon,멜론,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Dưa Lưới”.
+Đùi Vịt,10,Duck Leg,오리 다리,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Đùi Vịt”."
+Hấp Chín,10,Steamed,찜 조리,Thực phẩm đã được làm chín bằng phương pháp hấp.
+Bấm Ghim,10,Stapler,스테이플러,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bấm Ghim”.
+Muối I-ốt,10,Iodized Salt,요오드 소금,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối I-ốt”.
+Vá Inox,9,Stainless Steel Ladle,스테인리스 국자,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Vá Inox”.
+Bún Tươi,9,Fresh Rice Vermicelli,생 쌀국수면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Bún Tươi”."
+Kẹp Giấy,9,Paper Clip,클립,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Kẹp Giấy”.
+Trà Atiso,9,Artichoke Tea,아티초크차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Atiso”."
+Chile,9,Chile,칠레,Sản phẩm có xuất xứ từ Chile.
+Chén Chấm,9,Dipping Bowl,소스 종지,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Chén Chấm”.
+Nấu Canh,9,Soup Cooking,국 요리,Nguyên liệu hoặc sản phẩm phù hợp để nấu canh.
+Tích Điện,9,Rechargeable,충전식,Sản phẩm có pin hoặc khả năng tích trữ điện để sử dụng.
+Ớt Chuông,9,Bell Pepper,파프리카,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Ớt Chuông”."
+Hành Tím,9,Shallot,샬롯,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Hành Tím”."
+Sủi Cảo,9,Dumplings,물만두,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Sủi Cảo”."
+Tôm Sú,9,Black Tiger Shrimp,블랙타이거 새우,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Sú”.
+Hạt Dẻ,9,Chestnut,밤,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Dẻ”."
+Việt Quất,9,Blueberry,블루베리,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Việt Quất”.
+Hyaluronic Acid,9,Hyaluronic Acid,히알루론산,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Hyaluronic Acid”.
+Đường Phèn,9,Rock Sugar,빙당,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Đường Phèn”.
+Nước Chấm,9,Dipping Sauce,디핑 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Nước Chấm”."
+Canada,9,Canada,캐나다,Sản phẩm có xuất xứ từ Canada.
+Xịt Vải,9,Fabric Spray,패브릭 스프레이,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Xịt Vải”."
+Ngọc Trai,9,Pearl,진주,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Ngọc Trai”.
+Demon Slayer,9,Demon Slayer,귀멸의 칼날,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Demon Slayer”.
+Pizza Tươi,9,Fresh Pizza,신선 피자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Pizza Tươi”.
+Cabernet Sauvignon,9,Cabernet Sauvignon,카베르네 소비뇽,Đồ uống có cồn thuộc loại “Cabernet Sauvignon”.
+Giấm Táo,9,Apple Cider Vinegar,사과식초,Giấm làm từ táo dùng trong chế biến thực phẩm hoặc pha chế.
+Ly Giấy,9,Paper Cup,종이컵,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ly Giấy”.
+Chuối Sấy,9,Dried Banana,건바나나,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Chuối Sấy”.
+Mứt Dâu,9,Strawberry Jam,딸기잼,Mứt làm từ dâu hoặc sản phẩm phết có hương vị dâu.
+Sườn Non,9,Pork Ribs,돼지갈비,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Sườn Non”."
+Phủ Socola,9,Chocolate-Coated,초콜릿 코팅,Sản phẩm có lớp phủ socola.
+Tôm Khô,9,Dried Shrimp,건새우,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Khô”.
+Nước Hoa Nữ,8,Women's Perfume,여성 향수,Sản phẩm dành cho nữ giới.
+Bia Trắng,8,Wheat Beer,밀맥주,Đồ uống có cồn thuộc loại “Bia Trắng”.
+Trà Lài,8,Jasmine Tea,자스민차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Lài”."
+Bánh Pía,8,Pia Cake,피아 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Pía”.
+Kiwi Vàng,8,Gold Kiwi,골드키위,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Kiwi Vàng”.
+Lương Khô,8,Compressed Biscuits,건빵,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Lương Khô”.
+Nem Nướng,8,Grilled Pork Sausage,구운 돼지고기 소시지,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Nem Nướng”."
+Bánh Hotteok,8,Hotteok,호떡,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Hotteok”.
+Lager,8,Lager,라거,Đồ uống có cồn thuộc loại “Lager”.
+Bò Wagyu,8,Wagyu Beef,와규 소고기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Bò Wagyu”."
+Rau Muống,8,Water Spinach,공심채,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Rau Muống”."
+Ống Hút,8,Straw,빨대,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Ống Hút”.
+Ăn Kiêng,8,Diet Food,다이어트 식품,Sản phẩm phù hợp nhu cầu ăn kiêng hoặc kiểm soát khẩu phần.
+Nhân Socola,8,Chocolate Filling,초콜릿 필링,"Bánh, kẹo hoặc thực phẩm có nhân socola."
+Phủ Ceramic,8,Ceramic-Coated,세라믹 코팅,Sản phẩm có lớp phủ ceramic.
+Cappuccino Dừa,8,Coconut Cappuccino,코코넛 카푸치노,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Cappuccino Dừa”."
+Nui Xoắn,8,Spiral Pasta,푸실리,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Nui Xoắn”."
+Bột Canh,8,Seasoning Powder,조미 소금,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Bột Canh”.
+Khổ Qua,8,Bitter Melon,여주,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Khổ Qua”."
+Đĩa Giấy,8,Paper Plate,종이 접시,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Đĩa Giấy”.
+Trà Đen,8,Black Tea,홍차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Đen”."
+Thạch Dừa,8,Coconut Jelly,코코넛 젤리,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Thạch Dừa”.
+Mickey,8,Mickey Mouse,미키마우스,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Mickey”.
+Muối Hồng,8,Pink Salt,핑크솔트,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối Hồng”.
+Ga Giường Jacquard,8,Jacquard Bedsheet,자카드 침대시트,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Ga Giường Jacquard”."
+Soda Kem,8,Cream Soda,크림소다,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Soda Kem”."
+Bánh Gấu,8,Bear-Shaped Biscuits,곰 모양 과자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Gấu”.
+Thước Dẻo,8,Flexible Ruler,말랑 자,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Thước Dẻo”.
+Tô Canh,8,Soup Bowl,국그릇,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Tô Canh”.
+Vang Sủi,8,Sparkling Wine,스파클링 와인,Đồ uống có cồn thuộc loại “Vang Sủi”.
+Kẹo Xylitol,8,Xylitol Candy,자일리톨 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Xylitol”.
+Nấu Cà Ri,7,Curry Cooking,카레 요리,Nguyên liệu hoặc sản phẩm phù hợp để nấu cà ri.
+Cam Tươi,7,Fresh Orange,신선 오렌지,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Cam Tươi”.
+Viên Nhàu,7,Noni Capsules,노니 캡슐,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Viên Nhàu."
+Giò Thủ,7,Vietnamese Head Cheese,베트남식 헤드치즈,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Giò Thủ”."
+Mì Ramen,7,Ramen Noodles,라멘,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Ramen”."
+Dừa Xiêm,7,Young Coconut,어린 코코넛,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Dừa Xiêm”.
+Gà Nugget,7,Chicken Nuggets,치킨 너겟,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Gà Nugget”."
+Minions,7,Minions,미니언즈,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Minions”.
+Mọc Tóc,7,Hair Growth,모발 성장,Sản phẩm chăm sóc tóc hướng đến hỗ trợ tóc chắc khỏe hoặc mọc tóc.
+Bánh Sandwich,7,Sandwich Bread,식빵,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Sandwich”.
+Lúa Mạch,7,Barley,보리,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Lúa Mạch”."
+Món Chấm,7,Dipping Foods,찍어 먹는 음식,Món ăn hoặc sản phẩm thuộc nhóm “Món Chấm”.
+Đệm Ngồi,7,Seat Cushion,방석,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Đệm Ngồi”."
+Cà Rốt,7,Carrot,당근,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Cà Rốt”."
+Rắc Topping,7,Topping Sprinkle,토핑용,"Sản phẩm dùng để rắc hoặc thêm làm topping cho món ăn, đồ uống."
+Trộn Cơm,7,Rice Mixing,비빔밥용,Gia vị hoặc sản phẩm dùng để trộn cùng cơm.
+Nồi Lẩu,7,Hot Pot,전골냄비,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Nồi Lẩu”.
+Kẹo Chua,7,Sour Candy,신맛 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Chua”.
+Thịt Vịt,7,Duck Meat,오리고기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Vịt”."
+Bánh Phở,7,Pho Noodles,쌀국수면,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Phở”.
+Gỗ Tràm,7,Melaleuca Wood,멜라루카 목재,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Gỗ Tràm."
+Tỏi Củ,7,Garlic Bulb,통마늘,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Tỏi Củ”."
+Thau Inox,7,Stainless Steel Basin,스테인리스 대야,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Thau Inox”.
+Sấy Lạnh,7,Freeze-Dried / Cold-Dried,저온 건조,Thực phẩm được xử lý bằng phương pháp sấy lạnh.
+Mắm Nêm,7,Fermented Anchovy Sauce,발효 멸치 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Mắm Nêm”."
+Nệm Ngồi,7,Seat Pad,좌식 방석,"Đồ dùng gia đình, phòng ngủ hoặc phòng tắm thuộc nhóm “Nệm Ngồi”."
+Nước Kombucha,7,Kombucha,콤부차,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Kombucha”.
+Cá Cơm,7,Anchovy,멸치,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cá Cơm”.
+Hoa Cúc,7,Chrysanthemum,국화,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Hoa Cúc."
+Cây Cảnh,7,Ornamental Plants,관상식물,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Cây Cảnh”."
+Khối Rubik,7,Rubik's Cube,루빅스 큐브,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Khối Rubik”.
+Kéo Inox,7,Stainless Steel Scissors,스테인리스 가위,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Kéo Inox”.
+Tôm Thẻ,7,Whiteleg Shrimp,흰다리새우,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Thẻ”.
+Đường Mía,7,Cane Sugar,사탕수수 설탕,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Đường Mía”.
+Túi Cói,6,Sedge Bag,라탄풍 가방,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Túi Cói”.
+Hoành Thánh,6,Wonton,완탕,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Hoành Thánh”."
+Sọt Nhựa,6,Plastic Basket,플라스틱 바구니,"Sọt làm từ nhựa dùng để chứa, đựng hoặc sắp xếp đồ."
+Dầu Tẩy Trang,6,Cleansing Oil,클렌징 오일,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Dầu Tẩy Trang”.
+Kẹo Thạch,6,Jelly Candy,젤리 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Thạch”.
+Chịu Nhiệt,6,Heat Resistant,내열,Sản phẩm có khả năng chịu nhiệt hoặc phù hợp sử dụng ở nhiệt độ cao.
+Khuôn Nhựa,6,Plastic Mold,플라스틱 몰드,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Khuôn Nhựa”.
+Trà Sen,6,Lotus Tea,연꽃차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Sen”."
+Kem Socola,6,Chocolate Ice Cream,초콜릿 아이스크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Socola”."
+Kem Vani,6,Vanilla Ice Cream,바닐라 아이스크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Vani”."
+Sốt Me,6,Tamarind Sauce,타마린드 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Me”."
+Nho,6,Grapes,포도,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Nho”.
+Sữa Cho Bé,6,Milk for Kids,어린이 우유,Sản phẩm dành cho trẻ em.
+Ớt Tươi,6,Fresh Chili,생고추,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Ớt Tươi”."
+Súng Nước,6,Water Gun,물총,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Súng Nước”.
+Kẹo Xoài,6,Mango Candy,망고 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Xoài”.
+Nước Kiềm,6,Alkaline Water,알칼리수,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Kiềm”.
+Táo Đỏ,6,Red Dates / Jujube,대추,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Táo Đỏ”.
+Tranexamic Acid,6,Tranexamic Acid,트라넥삼산,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Tranexamic Acid”.
+Đậu Lon,6,Canned Beans,콩 통조림,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Lon”."
+Kẹo Sâm,6,Ginseng Candy,인삼 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Sâm”.
+Phở Trộn,6,Mixed Pho,비빔 쌀국수,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Phở Trộn”."
+Trà Sữa Matcha,6,Matcha Milk Tea,말차 밀크티,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Sữa Matcha”."
+Áo Mưa,6,Raincoat,우비,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Áo Mưa”.
+Đậu Đỏ,6,Red Bean,팥,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Đỏ”."
+Chả Cá,6,Fish Cake,어묵,Chả cá và các sản phẩm chế biến từ thịt cá xay.
+Gạo Nếp,6,Glutinous Rice,찹쌀,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Gạo Nếp”."
+Bít Tết,6,Steak,스테이크,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Bít Tết”."
+Mắm Ruốc,6,Fermented Shrimp Paste,새우 발효젓,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Mắm Ruốc”."
+Cán Nhựa,6,Plastic Handle,플라스틱 손잡이,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Cán Nhựa”.
+Đĩa Tương,6,Sauce Dish,소스 접시,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Đĩa Tương”.
+Xíu Mại,6,Shumai,슈마이,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xíu Mại”."
+Hành Tây,6,Onion,양파,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Hành Tây”."
+Thanh Cua,6,Crab Stick,게맛살,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Thanh Cua”.
+Sốt Teriyaki,6,Teriyaki Sauce,데리야키 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Teriyaki”."
+Mồng Tơi,6,Malabar Spinach,말라바 시금치,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Mồng Tơi”."
+Bút Acrylic,6,Acrylic Marker,아크릴 마커,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Bút Acrylic”.
+Măng Khô,6,Dried Bamboo Shoots,말린 죽순,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Măng Khô”.
+Nui Gạo,6,Rice Pasta,쌀 파스타,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Nui Gạo”."
+Bánh Cuộn,6,Roll Cake,롤케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Cuộn”.
+Cải Thìa,6,Bok Choy,청경채,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Cải Thìa”."
+Không Cay,6,Non-Spicy,안 매운맛,Sản phẩm có vị không cay.
+Nón Cói,5,Straw Hat,밀짚모자,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Nón Cói”.
+Xương Đùi,5,Leg Bone,다리뼈,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xương Đùi”."
+Bánh Socola,5,Chocolate Cake / Biscuit,초콜릿 과자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Socola”.
+Hạt Robusta,5,Robusta Coffee Beans,로부스타 원두,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Robusta”."
+Bia Silver,5,Silver Beer,실버 맥주,Đồ uống có cồn thuộc loại “Bia Silver”.
+Ớt Xay,5,Ground Chili,고춧가루·간 고추,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Ớt Xay”.
+Hot Dog,5,Hot Dog,핫도그,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Hot Dog”.
+Bánh Mềm,5,Soft Cake,소프트 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Mềm”.
+Màng Nhôm,5,Aluminum Foil,알루미늄 포일,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Màng Nhôm."
+Sầu Riêng,5,Durian,두리안,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Sầu Riêng”.
+Lươn Nướng,5,Grilled Eel,장어구이,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Lươn Nướng”.
+Miến Trộn,5,Mixed Glass Noodles,비빔 당면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Miến Trộn”."
+Túi Mù,5,Blind Bag,블라인드 백,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Túi Mù”.
+Giấy Hộp,5,Box Tissue,각티슈,Sản phẩm giấy được đóng hoặc sử dụng theo dạng hộp.
+Hộp Bút,5,Pencil Case,필통,Văn phòng phẩm hoặc dụng cụ học tập thuộc nhóm “Hộp Bút”.
+Ổi Tươi,5,Fresh Guava,신선 구아바,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Ổi Tươi”.
+Mũ Bảo Hiểm Trẻ Em,5,Kids' Helmet,어린이 헬멧,Sản phẩm dành cho trẻ em.
+Bánh Crepe,5,Crepe,크레페,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Crepe”.
+Burger Patty,5,Burger Patty,버거 패티,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Burger Patty”.
+Nigiri,5,Nigiri Sushi,니기리 스시,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Nigiri”."
+Bánh Swissroll,5,Swiss Roll,스위스 롤,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Swissroll”.
+Khuynh Diệp,5,Eucalyptus,유칼립투스,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Khuynh Diệp."
+Sốt Tiêu,5,Pepper Sauce,후추 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Tiêu”."
+Sốt Wasabi,5,Wasabi Sauce,와사비 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Wasabi”."
+Nấu Cá,5,Fish Cooking,생선 요리,Nguyên liệu hoặc sản phẩm phù hợp để nấu cá.
+Nạc Heo,5,Lean Pork,돼지고기 살코기,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Nạc Heo”."
+Nạm Bò,5,Beef Brisket Plate,소고기 양지,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Nạm Bò”."
+Trứng Muối,5,Salted Egg,소금에 절인 계란,Trứng được chế biến bằng phương pháp muối.
+Sốt Ớt,5,Chili Sauce,칠리소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Ớt”."
+Hạt Phỉ,5,Hazelnut,헤이즐넛,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Phỉ”."
+Giò Sống,5,Raw Pork Paste,생 돼지고기 페이스트,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Giò Sống”."
+Xịt Khoáng,5,Facial Mist,페이스 미스트,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Xịt Khoáng”.
+Bánh Giò,5,Vietnamese Rice Dumpling,베트남식 쌀떡,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Giò”.
+Socola Trắng,5,White Chocolate,화이트 초콜릿,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Trắng”.
+Dép Massage,5,Massage Slippers,마사지 슬리퍼,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Dép Massage”.
+Đậu Đen,5,Black Bean,검은콩,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Đen”."
+Gà Nướng,5,Grilled Chicken,구운 닭고기,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Gà Nướng”."
+Túi Đeo,5,Shoulder Bag,숄더백,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Túi Đeo”.
+Dép Nhựa,5,Plastic Slippers,플라스틱 슬리퍼,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Dép Nhựa”.
+Nấu Cơm,5,Rice Cooking,밥 짓기,Nguyên liệu hoặc sản phẩm phù hợp để nấu cơm.
+Súp Nui,5,Pasta Soup,파스타 수프,Món súp có nui hoặc sản phẩm chế biến theo kiểu súp nui.
+Phin Inox,5,Stainless Steel Coffee Filter,스테인리스 커피 필터,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Phin Inox”.
+Chanh Muối,5,Salted Lemon,소금 레몬,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Chanh Muối”.
+Nước Ép Nho,5,Grape Juice,포도 주스,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Ép Nho”.
+Đào Brandy,5,Brandy Peach,브랜디 복숭아,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Đào Brandy”.
+Sữa Bắp,5,Corn Milk,옥수수 음료,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Bắp”.
+Cica,5,Cica,시카,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Cica”.
+Pale Pilsen,5,Pale Pilsen,페일 필젠,Đồ uống có cồn thuộc loại “Pale Pilsen”.
+Đạm A2,5,A2 Protein,A2 단백질,Sản phẩm sữa có protein beta-casein A2 hoặc được công bố chứa đạm A2.
+Bột Năng,5,Tapioca Starch,타피오카 전분,"Bột năng dùng làm bánh, tạo độ sánh hoặc chế biến thực phẩm."
+Rau Dền,5,Amaranth Greens,비름나물,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Rau Dền”."
+Ớt Bột,5,Chili Powder,고춧가루,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Ớt Bột”.
+Ướp Tỏi,5,Garlic Marinade,마늘 양념,Thực phẩm được tẩm hoặc ướp với tỏi.
+Táo Envy,5,Envy Apple,엔비 사과,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Táo Envy”.
+Vali Kéo,5,Rolling Suitcase,캐리어,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Vali Kéo”.
+Muỗng Súp,4,Soup Spoon,수프 스푼,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Muỗng Súp”.
+Inox 201,4,201 Stainless Steel,201 스테인리스,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Inox 201."
+Vợt Muỗi,4,Electric Mosquito Swatter,전기 모기채,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Vợt Muỗi”."
+Than Bạc,4,Silver Charcoal,은 숯,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Than Bạc."
+Sụn Heo,4,Pork Cartilage,돼지 연골,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Sụn Heo”."
+Kem Dâu,4,Strawberry Ice Cream,딸기 아이스크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Dâu”."
+Mì Kimchi,4,Kimchi Noodles,김치면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Kimchi”."
+Bánh Cuốn,4,Vietnamese Steamed Rice Rolls,반꾸온,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Cuốn”.
+Mực Nướng,4,Grilled Squid,구운 오징어,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Mực Nướng”.
+Mực Tươi,4,Fresh Squid,신선 오징어,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Mực Tươi”.
+Nhựa Tritan,4,Tritan Plastic,트라이탄 플라스틱,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Nhựa Tritan."
+Long Não,4,Camphor,장뇌,"Sản phẩm vệ sinh, giặt tẩy hoặc chăm sóc nhà cửa thuộc nhóm “Long Não”."
+Sả Cây,4,Fresh Lemongrass,생 레몬그라스,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Sả Cây”.
+Đuôi Heo,4,Pork Tail,돼지꼬리,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Đuôi Heo”."
+Đèn LED,4,LED Light,LED 조명,Sản phẩm chiếu sáng sử dụng công nghệ LED.
+Cay Vừa,4,Medium Spicy,중간 매운맛,Sản phẩm có mức độ cay vừa.
+Snack Healthy,4,Healthy Snacks,건강 간식,Đồ ăn nhẹ được định vị theo hướng lành mạnh.
+Collagen Peptide,4,Collagen Peptide,콜라겐 펩타이드,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Collagen Peptide”.
+Mứt Cam,4,Orange Marmalade,오렌지 마멀레이드,Mứt làm từ cam hoặc sản phẩm phết có hương vị cam.
+Baking Soda,4,Baking Soda,베이킹소다,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Baking Soda."
+Xương Heo,4,Pork Bones,돼지뼈,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xương Heo”."
+Cải Xanh,4,Mustard Greens,겨자잎 채소,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Cải Xanh”."
+Bò Organic,4,Organic Beef,유기농 소고기,Sản phẩm thịt bò hữu cơ hoặc được công bố theo tiêu chuẩn organic.
+Món Nhậu,4,Drinking Snacks,안주,Món ăn hoặc sản phẩm thuộc nhóm “Món Nhậu”.
+Muối Tắm,4,Bath Salt,입욕 소금,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Muối Tắm”.
+Hoa Hồng,4,Rose,장미,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Hoa Hồng”.
+Kiwi Xanh,4,Green Kiwi,그린키위,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Kiwi Xanh”.
+Bưởi Ruby,4,Ruby Grapefruit,루비 자몽,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Bưởi Ruby”.
+Nạc Lưng,4,Pork Loin,돼지 등심,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Nạc Lưng”."
+Tôm Viên,4,Shrimp Balls,새우 완자,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Viên”.
+Xôi,4,Sticky Rice,찹쌀밥,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Xôi”."
+Surimi Cá,4,Fish Surimi,생선 연육,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Surimi Cá”.
+Vá Canh,3,Soup Ladle,국자,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Vá Canh”.
+Chống Tràn,3,Spill-Proof,흘림 방지,Sản phẩm có thiết kế hoặc tính năng hạn chế tràn.
+Cam Sành,3,Vietnamese Green Orange,깜산 오렌지,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Cam Sành”.
+Thanh Nhiệt,3,Cooling / Heat-Relief,열 완화,Sản phẩm được định vị với công dụng thanh nhiệt.
+Mơ Muối,3,Salted Plum,매실 절임,Quả mơ được chế biến hoặc ngâm với muối.
+Soju Infused,3,Infused Soju,인퓨즈드 소주,Đồ uống có cồn thuộc loại “Soju Infused”.
+Trà Vải,3,Lychee Tea,리치차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Vải”."
+Trà Dâu,3,Strawberry Tea,딸기차,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Trà Dâu”."
+Hộp Đựng Cơm,3,Lunch Box,도시락통,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Hộp Đựng Cơm”.
+Matcha Latte,3,Matcha Latte,말차 라떼,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Matcha Latte”."
+Hạt Bí,3,Pumpkin Seeds,호박씨,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Bí”."
+Bạch Tuộc,3,Octopus,문어,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Bạch Tuộc”.
+Yến Chưng,3,Stewed Bird's Nest,중탕 제비집,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Yến Chưng”."
+Hạt Sen,3,Lotus Seeds,연꽃씨,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Hạt Sen”."
+Hành Lá,3,Green Onion,대파,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Hành Lá”."
+Quất Dẻo,3,Candied Kumquat,말랑 금귤,Sản phẩm từ quất được chế biến dạng dẻo.
+Pizza Tôm,3,Shrimp Pizza,새우 피자,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Pizza Tôm”.
+Sữa Socola,3,Chocolate Milk,초콜릿 우유,Sản phẩm sữa hoặc đồ uống từ sữa thuộc nhóm “Sữa Socola”.
+Khô Heo,3,Pork Jerky,돼지고기 육포,Thịt heo khô hoặc sản phẩm chế biến dạng khô từ heo.
+Sườn Bò,3,Beef Ribs,소갈비,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Sườn Bò”."
+Hồng Sâm,3,Red Ginseng,홍삼,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Hồng Sâm."
+Trung Thu,3,Mid-Autumn Festival,중추절,Sản phẩm gắn với mùa hoặc dịp Tết Trung Thu.
+Chống Rối,3,Anti-Tangle,엉킴 방지,Sản phẩm hỗ trợ giảm rối tóc.
+Ion Bạc,3,Silver Ion,은이온,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Ion Bạc."
+Mặc Nhà,3,Homewear,홈웨어,Trang phục phù hợp mặc ở nhà.
+Nước Chanh,3,Lemon Drink,레몬 음료,Đồ uống hoặc sản phẩm dạng nước thuộc nhóm “Nước Chanh”.
+Bánh Nướng,3,Baked Cake,구운 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Nướng”.
+Túi Đựng Thực Phẩm,3,Food Storage Bag,식품 보관 봉투,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Túi Đựng Thực Phẩm”.
+Xe Xúc,3,Excavator Toy,굴착기 장난감,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Xe Xúc”.
+Me Vườn,3,Garden Tamarind,정원 타마린드,Sản phẩm từ me hoặc nguyên liệu me theo nhóm “Me Vườn”.
+Không Hương,3,Unscented,무향,Sản phẩm không bổ sung hương hoặc không có hương.
+Chuẩn VietGAP,3,VietGAP Certified,VietGAP 인증,Sản phẩm đáp ứng hoặc được công bố theo tiêu chuẩn VietGAP.
+Chanh Vàng,3,Yellow Lemon,레몬,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Chanh Vàng”.
+Xí Muội,3,Preserved Plum,화매·절임 매실,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Xí Muội”.
+Đậu Trắng,3,White Bean,흰콩,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Đậu Trắng”."
+Sốt Dầu,2,Oil-Based Sauce,오일 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Dầu”."
+Bulgogi Bò,2,Beef Bulgogi,소불고기,Món hoặc sản phẩm thịt bò chế biến theo phong cách bulgogi Hàn Quốc.
+Latte Muối,2,Salted Latte,소금 라떼,"Đồ uống trà, cà phê hoặc đồ uống pha chế thuộc nhóm “Latte Muối”."
+Kẹo Sữa,2,Milk Candy,우유 캔디,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Kẹo Sữa”.
+Óc Chó,2,Walnut,호두,"Ngũ cốc, hạt, đậu hoặc sản phẩm từ hạt thuộc nhóm “Óc Chó”."
+Socola Chip,2,Chocolate Chips,초콜릿 칩,Bánh kẹo hoặc đồ ngọt thuộc nhóm “Socola Chip”.
+Sốt Chanh,2,Lemon Sauce,레몬 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Chanh”."
+Bánh Dứa,2,Pineapple Cake,파인애플 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Dứa”.
+Bánh Marie,2,Marie Biscuits,마리 비스킷,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Marie”.
+Làm Sandwich,2,Sandwich Making,샌드위치 만들기,"Nguyên liệu, dụng cụ hoặc sản phẩm phù hợp để làm sandwich."
+Mẹ Bầu,2,Pregnant Women,임산부,Sản phẩm dành cho phụ nữ mang thai.
+Khay Inox,2,Stainless Steel Tray,스테인리스 트레이,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Khay Inox”.
+Serum Biotin,2,Biotin Serum,비오틴 세럼,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Serum Biotin”.
+Xá Xíu,2,Char Siu,차슈,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Xá Xíu”."
+Bánh Trứng,2,Egg Cake,계란 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Trứng”.
+Nhựa PVC,2,PVC Plastic,PVC 플라스틱,"Sản phẩm có chất liệu, cấu tạo hoặc lớp hoàn thiện liên quan đến Nhựa PVC."
+Vitamin A/C/E,2,Vitamins A/C/E,비타민 A/C/E,Sản phẩm chăm sóc cá nhân hoặc làm đẹp thuộc nhóm “Vitamin A/C/E”.
+Ngựa Pony,2,Pony,포니,Đồ chơi hoặc sản phẩm theo nhân vật/chủ đề “Ngựa Pony”.
+Nấu Burger,2,Burger Cooking,버거 만들기,Nguyên liệu hoặc sản phẩm phù hợp để nấu burger.
+Tóc Nhuộm,2,Color-Treated Hair,염색모,Sản phẩm chăm sóc dành cho tóc đã nhuộm màu.
+Xe Đạp,2,Bicycle,자전거,"Phương tiện, đồ chơi xe hoặc phụ kiện liên quan đến “Xe Đạp”."
+Thịt Viên,2,Meatballs,미트볼,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Thịt Viên”."
+Bánh Chưng,2,Banh Chung,반쯩,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Chưng”.
+Muối Biển,2,Sea Salt,천일염,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Muối Biển”.
+Tỏi Phi,2,Fried Garlic,튀긴 마늘,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Tỏi Phi”."
+Phụ Kiện Ô Tô,2,Car Accessories,자동차 액세서리,"Phương tiện, đồ chơi xe hoặc phụ kiện liên quan đến “Phụ Kiện Ô Tô”."
+Giàu Đạm,2,High Protein,고단백,Sản phẩm có hàm lượng đạm cao hoặc được công bố giàu đạm.
+Nấm Hương,2,Shiitake Mushroom,표고버섯,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Nấm Hương”."
+Bánh Bơ,1,Butter Cake,버터 케이크,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Bơ”.
+Dừa Tươi,1,Fresh Coconut,신선 코코넛,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Dừa Tươi”.
+Đồ Ngủ,1,Sleepwear,잠옷,Sản phẩm thời trang hoặc phụ kiện thuộc nhóm “Đồ Ngủ”.
+Cỏ Ngọt,1,Stevia,스테비아,"Sản phẩm có thành phần, chiết xuất hoặc hoạt chất liên quan đến Cỏ Ngọt."
+Muỗng Nhọn,1,Pointed Spoon,끝이 뾰족한 스푼,Đồ gia dụng hoặc dụng cụ nhà bếp thuộc nhóm “Muỗng Nhọn”.
+Tôm Tempura,1,Shrimp Tempura,새우튀김,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Tempura”.
+Bánh Mặn,1,Savory Pastry,짭짤한 페이스트리,Sản phẩm bánh hoặc món ăn chế biến thuộc nhóm “Bánh Mặn”.
+Chuối Tây,1,Cavendish Banana,캐번디시 바나나,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Chuối Tây”.
+Dã Ngoại,1,Picnic,피크닉,Sản phẩm phù hợp cho hoạt động dã ngoại.
+Tôm Cua,1,Shrimp & Crab,새우·게,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Cua”.
+Hành Lý,1,Luggage,수하물,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Hành Lý”."
+Đường Thanh,1,Sugar Sticks,스틱 설탕,Gia vị hoặc nguyên liệu nêm nếm thuộc nhóm “Đường Thanh”.
+Chống Lóa,1,Anti-Glare,눈부심 방지,Sản phẩm có tính năng hạn chế chói hoặc lóa.
+Bún Chả,1,Bun Cha,분짜,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Bún Chả”."
+Tôm Thịt,1,Shrimp & Meat,새우·고기,Thủy hải sản hoặc sản phẩm chế biến thuộc nhóm “Tôm Thịt”.
+Sốt Nấm,1,Mushroom Sauce,버섯 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Nấm”."
+Lẩu Nấm,1,Mushroom Hot Pot,버섯 전골,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Lẩu Nấm”."
+Sốt Sriracha,1,Sriracha Sauce,스리라차 소스,"Gia vị, nước chấm hoặc sốt thuộc nhóm “Sốt Sriracha”."
+Mì Carbonara,1,Carbonara Noodles,카르보나라 면,"Mì, bún, phở, nui hoặc sản phẩm tương tự thuộc nhóm “Mì Carbonara”."
+Nghệ Tươi,1,Fresh Turmeric,생강황,Rau củ hoặc nguyên liệu thực phẩm thuộc nhóm “Nghệ Tươi”.
+Dừa Sợi,1,Shredded Coconut,코코넛 채,Trái cây hoặc sản phẩm từ trái cây thuộc nhóm “Dừa Sợi”.
+Lẩu Gà,1,Chicken Hot Pot,닭 전골,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Lẩu Gà”."
+Xương Rồng,1,Cactus,선인장,"Rau, củ, nấm hoặc sản phẩm thực vật thuộc nhóm “Xương Rồng”."
+Kem Dừa,1,Coconut Ice Cream,코코넛 아이스크림,"Thực phẩm, món ăn hoặc sản phẩm chế biến thuộc nhóm “Kem Dừa”."
+Heo Hầm,1,Braised Pork,돼지고기 조림,"Thịt, phần cắt hoặc sản phẩm chế biến từ thịt thuộc nhóm “Heo Hầm”."
