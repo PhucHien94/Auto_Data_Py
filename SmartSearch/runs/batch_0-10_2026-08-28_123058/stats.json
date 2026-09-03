@@ -1,0 +1,312 @@
+{
+  "title": "Batch Test Dashboard - NSG - 0-10",
+  "subtitle": "Chạy lúc 2026-08-28 12:31 - 10 scenario - 6s",
+  "n_scenarios": 10,
+  "batches": [
+    "0-10"
+  ],
+  "search": {
+    "latency": {
+      "n": 10,
+      "n_errors": 0,
+      "avg": 364.3,
+      "p50": 369.0,
+      "p90": 451.4,
+      "p95": 457.7,
+      "p99": 462.7,
+      "min": 197,
+      "max": 464
+    },
+    "recall_avg_pct": 26.5,
+    "perfect_match_pct": 0.0,
+    "any_missing_pct": 90.0,
+    "by_dimension": {
+      "exact": {
+        "n": 1,
+        "avg_latency": 376.0,
+        "avg_recall_pct": 65.0
+      },
+      "typo": {
+        "n": 1,
+        "avg_latency": 420.0,
+        "avg_recall_pct": 70.0
+      },
+      "no_diacritics": {
+        "n": 1,
+        "avg_latency": 320.0,
+        "avg_recall_pct": 35.0
+      },
+      "multilang": {
+        "n": 1,
+        "avg_latency": 372.0,
+        "avg_recall_pct": 90.0
+      },
+      "synonym": {
+        "n": 1,
+        "avg_latency": 330.0,
+        "avg_recall_pct": 0.0
+      },
+      "regional": {
+        "n": 1,
+        "avg_latency": 348.0,
+        "avg_recall_pct": 0.0
+      },
+      "intent": {
+        "n": 1,
+        "avg_latency": 366.0,
+        "avg_recall_pct": 0.0
+      },
+      "category": {
+        "n": 1,
+        "avg_latency": 464.0,
+        "avg_recall_pct": 0.0
+      },
+      "generic": {
+        "n": 1,
+        "avg_latency": 450.0,
+        "avg_recall_pct": 0.0
+      },
+      "partial": {
+        "n": 1,
+        "avg_latency": 197.0,
+        "avg_recall_pct": 5.0
+      }
+    },
+    "latency_histogram": [
+      [
+        "<200ms",
+        1
+      ],
+      [
+        "200-500ms",
+        9
+      ],
+      [
+        "500-1000ms",
+        0
+      ],
+      [
+        "1000-2000ms",
+        0
+      ],
+      [
+        "2000-5000ms",
+        0
+      ],
+      [
+        ">5000ms",
+        0
+      ]
+    ]
+  },
+  "autocomplete": {
+    "latency": {
+      "n": 10,
+      "n_errors": 0,
+      "avg": 218.6,
+      "p50": 213.5,
+      "p90": 256.6,
+      "p95": 272.8,
+      "p99": 285.8,
+      "min": 179,
+      "max": 289
+    },
+    "recall_avg_pct": 0.0,
+    "by_dimension": {
+      "exact": {
+        "n": 1,
+        "avg_latency": 179.0,
+        "avg_recall_pct": 0.0
+      },
+      "typo": {
+        "n": 1,
+        "avg_latency": 212.0,
+        "avg_recall_pct": 0.0
+      },
+      "no_diacritics": {
+        "n": 1,
+        "avg_latency": 289.0,
+        "avg_recall_pct": 0.0
+      },
+      "multilang": {
+        "n": 1,
+        "avg_latency": 186.0,
+        "avg_recall_pct": 0.0
+      },
+      "synonym": {
+        "n": 1,
+        "avg_latency": 205.0,
+        "avg_recall_pct": 0.0
+      },
+      "regional": {
+        "n": 1,
+        "avg_latency": 179.0,
+        "avg_recall_pct": 0.0
+      },
+      "intent": {
+        "n": 1,
+        "avg_latency": 220.0,
+        "avg_recall_pct": 0.0
+      },
+      "category": {
+        "n": 1,
+        "avg_latency": 248.0,
+        "avg_recall_pct": 0.0
+      },
+      "generic": {
+        "n": 1,
+        "avg_latency": 253.0,
+        "avg_recall_pct": 0.0
+      },
+      "partial": {
+        "n": 1,
+        "avg_latency": 215.0,
+        "avg_recall_pct": 0.0
+      }
+    }
+  },
+  "worst_search": [
+    {
+      "test_id": "SMOKE-0005",
+      "query": "mua thịt lợn",
+      "dimension": "synonym",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "SMOKE-0006",
+      "query": "quả thơm",
+      "dimension": "regional",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 17
+    },
+    {
+      "test_id": "SMOKE-0007",
+      "query": "đi mưa",
+      "dimension": "intent",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "SMOKE-0008",
+      "query": "đồ ăn vặt",
+      "dimension": "category",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 19
+    },
+    {
+      "test_id": "SMOKE-0009",
+      "query": "sữa",
+      "dimension": "generic",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "SMOKE-0010",
+      "query": "mua đồ biển",
+      "dimension": "partial",
+      "recall_pct": 5.0,
+      "missing_count": 19,
+      "extra_count": 9
+    },
+    {
+      "test_id": "SMOKE-0003",
+      "query": "Nuoc Uong Co Gas Chojung 500ml",
+      "dimension": "no_diacritics",
+      "recall_pct": 35.0,
+      "missing_count": 12,
+      "extra_count": 8
+    },
+    {
+      "test_id": "SMOKE-0001",
+      "query": "Tã Dán Bobby Super Jumbo Size L 68 Miếng (9-13kg)",
+      "dimension": "exact",
+      "recall_pct": 65.0,
+      "missing_count": 5,
+      "extra_count": 0
+    },
+    {
+      "test_id": "SMOKE-0002",
+      "query": "Cà Phê Hòa Tan NesaCfé Vị Kem Sữa 320G (16G x 20 Gói)",
+      "dimension": "typo",
+      "recall_pct": 70.0,
+      "missing_count": 1,
+      "extra_count": 0
+    },
+    {
+      "test_id": "SMOKE-0004",
+      "query": "Bodymiss Body Mist 105ml",
+      "dimension": "multilang",
+      "recall_pct": 90.0,
+      "missing_count": 0,
+      "extra_count": 0
+    }
+  ],
+  "worst_autocomplete": [
+    {
+      "test_id": "SMOKE-0001",
+      "query": "Tã Dán Bobby Super Jumbo Size L 68 Miếng (9-13kg)",
+      "dimension": "exact",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0002",
+      "query": "Cà Phê Hòa Tan NesaCfé Vị Kem Sữa 320G (16G x 20 Gói)",
+      "dimension": "typo",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0003",
+      "query": "Nuoc Uong Co Gas Chojung 500ml",
+      "dimension": "no_diacritics",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0004",
+      "query": "Bodymiss Body Mist 105ml",
+      "dimension": "multilang",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0005",
+      "query": "mua thịt lợn",
+      "dimension": "synonym",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0006",
+      "query": "quả thơm",
+      "dimension": "regional",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0007",
+      "query": "đi mưa",
+      "dimension": "intent",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0008",
+      "query": "đồ ăn vặt",
+      "dimension": "category",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0009",
+      "query": "sữa",
+      "dimension": "generic",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "SMOKE-0010",
+      "query": "mua đồ biển",
+      "dimension": "partial",
+      "recall_pct": 0.0
+    }
+  ]
+}

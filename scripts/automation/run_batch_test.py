@@ -6,15 +6,21 @@ SmartSearch/test_data/json/batches/) against a LIVE search API, and produce a
 response-time + expected-vs-actual-matching dashboard (Excel sheet + standalone
 HTML page).
 
-You must log in manually first - this script never automates the login itself,
-only how the resulting session cookie gets into the run. Two ways:
+Three ways to authenticate (pick ONE - login is never automated by this script,
+only how the resulting session cookie gets into the run):
   (a) log in via a normal browser, copy the Cookie header from DevTools, and
       export it into an env var yourself, or
   (b) pass --headed-login: this opens a REAL, visible browser for you to log
-      into by hand, then captures the cookie automatically once you confirm.
+      into by hand, then captures the cookie automatically once you confirm, or
+  (c) pass --no-auth: calls the API directly with NO auth header at all - no
+      login step needed. Per user confirmation (2026-08-28), the dev-gateway
+      search/autocomplete endpoints answer without any auth header, so this is
+      the fastest option when it applies - skips the whole login/cookie dance.
+      DEV_SEARCH_COOKIE is ignored even if set. If the endpoint you're pointed
+      at actually does require auth, preflight fails fast with a clear error.
 Either way, a one-request preflight check runs before the full batch and aborts
-with a clear message on an expired/missing session, rather than burning an
-entire 1000-row batch on a dead cookie.
+with a clear message on an expired/missing session (or a wrongly-assumed
+no-auth endpoint), rather than burning an entire 1000-row batch first.
 
 Usage:
   # (a) login first (once per browser session - copy Cookie header from devtools,
@@ -25,11 +31,14 @@ Usage:
   # (b) or let a real browser window open for you to log into by hand
   python scripts/automation/run_batch_test.py --env dev --batch 0-1000 --headed-login
 
+  # (c) or skip login entirely and call the API directly (fastest, when it applies)
+  python scripts/automation/run_batch_test.py --env dev --batch 0-1000 --no-auth
+
   # run every batch found under SmartSearch/test_data/json/batches/, one combined report
   python scripts/automation/run_batch_test.py --env dev --batch all
 
   # quick smoke test (10 real-engine-computed queries) before committing to a full run
-  python scripts/automation/run_batch_test.py --env dev --headed-login \\
+  python scripts/automation/run_batch_test.py --env dev --no-auth \\
     --batches-dir SmartSearch/smoke_test --batch 0-10
 """
 import argparse
@@ -59,17 +68,25 @@ from lib_dashboard import (latency_stats, latency_histogram, pct, write_dashboar
                             render_html_dashboard, COLOR_SEARCH, COLOR_AUTOCOMPLETE)
 
 BATCHES_DIR_DEFAULT = "SmartSearch/test_data/json/batches"
-BATCH_FILE_RE = re.compile(r"NSG_ExpectedData_(\d+-\d+)_(\d{8})\.json$")
+# Store prefix is captured (not hardcoded to NSG) so a WLE_ExpectedData_0-1000_*.json
+# batch can be discovered too - NSG and WLE batches can share the same range string
+# (both have a "0-1000"), so discover_batches always filters by store_prefix to avoid
+# one silently shadowing the other in the {range: path} dict.
+BATCH_FILE_RE = re.compile(r"(NSG|WLE)_ExpectedData_(.+)_(\d{8})\.json$")
 
 
-def discover_batches(batches_dir):
-    """Returns {range_str: path}, newest date wins if a range appears more than once."""
+def discover_batches(batches_dir, store_prefix="NSG"):
+    """Returns {range_str: path} for batches whose filename prefix matches
+    store_prefix (default NSG, case-insensitive) - newest date wins if the same
+    range appears more than once for that prefix."""
     found = {}
     for path in sorted(glob.glob(str(Path(batches_dir) / "*.json"))):
         m = BATCH_FILE_RE.search(path)
         if not m:
             continue
-        rng, date = m.group(1), m.group(2)
+        prefix, rng, date = m.group(1), m.group(2), m.group(3)
+        if prefix.upper() != store_prefix.upper():
+            continue
         prev = found.get(rng)
         if prev is None or date >= prev[1]:
             found[rng] = (path, date)
@@ -364,6 +381,15 @@ def main():
                          "automation harness with no connection to your terminal's stdin); it polls page "
                          "content for a logged-in marker instead, so it returns as soon as you're done, "
                          "not necessarily after the full wait")
+    p.add_argument("--no-auth", action="store_true",
+                    help="call the API directly with NO auth header at all - no cookie, no "
+                         "--headed-login, DEV_SEARCH_COOKIE is ignored even if set. Per user "
+                         "confirmation (2026-08-28), the dev-gateway search/autocomplete endpoints "
+                         "answer without any auth header, so this skips the WAF-session dance "
+                         "entirely for a faster run. Mutually exclusive with --headed-login. If the "
+                         "endpoint actually does need auth in a given environment, preflight will "
+                         "fail fast with a clear error - this flag does not change what gets called, "
+                         "only whether an auth header is attached.")
     p.add_argument("--search-topn", type=int, default=20, help="comparison window for search recall (default 20)")
     p.add_argument("--autocomplete-topn", type=int, default=10, help="comparison window for autocomplete recall (default 10)")
     p.add_argument("--fetch-page-size", type=int, default=50,
@@ -408,7 +434,15 @@ def main():
     auth_header_name = args.auth_header_name or cfg.get("auth_header_name", "Authorization")
     auth_header_env = cfg.get("auth_header_env")
 
-    if args.headed_login:
+    if args.no_auth and args.headed_login:
+        raise SystemExit("--no-auth và --headed-login xung đột nhau - chọn 1 trong 2 chế độ auth.")
+
+    if args.no_auth:
+        print("Chế độ --no-auth: gọi thẳng API, không kèm cookie/token đăng nhập nào (bỏ qua "
+              "DEV_SEARCH_COOKIE dù có set sẵn trong env). Nếu endpoint thật ra vẫn cần auth, "
+              "bước preflight ngay dưới đây sẽ báo lỗi rõ thay vì chạy hết cả batch rồi mới biết.")
+        auth_header_env = None  # never attach a cookie/token, even if DEV_SEARCH_COOKIE happens to be set
+    elif args.headed_login:
         if not auth_header_env:
             raise SystemExit("--headed-login cần --env có khai báo auth_header_env (VD --env dev)")
         print(f"Mở trình duyệt thật tại {args.console_url} - hãy đăng nhập tay (username/password rồi mã 2FA).")
@@ -433,8 +467,10 @@ def main():
     autocomplete_headers = {**base_headers, **cfg.get("autocomplete_headers", {})}
 
     if not args.skip_preflight:
-        print("Preflight: kiểm tra đăng nhập/kết nối bằng 1 request thật trước khi chạy cả batch...")
-        params, body = build_request(search_method, search_param, "test", {**search_extra, "pageSize": args.fetch_page_size})
+        print("Preflight: kiểm tra đăng nhập/kết nối bằng 1 request thật trước khi chạy cả batch..."
+              if not args.no_auth else "Preflight: kiểm tra kết nối (no-auth) bằng 1 request thật trước khi chạy cả batch...")
+        preflight_query = cfg.get("preflight_query", "test")
+        params, body = build_request(search_method, search_param, preflight_query, {**search_extra, "pageSize": args.fetch_page_size})
         try:
             preflight_check(search_api, search_method, search_headers, params, body,
                              required_keys=(search_result_path,))

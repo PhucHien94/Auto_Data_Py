@@ -60,12 +60,49 @@ def resolve_extra_params(extra, store, lang):
     return {k: resolve_template(v, store, lang) for k, v in (extra or {}).items()}
 
 
+def set_nested(d, dotted_key, value):
+    """Set d[a][b][c] = value for dotted_key "a.b.c", creating intermediate
+    dicts as needed. Mutates and returns d. Needed for APIs that nest the
+    query text inside the body (e.g. legacy lottemart.vn search:
+    {"where": {"query": "..."}} - search_param: "where.query")."""
+    parts = dotted_key.split(".")
+    cur = d
+    for p in parts[:-1]:
+        nxt = cur.get(p)
+        if not isinstance(nxt, dict):
+            nxt = {}
+            cur[p] = nxt
+        cur = nxt
+    cur[parts[-1]] = value
+    return d
+
+
+def get_nested(d, dotted_key):
+    """Read d[a][b][c] for dotted_key "a.b.c", returning None on any missing/
+    non-dict step. Needed for APIs that nest the result list in the response
+    body (e.g. legacy lottemart.vn search: {"data": {"items": [...]}} -
+    search_result_path: "data.items")."""
+    cur = d
+    for p in dotted_key.split("."):
+        if not isinstance(cur, dict) or p not in cur:
+            return None
+        cur = cur[p]
+    return cur
+
+
 def build_request(method, param, query, extra_params):
     """Merge the query text into the endpoint's extra static fields (storeId,
     page, pageSize, ... for search; limit for autocomplete), then split into
     (params, json_body) depending on method - GET sends a query string,
-    POST sends a JSON body, but the merge logic is identical either way."""
-    merged = {**(extra_params or {}), param: query}
+    POST sends a JSON body, but the merge logic is identical either way.
+    `param` may be a dotted path ("where.query") for an API that nests the
+    query text inside the body instead of a top-level field - deep-copies
+    extra_params first so the caller's own dict/config is never mutated."""
+    if "." in param:
+        merged = json.loads(json.dumps(extra_params or {}))  # cheap deep copy, extra_params is JSON-safe
+        set_nested(merged, param, query)
+    else:
+        merged = {**(extra_params or {}), param: query}
     if method == "GET":
         return merged, None
     return None, merged
@@ -88,7 +125,14 @@ def preflight_check(api_url, method, headers, params=None, json_body=None, requi
             "Hãy đăng nhập lại trên dev-console, copy Cookie header mới vào biến môi trường, "
             f"rồi chạy lại. Chi tiết lỗi gốc: {e}"
         ) from e
-    if required_keys and isinstance(payload, dict) and not any(k in payload for k in required_keys):
+    def _has_key(k):
+        if not isinstance(payload, dict):
+            return False
+        if "." in k:
+            return get_nested(payload, k) is not None
+        return k in payload
+
+    if required_keys and isinstance(payload, dict) and not any(_has_key(k) for k in required_keys):
         raise ApiError(
             f"Preflight gọi API thành công (HTTP OK) nhưng response không có field nào trong "
             f"{list(required_keys)} - nhiều khả năng đây là trang login/challenge trả về thay vì "
@@ -281,16 +325,26 @@ def capture_cookie_via_headed_login(console_url,
         return cookie_str, warnings
 
 
+def _extract_items(payload, result_path, fallback_keys=("results", "items", "hits", "data")):
+    """Shared item-list lookup for extract_id_list/extract_keyword_list/
+    export_actual_search_results.extract_products. result_path may be a
+    dotted path ("data.items") for a nested response body; falls back to a
+    short list of common top-level key guesses if result_path doesn't
+    resolve to a list (e.g. not given, or wrong for this response)."""
+    if result_path:
+        found = get_nested(payload, result_path) if "." in result_path else (
+            payload.get(result_path) if isinstance(payload, dict) else None)
+        if isinstance(found, list):
+            return found
+    for k in fallback_keys:
+        if isinstance(payload, dict) and isinstance(payload.get(k), list):
+            return payload[k]
+    return None
+
+
 def extract_id_list(payload, result_path, id_keys=("product_id", "productId", "id", "sku")):
     """Extract a flat list of product-id strings from a search response."""
-    items = None
-    if result_path and isinstance(payload, dict) and isinstance(payload.get(result_path), list):
-        items = payload[result_path]
-    else:
-        for k in ("results", "items", "hits", "data"):
-            if isinstance(payload, dict) and isinstance(payload.get(k), list):
-                items = payload[k]
-                break
+    items = _extract_items(payload, result_path)
     if items is None:
         return []
     out = []
@@ -307,14 +361,7 @@ def extract_id_list(payload, result_path, id_keys=("product_id", "productId", "i
 
 def extract_keyword_list(payload, result_path, keyword_keys=("keyword", "query", "text", "suggestion", "title")):
     """Extract a flat list of suggestion keyword strings from an autocomplete response."""
-    items = None
-    if result_path and isinstance(payload, dict) and isinstance(payload.get(result_path), list):
-        items = payload[result_path]
-    else:
-        for k in ("suggestions", "results", "items", "data"):
-            if isinstance(payload, dict) and isinstance(payload.get(k), list):
-                items = payload[k]
-                break
+    items = _extract_items(payload, result_path, fallback_keys=("suggestions", "results", "items", "data"))
     if items is None:
         return []
     out = []

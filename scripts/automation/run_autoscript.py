@@ -259,6 +259,13 @@ def main():
     p.add_argument("--header", action="append", help="Key:Value, repeatable, applied to both calls")
     p.add_argument("--auth-header-name", help="header name that --env's auth_header_env value is placed into (default Authorization; "
                                                 "use Cookie for a WAF/session-cookie-protected API)")
+    p.add_argument("--no-auth", action="store_true",
+                    help="call the API directly with NO auth header at all - ignores --env's "
+                         "auth_header_env (e.g. DEV_SEARCH_COOKIE) even if it's set. Per user "
+                         "confirmation (2026-08-28), the dev-gateway endpoints answer without any "
+                         "auth header, so this skips the login/cookie step entirely for a faster "
+                         "run. If the endpoint actually needs auth, preflight fails fast instead of "
+                         "burning the whole dataset.")
     p.add_argument("--topn", type=int)
     p.add_argument("--tier3-threshold", type=float)
     p.add_argument("--limit", type=int, help="cap rows tested per stream, for a quick smoke run")
@@ -306,7 +313,11 @@ def main():
     topn = args.topn or cfg.get("topn", 10)
     tier3_threshold = args.tier3_threshold if args.tier3_threshold is not None else cfg.get("tier3_threshold", 0.5)
     auth_header_name = args.auth_header_name or cfg.get("auth_header_name", "Authorization")
-    base_headers = resolve_headers(args.header, cfg.get("auth_header_env"), auth_header_name)
+    if args.no_auth:
+        print("Chế độ --no-auth: gọi thẳng API, không kèm cookie/token đăng nhập nào (bỏ qua "
+              "auth_header_env dù có set sẵn trong env).")
+    auth_header_env = None if args.no_auth else cfg.get("auth_header_env")
+    base_headers = resolve_headers(args.header, auth_header_env, auth_header_name)
     search_headers = {**base_headers, **search_headers}
     autocomplete_headers = {**base_headers, **autocomplete_headers}
     repeat = max(1, args.repeat)
@@ -321,7 +332,8 @@ def main():
         preflight_param = search_param if search_api else autocomplete_param
         preflight_extra = search_extra_params if search_api else autocomplete_extra_params
         preflight_result_path = search_result_path if search_api else autocomplete_result_path
-        params, json_body = build_request(preflight_method, preflight_param, "test", preflight_extra)
+        preflight_query = cfg.get("preflight_query", "test")
+        params, json_body = build_request(preflight_method, preflight_param, preflight_query, preflight_extra)
         print("Preflight: kiểm tra đăng nhập/kết nối trước khi chạy cả dataset...")
         try:
             preflight_check(preflight_api, preflight_method, preflight_headers, params, json_body,

@@ -1,0 +1,372 @@
+{
+  "title": "Batch Test Dashboard - NSG - realsearch_history_top1000",
+  "subtitle": "Chạy lúc 2026-08-31 13:52 - 1777 scenario - 1166s",
+  "n_scenarios": 1777,
+  "batches": [
+    "realsearch_history_top1000"
+  ],
+  "search": {
+    "latency": {
+      "n": 1777,
+      "n_errors": 1,
+      "avg": 396.9,
+      "p50": 373.0,
+      "p90": 572.5,
+      "p95": 702.2,
+      "p99": 787.2,
+      "min": 196,
+      "max": 950
+    },
+    "recall_avg_pct": 40.7,
+    "perfect_match_pct": 2.6,
+    "any_missing_pct": 93.0,
+    "by_dimension": {
+      "real_search_history": {
+        "n": 1000,
+        "avg_latency": 398.7,
+        "avg_recall_pct": 42.3
+      },
+      "history_verification": {
+        "n": 777,
+        "avg_latency": 394.5,
+        "avg_recall_pct": 38.6
+      }
+    },
+    "latency_histogram": [
+      [
+        "<200ms",
+        1
+      ],
+      [
+        "200-500ms",
+        1509
+      ],
+      [
+        "500-1000ms",
+        266
+      ],
+      [
+        "1000-2000ms",
+        0
+      ],
+      [
+        "2000-5000ms",
+        0
+      ],
+      [
+        ">5000ms",
+        0
+      ]
+    ]
+  },
+  "autocomplete": {
+    "latency": {
+      "n": 1777,
+      "n_errors": 0,
+      "avg": 256.1,
+      "p50": 259,
+      "p90": 295.0,
+      "p95": 304.0,
+      "p99": 318.0,
+      "min": 175,
+      "max": 534
+    },
+    "recall_avg_pct": 0.3,
+    "by_dimension": {
+      "real_search_history": {
+        "n": 1000,
+        "avg_latency": 253.5,
+        "avg_recall_pct": 0.4
+      },
+      "history_verification": {
+        "n": 777,
+        "avg_latency": 259.6,
+        "avg_recall_pct": 0.2
+      }
+    }
+  },
+  "worst_search": [
+    {
+      "test_id": "NSG-RS-0008",
+      "query": "nấm",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 16
+    },
+    {
+      "test_id": "NSG-RS-0009",
+      "query": "bánh",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0012",
+      "query": "mì",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0019",
+      "query": "sữa tắm",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0020",
+      "query": "gạo",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 15,
+      "extra_count": 14
+    },
+    {
+      "test_id": "NSG-RS-0022",
+      "query": "sữa",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 16
+    },
+    {
+      "test_id": "NSG-RS-0025",
+      "query": "tẩy trang",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 17,
+      "extra_count": 14
+    },
+    {
+      "test_id": "NSG-RS-0027",
+      "query": "dầu ăn",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 5
+    },
+    {
+      "test_id": "NSG-RS-0032",
+      "query": "băng vệ sinh",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-RS-0035",
+      "query": "cà phê",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 17
+    },
+    {
+      "test_id": "NSG-RS-0037",
+      "query": "dầu gội",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 16,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0047",
+      "query": "cá",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0057",
+      "query": "socola",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 18
+    },
+    {
+      "test_id": "NSG-RS-0067",
+      "query": "nước lau sàn",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 12,
+      "extra_count": 2
+    },
+    {
+      "test_id": "NSG-RS-0068",
+      "query": "trà",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0071",
+      "query": "tôm",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 14
+    },
+    {
+      "test_id": "NSG-RS-0074",
+      "query": "choice l",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-RS-0089",
+      "query": "kem",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 18,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-RS-0101",
+      "query": "nước",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-RS-0103",
+      "query": "trái cây",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    }
+  ],
+  "worst_autocomplete": [
+    {
+      "test_id": "NSG-RS-0001",
+      "query": "nước ngọt",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0002",
+      "query": "táo new zealand",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0003",
+      "query": "xúc xích",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0004",
+      "query": "giấy vệ sinh",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0005",
+      "query": "cá hồi",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0006",
+      "query": "thịt heo",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0007",
+      "query": "bánh kẹo",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0008",
+      "query": "nấm",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0009",
+      "query": "bánh",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0010",
+      "query": "sữa chua",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0011",
+      "query": "xoài",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0012",
+      "query": "mì",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0013",
+      "query": "tương ớt chinsu",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0014",
+      "query": "lẩu tự sôi",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0015",
+      "query": "vodka",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0016",
+      "query": "bánh hotteok",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0017",
+      "query": "dưỡng da",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0018",
+      "query": "hồng sâm hàn quốc",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0019",
+      "query": "sữa tắm",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-RS-0020",
+      "query": "gạo",
+      "dimension": "real_search_history",
+      "recall_pct": 0.0
+    }
+  ]
+}

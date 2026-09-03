@@ -44,7 +44,7 @@ for _stream in (sys.stdout, sys.stderr):
 sys.path.insert(0, str(Path(__file__).parent))
 from lib_search_client import (call_api, ApiError, load_env_config, resolve_headers,  # noqa: E402
                                 resolve_template, resolve_extra_params, build_request,
-                                preflight_check, capture_cookie_via_headed_login)
+                                preflight_check, capture_cookie_via_headed_login, get_nested)
 from run_batch_test import discover_batches, select_batches, load_batch, StuckResultGuard, DegradedSessionError  # noqa: E402
 
 DEFAULT_OUT_DIR = "SmartSearch/test_data/json/actual"
@@ -53,11 +53,16 @@ DEFAULT_OUT_DIR = "SmartSearch/test_data/json/actual"
 def extract_products(payload, result_path):
     """Full product list (not just id/sku) so nothing the live API returned is
     thrown away - unlike lib_search_client.extract_id_list (used for scoring),
-    which only pulls a flat id list."""
+    which only pulls a flat id list. result_path may be a dotted path
+    ("data.items") for a nested response body (e.g. the legacy lottemart.vn
+    search API)."""
     items = None
-    if result_path and isinstance(payload, dict) and isinstance(payload.get(result_path), list):
-        items = payload[result_path]
-    else:
+    if result_path:
+        found = get_nested(payload, result_path) if "." in result_path else (
+            payload.get(result_path) if isinstance(payload, dict) else None)
+        if isinstance(found, list):
+            items = found
+    if items is None:
         for k in ("results", "items", "hits", "data", "products"):
             if isinstance(payload, dict) and isinstance(payload.get(k), list):
                 items = payload[k]
@@ -115,6 +120,10 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--batch", required=True, help='"all", or range strings e.g. "0-1000" or "0-1000,2000-3000"')
     p.add_argument("--batches-dir", default="SmartSearch/test_data/json/batches")
+    p.add_argument("--store-prefix", default="NSG",
+                    help='which <PREFIX>_ExpectedData_<range>_<date>.json batches to discover (default NSG; '
+                         'use WLE for WLE_ExpectedData_*.json) - NSG and WLE can share the same range string '
+                         '(e.g. both have "0-1000"), so this must be set correctly to avoid picking the wrong store.')
     p.add_argument("--env")
     p.add_argument("--search-api")
     p.add_argument("--lang")
@@ -127,6 +136,11 @@ def main():
                          "`playwright install chromium`. Never automates the login itself.")
     p.add_argument("--console-url", default="https://dev-console.martonline.lotte.vn/")
     p.add_argument("--login-wait-seconds", type=int, default=180)
+    p.add_argument("--no-auth", action="store_true",
+                    help="call the API directly with NO auth header at all - ignores DEV_SEARCH_COOKIE/"
+                         "auth_header_env even if set, no --headed-login needed. Per user confirmation "
+                         "(2026-08-28), the dev-gateway endpoint answers without any auth header. "
+                         "Mutually exclusive with --headed-login.")
     p.add_argument("--page-size", type=int, default=50, help="pageSize sent to the search API (default 50)")
     p.add_argument("--limit", type=int, help="cap scenarios per batch, for a smoke run")
     p.add_argument("--sleep-ms", type=int, default=0, help="pause between calls, to stay gentle on the WAF")
@@ -136,7 +150,7 @@ def main():
     args = p.parse_args()
 
     cfg = load_env_config(args.env)
-    available = discover_batches(args.batches_dir)
+    available = discover_batches(args.batches_dir, store_prefix=args.store_prefix)
     batches = select_batches(args.batch, available)
     print(f"Batch được chọn: {[b for b, _ in batches]}")
 
@@ -155,7 +169,13 @@ def main():
     auth_header_name = args.auth_header_name or cfg.get("auth_header_name", "Authorization")
     auth_header_env = cfg.get("auth_header_env")
 
-    if args.headed_login:
+    if args.no_auth and args.headed_login:
+        raise SystemExit("--no-auth và --headed-login xung đột nhau - chọn 1 trong 2 chế độ auth.")
+
+    if args.no_auth:
+        print("Chế độ --no-auth: gọi thẳng API, không kèm cookie/token đăng nhập nào.")
+        auth_header_env = None
+    elif args.headed_login:
         if not auth_header_env:
             raise SystemExit("--headed-login cần --env có khai báo auth_header_env (VD --env dev)")
         print(f"Mở trình duyệt thật tại {args.console_url} - hãy đăng nhập tay (username/password rồi mã 2FA).")
@@ -179,7 +199,8 @@ def main():
 
     if not args.skip_preflight:
         print("Preflight: kiểm tra đăng nhập/kết nối bằng 1 request thật trước khi chạy cả batch...")
-        params, body = build_request(method, param, "test", {**extra_params, "pageSize": args.page_size})
+        preflight_query = cfg.get("preflight_query", "test")
+        params, body = build_request(method, param, preflight_query, {**extra_params, "pageSize": args.page_size})
         try:
             preflight_check(search_api, method, headers, params, body, required_keys=(result_path,))
         except ApiError as e:
@@ -188,7 +209,7 @@ def main():
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now().strftime("%Y%m%d")
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     t0 = time.time()
     for batch_range, batch_path in batches:

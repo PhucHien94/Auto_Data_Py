@@ -1,0 +1,646 @@
+{
+  "test_id": "NSG-TD-0001",
+  "query": "Gà Tatsutaage Nhật",
+  "dimension": "typo",
+  "note": "Gõ sai 1 ký tự trong \"Gà Tatsutaage Nhật\" (SKU tham chiếu 8935319710505).",
+  "confidence": 100,
+  "route": "keyword",
+  "autocomplete_suggestions": [
+    {
+      "keyword": "Thịt Heo",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 17741.8
+    },
+    {
+      "keyword": "Bánh Xếp",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 89.4
+    },
+    {
+      "keyword": "Đậu Nành",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 37.2
+    },
+    {
+      "keyword": "Trà Xanh",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 34.6
+    },
+    {
+      "keyword": "Bánh Gạo",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 34.4
+    },
+    {
+      "keyword": "Nước Rửa Chén",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 32.2
+    },
+    {
+      "keyword": "Nước Rửa",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 32.2
+    },
+    {
+      "keyword": "Nước Ngọt Coca",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 28.8
+    },
+    {
+      "keyword": "Nước Ngọt",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 28.8
+    },
+    {
+      "keyword": "Khoai Lang Giống",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 28
+    },
+    {
+      "keyword": "Khoai Lang",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 28
+    },
+    {
+      "keyword": "Trà Xanh Nhật",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 22.400000000000002
+    },
+    {
+      "keyword": "Dưa Leo",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 22
+    },
+    {
+      "keyword": "Tôm Đông Lạnh",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 20.400000000000002
+    },
+    {
+      "keyword": "Tôm Đông",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 20.400000000000002
+    },
+    {
+      "keyword": "Bánh Bao",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 20
+    },
+    {
+      "keyword": "Bánh Bao Chay",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 20
+    },
+    {
+      "keyword": "Ngũ Cốc",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 19.200000000000003
+    },
+    {
+      "keyword": "Dưa Leo Giống",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 17.2
+    },
+    {
+      "keyword": "Đầu Thăn Ngoại",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 17
+    },
+    {
+      "keyword": "Đầu Thăn",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 17
+    },
+    {
+      "keyword": "Bánh Gạo Nhật",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 16
+    },
+    {
+      "keyword": "Cồi Sò Điệp",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 16
+    },
+    {
+      "keyword": "Cồi Sò",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 16
+    },
+    {
+      "keyword": "Dưa Hấu",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 15.8
+    },
+    {
+      "keyword": "Ngũ Cốc Trái",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 15.600000000000001
+    },
+    {
+      "keyword": "Gạo Giống Nhật",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 15.200000000000001
+    },
+    {
+      "keyword": "Gạo Giống",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 15.200000000000001
+    },
+    {
+      "keyword": "Dầu Gội",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 15
+    },
+    {
+      "keyword": "Thịt Hàu Sữa",
+      "verified_product_count": "5+",
+      "best_score": 100,
+      "popularity": 13
+    }
+  ],
+  "search_results": [
+    {
+      "sku": "8935319710505",
+      "score": 100,
+      "tier": "exact"
+    },
+    {
+      "sku": "8935039571011",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935302602749",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936231020291",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934868182610",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936049693205",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938546870103",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936074609950",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502118010",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4901330742959",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938516870706",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502118102",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936068851648",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "2040580000005",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502118324",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4902102019187",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4901330742836",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936066340670",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936066340038",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934868182597",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936074609943",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "2311670000008",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502512344",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934868182627",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936066340021",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936111410051",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936021360095",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935001282389",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936111410242",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934726029019",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935023100036",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936021360088",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935039573602",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936231020284",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "0410719440002",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938546870080",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935275210484",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935263807559",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502512290",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936021360156",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502512320",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936068852430",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936039276630",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935275208009",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "0400307700007",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934868182573",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936021360026",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936059009829",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936021360019",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936148090004",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936039276883",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934563216139",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "6926725185331",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935275211528",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935207502243",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936190718574",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935275600247",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934803055429",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935001282372",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4902430754613",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936204033938",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4902102038690",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935275210286",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936039276890",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8935302602336",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4901515359330",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "4902430754620",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936096740693",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502512900",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934868182603",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "0400203930003",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936114401278",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8938502512313",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936039276906",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936060491484",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8851251060730",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936221044818",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934726084643",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8936019920584",
+      "score": 20,
+      "tier": "partial"
+    },
+    {
+      "sku": "8934726084650",
+      "score": 20,
+      "tier": "partial"
+    }
+  ],
+  "search_results_total_before_cap": 151,
+  "is_single_exact_match": true,
+  "you_might_like": [
+    {
+      "sku": "8935319711311",
+      "name": "Gà Nugget vòng chiên giòn CP 300G",
+      "source": "substitute"
+    },
+    {
+      "sku": "8936216433016",
+      "name": "Gà Nugget Choice L 500G",
+      "source": "substitute"
+    },
+    {
+      "sku": "8936216433528",
+      "name": "Gà Nugget Kitkool 300G",
+      "source": "substitute"
+    },
+    {
+      "sku": "8934717402470",
+      "name": "Bánh Xếp Mandu bibigo Ức Gà 350G",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8934717402432",
+      "name": "Bánh Xếp bibigo Kiểu Hàn Quốc 365 Hải Sản Thập Cẩm 250G x 2 Gói",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8934717401350",
+      "name": "Bánh Xếp bibigo Nhân Thịt Và Bắp Gói 350G",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8934572296894",
+      "name": "Xúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8936146440467",
+      "name": "Chả Lụa Bì Ớt Xiêm Xanh G Kitchen 500G",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8934717421525",
+      "name": "Cá Viên Ngon Đông Lạnh Cầu Tre 500G",
+      "source": "best_seller"
+    },
+    {
+      "sku": "8935019599868",
+      "name": "Xúc Xích Việt Mỹ SMG Gói 500G",
+      "source": "best_seller"
+    }
+  ]
+}
