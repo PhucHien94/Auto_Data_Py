@@ -1,0 +1,14 @@
+heo: 72
+gà: 73
+bò: 81
+vịt: 4
+dê: 0
+cá: 0
+tôm: 0
+cua: 0
+ngan: 0
+ngỗng: 0
+thỏ: 0
+cừu: 2
+bê: 0
+total meat cat items: 250

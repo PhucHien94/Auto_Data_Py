@@ -52,6 +52,52 @@ dev:
   topn: 10
   tier3_threshold: 0.5
 
+# "legacy" - the REAL, currently-live production search on lottemart.vn (the
+# "as-is"/hệ thống cũ, running today, NOT the new Smart Search under
+# development on dev-gateway) - captured 2026-08-28 from a real curl the user
+# pasted (dev-console origin/referer headers, but the endpoint itself needs
+# NO auth at all - verified 200 OK with zero cookie/token attached, so
+# auth_header_env is intentionally omitted here and --no-auth is always the
+# right (only) mode for this environment).
+#   - Search only (no autocomplete endpoint given yet) - POST JSON, query
+#     text nested at `where.query` (search_param supports a dotted path for
+#     this), response nested at `data.items` (search_result_path likewise
+#     dotted) - {"data":{"items":[{"sku":...,"name":...,...}], "total_items":...}}.
+#   - {store}/{lang} combine into ONE path segment ("vi_nsg") unlike dev's
+#     separate /{lang}/{store}/ segments - the URL template below places them
+#     adjacent with no slash between, resolve_template's plain string-replace
+#     handles that fine.
+#   - search_extra_params carries the real static body (limit/offset/
+#     facet_filters/fields) copied verbatim from the working curl - the
+#     `fields` list controls which product attributes come back, trim/extend
+#     only if the real curl contract changes.
+legacy:
+  lang: vi
+  search_api: "https://www.lottemart.vn/v1/p/mart/es/{lang}_{store}/products/search"
+  search_method: POST
+  search_param: "where.query"
+  search_extra_params:
+    limit: 20
+    offset: 1
+    facet_filters: {}
+    fields: [id, sku, name, label, price, url_key, image_url, in_stock, promotion,
+             stock_qty, type_id, "custom_attribute.bundle_type", ext_overall_rating,
+             ext_overall_review, short_description, bundle_options, child_price,
+             child_stock, configurable_options, configurable_children,
+             custom_attribute, ext_viewed]
+  search_headers: {origin: "https://dev-console.martonline.lotte.vn", referer: "https://dev-console.martonline.lotte.vn/"}
+  search_result_path: "data.items"
+  search_id_fields: [sku, id]
+  # The generic English "test" (the default preflight probe query every
+  # script hardcodes/falls back to) genuinely returns 0 items on this real
+  # catalog - {"data":{"total_items":0,...}} with no "items" key at all, so
+  # preflight would false-positive "not logged in" on a perfectly healthy,
+  # no-auth-needed endpoint. Use a real Vietnamese query known to return
+  # results instead (verified 2026-08-28: "thit heo" -> 55 real hits).
+  preflight_query: "thit heo"
+  topn: 10
+  tier3_threshold: 0.5
+
 staging:
   search_api: null            # e.g. https://staging-search.internal/api/v1/search
   autocomplete_api: null      # e.g. https://staging-search.internal/api/v1/suggest

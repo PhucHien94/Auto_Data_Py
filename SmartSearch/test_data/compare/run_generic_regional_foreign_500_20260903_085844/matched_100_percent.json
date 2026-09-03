@@ -1,0 +1,72 @@
+{
+  "description": "Các keyword matching 100% search result làm chuẩn",
+  "timestamp": "2026-09-03T08:58:44.821951",
+  "count": 1,
+  "scenarios": [
+    {
+      "test_id": "NSG-GEN500-0469",
+      "query": "bibimbap",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 1,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 1,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 1,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 1,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 1,
+      "actual_count": 1,
+      "expected_total_before_cap": 1,
+      "actual_total_before_cap": 1,
+      "overlap_count": 1,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900,
+          "category": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900,
+          "category": "Cơm, Cháo, Canh Ăn Liền",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900
+        }
+      ],
+      "asis_total_before_cap": 1,
+      "asis_cached": true,
+      "actual_latency_ms": 355
+    }
+  ]
+}

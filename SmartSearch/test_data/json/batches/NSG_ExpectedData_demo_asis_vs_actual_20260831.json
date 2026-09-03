@@ -1,0 +1,69 @@
+{
+  "generatedDate": "2026-08-31",
+  "store": "nsg",
+  "batchRange": "demo_asis_vs_actual",
+  "totalScenarios": 9,
+  "purpose": "Bo query THU CONG (khong phai sinh tu real-search-history hay engine gia lap) danh cho demo khach hang - minh hoa su khac biet ro giua As-Is (he thong hien tai tren lottemart.vn) va Actual (he thong dev-gateway dang test). File nay KHONG co du lieu Expected (khong co search_results) - mo bang compare_results.py roi doi toggle 'So sanh' sang 'As-Is <-> Actual' de xem, panel Expected se hien trong/TBD vi khong ap dung cho file nay.",
+  "howToUse": [
+    "1. Lay Actual: python scripts/automation/export_actual_search_results.py --env dev --batch demo_asis_vs_actual --no-auth (hoi lai auth mode truoc khi chay that)",
+    "2. Compare (KHONG truyen --no-asis-fetch - rule rieng cho file demo nay): python scripts/automation/compare_results.py --expected SmartSearch/test_data/json/batches/NSG_ExpectedData_demo_asis_vs_actual_20260831.json --actual <file actual vua export>. Vi file nay khong co Expected, moi scenario deu qualify nguong <=50% nen se TU DONG goi he thong As-Is that cho bat ky query nao chua co trong cache (khong can hoi lai moi lan, chi ap dung rieng cho file demo nho, tu chon nay - khac voi batch that lon van phai --no-asis-fetch/hoi truoc).",
+    "3. Trong compare_report.html, doi dropdown 'So sanh' o dau trang sang 'As-Is <-> Actual' de xem đung so sanh can demo.",
+    "4. Co them query moi de demo: append scenario NSG-DEMO-00xx moi vao chinh file nay (dung tao file moi)."
+  ],
+  "scenarios": [
+    {
+      "test_id": "NSG-DEMO-0001",
+      "query": "l choice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0002",
+      "query": "đường cát",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0003",
+      "query": "johnson",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0004",
+      "query": "nuowc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0005",
+      "query": "đồ ăn nhật",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0006",
+      "query": "giỏ quà tết",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0007",
+      "query": "power 100",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0008",
+      "query": "móc quần áo",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0009",
+      "query": "bếp từ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    }
+  ]
+}

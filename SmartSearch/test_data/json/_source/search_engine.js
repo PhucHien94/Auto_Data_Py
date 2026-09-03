@@ -302,6 +302,16 @@
     "nuôi chó": ["thức ăn cho chó"],
     "nuôi mèo": ["thức ăn cho mèo"],
     "bồi bổ sức khỏe": ["mật ong", "vitamin", "tổ yến", "tinh bột nghệ"],
+    // Real bug found 2026-08-27: this generic "products good for health"
+    // phrasing had no glossary entry at all, so it fell through every real
+    // tier straight to the weak partial (single-token union) tier - which
+    // surfaced completely unrelated products (Ariel detergent, Simple facial
+    // wash) purely because their names happen to contain the bare tokens
+    // "sức"/"khỏe" (e.g. "Sức Mạnh Giặt Sạch", "Khỏe Và Mịn Màng"). Grounded
+    // against the real catalog before adding (539 / 531 real hits).
+    "sản phẩm tốt cho sức khỏe": ["thực phẩm bảo vệ sức khỏe", "viên uống bổ sung"],
+    "tốt cho sức khỏe": ["thực phẩm bảo vệ sức khỏe", "viên uống bổ sung"],
+    "chăm sóc sức khỏe": ["thực phẩm bảo vệ sức khỏe", "viên uống bổ sung", "vitamin"],
     "tăng đề kháng": ["mật ong", "vitamin c", "tổ yến"],
     "cảm cúm": ["mật ong", "vitamin c"],
     "giảm cân": ["gạo lứt", "ngũ cốc"],
@@ -463,6 +473,28 @@
     "rửa chén không dùng găng tay": ["găng tay"],
     "thay pin đồ chơi": ["pin"],
     "thay pin điều khiển": ["pin"],
+
+    // Retrieval fix for the "thịt X" type-intent rule (see typeIntentMatches
+    // below, 2026-08-27/28): real fresh-meat product names for these species
+    // rarely say the word "Thịt" itself ("Cánh Gà CP 500G", "Gà Ta Cắt
+    // Miếng CP", not "Thịt Gà ..."), so a query like "thịt gà" was matching
+    // NO tier at all for them — not just losing a ranking tiebreak, but never
+    // entering the candidate pool in the first place. The obvious generic
+    // fix (lower the partial-tier's 3-char minimum token length) was
+    // rejected: "gà"/"bò" are exactly 2 chars and the existing 3-char floor
+    // exists specifically to keep short, noisy tokens out of that safety
+    // net (see STOPWORDS_VI/bagContainsAll comments above) - loosening it
+    // globally risks reopening that class of bug. The INTENT mechanism has
+    // no such length floor (it matches curated, exact target keywords, not
+    // arbitrary query tokens), so routing the species word through it here
+    // is the narrow, already-audited path. Only species with real matches
+    // in "THỰC PHẨM TƯƠI SỐNG / Thịt" were added (checked against the real
+    // NSG catalog): heo 72, gà 73, bò 81, vịt 4, cừu 2 - dê/cá/tôm/cua/thỏ
+    // have zero real matches there and were left out (a bare "cá"/"tôm"
+    // query still fully works via the normal exact-tier, this is purely for
+    // the 2-word "thịt X" phrase).
+    "thịt heo": ["heo"], "thịt gà": ["gà"], "thịt bò": ["bò"],
+    "thịt vịt": ["vịt"], "thịt cừu": ["cừu"],
   };
 
   // Natural browsing phrase -> real NSG level-2 category label. Raw category
@@ -973,12 +1005,152 @@
   // existing "Tên sản phẩm chính xác > Description > Synonym" priority the
   // user set at the very start of this project is preserved as a natural
   // consequence, not overridden.
-  function matchedWordCount(entry, qTokens) {
-    if (!qTokens.length) return 0;
-    const bag = new Set(entry.nameTokens.concat(entry.nameEnTokens, entry.nameKrTokens, entry.catTokens));
+  // Diacritics-preserved on purpose (nameCaseFoldTokens, not the no-diacritics
+  // nameTokens) - same reasoning as the descTokens comment in buildIndex().
+  // Tone marks are letter-defining in Vietnamese, not decoration: stripping
+  // them collapses distinct words onto the same string ("cát"/sand and
+  // "cắt"/cut both -> "cat"), so a no-diacritics bag silently credits a query
+  // token as "matched" against a product that never actually said that word.
+  // Real bug this caused: query "đường cát" (sugar) counted 2 matched-words
+  // against "Cá Ngừ Cắt Khúc ... Hướng Dương" (tuna, unrelated) - "cắt"->"cat"
+  // collided with "cát", "dương"->"duong" collided with "đường" - and because
+  // matchedWords ranks ABOVE tier score (rule 5 below), that coincidence
+  // outranked the real "Đường Tinh Luyện" synonym-tier matches (score 60).
+  // Using the accent-preserved bag means a query token only counts as
+  // "matched" when it's actually the same word, not a tone-stripped cousin.
+  function matchedWordCount(entry, qCaseFoldTokens) {
+    if (!qCaseFoldTokens.length) return 0;
+    const bag = new Set(entry.nameCaseFoldTokens.concat(entry.nameEnTokens, entry.nameKrTokens, entry.catTokens));
     let n = 0;
-    for (const t of new Set(qTokens)) if (bag.has(t)) n++;
+    for (const t of new Set(qCaseFoldTokens)) if (bag.has(t)) n++;
     return n;
+  }
+
+  // ---------------------------------------------------------------------
+  // Product-TYPE intent priority (user, 2026-08-27, verbal spec — not yet a
+  // written BRD rule like §3e's rule 5/6/7, so treat as TBC/heuristic same
+  // as isActiveProduct's field choice above until BA/PO confirm in writing):
+  // some queries name a PRODUCT TYPE the user means literally, and the
+  // existing tier/matchedWords scoring can't tell a literal instance of that
+  // type apart from a product that merely CONTAINS the word — "Xúc Xích
+  // Tiệt Trùng Thịt Heo ... Đức Việt 175G" contains both "thịt" and "heo"
+  // just like a real pork cut does, so it can tie or even beat real meat on
+  // matchedWords/score alone. Grounded against the real NSG catalog `cat`
+  // field (checked via export_full_store_catalog.py output, not guessed):
+  // fresh meat sits cleanly under "THỰC PHẨM TƯƠI SỐNG / Thịt" (250 SKU, no
+  // processed goods mixed in), real fruit under "THỰC PHẨM TƯƠI SỐNG / Trái
+  // Cây" (149 SKU — fruit-flavored/dried/candy items live in "THỰC PHẨM KHÔ
+  // / Bánh Kẹo" instead), and every genuine túi/hộp-AS-PRODUCT (túi thơm,
+  // túi rác, hộp thủy tinh, hộp nhựa đựng thực phẩm...) sits under "HÀNG PHI
+  // THỰC PHẨM" while food merely PACKAGED in a bag/box (túi lọc trà, hộp
+  // quà Tết, hộp sữa) stays in its own food category — a clean, verified
+  // split with no cross-contamination found in a manual sample.
+  // Ranked ABOVE matchedWords (not just a same-score tiebreak) because the
+  // user's ask was explicit that the non-matching type ("xúc xích heo")
+  // must show "sau cùng" (dead last), not just lower within a tie.
+  const MEAT_TYPE_CATEGORY = "THỰC PHẨM TƯƠI SỐNG / Thịt";
+  const FRUIT_TYPE_CATEGORY_PREFIX = "THỰC PHẨM TƯƠI SỐNG / Trái Cây";
+  const CONTAINER_TYPE_CATEGORY_PREFIX = "HÀNG PHI THỰC PHẨM";
+  function detectTypeIntent(qNorm) {
+    if (!qNorm) return null;
+    if (/\bthit\b/.test(qNorm)) return "meat";
+    if (/\btrai\s*cay\b/.test(qNorm)) return "fruit";
+    if (qNorm === "tui" || qNorm === "hop") return "container";
+    return null;
+  }
+  // container: category alone is too loose - "HÀNG PHI THỰC PHẨM" also
+  // covers e.g. "Nước Giặt Surf ... Túi 3.3kg" and "Băng Vệ Sinh ... Hộp 2
+  // Miếng", where túi/hộp is a trailing PACKAGING-SIZE descriptor, not the
+  // product. Verified against the real catalog: every genuine túi/hộp-AS-
+  // PRODUCT name (Túi Rác, Túi Thơm, Hộp Thủy Tinh, Hộp Nhựa...) leads with
+  // "Túi"/"Hộp" as the very FIRST word; the ~90 food-category counter-cases
+  // (Hộp Sữa, Hộp Quà, Hộp N Trái Kiwi, Túi Gạo/Táo/Cam - all a quantity
+  // descriptor, not the container itself) are already excluded by the
+  // category check, but non-food had its own leading-word false positives
+  // (detergent/pads above), so both checks together are required.
+  function typeIntentMatches(intent, entry) {
+    const cat = entry.p.cat || "";
+    if (intent === "meat") return cat === MEAT_TYPE_CATEGORY;
+    if (intent === "fruit") return cat.indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0;
+    if (intent === "container") {
+      const head = entry.nameCaseFoldTokens[0];
+      return cat.indexOf(CONTAINER_TYPE_CATEGORY_PREFIX) === 0 && (head === "túi" || head === "hộp");
+    }
+    return false;
+  }
+
+  // "trộn lẫn nhiều nhãn hàng" (user, 2026-08-27): when many products from
+  // one brand all tie on every existing sort key (typeIntentBoost,
+  // matchedWords, tier score), the old tiebreak (popularity only) let one
+  // brand with many popular SKUs (e.g. Diana băng vệ sinh) fill the whole
+  // top of the results before any other brand appeared at all. This
+  // round-robins EACH tied block by brand — items still individually sorted
+  // by popularity within their brand — without touching the ordering
+  // BETWEEN blocks that differ on a real relevance signal. Only kicks in
+  // for blocks of >2 (no point round-robining a tie of 1-2 items).
+  function diversifyByBrand(results) {
+    const out = [];
+    let i = 0;
+    while (i < results.length) {
+      let j = i + 1;
+      while (j < results.length &&
+             results[j].typeIntentBoost === results[i].typeIntentBoost &&
+             results[j].matchedWords === results[i].matchedWords &&
+             results[j].score === results[i].score) {
+        j++;
+      }
+      const block = results.slice(i, j);
+      if (block.length > 2) {
+        const byBrand = new Map();
+        const brandOrder = [];
+        for (const r of block) {
+          const b = (r.product.brand || "").trim().toLowerCase() || "__no_brand__";
+          if (!byBrand.has(b)) { byBrand.set(b, []); brandOrder.push(b); }
+          byBrand.get(b).push(r);
+        }
+        let added = true;
+        while (added) {
+          added = false;
+          for (const b of brandOrder) {
+            const arr = byBrand.get(b);
+            if (arr.length) { out.push(arr.shift()); added = true; }
+          }
+        }
+      } else {
+        out.push(...block);
+      }
+      i = j;
+    }
+    return out;
+  }
+
+  // "hàng nhập khẩu thì không chứa các sản phẩm của Việt Nam" (user,
+  // 2026-08-27): the catalog carries NO origin/import field at all (see
+  // AI_CONTEXT.md — `status`/`ec_status`/`visibility_*` exist, no
+  // country-of-origin) so this can only be a HEURISTIC exclusion keyed off
+  // a curated list of real `brand` strings from the NSG catalog that are
+  // well-known Vietnamese-owned/Vietnam-manufactured brands — every entry
+  // below was checked to have >=1 real match in the catalog (see brand
+  // export/grep). TBC with BA/Dev like isActiveProduct's field choice
+  // above — do NOT treat this list as ground truth without confirmation. A
+  // few borderline cases are included as "operates/is perceived as a
+  // domestic brand" (Acecook — Vietnam-Japan JV manufactured in VN;
+  // Neptune, Vedan — foreign-invested but VN-manufactured); flag to BA if
+  // that reading is wrong for this rule's intent.
+  const VN_DOMESTIC_BRANDS = new Set([
+    "th", "th true food", "th true milk", "vinamilk", "vissan", "cầu tre", "vifon",
+    "bibica", "trung nguyên", "vinacafe", "vinasoy", "nutifood", "acecook",
+    "masan", "chinsu", "chin-su", "cholimex", "tường an", "neptune",
+    "vinamit", "hảo hảo", "handy hảo hảo", "miliket", "omachi", "kokomi",
+    "g7", "sabeco", "333", "333_pilsner", "sài gòn chill", "bia sài gòn",
+    "sting", "vinacacao", "minh phú", "nam ngư", "đệ nhất", "barona",
+    "vedan", "rượu bình tây", "duy tân", "điện quang",
+  ]);
+  function isImportQuery(qNorm) {
+    return !!qNorm && /\bnhap\s*khau\b/.test(qNorm);
+  }
+  function isDomesticVnBrand(brand) {
+    return !!brand && VN_DOMESTIC_BRANDS.has(String(brand).trim().toLowerCase());
   }
 
   // Score one product against a query. Returns {score, tier, note} or null.
@@ -1101,6 +1273,8 @@
     const expanded = expandQueryTerms(qTokens, qCaseFoldTokens, qNorm);
     const intents = intentTargets(qTokens);
     const categories = categoryTargets(qTokens);
+    const typeIntent = detectTypeIntent(qNorm);
+    const excludeDomesticVn = isImportQuery(qNorm);
 
     // Candidate narrowing: union of every index-backed match path in
     // scoreProduct() (all safe supersets — see buildIndex() comment above).
@@ -1145,7 +1319,8 @@
       const m = scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, false, categories);
       if (m) {
         results.push({ product: entry.p, score: m.score, tier: m.tier, note: m.note, popularity: entry.popularity,
-                       matchedWords: matchedWordCount(entry, qTokens) });
+                       matchedWords: matchedWordCount(entry, qCaseFoldTokens),
+                       typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry) ? 1 : 0 });
         mainScoreByIdx.set(i, m.score);
         if (m.score > bestMainScore) bestMainScore = m.score;
       }
@@ -1179,13 +1354,19 @@
             if (dupIdx !== -1) results.splice(dupIdx, 1);
           }
           results.push({ product: entry.p, score: 80, tier: "typo", note: "Khớp qua bước chuẩn hoá & sửa lỗi chính tả (sai lệch tối đa 1 ký tự) với tên sản phẩm — chỉ áp dụng vì từ khoá chính không tìm thấy kết quả nào.", popularity: entry.popularity,
-                         matchedWords: matchedWordCount(entry, qTokens) });
+                         matchedWords: matchedWordCount(entry, qCaseFoldTokens),
+                         typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry) ? 1 : 0 });
         }
       }
     }
     // Rule 5: matchedWords ranks ABOVE tier score (see matchedWordCount comment).
-    results.sort((a, b) => b.matchedWords - a.matchedWords || b.score - a.score || b.popularity - a.popularity);
-    return limit === Infinity ? results : results.slice(0, limit);
+    // typeIntentBoost ranks ABOVE matchedWords — see detectTypeIntent() comment:
+    // the user's ask was for the non-matching type to show dead last, not just
+    // lose a same-score tiebreak.
+    results.sort((a, b) => b.typeIntentBoost - a.typeIntentBoost || b.matchedWords - a.matchedWords || b.score - a.score || b.popularity - a.popularity);
+    let finalResults = diversifyByBrand(results);
+    if (excludeDomesticVn) finalResults = finalResults.filter((r) => !isDomesticVnBrand(r.product.brand));
+    return limit === Infinity ? finalResults : finalResults.slice(0, limit);
   }
 
   // ---------------------------------------------------------------------
@@ -1352,5 +1533,5 @@
     return { confidence, route, routeLabel };
   }
 
-  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, matchedWordCount, isSingleExactMatch, pickYouMightLike };
+  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, matchedWordCount, isSingleExactMatch, pickYouMightLike, detectTypeIntent, typeIntentMatches, diversifyByBrand, isImportQuery, isDomesticVnBrand, VN_DOMESTIC_BRANDS };
 });
