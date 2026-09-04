@@ -172,6 +172,14 @@
     // (expanding a "na" query toward the fruit is safe; the reverse would
     // inject Norwegian-salmon noise into "mãng cầu" searches).
     ["na", "mãng cầu"],
+    // 2026-09-03 QA report: catalog has no dedicated Japanese-translated
+    // name field (unlike name_en/name_kr), so real Japanese-script queries
+    // ("わさび", "すし") have no multilang tier to fall back on even after
+    // the tokenizer fix (see tokens()/tokensCaseFold() above) that stops
+    // them from being silently dropped to an empty token array - redirect to
+    // the existing loanword spelling instead (both already grounded: wasabi
+    // 16 hits, sushi 15 hits).
+    ["わさび", "wasabi"], ["すし", "sushi"],
   ];
 
   const REGIONAL = [
@@ -270,10 +278,32 @@
     "trẻ sơ sinh": ["tã", "bỉm", "sữa bột", "khăn ướt"],
     "đồ ăn cho bé": ["bánh ăn dặm", "sữa bột"],
     "thức ăn cho bé": ["bánh ăn dặm", "sữa bột"],
+    // QA report 2026-09-04: "đồ ăn nhật" đã ra đúng thực phẩm gốc Nhật rồi
+    // (nhờ foodScoped) nhưng chỉ ở tier partial (khớp tình cờ qua từ "nhật"
+    // lẻ) - nâng lên tier intent, nhắm đúng cụm "Nhật Bản" (22 SKU thật) để
+    // chắc chắn hơn thay vì trông chờ may rủi.
+    "đồ ăn nhật": ["Nhật Bản"],
+    "thức ăn nhật": ["Nhật Bản"],
+    // QA report 2026-09-04: tương tự - "giỏ quà tết" đã ra đúng các hộp quà
+    // Tết nhưng chỉ ở tier partial, nâng lên intent nhắm đúng cụm "quà tết"
+    // (9 SKU thật).
+    "giỏ quà tết": ["quà tết"],
     "sơ sinh": ["tã", "bỉm", "khăn ướt"],
     "nấu ăn": ["gạo", "dầu ăn", "nước mắm", "gia vị"],
     "vào bếp": ["gạo", "dầu ăn", "nước mắm", "gia vị"],
+    // QA report 2026-09-04: 2 cụm chưa từng có glossary - "đồ điện gia dụng"
+    // (thiết bị điện trong nhà: phòng khách/tắm/bếp) và "đồ dùng gia dụng"
+    // (vật dụng sinh hoạt nói chung, không nhất thiết chạy điện) là 2 khái
+    // niệm khác nhau, tách riêng target cho đúng.
+    "đồ điện gia dụng": ["quạt", "nồi cơm điện", "máy sấy tóc"],
+    "đồ dùng gia dụng": ["nồi", "quạt", "chảo"],
     "nấu cơm": ["gạo", "nồi cơm"],
+    // QA report 2026-09-04 (demo bug notes): NSG không bán "bếp từ" (induction,
+    // 0 kết quả thật trong catalog - đã kiểm tra) - trước đây rơi thẳng xuống
+    // typo-fallback và khớp nhầm hàng loạt sản phẩm em bé qua "Cho Bé Từ..."
+    // (bếp/bé gần giống nhau sau bỏ dấu). Redirect sang 2 loại bếp THẬT đang
+    // có bán (grounded: "bếp hồng ngoại" 1 hit, "bếp nướng than" 1 hit).
+    "bếp từ": ["bếp hồng ngoại", "bếp nướng than"],
     "ăn vặt": ["bánh kẹo", "snack", "kẹo dẻo", "mì ăn liền"],
     "đói bụng": ["mì ăn liền", "bánh mì", "snack"],
     "thèm ăn": ["bánh kẹo", "snack"],
@@ -314,8 +344,12 @@
     "chăm sóc sức khỏe": ["thực phẩm bảo vệ sức khỏe", "viên uống bổ sung", "vitamin"],
     "tăng đề kháng": ["mật ong", "vitamin c", "tổ yến"],
     "cảm cúm": ["mật ong", "vitamin c"],
-    "giảm cân": ["gạo lứt", "ngũ cốc"],
-    "ăn kiêng": ["gạo lứt", "ngũ cốc"],
+    // QA report 2026-09-04 (demo bug notes): "đồ ăn cho người giảm cân" chỉ
+    // lọt vào tier "partial" (khớp tình cờ qua từ "giảm" lẻ), chưa được nhận
+    // diện đúng ở tier intent - bổ sung thêm nhóm "ít đường"/"ít béo" (grounded:
+    // 73 / 17 hit thật) đúng ý note "cần...ít đường, ít calo".
+    "giảm cân": ["gạo lứt", "ngũ cốc", "ít đường", "ít béo"],
+    "ăn kiêng": ["gạo lứt", "ngũ cốc", "ít đường", "ít béo"],
     "đi làm": ["bút", "cà phê"],
     "đi học": ["bút", "bút chì"],
     "văn phòng phẩm": ["bút", "bút chì", "bút gel"],
@@ -333,7 +367,11 @@
     "khử khuẩn": ["nước rửa tay"],
     "rửa tay": ["nước rửa tay"],
     "muỗi": ["xịt muỗi"],
-    "côn trùng": ["xịt muỗi"],
+    // QA report 2026-09-04: "bình xịt côn trùng jumbo vape không mùi" chỉ
+    // gợi ý thêm đúng 1 hãng khác (Raid), bỏ sót dòng "Ars Không Mùi" (3 SKU
+    // thật) - thêm vào để có nhiều lựa chọn hãng khác nhau hơn khi khách
+    // tìm theo nhu cầu "không mùi" chung chung.
+    "côn trùng": ["xịt muỗi", "Ars Không Mùi"],
     "trang điểm": ["mặt nạ", "kem dưỡng"],
     "nắng nóng": ["kem chống nắng"],
     "chống nắng": ["kem chống nắng"],
@@ -345,11 +383,29 @@
     "nướng bánh": ["bột mì", "khuôn bánh"],
     "pha sữa": ["sữa bột", "bình sữa"],
     "cho con bú": ["sữa bột", "bình sữa", "khăn ướt"],
+    // QA report 2026-09-04 (demo bug notes): "nước rửa chuyên dụng bình sữa"
+    // trước đây chỉ trúng "Nước Rửa Bình Sữa" ở tier "partial" (khớp tình cờ,
+    // điểm thấp) nên dễ bị các sản phẩm nước rửa/tẩy KHÔNG liên quan em bé
+    // (vd nước tẩy bồn cầu) lấn át trong xếp hạng thật. Nâng lên tier intent
+    // để ưu tiên đúng dòng sản phẩm em bé - khớp bất kỳ câu nào có "bình sữa"
+    // (vd "rửa bình sữa", "vệ sinh bình sữa cho bé", "nước rửa chuyên dụng
+    // bình sữa" đều chứa cụm liền "bình sữa").
+    "bình sữa": ["nước rửa bình sữa"],
     "tắm cho bé": ["sữa tắm em bé", "khăn tắm em bé"],
     "hăm tã": ["tã", "khăn ướt"],
     "mọc răng": ["bánh ăn dặm"],
-    "ăn dặm": ["bánh ăn dặm", "sữa bột"],
-    "đi du lịch": ["hộp quà", "khăn ướt"],
+    // QA report 2026-09-04: "thức ăn dặm cho bé 6 tháng" chỉ nâng tier cho
+    // "bánh ăn dặm", còn "bột ăn dặm" (loại thức ăn dặm phổ biến khác, 6 SKU
+    // thật) vẫn rơi về tier partial yếu - bổ sung để cả 2 loại đều lên tier
+    // intent như nhau.
+    "ăn dặm": ["bánh ăn dặm", "bột ăn dặm", "sữa bột"],
+    // QA report 2026-09-04: "đi du lịch" trước đây trỏ tới "hộp quà"/"khăn
+    // ướt" (không liên quan gì tới nhu cầu đi du lịch thật) - đổi sang các
+    // sản phẩm du lịch THẬT (gối cổ 3 SKU, bộ du lịch 2 SKU). Thêm luôn
+    // "vali du lịch" làm trigger riêng vì cụm "đi du lịch" không xuất hiện
+    // liền trong câu "vali du lịch".
+    "đi du lịch": ["gối cổ", "bộ du lịch"],
+    "vali du lịch": ["gối cổ", "bộ du lịch"],
     "cắm trại": ["mì ăn liền", "nước ngọt"],
     "dã ngoại": ["bánh kẹo", "nước ngọt"],
     "xem phim": ["bắp rang bơ", "nước ngọt", "snack"],
@@ -432,7 +488,10 @@
     "mua đồ nhậu": ["bia", "snack"],
     "nấu nước lẩu": ["lẩu"],
     "ăn kiêng low carb": ["gạo lứt"],
-    "ăn eat clean": ["gạo lứt", "ngũ cốc"],
+    // QA report 2026-09-04 (demo bug notes): note yêu cầu "eat clean" phải ra
+    // thêm "rau", "hạt", "tự nhiên/hữu cơ" chứ không chỉ ngũ cốc/gạo lứt -
+    // grounded: "rau củ" 74 hit, "hạt điều" 61 hit, "hữu cơ" 54 hit thật.
+    "ăn eat clean": ["gạo lứt", "ngũ cốc", "rau củ", "hạt điều", "hữu cơ"],
     "khử mùi cơ thể": ["lăn khử mùi"],
     "rửa mặt buổi sáng": ["sữa rửa mặt"],
     "dưỡng ẩm da": ["kem dưỡng"],
@@ -456,7 +515,7 @@
     "khử mùi giày": ["baking soda"],
     "khử mùi tủ giày": ["baking soda"],
     "vệ sinh máy giặt": ["baking soda"],
-    "ăn kiêng giảm cân": ["gạo lứt", "ngũ cốc"],
+    "ăn kiêng giảm cân": ["gạo lứt", "ngũ cốc", "ít đường", "ít béo"],
     "bổ sung vitamin": ["vitamin", "vitamin c"],
     "tăng sức đề kháng": ["vitamin c", "tổ yến", "mật ong"],
     "trẻ em đi học": ["bút", "vở", "balo"],
@@ -495,6 +554,15 @@
     // the 2-word "thịt X" phrase).
     "thịt heo": ["heo"], "thịt gà": ["gà"], "thịt bò": ["bò"],
     "thịt vịt": ["vịt"], "thịt cừu": ["cừu"],
+
+    // 2026-09-03 QA report additions — both targets reuse already-grounded
+    // keys from elsewhere in this file (học sinh's bút/vở/balo cluster;
+    // đựng thực phẩm's hộp/màng-bọc cluster), so no new grounding needed.
+    "đồ dùng học tập": ["bút", "vở", "balo"], "dụng cụ học tập": ["bút", "vở", "balo"],
+    // catalog has no real "túi zip đựng thực phẩm" line (checked, 0 hits) -
+    // closest grounded food-storage targets are these two.
+    "túi thực phẩm": ["màng bọc thực phẩm", "hộp đựng thực phẩm"],
+    "túi đựng thực phẩm": ["màng bọc thực phẩm", "hộp đựng thực phẩm"],
   };
 
   // Natural browsing phrase -> real NSG level-2 category label. Raw category
@@ -590,15 +658,20 @@
     // jasmine) where "&" genuinely joins two distinct searchable words.
     return stripDiacritics(String(s || "").toLowerCase()).replace(/(?<=\S)[&/](?=\S)/g, "").trim();
   }
-  // Word-char class: ASCII alnum + Hangul syllables (가-힣), so Korean
-  // catalog/query text tokenizes into real syllable tokens instead of being
-  // silently dropped by an ASCII/Vietnamese-only class.
+  // Word-char class: ASCII alnum + Hangul syllables (가-힣) + Japanese Hiragana
+  // (ぁ-ん)/Katakana (ァ-ヿ) — same fix class as the original Korean bug (NFD
+  // decomposes non-Latin scripts too, and the tokenizer's word-char class then
+  // silently drops anything outside it): a query typed in Japanese kana
+  // ("わさび") tokenized to an EMPTY array before this fix, so it couldn't
+  // even reach SYNONYMS/expandQueryTerms matching (found 2026-09-03, QA
+  // report — the JP columns of the わさび/すし table returned 0 results for
+  // exactly this reason, same root cause as the pre-Hangul-fix Korean bug).
   function tokens(s) {
-    return normalize(s).split(/[^a-z0-9가-힣]+/).filter((t) => t.length >= 2);
+    return normalize(s).split(/[^a-z0-9가-힣ぁ-んァ-ヿ]+/).filter((t) => t.length >= 2);
   }
   function tokensCaseFold(s) {
     // like tokens(), but keeps diacritics — for the strict "exact" tier
-    return String(s || "").toLowerCase().replace(/(?<=\S)[&/](?=\S)/g, "").split(/[^a-z0-9à-ỹ]+/i).filter((t) => t.length >= 2);
+    return String(s || "").toLowerCase().replace(/(?<=\S)[&/](?=\S)/g, "").split(/[^a-z0-9à-ỹぁ-んァ-ヿ가-힣]+/i).filter((t) => t.length >= 2);
   }
   // No-diacritics Vietnamese function words (prepositions/conjunctions/etc.)
   // — same list used by export_full_store_catalog.py's description-keyword
@@ -631,7 +704,19 @@
         const h = hay[start + i];
         const n = needle[i];
         const isLast = i === needle.length - 1;
-        if (isLast && allowPrefixOnLast ? !h.startsWith(n) : h !== n) {
+        // Prefix-growth on the LAST token is meant for an as-you-type partial
+        // final word ("sữa tươi tiet" -> "tiệt"), not for a genuinely short
+        // (<3-char) query that's already a COMPLETE real word on its own
+        // ("mi", "bò", "cá") — allowing prefix growth there matches any
+        // longer unrelated token that merely starts with the same 2 letters
+        // (found 2026-09-03, QA report: query "mi" prefix-matched "Bảo
+        // MInh"/"MIến" indiscriminately, ranking an unrelated rice brand
+        // above real Mì products via a coincidental "mi"-prefix). Below 3
+        // chars, require an EXACT hay-token match instead — same threshold
+        // already used elsewhere in this file (STOPWORDS_VI/partial-tier) to
+        // keep short tokens from being noise.
+        const prefixOk = isLast && allowPrefixOnLast && n.length >= 3 ? h.startsWith(n) : h === n;
+        if (!prefixOk) {
           ok = false;
           break;
         }
@@ -835,8 +920,22 @@
     return p.status === undefined || p.status === null || p.status === 1;
   }
 
+  // QA report 2026-09-03: "thực phẩm tươi sống" top-1/2 were gift-WITH-
+  // PURCHASE trigger lines, not real sellable products ("[ONL]-Tặng 1 Lon...
+  // Khi Mua Đơn 99k...", "[ONL]-Mua Đơn 99k...Tặng 1 Cá Capelin 300g" —
+  // matched the QA-reported slugs CLCACAPELIN300G/ONLTHUMSUP320) - user's
+  // explicit "(expect ẩn)". Grounded against the real catalog: exactly 3
+  // "[ONL]-Tặng ..."/"[ONL]-...Tặng ..." lines exist in NSG, all promo copy
+  // rather than a purchasable item (no real price/SKU identity of their
+  // own). Deliberately NARROWER than "any [ONL]/[Deal Sốc]-prefixed name" —
+  // "[Deal Sốc] - Nước Giặt Lix..." etc. ARE real discounted products and
+  // must stay searchable; only the tặng/gift-trigger phrasing is excluded.
+  function isPromoGiftTrigger(p) {
+    return /^\[ONL\]-/.test(p.name || "") && /tặng|mua đơn/i.test(p.name || "");
+  }
+
   function buildIndex(products) {
-    products = products.filter(isActiveProduct);
+    products = products.filter(isActiveProduct).filter((p) => !isPromoGiftTrigger(p));
     const entries = products.map((p) => ({
       p,
       nameCaseFoldTokens: tokensCaseFold(p.name),
@@ -855,6 +954,22 @@
       // so description matching requires the query to carry correct diacritics.
       descTokens: tokensCaseFold(p.desc_kw),
       catTokens: tokens(p.cat),
+      // Diacritics-preserved twin of catTokens, ONLY for matchedWordCount()'s
+      // bag below (found 2026-09-03, QA report: same collision CLASS as the
+      // descTokens fix above, different field. A no-diacritics query like
+      // "tui thuc pham" matched catTokens's no-diacritics "thuc"/"pham"
+      // (from the generic category path "THỰC PHẨM TƯƠI SỐNG") against ANY
+      // product merely filed under that category - e.g. "Táo Gala..." -
+      // scoring 3 matchedWords and outranking the one product genuinely
+      // named "Túi Thực Phẩm..." (which only scored 92/no_diacritics with
+      // 0 matchedWords, since matchedWordCount's bag is otherwise
+      // diacritics-preserved and the no-diacritics query token never equals
+      // an accented name token). catTokens itself must STAY no-diacritics
+      // for its own real job (the dedicated "category" tier's
+      // phraseContains(catTokens, qTokens) against a no-diacritics query) -
+      // this parallel field exists so matchedWordCount doesn't inherit that
+      // looseness.
+      catCaseFoldTokens: tokensCaseFold(p.cat),
       // Diacritics-preserved like name tokens (brand names are usually proper
       // nouns/loanwords — "P&G", "Unilever", "Vinamilk" — case-fold matching
       // is the right strictness, same reasoning as nameCaseFoldTokens).
@@ -1020,7 +1135,7 @@
   // "matched" when it's actually the same word, not a tone-stripped cousin.
   function matchedWordCount(entry, qCaseFoldTokens) {
     if (!qCaseFoldTokens.length) return 0;
-    const bag = new Set(entry.nameCaseFoldTokens.concat(entry.nameEnTokens, entry.nameKrTokens, entry.catTokens));
+    const bag = new Set(entry.nameCaseFoldTokens.concat(entry.nameEnTokens, entry.nameKrTokens, entry.catCaseFoldTokens));
     let n = 0;
     for (const t of new Set(qCaseFoldTokens)) if (bag.has(t)) n++;
     return n;
@@ -1051,32 +1166,118 @@
   const MEAT_TYPE_CATEGORY = "THỰC PHẨM TƯƠI SỐNG / Thịt";
   const FRUIT_TYPE_CATEGORY_PREFIX = "THỰC PHẨM TƯƠI SỐNG / Trái Cây";
   const CONTAINER_TYPE_CATEGORY_PREFIX = "HÀNG PHI THỰC PHẨM";
+  // Does this product's name (diacritics-preserved, case-fold) literally
+  // START with the given token sequence? Used below to tell a real instance
+  // of a product type ("Nho Xanh Mẫu Đơn...") apart from something that
+  // merely MENTIONS the word deeper in its name/flavor ("...Vị Nho", "Sữa
+  // Chua Uống Fristi Nho") - same false-positive class already documented
+  // above for "Xúc Xích ... Thịt Heo".
+  function headTokenIs(entry, toks) {
+    const h = entry.nameCaseFoldTokens;
+    if (h.length < toks.length) return false;
+    for (let i = 0; i < toks.length; i++) if (h[i] !== toks[i]) return false;
+    return true;
+  }
+  // Data-driven type-intent rules (refactored from 3 hardcoded cases to a
+  // list, 2026-09-03 QA report round, so new head-noun-priority fixes don't
+  // need a new if/else branch each time). Checked in order, first match
+  // wins - kept in the original meat/fruit/container order, new entries
+  // appended after. Every `match` target below was grounded against the
+  // real NSG catalog before adding (see the 2026-09-03 QA-report memory for
+  // the grep evidence per keyword).
+  const TYPE_INTENT_RULES = [
+    { name: "meat", test: (qn) => /\bthit\b/.test(qn), match: (e) => e.p.cat === MEAT_TYPE_CATEGORY },
+    { name: "fruit", test: (qn) => /\btrai\s*cay\b/.test(qn), match: (e) => (e.p.cat || "").indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0 },
+    // container: category alone is too loose - "HÀNG PHI THỰC PHẨM" also
+    // covers e.g. "Nước Giặt Surf ... Túi 3.3kg" and "Băng Vệ Sinh ... Hộp 2
+    // Miếng", where túi/hộp is a trailing PACKAGING-SIZE descriptor, not the
+    // product. Verified against the real catalog: every genuine túi/hộp-AS-
+    // PRODUCT name (Túi Rác, Túi Thơm, Hộp Thủy Tinh, Hộp Nhựa...) leads with
+    // "Túi"/"Hộp" as the very FIRST word; the ~90 food-category counter-cases
+    // (Hộp Sữa, Hộp Quà, Hộp N Trái Kiwi, Túi Gạo/Táo/Cam - all a quantity
+    // descriptor, not the container itself) are already excluded by the
+    // category check, but non-food had its own leading-word false positives
+    // (detergent/pads above), so both checks together are required.
+    {
+      name: "container", test: (qn) => qn === "tui" || qn === "hop",
+      match: (e) => {
+        const cat = e.p.cat || "";
+        const head = e.nameCaseFoldTokens[0];
+        return cat.indexOf(CONTAINER_TYPE_CATEGORY_PREFIX) === 0 && (head === "túi" || head === "hộp");
+      },
+    },
+    // 2026-09-03 QA report: bare-fruit-name queries ("nho", "dưa hấu", "trái
+    // thanh long") were ranking flavored/candy/dairy items ("Kẹo Dẻo Vị
+    // Nho", "Sữa Chua Uống Fristi Nho") above or alongside the real fresh
+    // fruit (both score 100 at the exact tier, tied) - boost the real
+    // produce so it leads. Grounded: all 3 target head-nouns confirmed
+    // present under Trái Cây in the real catalog.
+    { name: "grape", test: (qn) => /\bnho\b/.test(qn), match: (e) => (e.p.cat || "").indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0 && headTokenIs(e, ["nho"]) },
+    { name: "watermelon", test: (qn) => /\bdua\s*hau\b/.test(qn), match: (e) => (e.p.cat || "").indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0 && headTokenIs(e, ["dưa", "hấu"]) },
+    { name: "dragonfruit", test: (qn) => /\bthanh\s*long\b/.test(qn), match: (e) => (e.p.cat || "").indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0 && headTokenIs(e, ["thanh", "long"]) },
+    // "cá hồi" (salmon): real fillet/steak (Thủy sản category) was tied at
+    // the same no_diacritics(92) tier with salmon-FLAVORED seaweed
+    // snacks/porridge and lost the tie-break - boost the real seafood.
+    { name: "salmon", test: (qn) => /\bca\s*hoi\b/.test(qn), match: (e) => (e.p.cat || "").indexOf("Thủy sản") !== -1 && headTokenIs(e, ["cá", "hồi"]) },
+    // "củ hành tím" (purple/red shallot): 3 real regional shallot lines exist
+    // (Vĩnh Châu/Lý Sơn/Phan Rang) but partial-tier noise (toys, seed
+    // packets, pickled-condiment "Củ Hành Muối Chua Ngọt") pushed the
+    // lowest-popularity one (Phan Rang) out of the top 10 entirely.
+    { name: "shallot", test: (qn) => /\bhanh\s*tim\b/.test(qn), match: (e) => (e.p.cat || "").indexOf("Rau Củ") !== -1 && headTokenIs(e, ["hành", "tím"]) },
+    // "rổ [nhựa/đựng đồ]": real Rổ Nhựa/Rổ Inox products only ever matched
+    // the weak partial tier (the full "rổ...đựng đồ" phrase is never
+    // consecutive in any one product name) and got crowded out by unrelated
+    // Hộp/Kệ partial hits. When the query names a material (nhựa/inox),
+    // prefer the matching material - user's explicit ask: "ưu tiên rổ nhựa
+    // trước rổ inox".
+    {
+      name: "basket", test: (qn) => /\bro\b/.test(qn),
+      match: (e, qn) => {
+        if (e.nameCaseFoldTokens[0] !== "rổ") return false;
+        if (qn && /\bnhua\b/.test(qn)) return e.nameCaseFoldTokens.includes("nhựa");
+        if (qn && /\binox\b/.test(qn)) return e.nameCaseFoldTokens.includes("inox");
+        return true;
+      },
+    },
+    // "hoa" (flowers): bare "hoa" was ranking laundry/perfume products
+    // ("Nước Hoa"/"Hương Hoa...") above the real Dalat Hasfarm flower line
+    // at the exact(100) tier via tie, since both literally contain the
+    // token "hoa". Real flower SKUs (+ "Hoa Chuối"/"Hoa Hồi" - banana
+    // blossom/star anise, also legitimately "Hoa X" products) all start
+    // their name with "Hoa" - grounded, 10 real hits.
+    { name: "flower", test: (qn) => /(^|\s)hoa(\s|$)/.test(qn), match: (e) => headTokenIs(e, ["hoa"]) },
+    // QA report 2026-09-04: "bình nước giữ nhiệt thể thao" - "Bình Nước Thể
+    // Thao" (thường, KHÔNG giữ nhiệt) thắng tie-break matchedWords (4 từ
+    // khớp: bình/nước/thể/thao) trước "Bình Giữ Nhiệt..." (chỉ 3 từ khớp:
+    // bình/giữ/nhiệt) dù query có nêu rõ "giữ nhiệt". Boost đúng dòng giữ
+    // nhiệt khi query có nhắc "giữ nhiệt".
+    {
+      name: "insulated_bottle", test: (qn) => /\bgiu\s*nhiet\b/.test(qn),
+      match: (e) => e.nameCaseFoldTokens.includes("giữ") && e.nameCaseFoldTokens.includes("nhiệt"),
+    },
+    // QA report 2026-09-04: "rượu vang đỏ khai vị" lọt 1 sản phẩm kem nhuộm
+    // tóc ("...Đỏ Rượu Vang" - tên MÀU tóc) vào tier synonym do đảo từ trùng
+    // "rượu vang đỏ" ngược lại. Giới hạn đúng nhóm đồ uống thật.
+    {
+      name: "red_wine", test: (qn) => /\bruou\s*vang\s*do\b/.test(qn),
+      match: (e) => headTokenIs(e, ["rượu"]) && (e.p.cat || "").indexOf("Đồ Uống") !== -1,
+    },
+    // QA report 2026-09-04: "xịt tạo kiểu tóc" đã ra đủ nhóm gel/wax/sáp/xịt
+    // nhưng "ưu tiên xịt" (đúng loại khách gõ) chưa được nâng lên - boost
+    // đúng dòng "Xịt..." khi query mở đầu bằng "xịt".
+    {
+      name: "hair_spray", test: (qn) => /^xit\b/.test(qn) && /\btoc\b/.test(qn),
+      match: (e) => headTokenIs(e, ["xịt"]),
+    },
+  ];
   function detectTypeIntent(qNorm) {
     if (!qNorm) return null;
-    if (/\bthit\b/.test(qNorm)) return "meat";
-    if (/\btrai\s*cay\b/.test(qNorm)) return "fruit";
-    if (qNorm === "tui" || qNorm === "hop") return "container";
+    for (const r of TYPE_INTENT_RULES) if (r.test(qNorm)) return r.name;
     return null;
   }
-  // container: category alone is too loose - "HÀNG PHI THỰC PHẨM" also
-  // covers e.g. "Nước Giặt Surf ... Túi 3.3kg" and "Băng Vệ Sinh ... Hộp 2
-  // Miếng", where túi/hộp is a trailing PACKAGING-SIZE descriptor, not the
-  // product. Verified against the real catalog: every genuine túi/hộp-AS-
-  // PRODUCT name (Túi Rác, Túi Thơm, Hộp Thủy Tinh, Hộp Nhựa...) leads with
-  // "Túi"/"Hộp" as the very FIRST word; the ~90 food-category counter-cases
-  // (Hộp Sữa, Hộp Quà, Hộp N Trái Kiwi, Túi Gạo/Táo/Cam - all a quantity
-  // descriptor, not the container itself) are already excluded by the
-  // category check, but non-food had its own leading-word false positives
-  // (detergent/pads above), so both checks together are required.
-  function typeIntentMatches(intent, entry) {
-    const cat = entry.p.cat || "";
-    if (intent === "meat") return cat === MEAT_TYPE_CATEGORY;
-    if (intent === "fruit") return cat.indexOf(FRUIT_TYPE_CATEGORY_PREFIX) === 0;
-    if (intent === "container") {
-      const head = entry.nameCaseFoldTokens[0];
-      return cat.indexOf(CONTAINER_TYPE_CATEGORY_PREFIX) === 0 && (head === "túi" || head === "hộp");
-    }
-    return false;
+  function typeIntentMatches(intent, entry, qNorm) {
+    const r = TYPE_INTENT_RULES.find((rule) => rule.name === intent);
+    return r ? r.match(entry, qNorm) : false;
   }
 
   // "trộn lẫn nhiều nhãn hàng" (user, 2026-08-27): when many products from
@@ -1156,7 +1357,7 @@
   // Score one product against a query. Returns {score, tier, note} or null.
   // qTokens/qCaseFoldTokens/qNorm come pre-tokenized from search(); expanded/
   // intents are the outputs of expandQueryTerms()/intentTargets() above.
-  function scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, allowTypo, categories) {
+  function scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, allowTypo, categories, foodScoped) {
     let best = null;
     const consider = (score, tier, note) => {
       if (!best || score > best.score) best = { score, tier, note };
@@ -1171,7 +1372,16 @@
     if (phraseContains(entry.nameTokens, qTokens)) {
       consider(92, "no_diacritics", "Khớp tên sản phẩm sau khi bỏ dấu.");
     }
-    if (qTokens.length && qNorm.length >= 3) {
+    // The >=3-char floor exists to keep short LATIN tokens from being noise,
+    // but it wrongly blocked short genuine Hangul/Kana queries too: "라면"
+    // (Korean "ramen"/instant noodles, 2 syllables = 2 JS string chars) is a
+    // real, complete, unambiguous word - unlike a 2-letter Latin fragment,
+    // a CJK/Hangul token of this length already carries full meaning (found
+    // 2026-09-03 QA report: "라면" returned 0 results despite 221 real
+    // catalog hits in name_kr). Bypass the length floor whenever the query
+    // itself contains Hangul/Hiragana/Katakana - the character class itself
+    // is evidence this isn't stray noise.
+    if (qTokens.length && (qNorm.length >= 3 || /[가-힣ぁ-んァ-ヿ]/.test(qNorm))) {
       if (phraseContains(entry.nameEnTokens, qTokens)) consider(88, "multilang", "Khớp tên tiếng Anh đã dịch.");
       if (phraseContains(entry.nameKrTokens, qTokens)) consider(88, "multilang", "Khớp tên tiếng Hàn đã dịch.");
     }
@@ -1231,13 +1441,34 @@
     // ("...Cho Máy Giặt...") — without this filter, any query containing a
     // stray preposition/conjunction spuriously matched hundreds of products
     // that share nothing with the query's actual subject.
-    if (!best && qTokens.length > 1) {
+    // foodScoped (QA report 2026-09-03): a query explicitly asking for FOOD
+    // ("đồ ăn X", "thức ăn X", "chế độ ăn X", "thực phẩm X") has no business
+    // falling back to a non-food product just because a token happens to
+    // overlap - "đồ ăn hàn" partial-matched a Korean-branded LAUNDRY
+    // detergent via the bare token "hàn", and "chế độ ăn eat clean"
+    // partial-matched cleaning products literally branded "...Clean Home"
+    // via the bare token "clean". Scoped to the weakest (partial) tier only:
+    // a food-scoped query that has a genuinely STRONGER match on a non-food
+    // product (exact name, brand, description) still shows it - this only
+    // stops non-food from squeaking in via the last-resort single-token net.
+    if (!best && qTokens.length > 1 && !(foodScoped && (entry.p.cat || "").indexOf("HÀNG PHI THỰC PHẨM") === 0)) {
       const matched = qTokens.filter((t) => t.length >= 3 && !STOPWORDS_VI.has(t) && entry.nameTokens.includes(t));
       if (matched.length) {
         consider(20, "partial", `Khớp một phần từ khoá trong tên sản phẩm: "${matched.join(", ")}".`);
       }
     }
     return best;
+  }
+
+  // Detects a query that explicitly asks for FOOD - see the foodScoped
+  // comment in scoreProduct() above. Deliberately narrow (leading "đồ ăn"/
+  // "thức ăn"/"chế độ ăn", or the standalone phrases "món ăn"/"thực phẩm"
+  // anywhere) rather than triggering on any bare "ăn" token, since "ăn"
+  // legitimately appears inside real NON-food product names too (e.g. "Bàn
+  // Ăn" - dining table) where suppressing non-food would be wrong.
+  function isFoodScopedQuery(qNorm) {
+    if (!qNorm) return false;
+    return /(^|\s)(do an|thuc an|che do an)\b/.test(qNorm) || /\bmon an\b/.test(qNorm) || /\bthuc pham\b/.test(qNorm);
   }
 
   // Real users prefix searches with a verb ("mua sữa bột", "tìm giày chạy bộ",
@@ -1275,6 +1506,7 @@
     const categories = categoryTargets(qTokens);
     const typeIntent = detectTypeIntent(qNorm);
     const excludeDomesticVn = isImportQuery(qNorm);
+    const foodScoped = isFoodScopedQuery(qNorm);
 
     // Candidate narrowing: union of every index-backed match path in
     // scoreProduct() (all safe supersets — see buildIndex() comment above).
@@ -1316,11 +1548,11 @@
     const mainScoreByIdx = new Map();
     for (const i of scoredIdx) {
       const entry = entries[i];
-      const m = scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, false, categories);
+      const m = scoreProduct(entry, qCaseFoldTokens, qTokens, qNorm, expanded, intents, false, categories, foodScoped);
       if (m) {
         results.push({ product: entry.p, score: m.score, tier: m.tier, note: m.note, popularity: entry.popularity,
                        matchedWords: matchedWordCount(entry, qCaseFoldTokens),
-                       typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry) ? 1 : 0 });
+                       typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry, qNorm) ? 1 : 0 });
         mainScoreByIdx.set(i, m.score);
         if (m.score > bestMainScore) bestMainScore = m.score;
       }
@@ -1355,7 +1587,7 @@
           }
           results.push({ product: entry.p, score: 80, tier: "typo", note: "Khớp qua bước chuẩn hoá & sửa lỗi chính tả (sai lệch tối đa 1 ký tự) với tên sản phẩm — chỉ áp dụng vì từ khoá chính không tìm thấy kết quả nào.", popularity: entry.popularity,
                          matchedWords: matchedWordCount(entry, qCaseFoldTokens),
-                         typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry) ? 1 : 0 });
+                         typeIntentBoost: typeIntent && typeIntentMatches(typeIntent, entry, qNorm) ? 1 : 0 });
         }
       }
     }
@@ -1533,5 +1765,5 @@
     return { confidence, route, routeLabel };
   }
 
-  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, matchedWordCount, isSingleExactMatch, pickYouMightLike, detectTypeIntent, typeIntentMatches, diversifyByBrand, isImportQuery, isDomesticVnBrand, VN_DOMESTIC_BRANDS };
+  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, isPromoGiftTrigger, matchedWordCount, isSingleExactMatch, pickYouMightLike, detectTypeIntent, typeIntentMatches, diversifyByBrand, isImportQuery, isDomesticVnBrand, VN_DOMESTIC_BRANDS, isFoodScopedQuery };
 });

@@ -1,0 +1,236 @@
+{
+  "store": "nsg",
+  "updatedAt": "2026-09-04T14:07:30.804363",
+  "entries": {
+    "NSG-DEMO-0009": {
+      "test_id": "NSG-DEMO-0009",
+      "query": "bếp từ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "NO_MATCH",
+      "note": "cần ưu tiên các loại bếp : bếp nướng than, bếp hồng ngoại",
+      "screenshot": null,
+      "markedAt": "2026-09-04T02:48:22.015Z"
+    },
+    "NSG-DEMO-0010": {
+      "test_id": "NSG-DEMO-0010",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "NO_MATCH",
+      "note": "các \"thức ăn\",\"thực phẩm\" chưa ít đường, dầu calo",
+      "screenshot": null,
+      "markedAt": "2026-09-04T02:49:20.725Z"
+    },
+    "NSG-DEMO-0011": {
+      "test_id": "NSG-DEMO-0011",
+      "query": "chế độ ăn eat clean",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "NO_MATCH",
+      "note": "các \"thực phẩm\",\" thức ăn\", \"fresh\", \"tự nhiên\",\"ít calo\",\"rau\",\"hạt\"",
+      "screenshot": null,
+      "markedAt": "2026-09-04T02:56:36.729Z"
+    },
+    "NSG-DEMO-0012": {
+      "test_id": "NSG-DEMO-0012",
+      "query": "đồ ăn organic",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "NO_MATCH",
+      "note": "cần hiển thị 'thực phẩm,'thức ăn' chứ k phải đồ chơi",
+      "screenshot": null,
+      "markedAt": "2026-09-04T02:57:15.603Z"
+    },
+    "NSG-DEMO-0014": {
+      "test_id": "NSG-DEMO-0014",
+      "query": "nước rửa chuyên dụng bình sữa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "NO_MATCH",
+      "note": "cần ưu tiên các sản phẩm liên quan em bé (hiện tại nước tẩy bồn cầu đang nằm trên nước giặt cho bé)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T02:58:19.273Z"
+    },
+    "NSG-DEMO-0005": {
+      "test_id": "NSG-DEMO-0005",
+      "query": "đồ ăn nhật",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "LOW_MATCH",
+      "note": "hiển thị 'thực phẩm', 'thức ăn' có tên 'nhật','nhật bản', 'xuất xứ nhật'",
+      "screenshot": null,
+      "markedAt": "2026-09-04T03:37:17.296Z"
+    },
+    "NSG-DEMO-0006": {
+      "test_id": "NSG-DEMO-0006",
+      "query": "giỏ quà tết",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "",
+      "match_category": "LOW_MATCH",
+      "note": "các sản phẩm \"quà\",\"đóng gói\",\"lễ\",\"tết\"",
+      "screenshot": null,
+      "markedAt": "2026-09-04T03:51:58.088Z"
+    },
+    "NSG-GEN500-0089": {
+      "test_id": "NSG-GEN500-0089",
+      "query": "đồ chơi trẻ em thông minh",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "hiển thị đồ chơi chứa chữ thông minh lên trước (8936140305472,8936140306400, 8936075214603) sau đó mới tới rubik và các đồ chơi khác",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:17:54.974Z"
+    },
+    "NSG-GEN500-0167": {
+      "test_id": "NSG-GEN500-0167",
+      "query": "trái sầu riêng",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "ưu tiên trái/quả có tên sầu riêng và các sản phẩm làm từ sầu riêng (hiện tại đang hiển thị trái cây sấy lên trước)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:21:53.629Z"
+    },
+    "NSG-GEN500-0361": {
+      "test_id": "NSG-GEN500-0361",
+      "query": "dưa hâu",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "ưu tiên dưa hấu lên trên",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:23:08.931Z"
+    },
+    "NSG-GEN500-0506": {
+      "test_id": "NSG-GEN500-0506",
+      "query": "bình xịt côn trùng jumbo vape không mùi",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "cần đề xuất thêm các sản phẩm xịt muỗi/bình xịt không mùi của hãng khác",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:25:40.071Z"
+    },
+    "NSG-GEN500-0077": {
+      "test_id": "NSG-GEN500-0077",
+      "query": "hộp cơm giữ nhiệt",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "cần hiển thị thêm các hộp thủy tinh & túi giữ nhiệt (8936148094002)/ bộ túi giữ nhiệt (8936148090189)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:35:18.338Z"
+    },
+    "NSG-GEN500-0107": {
+      "test_id": "NSG-GEN500-0107",
+      "query": "vali du lịch",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "cần đề xuất thêm các sản phẩm du lịch khác",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:40:04.843Z"
+    },
+    "NSG-GEN500-0485": {
+      "test_id": "NSG-GEN500-0485",
+      "query": "soba",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "thiếu sản phẩm sốt ớt soba",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:45:56.838Z"
+    },
+    "NSG-GEN500-0092": {
+      "test_id": "NSG-GEN500-0092",
+      "query": "thức ăn dặm cho bé 6 tháng",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "cần hiển thị thức ăn dặm, bột ăn dặm, cho em bé (chứ k phải động vật)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T04:53:56.144Z"
+    },
+    "NSG-GEN500-0294": {
+      "test_id": "NSG-GEN500-0294",
+      "query": "bình nước giữ nhiệt thể thao",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "cần ưu tên các loại bình giữ nhiệt, bình nước (bình xịt, bình nhựa k ưu tiên bằng)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:20:21.830Z"
+    },
+    "NSG-GEN500-0504": {
+      "test_id": "NSG-GEN500-0504",
+      "query": "bánh hotteok",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "cần check lại list sản phẩm",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:22:41.617Z"
+    },
+    "NSG-GEN500-0383": {
+      "test_id": "NSG-GEN500-0383",
+      "query": "khan giấy",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "match_category": "NO_MATCH",
+      "note": "actual đang hiển thị giấm ở top 1",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:24:11.672Z"
+    },
+    "NSG-GEN500-0326": {
+      "test_id": "NSG-GEN500-0326",
+      "query": "nước hoa nam",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "đang hiển thị nước dùng ở đầu",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:34:11.617Z"
+    },
+    "NSG-SEM-0052": {
+      "test_id": "NSG-SEM-0052",
+      "query": "rượu vang đỏ khai vị",
+      "dimension": "semantic_phrase",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "cần ưu tiên rượu vang đỏ hơn (hiện tại top 1,2 là rượu vàng chát, rượu vang yello)",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:38:45.516Z"
+    },
+    "NSG-GEN500-0351": {
+      "test_id": "NSG-GEN500-0351",
+      "query": "sủa tươi",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "search result đang sai",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:42:31.210Z"
+    },
+    "NSG-GEN500-0339": {
+      "test_id": "NSG-GEN500-0339",
+      "query": "bột tẩy lồng máy giặt",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "không tìm thấy nước tẩy lồng máy giặt",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:48:29.092Z"
+    },
+    "NSG-GEN500-0330": {
+      "test_id": "NSG-GEN500-0330",
+      "query": "xịt tạo kiểu tóc",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "cần bổ sung các loại gel vuốt",
+      "screenshot": null,
+      "markedAt": "2026-09-04T06:59:16.661Z"
+    }
+  }
+}

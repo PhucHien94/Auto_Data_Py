@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-09-03T17:06:58.722302",
+  "expected_file": "SmartSearch\\test_data\\json\\batches\\NSG_ExpectedData_generic_regional_foreign_500_20260831.json",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_generic_regional_foreign_500_20260903_163723.json",
+  "asis_cache_file": "SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache.json",
+  "asis_match_threshold_pct": 50,
+  "asis_scenarios_used": 566,
+  "asis_newly_fetched": 0,
+  "total_scenarios": 566,
+  "matched_by_test_id": 566,
+  "matched_by_query": 0,
+  "unmatched_scenarios": 0,
+  "exact_order_count": 3,
+  "exact_order_pct": 0.5,
+  "set_match_count": 3,
+  "set_match_pct": 0.5,
+  "top1_match_count": 81,
+  "top1_match_pct": 14.3,
+  "mismatch_count": 563,
+  "mismatch_pct": 99.5,
+  "zero_result_count": 1,
+  "avg_overlap_pct": 21.6,
+  "avg_top5_overlap_pct": 18.8,
+  "avg_top10_overlap_pct": 20.4,
+  "avg_top20_overlap_pct": 21.5,
+  "breakdown_by_category": {
+    "100_PERCENT_EXACT": 3,
+    "100_PERCENT_SET": 3,
+    "HIGH_MATCH": 34,
+    "PARTIAL_MATCH": 144,
+    "LOW_MATCH": 208,
+    "ZERO_RESULT": 1,
+    "NO_MATCH": 176
+  },
+  "passed_count": 37,
+  "failed_count": 529,
+  "regression_count": 4,
+  "regression_alerts": [
+    {
+      "test_id": "NSG-GEN500-0042",
+      "query": "sữa hạt",
+      "dimension": "generic_vague_intent",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-03T16:36:00.395322"
+    },
+    {
+      "test_id": "NSG-GEN500-0185",
+      "query": "mắm tôm",
+      "dimension": "regional_dialect",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-03T16:36:00.395322"
+    },
+    {
+      "test_id": "NSG-GEN500-0424",
+      "query": "tổ iến",
+      "dimension": "misspelling",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-03T16:36:00.395322"
+    },
+    {
+      "test_id": "NSG-GEN500-0511",
+      "query": "cá hồi",
+      "dimension": "generic_vague_intent",
+      "prev_status": "passed",
+      "current_status": "failed",
+      "kind": "regressed",
+      "match_category": "PARTIAL_MATCH",
+      "prev_last_run_at": "2026-09-03T16:36:00.395322"
+    }
+  ],
+  "pass_fail_state_file": "SmartSearch\\test_data\\compare\\pass_fail_state_nsg.json",
+  "pass_fail_store": "nsg"
+}

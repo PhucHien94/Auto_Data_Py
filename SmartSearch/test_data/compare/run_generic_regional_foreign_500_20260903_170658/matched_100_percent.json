@@ -1,0 +1,272 @@
+{
+  "description": "Các keyword matching 100% search result làm chuẩn",
+  "timestamp": "2026-09-03T17:06:58.722302",
+  "count": 3,
+  "scenarios": [
+    {
+      "test_id": "NSG-GEN500-0318",
+      "query": "yếm ăn cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 1,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 1,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 1,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 1,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 1,
+      "actual_count": 1,
+      "expected_total_before_cap": 1,
+      "actual_total_before_cap": 1,
+      "overlap_count": 1,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8935334000957",
+          "name": "Bộ Muslin Bé Gái Ecobambi Áo Yếm Quần Shorts Size 2 - 6 Tuổi",
+          "price": 235000,
+          "category": "THỜI TRANG / Thời Trang",
+          "tier": "partial",
+          "score": 20,
+          "status": "exact_rank",
+          "actual_rank": 1
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8935334000957",
+          "name": "Bộ Muslin Bé Gái Ecobambi Áo Yếm Quần Shorts Size 2 - 6 Tuổi",
+          "price": 235000,
+          "category": "Áo",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [],
+      "asis_total_before_cap": 0,
+      "asis_cached": true,
+      "actual_latency_ms": 1215,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": "passed",
+      "prev_actual_top_items": [
+        {
+          "sku": "8935334000957",
+          "name": "Bộ Muslin Bé Gái Ecobambi Áo Yếm Quần Shorts Size 2 - 6 Tuổi"
+        }
+      ],
+      "prev_run_at": "2026-09-03T16:36:00.395322",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_generic_regional_foreign_500_20260903_163600",
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-GEN500-0469",
+      "query": "bibimbap",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 1,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 1,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 1,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 1,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 1,
+      "actual_count": 1,
+      "expected_total_before_cap": 1,
+      "actual_total_before_cap": 1,
+      "overlap_count": 1,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900,
+          "category": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900,
+          "category": "Cơm, Cháo, Canh Ăn Liền",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G",
+          "price": 58900
+        }
+      ],
+      "asis_total_before_cap": 1,
+      "asis_cached": true,
+      "actual_latency_ms": 534,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": "passed",
+      "prev_actual_top_items": [
+        {
+          "sku": "8936221044368",
+          "name": "Cơm Tự Chín Omachi Bibimbap Hàn Quốc 192G"
+        }
+      ],
+      "prev_run_at": "2026-09-03T16:36:00.395322",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_generic_regional_foreign_500_20260903_163600",
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-GEN500-0533",
+      "query": "ferrero rocher",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 2,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 2,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 2,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 2,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 2,
+      "actual_count": 2,
+      "expected_total_before_cap": 2,
+      "actual_total_before_cap": 2,
+      "overlap_count": 2,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 2
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500,
+          "category": "Socola",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900,
+          "category": "Socola",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 2
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900
+        }
+      ],
+      "asis_total_before_cap": 2,
+      "asis_cached": true,
+      "actual_latency_ms": 332,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": "passed",
+      "prev_actual_top_items": [
+        {
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G"
+        },
+        {
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G"
+        }
+      ],
+      "prev_run_at": "2026-09-03T16:36:00.395322",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_generic_regional_foreign_500_20260903_163600",
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    }
+  ]
+}

@@ -1,0 +1,1612 @@
+{
+  "description": "Các keyword matching 100% search result làm chuẩn",
+  "timestamp": "2026-09-03T17:07:05.076458",
+  "count": 9,
+  "scenarios": [
+    {
+      "test_id": "NSG-RS-0128",
+      "query": "ferrero rocher",
+      "dimension": "real_search_history",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 2,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 2,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 2,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 2,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 2,
+      "actual_count": 2,
+      "expected_total_before_cap": 2,
+      "actual_total_before_cap": 2,
+      "overlap_count": 2,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 2
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500,
+          "category": "Socola",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900,
+          "category": "Socola",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 2
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "0000080135906",
+          "name": "Socola Ferrero Rocher 5 Viên 62.5G",
+          "price": 83500
+        },
+        {
+          "rank": 2,
+          "sku": "8000500010709",
+          "name": "Socala Ferrero Rocher 3 Viên 37.5G",
+          "price": 44900
+        }
+      ],
+      "asis_total_before_cap": 2,
+      "asis_cached": true,
+      "actual_latency_ms": 343,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-RS-0659",
+      "query": "tili",
+      "dimension": "real_search_history",
+      "route": "keyword",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 5,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 5,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 5,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 5,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 5,
+      "actual_count": 5,
+      "expected_total_before_cap": 5,
+      "actual_total_before_cap": 5,
+      "overlap_count": 5,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8936103390774",
+          "name": "Trà Ngũ Cốc Tili 450G",
+          "price": 108000,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8936103390651",
+          "name": "Hạt Điều Lụa Rang Muối Tili 250G",
+          "price": 98200,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 3
+        },
+        {
+          "rank": 3,
+          "sku": "8936103390750",
+          "name": "Trà Cúc Bạch Tili 50G",
+          "price": 56200,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 5
+        },
+        {
+          "rank": 4,
+          "sku": "8936103390705",
+          "name": "Hạt Dẻ Cười Tili 300G",
+          "price": 164000,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        },
+        {
+          "rank": 5,
+          "sku": "8936103390057",
+          "name": "Hạt Mắc Ca Nguyên Vỏ TiLi 500G",
+          "price": 194200,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 4
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936103390774",
+          "name": "Trà Ngũ Cốc Tili 450G",
+          "price": 111400,
+          "category": "Đồ Uống Khác",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8936103390705",
+          "name": "Hạt Dẻ Cười Tili 300G",
+          "price": 183700,
+          "category": "Hạt Sấy Khô",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 4
+        },
+        {
+          "rank": 3,
+          "sku": "8936103390651",
+          "name": "Hạt Điều Lụa Rang Muối Tili 250G",
+          "price": 110000,
+          "category": "Hạt Sấy Khô",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 4,
+          "sku": "8936103390057",
+          "name": "Hạt Mắc Ca Nguyên Vỏ TiLi 500G",
+          "price": 209000,
+          "category": "Hạt Sấy Khô",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 5
+        },
+        {
+          "rank": 5,
+          "sku": "8936103390750",
+          "name": "Trà Cúc Bạch Tili 50G",
+          "price": 59600,
+          "category": "Trà Sấy Khô",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 3
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8936103390705",
+          "name": "Hạt Dẻ Cười Tili 300G",
+          "price": 183700
+        },
+        {
+          "rank": 2,
+          "sku": "8936103390774",
+          "name": "Trà Ngũ Cốc Tili 450G",
+          "price": 111400
+        },
+        {
+          "rank": 3,
+          "sku": "8936103390057",
+          "name": "Hạt Mắc Ca Nguyên Vỏ TiLi 500G",
+          "price": 209000
+        },
+        {
+          "rank": 4,
+          "sku": "8936103390651",
+          "name": "Hạt Điều Lụa Rang Muối Tili 250G",
+          "price": 110000
+        },
+        {
+          "rank": 5,
+          "sku": "8936103390750",
+          "name": "Trà Cúc Bạch Tili 50G",
+          "price": 59600
+        }
+      ],
+      "asis_total_before_cap": 5,
+      "asis_cached": true,
+      "actual_latency_ms": 241,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0257",
+      "query": "isoup",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": false,
+      "top5_overlap_count": 3,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 3,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 3,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 3,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 3,
+      "actual_count": 3,
+      "expected_total_before_cap": 3,
+      "actual_total_before_cap": 3,
+      "overlap_count": 3,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8936082349251",
+          "name": "Súp Nấm Yến Mạch Ăn Liền Isoup Hộp 24G",
+          "price": 19500,
+          "category": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 3
+        },
+        {
+          "rank": 2,
+          "sku": "8936082349275",
+          "name": "Súp Hải Sản Ăn Liền Isoup Hộp 14G",
+          "price": 19500,
+          "category": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 1
+        },
+        {
+          "rank": 3,
+          "sku": "8936082349268",
+          "name": "Súp Gà Táo Đỏ Ăn Liền Isoup Hộp 12G",
+          "price": 19500,
+          "category": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936082349275",
+          "name": "Súp Hải Sản Ăn Liền Isoup Hộp 14G",
+          "price": 23500,
+          "category": "Cơm, Cháo, Canh Ăn Liền",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "8936082349268",
+          "name": "Súp Gà Táo Đỏ Ăn Liền Isoup Hộp 12G",
+          "price": 23500,
+          "category": "Cơm, Cháo, Canh Ăn Liền",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 3
+        },
+        {
+          "rank": 3,
+          "sku": "8936082349251",
+          "name": "Súp Nấm Yến Mạch Ăn Liền Isoup Hộp 24G",
+          "price": 23500,
+          "category": "Cơm, Cháo, Canh Ăn Liền",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8936082349275",
+          "name": "Súp Hải Sản Ăn Liền Isoup Hộp 14G",
+          "price": 23500
+        },
+        {
+          "rank": 2,
+          "sku": "8936082349268",
+          "name": "Súp Gà Táo Đỏ Ăn Liền Isoup Hộp 12G",
+          "price": 23500
+        },
+        {
+          "rank": 3,
+          "sku": "8936082349251",
+          "name": "Súp Nấm Yến Mạch Ăn Liền Isoup Hộp 24G",
+          "price": 23500
+        },
+        {
+          "rank": 4,
+          "sku": "8936082349602",
+          "name": "Súp Nấm Tuyết Tóc Tiên I.Soup 10G",
+          "price": 23500
+        },
+        {
+          "rank": 5,
+          "sku": "8936082349596",
+          "name": "Súp Cá Hồi Yến Mạch I.Soup 23G",
+          "price": 23500
+        },
+        {
+          "rank": 6,
+          "sku": "8936082342290",
+          "name": "Canh Ăn Liền I.Soup Gà Lá Giang 72G",
+          "price": 47900
+        },
+        {
+          "rank": 7,
+          "sku": "8936082342283",
+          "name": "Canh Ăn Liền I.Soup Măng Chua Nấm Hương 50G",
+          "price": 55900
+        },
+        {
+          "rank": 8,
+          "sku": "8936082342276",
+          "name": "Canh Ăn Liền I.Soup Rau Tập Tàng Nấm Rơm 35G",
+          "price": 39900
+        },
+        {
+          "rank": 9,
+          "sku": "8936082342122",
+          "name": "Canh Chua Ăn Liền Chay I.Soup NFC Gói 5 Viên 10G",
+          "price": 39900
+        },
+        {
+          "rank": 10,
+          "sku": "8936082342191",
+          "name": "Canh Ăn Liền Riêu Tôm I.Soup NFC Gói 6 Viên 7G",
+          "price": 66900
+        },
+        {
+          "rank": 11,
+          "sku": "8936082342139",
+          "name": "Canh Ăn Liền Súp Nấm Chay I-Soup NFC Gói 5 Viên 10G",
+          "price": 39900
+        },
+        {
+          "rank": 12,
+          "sku": "8936082342085",
+          "name": "Canh Ăn Liền Cải Xoong Nấu Thịt I-Soup NFC 6 Viên 7G",
+          "price": 67000
+        },
+        {
+          "rank": 13,
+          "sku": "8936082342269",
+          "name": "Canh Ăn Liền Mây Ngũ Sắc I.Soup NFC Gói 5 Viên 7G",
+          "price": 57900
+        },
+        {
+          "rank": 14,
+          "sku": "8936082342092",
+          "name": "Canh Ăn Liền Kim Chi Thịt Gà I.Soup NFC Gói 6 Viên 11G",
+          "price": 47900
+        },
+        {
+          "rank": 15,
+          "sku": "8936082342108",
+          "name": "Canh Ăn Liền Rong Biển Thịt Gà I.Soup NFC Gói 6 Viên 7G",
+          "price": 47900
+        },
+        {
+          "rank": 16,
+          "sku": "8936082342221",
+          "name": "Canh Ăn Liền Rau Củ Nấm Chay I.Soup NFC Gói 5 Viên 7G",
+          "price": 57900
+        },
+        {
+          "rank": 17,
+          "sku": "8936082342184",
+          "name": "Canh Ăn Liền Rau Ngót Nấu Thịt I.Soup NFC Gói 6 Viên 9G",
+          "price": 66900
+        }
+      ],
+      "asis_total_before_cap": 17,
+      "asis_cached": true,
+      "actual_latency_ms": 268,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0486",
+      "query": "ritz",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": false,
+      "top5_overlap_count": 3,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 3,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 3,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 3,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 3,
+      "actual_count": 3,
+      "expected_total_before_cap": 3,
+      "actual_total_before_cap": 3,
+      "overlap_count": 3,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "4893049120008",
+          "name": "Bánh Quy Kem Phô Mai Ritz 118G",
+          "price": 20900,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "4547894640296",
+          "name": "Bánh Quy Ritz Vị Kem Phô Mai Hộp 106G",
+          "price": 32900,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 1
+        },
+        {
+          "rank": 3,
+          "sku": "4547894640029",
+          "name": "Bánh Quy Mặn Ritz 247G (Hộp 3 Gói)",
+          "price": 53900,
+          "category": "THỰC PHẨM KHÔ / Bánh Kẹo",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 3
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "4547894640296",
+          "name": "Bánh Quy Ritz Vị Kem Phô Mai Hộp 106G",
+          "price": 32900,
+          "category": "Bánh Quy",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "4893049120008",
+          "name": "Bánh Quy Kem Phô Mai Ritz 118G",
+          "price": 20900,
+          "category": "Bánh Quy",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 1
+        },
+        {
+          "rank": 3,
+          "sku": "4547894640029",
+          "name": "Bánh Quy Mặn Ritz 247G (Hộp 3 Gói)",
+          "price": 53900,
+          "category": "Bánh Quy",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 3
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "4547894640296",
+          "name": "Bánh Quy Ritz Vị Kem Phô Mai Hộp 106G",
+          "price": 32900
+        },
+        {
+          "rank": 2,
+          "sku": "4547894640029",
+          "name": "Bánh Quy Mặn Ritz 247G (Hộp 3 Gói)",
+          "price": 53900
+        },
+        {
+          "rank": 3,
+          "sku": "4893049120008",
+          "name": "Bánh Quy Kem Phô Mai Ritz 118G",
+          "price": 20900
+        }
+      ],
+      "asis_total_before_cap": 3,
+      "asis_cached": true,
+      "actual_latency_ms": 256,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0495",
+      "query": "twinings",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": false,
+      "top5_overlap_count": 2,
+      "top5_overlap_pct": 40.0,
+      "top10_overlap_count": 7,
+      "top10_overlap_pct": 70.0,
+      "top20_overlap_count": 15,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 15,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 15,
+      "actual_count": 15,
+      "expected_total_before_cap": 15,
+      "actual_total_before_cap": 15,
+      "overlap_count": 15,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "0070177118518",
+          "name": "Trà Twinings Pure Camomile Hộp 25 Gói 1G",
+          "price": 183900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "0070177029630",
+          "name": "Trà Lá Lớn Twinings Of London English Breakfast Tea Hộp 100G",
+          "price": 189900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 13
+        },
+        {
+          "rank": 3,
+          "sku": "0070177055639",
+          "name": "Trà Twinings Peach Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 6
+        },
+        {
+          "rank": 4,
+          "sku": "0070177175146",
+          "name": "Trà Twinings Orangery Of Lady Grey Hộp 100G",
+          "price": 406900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 8
+        },
+        {
+          "rank": 5,
+          "sku": "0070177174965",
+          "name": "Trà Twinings Earl Grey Hộp 10 Gói 2G",
+          "price": 69900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 4
+        },
+        {
+          "rank": 6,
+          "sku": "0070177025953",
+          "name": "Trà Twinings Four Red Fruits Tea Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 15
+        },
+        {
+          "rank": 7,
+          "sku": "0070177010768",
+          "name": "Trà Twinings Earl Grey Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 3
+        },
+        {
+          "rank": 8,
+          "sku": "0070177118525",
+          "name": "Trà Twinings Pure Peppermint Hộp 25 Gói 2G",
+          "price": 183900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 1
+        },
+        {
+          "rank": 9,
+          "sku": "0070177029623",
+          "name": "Trà Lá Lớn Twinings Of London Earl Grey Tea Hộp 100G",
+          "price": 189900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 12
+        },
+        {
+          "rank": 10,
+          "sku": "0070177120993",
+          "name": "Trà Twinings Chanh Dây Xoài Cam Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 9
+        },
+        {
+          "rank": 11,
+          "sku": "0070177118495",
+          "name": "Trà Twinings Strawberry Mango Hộp 25 Gói 2G",
+          "price": 183900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 7
+        },
+        {
+          "rank": 12,
+          "sku": "0070177118563",
+          "name": "Trà Túi Lọc Twinings Vị Chanh Và Gừng Hộp 25 Gói x 1.5G",
+          "price": 183900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 10
+        },
+        {
+          "rank": 13,
+          "sku": "0070177174958",
+          "name": "Trà Twinings English Breakfast Hộp 10 Gói 2G",
+          "price": 69900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 5
+        },
+        {
+          "rank": 14,
+          "sku": "0070177010775",
+          "name": "Trà Túi Lọc Twinings Breakfast Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 11
+        },
+        {
+          "rank": 15,
+          "sku": "0070177173265",
+          "name": "Trà Twinings Green Tea Jasmine Hộp 10 Gói 1.8G",
+          "price": 69900,
+          "category": "THỰC PHẨM KHÔ / Trà, Cà Phê",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 14
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "0070177118525",
+          "name": "Trà Twinings Pure Peppermint Hộp 25 Gói 2G",
+          "price": 183900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 8
+        },
+        {
+          "rank": 2,
+          "sku": "0070177118518",
+          "name": "Trà Twinings Pure Camomile Hộp 25 Gói 1G",
+          "price": 183900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 1
+        },
+        {
+          "rank": 3,
+          "sku": "0070177010768",
+          "name": "Trà Twinings Earl Grey Hộp 25 Gói 2G",
+          "price": 139500,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 7
+        },
+        {
+          "rank": 4,
+          "sku": "0070177174965",
+          "name": "Trà Twinings Earl Grey Hộp 10 Gói 2G",
+          "price": 59500,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 5
+        },
+        {
+          "rank": 5,
+          "sku": "0070177174958",
+          "name": "Trà Twinings English Breakfast Hộp 10 Gói 2G",
+          "price": 59500,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 13
+        },
+        {
+          "rank": 6,
+          "sku": "0070177055639",
+          "name": "Trà Twinings Peach Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 3
+        },
+        {
+          "rank": 7,
+          "sku": "0070177118495",
+          "name": "Trà Twinings Strawberry Mango Hộp 25 Gói 2G",
+          "price": 183900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 11
+        },
+        {
+          "rank": 8,
+          "sku": "0070177175146",
+          "name": "Trà Twinings Orangery Of Lady Grey Hộp 100G",
+          "price": 406900,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 4
+        },
+        {
+          "rank": 9,
+          "sku": "0070177120993",
+          "name": "Trà Twinings Chanh Dây Xoài Cam Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 10
+        },
+        {
+          "rank": 10,
+          "sku": "0070177118563",
+          "name": "Trà Túi Lọc Twinings Vị Chanh Và Gừng Hộp 25 Gói x 1.5G",
+          "price": 183900,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 12
+        },
+        {
+          "rank": 11,
+          "sku": "0070177010775",
+          "name": "Trà Túi Lọc Twinings Breakfast Hộp 25 Gói 2G",
+          "price": 139500,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 14
+        },
+        {
+          "rank": 12,
+          "sku": "0070177029623",
+          "name": "Trà Lá Lớn Twinings Of London Earl Grey Tea Hộp 100G",
+          "price": 119000,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 9
+        },
+        {
+          "rank": 13,
+          "sku": "0070177029630",
+          "name": "Trà Lá Lớn Twinings Of London English Breakfast Tea Hộp 100G",
+          "price": 119000,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 14,
+          "sku": "0070177173265",
+          "name": "Trà Twinings Green Tea Jasmine Hộp 10 Gói 1.8G",
+          "price": 69900,
+          "category": "Trà Túi Lọc",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 15
+        },
+        {
+          "rank": 15,
+          "sku": "0070177025953",
+          "name": "Trà Twinings Four Red Fruits Tea Hộp 25 Gói 2G",
+          "price": 163900,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 6
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "0070177055639",
+          "name": "Trà Twinings Peach Hộp 25 Gói 2G",
+          "price": 163900
+        },
+        {
+          "rank": 2,
+          "sku": "0070177118518",
+          "name": "Trà Twinings Pure Camomile Hộp 25 Gói 1G",
+          "price": 183900
+        },
+        {
+          "rank": 3,
+          "sku": "0070177118525",
+          "name": "Trà Twinings Pure Peppermint Hộp 25 Gói 2G",
+          "price": 183900
+        },
+        {
+          "rank": 4,
+          "sku": "0070177174965",
+          "name": "Trà Twinings Earl Grey Hộp 10 Gói 2G",
+          "price": 59500
+        },
+        {
+          "rank": 5,
+          "sku": "0070177174958",
+          "name": "Trà Twinings English Breakfast Hộp 10 Gói 2G",
+          "price": 59500
+        },
+        {
+          "rank": 6,
+          "sku": "0070177175146",
+          "name": "Trà Twinings Orangery Of Lady Grey Hộp 100G",
+          "price": 406900
+        },
+        {
+          "rank": 7,
+          "sku": "0070177118495",
+          "name": "Trà Twinings Strawberry Mango Hộp 25 Gói 2G",
+          "price": 183900
+        },
+        {
+          "rank": 8,
+          "sku": "0070177010768",
+          "name": "Trà Twinings Earl Grey Hộp 25 Gói 2G",
+          "price": 139500
+        },
+        {
+          "rank": 9,
+          "sku": "0070177120993",
+          "name": "Trà Twinings Chanh Dây Xoài Cam Hộp 25 Gói 2G",
+          "price": 163900
+        },
+        {
+          "rank": 10,
+          "sku": "0070177029630",
+          "name": "Trà Lá Lớn Twinings Of London English Breakfast Tea Hộp 100G",
+          "price": 119000
+        },
+        {
+          "rank": 11,
+          "sku": "0070177029623",
+          "name": "Trà Lá Lớn Twinings Of London Earl Grey Tea Hộp 100G",
+          "price": 119000
+        },
+        {
+          "rank": 12,
+          "sku": "0070177010775",
+          "name": "Trà Túi Lọc Twinings Breakfast Hộp 25 Gói 2G",
+          "price": 139500
+        },
+        {
+          "rank": 13,
+          "sku": "0070177118563",
+          "name": "Trà Túi Lọc Twinings Vị Chanh Và Gừng Hộp 25 Gói x 1.5G",
+          "price": 183900
+        },
+        {
+          "rank": 14,
+          "sku": "0070177173265",
+          "name": "Trà Twinings Green Tea Jasmine Hộp 10 Gói 1.8G",
+          "price": 69900
+        },
+        {
+          "rank": 15,
+          "sku": "0070177025953",
+          "name": "Trà Twinings Four Red Fruits Tea Hộp 25 Gói 2G",
+          "price": 163900
+        }
+      ],
+      "asis_total_before_cap": 15,
+      "asis_cached": true,
+      "actual_latency_ms": 329,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0553",
+      "query": "th hilo",
+      "dimension": "history_verification",
+      "route": "keyword_ai",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": false,
+      "top5_overlap_count": 2,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 2,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 2,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 2,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 2,
+      "actual_count": 2,
+      "expected_total_before_cap": 2,
+      "actual_total_before_cap": 2,
+      "overlap_count": 2,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "8935217407156",
+          "name": "Lốc 4 Hộp Sữa Tươi Tiệt Trùng TH true Milk Hilo Ít Lactose Vị Tự Nhiên 180ml",
+          "price": 44900,
+          "category": "THỰC PHẨM KHÔ / Chế Phẩm Từ Sữa",
+          "tier": "partial",
+          "score": 20,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "18935217407153",
+          "name": "Thùng 48 Hộp Sữa Tươi Tiệt Trùng TH true MILK HILO Vị Tự Nhiên 180ml",
+          "price": 538800,
+          "category": "THỰC PHẨM KHÔ / Chế Phẩm Từ Sữa",
+          "tier": "partial",
+          "score": 20,
+          "status": "rank_shifted",
+          "actual_rank": 1
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "18935217407153",
+          "name": "Thùng 48 Hộp Sữa Tươi Tiệt Trùng TH true MILK HILO Vị Tự Nhiên 180ml",
+          "price": 538800,
+          "category": "Sữa Không Đường",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "8935217407156",
+          "name": "Lốc 4 Hộp Sữa Tươi Tiệt Trùng TH true Milk Hilo Ít Lactose Vị Tự Nhiên 180ml",
+          "price": 44900,
+          "category": "SPECIAL CATEGORIES",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "18935217407153",
+          "name": "Thùng 48 Hộp Sữa Tươi Tiệt Trùng TH true MILK HILO Vị Tự Nhiên 180ml",
+          "price": 538800
+        },
+        {
+          "rank": 2,
+          "sku": "8935217407156",
+          "name": "Lốc 4 Hộp Sữa Tươi Tiệt Trùng TH true Milk Hilo Ít Lactose Vị Tự Nhiên 180ml",
+          "price": 44900
+        }
+      ],
+      "asis_total_before_cap": 2,
+      "asis_cached": true,
+      "actual_latency_ms": 237,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0667",
+      "query": "hồ lô",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 4,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 4,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 4,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 4,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 4,
+      "actual_count": 4,
+      "expected_total_before_cap": 4,
+      "actual_total_before_cap": 4,
+      "overlap_count": 4,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "2292110000003",
+          "name": "Bí Hồ Lô Giống Mỹ 1.2kg",
+          "price": 27480,
+          "category": "THỰC PHẨM TƯƠI SỐNG / Rau Củ",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8935058959111",
+          "name": "Xúc Xích Hồ Lô CP Gói 500G",
+          "price": 69900,
+          "category": "THỰC PHẨM KHÔ / Thực Phẩm Đông Lạnh",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 2
+        },
+        {
+          "rank": 3,
+          "sku": "0400316720003",
+          "name": "Lạp Xưởng Hồ Lô Phô Mai Yorihada 80G",
+          "price": 25000,
+          "category": "BỮA ĂN NGON / Món Ăn Nhanh",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 3
+        },
+        {
+          "rank": 4,
+          "sku": "8936013233642",
+          "name": "Cá Viên Hồ Lô SG Food 330G",
+          "price": 81000,
+          "category": "THỰC PHẨM KHÔ / Thực Phẩm Đông Lạnh",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 4
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "2292110000003",
+          "name": "Bí Hồ Lô Giống Mỹ 1.2kg",
+          "price": 23880,
+          "category": "Rau Củ",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        },
+        {
+          "rank": 2,
+          "sku": "8935058959111",
+          "name": "Xúc Xích Hồ Lô CP Gói 500G",
+          "price": 115000,
+          "category": "Xúc Xích",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 2
+        },
+        {
+          "rank": 3,
+          "sku": "0400316720003",
+          "name": "Lạp Xưởng Hồ Lô Phô Mai Yorihada 80G",
+          "price": 25000,
+          "category": "Món Ăn Nhanh",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 3
+        },
+        {
+          "rank": 4,
+          "sku": "8936013233642",
+          "name": "Cá Viên Hồ Lô SG Food 330G",
+          "price": 81000,
+          "category": "Cá Viên, Bò Viên",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 4
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "2292110000003",
+          "name": "Bí Hồ Lô Giống Mỹ 1.2kg",
+          "price": 23880
+        },
+        {
+          "rank": 2,
+          "sku": "8935058959111",
+          "name": "Xúc Xích Hồ Lô CP Gói 500G",
+          "price": 115000
+        },
+        {
+          "rank": 3,
+          "sku": "0400316720003",
+          "name": "Lạp Xưởng Hồ Lô Phô Mai Yorihada 80G",
+          "price": 25000
+        },
+        {
+          "rank": 4,
+          "sku": "8936013233642",
+          "name": "Cá Viên Hồ Lô SG Food 330G",
+          "price": 81000
+        },
+        {
+          "rank": 5,
+          "sku": "8809652580227",
+          "name": "Toner Pad Numbuzin Hỗ Trợ Thu Nhỏ Lỗ Chân Lông No.4 Pore Zero Peeled Egg 70 Miếng",
+          "price": 485000
+        }
+      ],
+      "asis_total_before_cap": 5,
+      "asis_cached": true,
+      "actual_latency_ms": 258,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0867",
+      "query": "satori",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_SET",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": true,
+      "top1_match": false,
+      "top5_overlap_count": 4,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 4,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 4,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 4,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 4,
+      "actual_count": 4,
+      "expected_total_before_cap": 4,
+      "actual_total_before_cap": 4,
+      "overlap_count": 4,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "18938512632022",
+          "name": "Thùng 24 Chai Nước Tinh Khiết Satori 500ml/Chai",
+          "price": 122400,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 4
+        },
+        {
+          "rank": 2,
+          "sku": "8938512632032",
+          "name": "Nước Tinh Khiết Satori 1.5L",
+          "price": 10900,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 1
+        },
+        {
+          "rank": 3,
+          "sku": "8938512632025",
+          "name": "Nước Tinh Khiết Satori 500ML",
+          "price": 5100,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 2
+        },
+        {
+          "rank": 4,
+          "sku": "8938512632018",
+          "name": "Nước Tinh Khiết Satori Chai 350ML",
+          "price": 4400,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "rank_shifted",
+          "actual_rank": 3
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8938512632032",
+          "name": "Nước Tinh Khiết Satori 1.5L",
+          "price": 10900,
+          "category": "SPECIAL CATEGORIES",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 2
+        },
+        {
+          "rank": 2,
+          "sku": "8938512632025",
+          "name": "Nước Tinh Khiết Satori 500ML",
+          "price": 5100,
+          "category": "SPECIAL CATEGORIES",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 3
+        },
+        {
+          "rank": 3,
+          "sku": "8938512632018",
+          "name": "Nước Tinh Khiết Satori Chai 350ML",
+          "price": 4400,
+          "category": "Virtual cat",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 4
+        },
+        {
+          "rank": 4,
+          "sku": "18938512632022",
+          "name": "Thùng 24 Chai Nước Tinh Khiết Satori 500ml/Chai",
+          "price": 122400,
+          "category": "Nước Suối",
+          "tier": "",
+          "score": null,
+          "status": "rank_shifted",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8938512632025",
+          "name": "Nước Tinh Khiết Satori 500ML",
+          "price": 5100
+        },
+        {
+          "rank": 2,
+          "sku": "8938512632032",
+          "name": "Nước Tinh Khiết Satori 1.5L",
+          "price": 10900
+        },
+        {
+          "rank": 3,
+          "sku": "8938512632018",
+          "name": "Nước Tinh Khiết Satori Chai 350ML",
+          "price": 4400
+        },
+        {
+          "rank": 4,
+          "sku": "18938512632022",
+          "name": "Thùng 24 Chai Nước Tinh Khiết Satori 500ml/Chai",
+          "price": 122400
+        }
+      ],
+      "asis_total_before_cap": 4,
+      "asis_cached": true,
+      "actual_latency_ms": 291,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    },
+    {
+      "test_id": "NSG-HIST-0878",
+      "query": "evian",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "100_PERCENT_EXACT",
+      "is_100_percent_exact_order": true,
+      "is_100_percent_set_match": true,
+      "top1_match": true,
+      "top5_overlap_count": 1,
+      "top5_overlap_pct": 100.0,
+      "top10_overlap_count": 1,
+      "top10_overlap_pct": 100.0,
+      "top20_overlap_count": 1,
+      "top20_overlap_pct": 100.0,
+      "top30_overlap_count": 1,
+      "top30_overlap_pct": 100.0,
+      "expected_count": 1,
+      "actual_count": 1,
+      "expected_total_before_cap": 1,
+      "actual_total_before_cap": 1,
+      "overlap_count": 1,
+      "overlap_pct": 100.0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "expected_items": [
+        {
+          "rank": 1,
+          "sku": "3068320055008",
+          "name": "Nước Khoáng Thiên Nhiên Evian Chai 500ML",
+          "price": 30000,
+          "category": "THỰC PHẨM KHÔ / Đồ Uống",
+          "tier": "exact",
+          "score": 100,
+          "status": "exact_rank",
+          "actual_rank": 1
+        }
+      ],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "3068320055008",
+          "name": "Nước Khoáng Thiên Nhiên Evian Chai 500ML",
+          "price": 30000,
+          "category": "Nước Suối",
+          "tier": "",
+          "score": null,
+          "status": "exact_rank",
+          "expected_rank": 1
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "3068320055008",
+          "name": "Nước Khoáng Thiên Nhiên Evian Chai 500ML",
+          "price": 30000
+        }
+      ],
+      "asis_total_before_cap": 1,
+      "asis_cached": true,
+      "actual_latency_ms": 326,
+      "pass_fail_manual_override": false,
+      "pass_fail_status": "passed",
+      "prev_pass_fail_status": null,
+      "prev_actual_top_items": [],
+      "prev_run_at": null,
+      "prev_compare_dir": null,
+      "bug_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null
+    }
+  ]
+}

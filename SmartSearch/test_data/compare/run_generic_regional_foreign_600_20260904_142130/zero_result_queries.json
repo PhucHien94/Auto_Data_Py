@@ -1,0 +1,97 @@
+{
+  "description": "Cac query co ZERO_RESULT (actual tra ve 0 ket qua) trich tu run_generic_regional_foreign_600_20260904_142130",
+  "source_report": "run_generic_regional_foreign_600_20260904_142130/compare_report.html",
+  "count": 9,
+  "scenarios": [
+    {
+      "test_id": "NSG-GEN500-0006",
+      "query": "thực đơn low carb",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 240,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0098",
+      "query": "đồ ăn vặt văn phòng",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 1953,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0163",
+      "query": "chả giò",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 247,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0236",
+      "query": "chè bắp",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 127,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0357",
+      "query": "bỉm tả",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 63,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0397",
+      "query": "tả giấy",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 335,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0453",
+      "query": "dish soap",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "expected_count": 3,
+      "actual_count": 0,
+      "expected_total_before_cap": 3,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-GEN500-0507",
+      "query": "tía tô",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "expected_count": 4,
+      "actual_count": 0,
+      "expected_total_before_cap": 4,
+      "actual_total_before_cap": 0
+    },
+    {
+      "test_id": "NSG-SEM-0015",
+      "query": "phụ kiện dắt chó đi dạo",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "expected_count": 30,
+      "actual_count": 0,
+      "expected_total_before_cap": 492,
+      "actual_total_before_cap": 0
+    }
+  ]
+}

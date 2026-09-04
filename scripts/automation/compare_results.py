@@ -60,6 +60,163 @@ ASIS_CACHE_PATH = Path("SmartSearch/test_data/json/actual/AsIs_NSG_cache.json")
 # system (production, costs money) for scenarios that already match well.
 ASIS_MATCH_THRESHOLD_PCT = 50
 
+# Pass/Fail auto-classification + cross-run persistence (user, 2026-09-03,
+# revised same day into a 2-bucket + bidirectional-override model): auto
+# Passed = 100_PERCENT_EXACT/100_PERCENT_SET/HIGH_MATCH (>=70%); auto Failed
+# = PARTIAL_MATCH/LOW_MATCH/ZERO_RESULT/NO_MATCH. NO_MATCH was originally its
+# own "needs_review" bucket (never auto-verdicted) per an earlier round of
+# this same request, but the user's later full flow redesign only names 2
+# buckets and asks for a manual toggle in BOTH directions (Passed->Failed via
+# a click, Failed->Passed via a click) - with that 2-way override now
+# available, NO_MATCH folding into the auto-Failed default (like every other
+# 0%-ish category) and being correctable by hand like any other Failed case
+# is the simpler, more consistent reading. Revisit if that's not what was
+# meant - see [[project-compare-pass-fail-tracking]].
+STATUS_PASS_CATEGORIES = {"100_PERCENT_EXACT", "100_PERCENT_SET", "HIGH_MATCH"}
+# Cross-run state lives here (one file per store) - NOT inside any one run's
+# output folder (those are never touched/deleted, see next_free_dir()) so
+# the NEXT run, in a brand-new folder, can still see what the LAST run found.
+PASS_FAIL_STATE_DIR = Path("SmartSearch/test_data/compare")
+
+
+def compute_pass_fail_status(match_category):
+    return "passed" if match_category in STATUS_PASS_CATEGORIES else "failed"
+
+
+# Demo-file Pass/Fail rule (user, 2026-09-04): a file with NO Expected data
+# anywhere (demo_asis_vs_actual - see the pf_enabled comment below) used to
+# skip Pass/Fail entirely ("n/a"), since there was nothing to score against.
+# The user now wants Pass/Fail computed against As-Is<->Actual INSTEAD in
+# that one case, using the exact same category ladder/thresholds as the
+# normal Expected<->Actual path (100% exact order / 100% set / Top-20 >=70%
+# match = Passed; everything else, INCLUDING "never got any As-Is data at
+# all" = Failed - "còn lại đánh failed"). Only used when pf_enabled is False;
+# a file that DOES have Expected data keeps scoring against Expected, never
+# against As-Is (As-Is is reference-only there, per compare_scenario()).
+def compute_asis_vs_actual_match_category(asis_items, actual_items, asis_cached):
+    if not asis_cached:
+        return "NO_ASIS_DATA"
+    asis_skus = [str(x["sku"]) for x in (asis_items or []) if x.get("sku")]
+    act_skus = [str(x["sku"]) for x in (actual_items or []) if x.get("sku")]
+    asis_top20 = asis_skus[:20]
+    act_top20 = act_skus[:20]
+    matched_exact_order = (asis_top20 == act_top20) and len(asis_top20) > 0
+    matched_set = (set(asis_top20) == set(act_top20)) and len(set(asis_top20)) > 0
+    if matched_exact_order:
+        return "100_PERCENT_EXACT"
+    if matched_set:
+        return "100_PERCENT_SET"
+    if len(act_top20) == 0 and len(asis_top20) > 0:
+        return "ZERO_RESULT"
+    overlap = len(set(asis_top20) & set(act_top20))
+    overlap_pct = round(overlap / max(1, len(asis_top20)) * 100, 1) if asis_top20 else 0
+    if overlap_pct >= 70:
+        return "HIGH_MATCH"
+    if overlap_pct >= 30:
+        return "PARTIAL_MATCH"
+    if overlap_pct > 0:
+        return "LOW_MATCH"
+    return "NO_MATCH"
+
+
+def pass_fail_state_path(store):
+    return PASS_FAIL_STATE_DIR / f"pass_fail_state_{store}.json"
+
+
+def load_pass_fail_state(store):
+    path = pass_fail_state_path(store)
+    if not path.exists():
+        return {"store": store, "updatedAt": None, "entries": {}}
+    with open(path, "r", encoding="utf-8") as f:
+        state = json.load(f)
+    state.setdefault("entries", {})
+    return state
+
+
+def save_pass_fail_state(state, store, path=None):
+    path = path or pass_fail_state_path(store)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    state["updatedAt"] = datetime.now().isoformat()
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+
+
+# Manual override (user, 2026-09-03, revised same day to BOTH directions):
+# auto-classify is a DEFAULT, not a verdict QA can't overrule - Passed can be
+# clicked down to Failed, and Failed can be clicked up to Passed. The
+# report's per-card toggle icon marks a keyword client-side (localStorage)
+# and exports a small JSON ({{store, overrides: {{test_id: "passed"|"failed"|
+# null}}}}); this function merges that export into the persisted
+# pass_fail_state so the override survives forever after, across every
+# future run - not just the browser session it was clicked in.
+# `overrides[test_id] = null` (or any falsy value) clears a previously-
+# applied override, reverting to whatever auto-classify says.
+def apply_manual_overrides(overrides_path, store=None):
+    with open(overrides_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+    store = store or payload.get("store") or "nsg"
+    overrides = payload.get("overrides") or {}
+    state = load_pass_fail_state(store)
+    applied, cleared = 0, 0
+    for test_id, value in overrides.items():
+        if value in ("passed", "failed"):
+            entry = state["entries"].setdefault(test_id, {"query": None, "status": None, "match_category": None, "last_run_at": None})
+            entry["manual_override"] = value
+            applied += 1
+        elif test_id in state["entries"]:
+            if state["entries"][test_id].pop("manual_override", None):
+                cleared += 1
+    save_pass_fail_state(state, store)
+    return store, applied, cleared
+
+
+# Bug notes / engine-improvement notes (user, 2026-09-03): a Failed keyword
+# splits into 2 causes QA marks by hand - "Failed là bug" (mark bug, note
+# what Expected/the real UI should show) vs "Failed do search engine của tao
+# bị sai" (mark for engine improvement, only meaningful in Expected<->Actual
+# mode - see is_engine_note_allowed()). Persisted the SAME way as pass_fail
+# overrides: an export button in the report + `--apply-bug-notes`/
+# `--apply-engine-notes` merges it in, PERMANENTLY, so a freshly regenerated
+# report shows every note baked in without relying on browser localStorage.
+def _notes_state_path(kind, store):
+    return PASS_FAIL_STATE_DIR / f"{kind}_notes_{store}.json"
+
+
+def load_notes_state(kind, store):
+    path = _notes_state_path(kind, store)
+    if not path.exists():
+        return {"store": store, "updatedAt": None, "entries": {}}
+    with open(path, "r", encoding="utf-8") as f:
+        state = json.load(f)
+    state.setdefault("entries", {})
+    return state
+
+
+def save_notes_state(kind, state, store):
+    path = _notes_state_path(kind, store)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    state["updatedAt"] = datetime.now().isoformat()
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+
+
+def apply_notes(kind, notes_path, store=None):
+    with open(notes_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+    store = store or payload.get("store") or "nsg"
+    notes = payload.get("notes") or {}
+    state = load_notes_state(kind, store)
+    applied, cleared = 0, 0
+    for test_id, note in notes.items():
+        if note:
+            state["entries"][test_id] = note
+            applied += 1
+        elif test_id in state["entries"]:
+            del state["entries"][test_id]
+            cleared += 1
+    save_notes_state(kind, state, store)
+    return store, applied, cleared
+
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -483,6 +640,61 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     stats_json = json.dumps(stats, ensure_ascii=False)
     report_id_json = json.dumps(report_id or Path(out_file).parent.name)
     has_asis_json = json.dumps(bool(stats.get("asis_cache_file")))
+    pf_store_json = json.dumps(stats.get("pass_fail_store") or "nsg")
+
+    # Regression banner (user, 2026-09-03, revised same day to both
+    # directions): a separate, always-visible section (not just a filter tab)
+    # for every keyword whose Pass/Fail status FLIPPED vs the last compare
+    # run (per the persisted pass_fail_state_<store>.json) - passed->failed
+    # ("regressed") or failed->passed ("improved"), see the classification
+    # loop's `regression_kind`. Only rendered at all when there's something
+    # to report; clicking a row jumps to that scenario's full card (which
+    # itself carries the 3-way prev-actual/current-actual/as-is detail).
+    regression_alerts = stats.get("regression_alerts") or []
+    if regression_alerts:
+        rows_html = "\n".join(
+            f'<div class="regression-row" onclick="jumpToScenario(\'{html.escape(str(r.get("test_id") or ""))}\')">'
+            f'<span class="rr-query">"{html.escape(r["query"])}"</span>'
+            f'<span class="meta-tag" style="background:transparent;border:1px solid #f3c6c6;">Dim: {html.escape(str(r.get("dimension") or ""))}</span>'
+            f'<span class="rr-arrow">{"⚠️" if r.get("kind") == "regressed" else "✅"} {html.escape(str(r["prev_status"]))} &rarr; {html.escape(r["current_status"])} ({html.escape(r["match_category"])})</span>'
+            f'</div>'
+            for r in regression_alerts
+        )
+        n_regressed = sum(1 for r in regression_alerts if r.get("kind") == "regressed")
+        n_improved = sum(1 for r in regression_alerts if r.get("kind") == "improved")
+        regression_banner_html = f"""
+  <div class="regression-banner" id="regressionBanner" hidden>
+    <h2>⚠️ Regression - {len(regression_alerts)} keyword đổi trạng thái Pass/Fail so với lần compare trước ({n_regressed} regressed, {n_improved} cải thiện)</h2>
+    <p>So với trạng thái đã lưu ở {html.escape(stats.get("pass_fail_state_file", ""))} - bấm vào một dòng để nhảy tới scenario đó bên dưới (mỗi scenario ở đó có thêm phần so sánh Actual lần trước / Actual lần này / As-Is).</p>
+    <div class="regression-list">{rows_html}</div>
+  </div>"""
+    else:
+        regression_banner_html = ""
+
+    # Response-changed banner (user, 2026-09-04): "nếu response có thay đổi
+    # so với lần trước thì nhớ count và liệt kê" - broader than the Regression
+    # banner above (which only fires on a Pass/Fail bucket flip). Same layout/
+    # pattern, separate color (blue, not red) so the two are visually distinct
+    # - a regressed keyword is ALSO usually response-changed, so it can appear
+    # in both lists at once, which is correct (they answer different questions).
+    response_change_alerts = stats.get("response_change_alerts") or []
+    if response_change_alerts:
+        rc_rows_html = "\n".join(
+            f'<div class="regression-row" onclick="jumpToScenario(\'{html.escape(str(r.get("test_id") or ""))}\')">'
+            f'<span class="rr-query">"{html.escape(r["query"])}"</span>'
+            f'<span class="meta-tag" style="background:transparent;border:1px solid #c6d6f3;">Dim: {html.escape(str(r.get("dimension") or ""))}</span>'
+            f'<span class="rr-arrow">🔄 Actual đổi ({html.escape(r["match_category"])}, {html.escape(r["pass_fail_status"])})</span>'
+            f'</div>'
+            for r in response_change_alerts
+        )
+        response_change_banner_html = f"""
+  <div class="regression-banner" id="responseChangedBanner" style="border-color:#93c5fd;background:#eff6ff;" hidden>
+    <h2 style="color:#1d4ed8;">🔄 Response Changed - {len(response_change_alerts)} keyword có Actual đổi so với lần compare trước</h2>
+    <p>Actual (hệ thống đang test) trả về danh sách sản phẩm KHÁC so với lần chạy trước - kể cả khi Pass/Fail không đổi bucket (vd vẫn Failed nhưng đổi sản phẩm/thứ hạng). So với {html.escape(stats.get("pass_fail_state_file", ""))} - bấm vào một dòng để nhảy tới scenario đó bên dưới.</p>
+    <div class="regression-list">{rc_rows_html}</div>
+  </div>"""
+    else:
+        response_change_banner_html = ""
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -723,6 +935,47 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   .badge-partial {{ background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow); }}
   .badge-low {{ background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }}
   .badge-zero {{ background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }}
+  .badge-passed {{ background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }}
+  .badge-failed {{ background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }}
+  .badge-review {{ background: rgba(100,116,139,0.14); color: #46536b; border: 1px solid #8a94a6; }}
+  .badge-regression {{
+    background: #7f1d1d; color: #fff; border: 1px solid #7f1d1d;
+    animation: regression-pulse 1.8s ease-in-out infinite;
+  }}
+  @keyframes regression-pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.72; }} }}
+
+  /* Regression alert banner - user request 2026-09-03: keywords that were
+     "passed" (per the previous compare run's persisted verdict) but fell
+     into partial/low/zero/no-match THIS run get called out here, separate
+     from the normal scenario list, so a regression can't get lost scrolling
+     through hundreds of otherwise-fine rows. */
+  .regression-banner {{
+    background: #fef2f2;
+    border: 1px solid #dc2626;
+    border-left: 5px solid #dc2626;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }}
+  .regression-banner h2 {{ font-size: 16px; color: #7f1d1d; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }}
+  .regression-banner p {{ font-size: 13px; color: #7f1d1d; margin-bottom: 12px; }}
+  .regression-list {{ display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }}
+  .regression-row {{
+    background: #fff;
+    border: 1px solid #f3c6c6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    cursor: pointer;
+  }}
+  .regression-row:hover {{ border-color: #dc2626; }}
+  .regression-row .rr-query {{ font-weight: 600; color: var(--text-primary); }}
+  .regression-row .rr-arrow {{ color: #7f1d1d; font-family: monospace; font-size: 12px; }}
 
   .scenario-body {{
     padding: 20px;
@@ -863,6 +1116,21 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     color: var(--red);
   }}
 
+  .pf-override-btn {{
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }}
+  .pf-override-btn:hover {{ border-color: var(--green); color: var(--green); }}
+  .pf-override-btn.marked {{ background: var(--green-bg); border-color: var(--green); color: var(--green); }}
+
   .bug-panel {{
     display: none;
     margin-top: 14px;
@@ -954,53 +1222,19 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     </div>
   </div>
 
-  <!-- KPI Cards -->
-  <div class="kpi-grid">
-    <div class="kpi-card purple" data-tooltip="[Mục 1] Số scenario mà tập hợp SKU Actual khớp 100% với tập Expected (chứa đủ tất cả SKU, không quan tâm thứ tự).">
-      <div class="kpi-title">⭐ 100% SET MATCH <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["set_match_count"]}</div>
-      <div class="kpi-sub">{stats["set_match_pct"]}% tổng scenarios</div>
-    </div>
-    <div class="kpi-card green" data-tooltip="[Mục 2] Số scenario khớp hoàn hảo 100% cả tập SKU VÀ đúng tuyệt đối từng vị trí thứ hạng (Rank 1, Rank 2...).">
-      <div class="kpi-title">🎯 100% EXACT ORDER <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["exact_order_count"]}</div>
-      <div class="kpi-sub">{stats["exact_order_pct"]}% khớp tuyệt đối thứ tự</div>
-    </div>
-    <div class="kpi-card" data-tooltip="[Mục 3] Tỷ lệ sản phẩm ở vị trí số 1 (Top-1) của Actual trùng khớp hoàn toàn với Expected Top-1.">
-      <div class="kpi-title">🥇 TOP-1 MATCH (P@1) <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["top1_match_count"]}</div>
-      <div class="kpi-sub">{stats["top1_match_pct"]}% top-1 trùng khớp</div>
-    </div>
-    <div class="kpi-card yellow" data-tooltip="[Mục 4] Tỷ lệ phần trăm trùng khớp trung bình giữa 5 sản phẩm đầu tiên của Actual so với Expected.">
-      <div class="kpi-title">📈 ĐỘ PHỦ TOP-5 <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["avg_top5_overlap_pct"]}%</div>
-      <div class="kpi-sub">Avg Top-5 Overlap</div>
-    </div>
-    <div class="kpi-card blue" data-tooltip="[Mục 5] Tỷ lệ phần trăm trùng khớp trung bình giữa 20 sản phẩm đầu tiên của Actual so với Expected.">
-      <div class="kpi-title">🌐 ĐỘ PHỦ TOP-20 <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["avg_top20_overlap_pct"]}%</div>
-      <div class="kpi-sub">Avg Top-20 Overlap</div>
-    </div>
-    <div class="kpi-card red" data-tooltip="[Mục 6] Tổng số scenario có sự sai lệch (về vị trí, thiếu SKU hoặc có SKU lạ xuất hiện) cần xem xét.">
-      <div class="kpi-title">⚠️ MISMATCHED / DIFF <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["mismatch_count"]}</div>
-      <div class="kpi-sub">{stats["mismatch_pct"]}% có độ lệch</div>
-    </div>
-    <div class="kpi-card red" data-tooltip="[Mục 7] Số scenario mà API Actual trả về 0 kết quả (rỗng) trong khi Expected có kết quả.">
-      <div class="kpi-title">🚫 ZERO RESULT <span class="info-icon">ⓘ</span></div>
-      <div class="kpi-value">{stats["zero_result_count"]}</div>
-      <div class="kpi-sub">Không có kết quả trả về</div>
-    </div>
-  </div>
+  {regression_banner_html}
+  {response_change_banner_html}
 
-  <!-- Comparison mode + sort (moved up from the bottom pagination bar so it's
-       visible without scrolling - user request 2026-08-31) -->
+  <!-- Comparison mode + sort - moved to the very top (user request 2026-09-03:
+       "move dropdown so sánh lên đầu"). Default is As-Is<->Actual (also per
+       request) - the KPI cards below and every scenario badge/sort/filter
+       are computed from whichever pair is selected here. -->
   <div class="toolbar" style="margin-bottom: 12px;">
-    <div class="sort-control" data-tooltip="Chọn 2 nguồn dữ liệu dùng để tính %matching, badge và sắp xếp cho từng scenario bên dưới. Panel As-Is/Actual LUÔN hiển thị; panel Expected ẩn/hiện riêng theo checkbox bên cạnh - lựa chọn ở đây chỉ đổi cách tính điểm matching, không tự ẩn/hiện panel nào.">
+    <div class="sort-control" data-tooltip="Chọn 2 nguồn dữ liệu dùng để tính TOÀN BỘ 7 chỉ số KPI bên dưới, %matching, badge và sắp xếp cho từng scenario. Panel As-Is/Actual LUÔN hiển thị; panel Expected ẩn/hiện riêng theo checkbox bên cạnh - lựa chọn ở đây chỉ đổi cách tính điểm matching, không tự ẩn/hiện panel nào.">
       <label for="modeSelect">So sánh:</label>
       <select id="modeSelect" aria-label="Chọn 2 nguồn dữ liệu để so sánh">
-        <option value="expected_actual" selected>📋 Expected ↔ 🚀 Actual</option>
-        <option value="asis_actual">🕰️ As-Is ↔ 🚀 Actual</option>
+        <option value="asis_actual" selected>🕰️ As-Is ↔ 🚀 Actual</option>
+        <option value="expected_actual">📋 Expected ↔ 🚀 Actual</option>
       </select>
     </div>
     <div class="sort-control" data-tooltip="Sắp xếp theo tỷ lệ SKU trùng khớp trong Top-20, tính theo chế độ so sánh đang chọn ở trên. 0% là lệch hoàn toàn; tỷ lệ càng cao thì matching càng tốt.">
@@ -1019,6 +1253,41 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     </div>
   </div>
 
+  <!-- KPI Cards - values are recomputed live in JS (updateAllStats()) from
+       whichever comparisonMode is selected above; the stats-dict values
+       below are just the server-computed Expected-vs-Actual numbers used
+       as the very first paint before JS runs. -->
+  <div class="kpi-grid">
+    <!-- 100% SET MATCH / 100% EXACT ORDER / TOP-1 MATCH cards removed from
+         the UI per user request (2026-09-04) - same treatment as the
+         PASSED/FAILED cards below: filter tabs (100% Exact/100% Set) and
+         underlying stats/JS are untouched, this only hides these 3 summary
+         cards from the grid. -->
+    <div class="kpi-card yellow" data-tooltip="[Mục 4] Tỷ lệ phần trăm trùng khớp trung bình giữa 5 sản phẩm đầu tiên của Actual so với nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">📈 ĐỘ PHỦ TOP-5 <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-top5-value">{stats["avg_top5_overlap_pct"]}%</div>
+      <div class="kpi-sub">Avg Top-5 Overlap</div>
+    </div>
+    <div class="kpi-card blue" data-tooltip="[Mục 5] Tỷ lệ phần trăm trùng khớp trung bình giữa 20 sản phẩm đầu tiên của Actual so với nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">🌐 ĐỘ PHỦ TOP-20 <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-top20-value">{stats["avg_top20_overlap_pct"]}%</div>
+      <div class="kpi-sub">Avg Top-20 Overlap</div>
+    </div>
+    <div class="kpi-card red" data-tooltip="[Mục 6] Tổng số scenario có sự sai lệch (về vị trí, thiếu SKU hoặc có SKU lạ xuất hiện) cần xem xét, theo nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">⚠️ MISMATCHED / DIFF <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-mismatch-value">{stats["mismatch_count"]}</div>
+      <div class="kpi-sub" id="kpi-mismatch-sub">{stats["mismatch_pct"]}% có độ lệch</div>
+    </div>
+    <div class="kpi-card red" data-tooltip="[Mục 7] Số scenario mà nguồn thứ 2 (Actual) trả về 0 kết quả (rỗng) trong khi nguồn thứ 1 đang chọn có kết quả.">
+      <div class="kpi-title">🚫 ZERO RESULT <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-zero-value">{stats["zero_result_count"]}</div>
+      <div class="kpi-sub">Không có kết quả trả về</div>
+    </div>
+    <!-- PASSED/FAILED KPI cards removed from the UI per user request
+         (2026-09-04) - the Pass/Fail filter tabs/export buttons below are
+         untouched, this only hides the 2 summary cards from the grid. -->
+  </div>
+
   <!-- Toolbar -->
   <div class="toolbar">
     <div class="search-box">
@@ -1033,10 +1302,15 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
       <button class="tab-btn" data-filter="PARTIAL_MATCH" data-tooltip="[Mục 12] Lọc các query có độ trùng khớp từ 30% đến 69%">🟡 Khớp 1 phần (30-69%)</button>
       <button class="tab-btn" data-filter="LOW_MATCH" data-tooltip="[Mục 13] Lọc các query có độ lệch lớn (độ trùng dưới 30%)">🔴 Khớp thấp / Lệch</button>
       <button class="tab-btn" data-filter="ZERO_RESULT" data-tooltip="[Mục 14] Lọc các query bị lỗi trả về 0 kết quả">🚫 Zero Result (<span id="cnt-zero">{stats["zero_result_count"]}</span>)</button>
+      <button class="tab-btn" data-filter="PF_REGRESSION" style="border-color:#dc2626;color:#dc2626;" data-tooltip="Keyword mà trạng thái Pass/Fail ĐỔI so với lần compare trước (passed->failed hoặc failed->passed) - tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo), không đổi theo dropdown So sánh. Bấm để xổ ra danh sách.">⚠️ Regression ({stats["regression_count"]})</button>
+      <button class="tab-btn" data-filter="PF_RESPONSE_CHANGED" style="border-color:#2563eb;color:#2563eb;" data-tooltip="Keyword mà Actual trả về danh sách sản phẩm KHÁC so với lần compare trước - kể cả khi Pass/Fail không đổi bucket. Bấm để xổ ra danh sách.">🔄 Response Changed ({stats["response_changed_count"]})</button>
+      <button class="tab-btn" data-filter="PF_PASSED" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">✅ Passed ({stats["passed_count"]})</button>
+      <button class="tab-btn" data-filter="PF_FAILED" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">❌ Failed ({stats["failed_count"]})</button>
     </div>
     <div class="export-bug-group">
-      <button id="exportBugHtmlBtn" type="button" class="export-bug-btn" disabled data-tooltip="Xuất ra 1 file HTML liệt kê toàn bộ keyword đã đánh dấu Bug, có ảnh đính kèm nhúng sẵn (xem trực tiếp trong trình duyệt) và nội dung Expected cần sửa.">📤 Xuất HTML (<span id="bugCountHtml">0</span>)</button>
-      <button id="exportBugJsonBtn" type="button" class="export-bug-btn" disabled data-tooltip="Xuất ra 1 file JSON liệt kê toàn bộ keyword đã đánh dấu Bug - KHÔNG kèm ảnh (file gọn hơn, phù hợp để đưa vào script/BA đọc), chỉ có test_id/query/dimension/route/ghi chú/thời gian.">🗂️ Xuất JSON (<span id="bugCountJson">0</span>)</button>
+      <button id="exportBugJsonBtn" type="button" class="export-bug-btn" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Bug' (UI/data thật sai) ra 1 file JSON - kèm ảnh + ghi chú Expected đúng phải là gì. Truyền lại qua --apply-bug-notes ở lần compare sau để lưu vĩnh viễn.">🐞 Xuất Bug (<span id="bugCountJson">0</span>)</button>
+      <button id="exportEngineJsonBtn" type="button" class="export-bug-btn" style="border-color:var(--yellow);color:var(--yellow);" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Cải thiện Engine' (search_engine.js sai, chỉ có ở chế độ Expected↔Actual) ra 1 file JSON. Truyền lại qua --apply-engine-notes ở lần compare sau để lưu vĩnh viễn.">⚙️ Xuất cải thiện Engine (<span id="engineCountJson">0</span>)</button>
+      <button id="exportOverrideBtn" type="button" class="export-bug-btn" style="border-color:var(--green);color:var(--green);" disabled data-tooltip="Xuất các keyword vừa bấm 'Đánh giá lại' ra 1 file JSON - truyền file này qua --apply-overrides ở lần chạy compare_results.py tiếp theo để LƯU VĨNH VIỄN đánh giá tay (không mất khi đóng báo cáo này).">✔️ Xuất Pass/Fail (<span id="overrideCount">0</span>)</button>
     </div>
   </div>
 
@@ -1067,7 +1341,7 @@ let sortOrder = 'default';
 // Which 2 panels drive %matching/badge/sort/filter for every scenario card.
 // Both panels of EITHER mode - and the 3rd, non-driving one - stay visible;
 // this only changes which pair's overlap is scored (user request 2026-08-31).
-let comparisonMode = 'expected_actual'; // or 'asis_actual'
+let comparisonMode = 'asis_actual'; // or 'expected_actual' - default per 2026-09-03 request
 // Expected panel is hidden by default (checkbox opt-in) - user request
 // 2026-08-31: "thêm option ẩn expected panel đi, nếu chọn hiển thị thì mới
 // hiển thị lên." As-Is and Actual always show regardless of this toggle.
@@ -1145,21 +1419,52 @@ function getModeMetrics(s) {{
   }};
 }}
 
-function updateFilterTabCounts() {{
-  // Assumes s.__m has already been (re)computed for every scenario by the
-  // caller (renderScenarios(), right before this) for the active mode.
-  let all = scenarios.length, exact = 0, set = 0, zero = 0;
+function updateAllStats() {{
+  // Recomputes BOTH the filter-tab counts AND the 7 KPI cards live from
+  // s.__m (assumes it was already (re)computed for every scenario by the
+  // caller, renderScenarios(), right before this, for the active
+  // comparisonMode) - user request 2026-09-03: "sau khi chọn so sánh từ
+  // dropdown thì 7 mục so sánh sẽ load data tương ứng". Single pass over
+  // scenarios for both.
+  const total = scenarios.length;
+  let exact = 0, set = 0, zero = 0, top1 = 0, mismatch = 0;
+  let sumTop5 = 0, sumTop20 = 0, countedForAvg = 0;
   scenarios.forEach(s => {{
     const m = s.__m || getModeMetrics(s);
     if (m.match_category === '100_PERCENT_EXACT') exact++;
     if (m.match_category === '100_PERCENT_SET') set++;
     if (m.match_category === 'ZERO_RESULT') zero++;
+    if (m.top1_match) top1++;
+    if (m.match_category !== '100_PERCENT_EXACT' && m.match_category !== '100_PERCENT_SET') mismatch++;
+    // NO_ASIS_DATA scenarios have no real overlap to average in (they'd drag
+    // the average down as fake 0%s) - excluded from the Top-5/Top-20 avg,
+    // still counted everywhere else (they're genuinely not a match).
+    if (m.match_category !== 'NO_ASIS_DATA') {{
+      sumTop5 += Number(m.top5_overlap_pct || 0);
+      sumTop20 += Number(m.top20_overlap_pct || 0);
+      countedForAvg++;
+    }}
   }});
+  const pct = (n) => total ? Math.round((n / total) * 1000) / 10 : 0;
+  const avg = (sum) => countedForAvg ? Math.round((sum / countedForAvg) * 10) / 10 : 0;
   const setText = (id, v) => {{ const el = document.getElementById(id); if (el) el.textContent = v; }};
-  setText('cnt-all', all);
+
+  setText('cnt-all', total);
   setText('cnt-exact', exact);
   setText('cnt-set', set);
   setText('cnt-zero', zero);
+
+  setText('kpi-set-value', set);
+  setText('kpi-set-sub', pct(set) + '% tổng scenarios');
+  setText('kpi-exact-value', exact);
+  setText('kpi-exact-sub', pct(exact) + '% khớp tuyệt đối thứ tự');
+  setText('kpi-top1-value', top1);
+  setText('kpi-top1-sub', pct(top1) + '% top-1 trùng khớp');
+  setText('kpi-top5-value', avg(sumTop5) + '%');
+  setText('kpi-top20-value', avg(sumTop20) + '%');
+  setText('kpi-mismatch-value', mismatch);
+  setText('kpi-mismatch-sub', pct(mismatch) + '% có độ lệch');
+  setText('kpi-zero-value', zero);
 }}
 
 // --- Bug tracking (per-keyword "cần fix Expected" marker) ---------------
@@ -1169,10 +1474,71 @@ function updateFilterTabCounts() {{
 // later in the same browser.
 const REPORT_ID = {report_id_json};
 const BUG_STORAGE_KEY = 'smartsearch_bugs::' + REPORT_ID;
+const PF_STORE_NAME = {pf_store_json};
 
+// --- Pass/Fail manual override, BOTH directions (user 2026-09-03) ---------
+// Same localStorage-then-export pattern as bugStore below: a click here only
+// takes effect PERMANENTLY (future compare runs too) once exported and fed
+// back via `--apply-overrides` - see apply_manual_overrides() in the Python
+// script. Namespaced by REPORT_ID like bugStore, for the same reason.
+const PF_OVERRIDE_STORAGE_KEY = 'smartsearch_pf_override::' + REPORT_ID;
+let overrideStore = {{}}; // test_id -> 'passed'|'failed' (marked by hand, not yet exported/applied)
+
+function loadOverrideStore() {{
+  try {{
+    const raw = localStorage.getItem(PF_OVERRIDE_STORAGE_KEY);
+    overrideStore = raw ? JSON.parse(raw) : {{}};
+  }} catch (e) {{
+    overrideStore = {{}};
+  }}
+}}
+function persistOverrideStore() {{
+  try {{ localStorage.setItem(PF_OVERRIDE_STORAGE_KEY, JSON.stringify(overrideStore)); }} catch (e) {{}}
+}}
+function toggleOverride(testId, targetStatus) {{
+  if (overrideStore[testId]) delete overrideStore[testId]; // already pending -> un-mark
+  else overrideStore[testId] = targetStatus;
+  persistOverrideStore();
+  updateOverrideExportCount();
+  renderScenarios();
+}}
+function updateOverrideExportCount() {{
+  const count = Object.keys(overrideStore).length;
+  const btn = document.getElementById('exportOverrideBtn');
+  const countEl = document.getElementById('overrideCount');
+  if (countEl) countEl.textContent = count;
+  if (btn) btn.disabled = count === 0;
+}}
+function exportOverrides() {{
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(), overrides: overrideStore }};
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'pass_fail_overrides/pass_fail_overrides_' + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}}
+// A keyword the SERVER already recorded as manually-overridden (from a prior
+// --apply-overrides) already carries the override in s.pass_fail_status - no
+// client bookkeeping needed for those. overrideStore only tracks NEW,
+// not-yet-exported clicks made in this browser this session, and wins over
+// the server value if both exist (the user is actively changing their mind).
+function effectiveStatus(s) {{ return overrideStore[s.test_id] || s.pass_fail_status; }}
+function isEffectivelyPassed(s) {{ return effectiveStatus(s) === 'passed'; }}
+loadOverrideStore();
+
+// Bug marking + Engine-improvement marking (user, 2026-09-03): a Failed
+// keyword splits into 2 causes QA marks by hand - same UI shape (screenshot +
+// "Expected đúng phải là" text), different meaning and different export/
+// --apply-* target on the Python side (bug_notes_<store>.json vs
+// engine_notes_<store>.json - see apply_notes() there). Kept as 2 separate
+// localStorage-backed stores (not generalized into one kind-parameterized
+// set of functions) so the existing, already-verified bug-marking code path
+// stays untouched - engine-improvement duplicates the same small set of
+// functions under an Engine-suffixed name.
+const ENGINE_STORAGE_KEY = 'smartsearch_engine_notes::' + REPORT_ID;
 let bugStore = {{}};       // persisted (localStorage): test_id -> {{query, dimension, route, note, screenshot, markedAt}}
 let bugDraft = {{}};       // in-memory, unsaved edits while a panel is open: test_id -> {{note, screenshot}}
 let openBugPanels = {{}};  // test_id -> bool
+let engineStore = {{}};
+let engineDraft = {{}};
+let openEnginePanels = {{}};
 
 function loadBugStore() {{
   try {{
@@ -1193,14 +1559,34 @@ function persistBugStore() {{
   }}
 }}
 
-function updateExportButtonCount() {{
-  const count = Object.keys(bugStore).length;
-  for (const suffix of ['Html', 'Json']) {{
-    const btn = document.getElementById('exportBug' + suffix + 'Btn');
-    const countEl = document.getElementById('bugCount' + suffix);
-    if (countEl) countEl.textContent = count;
-    if (btn) btn.disabled = count === 0;
+function loadEngineStore() {{
+  try {{
+    const raw = localStorage.getItem(ENGINE_STORAGE_KEY);
+    engineStore = raw ? JSON.parse(raw) : {{}};
+  }} catch (e) {{
+    engineStore = {{}};
   }}
+}}
+
+function persistEngineStore() {{
+  try {{ localStorage.setItem(ENGINE_STORAGE_KEY, JSON.stringify(engineStore)); }}
+  catch (e) {{
+    alert('Không lưu được vào bộ nhớ trình duyệt. Ghi chú vẫn giữ tạm trong phiên xem này - hãy xuất ngay để không bị mất. Lỗi: ' + e.message);
+  }}
+}}
+
+function updateExportButtonCount() {{
+  const bugCount = Object.keys(bugStore).length;
+  const bugBtn = document.getElementById('exportBugJsonBtn');
+  const bugCountEl = document.getElementById('bugCountJson');
+  if (bugCountEl) bugCountEl.textContent = bugCount;
+  if (bugBtn) bugBtn.disabled = bugCount === 0;
+
+  const engineCount = Object.keys(engineStore).length;
+  const engineBtn = document.getElementById('exportEngineJsonBtn');
+  const engineCountEl = document.getElementById('engineCountJson');
+  if (engineCountEl) engineCountEl.textContent = engineCount;
+  if (engineBtn) engineBtn.disabled = engineCount === 0;
 }}
 
 function downloadBlob(content, mimeType, filename) {{
@@ -1215,43 +1601,54 @@ function downloadBlob(content, mimeType, filename) {{
   URL.revokeObjectURL(url);
 }}
 
-function bugExportFilename(ext) {{
+function _kindRefs(kind) {{
+  return kind === 'engine'
+    ? {{ store: engineStore, draft: engineDraft, open: openEnginePanels, persist: persistEngineStore }}
+    : {{ store: bugStore, draft: bugDraft, open: openBugPanels, persist: persistBugStore }};
+}}
+
+function noteExportFilename(kind, ext) {{
   // A browser tab (even a local file:// page) has NO way to force-save to an
   // arbitrary absolute filesystem path - that's a hard security boundary in
   // every browser, not something any web page can bypass. The one thing a
   // plain download CAN do is a subfolder relative to the browser's own
   // configured Downloads directory (Chrome/Edge honor a "sub/dir/name.ext"
-  // path in the `download` attribute) - so exports land in
-  // "<your Downloads folder>/bug_report/...". To get them landing directly
-  // in SmartSearch/test_data/bug_report/ in the repo, either point your
-  // browser's default download location at that folder once (Settings ->
-  // Downloads), or hand the downloaded file to Claude to move it over.
-  return 'bug_report/bug_report_' + REPORT_ID.replace(/[^a-zA-Z0-9_-]+/g, '_')
+  // path in the `download` attribute). To get exports landing directly in
+  // the repo, either point your browser's default download location at the
+  // matching SmartSearch/test_data/... folder once (Settings -> Downloads),
+  // or hand the downloaded file to Claude to move it over.
+  const folder = kind === 'engine' ? 'engine_improvement_notes' : 'bug_report';
+  return folder + '/' + folder + '_' + REPORT_ID.replace(/[^a-zA-Z0-9_-]+/g, '_')
     + '_' + new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-') + '.' + ext;
 }}
 
-function syncDraftNoteFromDOM(testId) {{
-  const ta = document.getElementById('bugtext-' + testId);
-  if (!bugDraft[testId]) bugDraft[testId] = {{ note: '', screenshot: null }};
-  if (ta) bugDraft[testId].note = ta.value;
+function syncDraftNoteFromDOM(kind, testId) {{
+  const r = _kindRefs(kind);
+  const ta = document.getElementById(kind + 'text-' + testId);
+  if (!r.draft[testId]) r.draft[testId] = {{ note: '', screenshot: null }};
+  if (ta) r.draft[testId].note = ta.value;
 }}
 
-function toggleBugPanel(testId) {{
-  const opening = !openBugPanels[testId];
-  openBugPanels[testId] = opening;
-  if (opening && !bugDraft[testId]) {{
-    const existing = bugStore[testId];
-    bugDraft[testId] = {{
+function toggleNotePanel(kind, testId) {{
+  const r = _kindRefs(kind);
+  const opening = !r.open[testId];
+  r.open[testId] = opening;
+  if (opening && !r.draft[testId]) {{
+    const existing = r.store[testId];
+    r.draft[testId] = {{
       note: existing ? existing.note : '',
       screenshot: existing ? existing.screenshot : null,
     }};
   }}
   renderScenarios();
-  const panel = document.getElementById('bugpanel-' + testId);
+  const panel = document.getElementById(kind + 'panel-' + testId);
   if (panel && panel.classList.contains('open')) {{
     panel.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
   }}
 }}
+// Backward-compat name, kept in case any inline onclick still references the
+// old bug-only name.
+function toggleBugPanel(testId) {{ toggleNotePanel('bug', testId); }}
 
 function resizeImageDataUrl(dataUrl, maxWidth, callback) {{
   const img = new Image();
@@ -1278,40 +1675,41 @@ function readImageFile(file, callback) {{
   reader.readAsDataURL(file);
 }}
 
-function setDraftScreenshot(testId, dataUrl) {{
-  syncDraftNoteFromDOM(testId);
-  bugDraft[testId].screenshot = dataUrl;
+function setDraftScreenshot(kind, testId, dataUrl) {{
+  syncDraftNoteFromDOM(kind, testId);
+  _kindRefs(kind).draft[testId].screenshot = dataUrl;
   renderScenarios();
 }}
 
-function handleBugPaste(event, testId) {{
+function handleNotePaste(kind, event, testId) {{
   event.preventDefault();
   const items = (event.clipboardData || window.clipboardData || {{}}).items || [];
   for (const item of items) {{
     if (item.type && item.type.indexOf('image/') === 0) {{
-      readImageFile(item.getAsFile(), (dataUrl) => setDraftScreenshot(testId, dataUrl));
+      readImageFile(item.getAsFile(), (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
       break;
     }}
   }}
 }}
 
-function handleBugDrop(event, testId) {{
+function handleNoteDrop(kind, event, testId) {{
   event.preventDefault();
   event.currentTarget.classList.remove('dragover');
   const files = (event.dataTransfer && event.dataTransfer.files) || [];
-  if (files.length > 0) readImageFile(files[0], (dataUrl) => setDraftScreenshot(testId, dataUrl));
+  if (files.length > 0) readImageFile(files[0], (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
 }}
 
-function handleBugFile(event, testId) {{
+function handleNoteFile(kind, event, testId) {{
   const file = event.target.files && event.target.files[0];
-  if (file) readImageFile(file, (dataUrl) => setDraftScreenshot(testId, dataUrl));
+  if (file) readImageFile(file, (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
 }}
 
-function saveBug(testId) {{
-  syncDraftNoteFromDOM(testId);
-  const draft = bugDraft[testId] || {{}};
+function saveNote(kind, testId) {{
+  syncDraftNoteFromDOM(kind, testId);
+  const r = _kindRefs(kind);
+  const draft = r.draft[testId] || {{}};
   const sc = scenarios.find(x => x.test_id === testId) || {{}};
-  bugStore[testId] = {{
+  r.store[testId] = {{
     test_id: testId,
     query: sc.query || '',
     dimension: sc.dimension || '',
@@ -1321,17 +1719,19 @@ function saveBug(testId) {{
     screenshot: draft.screenshot || null,
     markedAt: new Date().toISOString(),
   }};
-  persistBugStore();
+  r.persist();
   updateExportButtonCount();
-  openBugPanels[testId] = false;
+  r.open[testId] = false;
   renderScenarios();
 }}
 
-function removeBug(testId) {{
-  if (!confirm('Bỏ đánh dấu Bug cho keyword này?')) return;
-  delete bugStore[testId];
-  delete bugDraft[testId];
-  persistBugStore();
+function removeNote(kind, testId) {{
+  const label = kind === 'engine' ? 'ghi chú cải thiện Engine' : 'đánh dấu Bug';
+  if (!confirm('Bỏ ' + label + ' cho keyword này?')) return;
+  const r = _kindRefs(kind);
+  delete r.store[testId];
+  delete r.draft[testId];
+  r.persist();
   updateExportButtonCount();
   renderScenarios();
 }}
@@ -1342,65 +1742,140 @@ function escapeHtmlText(str) {{
   return div.innerHTML;
 }}
 
-function exportAllBugsJson() {{
-  const entries = Object.values(bugStore).sort((a, b) => (a.markedAt || '').localeCompare(b.markedAt || ''));
+// Single JSON export per kind (user, 2026-09-03: "nút export sẽ có 3 nút" -
+// bug / engine-improvement / pass-fail, no separate HTML variant anymore).
+// Shape matches what apply_notes() on the Python side expects:
+// {{store, notes: {{test_id: {{...}} }}}} - screenshot included inline (base64)
+// so this ONE file is both readable-ish and fully re-importable, no separate
+// HTML-with-images export needed.
+function exportNotesJson(kind) {{
+  const r = _kindRefs(kind);
+  const entries = Object.values(r.store).sort((a, b) => (a.markedAt || '').localeCompare(b.markedAt || ''));
   if (entries.length === 0) {{
-    alert('Chưa có bug nào được ghi nhận.');
+    alert('Chưa có ghi chú nào được ghi nhận.');
     return;
   }}
-  // No screenshot field on purpose - keeps the file small/text-only for
-  // scripts or BA to read; the HTML export is the one that keeps images.
-  const payload = {{
-    exportedAt: new Date().toISOString(),
-    reportId: REPORT_ID,
-    totalBugs: entries.length,
-    bugs: entries.map(b => ({{
-      test_id: b.test_id,
-      query: b.query,
-      dimension: b.dimension,
-      route: b.route,
-      match_category: b.match_category,
-      note: b.note,
-      has_screenshot: !!b.screenshot,
-      markedAt: b.markedAt,
-    }})),
-  }};
-  downloadBlob(JSON.stringify(payload, null, 2), 'application/json', bugExportFilename('json'));
-}}
-
-function exportAllBugsHtml() {{
-  const entries = Object.values(bugStore).sort((a, b) => (a.markedAt || '').localeCompare(b.markedAt || ''));
-  if (entries.length === 0) {{
-    alert('Chưa có bug nào được ghi nhận.');
-    return;
-  }}
-  const rows = entries.map((b, i) => `
-    <div style="border:1px solid #dde1ea;border-radius:10px;padding:16px;margin-bottom:16px;background:#ffffff;">
-      <div style="font-weight:700;color:#14181f;font-size:15px;margin-bottom:6px;">#${{i + 1}} - ${{escapeHtmlText(b.test_id)}} - "${{escapeHtmlText(b.query)}}"</div>
-      <div style="font-size:12px;color:#565f70;margin-bottom:10px;">Dimension: ${{escapeHtmlText(b.dimension)}} | Route: ${{escapeHtmlText(b.route)}} | Ghi nhận lúc: ${{new Date(b.markedAt).toLocaleString()}}</div>
-      ${{b.screenshot ? `<img src="${{b.screenshot}}" style="max-width:600px;max-height:400px;border-radius:8px;display:block;margin-bottom:10px;border:1px solid #dde1ea;">` : '<div style="color:#7b8494;font-size:12px;margin-bottom:10px;">(Không có ảnh đính kèm)</div>'}}
-      <div style="background:#f6f7fb;border:1px solid #dde1ea;border-radius:6px;padding:10px;font-size:13px;color:#14181f;white-space:pre-wrap;"><b>Expected đúng phải là:</b><br>${{escapeHtmlText(b.note) || '(chưa ghi chú)'}}</div>
-    </div>
-  `).join('');
-
-  const doc = `<!DOCTYPE html>
-<html lang="vi"><head><meta charset="UTF-8"><title>Danh sách Bug - Smart Search Compare</title>
-<style>
-  body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background:#f6f7fb; color:#14181f; padding:24px; }}
-  .wrap {{ max-width: 900px; margin: 0 auto; }}
-  h1 {{ font-size: 20px; margin-bottom: 4px; }}
-  .sub {{ color:#565f70; font-size:13px; margin-bottom:20px; }}
-</style></head>
-<body><div class="wrap">
-  <h1>🐞 Danh sách Bug đã ghi nhận - Smart Search Compare</h1>
-  <div class="sub">Xuất lúc ${{new Date().toLocaleString()}} - Tổng số: ${{entries.length}} bug - Nguồn: ${{REPORT_ID}}</div>
-  ${{rows}}
-</div></body></html>`;
-
-  downloadBlob(doc, 'text/html', bugExportFilename('html'));
+  const notes = {{}};
+  for (const e of entries) notes[e.test_id] = e;
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(), reportId: REPORT_ID, notes }};
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json', noteExportFilename(kind, 'json'));
 }}
 
 loadBugStore();
+loadEngineStore();
+// Seed from whatever the SERVER already baked in (a prior --apply-bug-notes/
+// --apply-engine-notes run) - user 2026-09-03 point 4: reopening a freshly
+// regenerated report must show bug/engine notes without depending on this
+// browser's localStorage. localStorage (this browser's own in-progress
+// edits) wins if both exist for the same test_id.
+for (const s of scenarios) {{
+  if (s.bug_note && !bugStore[s.test_id]) bugStore[s.test_id] = s.bug_note;
+  if (s.engine_note && !engineStore[s.test_id]) engineStore[s.test_id] = s.engine_note;
+}}
+
+// Pass/Fail badge (user, 2026-09-03) - ALWAYS from s.pass_fail_status/
+// s.is_regression (fixed, Expected<->Actual, server-computed), independent
+// of whichever comparisonMode the dropdown is currently on.
+// 3-way regression detail (user, 2026-09-03 point 5): "hiển thị actual lần
+// chạy trước, actual lần chạy hiện tại, và as-is system cũ" - only rendered
+// for scenarios flagged is_regression. prev_actual_top_items is a lightweight
+// {{sku,name}} snapshot saved into pass_fail_state_<store>.json at the END of
+// the PREVIOUS run (see the Python classification loop) - current actual/
+// as-is are already embedded normally (s.actual_items/s.asis_items).
+function miniProductListHtml(items, emptyLabel) {{
+  if (!items || !items.length) return `<div style="color:var(--text-muted);font-size:12px;padding:8px 0;">${{emptyLabel || '(không có dữ liệu)'}}</div>`;
+  return '<ol style="margin:0;padding-left:20px;font-size:12px;line-height:1.6;">' +
+    items.slice(0, 10).map(it => `<li>${{escapeHtmlText(it.name || it.sku || '')}} <span style="color:var(--text-muted);">(${{escapeHtmlText(it.sku || '')}})</span></li>`).join('') +
+    '</ol>';
+}}
+function getRegressionDetailHtml(s) {{
+  const prevAt = s.prev_run_at ? new Date(s.prev_run_at).toLocaleString() : 'không rõ';
+  // Title differs depending on WHY this panel is showing (2026-09-04): a
+  // real Pass/Fail flip (is_regression) vs. just the Actual list changing
+  // without crossing a bucket (response_changed only) - don't claim a
+  // "Regression" status flip happened when it didn't.
+  const detailTitle = s.is_regression
+    ? `📉 Chi tiết Regression - đổi trạng thái ${{s.prev_pass_fail_status}} &rarr; ${{s.pass_fail_status}}`
+    : `🔄 Chi tiết Response Changed - Actual đổi (Pass/Fail vẫn ${{s.pass_fail_status}}, không đổi bucket)`;
+  return `
+        <div class="regression-banner" style="margin-bottom: 16px;">
+          <h2 style="font-size:14px;">${{detailTitle}}</h2>
+          <p>So sánh Actual lần chạy TRƯỚC (${{prevAt}}${{s.prev_compare_dir ? ', thư mục: ' + escapeHtmlText(s.prev_compare_dir) : ''}}) vs Actual lần này vs As-Is (hệ thống cũ) - top 10 mỗi cột.</p>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <div class="col-box"><div class="col-title">Actual (lần trước)</div>${{miniProductListHtml(s.prev_actual_top_items, 'Chưa có dữ liệu lần chạy trước')}}</div>
+            <div class="col-box"><div class="col-title">Actual (lần này)</div>${{miniProductListHtml(s.actual_items, 'Actual rỗng')}}</div>
+            <div class="col-box asis-box"><div class="col-title">As-Is (hệ thống cũ)</div>${{miniProductListHtml(s.asis_items, s.asis_cached ? 'As-Is rỗng' : 'Chưa có As-Is trong cache')}}</div>
+          </div>
+        </div>`;
+}}
+
+function getPassFailBadgeHtml(s) {{
+  if (s.pass_fail_status === 'n/a') return ''; // Expected-less file (demo) - no Pass/Fail concept
+  const eff = effectiveStatus(s);
+  const kindLabel = s.regression_kind === 'improved' ? 'CẢI THIỆN' : 'REGRESSION';
+  const regressionTag = s.is_regression
+    ? `<span class="badge badge-regression" data-tooltip="Lần compare TRƯỚC keyword này ${{s.prev_pass_fail_status}}, lần này ${{s.pass_fail_status}} (${{s.match_category}}) - xem lịch sử ở SmartSearch/test_data/compare/pass_fail_state_*.json">⚠️ ${{kindLabel}}</span>`
+    : '';
+  // Response-changed tag (2026-09-04) - fires whenever Actual's top-N SKU
+  // list differs from last run's snapshot, independent of is_regression
+  // (which only fires on a Pass/Fail bucket flip) - both can be true at once.
+  const responseChangedTag = s.response_changed
+    ? `<span class="badge" style="background:#eff6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Actual lần này khác lần compare trước (danh sách/thứ hạng sản phẩm đổi), dù Pass/Fail có thể không đổi bucket - xem chi tiết 'Actual lần trước' bên dưới.">🔄 Actual đổi</span>`
+    : '';
+  // Manually overridden already SAVED server-side (from a prior
+  // --apply-overrides run) vs. a NEW click pending export in this browser -
+  // both display with a distinct tag so it's clear this wasn't the
+  // auto-classifier's own verdict.
+  const pending = overrideStore[s.test_id];
+  const overrideTag = s.pass_fail_manual_override
+    ? `<span class="badge badge-review" data-tooltip="Đã điều chỉnh tay thành ${{eff}} (auto-classify vẫn ra ${{s.match_category}}) - lưu vĩnh viễn qua --apply-overrides">✔️ Điều chỉnh tay</span>`
+    : (pending ? `<span class="badge badge-review" data-tooltip="Vừa đánh dấu ${{pending}} trong trình duyệt này - bấm 'Xuất đánh giá Pass/Fail' rồi truyền lại qua --apply-overrides ở lần compare sau để lưu vĩnh viễn, nếu không sẽ mất khi đóng báo cáo này.">✔️ Vừa điều chỉnh (chưa xuất)</span>` : '');
+  if (eff === 'passed') return regressionTag + responseChangedTag + `<span class="badge badge-passed" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo), không đổi theo dropdown So sánh">✅ Passed</span>` + overrideTag;
+  return regressionTag + responseChangedTag + `<span class="badge badge-failed" data-tooltip="Khớp 1 phần/khớp thấp/zero result/no match - Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">❌ Failed</span>` + overrideTag;
+}}
+
+// "Đánh giá lại" toggle - works BOTH directions (user 2026-09-03): Passed can
+// be clicked down to Failed and vice versa. Clicking a pending override again
+// un-marks it back to whatever the server/auto-classify already says.
+function getOverrideButtonHtml(s) {{
+  if (s.pass_fail_status === 'n/a') return '';
+  const eff = effectiveStatus(s);
+  const pending = overrideStore[s.test_id];
+  if (pending) {{
+    return `<button type="button" class="pf-override-btn marked"
+                    data-tooltip="Đang đánh dấu tay là ${{pending}}, chưa xuất - bấm để bỏ đánh dấu này."
+                    onclick="event.stopPropagation(); toggleOverride('${{s.test_id}}', '${{pending}}')">↩️ Bỏ đánh giá lại</button>`;
+  }}
+  const target = eff === 'passed' ? 'failed' : 'passed';
+  const label = target === 'passed' ? '✅ Đánh giá lại: Passed' : '❌ Đánh giá lại: Failed';
+  return `<button type="button" class="pf-override-btn"
+                  data-tooltip="Tự đánh giá keyword này là ${{target}} dù auto-classify/trạng thái hiện tại là ${{eff}} (${{s.match_category}}) - nhớ bấm 'Xuất đánh giá Pass/Fail' ở thanh công cụ rồi truyền file đó qua --apply-overrides ở lần compare sau để lưu vĩnh viễn."
+                  onclick="event.stopPropagation(); toggleOverride('${{s.test_id}}', '${{target}}')">${{label}}</button>`;
+}}
+
+// Jump from the regression banner to that scenario's card further down the
+// page - forces filter=all + full page size so the card is guaranteed to be
+// on-screen regardless of whatever filter/pagination the user had active.
+function jumpToScenario(testId) {{
+  if (!testId) return;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.tab-btn[data-filter="all"]')?.classList.add('active');
+  currentFilter = 'all';
+  searchQuery = '';
+  document.getElementById('searchInput').value = '';
+  selectedPageSize = 'all';
+  document.getElementById('pageSizeSelect').value = 'all';
+  currentPage = 1;
+  renderScenarios();
+  requestAnimationFrame(() => {{
+    const card = document.getElementById('card-' + testId);
+    if (!card) return;
+    card.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+    document.getElementById('body-' + testId)?.classList.add('open');
+    card.style.outline = '2px solid #dc2626';
+    setTimeout(() => {{ card.style.outline = ''; }}, 2000);
+  }});
+}}
 
 function getBadgeHtml(cat, pct) {{
   if (cat === '100_PERCENT_EXACT') return `<span class="badge badge-exact" data-tooltip="Khớp hoàn hảo 100% đúng từng vị trí">⭐ 100% Exact</span>`;
@@ -1413,18 +1888,40 @@ function getBadgeHtml(cat, pct) {{
   return `<span class="badge badge-low" data-tooltip="Không trùng khớp sản phẩm nào">No Match (0%)</span>`;
 }}
 
-function getStatusTagHtml(status, rank, column) {{
-  if (status === 'exact_rank') return `<span class="tag-status tag-exact" data-tooltip="[Mục 20] Sản phẩm đứng đúng chính xác vị trí thứ hạng ở cả Expected và Actual">✓ Đúng Rank</span>`;
+function getStatusTagHtml(status, rank, column, baseLabel) {{
+  baseLabel = baseLabel || 'Expected';
+  if (status === 'exact_rank') return `<span class="tag-status tag-exact" data-tooltip="[Mục 20] Sản phẩm đứng đúng chính xác vị trí thứ hạng ở cả ${{baseLabel}} và Actual">✓ Đúng Rank</span>`;
   if (status === 'rank_shifted') return `<span class="tag-status tag-shift" data-tooltip="[Mục 23] Sản phẩm có xuất hiện nhưng bị trồi/sụt đến vị trí Rank ${{rank}}">↕ Rank ${{rank}}</span>`;
   if (status === 'outside_top') {{
     const tooltip = column === 'actual'
-      ? `[Mục 22] SKU này nằm ngoài Top 20 của Expected (Expected rank ${{rank}}), nhưng Actual đã đưa vào Top 20.`
-      : `[Mục 22] SKU này có trong Expected Top 20 nhưng Actual đẩy xuống ngoài Top 20 (Actual rank ${{rank}}).`;
+      ? `[Mục 22] SKU này nằm ngoài Top 20 của ${{baseLabel}} (${{baseLabel}} rank ${{rank}}), nhưng Actual đã đưa vào Top 20.`
+      : `[Mục 22] SKU này có trong ${{baseLabel}} Top 20 nhưng Actual đẩy xuống ngoài Top 20 (Actual rank ${{rank}}).`;
     return `<span class="tag-status tag-outside" data-tooltip="${{tooltip}}">Out Top (${{rank}})</span>`;
   }}
   if (status === 'missing') return `<span class="tag-status tag-missing" data-tooltip="[Mục 21] Sản phẩm mong đợi trong Top 20 nhưng Actual KHÔNG tìm thấy trong Top 20">✗ Missing</span>`;
-  if (status === 'extra') return `<span class="tag-status tag-extra" data-tooltip="Sản phẩm lạ do Actual trả về, không nằm trong danh sách mong đợi">+ Extra</span>`;
+  if (status === 'extra') return `<span class="tag-status tag-extra" data-tooltip="Sản phẩm lạ do Actual trả về, không nằm trong danh sách của ${{baseLabel}}">+ Extra</span>`;
   return '';
+}}
+
+// Per-actual-item status relative to a BASE list (As-Is), mirroring the
+// server-side exp_rank_map/act_details logic in compare_scenario() but
+// computed client-side since As-Is has no server-computed per-item cross-
+// reference. Simpler than the Expected version - As-Is items already ARE
+// the full available list (no separate "beyond the display window" case),
+// so only exact_rank/rank_shifted/extra are ever produced (no missing/
+// outside_top, those describe a base-item's own row, not an actual-item's).
+function computeActualStatusVsBase(actualItems, baseItems) {{
+  const baseRankMap = new Map();
+  (baseItems || []).forEach((it, idx) => {{ baseRankMap.set(String(it.sku), idx + 1); }});
+  return (actualItems || []).map((it, idx) => {{
+    const rank = idx + 1;
+    const baseRank = baseRankMap.has(String(it.sku)) ? baseRankMap.get(String(it.sku)) : null;
+    let status;
+    if (baseRank === rank) status = 'exact_rank';
+    else if (baseRank !== null) status = 'rank_shifted';
+    else status = 'extra';
+    return {{ ...it, status, base_rank: baseRank }};
+  }});
 }}
 
 function renderScenarios() {{
@@ -1437,10 +1934,18 @@ function renderScenarios() {{
   // reference below (query/test_id/expected_items/actual_items/asis_items/...)
   // untouched regardless of mode.
   scenarios.forEach(s => {{ s.__m = getModeMetrics(s); }});
-  updateFilterTabCounts();
+  updateAllStats();
 
   const filtered = scenarios.filter(s => {{
-    const matchFilter = (currentFilter === 'all') || (s.__m.match_category === currentFilter);
+    // PF_* filters read s.pass_fail_status/s.is_regression directly - these
+    // are FIXED (always Expected<->Actual, computed once server-side), unlike
+    // s.__m.match_category which changes with the comparisonMode dropdown.
+    const matchFilter = (currentFilter === 'all')
+      || (currentFilter === 'PF_REGRESSION' ? s.is_regression
+          : currentFilter === 'PF_RESPONSE_CHANGED' ? s.response_changed
+          : currentFilter === 'PF_PASSED' ? effectiveStatus(s) === 'passed'
+          : currentFilter === 'PF_FAILED' ? effectiveStatus(s) === 'failed'
+          : s.__m.match_category === currentFilter);
     if (!matchFilter) return false;
 
     if (!searchQuery) return true;
@@ -1480,6 +1985,7 @@ function renderScenarios() {{
           <span class="scenario-query">"${{s.query}}"</span>
           ${{getBadgeHtml(s.__m.match_category, s.__m.top20_overlap_pct)}}
           ${{s.__m.top1_match ? '<span class="badge badge-exact" data-tooltip="Sản phẩm Top-1 khớp chính xác giữa 2 nguồn đang so sánh">Top-1 Match</span>' : ''}}
+          ${{getPassFailBadgeHtml(s)}}
         </div>
         <div class="scenario-badges">
           <span class="meta-tag" data-tooltip="Chiều kiểm thử / Dimension của từ khóa">Dim: ${{s.dimension}}</span>
@@ -1487,37 +1993,67 @@ function renderScenarios() {{
           ${{s.actual_latency_ms != null ? `<span class="meta-tag" data-tooltip="Thời gian API search (Actual) thực sự phản hồi khi lấy dữ liệu này - đo lúc chạy data test, lưu sẵn trong file actual.">⏱️ ${{s.actual_latency_ms}}ms</span>` : ''}}
           <span class="meta-tag" data-tooltip="[Mục 16] Số SKU trùng khớp trong 5 kết quả đầu tiên, theo chế độ so sánh đang chọn (${{s.__m.top5_overlap_count}}/5 sản phẩm)">Top-5: ${{s.__m.top5_overlap_count}}/5 (${{s.__m.top5_overlap_pct}}%)</span>
           <span class="meta-tag" style="background: rgba(2, 132, 199, 0.12); color: #0369a1; font-weight: 600;" data-tooltip="[Mục 17] Số SKU trùng khớp trong 20 kết quả đầu tiên, theo chế độ so sánh đang chọn (${{s.__m.top20_overlap_count}}/${{s.__m.expected_count}} sản phẩm)">Top-20: ${{s.__m.top20_overlap_count}}/${{s.__m.expected_count}} (${{s.__m.top20_overlap_pct}}%)</span>
+          ${{getOverrideButtonHtml(s)}}
           <button type="button" class="bug-btn ${{bugStore[s.test_id] ? 'marked' : ''}}" id="bugbtn-${{s.test_id}}"
-                  data-tooltip="Đánh dấu keyword này cần fix lại Expected (kèm ảnh chụp UI thực tế và ghi chú Expected đúng phải là gì)"
-                  onclick="event.stopPropagation(); toggleBugPanel('${{s.test_id}}')">🐞 ${{bugStore[s.test_id] ? 'Đã ghi Bug' : 'Fix Expected'}}</button>
+                  data-tooltip="Failed là BUG thật (UI/data thật đang sai) - đánh dấu kèm ảnh chụp UI thực tế và ghi chú Expected đúng phải là gì"
+                  onclick="event.stopPropagation(); toggleNotePanel('bug', '${{s.test_id}}')">🐞 ${{bugStore[s.test_id] ? 'Đã ghi Bug' : 'Đánh dấu Bug'}}</button>
+          ${{ (comparisonMode === 'expected_actual' && effectiveStatus(s) === 'failed') ? `
+          <button type="button" class="engine-btn ${{engineStore[s.test_id] ? 'marked' : ''}}" id="enginebtn-${{s.test_id}}"
+                  data-tooltip="Failed do SEARCH ENGINE của mình sai (Expected tự sinh ra không đúng, không phải lỗi UI/data thật) - chỉ có ở chế độ Expected↔Actual. Đánh dấu kèm ghi chú Expected đúng phải là gì để cải thiện search_engine.js."
+                  onclick="event.stopPropagation(); toggleNotePanel('engine', '${{s.test_id}}')">⚙️ ${{engineStore[s.test_id] ? 'Đã ghi cải thiện Engine' : 'Cải thiện Engine'}}</button>` : '' }}
           <span style="color: var(--text-muted); font-size: 12px;">▼</span>
         </div>
       </div>
       <div class="bug-panel ${{openBugPanels[s.test_id] ? 'open' : ''}}" id="bugpanel-${{s.test_id}}">
         <div class="bug-panel-title">🐞 Đánh dấu Bug - cần sửa lại Expected cho keyword "${{s.query}}"</div>
         <span class="bug-field-label">Ảnh chụp UI thực tế (dán bằng Ctrl+V sau khi click vào khung dưới đây, hoặc chọn file):</span>
-        <div class="paste-zone ${{(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot) ? 'has-image' : ''}}" id="pastezone-${{s.test_id}}"
+        <div class="paste-zone ${{(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot) ? 'has-image' : ''}}" id="bugpastezone-${{s.test_id}}"
              tabindex="0" contenteditable="true"
-             onpaste="handleBugPaste(event, '${{s.test_id}}')"
+             onpaste="handleNotePaste('bug', event, '${{s.test_id}}')"
              ondragover="event.preventDefault(); this.classList.add('dragover');"
              ondragleave="this.classList.remove('dragover');"
-             ondrop="handleBugDrop(event, '${{s.test_id}}')">${{(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot)
+             ondrop="handleNoteDrop('bug', event, '${{s.test_id}}')">${{(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot)
               ? `<img class="bug-thumb" src="${{bugDraft[s.test_id].screenshot}}">`
               : 'Click vào đây rồi dán ảnh (Ctrl+V), hoặc kéo-thả ảnh vào'}}</div>
         <div style="margin: 6px 0 12px;">
           <span class="bug-pick-file" onclick="document.getElementById('bugfile-${{s.test_id}}').click()">📎 hoặc chọn file ảnh...</span>
         </div>
-        <input type="file" accept="image/*" class="bug-file-input" id="bugfile-${{s.test_id}}" onchange="handleBugFile(event, '${{s.test_id}}')">
-        <span class="bug-field-label">Expected đúng phải là (ghi rõ để BA/Dev fix lại dữ liệu expected):</span>
-        <textarea class="bug-textarea" id="bugtext-${{s.test_id}}" placeholder="Ví dụ: SKU 123456 phải xếp Top-1 vì khớp tên chính xác, expected hiện tại đang để SKU khác lên đầu là sai...">${{(bugDraft[s.test_id] && bugDraft[s.test_id].note) || ''}}</textarea>
+        <input type="file" accept="image/*" class="bug-file-input" id="bugfile-${{s.test_id}}" onchange="handleNoteFile('bug', event, '${{s.test_id}}')">
+        <span class="bug-field-label">Expected đúng phải là (ghi rõ để BA/Dev fix lại dữ liệu/UI thật):</span>
+        <textarea class="bug-textarea" id="bugtext-${{s.test_id}}" placeholder="Ví dụ: SKU 123456 phải xếp Top-1 vì khớp tên chính xác, UI thật hiện đang hiển thị sai...">${{(bugDraft[s.test_id] && bugDraft[s.test_id].note) || ''}}</textarea>
         <div class="bug-actions">
-          <button type="button" class="bug-save-btn" onclick="saveBug('${{s.test_id}}')">💾 Lưu Bug</button>
-          <button type="button" class="bug-cancel-btn" onclick="toggleBugPanel('${{s.test_id}}')">Đóng</button>
-          ${{bugStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeBug('${{s.test_id}}')">🗑 Bỏ đánh dấu</button>` : ''}}
+          <button type="button" class="bug-save-btn" onclick="saveNote('bug', '${{s.test_id}}')">💾 Lưu Bug</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('bug', '${{s.test_id}}')">Đóng</button>
+          ${{bugStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('bug', '${{s.test_id}}')">🗑 Bỏ đánh dấu</button>` : ''}}
           ${{bugStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${{new Date(bugStore[s.test_id].markedAt).toLocaleString()}}</span>` : ''}}
         </div>
       </div>
+      <div class="bug-panel ${{openEnginePanels[s.test_id] ? 'open' : ''}}" id="enginepanel-${{s.test_id}}" style="background: var(--yellow-bg); border-color: var(--yellow);">
+        <div class="bug-panel-title" style="color: var(--yellow);">⚙️ Cải thiện Search Engine - "${{s.query}}" (chỉ áp dụng khi so Expected↔Actual)</div>
+        <span class="bug-field-label">Ảnh chụp UI thực tế/Actual (tuỳ chọn, dán Ctrl+V hoặc chọn file):</span>
+        <div class="paste-zone ${{(engineDraft[s.test_id] && engineDraft[s.test_id].screenshot) ? 'has-image' : ''}}" id="enginepastezone-${{s.test_id}}"
+             tabindex="0" contenteditable="true"
+             onpaste="handleNotePaste('engine', event, '${{s.test_id}}')"
+             ondragover="event.preventDefault(); this.classList.add('dragover');"
+             ondragleave="this.classList.remove('dragover');"
+             ondrop="handleNoteDrop('engine', event, '${{s.test_id}}')">${{(engineDraft[s.test_id] && engineDraft[s.test_id].screenshot)
+              ? `<img class="bug-thumb" src="${{engineDraft[s.test_id].screenshot}}">`
+              : 'Click vào đây rồi dán ảnh (Ctrl+V), hoặc kéo-thả ảnh vào'}}</div>
+        <div style="margin: 6px 0 12px;">
+          <span class="bug-pick-file" onclick="document.getElementById('enginefile-${{s.test_id}}').click()">📎 hoặc chọn file ảnh...</span>
+        </div>
+        <input type="file" accept="image/*" class="bug-file-input" id="enginefile-${{s.test_id}}" onchange="handleNoteFile('engine', event, '${{s.test_id}}')">
+        <span class="bug-field-label">Expected đúng phải là (search_engine.js cần sửa gì để ra được kết quả này):</span>
+        <textarea class="bug-textarea" id="enginetext-${{s.test_id}}" placeholder="Ví dụ: Actual xếp SKU X lên top vì đúng ngữ nghĩa hơn, engine hiện đang ưu tiên sai tier/thiếu synonym Y...">${{(engineDraft[s.test_id] && engineDraft[s.test_id].note) || ''}}</textarea>
+        <div class="bug-actions">
+          <button type="button" class="bug-save-btn" onclick="saveNote('engine', '${{s.test_id}}')">💾 Lưu ghi chú</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('engine', '${{s.test_id}}')">Đóng</button>
+          ${{engineStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('engine', '${{s.test_id}}')">🗑 Bỏ đánh dấu</button>` : ''}}
+          ${{engineStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${{new Date(engineStore[s.test_id].markedAt).toLocaleString()}}</span>` : ''}}
+        </div>
+      </div>
       <div class="scenario-body" id="body-${{s.test_id}}">
+        ${{(s.is_regression || s.response_changed) ? getRegressionDetailHtml(s) : ''}}
         <div class="compare-columns ${{panelsClass()}}">
           ${{HAS_ASIS ? `
           <!-- As-Is Column (current/legacy production system - reference only, not scored) -->
@@ -1583,7 +2119,11 @@ function renderScenarios() {{
           </div>
           ` : ''}}
 
-          <!-- Actual Column -->
+          <!-- Actual Column - when comparisonMode is As-Is<->Actual, the
+               Tier/Score column drops (that's Expected-only scoring, not
+               applicable to a reference-only system) and the status column
+               compares against As-Is instead of Expected (user request
+               2026-09-03). -->
           <div class="col-box">
             <div class="col-title">
               <span>🚀 Actual Top Results (${{s.actual_items.length}})</span>
@@ -1594,20 +2134,22 @@ function renderScenarios() {{
                 <tr>
                   <th style="width: 30px;">#</th>
                   <th>SKU / Sản phẩm</th>
-                  <th>Tier / Score</th>
-                  <th>So với Expected</th>
+                  ${{comparisonMode === 'asis_actual' ? '' : '<th>Tier / Score</th>'}}
+                  <th>${{comparisonMode === 'asis_actual' ? 'So với As-Is' : 'So với Expected'}}</th>
                 </tr>
               </thead>
               <tbody>
-                ${{s.actual_items.map(it => `
+                ${{(comparisonMode === 'asis_actual' ? computeActualStatusVsBase(s.actual_items, s.asis_items) : s.actual_items).map(it => `
                   <tr>
                     <td><span class="rank-num">${{it.rank}}</span></td>
                     <td>
                       <span class="item-name">${{it.name}}</span>
                       <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ</span>
                     </td>
-                    <td><span class="meta-tag" style="margin:0;" data-tooltip="Chế độ search mode và điểm số của backend">${{it.tier || '-'}} (${{it.score || '-'}})</span></td>
-                    <td>${{getStatusTagHtml(it.status, it.expected_rank, 'actual')}}</td>
+                    ${{comparisonMode === 'asis_actual' ? '' : `<td><span class="meta-tag" style="margin:0;" data-tooltip="Chế độ search mode và điểm số của backend">${{it.tier || '-'}} (${{it.score || '-'}})</span></td>`}}
+                    <td>${{comparisonMode === 'asis_actual'
+                        ? getStatusTagHtml(it.status, it.base_rank, 'actual', 'As-Is')
+                        : getStatusTagHtml(it.status, it.expected_rank, 'actual')}}</td>
                   </tr>
                 `).join('')}}
               </tbody>
@@ -1642,9 +2184,21 @@ document.querySelectorAll('.tab-btn').forEach(btn => {{
     e.currentTarget.classList.add('active');
     currentFilter = e.currentTarget.getAttribute('data-filter');
     currentPage = 1;
+    updateBannerVisibility();
     renderScenarios();
   }});
 }});
+
+// Regression/Response-Changed banners (2026-09-04): hidden by default on
+// page load - only shown when the matching filter tab is the ACTIVE one,
+// not permanently at the top of the page. Both start with the `hidden`
+// attribute in the markup; this just toggles it alongside currentFilter.
+function updateBannerVisibility() {{
+  const regressionBanner = document.getElementById('regressionBanner');
+  const responseChangedBanner = document.getElementById('responseChangedBanner');
+  if (regressionBanner) regressionBanner.hidden = currentFilter !== 'PF_REGRESSION';
+  if (responseChangedBanner) responseChangedBanner.hidden = currentFilter !== 'PF_RESPONSE_CHANGED';
+}}
 
 document.getElementById('modeSelect').addEventListener('change', (e) => {{
   comparisonMode = e.target.value;
@@ -1689,9 +2243,11 @@ document.getElementById('sortSelect').addEventListener('change', (e) => {{
   renderScenarios();
 }});
 
-document.getElementById('exportBugHtmlBtn').addEventListener('click', exportAllBugsHtml);
-document.getElementById('exportBugJsonBtn').addEventListener('click', exportAllBugsJson);
+document.getElementById('exportBugJsonBtn').addEventListener('click', () => exportNotesJson('bug'));
+document.getElementById('exportEngineJsonBtn').addEventListener('click', () => exportNotesJson('engine'));
+document.getElementById('exportOverrideBtn').addEventListener('click', exportOverrides);
 updateExportButtonCount();
+updateOverrideExportCount();
 
 // Initial render
 renderScenarios();
@@ -1705,8 +2261,8 @@ renderScenarios();
 
 def main():
     parser = argparse.ArgumentParser(description="Compare Search Results (Expected vs Actual)")
-    parser.add_argument("--expected", required=True, help="Path to Expected JSON file")
-    parser.add_argument("--actual", required=True, help="Path to Actual JSON file")
+    parser.add_argument("--expected", help="Path to Expected JSON file (required unless --apply-overrides is used standalone)")
+    parser.add_argument("--actual", help="Path to Actual JSON file (required unless --apply-overrides is used standalone)")
     parser.add_argument("--no-asis", action="store_true",
                          help="skip the As-Is panel entirely (no cache lookup, no legacy calls) - "
                               "the normal offline expected-vs-actual compare only.")
@@ -1715,12 +2271,75 @@ def main():
                               "real legacy system for a cache miss (still free/offline) - use this "
                               "if you want to compare without risking any real production calls.")
     parser.add_argument("--out-dir", default=None, help="Output directory for comparison results")
+    parser.add_argument("--overwrite", action="store_true",
+                         help="write directly into --out-dir (or --report-dir's own folder, if --out-dir "
+                              "is omitted), REPLACING its existing compare_report.html/JSON output in "
+                              "place, instead of the default next_free_dir() behavior of always landing "
+                              "in a brand-new timestamped folder. Use when re-running --apply-overrides/"
+                              "--apply-bug-notes/--apply-engine-notes on a report someone is already "
+                              "looking at (e.g. from an exported browser tab/bookmark) and wants updated "
+                              "in place rather than yet another new folder to go find. Only touches the "
+                              "generated output files themselves - never deletes any OTHER folder.")
     parser.add_argument("--topn", type=int, default=30, help="Top-N results shown/compared when a keyword is "
                                                                "expanded (default 30) - independent of the "
                                                                "fixed Top-5/Top-10/Top-20 KPI metrics below, "
                                                                "which always measure those exact windows "
                                                                "regardless of this value")
+    parser.add_argument("--apply-overrides", default=None,
+                         help="path to a pass_fail_overrides_*.json exported from the report's "
+                              "'Đánh giá lại' toggle - merges those manual Passed/Failed verdicts "
+                              "into pass_fail_state_<store>.json so they stick permanently. Can be "
+                              "combined with --expected/--actual (or --report-dir) to apply AND "
+                              "regenerate a report in one go, or used standalone to just update state.")
+    parser.add_argument("--apply-bug-notes", default=None,
+                         help="path to a bug_notes_*.json exported from the report's '🐞 Xuất Bug' "
+                              "button - merges into bug_notes_<store>.json (permanent).")
+    parser.add_argument("--apply-engine-notes", default=None,
+                         help="path to an engine_improvement_notes_*.json exported from the report's "
+                              "'⚙️ Xuất cải thiện Engine' button - merges into "
+                              "engine_notes_<store>.json (permanent).")
+    parser.add_argument("--report-dir", default=None,
+                         help="path to a PREVIOUS run's own output folder (the one containing its "
+                              "summary_stats.json) - reuses that run's --expected/--actual "
+                              "automatically. Point (4) of the 2026-09-03 workflow: apply an "
+                              "exported overrides/bug-notes/engine-notes file THEN regenerate a "
+                              "fresh, fully-annotated report from the same source data in one "
+                              "command, e.g.:\n"
+                              "  compare_results.py --report-dir SmartSearch/test_data/compare/run_x "
+                              "--apply-overrides pass_fail_overrides_nsg_2026-09-03.json")
+    parser.add_argument("--store", default=None,
+                         help="store name for a standalone --apply-* run (no --expected/--actual/"
+                              "--report-dir) - inferred from the export file's own \"store\" field "
+                              "if omitted; ignored once --expected/--actual are resolved (the "
+                              "expected file's own store field wins).")
     args = parser.parse_args()
+
+    if args.report_dir:
+        prev_stats_path = Path(args.report_dir) / "summary_stats.json"
+        if not prev_stats_path.exists():
+            sys.exit(f"--report-dir {args.report_dir} không có summary_stats.json - không phải thư mục output hợp lệ.")
+        with open(prev_stats_path, "r", encoding="utf-8") as f:
+            prev_stats = json.load(f)
+        args.expected = args.expected or prev_stats.get("expected_file")
+        args.actual = args.actual or prev_stats.get("actual_file")
+
+    if args.apply_overrides:
+        ov_store, ov_applied, ov_cleared = apply_manual_overrides(args.apply_overrides, args.store)
+        print(f"[đánh giá lại] Đã áp dụng {ov_applied} override và gỡ {ov_cleared} override cũ "
+              f"vào {pass_fail_state_path(ov_store)}")
+    if args.apply_bug_notes:
+        bn_store, bn_applied, bn_cleared = apply_notes("bug", args.apply_bug_notes, args.store)
+        print(f"[bug] Đã áp dụng {bn_applied} ghi chú bug, gỡ {bn_cleared} vào {_notes_state_path('bug', bn_store)}")
+    if args.apply_engine_notes:
+        en_store, en_applied, en_cleared = apply_notes("engine", args.apply_engine_notes, args.store)
+        print(f"[engine] Đã áp dụng {en_applied} ghi chú cải thiện engine, gỡ {en_cleared} vào {_notes_state_path('engine', en_store)}")
+
+    if (args.apply_overrides or args.apply_bug_notes or args.apply_engine_notes) and not (args.expected and args.actual):
+        return
+
+    if not args.expected or not args.actual:
+        sys.exit("Cần --expected và --actual (hoặc --report-dir), hoặc chạy --apply-overrides/"
+                  "--apply-bug-notes/--apply-engine-notes một mình để chỉ cập nhật trạng thái đã lưu.")
 
     exp_path = Path(args.expected)
     act_path = Path(args.actual)
@@ -1800,6 +2419,172 @@ def main():
 
         compared_list.append(res)
 
+    # Pass/Fail auto-classification + regression detection against the LAST
+    # run's persisted verdict for this store (see compute_pass_fail_status()/
+    # PASS_FAIL_STATE_DIR docstrings above). Every scenario here has a stable
+    # test_id (either the real one, or the synthetic "test_id: None" fallback
+    # for an unmatched actual scenario - str(None) below keeps that from
+    # colliding across runs since it's always the same non-key).
+    store = exp_data.get("store") or act_data.get("store") or "nsg"
+    pf_state = load_pass_fail_state(store)
+    bug_notes_state = load_notes_state("bug", store)
+    engine_notes_state = load_notes_state("engine", store)
+    run_timestamp = datetime.now().isoformat()
+    regression_alerts = []
+    response_change_alerts = []
+    ACTUAL_SNAPSHOT_TOPN = 10
+
+    # Response-changed tracking (user, 2026-09-04): "nếu response có thay đổi
+    # so với lần trước thì nhớ count và liệt kê" - broader than regression
+    # (which only fires on a Pass/Fail bucket FLIP). This fires whenever the
+    # Actual top-N SKU list itself differs from last run's snapshot, even if
+    # both runs land in the same Pass/Fail bucket (e.g. LOW_MATCH -> LOW_MATCH
+    # but with different products) - real production data moving under us,
+    # worth surfacing even when it doesn't cross a Pass/Fail boundary.
+    def compute_response_changed(res, prev_entry):
+        prev_top_items = (prev_entry or {}).get("actual_top_items") or []
+        if not prev_top_items:
+            return False  # no prior run to compare against - not a "change"
+        prev_skus = [it.get("sku") for it in prev_top_items]
+        current_skus = [it.get("sku") for it in (res.get("actual_items") or [])[:ACTUAL_SNAPSHOT_TOPN]]
+        return prev_skus != current_skus
+    # An Expected file with NO search_results anywhere (the demo_asis_vs_actual
+    # file - "KHÔNG có dữ liệu Expected" by its own purpose) has nothing to
+    # Pass/Fail against: every scenario would be a meaningless auto-Failed
+    # NO_MATCH. Skip the whole Pass/Fail/regression machinery + state
+    # persistence for it - the report is for As-Is<->Actual eyeballing only.
+    pf_enabled = any((s.get("search_results") or []) for s in exp_scenarios)
+    for res in compared_list:
+        if not pf_enabled:
+            # Demo-file rule (2026-09-04): no Expected anywhere -> score
+            # against As-Is<->Actual instead of skipping Pass/Fail outright.
+            # Regression tracking/state-persistence still stays off here (the
+            # persisted pass_fail_state_<store>.json is keyed for the normal
+            # Expected<->Actual flow) - this is a per-run classification only.
+            demo_match_category = compute_asis_vs_actual_match_category(
+                res.get("asis_items"), res.get("actual_items"), res.get("asis_cached")
+            )
+            res["match_category"] = demo_match_category
+            demo_status = compute_pass_fail_status(demo_match_category)
+            demo_pf_key = str(res.get("test_id") or f"query:{normalize_query(res.get('query'))}")
+            demo_prev_entry = pf_state["entries"].get(demo_pf_key)
+            demo_prev_status = demo_prev_entry.get("status") if demo_prev_entry else None
+            # Manual override still applies here too (fixed 2026-09-04 -
+            # --apply-overrides writes into the SAME pass_fail_state_<store>.json
+            # regardless of file kind, but this branch never read it back,
+            # so an override applied to a demo-file scenario silently had no
+            # effect). Same pf_key/lookup pattern as the pf_enabled path below.
+            demo_manual_override = demo_prev_entry.get("manual_override") if demo_prev_entry else None
+            if demo_manual_override in ("passed", "failed") and demo_status != demo_manual_override:
+                demo_status = demo_manual_override
+                res["pass_fail_manual_override"] = True
+            else:
+                res["pass_fail_manual_override"] = False
+            res["pass_fail_status"] = demo_status
+            res["prev_pass_fail_status"] = demo_prev_status
+            res["prev_actual_top_items"] = (demo_prev_entry or {}).get("actual_top_items") or []
+            res["prev_run_at"] = (demo_prev_entry or {}).get("last_run_at")
+            res["prev_compare_dir"] = (demo_prev_entry or {}).get("last_compare_dir")
+            # Bug notes/engine-improvement notes DO still apply here (fixed
+            # 2026-09-04 - these were hardcoded to None for every demo-file
+            # scenario before, so a "🐞 Xuất Bug" export could never be seen
+            # again via --apply-bug-notes on this kind of file - same lookup
+            # key as the normal pf_enabled path below).
+            res["bug_note"] = bug_notes_state["entries"].get(demo_pf_key)
+            res["engine_note"] = engine_notes_state["entries"].get(demo_pf_key)
+            # Regression tracking now works for demo-style (no-Expected)
+            # files too (fixed 2026-09-04, "so sánh với file gần nhất để ra
+            # được regression") - same status-flip detection + state
+            # persistence as the normal Expected<->Actual path below.
+            demo_is_regression = (
+                demo_prev_status is not None and demo_prev_status != demo_status and demo_prev_status != "needs_review"
+            )
+            res["is_regression"] = demo_is_regression
+            res["regression_kind"] = ("regressed" if demo_status == "failed" else "improved") if demo_is_regression else None
+            if demo_is_regression:
+                regression_alerts.append({
+                    "test_id": res.get("test_id"), "query": res["query"], "dimension": res.get("dimension"),
+                    "prev_status": demo_prev_status, "current_status": demo_status, "kind": res["regression_kind"],
+                    "match_category": res["match_category"],
+                    "prev_last_run_at": demo_prev_entry.get("last_run_at") if demo_prev_entry else None,
+                })
+            demo_response_changed = compute_response_changed(res, demo_prev_entry)
+            res["response_changed"] = demo_response_changed
+            if demo_response_changed:
+                response_change_alerts.append({
+                    "test_id": res.get("test_id"), "query": res["query"], "dimension": res.get("dimension"),
+                    "match_category": res["match_category"], "pass_fail_status": demo_status,
+                    "prev_last_run_at": demo_prev_entry.get("last_run_at") if demo_prev_entry else None,
+                })
+            demo_new_entry = {
+                "query": res["query"], "status": demo_status, "match_category": res["match_category"],
+                "last_run_at": run_timestamp,
+                "actual_top_items": [
+                    {"sku": it.get("sku"), "name": it.get("name")} for it in (res.get("actual_items") or [])[:ACTUAL_SNAPSHOT_TOPN]
+                ],
+            }
+            if demo_manual_override:
+                demo_new_entry["manual_override"] = demo_manual_override
+            pf_state["entries"][demo_pf_key] = demo_new_entry
+            continue
+        pf_key = str(res.get("test_id") or f"query:{normalize_query(res.get('query'))}")
+        status = compute_pass_fail_status(res["match_category"])
+        prev_entry = pf_state["entries"].get(pf_key)
+        prev_status = prev_entry.get("status") if prev_entry else None
+        manual_override = prev_entry.get("manual_override") if prev_entry else None
+        # Manual override (user, 2026-09-03, both directions) - a QA verdict
+        # recorded via the report's toggle icon + --apply-overrides always
+        # wins over the auto-classification, permanently (carried forward
+        # into the new entry below), until explicitly cleared the same way.
+        if manual_override in ("passed", "failed") and status != manual_override:
+            status = manual_override
+            res["pass_fail_manual_override"] = True
+        else:
+            res["pass_fail_manual_override"] = False
+        res["pass_fail_status"] = status
+        res["prev_pass_fail_status"] = prev_status
+        res["prev_actual_top_items"] = (prev_entry or {}).get("actual_top_items") or []
+        res["prev_run_at"] = (prev_entry or {}).get("last_run_at")
+        res["prev_compare_dir"] = (prev_entry or {}).get("last_compare_dir")
+        res["bug_note"] = bug_notes_state["entries"].get(pf_key)
+        res["engine_note"] = engine_notes_state["entries"].get(pf_key)
+        # Any status FLIP vs the last run - either direction - goes into the
+        # regression filter (user, 2026-09-03: "nếu lần chạy này passed nhưng
+        # lần trước failed VÀ NGƯỢC LẠI"). "regressed" (passed->failed) vs
+        # "improved" (failed->passed) is kept as a sub-label for the banner/
+        # badge text, but both land in the same PF_REGRESSION filter bucket.
+        # prev_status == "needs_review" is the old 3-bucket model's leftover
+        # (folded away the same day) - treated as "no comparable prior data"
+        # so the one-time model migration doesn't flood the regression view
+        # with hundreds of false positives on the first run after the change.
+        is_regression = prev_status is not None and prev_status != status and prev_status != "needs_review"
+        res["is_regression"] = is_regression
+        res["regression_kind"] = ("regressed" if status == "failed" else "improved") if is_regression else None
+        if is_regression:
+            regression_alerts.append({
+                "test_id": res.get("test_id"), "query": res["query"], "dimension": res.get("dimension"),
+                "prev_status": prev_status, "current_status": status, "kind": res["regression_kind"],
+                "match_category": res["match_category"], "prev_last_run_at": prev_entry.get("last_run_at") if prev_entry else None,
+            })
+        response_changed = compute_response_changed(res, prev_entry)
+        res["response_changed"] = response_changed
+        if response_changed:
+            response_change_alerts.append({
+                "test_id": res.get("test_id"), "query": res["query"], "dimension": res.get("dimension"),
+                "match_category": res["match_category"], "pass_fail_status": status,
+                "prev_last_run_at": prev_entry.get("last_run_at") if prev_entry else None,
+            })
+        new_entry = {
+            "query": res["query"], "status": status, "match_category": res["match_category"],
+            "last_run_at": run_timestamp,
+            "actual_top_items": [
+                {"sku": it.get("sku"), "name": it.get("name")} for it in (res.get("actual_items") or [])[:ACTUAL_SNAPSHOT_TOPN]
+            ],
+        }
+        if manual_override:
+            new_entry["manual_override"] = manual_override
+        pf_state["entries"][pf_key] = new_entry
+
     # Separate 100% matches and mismatches
     matched_100_percent = [s for s in compared_list if s["is_100_percent_set_match"] or s["is_100_percent_exact_order"]]
     mismatched_keywords = [s for s in compared_list if not (s["is_100_percent_set_match"] or s["is_100_percent_exact_order"])]
@@ -1856,7 +2641,17 @@ def main():
             "LOW_MATCH": sum(1 for s in compared_list if s["match_category"] == "LOW_MATCH"),
             "ZERO_RESULT": zero_result_count,
             "NO_MATCH": sum(1 for s in compared_list if s["match_category"] == "NO_MATCH"),
-        }
+        },
+        # Pass/Fail (user, 2026-09-03) - see compute_pass_fail_status()'s
+        # docstring for exactly which match_category maps to which bucket.
+        "passed_count": sum(1 for s in compared_list if s["pass_fail_status"] == "passed"),
+        "failed_count": sum(1 for s in compared_list if s["pass_fail_status"] == "failed"),
+        "regression_count": len(regression_alerts),
+        "regression_alerts": regression_alerts,
+        "response_changed_count": len(response_change_alerts),
+        "response_change_alerts": response_change_alerts,
+        "pass_fail_state_file": str(pass_fail_state_path(store)),
+        "pass_fail_store": store,
     }
 
     # Determine out_dir: ALWAYS date+time-marked (not just date - two runs on
@@ -1870,15 +2665,36 @@ def main():
     # for the rare case of two runs within the same second.
     if args.out_dir:
         preferred_out_dir = Path(args.out_dir)
+    elif args.overwrite and args.report_dir:
+        # --overwrite with no explicit --out-dir targets the SAME folder
+        # --report-dir just read from - the natural "update this exact
+        # report in place" case (re-applying overrides/bug-notes to a
+        # report someone already has open).
+        preferred_out_dir = Path(args.report_dir)
     else:
         label = derive_label(exp_path, act_path)
         ts_str = datetime.now().strftime("%Y%m%d_%H%M%S")
         preferred_out_dir = Path(f"SmartSearch/test_data/compare/run_{label}_{ts_str}")
-    out_dir = next_free_dir(preferred_out_dir)
-    if out_dir != preferred_out_dir:
-        print(f"[note] {preferred_out_dir} đã tồn tại và có dữ liệu - không ghi đè, "
-              f"tạo thư mục mới: {out_dir}")
+    if args.overwrite:
+        out_dir = preferred_out_dir
+        print(f"[overwrite] Ghi đè trực tiếp vào {out_dir} (không tạo thư mục mới).")
+    else:
+        out_dir = next_free_dir(preferred_out_dir)
+        if out_dir != preferred_out_dir:
+            print(f"[note] {preferred_out_dir} đã tồn tại và có dữ liệu - không ghi đè, "
+                  f"tạo thư mục mới: {out_dir}")
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    # Persist this run's Pass/Fail verdicts for the NEXT run to diff against
+    # (see the classification loop above) - stamp the folder now that it's
+    # known, then write. Used to be skipped entirely for an Expected-less
+    # file (demo), which silently threw away every entry the demo branch
+    # populated above - fixed 2026-09-04 so demo-file regression tracking
+    # actually persists across runs like the normal Expected<->Actual path.
+    for entry in pf_state["entries"].values():
+        if entry.get("last_run_at") == run_timestamp:
+            entry["last_compare_dir"] = str(out_dir)
+    save_pass_fail_state(pf_state, store)
 
     # Save files
     save_json(out_dir / "matched_100_percent.json", {
@@ -1908,6 +2724,21 @@ def main():
         print(f"🕰️  As-Is: hiển thị cho {asis_lookups}/{total} scenario (mọi mức % khớp, miễn có trong cache) - "
               f"{asis_fetched_new} query mới phải gọi hệ thống cũ thật (chỉ tự động gọi khi ≤{ASIS_MATCH_THRESHOLD_PCT}% khớp), "
               f"{asis_lookups - asis_fetched_new} lấy từ cache có sẵn. Cache: {ASIS_CACHE_PATH}")
+    print(f"✅ Passed: {stats['passed_count']}  ❌ Failed: {stats['failed_count']}")
+    if regression_alerts:
+        print(f"⚠️  {len(regression_alerts)} keyword đổi trạng thái Pass/Fail so với lần compare trước:")
+        for r in regression_alerts[:20]:
+            arrow = "regressed" if r.get("kind") == "regressed" else "cải thiện"
+            print(f"    - {r['test_id']}: \"{r['query']}\" ({r['prev_status']} -> {r['current_status']}, {arrow}, {r['match_category']})")
+        if len(regression_alerts) > 20:
+            print(f"    ... và {len(regression_alerts) - 20} keyword khác, xem đầy đủ trong compare_report.html")
+    if response_change_alerts:
+        print(f"🔄 {len(response_change_alerts)} keyword có Actual đổi so với lần compare trước (kể cả khi không đổi Pass/Fail):")
+        for r in response_change_alerts[:20]:
+            print(f"    - {r['test_id']}: \"{r['query']}\" ({r['match_category']}, {r['pass_fail_status']})")
+        if len(response_change_alerts) > 20:
+            print(f"    ... và {len(response_change_alerts) - 20} keyword khác, xem đầy đủ trong compare_report.html")
+    print(f"🗂️  Pass/Fail state (dùng cho lần compare tiếp theo): {pass_fail_state_path(store)}")
     print(f"=======================================================\n")
 
 

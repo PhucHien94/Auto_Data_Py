@@ -1,0 +1,6760 @@
+{
+  "description": "Query co As-Is (cache) tra ve 0 ket qua nhung Actual (API that) co ket qua - che do so sanh As-Is<->Actual (mac dinh tren report)",
+  "source_report": "run_generic_regional_foreign_600_20260904_142130/compare_report.html",
+  "comparison_mode": "asis_actual",
+  "count": 224,
+  "scenarios": [
+    {
+      "test_id": "NSG-GEN500-0002",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0411318220002",
+          "name": "Đồ Chơi Bowling MN562031"
+        },
+        {
+          "sku": "0411317880009",
+          "name": "Đồ Chơi Búp Bê XBE110"
+        },
+        {
+          "sku": "8936178581633",
+          "name": "Đồ Chơi Rubik 4x4x4 Cresta DK81084"
+        },
+        {
+          "sku": "8936178581619",
+          "name": "Đồ Chơi Rubik 2x2x2 Cresta DK81082"
+        },
+        {
+          "sku": "8936178581602",
+          "name": "Đồ Chơi Rubik 3x3x3 Cresta DK81081"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0003",
+      "query": "thực phẩm giảm cân",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 18,
+      "actual_total_before_cap": 18,
+      "actual_top_items": [
+        {
+          "sku": "8935049016786",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Diabetes 237ml"
+        },
+        {
+          "sku": "8935049018414",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Colostrum 237ml"
+        },
+        {
+          "sku": "8935049014355",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Complete Chai 237ml"
+        },
+        {
+          "sku": "8809422042849",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe Kolmar Condition Probio Hộp 30 Gói"
+        },
+        {
+          "sku": "4511413614846",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe DHC Bổ Sung Collagen Túi 180 Viên"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0004",
+      "query": "đồ ăn eat clean",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936013254562",
+          "name": "Nước Rửa Chén Gift Natural Matcha & Lô Hội 800g"
+        },
+        {
+          "sku": "8904280103265",
+          "name": "Kem Đánh Răng Oralclean Triple Action 150g"
+        },
+        {
+          "sku": "8904280103357",
+          "name": "Bàn Chải Đánh Răng Oral Clean Kiddie Kids Soft (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935243500326",
+          "name": "Viên Rửa Chén Mr.Fresh Hương Chanh Hộp 32 Viên"
+        },
+        {
+          "sku": "8934563669133",
+          "name": "Mì Handy Hảo Hảo Lẩu Nấm Chay Ly 66g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0005",
+      "query": "chế độ ăn eat clean",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8850329527632",
+          "name": "Sữa Chua Meiji Nguyên Chất Lốc 4 Hũ 90G"
+        },
+        {
+          "sku": "8904280103265",
+          "name": "Kem Đánh Răng Oralclean Triple Action 150g"
+        },
+        {
+          "sku": "9300658407840",
+          "name": "Sữa Chua Ăn Kiểu Hy Lạp Farmers Union Không Béo Hũ 500G"
+        },
+        {
+          "sku": "0400286020004",
+          "name": "Salad Ức Gà Yorihada"
+        },
+        {
+          "sku": "8936013330075",
+          "name": "Khăn Ướt Lau Bếp F5 Clean Bịch 80 Miếng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0007",
+      "query": "đồ ăn low carb",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934746054800",
+          "name": "Bánh Phồng Tôm Chay Khoai Tay Sa Giang 200G"
+        },
+        {
+          "sku": "0400295260002",
+          "name": "Bánh Gạo Và Gà Dakgangjeong Xốt Cay Ngọt Yorihada 350G (ea)"
+        },
+        {
+          "sku": "0400301730000",
+          "name": "Cơm Cà Ri Gà Tori Karaage Yorihada 400G"
+        },
+        {
+          "sku": "8938660132040",
+          "name": "Đường Ăn Kiêng Monk Fruit CT Hộp 20 Gói 5G"
+        },
+        {
+          "sku": "0400316030003",
+          "name": "Combo Gà Thả Vườn Quay Ớt Xiêm Xanh Và Bánh Bao Yorihada 816G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0010",
+      "query": "nhiều protein",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8809387745120",
+          "name": "Thanh Protein Good Today 150G"
+        },
+        {
+          "sku": "8803284604139",
+          "name": "Bột Ngũ Cốc Damtuh 15 Loại Hạt Hàn Quốc 18g x 40 Gói"
+        },
+        {
+          "sku": "8936031220099",
+          "name": "Bột 5 Thứ Đậu Không Đường Vitapro Gói 350G"
+        },
+        {
+          "sku": "8851007108112",
+          "name": "Lô 3 Cây Bàn Chải Đánh Răng Sensodyne Repair & Protect Extra Soft Chăm Sóc Răng Ê Buốt (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8809387745915",
+          "name": "Bánh Ngũ Cốc Protein Mini Good Today 144G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0011",
+      "query": "giàu protein",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8809387745120",
+          "name": "Thanh Protein Good Today 150G"
+        },
+        {
+          "sku": "8001440132520",
+          "name": "Đậu Gà Cirio Hộp 380G"
+        },
+        {
+          "sku": "8936031220488",
+          "name": "Bột đậu nành hạt sen mật ong Thăng Long Vitapro bịch 42G*10"
+        },
+        {
+          "sku": "8851007108112",
+          "name": "Lô 3 Cây Bàn Chải Đánh Răng Sensodyne Repair & Protect Extra Soft Chăm Sóc Răng Ê Buốt (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936093330583",
+          "name": "Cốt Lết Chay An Nhiên Gói 150g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0012",
+      "query": "thực phẩm giàu protein",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935049018414",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Colostrum 237ml"
+        },
+        {
+          "sku": "8935049016786",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Diabetes 237ml"
+        },
+        {
+          "sku": "8935049014355",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Complete Chai 237ml"
+        },
+        {
+          "sku": "8809422042849",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe Kolmar Condition Probio Hộp 30 Gói"
+        },
+        {
+          "sku": "4511413614846",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe DHC Bổ Sung Collagen Túi 180 Viên"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0013",
+      "query": "ít calo",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938660132040",
+          "name": "Đường Ăn Kiêng Monk Fruit CT Hộp 20 Gói 5G"
+        },
+        {
+          "sku": "0400203310003",
+          "name": "Cà Ri Gà 500G"
+        },
+        {
+          "sku": "8850186100061",
+          "name": "Đường Ăn Kiêng Equal Classic Hộp 50 Gói"
+        },
+        {
+          "sku": "8936079126049",
+          "name": "Snack Khoai Tây Lay's Stax Vị Kem Chua Và Hành Tây 90G"
+        },
+        {
+          "sku": "8936079126131",
+          "name": "Snack Khoai Tây Lay's Vị Tự Nhiên 40G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0014",
+      "query": "thực phẩm ít calo",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2273590000004",
+          "name": "Khoai tây vàng 400g"
+        },
+        {
+          "sku": "8938537340226",
+          "name": "Cơm Cháy Đáy Nồi Good Luck 500G"
+        },
+        {
+          "sku": "8935011801129",
+          "name": "Ngũ Cốc Ăn Kiêng Việt Đài Túi 35G x 15 Gói"
+        },
+        {
+          "sku": "8935319207074",
+          "name": "Bánh Hạt Năng Lượng Mỗi Ngày Choice L 180G"
+        },
+        {
+          "sku": "8935342401074",
+          "name": "Snack Hải Sản Bento Vị Cay Dịu 22G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0021",
+      "query": "ăn uống lành mạnh",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8858702403672",
+          "name": "Rong Biển Taokaenoi Big Bang Vị Truyền Thống 6G"
+        },
+        {
+          "sku": "0400292030004",
+          "name": "Mầm Rau Muống Hộp 200g (ea)"
+        },
+        {
+          "sku": "0015000049683",
+          "name": "Bánh Ăn Dặm Gerber Vị Việt Quất Táo Củ Cải Đỏ Hộp Gói 48G"
+        },
+        {
+          "sku": "0015000048310",
+          "name": "Bánh Ăn Dặm Gerber Crunchies Rau Củ Hộp 42G"
+        },
+        {
+          "sku": "0015000049669",
+          "name": "Bánh Ăn Dặm Gerber Vị Xoài Chuối Cà Rốt Hộp 48G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0026",
+      "query": "whey protein",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8886451008909",
+          "name": "Sữa Bột Ensure Gold Hương Vani 800G"
+        },
+        {
+          "sku": "8886451008954",
+          "name": "Sữa Bột Ensure Gold Hương Lúa Mạch 800G"
+        },
+        {
+          "sku": "9415007059455",
+          "name": "Sữa Bột Anlene Total10 Hương Vani 800G"
+        },
+        {
+          "sku": "8809387745120",
+          "name": "Thanh Protein Good Today 150G"
+        },
+        {
+          "sku": "8936031220488",
+          "name": "Bột đậu nành hạt sen mật ong Thăng Long Vitapro bịch 42G*10"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0028",
+      "query": "thực phẩm giàu chất xơ",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8935049018414",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Colostrum 237ml"
+        },
+        {
+          "sku": "8936035102131",
+          "name": "Dầu Thực Vật I'm Chef Choice L Chai 2L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0031",
+      "query": "collagen làm đẹp da",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 7,
+      "actual_total_before_cap": 7,
+      "actual_top_items": [
+        {
+          "sku": "4987176325426",
+          "name": "Serum Dưỡng Da Olay Siêu Dưỡng Collagen Peptide 30ml"
+        },
+        {
+          "sku": "4550516474582",
+          "name": "Sữa Rửa Mặt Ẩm Mịn Và Săn Chắc Da Senka Perfect Whip Collagen In Chai 120G"
+        },
+        {
+          "sku": "4987176267351",
+          "name": "Kem Dưỡng Da Olay Siêu Dưỡng Super Collagen Peptides 45G"
+        },
+        {
+          "sku": "8809647118800",
+          "name": "Toner Pad Dermal Collagen Dưỡng Da Căng Bóng Và Đàn Hồi Gói 12 Miếng"
+        },
+        {
+          "sku": "8803463007317",
+          "name": "Tinh Chất Vi Kim VT Reedle Shot 100 Collagen Hộp 10 Gói x 2ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0046",
+      "query": "yến mạch giảm cân",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 21,
+      "actual_total_before_cap": 21,
+      "actual_top_items": [
+        {
+          "sku": "0770795004001",
+          "name": "Yến Mạch Ăn Liền Dan.D Pak Gói 1kg"
+        },
+        {
+          "sku": "8936139331277",
+          "name": "Yến mạch trái cây hạt Sunrise 300G"
+        },
+        {
+          "sku": "8938522955466",
+          "name": "Yến Mạch Canada Your Super Food 200G"
+        },
+        {
+          "sku": "8936081293128",
+          "name": "Yến Mạch Nguyên Chất Ăn Liền Xuân An 800G"
+        },
+        {
+          "sku": "8936081293029",
+          "name": "Yến Mạch Úc Xuân An Nguyên Chất Gói 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0060",
+      "query": "máy lọc không khí",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6972217010339",
+          "name": "Vỉ 4 Lõi Lọc Thay Thế Cho Vòi Sen Choice L"
+        },
+        {
+          "sku": "6972217010322",
+          "name": "Hộp 10 Lõi Lọc Thay Thế Cho Vòi Sen Choice L"
+        },
+        {
+          "sku": "8936238000272",
+          "name": "Quạt Để Bàn GOOJODOQ GFS008 Màu Hồng Viền Xanh Ngọc"
+        },
+        {
+          "sku": "8936238000128",
+          "name": "Quạt Cầm Tay GOOJODOQ GFS003 Màu Đen"
+        },
+        {
+          "sku": "8936238000074",
+          "name": "Quạt Cầm Tay GOOJODOQ GFS002 Màu Tím"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0062",
+      "query": "chăn ga gối đệm",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935232064471",
+          "name": "Chăn Trẻ Em Phong Phú L312 160x120cm (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935232063832",
+          "name": "Chăn Trẻ Em Phong Phú WQ30 80x100cm (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936002091666",
+          "name": "Chăn Cotton Choice L 180cm x 220cm (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936002091963",
+          "name": "Chăn Lạnh Ice Cool Ngọc Hạnh 2m x 2.2m (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936002091956",
+          "name": "Chăn Lạnh Ice Cool Ngọc Hạnh 1.6m x 2m (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0064",
+      "query": "thùng rác thông minh",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935275208061",
+          "name": "Thùng Rác Tròn Nắp Lật Inochi Hiro 12L (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935241702227",
+          "name": "Thùng Rác Spriing 5L (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936186271311",
+          "name": "Thùng Rác Treo Tường Megahome 9L (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935275208115",
+          "name": "Sọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 15L (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935275208092",
+          "name": "Sọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 5L (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0069",
+      "query": "rèm cửa",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935006535855",
+          "name": "Kem Chống Muỗi Remos Hương Sả Chanh 70g"
+        },
+        {
+          "sku": "8935006535831",
+          "name": "Kem Chống Muỗi Remos Hương Cam 70g"
+        },
+        {
+          "sku": "8936036831405",
+          "name": "Móc Vuông Chấm Hofaco 65 HPG124 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936036831290",
+          "name": "Móc Vân Gỗ Hofaco HPG113 Vỉ 3 Cái"
+        },
+        {
+          "sku": "8936036830606",
+          "name": "Hít Treo Hofaco HPG88"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0070",
+      "query": "nệm ngủ",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 14,
+      "actual_total_before_cap": 14,
+      "actual_top_items": [
+        {
+          "sku": "8936105162706",
+          "name": "Nệm Ngồi Thông Dụng Choice L Màu Xám"
+        },
+        {
+          "sku": "8936105163109",
+          "name": "Nệm Ngồi Hình Trứng Choice L Màu Xanh"
+        },
+        {
+          "sku": "8936105163086",
+          "name": "Nệm Ngồi Hình Trứng Choice L Màu Xám"
+        },
+        {
+          "sku": "8936105163130",
+          "name": "Nệm Ngồi Gấm Choice L Màu Xanh 42x42cm"
+        },
+        {
+          "sku": "8936105163079",
+          "name": "Nệm Ngồi Thông Dụng Choice L Màu Xanh"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0078",
+      "query": "túi đựng đồ đi chợ",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936059000642",
+          "name": "Túi Đựng Thực Phẩm Phân Hủy Sinh Học Deo Deo 25x35cm 300G"
+        },
+        {
+          "sku": "8936050473247",
+          "name": "Túi Môi Trường Sống Xanh Choice L Size Lớn 40x45x22cm"
+        },
+        {
+          "sku": "8809696920256",
+          "name": "Túi Môi Trường RE:EARTH Choice L Size S Màu Xanh 31x13x42cm"
+        },
+        {
+          "sku": "8936063011979",
+          "name": "Túi Đựng Hộp Cơm Hoa Mai HM-1739"
+        },
+        {
+          "sku": "8809696920218",
+          "name": "Túi Môi Trường RE:EARTH Choice L Size S Màu Trắng 31x13x42cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0094",
+      "query": "quà tặng sinh nhật",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "2311850000002",
+          "name": "Thanh Long Trắng 1.1kg"
+        },
+        {
+          "sku": "8936227250077",
+          "name": "Thạch Xoài Top Fruit Bịch 6 Gói x 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0095",
+      "query": "quà tặng người yêu",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "0400317870004",
+          "name": "Dưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg"
+        },
+        {
+          "sku": "4037719066986",
+          "name": "Kẹo Trái Cây Nhiệt Đới Cavendish & Harvey Hộp 200G"
+        },
+        {
+          "sku": "0400298040007",
+          "name": "Hộp 4 Trái Kiwi Vàng Zespri NewZealand Chín Ngọt 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0096",
+      "query": "quà tặng sếp",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938505609065",
+          "name": "Hộp Quà Du Lịch Tracy Bee Mật Ong Hoa Lệ Chi 350G"
+        },
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "0400317870004",
+          "name": "Dưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg"
+        },
+        {
+          "sku": "0400317880003",
+          "name": "Dưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size L 3.2kg"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0097",
+      "query": "đồ dùng đi phượt",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6941861440106",
+          "name": "Đồ Chơi Phun Nước 3961 (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6971462089992",
+          "name": "Đồ Chơi Phun Nước 922 (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6931998418673",
+          "name": "Dây Ràng Hành Lý ADEGSO"
+        },
+        {
+          "sku": "8936075210391",
+          "name": "Đồ Chơi Xe Cút Kít Đi Biển Nhỏ Hoàng Thu HT2108"
+        },
+        {
+          "sku": "8936042300681",
+          "name": "Đũa Tre Choice L Dùng Một Lần Bộ 50 Đôi"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0100",
+      "query": "chuẩn bị năm học mới",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935324035921",
+          "name": "Balo Chống Gù Thiên Long BP-025/T24 Màu Hồng"
+        },
+        {
+          "sku": "8936123160487",
+          "name": "Bầu Xanh 550G"
+        },
+        {
+          "sku": "8936200652119",
+          "name": "Bầu Xanh Hữu Cơ Bio Ngon 500G"
+        },
+        {
+          "sku": "8938503008358",
+          "name": "Tăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)"
+        },
+        {
+          "sku": "8935324035808",
+          "name": "Balo Chống Gù Thiên Long BP-016/T24 Màu Đỏ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0104",
+      "query": "quà tặng đồng nghiệp",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "4037719066986",
+          "name": "Kẹo Trái Cây Nhiệt Đới Cavendish & Harvey Hộp 200G"
+        },
+        {
+          "sku": "0400298040007",
+          "name": "Hộp 4 Trái Kiwi Vàng Zespri NewZealand Chín Ngọt 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0108",
+      "query": "túi xách đi làm",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935326500908",
+          "name": "Túi Cói Du Lịch RONTAS (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "P2317TUITHOITRANG",
+          "name": "Túi Thời Trang"
+        },
+        {
+          "sku": "8936044391250",
+          "name": "Túi Hồ Sơ A4 Nút Nhựa Cột Dọc STACOM D115 22.5x31cm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935326500038",
+          "name": "Balo Thời Trang Túi Hộp M1 RONTAS (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936044391243",
+          "name": "Túi Hồ Sơ A4 Nút Nhựa Cột Ngang STACOM D114 31x22.5cm (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0109",
+      "query": "balo laptop",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8935326500038",
+          "name": "Balo Thời Trang Túi Hộp M1 RONTAS (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935326500205",
+          "name": "Balo Thời Trang Túi Hộp M3 RONTAS (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0111",
+      "query": "quà tặng khách hàng",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2234590000005",
+          "name": "Thạch Sữa Chua Minion Tâm Hữu Dũng 200G"
+        },
+        {
+          "sku": "8936227250077",
+          "name": "Thạch Xoài Top Fruit Bịch 6 Gói x 500G"
+        },
+        {
+          "sku": "8936023021154",
+          "name": "Thạch Pudding Cherish Trái Cây Vị Xoài 720G"
+        },
+        {
+          "sku": "8938501660275",
+          "name": "Thạch Rau Câu Hương Trái Cây Nhiệt Đới New Choice 1KG"
+        },
+        {
+          "sku": "8935357300232",
+          "name": "Thạch Phô Mai Zai Zai Hộp 420G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0118",
+      "query": "đồ khô",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936001980275",
+          "name": "Xí Muội Mơ Tấn Lộc 580G"
+        },
+        {
+          "sku": "8936001980206",
+          "name": "Tắc Xí Muội Tấn Lộc 580G"
+        },
+        {
+          "sku": "8936010530713",
+          "name": "Trà Hòa Tan Cozy Ice Tea Vị Đào 12 Gói x 15G"
+        },
+        {
+          "sku": "8936010531161",
+          "name": "Trà Hòa Tan Cozy Ice Tea Vị Dâu 12 Gói x 15G"
+        },
+        {
+          "sku": "8936003720817",
+          "name": "Cao Atiso thủy tinh Langfarm 450G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0120",
+      "query": "đồ dùng cá nhân",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "P2316BVSDIANA8M",
+          "name": "Gói Băng Vệ Sinh Daily 8 Miếng (Quấn Kèm)"
+        },
+        {
+          "sku": "P2317DOCHOI",
+          "name": "Đồ Chơi"
+        },
+        {
+          "sku": "8935212813761",
+          "name": "Bộ Sản Phẩm Du Lịch Romano VIP Passion"
+        },
+        {
+          "sku": "8935212813754",
+          "name": "Bộ Sản Phẩm Du Lịch Dành Cho Nam Romano VIP Vision"
+        },
+        {
+          "sku": "8936053921547",
+          "name": "Đồ Trang Trí Tết Các Loại Size Trung (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0121",
+      "query": "sản phẩm chăm sóc cá nhân",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 16,
+      "actual_total_before_cap": 16,
+      "actual_top_items": [
+        {
+          "sku": "6902088982893",
+          "name": "Serum Clear Dandruff Defense Ngừa Gàu Cấp Ẩm Và Làm Dịu Da Đầu 50ml"
+        },
+        {
+          "sku": "8999999581770",
+          "name": "Serum Dưỡng Tóc TRESemmé Keratin Smooth Chai 100ml"
+        },
+        {
+          "sku": "8904280103623",
+          "name": "Tăm Chỉ Kẽ Răng Oral Clean Denta Lush Hộp 50 Cái"
+        },
+        {
+          "sku": "4902430721127",
+          "name": "Chỉ Nha Khoa Oral-B Essential Floss 50M Vỉ 2 Hộp"
+        },
+        {
+          "sku": "9300647000342",
+          "name": "Chỉ Nha Khoa Oral B Essential Floss 50m"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0122",
+      "query": "đồ điện gia dụng",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934578060635",
+          "name": "Ổ Cắm Điện Chịu Nhiệt Điện Quang ĐQ ESK 5BR 42ECO - Đen Đỏ"
+        },
+        {
+          "sku": "8934578750017",
+          "name": "Vợt Muỗi Đa Năng Điện Quang EMR01 BLR - Đen Phối Đỏ"
+        },
+        {
+          "sku": "0411318220002",
+          "name": "Đồ Chơi Bowling MN562031"
+        },
+        {
+          "sku": "0411317650008",
+          "name": "Đồ Chơi Nhựa Sunkids"
+        },
+        {
+          "sku": "0411317880009",
+          "name": "Đồ Chơi Búp Bê XBE110"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0126",
+      "query": "sản phẩm thiên nhiên",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936003728943",
+          "name": "Khoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g"
+        },
+        {
+          "sku": "8936204030135",
+          "name": "Khoai mì làm sạch An Lạc 300g (ea)"
+        },
+        {
+          "sku": "8934777201167",
+          "name": "Bột Năng Tài Ký Gói 400g"
+        },
+        {
+          "sku": "8936221048557",
+          "name": "Mì Khoai Tây Omachi Xốt Bò Hầm Có Cây Thịt Thật Ly 113G"
+        },
+        {
+          "sku": "8936003728868",
+          "name": "Khoai Môn Sấy L'angfarm Túi 120g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0127",
+      "query": "mỹ phẩm thiên nhiên",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936217700537",
+          "name": "Tinh Chất Cocoon Chiết Xuất Nghệ Hưng Yên C22 Sáng Da Chuyên Sâu 30ml"
+        },
+        {
+          "sku": "8936089079519",
+          "name": "Toner Milaganics Hoa Cúc Và AHA Ngừa Mụn Giảm Dầu 250ml"
+        },
+        {
+          "sku": "8888176027180",
+          "name": "Xịt Khoáng Bio-essence Miracle Bio Water Cho Da Nhạy Cảm Chai 100ml"
+        },
+        {
+          "sku": "8936089070219",
+          "name": "Gel Dưỡng Da Milaganics Nha Đam Hộp 300ml"
+        },
+        {
+          "sku": "8936217700186",
+          "name": "Nước Cân Bằng Da Cocoon Chiết Xuất Bí Đao Giảm Mụn Và Dầu 140ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0131",
+      "query": "nhu yếu phẩm",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2273590000004",
+          "name": "Khoai tây vàng 400g"
+        },
+        {
+          "sku": "8938520657201",
+          "name": "Hải Sản Thập Cẩm Đông Lạnh Vifoods 400G"
+        },
+        {
+          "sku": "8935023100050",
+          "name": "Khoai tây đông lạnh Dalat Foods 400G"
+        },
+        {
+          "sku": "8906078780924",
+          "name": "Khoai Tây Cắt Múi Farm Best 1kg"
+        },
+        {
+          "sku": "8938502118379",
+          "name": "Tôm Hấp Đông Lạnh 365 Fresh Size Nhỏ 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0133",
+      "query": "đồ ăn nhanh gọn",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0411318220002",
+          "name": "Đồ Chơi Bowling MN562031"
+        },
+        {
+          "sku": "8936178581619",
+          "name": "Đồ Chơi Rubik 2x2x2 Cresta DK81082"
+        },
+        {
+          "sku": "8936178581633",
+          "name": "Đồ Chơi Rubik 4x4x4 Cresta DK81084"
+        },
+        {
+          "sku": "8936178581091",
+          "name": "Đồ Chơi Máy Bay Winka DK81038"
+        },
+        {
+          "sku": "8936178581602",
+          "name": "Đồ Chơi Rubik 3x3x3 Cresta DK81081"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0134",
+      "query": "món ăn tiện lợi",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0400315840009",
+          "name": "Set Rau Và Trứng Luộc Kho Quẹt Yorihada 200G"
+        },
+        {
+          "sku": "0400295280000",
+          "name": "Gà Dakgangjeong Bánh Gạo Sốt Tương Tỏi Yorihada 350G (ea)"
+        },
+        {
+          "sku": "0400285950005",
+          "name": "Yubu Cá Hồi Xốt Shiracha Yorihada 170G (ea)"
+        },
+        {
+          "sku": "0400301510008",
+          "name": "Combo Gà Rán Và Salad Yorihada 370G (ea)"
+        },
+        {
+          "sku": "8938501349361",
+          "name": "Canh Ăn Liền Asuzac Rong Biển Tôm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0140",
+      "query": "đồ uống sau khi tập gym",
+      "dimension": "generic_vague_intent",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801223013790",
+          "name": "Nước Ilhwa Teatime Vị Khoai Lang Hạt Dẻ Không Đường 500ml"
+        },
+        {
+          "sku": "88935049510877",
+          "name": "Lốc 6 Chai Nước Uống Thể Thao Aquarius 390ml"
+        },
+        {
+          "sku": "8935049510871",
+          "name": "Nước Uống Thể Thao Vận Động Aquarius Chai 390ml"
+        },
+        {
+          "sku": "8997035601505",
+          "name": "Thức Uống Chứa Ion Pocari Sweat Lon 330ML"
+        },
+        {
+          "sku": "8997035601321",
+          "name": "Nước Uống Bù Điện Giải Bổ Sung I-on Pocari Sweat Chai 900ML"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0145",
+      "query": "phụ kiện thú cưng",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936230480928",
+          "name": "Thú Nhồi Bông Chó Con Trong Quả Táo 30cm"
+        },
+        {
+          "sku": "8936230480775",
+          "name": "Thú Nhồi Bông Ngựa Dễ Thương 25cm"
+        },
+        {
+          "sku": "8936189530248",
+          "name": "Thú Nhồi Bông Choice L Hamster Hạnh Phúc 45cm"
+        },
+        {
+          "sku": "8936230480980",
+          "name": "Thú Nhồi Bông Ngựa Dễ Thương 35cm"
+        },
+        {
+          "sku": "8936075215877",
+          "name": "Thú Nhồi Bông Thỏ Blapi Hoàng Thu HT8228 50cm (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0147",
+      "query": "sản phẩm làm sạch nhà cửa",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8802569100991",
+          "name": "Miếng Cọ Rửa Đa Năng 3 Lớp Kháng Khuẩn Sungbo Cleamy 099"
+        },
+        {
+          "sku": "8936013253756",
+          "name": "Xịt Đa Năng Gift Hương Chanh Sả 500ml"
+        },
+        {
+          "sku": "8938502427358",
+          "name": "Miếng Cọ Rửa Kin Kít Bảo Vệ Móng Tay"
+        },
+        {
+          "sku": "8802569103763",
+          "name": "Miếng Cọ Rửa Đa Năng Kháng Khuẩn Sungbo Cleamy Màu Pastel 376"
+        },
+        {
+          "sku": "8802569103435",
+          "name": "Miếng Cọ Rửa Đa Năng Kháng Khuẩn Sungbo Cleamy Soft Pearl 343"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0168",
+      "query": "trái mít",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 7,
+      "actual_total_before_cap": 7,
+      "actual_top_items": [
+        {
+          "sku": "8934743042961",
+          "name": "Trái Cây Sấy Vinamit 100G"
+        },
+        {
+          "sku": "8934743022963",
+          "name": "Trái Cây Sấy Vinamit 250G"
+        },
+        {
+          "sku": "8938506010433",
+          "name": "Trái Cây Sấy Nam Huy Gói 250G"
+        },
+        {
+          "sku": "8934743012964",
+          "name": "Trái Cây Sấy Vinamit Gói 500G"
+        },
+        {
+          "sku": "8935032200185",
+          "name": "Trái Cây Sấy Tổng Hợp Choice L 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0180",
+      "query": "cá khô các loại",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572216304",
+          "name": "Cá Viên Vissan 200G"
+        },
+        {
+          "sku": "8938509558550",
+          "name": "Cá Bò Khô 365 Fresh Tẩm Gia Vị 120G"
+        },
+        {
+          "sku": "8938509558567",
+          "name": "Cá Bò Khô 365 Fresh Tẩm Gia Vị 500G"
+        },
+        {
+          "sku": "8935101606122",
+          "name": "Cá Viên Đức Việt 500G"
+        },
+        {
+          "sku": "8938509558017",
+          "name": "Cá Bò Khô Tẩm Gia Vị Thuận Huệ 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0188",
+      "query": "đường phổi",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935015510621",
+          "name": "Đường Làm Bánh Biên Hòa Pro Gói 1kg"
+        },
+        {
+          "sku": "8935015510539",
+          "name": "Đường Phèn Biên Hòa Pro Gói 500G"
+        },
+        {
+          "sku": "8938544529171",
+          "name": "Đường Phèn Dạng Hạt Đăng Thư 1kg"
+        },
+        {
+          "sku": "7640110704868",
+          "name": "Đường Ăn Kiêng Cỏ Ngọt Equal Stevia Hộp 80g"
+        },
+        {
+          "sku": "8935025911609",
+          "name": "Đường Phèn TSU Cao Cấp Hộp 450G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0196",
+      "query": "bột báng",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935039572049",
+          "name": "Bột Bánh Rán Ajinomoto Vị Truyền Thống 200G"
+        },
+        {
+          "sku": "8859405999196",
+          "name": "Bột Phụ Gia Làm Xốp Bánh StFood Gói 250G"
+        },
+        {
+          "sku": "8934777201112",
+          "name": "Bột Bánh Xèo Tài Ký Gói 400g"
+        },
+        {
+          "sku": "8859405943250",
+          "name": "Bột làm Bánh Pancake Trộn Sẵn Gói 400G"
+        },
+        {
+          "sku": "8938509627058",
+          "name": "Bột Bánh Xèo Meizan Gói 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0198",
+      "query": "trái ổi xá lị",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "8938507713005",
+          "name": "Ổi Ruột Đỏ 700G"
+        },
+        {
+          "sku": "8938507713197",
+          "name": "Ổi Nữ Hoàng 800G"
+        },
+        {
+          "sku": "8938507713180",
+          "name": "Ổi Giống Đài Loan 900G"
+        },
+        {
+          "sku": "8935134594014",
+          "name": "Quả Ô Liu Xanh Latino Bella Không Hạt Hũ 235G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0201",
+      "query": "trái chôm chôm",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 4,
+      "actual_total_before_cap": 4,
+      "actual_top_items": [
+        {
+          "sku": "8938505609119",
+          "name": "Mật Ong Hoa Chôm Chôm Tracybee Hũ 189ml"
+        },
+        {
+          "sku": "8938505609102",
+          "name": "Mật ong hoa chôm chôm Tracybee Chai 600ML"
+        },
+        {
+          "sku": "8938505609072",
+          "name": "Hộp Quà Du Lịch Tracy Bee Mật Ong Hoa Chôm Chôm 350G"
+        },
+        {
+          "sku": "8938505609553",
+          "name": "Hộp Quà Gỗ Đôi Lớn Tracybee Mật Ong Hoa Chôm Chôm 600ml Và Mật Ong Hoa Cà Phê 600ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0217",
+      "query": "trái me",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935337518039",
+          "name": "Bộ Đồ Chơi Thức Ăn BBQ Thịt Nướng"
+        },
+        {
+          "sku": "8935256611521",
+          "name": "Đồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-2 (100 Chi Tiết)"
+        },
+        {
+          "sku": "8935256611620",
+          "name": "Đồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-12 (116 Chi Tiết)"
+        },
+        {
+          "sku": "8935256611545",
+          "name": "Đồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-4 (105 Chi Tiết)"
+        },
+        {
+          "sku": "8935256611514",
+          "name": "Đồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-1 (118 Chi Tiết)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0218",
+      "query": "trái khế",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "0400298040007",
+          "name": "Hộp 4 Trái Kiwi Vàng Zespri NewZealand Chín Ngọt 500G"
+        },
+        {
+          "sku": "2206840000004",
+          "name": "Nho Xanh Không Hạt Nhập Khẩu Mỹ 500G (Size Trái 20-25mm)"
+        },
+        {
+          "sku": "8936052006047",
+          "name": "Hộp 4 Trái Kiwi Vàng Và Kiwi Xanh Zespri New Zealand 500G"
+        },
+        {
+          "sku": "8936052000830",
+          "name": "Hộp 4 Trái Kiwi Xanh Zespri New Zealand 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0219",
+      "query": "trái sung",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8938505512525",
+          "name": "Sâm Dây Ngọc Linh 100G"
+        },
+        {
+          "sku": "4711931030122",
+          "name": "Bánh Mochi Trái Cây 250g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0224",
+      "query": "ếch đồng",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2275550000000",
+          "name": "Ếch Làm Sạch 400G"
+        },
+        {
+          "sku": "8935273672543",
+          "name": "Ống Tiết Kiệm Đáng Yêu (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936013680026",
+          "name": "Trứng Vịt V.food Loại 1 Hộp 6 Quả (EA)"
+        },
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8936013680446",
+          "name": "Trứng Vịt Omega 3+ DHA V.food Hộp 3 Quả (EA)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0228",
+      "query": "ốc bươu",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "9322214011407",
+          "name": "Rượu vang Yellow Tail Moscato 7.5% ABV 750ml"
+        },
+        {
+          "sku": "3147699111154",
+          "name": "Rượu Glen Turner Heritage Double Cask Single Malt Scotch Whisky 40% ABV 700ml"
+        },
+        {
+          "sku": "9322214011520",
+          "name": "Rượu Vang Trắng Yellow Tail Semillon Sauvignon Blanc 11.5% ABV 750ml"
+        },
+        {
+          "sku": "8001968003890",
+          "name": "Rượu Vang Nổ Casa Burti Flute En Rose 11% ABV 750ml"
+        },
+        {
+          "sku": "8431356015110",
+          "name": "Rượu Vang Ngọt Moscatel Azul Mujer 12% ABV 750ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0229",
+      "query": "ốc len",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2173340000004",
+          "name": "Thịt Ốc Móng Tay Tươi 400G"
+        },
+        {
+          "sku": "P2317OCNHOITL",
+          "name": "Ốc Nhồi HS Gói 200G"
+        },
+        {
+          "sku": "8809257330791",
+          "name": "Bột Ngũ Cốc Damtuh Óc Chó Hạnh Nhân 50 Gói 18G"
+        },
+        {
+          "sku": "8934683008867",
+          "name": "Nước Tăng Lực Vị Cà Phê Wake Up 247 Chai 330ml"
+        },
+        {
+          "sku": "18934683008864",
+          "name": "Thùng 24 Chai Nước Tăng Lực Vị Cà Phê Wake-Up 247 330ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0232",
+      "query": "bánh cống",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938506170892",
+          "name": "Bánh Karo Trứng Chà Bông Gói 156G (6 Bánh x 26G)"
+        },
+        {
+          "sku": "8936000130480",
+          "name": "Bánh Cốm Sữa Xuân Thanh Gói 200g"
+        },
+        {
+          "sku": "8936110891158",
+          "name": "Bánh đậu xanh cốm Rồng Vàng Hoàng Gia 300G"
+        },
+        {
+          "sku": "8801204204438",
+          "name": "Bánh Quy CW Hình Vỏ Sò Nhân Táo Hộp 195G"
+        },
+        {
+          "sku": "8934609602605",
+          "name": "Bánh Trứng Cuộn Kem Bơ Sữa Hura Swissroll Hộp 360G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0234",
+      "query": "bánh ú",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0400303130006",
+          "name": "Set Bánh Su Dai POONGMISO Hộp 4 Cái 200G"
+        },
+        {
+          "sku": "8934680114974",
+          "name": "Bánh Cookies Bơ LU Hộp Thiếc 720G"
+        },
+        {
+          "sku": "2305CREAMPUFF800",
+          "name": "ONL-Với Hóa Đơn Từ 800.000đ Nhận 1 Hộp Bánh Su Que 8 Cái 35G"
+        },
+        {
+          "sku": "0400288870003",
+          "name": "Bánh Su Kem POONGMISO (Hộp 4 Cái x 40G)"
+        },
+        {
+          "sku": "8934680114950",
+          "name": "Bánh Cookies Bơ LU 320G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0245",
+      "query": "tép rang",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 1,
+      "actual_total_before_cap": 1,
+      "actual_top_items": [
+        {
+          "sku": "2214220000001",
+          "name": "Tép Đồng 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0255",
+      "query": "thuốc diệt côn trùng",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934732202710",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa Oải Hương Pháp Chai 600ml"
+        },
+        {
+          "sku": "8934732202413",
+          "name": "Xịt Muỗi Jumbo Vape F7 Không Mùi Chai 600ml"
+        },
+        {
+          "sku": "8936013257648",
+          "name": "Xịt Côn Trùng Ars Hệ Nước Không Mùi Chai 500ml"
+        },
+        {
+          "sku": "8936013257525",
+          "name": "Xịt Côn Trùng Ars Hương Lavender Hiệu Quả Kéo Dài 4 Tuần Với Gián Chai 600ml"
+        },
+        {
+          "sku": "8934732202314",
+          "name": "Xịt Muỗi Jumbo Vape F10 Hương Cam Chanh Chai 600ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0257",
+      "query": "dung dịch lau kính",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 16,
+      "actual_total_before_cap": 16,
+      "actual_top_items": [
+        {
+          "sku": "8935006538986",
+          "name": "Dung Dịch Nhỏ Mắt V.Rohto Mineral Tear 13ml"
+        },
+        {
+          "sku": "8936123410254",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Lactacyd Odor Fresh 250ml"
+        },
+        {
+          "sku": "5012251007955",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Beauty Formulas Chai 250ml"
+        },
+        {
+          "sku": "5010724525944",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Femfresh Active Chai 250ml"
+        },
+        {
+          "sku": "8935243501156",
+          "name": "Dung Dịch Vệ Sinh Máy Rửa Chén Mr.Fresh Chai 250ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0258",
+      "query": "túi zip",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6926725195163",
+          "name": "Túi Hút Chân Không Zestta 60x80cm Gói 2 Cái"
+        },
+        {
+          "sku": "8936044391243",
+          "name": "Túi Hồ Sơ A4 Nút Nhựa Cột Ngang STACOM D114 31x22.5cm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6926725195149",
+          "name": "Túi Hút Chân Không Zestta 40x60cm Gói 4 Cái"
+        },
+        {
+          "sku": "8936044391250",
+          "name": "Túi Hồ Sơ A4 Nút Nhựa Cột Dọc STACOM D115 22.5x31cm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "P2317TUITHOITRANG",
+          "name": "Túi Thời Trang"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0259",
+      "query": "túi ziplock",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6926725195149",
+          "name": "Túi Hút Chân Không Zestta 40x60cm Gói 4 Cái"
+        },
+        {
+          "sku": "6926725195163",
+          "name": "Túi Hút Chân Không Zestta 60x80cm Gói 2 Cái"
+        },
+        {
+          "sku": "6926725195187",
+          "name": "Túi Hút Chân Không Zestta 80x100cm Gói 2 Cái"
+        },
+        {
+          "sku": "P2317TUITHOITRANG",
+          "name": "Túi Thời Trang"
+        },
+        {
+          "sku": "8936044391250",
+          "name": "Túi Hồ Sơ A4 Nút Nhựa Cột Dọc STACOM D115 22.5x31cm (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0264",
+      "query": "nồi áp suất",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 12,
+      "actual_total_before_cap": 12,
+      "actual_top_items": [
+        {
+          "sku": "8936040500779",
+          "name": "Nồi Lẩu Inox Tithafac 24cm"
+        },
+        {
+          "sku": "8936209184147",
+          "name": "Nồi Lẩu Comet CM7739 3.5L"
+        },
+        {
+          "sku": "8935259801752",
+          "name": "Nồi Cơm Điện Sunhouse SHD8208C 1L"
+        },
+        {
+          "sku": "8935259804418",
+          "name": "Nồi Cơm Điện Sunhouse SHD8607W 1.8L"
+        },
+        {
+          "sku": "8936209184116",
+          "name": "Nồi Cơm Điện Comet CM8015 1.8L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0265",
+      "query": "nồi nấu áp suất",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 12,
+      "actual_total_before_cap": 12,
+      "actual_top_items": [
+        {
+          "sku": "8936040500779",
+          "name": "Nồi Lẩu Inox Tithafac 24cm"
+        },
+        {
+          "sku": "8935259801752",
+          "name": "Nồi Cơm Điện Sunhouse SHD8208C 1L"
+        },
+        {
+          "sku": "8936209184147",
+          "name": "Nồi Lẩu Comet CM7739 3.5L"
+        },
+        {
+          "sku": "8935259804418",
+          "name": "Nồi Cơm Điện Sunhouse SHD8607W 1.8L"
+        },
+        {
+          "sku": "8936209184116",
+          "name": "Nồi Cơm Điện Comet CM8015 1.8L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0275",
+      "query": "băng dán cá nhân",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4903111370955",
+          "name": "Băng Vệ Sinh Sofy Soft Tampon Hộp 9 Miếng"
+        },
+        {
+          "sku": "8888336002514",
+          "name": "Băng Vệ Sinh Kotex Tampon Regular Hộp 16 Miếng"
+        },
+        {
+          "sku": "8935107203523",
+          "name": "Băng Vệ Sinh Kotex Cool Hàng Ngày Siêu Mỏng Gói 40 Miếng"
+        },
+        {
+          "sku": "8935107202793",
+          "name": "Băng Vệ Sinh Kotex Cool Hàng Ngày Siêu Mỏng Gói 20 Miếng"
+        },
+        {
+          "sku": "8935107214239",
+          "name": "Băng Vệ Sinh Kotex Freedom Maxi Cánh Gói 8 Miếng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0283",
+      "query": "nến thơm",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8850175010500",
+          "name": "Sáp Thơm Glade Hương Biển Phiêu Bồng Hộp 180G"
+        },
+        {
+          "sku": "8801328400327",
+          "name": "Sáp Thơm Glade Hương Hoa Oải Hương Hộp 180G"
+        },
+        {
+          "sku": "8934889801194",
+          "name": "Sáp Thơm Glade Hương Hoa 180g Lô 2 Cái"
+        },
+        {
+          "sku": "8934889801170",
+          "name": "Sáp Thơm Glade Hương Hoa Lài 180g Lô 2 Cái"
+        },
+        {
+          "sku": "4710731012321",
+          "name": "Sáp Trứng Farcent Hương Tươi Mát Hũ 170G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0288",
+      "query": "rổ nhựa đựng đồ",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 44,
+      "actual_top_items": [
+        {
+          "sku": "8936039277446",
+          "name": "Rổ Nhựa Hình Vuông Màu Xám Sữa Choice L 23.8 x 23.8 x 11.5cm"
+        },
+        {
+          "sku": "8936039277590",
+          "name": "Rổ Nhựa Hình Vuông Màu Xanh Rêu Choice L 29.6 x 29.6 x 13cm"
+        },
+        {
+          "sku": "8936039277439",
+          "name": "Rổ Nhựa Hình Vuông Màu Xám Sữa Choice L 16.8 x 16.8 x 10cm"
+        },
+        {
+          "sku": "8936039277576",
+          "name": "Rổ Nhựa Hình Vuông Màu Xanh Rêu Choice L 16.8 x 16.8 x 10cm"
+        },
+        {
+          "sku": "8936039277583",
+          "name": "Rổ Nhựa Hình Vuông Màu Xanh Rêu Choice L 23.8 x 23.8 x 11.5cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0292",
+      "query": "thớt gỗ nhà bếp",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934726029019",
+          "name": "Thớt Gỗ Chữ Nhật Mỏng"
+        },
+        {
+          "sku": "8936063012303",
+          "name": "Thớt Gỗ Tròn Ohi@Ma HM1822 20cm"
+        },
+        {
+          "sku": "8934726010741",
+          "name": "Thớt Gỗ Tò Vò Đức Thành 29.5x20x1.8cm"
+        },
+        {
+          "sku": "8936063012310",
+          "name": "Thớt Tròn Ohi@Ma HM1836 25cm"
+        },
+        {
+          "sku": "8936063012327",
+          "name": "Thớt Tròn Ohi@Ma HM1851 30cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0295",
+      "query": "túi ngủ dã ngoại",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936218294271",
+          "name": "Gối Kê Cổ Chữ U Go&Fly Silky (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8938542724615",
+          "name": "Vali Kéo Du Lịch Go&Fly GF102B Size 24 Inch 11.22/VNC Nhiều Màu"
+        },
+        {
+          "sku": "8935297303102",
+          "name": "Gối Foam Gel Koi Mayhome 30x50x10cm"
+        },
+        {
+          "sku": "8936218294240",
+          "name": "Gối Kê Cổ Tròn Go&Fly Cozy (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936105162843",
+          "name": "Gối Tựa Cổ Kẻ Sọc Choice L (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0297",
+      "query": "đèn pin tích điện",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 37,
+      "actual_top_items": [
+        {
+          "sku": "8936020957883",
+          "name": "Đèn pin cầm tay LED SUNHOUSE SHE-4351"
+        },
+        {
+          "sku": "8936209181320",
+          "name": "Đèn Led Cảm Ứng Comet 3 Chế Độ 5W CT175"
+        },
+        {
+          "sku": "0041333415017",
+          "name": "Pin Kiềm Duracell AA Vỉ 4 Viên"
+        },
+        {
+          "sku": "0041333424019",
+          "name": "Pin Kiềm AAA Duracell Vỉ 4 Viên"
+        },
+        {
+          "sku": "4976680303112",
+          "name": "Vỉ 4 Pin Fujitsu Carbon Zinc AAA R03(4B)F-GP"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0300",
+      "query": "tai nghe không dây",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936009650125",
+          "name": "Tăm Bông Choice L Thân Nhựa Hộp Tròn 200 Que"
+        },
+        {
+          "sku": "6972457413334",
+          "name": "Cáp TPE Và Nylon 1.2m Sạc Nhanh 3 Trong 1 WisdomUp SJX-28"
+        },
+        {
+          "sku": "6971235885684",
+          "name": "Cáp Sạc 1m 2 Đầu WisdomUp SJX 20CC"
+        },
+        {
+          "sku": "6956974997355",
+          "name": "Cáp Silicone 1m Sạc Nhanh Type-C WisdomUp SJX-35CC"
+        },
+        {
+          "sku": "6974894513486",
+          "name": "Cáp PVC Và Nylon Sạc Nhanh 4 Đầu WisdomUp SJX-48"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0301",
+      "query": "tai nghe bluetooth",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 1,
+      "actual_total_before_cap": 1,
+      "actual_top_items": [
+        {
+          "sku": "8938529045634",
+          "name": "Tai Heo Muối Ngọc Thơm 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0303",
+      "query": "loa bluetooth mini",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935012413338",
+          "name": "Bia 333 5.3% ABV Lon 330ml"
+        },
+        {
+          "sku": "4894680033429",
+          "name": "Đồ Chơi Sưu Tầm Mini Brands Home 77555 (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "4894680029996",
+          "name": "Đồ Chơi Sưu Tầm Mini Brands Book 77493 (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "P2317DOCHOI",
+          "name": "Đồ Chơi"
+        },
+        {
+          "sku": "4894680052130",
+          "name": "Đồ Chơi Sưu Tầm Mini Brands Retro Grocery 77802 (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0305",
+      "query": "kem trị hăm tã",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8801051018080",
+          "name": "Kem Đánh Răng Bamboo Salt Muối Hồng Himalaya Hương Hoa Bạc Hà 100g"
+        },
+        {
+          "sku": "8801051110630",
+          "name": "Kem Đánh Răng Perioe White Now Hương Bạc Hà Tuýp 120G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0311",
+      "query": "ti giả cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934673424035",
+          "name": "Bột Ăn Dặm Ridielac Gold Heo Cà Rốt Hộp 200G"
+        },
+        {
+          "sku": "8936192563820",
+          "name": "Đồ Chơi Cho Bé Sunkids 99901/99002/XBE220 (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8934673431033",
+          "name": "Bột Ăn Dặm Ridielac Gold Yến Mạch Sữa 200G"
+        },
+        {
+          "sku": "8934673425032",
+          "name": "Bột Ăn Dặm Ridielac Gold Bò Rau Củ Hộp 200G"
+        },
+        {
+          "sku": "8934673400718",
+          "name": "Bột Ăn Dặm Ridielac Gold Heo Cà Rốt Hộp 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0312",
+      "query": "xe đẩy cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 23,
+      "actual_total_before_cap": 23,
+      "actual_top_items": [
+        {
+          "sku": "8935337512952",
+          "name": "Đồ Chơi Xe Đẩy Bác Sĩ PEEK A BOO PAB057"
+        },
+        {
+          "sku": "8936178584412",
+          "name": "Đồ Chơi Siêu Xe Công Trình Xe Trộn Bê Tông Winka DK81369"
+        },
+        {
+          "sku": "8936178581114",
+          "name": "Đồ Chơi Xe Cảnh Sát Winka DK81040"
+        },
+        {
+          "sku": "8936178581107",
+          "name": "Đồ Chơi Xe Cứu Hỏa Winka DK81039"
+        },
+        {
+          "sku": "8936178584481",
+          "name": "Đồ Chơi Xe Biến Hình Động Vật Chó Sói Winka DK81376"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0313",
+      "query": "xe đẩy em bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935337512952",
+          "name": "Đồ Chơi Xe Đẩy Bác Sĩ PEEK A BOO PAB057"
+        },
+        {
+          "sku": "8936178581107",
+          "name": "Đồ Chơi Xe Cứu Hỏa Winka DK81039"
+        },
+        {
+          "sku": "8936178584498",
+          "name": "Đồ Chơi Xe Biến Hình Động Vật Hổ Vằn Winka DK81377"
+        },
+        {
+          "sku": "8936178584481",
+          "name": "Đồ Chơi Xe Biến Hình Động Vật Chó Sói Winka DK81376"
+        },
+        {
+          "sku": "8936178584528",
+          "name": "Đồ Chơi Xe Biến Hình Động Vật Rắn Hổ Mang Winka DK81380"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0315",
+      "query": "ghế ăn cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8936190714606",
+          "name": "Ghế Xếp Lớn BioHome (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936039277101",
+          "name": "Ghế Nhựa Thấp Tự Lập Chống Trượt Màu Xanh Rêu"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0318",
+      "query": "yếm ăn cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935334000957",
+          "name": "Bộ Muslin Bé Gái Ecobambi Áo Yếm Quần Shorts Size 2 - 6 Tuổi"
+        },
+        {
+          "sku": "8934673431033",
+          "name": "Bột Ăn Dặm Ridielac Gold Yến Mạch Sữa 200G"
+        },
+        {
+          "sku": "8934673400824",
+          "name": "Bột Ăn Dặm Ridielac Gold Yến Mạch Sữa 200G"
+        },
+        {
+          "sku": "8934673501149",
+          "name": "Lốc 4 Hũ Sữa Chua Vinamilk Susu Cream Sữa Tươi 60G"
+        },
+        {
+          "sku": "8938503416023",
+          "name": "Tổ Yến Chưng Sẵn Yến Việt Lọ 70ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0319",
+      "query": "yếm chống thấm",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935006535831",
+          "name": "Kem Chống Muỗi Remos Hương Cam 70g"
+        },
+        {
+          "sku": "4800888210418",
+          "name": "Kem Ngăn Mùi Dove Serum Sáng Mịn Với Collagen & Vitamin E Chai 40ml"
+        },
+        {
+          "sku": "8850007070443",
+          "name": "Kem Dưỡng Da Johnson & Johnson Chứa Sữa Vitamin A&E Hũ 50G"
+        },
+        {
+          "sku": "4800888210395",
+          "name": "Kem Ngăn Mùi Dove Serum Omega 6 Dưỡng Sáng Chai 50ml"
+        },
+        {
+          "sku": "4891080614470",
+          "name": "Kem Dưỡng Ẩm Neutrogena Hydro Boost Cấp Nước Cho Da Dầu 50G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0340",
+      "query": "túi thơm khử mùi tủ quần áo",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4710731091050",
+          "name": "Túi Thơm Farcent Hương Ban Mai 10g"
+        },
+        {
+          "sku": "8935243505581",
+          "name": "Túi Thơm Pure Aroma Hương Cherry Blossoms Túi 26g"
+        },
+        {
+          "sku": "8935243505598",
+          "name": "Túi Thơm Pure Aroma Hương Romantic Amber Túi 26g"
+        },
+        {
+          "sku": "4710731091012",
+          "name": "Túi Thơm Farcent Hương Hoa Hồng 10g"
+        },
+        {
+          "sku": "8935243506786",
+          "name": "Túi Thơm Mr.Fresh Hương GSG09 Hương Đại Dương 10g x 3 Gói"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0342",
+      "query": "gói hút ẩm chống mốc",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4710731850121",
+          "name": "Hộp Hút Ẩm Farcent Hương Oải Hương 400ml"
+        },
+        {
+          "sku": "6926725195149",
+          "name": "Túi Hút Chân Không Zestta 40x60cm Gói 4 Cái"
+        },
+        {
+          "sku": "6926725195187",
+          "name": "Túi Hút Chân Không Zestta 80x100cm Gói 2 Cái"
+        },
+        {
+          "sku": "6922683100805",
+          "name": "Hộp Hút Ẩm Zestta 250G"
+        },
+        {
+          "sku": "6926725195163",
+          "name": "Túi Hút Chân Không Zestta 60x80cm Gói 2 Cái"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0353",
+      "query": "mì tôn",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936077114307",
+          "name": "Mì Hoành Thánh Hải Sản Bamboo 250G"
+        },
+        {
+          "sku": "8936048470012",
+          "name": "Mì 3 Miền Tôm Chua Cay 65G"
+        },
+        {
+          "sku": "8850987141508",
+          "name": "Mì MaMa Hương Vị Thịt Bò Hầm Gói 60g"
+        },
+        {
+          "sku": "0400314450001",
+          "name": "Mì Tôm Thố Vị Kim Chi Bò Yorihada 690G"
+        },
+        {
+          "sku": "8936003728943",
+          "name": "Khoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0364",
+      "query": "coka cola",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "48935049502263",
+          "name": "Lốc 6 Chai Nước Ngọt Coca Cola Giảm Đường 600ml/Chai"
+        },
+        {
+          "sku": "8935049590019",
+          "name": "Lốc 6 Lon Nước Ngọt Coca Cola 320ml"
+        },
+        {
+          "sku": "4902102019187",
+          "name": "Nước Ngọt Coca Cola Nhật Lon 160ml"
+        },
+        {
+          "sku": "18935049502286",
+          "name": "Nước Ngọt Coca Cola Light Lốc 24 Lon 320ml"
+        },
+        {
+          "sku": "48935049510145",
+          "name": "Lốc 6 Chai Nước Ngọt Coca Cola Zero 1.5L/Chai"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0365",
+      "query": "netsle",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2243760000004",
+          "name": "Táo Dazzle nhập khẩu New Zealand (size 5-7 Trái/kg) 1kg"
+        },
+        {
+          "sku": "8934804044453",
+          "name": "Sữa Lúa Mạch Nestle Millo Ít Đường Hộp 110ml"
+        },
+        {
+          "sku": "8936034876651",
+          "name": "Dồi Sụn MEATDeli 300G"
+        },
+        {
+          "sku": "4800361005500",
+          "name": "Bánh Ăn Sáng Nestle Cornflakes 275G"
+        },
+        {
+          "sku": "9556073306835",
+          "name": "Găng Tay Cao Su Rubberex Super Nitrile NL15 Màu Xanh"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0366",
+      "query": "vinamil",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934743022901",
+          "name": "Mít Sấy Vinamit 250G"
+        },
+        {
+          "sku": "8934743012131",
+          "name": "Mít Sấy Vinamit 210G"
+        },
+        {
+          "sku": "8934743032900",
+          "name": "Mít Sấy Vinamit 150G"
+        },
+        {
+          "sku": "8934743211046",
+          "name": "Thơm Dẻo Vinamit 100G"
+        },
+        {
+          "sku": "8934743012902",
+          "name": "Mít Sấy Vinamit 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0368",
+      "query": "oshi lays",
+      "dimension": "misspelling",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5202631000557",
+          "name": "Ô Liu Olympias Tím Không Hạt 370G"
+        },
+        {
+          "sku": "8936040055590",
+          "name": "Gối Ôm Cá Mập Hometex"
+        },
+        {
+          "sku": "8936002091741",
+          "name": "Gối Trẻ Em Có Vỏ Tencel Ngọc Hạnh 22x70cm (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935134594045",
+          "name": "Quả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G"
+        },
+        {
+          "sku": "8936040051325",
+          "name": "Gối Ôm Dây Kéo Phối Hometex 37x105cm (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0369",
+      "query": "kit cat",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8850477001640",
+          "name": "Thức Ăn Cho Mèo Trưởng Thành Me-O Vị Cá Thu 1.2kg"
+        },
+        {
+          "sku": "6972229785942",
+          "name": "Cát Vệ Sinh Cho Mèo Max Clean Hương Cà Phê 4kg"
+        },
+        {
+          "sku": "6973373206338",
+          "name": "Cát Vệ Sinh Cho Mèo Max Clean Hương Trà Xanh Giúp Thử Máu Trong Chất Thải Túi 2.4kg"
+        },
+        {
+          "sku": "4520699643815",
+          "name": "Hạt Thức Ăn Cho Mèo Silver Spoon Vị Thịt Gà Túi 1kg"
+        },
+        {
+          "sku": "6972229785966",
+          "name": "Cát Vệ Sinh Cho Mèo Max Clean Hương Chanh Túi 4kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0370",
+      "query": "oreoo bánh",
+      "dimension": "misspelling",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 15,
+      "actual_total_before_cap": 15,
+      "actual_top_items": [
+        {
+          "sku": "8934680113274",
+          "name": "Bánh Oreo Vani 270.6G"
+        },
+        {
+          "sku": "8934680045940",
+          "name": "Bánh Oreo Socola Pie Vị Nguyên Bản Hộp 336G"
+        },
+        {
+          "sku": "8934680033442",
+          "name": "Bánh Quế Oreo Vị Socola 54G"
+        },
+        {
+          "sku": "6901668053121",
+          "name": "Bánh Oreo Nhân Kem Vani 61.25G"
+        },
+        {
+          "sku": "8992760221028",
+          "name": "Bánh Quy Oreo Vị Kem Vani 105G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0371",
+      "query": "pepci",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 21,
+      "actual_total_before_cap": 21,
+      "actual_top_items": [
+        {
+          "sku": "8934588013133",
+          "name": "Nước Ngọt PEPSI Chai 390ML"
+        },
+        {
+          "sku": "8934588013669",
+          "name": "Nước Ngọt Pepsi Chai 600ml"
+        },
+        {
+          "sku": "8934588013065",
+          "name": "Nước Ngọt PEPSI Chai 1.5L"
+        },
+        {
+          "sku": "8934588012112",
+          "name": "Nước Ngọt PEPSI Lon 320ml"
+        },
+        {
+          "sku": "8934588662119",
+          "name": "Nước Ngọt Pepsi Không Calo Lon 320ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0376",
+      "query": "nc mắm",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935063604709",
+          "name": "Mắm Nêm Cá Cơm Ngọc Liên Chai 250ml"
+        },
+        {
+          "sku": "8934712007021",
+          "name": "Mắm Nêm Thuận Phát Pha Sẵn Chai 290G"
+        },
+        {
+          "sku": "8934707027478",
+          "name": "Hạt Nêm Knorr Nấm Hương Organic 380G"
+        },
+        {
+          "sku": "8935332300059",
+          "name": "Nước Mắm Cá Cơm Tròn Vị 15N Minh Nam Food Chai 500Ml"
+        },
+        {
+          "sku": "8935063602552",
+          "name": "Mắm tôm bắc Ngọc Liên chai 220g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0396",
+      "query": "quat máy",
+      "dimension": "misspelling",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 1,
+      "actual_total_before_cap": 1,
+      "actual_top_items": [
+        {
+          "sku": "8934868197461",
+          "name": "Nước Giặt OMO Matic Cho Quần Áo Bé Yêu Cho Máy Giặt Cửa Trên Và Cửa Trước Túi 3.8kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0402",
+      "query": "túi rát",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935086500644",
+          "name": "Túi Rác Màu Choice L 55x65cm 1kg (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935086500620",
+          "name": "Túi Rác Đen Choice L Loại Lớn 64x78cm 1kg"
+        },
+        {
+          "sku": "8935086500606",
+          "name": "Túi Rác Đen Choice L Loại Nhỏ 50x55cm 1kg"
+        },
+        {
+          "sku": "8936198132181",
+          "name": "Túi Rác Màu Có Quai Choice L Hương Lavender 60x90cm 750G"
+        },
+        {
+          "sku": "8935086500651",
+          "name": "Túi Rác Màu Choice L 64x78cm 1kg (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0404",
+      "query": "quả soài",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936172870917",
+          "name": "Xoài Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "8935032202684",
+          "name": "Xoài Sấy Dẻo Choice L Hộp 180G"
+        },
+        {
+          "sku": "8934743181042",
+          "name": "Xoài Dẻo Vinamit Gói 100G"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "8934743174044",
+          "name": "Xoài Keo Sấy Vinamit Gói 100g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0405",
+      "query": "trái đủ đủ",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8936003728769",
+          "name": "Táo Sấy Khô L'angfarm 300G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "8934743201047",
+          "name": "Mận Dẻo Vinamit 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0406",
+      "query": "quả ổi xá",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938507713005",
+          "name": "Ổi Ruột Đỏ 700G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "8938507713197",
+          "name": "Ổi Nữ Hoàng 800G"
+        },
+        {
+          "sku": "8938507713180",
+          "name": "Ổi Giống Đài Loan 900G"
+        },
+        {
+          "sku": "8934743191041",
+          "name": "Ổi Sấy Dẻo Vinamit 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0420",
+      "query": "đường phèng",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938544529157",
+          "name": "Đường Phèn Dạng Bột Đăng Thư 500G"
+        },
+        {
+          "sku": "8938544529072",
+          "name": "Đường Phèn Dạng Hạt Nguyên Chất Đăng Thư 500G"
+        },
+        {
+          "sku": "8938544529010",
+          "name": "Đường Phèn Đặc Biệt Đăng Thư Túi 500G"
+        },
+        {
+          "sku": "8938500527012",
+          "name": "Đường Phèn Đặc Biệt Anh Đăng Gói 0.5 KG"
+        },
+        {
+          "sku": "8934746055760",
+          "name": "Bánh Phồng Hạt Sen Sa Giang Gói 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0424",
+      "query": "tổ iến",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938503416146",
+          "name": "Tổ Yến Chưng Sẵn Yến Việt Vị Hạt Sen 70ml"
+        },
+        {
+          "sku": "8938503416115",
+          "name": "Tổ Yến Nguyên Chất Chưng Sẵn Hương Sen Yến Việt Hộp 6 Lọ 70ML"
+        },
+        {
+          "sku": "8938503416023",
+          "name": "Tổ Yến Chưng Sẵn Yến Việt Lọ 70ml"
+        },
+        {
+          "sku": "8936065120259",
+          "name": "Nước Yến Cao Cấp Thiên Hoàng 12% (Hộp 6 Lọ x 70ML)"
+        },
+        {
+          "sku": "8936065120167",
+          "name": "Nước Yến Sào Thiên Hoàng Không Đường Hũ 70ML (Lốc 6 Hũ)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0429",
+      "query": "toothpaste",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4010439201387",
+          "name": "Kem Đánh Răng Lacalut White 75ml"
+        },
+        {
+          "sku": "8992695705167",
+          "name": "Kem Đánh Răng Sensodyne Bạc Hà Tuýp 160G"
+        },
+        {
+          "sku": "0037000907855",
+          "name": "Kem Đánh Răng Crest Trắng Răng Tuýp 153G"
+        },
+        {
+          "sku": "4891338031042",
+          "name": "Kem Đánh Răng Darlie Trắng Sáng Multi-Care 140g"
+        },
+        {
+          "sku": "5011309895513",
+          "name": "Kem Đánh Răng Eucryl Trắng Răng Hương Bạc Hà Tuýp 50ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0430",
+      "query": "diaper",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4560119224811",
+          "name": "Dầu Gội Diane Chống Rụng & Làm Phồng Tóc 450ml"
+        },
+        {
+          "sku": "8934755051371",
+          "name": "Tã Quần Baby Love Size L Bịch 48 Miếng"
+        },
+        {
+          "sku": "8935107202410",
+          "name": "Tã Dán Huggies Dành Cho Trẻ Sơ Sinh NB70 Size New Born Gói 70 Miếng"
+        },
+        {
+          "sku": "8934755051661",
+          "name": "Tã Quần Baby Love Size XXXL Bịch 33 Miếng"
+        },
+        {
+          "sku": "8935107202380",
+          "name": "Miếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0431",
+      "query": "instant noodle",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801043015349",
+          "name": "Mì Ăn Liền Nongshim Mupama Gói 122g"
+        },
+        {
+          "sku": "8936049051159",
+          "name": "Mì Ăn Liền Ottogi Jin Không Cay Gói 120G"
+        },
+        {
+          "sku": "8934579100408",
+          "name": "Mì Tôm Gà Có Dầu Sa Tế Miliket Gói 75G"
+        },
+        {
+          "sku": "8936000826017",
+          "name": "Mì Unif chay nấm đông cô gói 80g"
+        },
+        {
+          "sku": "8801043014786",
+          "name": "Mì AnSungtangmyun Lốc 5 Gói 125G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0434",
+      "query": "toilet paper",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 17,
+      "actual_total_before_cap": 17,
+      "actual_top_items": [
+        {
+          "sku": "8935018801597",
+          "name": "Giấy Vệ Sinh Pulppy Classic 2 Lớp Lốc 9 Cuộn"
+        },
+        {
+          "sku": "P23172CUONGVSHOMELUX",
+          "name": "Lô 2 Cuộn Giấy Vệ Sinh Homelux (Quấn Kèm)"
+        },
+        {
+          "sku": "P23172CUONGVSCORELEX",
+          "name": "Lô 2 Cuộn Giấy Vệ Sinh Corelex Không Lõi (Quấn Kèm)"
+        },
+        {
+          "sku": "8938507729327",
+          "name": "Giấy Vệ Sinh Cuộn Lớn Vinaroll 2 Lớp 700G"
+        },
+        {
+          "sku": "8936020763156",
+          "name": "Lốc 12 Cuộn Giấy Vệ Sinh Elène Ultra 5 Lớp"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0435",
+      "query": "laundry detergent",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "P2317NGBLUE2.1L",
+          "name": "Túi Nước Giặt Blue 2.1L"
+        },
+        {
+          "sku": "8935212830034",
+          "name": "Nước Giặt Xả Maxkleen Hương Nước Hoa Huyền Diệu Cho Máy Giặt Cửa Trước Và Cửa Trên Túi 2.4kg"
+        },
+        {
+          "sku": "8934868187707",
+          "name": "Nước Giặt Dưỡng Vải Comfort Hương Thanh Lịch Cho Máy Giặt Cửa Trước Và Cửa Trên Túi 3.8kg"
+        },
+        {
+          "sku": "8936013251158",
+          "name": "Nước Giặt Gift Hương Nước Hoa Ellie Cho Máy Giặt Cửa Trước Và Cửa Trên Túi 3.6kg"
+        },
+        {
+          "sku": "8936013251172",
+          "name": "Nước Giặt Gift Hương Nước Hoa Ambery Cho Máy Giặt Cửa Trước Và Cửa Trên Túi 3.6kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0436",
+      "query": "hand sanitizer",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8936131183904",
+          "name": "Gel Rửa Tay Choice L Hương Cam Sả 1.5kg"
+        },
+        {
+          "sku": "8934868171003",
+          "name": "Nước Rửa Tay Lifebuoy Công thức Vitamin+ Bảo Vệ Vượt Trội 10 Can 4kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0438",
+      "query": "baby formula",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936170702548",
+          "name": "Lốc 4 Hộp Sữa Dinh Dưỡng Oggi Gold Pro 110ml"
+        },
+        {
+          "sku": "8936170701558",
+          "name": "Sữa Uống Dinh Dưỡng Colos Gain Lốc 4 Hộp 110ml"
+        },
+        {
+          "sku": "8886451000057",
+          "name": "Sữa Similac Mom IQ Plus Hương Vani 900G"
+        },
+        {
+          "sku": "18935217470225",
+          "name": "Thùng 24 Hộp Sữa Dinh Dưỡng Từ Sữa Tươi TH true FORMULA 110ml (Dành Cho Trẻ 1-2 Tuổi)"
+        },
+        {
+          "sku": "8935217470228",
+          "name": "Lốc 4 Hộp Sữa Dinh Dưỡng TH True FORMULA 110ml (Dành Cho Trẻ 1-2 Tuổi)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0441",
+      "query": "potato chips",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 28,
+      "actual_total_before_cap": 28,
+      "actual_top_items": [
+        {
+          "sku": "9555319109179",
+          "name": "Bánh Khoai Tây Win2 Vị Rau Củ 120G"
+        },
+        {
+          "sku": "9555319109186",
+          "name": "Bánh Khoai Tây Win2 Vị BBQ 120G"
+        },
+        {
+          "sku": "9555319109605",
+          "name": "Bánh Khoai Tây Win2 Vị Kem Chua 120G"
+        },
+        {
+          "sku": "9555319109193",
+          "name": "Bánh Khoai Tây Win2 Vị Ngô Ngọt 120G"
+        },
+        {
+          "sku": "8934680011709",
+          "name": "Khoai Tây Chiên Slide Vị Phô Mai 90G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0450",
+      "query": "orange juice",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 28,
+      "actual_total_before_cap": 28,
+      "actual_top_items": [
+        {
+          "sku": "8934588253119",
+          "name": "Sữa Trái Cây Juicy Milk Twister Vị Cam Chai 320ml"
+        },
+        {
+          "sku": "8936127791014",
+          "name": "Nước Ép Cam TH True Juice 350ML"
+        },
+        {
+          "sku": "8934588193552",
+          "name": "Nước Cam Ép Twister Chai 450ML"
+        },
+        {
+          "sku": "5900500037061",
+          "name": "Nước Ép Costa Vị Cam 2L"
+        },
+        {
+          "sku": "8934588193101",
+          "name": "Nước Trái Cây Twister Hương Cam Chai 1L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0451",
+      "query": "mineral water",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 32,
+      "actual_top_items": [
+        {
+          "sku": "8935005801012",
+          "name": "Nước Khoáng Thiên Nhiên Lavie Chai 1.5L"
+        },
+        {
+          "sku": "8935049500544",
+          "name": "Nước Khoáng Dasani Chai 510ml"
+        },
+        {
+          "sku": "8935005800008",
+          "name": "Nước Khoáng Thiên Nhiên Lavie Bình 5L"
+        },
+        {
+          "sku": "3068320055008",
+          "name": "Nước Khoáng Thiên Nhiên Evian Chai 500ML"
+        },
+        {
+          "sku": "8934774000800",
+          "name": "Nước khoáng thiên nhiên Vikoda chai 1.5L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0452",
+      "query": "tissue paper",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4897024513021",
+          "name": "Khăn Giấy Rút Tempo Neutral 3 Lớp 90 Tờ"
+        },
+        {
+          "sku": "6901236345641",
+          "name": "Khăn Giấy Rút TeMPo Neutral 4 Lớp Gói 90 Tờ"
+        },
+        {
+          "sku": "8938558334518",
+          "name": "Khăn Giấy Rút VinaTissue Premier Treo Tường 4 Lớp Gói 320 Tờ"
+        },
+        {
+          "sku": "8936020762630",
+          "name": "Khăn Giấy Rút Elène 4 Lớp Size XL Gói 130 Tờ"
+        },
+        {
+          "sku": "8936020575698",
+          "name": "Khăn Giấy Rút Silkwell 3 Lớp 200 Tờ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0454",
+      "query": "body wash",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801051294187",
+          "name": "Sữa Tắm On The Body Hương Lavender Chai 730ml"
+        },
+        {
+          "sku": "8801051299045",
+          "name": "Sữa Tắm ON: The Body Hương Citrus Lavender Chai 1.1L"
+        },
+        {
+          "sku": "8801051294170",
+          "name": "Sữa Tắm On The Body Hương Pure Musk Chai 730ml"
+        },
+        {
+          "sku": "4013356253484",
+          "name": "Gel Tắm Apart Hương Violet Chai 500ml"
+        },
+        {
+          "sku": "4013356253460",
+          "name": "Gel Tắm Apart Hương Hoa Nhài Chai 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0456",
+      "query": "cotton bud",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938503008341",
+          "name": "Tăm Bông Sakura TB01 200 Cái (EA)"
+        },
+        {
+          "sku": "8938500579943",
+          "name": "Tăm Bông Niva AJ2 200 Cái (EA)"
+        },
+        {
+          "sku": "8938503008358",
+          "name": "Tăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)"
+        },
+        {
+          "sku": "8936097106122",
+          "name": "Tăm Bông Niva AZP3 Túi 200 Que"
+        },
+        {
+          "sku": "8936009650125",
+          "name": "Tăm Bông Choice L Thân Nhựa Hộp Tròn 200 Que"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0457",
+      "query": "baby wipes",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 3,
+      "actual_total_before_cap": 3,
+      "actual_top_items": [
+        {
+          "sku": "8936072190221",
+          "name": "Khăn Ướt Em Bé Baby Care Hương Phấn Thơm 10 Miếng"
+        },
+        {
+          "sku": "8936113380475",
+          "name": "Khăn Ướt Em Bé Choice L Yến Mạch Gói 80 Miếng"
+        },
+        {
+          "sku": "8934755035289",
+          "name": "Khăn Ướt Em Bé Bobby Không Mùi Hương 100 Miếng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0458",
+      "query": "라면",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934563165017",
+          "name": "Mì Ăn Liền Đệ Nhất Vị Thịt Bằm 5 Gói x 82G"
+        },
+        {
+          "sku": "8936071070227",
+          "name": "Mì Nissin 365 Chay Rong Biển Gói 66G"
+        },
+        {
+          "sku": "8801045524672",
+          "name": "Mì Gói Phô Mai Ottogi 111G"
+        },
+        {
+          "sku": "8936028640077",
+          "name": "Mì Koreno Vị Tôm Gói 100G"
+        },
+        {
+          "sku": "8936071070388",
+          "name": "Mì Ramen Thịt Hầm Tonkotsu Nissin Gói 97G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0459",
+      "query": "김치",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936183060574",
+          "name": "Kim Chi Hẹ Choice L 300G"
+        },
+        {
+          "sku": "8936000751142",
+          "name": "Kim Chi Hàn Quốc Ichiban Hộp 450G"
+        },
+        {
+          "sku": "8936022491736",
+          "name": "Kim Chi Cắt Shin Sang Hộp 600G"
+        },
+        {
+          "sku": "8935101608522",
+          "name": "Kim Chi Củ Cải Jongga 150G"
+        },
+        {
+          "sku": "8935297102217",
+          "name": "Kim Chi Dưa Cải Bibigo Gói 100g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0460",
+      "query": "우유",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935007101134",
+          "name": "Sữa Tươi Thanh Trùng Lothamilk Không Đường Chai 500ml"
+        },
+        {
+          "sku": "0070074118659",
+          "name": "Sữa Pha Sẵn Ensure Original Hương Vani Chai 237ml"
+        },
+        {
+          "sku": "9415522285001",
+          "name": "Sữa Tiệt Trùng Nguyên Kem Meadow Fresh 1L (EA)"
+        },
+        {
+          "sku": "8935318100055",
+          "name": "Sữa Tươi Thanh Trùng Dalat Milk Ít Đường 180ml"
+        },
+        {
+          "sku": "8934673101103",
+          "name": "Sữa Dinh Dưỡng Vinamilk ADM Ít Đường Lốc 4 Hộp 110ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0461",
+      "query": "간장",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4901515118197",
+          "name": "Nước Tương KIKKOMAN 250ML"
+        },
+        {
+          "sku": "0078895147728",
+          "name": "Tương Hột LEE KUM KEE Hũ 240g"
+        },
+        {
+          "sku": "8936136163734",
+          "name": "Nước Tương Chinsu Tỏi Ớt Chai 330ML"
+        },
+        {
+          "sku": "4901515118579",
+          "name": "Nước Tương Fragrance Đặc Biệt Kikkoman Chai 600ML"
+        },
+        {
+          "sku": "0078895153767",
+          "name": "Hắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0462",
+      "query": "소주",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801048178018",
+          "name": "Rượu Soju Jinro Dâu 13% ABV 360ml"
+        },
+        {
+          "sku": "8801048181292",
+          "name": "Rượu Soju Jinro Đào 13% ABV 360ml"
+        },
+        {
+          "sku": "8801048921003",
+          "name": "Rượu Soju Jinro Bưởi 13% ABV 360ml"
+        },
+        {
+          "sku": "8801048181445",
+          "name": "Rượu Soju Jinro Vị Dưa Lưới 13% ABV 360ml"
+        },
+        {
+          "sku": "8801048101023",
+          "name": "Rượu Soju Jinro Is Black 16% ABV 360ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0463",
+      "query": "고추장",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 15,
+      "actual_total_before_cap": 15,
+      "actual_top_items": [
+        {
+          "sku": "8934637514673",
+          "name": "Tương Ớt Sriracha Chai 520 G"
+        },
+        {
+          "sku": "8936221040117",
+          "name": "Tương Ớt Chinsu Chai 2Kg"
+        },
+        {
+          "sku": "8934637514413",
+          "name": "Tương ớt Cholimex Nắp Xuôi 250G"
+        },
+        {
+          "sku": "8850343000111",
+          "name": "Tương Ớt Heinz Cay Nồng 300G"
+        },
+        {
+          "sku": "8809877612284",
+          "name": "Lươn Biển Nướng Xốt Tiêu Đỏ 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0464",
+      "query": "미역",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801052008233",
+          "name": "Rong Biển Khô Miwon Gói 100g"
+        },
+        {
+          "sku": "8809014625948",
+          "name": "Rong Biển Nấu Canh Miyul Gói 50G"
+        },
+        {
+          "sku": "8936071070227",
+          "name": "Mì Nissin 365 Chay Rong Biển Gói 66G"
+        },
+        {
+          "sku": "8938546870028",
+          "name": "Thịt Bò Cao Cấp Bít Tết Striploin Okini 250G"
+        },
+        {
+          "sku": "8935036280275",
+          "name": "Bột Chiên Xù Miwon Gói 100g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0465",
+      "query": "즉석밥",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801045890418",
+          "name": "Cơm Trắng Hàn Quốc Ottogi 210G (EA)"
+        },
+        {
+          "sku": "8936073170239",
+          "name": "Cơm Tươi Đậu Gà Cây Thị 240G"
+        },
+        {
+          "sku": "8801007310572",
+          "name": "Cơm Trắng Ăn Liền CJ Hộp 210g"
+        },
+        {
+          "sku": "8936073170215",
+          "name": "Cơm Tươi Hạt Sen Cây Thị 240G"
+        },
+        {
+          "sku": "8936073170222",
+          "name": "Cơm Tươi Gạo Lứt Cây Thị 240G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0468",
+      "query": "ramyeon",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 37,
+      "actual_top_items": [
+        {
+          "sku": "8801043015981",
+          "name": "Mì Nongshim Shin Ramyun 114G"
+        },
+        {
+          "sku": "8801043014809",
+          "name": "Mì Nongshim Shin Ramyun Multi 120G"
+        },
+        {
+          "sku": "8801043041577",
+          "name": "Mì Black Nongshim Shin Ramyun 130G"
+        },
+        {
+          "sku": "8801043028158",
+          "name": "Mì Nongshim Kimchi Ramyun Ly 75G"
+        },
+        {
+          "sku": "8801043070362",
+          "name": "Mì Nongshim Shin Ramyun Vị Tomyum 123G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0475",
+      "query": "samgyeopsal sauce",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801005931472",
+          "name": "Sốt Soondubu Jjigae Sempio Gói 110G"
+        },
+        {
+          "sku": "8801073411388",
+          "name": "Sốt Chấm Gà Cay Samyang Vị Truyền Thống Chai 200G"
+        },
+        {
+          "sku": "8801005117036",
+          "name": "Nước Tương Sempio Yangjo 701 500ml"
+        },
+        {
+          "sku": "8934804054070",
+          "name": "Dầu Hào Maggi Bào Ngư Chai 820G (EA)"
+        },
+        {
+          "sku": "0078895155310",
+          "name": "Dầu Hào LEE KUM KEE KUM CHUN Chai 255g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0476",
+      "query": "korean seaweed",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 7,
+      "actual_total_before_cap": 7,
+      "actual_top_items": [
+        {
+          "sku": "8809146902238",
+          "name": "Rong Biển Ăn Liền Gimjaban Vị Hải Sản 40g"
+        },
+        {
+          "sku": "8936122440023",
+          "name": "Rong Biển K-Food Cuộn Cơm Gói 20g"
+        },
+        {
+          "sku": "8809146902214",
+          "name": "Rong Biển Ăn Liền Gimjaban Vị Ớt Cay 40g"
+        },
+        {
+          "sku": "8935297103863",
+          "name": "Rong Biển Giòn Vị Nước Tương Kiểu Hàn Quốc bibigo Gói 50G"
+        },
+        {
+          "sku": "8936028641319",
+          "name": "Mì Koreno Rong Biển Vị Ngao Gói 102G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0477",
+      "query": "みそ",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0886518000455",
+          "name": "Canh Rong Biển Đậu Hũ Marukome Bịch 8 Gói 19G"
+        },
+        {
+          "sku": "8936140790315",
+          "name": "Mực Xé Tẩm Gia Vị Đầm Sen 100g"
+        },
+        {
+          "sku": "8938530115081",
+          "name": "Gạo Còn Cám Home Rice 2kg"
+        },
+        {
+          "sku": "0886518000462",
+          "name": "Canh Rong Biển Marukome Bịch 8 Gói 19G"
+        },
+        {
+          "sku": "8938524577390",
+          "name": "Xúc Xích School Phô Mai Shinshu 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0478",
+      "query": "しょうゆ",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936000750206",
+          "name": "Tàu hũ trắng Ichi-Sakura 240G"
+        },
+        {
+          "sku": "8936000750237",
+          "name": "Tàu Hũ Trắng Tươi Ichi-Sakura 350G"
+        },
+        {
+          "sku": "8938504001815",
+          "name": "Tàu Hủ Tojy Rong Biển Hộp 340G"
+        },
+        {
+          "sku": "8936000750077",
+          "name": "Tàu hũ mềm Ome Ichiban 300G"
+        },
+        {
+          "sku": "8934743126364",
+          "name": "Sữa Chua Sấy Yo'V Vị Sầu Riêng Hũ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0479",
+      "query": "すし",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572296894",
+          "name": "Xúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)"
+        },
+        {
+          "sku": "8936034876743",
+          "name": "Xúc Xích Vòng Xông Khói Ponnie Premium 200G"
+        },
+        {
+          "sku": "8936045450291",
+          "name": "Xúc Xích Xông Khói Khô Baton Tiêu Đen Con Heo Vàng 200G"
+        },
+        {
+          "sku": "8935058910860",
+          "name": "Xúc Xích Đức Bucher Gói 450G"
+        },
+        {
+          "sku": "8935101608072",
+          "name": "Xúc Xích Sụn Nướng Bulgogi Đức Việt Gói 450G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0480",
+      "query": "わさび",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572296894",
+          "name": "Xúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)"
+        },
+        {
+          "sku": "8936035441414",
+          "name": "Xúc Xích Tỏi Xông Khói Cắt Khúc Angst Trường Vinh 500G"
+        },
+        {
+          "sku": "8934572193308",
+          "name": "Xúc Xích Phô Mai Việt Nam Vissan Gói 200g"
+        },
+        {
+          "sku": "8938524577390",
+          "name": "Xúc Xích School Phô Mai Shinshu 200G"
+        },
+        {
+          "sku": "8935058911683",
+          "name": "Xúc Xích Tiệt Trùng Red CP Gói 200G (5 Cây x 40G)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0481",
+      "query": "抹茶",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936191270156",
+          "name": "Trà Trái Cây Hạt Chia Just Viet Vị Xoài Hộp 10 Gói 20G"
+        },
+        {
+          "sku": "8935039570779",
+          "name": "Trà Vải Hương Hoa Hồng Blendy Hộp 8 Gói 11g"
+        },
+        {
+          "sku": "8936191270170",
+          "name": "Trà Trái Cây Just Việt Vải Hạt Chia Hộp 30 Gói x 20G"
+        },
+        {
+          "sku": "8936089173118",
+          "name": "Matcha Sữa Archcafe Hộp 162G (12 gói x 13.5g)"
+        },
+        {
+          "sku": "8935115701141",
+          "name": "Trà Atisô Thượng Hạng Vĩnh Tiến Túi Lọc (100 Gói x 2G)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0487",
+      "query": "sushi rice",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0400283710007",
+          "name": "Set Sushi Tôm Premium Và Nigiri 17 Viên 450G (ea)"
+        },
+        {
+          "sku": "0400304860001",
+          "name": "Set Sushi Sum Vầy Yorihada 400G (ea)"
+        },
+        {
+          "sku": "0400318370008",
+          "name": "Set Sushi Và Gunkan Sắc Màu Yorihada 721G"
+        },
+        {
+          "sku": "0400295140007",
+          "name": "Set Sushi Cơm Cuộn A3 Khay Yorihada 270G (ea)"
+        },
+        {
+          "sku": "4901515009242",
+          "name": "Giấm Ăn Sushi Kikkoman Vị Nhật 150ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0489",
+      "query": "mirin",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 1,
+      "actual_total_before_cap": 1,
+      "actual_top_items": [
+        {
+          "sku": "8802569103183",
+          "name": "Khăn Lau Đa Năng Miri 318"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0490",
+      "query": "dashi",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801038604091",
+          "name": "Dao Cạo Dorco Cho Nữ Shai 3 Creamy"
+        },
+        {
+          "sku": "8935101608348",
+          "name": "Xúc Xích Bắp Phô Mai Đức Việt 250G"
+        },
+        {
+          "sku": "8935101608072",
+          "name": "Xúc Xích Sụn Nướng Bulgogi Đức Việt Gói 450G"
+        },
+        {
+          "sku": "8938524577390",
+          "name": "Xúc Xích School Phô Mai Shinshu 200G"
+        },
+        {
+          "sku": "8935136864801",
+          "name": "Sữa Tắm LASHE Superfood Dưỡng Da Tươi Trẻ Chai 610G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0492",
+      "query": "japanese curry",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 3,
+      "actual_total_before_cap": 3,
+      "actual_top_items": [
+        {
+          "sku": "0074880030723",
+          "name": "Viên Cari Golden S&B Vị Cay 220G"
+        },
+        {
+          "sku": "0074880030709",
+          "name": "Viên Cari Golden S&B Cay Ít 220G"
+        },
+        {
+          "sku": "0074880030716",
+          "name": "Viên Cari Golden S&B Cay Vừa 220G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0493",
+      "query": "furikake",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936019920577",
+          "name": "Chả Cá Hoa Anh Đào V&V 160G"
+        },
+        {
+          "sku": "8852291610206",
+          "name": "Kẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G"
+        },
+        {
+          "sku": "8809693270620",
+          "name": "Kẹo Dream Vị Quế 200G"
+        },
+        {
+          "sku": "8809693270613",
+          "name": "Kẹo Dream Vị Gừng 200G"
+        },
+        {
+          "sku": "4902752161304",
+          "name": "Bánh rán Dorayaki đậu đỏ vị dâu Marukyo 310G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0494",
+      "query": "молоко",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934804025766",
+          "name": "Sữa Lúa Mạch Nestlé Milo Lốc 4 Hộp 180ml"
+        },
+        {
+          "sku": "8934804044361",
+          "name": "Lốc 8 Hộp Sữa Lúa Mạch Nestle Milo Active Go 180ml"
+        },
+        {
+          "sku": "8934804034058",
+          "name": "Lốc 4 Hộp Sữa Lúa Mạch Nestlé Milo Ít Đường 180ml"
+        },
+        {
+          "sku": "8934804025773",
+          "name": "Thùng 48 Hộp Sữa Lúa Mạch Nestle Milo Active Go 180ml"
+        },
+        {
+          "sku": "18934804054039",
+          "name": "Thùng 48 Hộp Sữa Lúa Mạch Nestlé Milo A2 Ít Đường 110ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0495",
+      "query": "хлеб",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936077113690",
+          "name": "Bánh Mì Bơ Tỏi Phô Mai Bon 180G"
+        },
+        {
+          "sku": "8938532826015",
+          "name": "Bánh Mì Mè Đen O'smiles Gói 350g"
+        },
+        {
+          "sku": "0400288820008",
+          "name": "Bánh Mì Ngũ Cốc Mè POONGMISO 260G"
+        },
+        {
+          "sku": "0400313730005",
+          "name": "Bánh Mì Khoai Tây Và Nho Khô POONGMISO 140G"
+        },
+        {
+          "sku": "0400231260004",
+          "name": "Bánh Mì Bơ POONGMISO (10 Bánh x 35G)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0496",
+      "query": "шоколад",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935042909566",
+          "name": "Socola Sữa Beatitude 450G"
+        },
+        {
+          "sku": "8935042901997",
+          "name": "Socola Vifranco Tổng Hợp Túi 300g"
+        },
+        {
+          "sku": "8936135431186",
+          "name": "Socola Đen Mr. VIET Gói 60g"
+        },
+        {
+          "sku": "8992696527591",
+          "name": "Socola Milo Sữa Lúa Mạch Gói 25 Viên x 2.7G"
+        },
+        {
+          "sku": "8936013566757",
+          "name": "Socola Viên Nón Lá Henk Hạnh Nhân Và Nho Khô Hộp 120G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0497",
+      "query": "сахар",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935053900040",
+          "name": "Đường Vàng Nasu Natural Sugar 1Kg"
+        },
+        {
+          "sku": "8935015510560",
+          "name": "Đường Que Tinh Luyện Biên Hòa Joy Bịch 50 Gói x 6G"
+        },
+        {
+          "sku": "7610211012902",
+          "name": "Đường Hạt Thấp Năng Lượng Assugrin Hũ 90G"
+        },
+        {
+          "sku": "9321778671997",
+          "name": "Đường Ăn Kiêng Gold-Sucralose Gói 150g"
+        },
+        {
+          "sku": "8935015510478",
+          "name": "Đường Mía Biên Hòa Thượng Hạng Gói 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0498",
+      "query": "чай",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938557832008",
+          "name": "Trà Xanh Oi Ocha Không Đường Chai 1L"
+        },
+        {
+          "sku": "8936191270132",
+          "name": "Trà Trái Cây Hạt Chia Just Viet Vị Vải Hộp 10 Gói 20G"
+        },
+        {
+          "sku": "8935049500704",
+          "name": "Trà Chanh Dây Và Hạt Chia Fuze Tea+ Chai 350ml"
+        },
+        {
+          "sku": "18935049500701",
+          "name": "Lốc 24 Chai Trà Chanh Dây Và Hạt Chia Fuze Tea+ 350ml/Chai"
+        },
+        {
+          "sku": "8936127790048",
+          "name": "Trà Tắc TH True Tea 350ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0499",
+      "query": "кофе",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801189204560",
+          "name": "Cà Phê Cold Brew Cocobruni Americano"
+        },
+        {
+          "sku": "8936059330497",
+          "name": "Cà Phê Hạt Arabica Honee Coffee Gói 1kg"
+        },
+        {
+          "sku": "8935040100439",
+          "name": "Cà Phê Con Sóc Espresso Dạng Hạt Gói 200G"
+        },
+        {
+          "sku": "8936059330619",
+          "name": "Cà Phê Rang Xay Robusta Honee Coffee Thượng Hạng Hộp 150G"
+        },
+        {
+          "sku": "8935040100125",
+          "name": "Cà Phê Con Sóc Nâu 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0500",
+      "query": "вода",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935005800015",
+          "name": "Nước Khoáng Thiên Nhiên La Vie+ Kiềm 750ml"
+        },
+        {
+          "sku": "8935049500414",
+          "name": "Nước Tinh Khiết Dasani Chai 350ml"
+        },
+        {
+          "sku": "8934716010683",
+          "name": "Nước Uống Tinh Khiết Sapuwa Bình 5L"
+        },
+        {
+          "sku": "8934588063176",
+          "name": "Nước Tinh Khiết Aquafina Chai 5L"
+        },
+        {
+          "sku": "8935049500544",
+          "name": "Nước Khoáng Dasani Chai 510ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0520",
+      "query": "dau oliu",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 8,
+      "actual_total_before_cap": 8,
+      "actual_top_items": [
+        {
+          "sku": "8935136866997",
+          "name": "Dầu Tắm Oliv X3 Dưỡng Ẩm Chai 1L"
+        },
+        {
+          "sku": "8935136869035",
+          "name": "Dầu Tắm Oliv Extra Brightening Sáng Da Chai 1L"
+        },
+        {
+          "sku": "8935136865235",
+          "name": "Dầu Gội Ôliv Dưỡng Tóc Chắc Khỏe 250ml"
+        },
+        {
+          "sku": "8935136865181",
+          "name": "Dầu Gội Ôliv Chắc Khỏe Bồng Bềnh Chai 650ml"
+        },
+        {
+          "sku": "5202631000281",
+          "name": "Dầu Ô Liu Olympias Nguyên Chất Đặc Biệt 250ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0521",
+      "query": "meji",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "8850329103034",
+          "name": "Sữa Thanh Trùng Meiji Hương Socoloa Hộp 946ml"
+        },
+        {
+          "sku": "8850329106561",
+          "name": "Sữa Thanh Trùng Meiji Hương Chuối Chai 200ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0522",
+      "query": "choco pie",
+      "dimension": "misspelling",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 4,
+      "actual_total_before_cap": 4,
+      "actual_top_items": [
+        {
+          "sku": "8935006330153",
+          "name": "Bánh Choco P&N Phạm Nguyên Túi 12 Bánh 216G"
+        },
+        {
+          "sku": "8936036028461",
+          "name": "Bánh Chocopie Dưa Hấu Hộp 336G"
+        },
+        {
+          "sku": "8935341301627",
+          "name": "Bánh Socola Pie LOTTE CHOCOLAT Vị Trà Xanh Hộp 339.6G"
+        },
+        {
+          "sku": "8935341301528",
+          "name": "Bánh Socola Pie LOTTE CHOCOLAT Vị Trà Xanh Hộp 169.8G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0524",
+      "query": "bột nêm",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935311121736",
+          "name": "Bột Canh Vifon 450G"
+        },
+        {
+          "sku": "8935311120685",
+          "name": "Bột Canh Vifon 900G"
+        },
+        {
+          "sku": "8935039571127",
+          "name": "Bột Canh Aji 190G"
+        },
+        {
+          "sku": "8935039503234",
+          "name": "Bột Chanh Ajinomoto 400G"
+        },
+        {
+          "sku": "8934637463841",
+          "name": "Bột Canh Cholimex Nấm Bào Ngư Gói 180g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0525",
+      "query": "bao rác",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935086500613",
+          "name": "Túi Rác Đen Choice L Loại Trung 55x65cm 1kg"
+        },
+        {
+          "sku": "8936198132150",
+          "name": "Túi Rác Màu Có Quai Choice L Hương Chanh 60x90cm 750G"
+        },
+        {
+          "sku": "8935086500620",
+          "name": "Túi Rác Đen Choice L Loại Lớn 64x78cm 1kg"
+        },
+        {
+          "sku": "8936198132143",
+          "name": "Túi Rác Màu Có Quai Choice L Hương Chanh 54x70cm 750G"
+        },
+        {
+          "sku": "8935086500606",
+          "name": "Túi Rác Đen Choice L Loại Nhỏ 50x55cm 1kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0526",
+      "query": "bếp từ",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 7,
+      "actual_total_before_cap": 7,
+      "actual_top_items": [
+        {
+          "sku": "8936040501387",
+          "name": "Bếp Nướng Than Inox 430 Tithafac Số 2 29 X 21 X 9 cm"
+        },
+        {
+          "sku": "8935255830824",
+          "name": "Dao Làm Bếp Lock&Lock CKK926WHT 32.7cm"
+        },
+        {
+          "sku": "8936063012464",
+          "name": "Đũa Bếp Ohi@Ma HM-1808"
+        },
+        {
+          "sku": "8935015513608",
+          "name": "Nước Màu Bếp Xưa Biên Hòa Chai 210G"
+        },
+        {
+          "sku": "8936017990787",
+          "name": "Khăn Giấy Bếp Đa Năng Fairy 2 Lớp 100 Tờ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0529",
+      "query": "colgate",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935049500544",
+          "name": "Nước Khoáng Dasani Chai 510ml"
+        },
+        {
+          "sku": "8935049500414",
+          "name": "Nước Tinh Khiết Dasani Chai 350ml"
+        },
+        {
+          "sku": "4897036693162",
+          "name": "Nước Tăng Lực Monster Loco Vị Xoài Lon 355ml"
+        },
+        {
+          "sku": "4902102038690",
+          "name": "Nước Ngọt Coca Cola Nhật Chai Nhôm 300ml"
+        },
+        {
+          "sku": "8935049510864",
+          "name": "Nước Tinh Khiết Dasani Chai 510ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0530",
+      "query": "lifebouy",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 38,
+      "actual_top_items": [
+        {
+          "sku": "P2317STLFB200G",
+          "name": "Sữa Tắm Lifebuoy 200G"
+        },
+        {
+          "sku": "8934868502623",
+          "name": "Sữa Tắm Lifebuoy Vitamin Sữa Dưỡng Ẩm 1.1kg"
+        },
+        {
+          "sku": "8934868164173",
+          "name": "Dầu Gội Lifebuoy Dưỡng Tóc Óng Ả Chai 640G"
+        },
+        {
+          "sku": "8934868153238",
+          "name": "Dầu Gội Lifebuoy Mềm Mượt và Kháng Khuẩn Chai 640G"
+        },
+        {
+          "sku": "8934868502302",
+          "name": "Nước Rửa Tay Lifebuoy Vitamin Khử Mùi Hương Chanh 450G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0531",
+      "query": "pillows",
+      "dimension": "synonym_variant",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936002098573",
+          "name": "Ruột Gối Ép Hơi Air Pillow Ngọc Hạnh 40x60cm"
+        },
+        {
+          "sku": "8934803056129",
+          "name": "Bánh Akiko Kem Tiramisu Gói 140g"
+        },
+        {
+          "sku": "8936040050021",
+          "name": "Áo Gối Cotton Hoa Hometex 40x60cm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936105162829",
+          "name": "Gối Tựa Cổ Choice L Cao Su Non Màu Xanh Dương"
+        },
+        {
+          "sku": "8936040057327",
+          "name": "Gối Ôm Cá Sấu Thiên Hà"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0534",
+      "query": "피시소스",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 6,
+      "actual_total_before_cap": 6,
+      "actual_top_items": [
+        {
+          "sku": "8936236472187",
+          "name": "Nước Mắm Nam Ngư Phú Quốc 32 Độ Đạm 500ml"
+        },
+        {
+          "sku": "8934712007014",
+          "name": "Mắm Nêm Pha Sẵn Thuận Phát Chai 175g"
+        },
+        {
+          "sku": "8934712007021",
+          "name": "Mắm Nêm Thuận Phát Pha Sẵn Chai 290G"
+        },
+        {
+          "sku": "8936234610109",
+          "name": "Nước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml"
+        },
+        {
+          "sku": "8934637515304",
+          "name": "Hộp Quà Nước Mắm Cholimex Đậm Vị Yêu Thương 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0535",
+      "query": "라이스페이퍼",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 32,
+      "actual_top_items": [
+        {
+          "sku": "8936079390587",
+          "name": "Bánh Tráng Nướng Mikiri Gói 135G"
+        },
+        {
+          "sku": "8936079390082",
+          "name": "Bánh Tráng Nướng Cà Khịa Mikiri Gói 50G"
+        },
+        {
+          "sku": "8936076452271",
+          "name": "Bánh Tráng Ớt Tinh Nguyên Gói 200g"
+        },
+        {
+          "sku": "8934777606016",
+          "name": "Bánh Tráng Senta 16CM Gói 300g"
+        },
+        {
+          "sku": "8934863502147",
+          "name": "Bánh Tráng Bích Chi 22CM 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0536",
+      "query": "베트남 커피",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936059330442",
+          "name": "Cà Phê Hạt Rang Arabica Honee Coffee Túi 500G"
+        },
+        {
+          "sku": "8934804027388",
+          "name": "Cà Phê Đen Hòa Tan NesCafé 16g x 15 Gói"
+        },
+        {
+          "sku": "8936089171411",
+          "name": "Cà Phê Đá Việt Nam Archcafe 13G x 12 Gói"
+        },
+        {
+          "sku": "8936106970577",
+          "name": "Cà Phê Hương Mai Weasel Hộp Quà 250G"
+        },
+        {
+          "sku": "8936106970294",
+          "name": "Cà Phê Hương Mai Weasel Legen 250G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0537",
+      "query": "쌀국수",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935311110822",
+          "name": "Bún Tôm Vifon Gói 65g"
+        },
+        {
+          "sku": "8934579100637",
+          "name": "Phở Chay MILIKET 60G"
+        },
+        {
+          "sku": "8934863343122",
+          "name": "Phở VINA 200G"
+        },
+        {
+          "sku": "8935311110280",
+          "name": "Phở Bò Vifon Tô 120g"
+        },
+        {
+          "sku": "8934563206055",
+          "name": "Bánh Phở Tươi Sấy Khô Đệ Nhất 300G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0538",
+      "query": "베트남 소시지",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 10,
+      "actual_total_before_cap": 10,
+      "actual_top_items": [
+        {
+          "sku": "8936043370058",
+          "name": "Lạp Xưởng Tươi Heo Homi 250G"
+        },
+        {
+          "sku": "8934572290496",
+          "name": "Lạp xưởng Vissan 200G"
+        },
+        {
+          "sku": "8934572290540",
+          "name": "Lạp xưởng Vissan heo 500g"
+        },
+        {
+          "sku": "8936146443673",
+          "name": "Chả Lụa Wyn 450G"
+        },
+        {
+          "sku": "8936043370072",
+          "name": "Lạp Xưởng Tươi Bò Homi 250G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0539",
+      "query": "캐슈넛",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 45,
+      "actual_top_items": [
+        {
+          "sku": "8936003729018",
+          "name": "Hạt điều vàng mawashi 750g"
+        },
+        {
+          "sku": "8935032210771",
+          "name": "Hạt Điều Lụa Tuấn Đạt Hộp 305G"
+        },
+        {
+          "sku": "8935032210917",
+          "name": "Hạt Điều Vỏ Lụa Tuấn Đạt 200G"
+        },
+        {
+          "sku": "8934831000040",
+          "name": "Hạt Điều Sấy NHABEXIMS Gói 50g"
+        },
+        {
+          "sku": "8935032204350",
+          "name": "Hạt Điều Choice L Vị Cappuccino 280G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0540",
+      "query": "삼겹살",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 19,
+      "actual_total_before_cap": 19,
+      "actual_top_items": [
+        {
+          "sku": "8938500490170",
+          "name": "Ba Chỉ Hun Khói Ông Già Ika 300G"
+        },
+        {
+          "sku": "2204240000006",
+          "name": "Ba Rọi Heo 365 Fresh 300G"
+        },
+        {
+          "sku": "8936194975317",
+          "name": "Thịt Ba Rọi Heo Japfa 300G"
+        },
+        {
+          "sku": "8936146441006",
+          "name": "Thịt Ba Rọi Heo G Kitchen 300G (EA)"
+        },
+        {
+          "sku": "8936190861850",
+          "name": "Thịt Ba Chỉ Heo Thái Mỏng 365 Fresh 700G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0541",
+      "query": "계란",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936057560254",
+          "name": "Trứng Gà Ăn Liền Devi Túi 1 Quả (EA)"
+        },
+        {
+          "sku": "8938513029039",
+          "name": "Trứng Gà Tafa Hộp 6 Quả (EA)"
+        },
+        {
+          "sku": "8938513029022",
+          "name": "Trứng gà Tafa hộp 10 quả 600g (ea)"
+        },
+        {
+          "sku": "8936013680019",
+          "name": "Trứng Gà V.food Loại 1 Vỉ 6 Trứng (EA)"
+        },
+        {
+          "sku": "8938511817409",
+          "name": "Trứng Gà Tươi 365 Fresh Size 60G Hộp 15 Trứng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0542",
+      "query": "두부",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935058950927",
+          "name": "Tàu Hũ Trứng CP 220G"
+        },
+        {
+          "sku": "8936000750251",
+          "name": "Tàu hũ trứng Ichiban gói 240g"
+        },
+        {
+          "sku": "8936000751036",
+          "name": "Đậu Hũ Làng Mơ Ichiban 500G"
+        },
+        {
+          "sku": "8938504001402",
+          "name": "Đậu Hũ Bìa Tojy 340G"
+        },
+        {
+          "sku": "8936000750077",
+          "name": "Tàu hũ mềm Ome Ichiban 300G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0543",
+      "query": "맥주",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "P2317BIA333",
+          "name": "Bia 333"
+        },
+        {
+          "sku": "8992756534187",
+          "name": "Bia Đen San Miguel Cerveza Negra Lon 330ml"
+        },
+        {
+          "sku": "8934772225076",
+          "name": "Bia Red Horse 8% ABV 500ml"
+        },
+        {
+          "sku": "8934692010011",
+          "name": "Bia Halida 4.5% ABV Lon 330ml"
+        },
+        {
+          "sku": "8936094291302",
+          "name": "Bia Budweiser 5% ABV Lon 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0544",
+      "query": "쌀",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938516870706",
+          "name": "Gạo Giống Nhật Japonica Neptune 5kg (EA)"
+        },
+        {
+          "sku": "8938530115081",
+          "name": "Gạo Còn Cám Home Rice 2kg"
+        },
+        {
+          "sku": "8938516870676",
+          "name": "Gạo Meizan Eco Friendly Túi 5kg"
+        },
+        {
+          "sku": "8938530115012",
+          "name": "Gạo Home Rice Bảo Bình 5kg"
+        },
+        {
+          "sku": "8938530115029",
+          "name": "Gạo Home Rice Song Ngư 5kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0545",
+      "query": "돼지고기",
+      "dimension": "foreign_language",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572000019",
+          "name": "Pate Thịt Heo Vissan Hộp 170g"
+        },
+        {
+          "sku": "8934572000217",
+          "name": "Pate Thịt Heo Vissan Hộp 397g"
+        },
+        {
+          "sku": "8935025530091",
+          "name": "Pate Gan Heo Seaspimex Hộp 170G"
+        },
+        {
+          "sku": "4610117446101",
+          "name": "Thịt Heo Hun Khói Remit Gói 55G"
+        },
+        {
+          "sku": "8936150841588",
+          "name": "Sụn Heo Kiaora 400G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0546",
+      "query": "물",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935005800015",
+          "name": "Nước Khoáng Thiên Nhiên La Vie+ Kiềm 750ml"
+        },
+        {
+          "sku": "8934716010683",
+          "name": "Nước Uống Tinh Khiết Sapuwa Bình 5L"
+        },
+        {
+          "sku": "8851251052292",
+          "name": "Bình Đựng Nước Trung Huy 5229 1.2L"
+        },
+        {
+          "sku": "8938512632018",
+          "name": "Nước Tinh Khiết Satori Chai 350ML"
+        },
+        {
+          "sku": "8938503000079",
+          "name": "Nước Uống I-on Life Bình 4.5L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0547",
+      "query": "빵",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0400233830007",
+          "name": "Bánh Mì Mè Hàn Quốc 60g (ea)"
+        },
+        {
+          "sku": "0400231260004",
+          "name": "Bánh Mì Bơ POONGMISO (10 Bánh x 35G)"
+        },
+        {
+          "sku": "8809617945160",
+          "name": "Hạnh Nhân Và Bánh Mì Bơ Tỏi HBAF Gói 40g"
+        },
+        {
+          "sku": "8934680096331",
+          "name": "Hộp 6 Bánh Trung Thu Kinh Đô Thu Tuyết 480G"
+        },
+        {
+          "sku": "0400231200000",
+          "name": "Bánh Mì Lúa Mạch Đen POONGMISO 150G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0548",
+      "query": "鱼露",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938519953154",
+          "name": "Nước Mắm Làng Chài Xưa Nhãn Xanh Chai 500ml"
+        },
+        {
+          "sku": "8938509983031",
+          "name": "Nước Mắm Phú Quốc Ông Kỳ 38 Độ Đạm Chai 525ml"
+        },
+        {
+          "sku": "8934851503897",
+          "name": "Nước Mắm Thanh Hà 40 Độ Đạm Chai 520ml"
+        },
+        {
+          "sku": "8936221048076",
+          "name": "Nước Mắm Nam Ngư 3 Trong 1 Chai 500ml"
+        },
+        {
+          "sku": "8936185662493",
+          "name": "Tàu Hủ Cá Phô Mai Choice L Gói 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0549",
+      "query": "米纸",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936079390853",
+          "name": "Bánh Tráng Vuông Mikiri Gói 210G"
+        },
+        {
+          "sku": "8934863501140",
+          "name": "Bánh Tráng Bích Chi 16CM 400G"
+        },
+        {
+          "sku": "8934863502147",
+          "name": "Bánh Tráng Bích Chi 22CM 400G"
+        },
+        {
+          "sku": "8936009564422",
+          "name": "Giấy Thấm Dầu Tuyền Hưng Phú 20 Tờ 24 x 25cm"
+        },
+        {
+          "sku": "8936115310999",
+          "name": "Dĩa Giấy Hoa Văn Choice L 19cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0550",
+      "query": "越南咖啡",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935024163542",
+          "name": "Cà Phê Trung Nguyên Sáng Tạo 5 Gói 340G"
+        },
+        {
+          "sku": "8935024172384",
+          "name": "Cà Phê Trung Nguyên Legend Special Edition Hộp 225G (9 Gói x 25G)"
+        },
+        {
+          "sku": "8936106970294",
+          "name": "Cà Phê Hương Mai Weasel Legen 250G"
+        },
+        {
+          "sku": "8936024244750",
+          "name": "Cà Phê Phố Rang Xay Túi 450G"
+        },
+        {
+          "sku": "8935024173084",
+          "name": "Cà Phê Hòa Tan G7 3 Trong 1 (16G x 20 Gói)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0551",
+      "query": "河粉",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936088900272",
+          "name": "Bánh Canh Gạo Ba Khánh Gói 500G"
+        },
+        {
+          "sku": "8936079390747",
+          "name": "Chao Môn Mikiri Hũ 380g"
+        },
+        {
+          "sku": "8938516870263",
+          "name": "Nếp Sáp Meizan Túi 1Kg"
+        },
+        {
+          "sku": "8936231190123",
+          "name": "Bột Năng Đa Dụng Meizan Gói 400G"
+        },
+        {
+          "sku": "8936231190154",
+          "name": "Bột Bắp Meizan Gói 150G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0552",
+      "query": "越南香肠",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572296894",
+          "name": "Xúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)"
+        },
+        {
+          "sku": "8934572170514",
+          "name": "Giò lụa Vissan cây 250g"
+        },
+        {
+          "sku": "8936146440467",
+          "name": "Chả Lụa Bì Ớt Xiêm Xanh G Kitchen 500G"
+        },
+        {
+          "sku": "8936146440016",
+          "name": "Chả Lụa G Kitchen Gói 500G"
+        },
+        {
+          "sku": "8934572185198",
+          "name": "Xúc Xích Bò Tiệt Trùng DHA Vissan Gói 5 Cây X 35G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0553",
+      "query": "腰果",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936003728769",
+          "name": "Táo Sấy Khô L'angfarm 300G"
+        },
+        {
+          "sku": "8936138401735",
+          "name": "Táo Gala Nam Phi Túi 1.5kg"
+        },
+        {
+          "sku": "8938506472392",
+          "name": "Táo Fuji Nam Phi Túi 1.5kg"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0554",
+      "query": "牛奶",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934673101295",
+          "name": "Lốc 4 Hộp Sữa Uống Dinh Dưỡng Optimum Colos 110ml"
+        },
+        {
+          "sku": "8936170702180",
+          "name": "Lốc 4 Hộp Thức Uống Dinh Dưỡng Từ Sữa Moozi Hương Cam Đào Có Thạch 170ml"
+        },
+        {
+          "sku": "8850329183715",
+          "name": "Sữa Thanh Trùng Meiji Milk Premium 4.3% 946ml"
+        },
+        {
+          "sku": "8934804025766",
+          "name": "Sữa Lúa Mạch Nestlé Milo Lốc 4 Hộp 180ml"
+        },
+        {
+          "sku": "8934673100830",
+          "name": "Sữa Uống Dinh Dưỡng Vinamilk Optimum Gold Lốc 4 Hộp 180ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0555",
+      "query": "啤酒",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6901035617628",
+          "name": "Bia Tsingtao 1903 5% ABV 500ml (EA)"
+        },
+        {
+          "sku": "8934822201210",
+          "name": "Bia Heineken Silver 4% ABV 330ml"
+        },
+        {
+          "sku": "4066600601920",
+          "name": "Bia Paulaner Weissbier 5.5% ABV 500ml"
+        },
+        {
+          "sku": "8936094291418",
+          "name": "Thùng 24 Chai Bia Budweiser Aluminum 5% ABV 355ml"
+        },
+        {
+          "sku": "5410908000043",
+          "name": "Bia Chimay Bruin 7% ABV Chai 750ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0556",
+      "query": "大米",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938530115081",
+          "name": "Gạo Còn Cám Home Rice 2kg"
+        },
+        {
+          "sku": "8906078780924",
+          "name": "Khoai Tây Cắt Múi Farm Best 1kg"
+        },
+        {
+          "sku": "8935023100050",
+          "name": "Khoai tây đông lạnh Dalat Foods 400G"
+        },
+        {
+          "sku": "8938516870676",
+          "name": "Gạo Meizan Eco Friendly Túi 5kg"
+        },
+        {
+          "sku": "8938532826015",
+          "name": "Bánh Mì Mè Đen O'smiles Gói 350g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0558",
+      "query": "рыбный соус",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936017361914",
+          "name": "Nước Chấm Nam Ngư Đệ Nhị Chai 900ML"
+        },
+        {
+          "sku": "8938559530148",
+          "name": "Nước Mắm Cá Thu Việt Nhĩ Hảo Hạng 25 Độ Đạm 500ml"
+        },
+        {
+          "sku": "8936221042715",
+          "name": "Nước Mắm Nam Ngư Phú Quốc 32 Độ Đạm Chai 500ml"
+        },
+        {
+          "sku": "8936017369231",
+          "name": "Nước Mắm Nam Ngư Nhãn Vàng 30 Độ Đạm 650ml (EA)"
+        },
+        {
+          "sku": "8935121140507",
+          "name": "Nước Mắm 584 40 Độ Đạm 500ML"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0559",
+      "query": "рисовая бумага",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936079390853",
+          "name": "Bánh Tráng Vuông Mikiri Gói 210G"
+        },
+        {
+          "sku": "8934678040025",
+          "name": "Bánh Tráng Safoco 16cm Gói 300g"
+        },
+        {
+          "sku": "8934678040018",
+          "name": "Bánh Tráng Safoco 16cm Gói 200g"
+        },
+        {
+          "sku": "8936015310013",
+          "name": "Bánh Tráng Góc 1/4 Hương Nam 250g"
+        },
+        {
+          "sku": "8936079390082",
+          "name": "Bánh Tráng Nướng Cà Khịa Mikiri Gói 50G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0560",
+      "query": "вьетнамский кофе",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936106970294",
+          "name": "Cà Phê Hương Mai Weasel Legen 250G"
+        },
+        {
+          "sku": "8935024163542",
+          "name": "Cà Phê Trung Nguyên Sáng Tạo 5 Gói 340G"
+        },
+        {
+          "sku": "8935024172384",
+          "name": "Cà Phê Trung Nguyên Legend Special Edition Hộp 225G (9 Gói x 25G)"
+        },
+        {
+          "sku": "8936106970577",
+          "name": "Cà Phê Hương Mai Weasel Hộp Quà 250G"
+        },
+        {
+          "sku": "8936106970096",
+          "name": "Cà Phê Chồn Moka Hạt A Hộp 120G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0561",
+      "query": "фо",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "P2317BO2TO",
+          "name": "Bộ 2 Tô"
+        },
+        {
+          "sku": "8936190861492",
+          "name": "Thăn Cổ Bò Mỹ Cắt Lát FRESHFOCO 225G"
+        },
+        {
+          "sku": "8936190861591",
+          "name": "Lõi Vai Bò Mỹ BBQ FRESHFOCO 225G"
+        },
+        {
+          "sku": "8934863808706",
+          "name": "Phở Bò Choice L Ly 50g"
+        },
+        {
+          "sku": "8934563267148",
+          "name": "Phở Bò Tái Lăn Đệ Nhất Đặc Biệt Gói 68G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0562",
+      "query": "вьетнамская колбаса",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934572170514",
+          "name": "Giò lụa Vissan cây 250g"
+        },
+        {
+          "sku": "8936210410822",
+          "name": "Bánh Giò Thập Cẩm Trứng Cút Kitkool 150G"
+        },
+        {
+          "sku": "8934572172549",
+          "name": "Giò thủ Vissan 500g"
+        },
+        {
+          "sku": "8936146440016",
+          "name": "Chả Lụa G Kitchen Gói 500G"
+        },
+        {
+          "sku": "8934717292323",
+          "name": "Giò Lụa Thượng Hạng Cầu Tre Cây 450G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0563",
+      "query": "кешью",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8938524577390",
+          "name": "Xúc Xích School Phô Mai Shinshu 200G"
+        },
+        {
+          "sku": "8935058913359",
+          "name": "Xúc xích tiệt trùng cay CP 60G"
+        },
+        {
+          "sku": "8935273601079",
+          "name": "Hạt Điều Lụa Yến Nhung Hộp 260G"
+        },
+        {
+          "sku": "8936136164083",
+          "name": "Tương Cà Chinsu Chai 500G"
+        },
+        {
+          "sku": "8936000750206",
+          "name": "Tàu hũ trắng Ichi-Sakura 240G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0564",
+      "query": "пиво",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4066600601920",
+          "name": "Bia Paulaner Weissbier 5.5% ABV 500ml"
+        },
+        {
+          "sku": "8935012442598",
+          "name": "Bia 333 Pilsner Extra Smooth 4.3% ABV Lon 250ml"
+        },
+        {
+          "sku": "8936061260447",
+          "name": "Bia Sapporo Premium 5% ABV 500ml"
+        },
+        {
+          "sku": "5410908000043",
+          "name": "Bia Chimay Bruin 7% ABV Chai 750ml"
+        },
+        {
+          "sku": "4066600192510",
+          "name": "Bia Paulaner Weissbier 0.0 Độ Cồn Lon 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-GEN500-0566",
+      "query": "перечная паста",
+      "dimension": "foreign_language",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8851019330341",
+          "name": "Bánh Que Glico Pretz Vị Pizza Hộp 31G"
+        },
+        {
+          "sku": "8938509627270",
+          "name": "Nui Xoắn Cao Cấp Meizan Gói 300G"
+        },
+        {
+          "sku": "8935063602675",
+          "name": "Mắm Ruốc Huế Ngọc Liên 500G"
+        },
+        {
+          "sku": "8938511518689",
+          "name": "Bánh Puff Pastry Nhân Táo Nho Dasumy 200G"
+        },
+        {
+          "sku": "8936045450598",
+          "name": "Pate Gan Heo Nippon Con Heo Vàng 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0002",
+      "query": "quần áo đi làm công sở",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935219480126",
+          "name": "Kéo Văn Phòng Flexoffice FO-SC05 8.25 Inch (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936234171068",
+          "name": "Quần Thể Dục Học Sinh BPC Size 1-15"
+        },
+        {
+          "sku": "8936234171075",
+          "name": "Quần Thể Dục Thun 4 Chiều BPC Size 6-20"
+        },
+        {
+          "sku": "8936234171105",
+          "name": "Áo Thể Dục BPC Size 1-15"
+        },
+        {
+          "sku": "8936234171006",
+          "name": "Đầm Học Sinh BPC Size 1-15"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0004",
+      "query": "áo khoác giữ ấm mùa đông",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "5412873623371",
+          "name": "Khoai Tây Cắt Sợi Dài Đông Lạnh Mydibel Gói 1kg"
+        },
+        {
+          "sku": "8936064061362",
+          "name": "Khoai Tây Sợi Nhỏ Đông Lạnh Choice L 1kg"
+        },
+        {
+          "sku": "8906078780894",
+          "name": "Khoai Tây Sợi Nhỏ Farm Best 6/6 Gói 1Kg"
+        },
+        {
+          "sku": "8936190710929",
+          "name": "Áo Mưa Cánh Dơi Người Lớn Tiện Lợi Bioplas 110x85cm 55G (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936087591501",
+          "name": "Áo Mưa Cánh Dơi Ocean Nhựa PVC (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0006",
+      "query": "giày dép đi mưa",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936036832976",
+          "name": "Treo Giày Bàn Chân Hofaco HPG197 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936087591501",
+          "name": "Áo Mưa Cánh Dơi Ocean Nhựa PVC (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936087591532",
+          "name": "Áo Mưa Đơn Vải Dù Ocean"
+        },
+        {
+          "sku": "8936087591518",
+          "name": "Áo Mưa Cánh Dơi Phủ Đèn Vải Dù Ocean"
+        },
+        {
+          "sku": "8936190710929",
+          "name": "Áo Mưa Cánh Dơi Người Lớn Tiện Lợi Bioplas 110x85cm 55G (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0007",
+      "query": "đồ lót nam thoải mái",
+      "dimension": "semantic_phrase",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 14,
+      "actual_total_before_cap": 14,
+      "actual_top_items": [
+        {
+          "sku": "8936032987014",
+          "name": "Quần Boxer Nam ONOFF Cotton 20018 Size M-XXL"
+        },
+        {
+          "sku": "8938527961271",
+          "name": "Quần Lót Nam Basic Icon BI009 Size S-XL Màu Xám"
+        },
+        {
+          "sku": "8938527961257",
+          "name": "Quần Lót Nam Basic Icon BI009 Size S-XL Màu Đen"
+        },
+        {
+          "sku": "8938527961721",
+          "name": "Quần Boxer Nam Basic Icon BX007 Size S-XL Màu Xám"
+        },
+        {
+          "sku": "6941861448621",
+          "name": "Đồ Chơi Phun Nước QH-4862"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0008",
+      "query": "váy đầm dự tiệc",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936234171006",
+          "name": "Đầm Học Sinh BPC Size 1-15"
+        },
+        {
+          "sku": "8935334001435",
+          "name": "Đầm Muslin Bé Gái Ecobambi 2 Dây Phối Bèo Eo Size 2 - 6 Tuổi"
+        },
+        {
+          "sku": "8935077350388",
+          "name": "Hoa Hồng Premium Dalat Hasfarm"
+        },
+        {
+          "sku": "8935077380309",
+          "name": "Bó hoa điệp vũ S (giao màu ngẫu nhiên) (ea)"
+        },
+        {
+          "sku": "8935077356465",
+          "name": "Chậu Hoa Cúc Họa Mi Dalat Hasfarm (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0009",
+      "query": "áo mưa đi làm",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 5,
+      "actual_total_before_cap": 5,
+      "actual_top_items": [
+        {
+          "sku": "8936087591532",
+          "name": "Áo Mưa Đơn Vải Dù Ocean"
+        },
+        {
+          "sku": "8936087591518",
+          "name": "Áo Mưa Cánh Dơi Phủ Đèn Vải Dù Ocean"
+        },
+        {
+          "sku": "8936087591501",
+          "name": "Áo Mưa Cánh Dơi Ocean Nhựa PVC (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936190710929",
+          "name": "Áo Mưa Cánh Dơi Người Lớn Tiện Lợi Bioplas 110x85cm 55G (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936190710912",
+          "name": "Áo Mưa Tiện Lợi BioHome Một Lần Dùng (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0016",
+      "query": "lồng nuôi thú cưng",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8853301530293",
+          "name": "Thức Ăn Cho Chó Pedigree Vị Bò Hầm & Rau Củ 130g"
+        },
+        {
+          "sku": "8936230480928",
+          "name": "Thú Nhồi Bông Chó Con Trong Quả Táo 30cm"
+        },
+        {
+          "sku": "8935113202022",
+          "name": "Dầu Tắm Chó Mèo Fay 4 Sao 800ml"
+        },
+        {
+          "sku": "8936189530255",
+          "name": "Thú Nhồi Bông Choice L Hamster Hạnh Phúc 95cm"
+        },
+        {
+          "sku": "9334214022932",
+          "name": "Thức Ăn Cho Chó Pedigree Vị Bò & Rau Củ 3kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0019",
+      "query": "bánh sinh nhật đặt sẵn",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934680090797",
+          "name": "Bánh Trung Thu Kinh Đô Nhân Khoai Môn Hạt Sen Hai Trứng Đặc Biệt 210G"
+        },
+        {
+          "sku": "8934760132959",
+          "name": "Bánh Trung Thu Hữu Nghị Nhân Khoai Môn Không Trứng 150G"
+        },
+        {
+          "sku": "4712905052362",
+          "name": "Bánh Mochi Nhân Khoai Môn Japanese Style Taro Mochi Hộp 140G"
+        },
+        {
+          "sku": "4712905016081",
+          "name": "Bánh Mochi Yuki & Love Khoai Môn 210G"
+        },
+        {
+          "sku": "8936036028300",
+          "name": "Bánh Gạo Nướng Orion An Vị Khoai Tây Phô Mai Nướng 103.6G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0020",
+      "query": "bánh pizza mang về",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8801045750095",
+          "name": "Bánh Pizza Thịt Ottogi 369G"
+        },
+        {
+          "sku": "0400264360009",
+          "name": "Bánh Flan Gato POONGMISO 400G"
+        },
+        {
+          "sku": "8938565871020",
+          "name": "Bánh Chưng Trần Gia 1kg"
+        },
+        {
+          "sku": "8997226661059",
+          "name": "Bánh Cracker Mè Rang Krisma 100G"
+        },
+        {
+          "sku": "8938532826015",
+          "name": "Bánh Mì Mè Đen O'smiles Gói 350g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0021",
+      "query": "bánh ngọt tráng miệng",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936029423648",
+          "name": "Bánh Orion Custas Tiramisu Hộp 140G"
+        },
+        {
+          "sku": "8936036020380",
+          "name": "Bánh Chocopie Orion Hộp 396G"
+        },
+        {
+          "sku": "8936080491648",
+          "name": "Bánh Crepe Tiramisu A&C 70G (ea)"
+        },
+        {
+          "sku": "4712905050337",
+          "name": "Bánh Yuki & Love Nhân Xoài Mãng Cầu Hộp 250G"
+        },
+        {
+          "sku": "8934609602452",
+          "name": "Bánh Hura Swissroll Cốm 360G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0023",
+      "query": "set bánh quà tặng",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8996001306611",
+          "name": "Bánh Quy Danisa Abbracci Vị Bơ Và Cacao Hộp 168G"
+        },
+        {
+          "sku": "4715278952208",
+          "name": "Bánh Dứa Vị Trà Sữa Trân Châu Hộp 470g"
+        },
+        {
+          "sku": "8936029424799",
+          "name": "Bánh Orion Chocopie Hộp 653.4G (18 Cái)"
+        },
+        {
+          "sku": "0400231450009",
+          "name": "Bánh Pie Caramel POONGMISO (6 Cái x 30G)"
+        },
+        {
+          "sku": "4897047803475",
+          "name": "Bánh Quy Disney Tsum Tsum Nguyên Vị 160G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0024",
+      "query": "bánh kem theo yêu cầu",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936080491389",
+          "name": "Bánh Crepe Cầu Vòng A&C 70G (ea)"
+        },
+        {
+          "sku": "8934760219438",
+          "name": "Bánh Bông Lan Tipo Kem Sữa Hộp 180G"
+        },
+        {
+          "sku": "8934564300301",
+          "name": "Bánh Quy Cream-O Brown Choco Jack'n Jill Thanh 85G"
+        },
+        {
+          "sku": "8936222490188",
+          "name": "Bánh Crepe Sầu Riêng 9 Sạch Mix 3 Vị 380G"
+        },
+        {
+          "sku": "7622210580276",
+          "name": "Bánh Quy Oreo Vị Kem Socola Gói 61.25G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0026",
+      "query": "món tráng miệng lạnh",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 14,
+      "actual_total_before_cap": 14,
+      "actual_top_items": [
+        {
+          "sku": "8936094510236",
+          "name": "Thạch Sữa Thạch An Ăn Liền 220G"
+        },
+        {
+          "sku": "8936094510212",
+          "name": "Siro Thạch An Ăn Liền CAOBANGFOOD Ly 200ml"
+        },
+        {
+          "sku": "8938538576006",
+          "name": "Sữa Gạo Lứt Ngọc Maxinutri 330ml"
+        },
+        {
+          "sku": "8936176751175",
+          "name": "Chè Dừa Non Kiểu Thái TNT 140G"
+        },
+        {
+          "sku": "8936176751090",
+          "name": "Chuối Rim Nước Cốt Dừa TNT 140G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0036",
+      "query": "nghêu sò làm món hấp",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "2275560000007",
+          "name": "Thịt Nghêu Lụa 300G"
+        },
+        {
+          "sku": "8938508698097",
+          "name": "Nghêu Sạch Lenger 1.2kg"
+        },
+        {
+          "sku": "0400260050003",
+          "name": "Bún Cá Diêu Hồng Yorihada 650G (ea)"
+        },
+        {
+          "sku": "8938529045832",
+          "name": "Chân Giò Heo Muối Vị Tayaki Ngọc Thơm Foods 450G"
+        },
+        {
+          "sku": "8938501349675",
+          "name": "Canh Ăn Liền Asuzac Rong Biển Thịt Bò"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0039",
+      "query": "hoa quả tráng miệng sau bữa ăn",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936176751090",
+          "name": "Chuối Rim Nước Cốt Dừa TNT 140G"
+        },
+        {
+          "sku": "8938559751048",
+          "name": "Mận Đá 800G"
+        },
+        {
+          "sku": "8936172871204",
+          "name": "Ổi Sấy Dẻo Choice L Fruit Joy Gói 100G"
+        },
+        {
+          "sku": "5201047241417",
+          "name": "Đào Tươi Đóng Hộp Kronos 820G"
+        },
+        {
+          "sku": "8936129114217",
+          "name": "Mứt Me Cay Xí Muội Hải Long Vị Gừng Tắc Hộp 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0047",
+      "query": "rượu vang tặng đối tác",
+      "dimension": "semantic_phrase",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 14,
+      "actual_total_before_cap": 14,
+      "actual_top_items": [
+        {
+          "sku": "8935020203013",
+          "name": "Rượu Vang Đỏ Đà Lạt Chateau Special Merlot 12.5% ABV 750ml"
+        },
+        {
+          "sku": "8935020247017",
+          "name": "Rượu Vang Đỏ Đà Lạt Chateau Tradition Cabernet Sauvignon 12.5% ABV 750ml"
+        },
+        {
+          "sku": "8008530042202",
+          "name": "Rượu Vang Đỏ Terre Forti Sangiovese Rubicone 12% ABV 750ml"
+        },
+        {
+          "sku": "7804634121352",
+          "name": "Rượu Vang Đỏ Passion Cabernet Sauvignon 13.5% ABV Thùng Giả Gỗ 3L (EA)"
+        },
+        {
+          "sku": "8003625000402",
+          "name": "Rượu Vang Gemma Di Luna Moscato Vino Spumante 7.5% Vol Chai 750ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0048",
+      "query": "bia thủ công nhập khẩu",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 44,
+      "actual_top_items": [
+        {
+          "sku": "5410908000012",
+          "name": "Bia Chimay Đỏ 7% ABV 330ml"
+        },
+        {
+          "sku": "4962656116510",
+          "name": "Bia Orion 5% ABV Chai 334ml"
+        },
+        {
+          "sku": "8934772225076",
+          "name": "Bia Red Horse 8% ABV 500ml"
+        },
+        {
+          "sku": "4066600601920",
+          "name": "Bia Paulaner Weissbier 5.5% ABV 500ml"
+        },
+        {
+          "sku": "4962656136013",
+          "name": "Bia Orion Draft 5% ABV Lon 350ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0049",
+      "query": "rượu mạnh cho dịp lễ tết",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 11,
+      "actual_total_before_cap": 11,
+      "actual_top_items": [
+        {
+          "sku": "0000040677767",
+          "name": "Rượu Thảo Mộc Jagermeister 35% ABV Chai 200ml"
+        },
+        {
+          "sku": "5000299211243",
+          "name": "Rượu Blended Whisky Chivas Royal Salute 40% ABV Chai 700ml"
+        },
+        {
+          "sku": "8936033980298",
+          "name": "Rượu Vodka men's vodka 29.5% ABV Chai 500ml"
+        },
+        {
+          "sku": "4905846117966",
+          "name": "Rượu Mơ Choya Golden Ume Fruit 15% ABV Chai 650ml"
+        },
+        {
+          "sku": "8008738006877",
+          "name": "Rượu Vang Đỏ Ngọt La Collina 10.5% ABV Chai 750ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0051",
+      "query": "bia lon uống tại nhà",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 34,
+      "actual_top_items": [
+        {
+          "sku": "8934692010011",
+          "name": "Bia Halida 4.5% ABV Lon 330ml"
+        },
+        {
+          "sku": "8936094291500",
+          "name": "Bia Budweiser 5% ABV Lon 250ml"
+        },
+        {
+          "sku": "8934772225076",
+          "name": "Bia Red Horse 8% ABV 500ml"
+        },
+        {
+          "sku": "4962656136013",
+          "name": "Bia Orion Draft 5% ABV Lon 350ml"
+        },
+        {
+          "sku": "8934822901332",
+          "name": "Bia Larue 4.2% ABV Lon 330ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0053",
+      "query": "đồ uống có cồn cho tiệc cuối năm",
+      "dimension": "semantic_phrase",
+      "route": "keyword",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "6935145301078",
+          "name": "Cocktail Rio Nho Brandy 4.2% ABV 275ml"
+        },
+        {
+          "sku": "6935145301047",
+          "name": "Cocktail Rio Vị Hoa Hồng Brandy 4.2% ABV 275ml"
+        },
+        {
+          "sku": "6935145301092",
+          "name": "Cocktail Rio Việt Quất Brandy 4.2% ABV 275ml"
+        },
+        {
+          "sku": "6935145301030",
+          "name": "Cocktail Rio Đào Brandy 4.2% ABV 275ml"
+        },
+        {
+          "sku": "9329982016573",
+          "name": "Vodka Cruiser Pure Pineaplle 4.6% ABV Chai 275ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0056",
+      "query": "kem nền che khuyết điểm",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8994993016563",
+          "name": "Kem Dưỡng Sáng Da Ban Đêm L'Oreal Paris Glycolic Bright Glowing Cream"
+        },
+        {
+          "sku": "8935006547940",
+          "name": "Tinh Chất Chống Nắng Sunplay Skin Aqua Tone Up UV Essence Blue 50G"
+        },
+        {
+          "sku": "8994993016525",
+          "name": "Kem Dưỡng Sáng Da Ban Ngày L'Oreal Paris Glycolic Bright Glowing Cream"
+        },
+        {
+          "sku": "8809623944782",
+          "name": "Kem Chống Nắng Beplain Sunmuse Tone Up And Correcting Peach Pink SPF50+ PA++++ 50ml"
+        },
+        {
+          "sku": "8936112021140",
+          "name": "Bông Tẩy Trang Mihoo Tròn 200 Miếng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0058",
+      "query": "mascara chống lem nước",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935006547384",
+          "name": "Nước Tẩy Trang Hada Labo Sạch Sâu Cho Da Mụn Và Nhạy Cảm 240ml"
+        },
+        {
+          "sku": "8710908371509",
+          "name": "Nước Tẩy Trang Simple Micellar Cấp Ẩm Tức Thì 400ml"
+        },
+        {
+          "sku": "8936217700223",
+          "name": "Nước Tẩy Trang Cocoon Bí Đao Làm Sạch Và Giảm Dầu 500ml"
+        },
+        {
+          "sku": "6928820029589",
+          "name": "Nước Tẩy Trang Garnier Micellar Cleansing Water Cho Da Nhạy Cảm Chai 400ml"
+        },
+        {
+          "sku": "8851932474269",
+          "name": "Nước Tẩy Trang Pond's Vitamin Và Tinh Than Tre Sạch Sâu 400ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0059",
+      "query": "bộ trang điểm cơ bản cho người mới",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "4903111455546",
+          "name": "Bông Tẩy Trang Silcot 82 Miếng"
+        },
+        {
+          "sku": "4903111424283",
+          "name": "Bông Tẩy Trang Silcot Cao Cấp 66 Miếng"
+        },
+        {
+          "sku": "8935337541211",
+          "name": "Đồ Chơi Trang Điểm Dạng Túi Đeo Stitch Sweet Heart SH10307"
+        },
+        {
+          "sku": "8935337543444",
+          "name": "Đồ Chơi Trang Điểm Dạng Túi Đeo Frozen Sweet Heart SH10097"
+        },
+        {
+          "sku": "8809672512628",
+          "name": "Bút Kẻ Mắt Prelude Dinto Dante Triple Proof Slim Eyeliner 51 Abyss 0.14G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0064",
+      "query": "bút viết đi làm",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 46,
+      "actual_top_items": [
+        {
+          "sku": "8935318311468",
+          "name": "Bút Chì Bấm 0.5mm STACOM Kèm 1 Ruột RMP015"
+        },
+        {
+          "sku": "8935001806530",
+          "name": "Bút Bi Bút Bi TL-089 Mực Đen Vỉ 3 Cây"
+        },
+        {
+          "sku": "8935324028268",
+          "name": "Bút Gel Hoshi Thiên Long GEL-048/HS Mực Xanh"
+        },
+        {
+          "sku": "8935324028275",
+          "name": "Bút Gel Hoshi Thiên Long GEL-048/HS Mực Đen"
+        },
+        {
+          "sku": "8935001801856",
+          "name": "Bút Bi Thiên Long TL047 Tango Mực Xanh Vỉ 3 Cây"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0065",
+      "query": "sổ tay ghi chú công việc",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 2,
+      "actual_total_before_cap": 2,
+      "actual_top_items": [
+        {
+          "sku": "4935183700378",
+          "name": "Sổ Lò Xo Notebook Motto A6 120 Trang 10.5 X 14.8 Cm (Giao Ngẫu Nhiên)"
+        },
+        {
+          "sku": "4935183700422",
+          "name": "Sổ Lx Twin Memopad Love Knot Motto A6 120 Trang (10.5 X 14.8 cm)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0067",
+      "query": "đồ dùng chuẩn bị năm học mới",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "P2317BỌDCHT",
+          "name": "Bộ Dụng Cụ Hoc Tập 25K"
+        },
+        {
+          "sku": "6976693309086",
+          "name": "Bao Đựng Viết Weibo 9827 1 Cái (Giao mẫu ngẫu nhiên)"
+        },
+        {
+          "sku": "8935107202380",
+          "name": "Miếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)"
+        },
+        {
+          "sku": "8935324035921",
+          "name": "Balo Chống Gù Thiên Long BP-025/T24 Màu Hồng"
+        },
+        {
+          "sku": "6976693303763",
+          "name": "Bộ 1 Gọt Bút Chì và 1 Gôm Weibo 71064 (Giao mẫu ngẫu nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0069",
+      "query": "giấy in văn phòng",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8858741710298",
+          "name": "Giấy Photo Double A A4 70gsm Sấp 500 Tờ"
+        },
+        {
+          "sku": "8936044394541",
+          "name": "Giấy Ghi Chú STACOM Màu Vàng 76x76mm M76076Y"
+        },
+        {
+          "sku": "8935318306945",
+          "name": "Giấy Ghi Chú STACOM Màu Neon 76x127mm M76127NL"
+        },
+        {
+          "sku": "8936044394503",
+          "name": "Giấy Ghi Chú STACOM Màu Vàng 76x50mm M7650Y"
+        },
+        {
+          "sku": "8936044394626",
+          "name": "Giấy Ghi Chú STACOM Màu Vàng 76x127mm M76127Y"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0070",
+      "query": "kẹp file tài liệu",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 9,
+      "actual_total_before_cap": 9,
+      "actual_top_items": [
+        {
+          "sku": "8936134223072",
+          "name": "Kẹp Bướm 15Mm T.T.H 227"
+        },
+        {
+          "sku": "6975628227341",
+          "name": "Kẹp Màu S 19mm Weibo 1920 (Giao mẫu ngẫu nhiên)"
+        },
+        {
+          "sku": "6975628227334",
+          "name": "Kẹp Màu S 25mm Weibo 2515 (Giao mẫu ngẫu nhiên)"
+        },
+        {
+          "sku": "6975628227327",
+          "name": "Kẹp Màu S 32mm Weibo 3212 (Giao mẫu ngẫu nhiên)"
+        },
+        {
+          "sku": "6971082811133",
+          "name": "Kẹp Đen S 15mm Weibo 113A Hộp 12 Cái (Giao mẫu ngẫu nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0079",
+      "query": "nguyên liệu làm kim chi tại nhà",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935039513288",
+          "name": "Gia Vị Nêm Sẵn Lẩu Kim Chi Aji Quick Ajinomoto 44G"
+        },
+        {
+          "sku": "8935347400089",
+          "name": "Kim Chi Cải Thảo Cắt Lát TH true Food 500G"
+        },
+        {
+          "sku": "8936100290695",
+          "name": "Kim Chi Củ Cải Vàng Mr Lee 300G"
+        },
+        {
+          "sku": "8938508547524",
+          "name": "Kim Chi Cải Thảo Cây bibigo 1kg"
+        },
+        {
+          "sku": "8935297102934",
+          "name": "Kim Chi Ít Cay bibigo 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0080",
+      "query": "món ăn nhanh cho bữa tối",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0400301620004",
+          "name": "Salad Thịt Heo Xông Khói Yorihada (Salad Bacon)"
+        },
+        {
+          "sku": "0400309110002",
+          "name": "Gà Rán Hàn Quốc 1 Yorihada 460G"
+        },
+        {
+          "sku": "0400203660009",
+          "name": "Bánh Giò Hấp Thọ Phát 150G (ea)"
+        },
+        {
+          "sku": "0400285920008",
+          "name": "Yubu Thanh Cua Mayo Yorihada 90G (ea)"
+        },
+        {
+          "sku": "0400285910009",
+          "name": "Yubu Bắp Mayo"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0081",
+      "query": "thực phẩm chế biến sẵn tiện lợi",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934831116505",
+          "name": "Khoai Môn Sấy Nhabexims Gói 100g"
+        },
+        {
+          "sku": "6936999900004",
+          "name": "Miến Khoai Lang Ngon Otoki Gói 450G"
+        },
+        {
+          "sku": "8936204030135",
+          "name": "Khoai mì làm sạch An Lạc 300g (ea)"
+        },
+        {
+          "sku": "8934863374126",
+          "name": "Miến Khoai Lang Hàn Quốc Bích Chi 200g"
+        },
+        {
+          "sku": "8935304203081",
+          "name": "Miến Khoai Lang Sợi Gập O'Food Gói 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0082",
+      "query": "nguyên liệu nướng BBQ cuối tuần",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8935019514199",
+          "name": "Ba Rọi Nạc Xông Khói Le Gourmet 500G"
+        },
+        {
+          "sku": "8935019514113",
+          "name": "Ba Rọi Xông Khói Le Gourmet 200G"
+        },
+        {
+          "sku": "8936035440028",
+          "name": "Ba Rọi Xông Khói Smoked Bacon Trường Vinh Gói 500G"
+        },
+        {
+          "sku": "8938524577321",
+          "name": "Ba Rọi Đồng Quê Xông Khói Cắt Lát Shinshu Gói 200G"
+        },
+        {
+          "sku": "8936150842103",
+          "name": "Combo Thịt Ba Chỉ Heo, Bò Và Viên Nướng BBQ KiaOra 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0083",
+      "query": "món chay cho người ăn kiêng đạo",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934717262012",
+          "name": "Chả Giò Chay CJ Cầu Tre Gói 500G"
+        },
+        {
+          "sku": "8935001400028",
+          "name": "Gà Cục Chay Âu Lạc Hộp 100g"
+        },
+        {
+          "sku": "8935001462521",
+          "name": "Thịt Vịt Kho Gừng Và Sả Chay Âu Lạc Hộp 140g"
+        },
+        {
+          "sku": "8934746054800",
+          "name": "Bánh Phồng Tôm Chay Khoai Tay Sa Giang 200G"
+        },
+        {
+          "sku": "8935001462439",
+          "name": "Gà Xào Sả Ớt Chay Âu Lạc Hộp 140g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0085",
+      "query": "món khai vị đãi khách",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936035342018",
+          "name": "Dưa Món Sông Hương Foods Hũ 500g"
+        },
+        {
+          "sku": "8936035340182",
+          "name": "Dưa Món Sông Hương Hũ 450G"
+        },
+        {
+          "sku": "8934637512990",
+          "name": "Chạo Tôm Cholimex 350G"
+        },
+        {
+          "sku": "8936176751090",
+          "name": "Chuối Rim Nước Cốt Dừa TNT 140G"
+        },
+        {
+          "sku": "8936035342025",
+          "name": "Dưa Món Sông Hương Foods Hũ 1Kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0086",
+      "query": "nguyên liệu làm lẩu Thái",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936079285883",
+          "name": "Gia Vị Lẩu Thái Dh Foods Gói 26G"
+        },
+        {
+          "sku": "8850367300099",
+          "name": "Gia vị lẩu thái Tom Yum MAE PLOY 50g"
+        },
+        {
+          "sku": "8936028043618",
+          "name": "Nước Dùng Hoàn Chỉnh Barona Lẩu Thái Túi 180G"
+        },
+        {
+          "sku": "8936150842035",
+          "name": "Combo Thịt Và Viên Thả Lẩu Kiaora 500G (EA)"
+        },
+        {
+          "sku": "6970115982581",
+          "name": "Cốt Lẩu Tomyum Chua Cay Haidilao Gói 210G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0088",
+      "query": "dụng cụ dọn dẹp phòng tắm",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936007982464",
+          "name": "Vỉ 4 Viên Tẩy Vệ Sinh Toilet Hando 220Gg"
+        },
+        {
+          "sku": "8936007982433",
+          "name": "Viên Tẩy Bồn Cầu Hando Vỉ 6 Viên"
+        },
+        {
+          "sku": "8934889801231",
+          "name": "Nước Tẩy Nhà Tắm Duck Mr Muslce Pro 900ml Lốc 2 Chai"
+        },
+        {
+          "sku": "8935241702234",
+          "name": "Bộ Bàn Chải Cọ Rửa Bồn Cầu Choice L Clean Home 38x13.5x10cm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6922200801314",
+          "name": "Viên Tẩy Rửa Bồn Cầu Zestta Hương Chanh Vỉ 6 Viên x 50G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0089",
+      "query": "trang trí phòng ngủ ấm cúng",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "0412101470000",
+          "name": "Gối Tựa Hình Thú 35x35cm (Giao mẫu ngẫu nhiên)"
+        },
+        {
+          "sku": "8936090030967",
+          "name": "Gối Mềm Hình Thú Có Chăn (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936002099891",
+          "name": "Bộ Drap Cotton Ngọc Hạnh Bedding 160 x 200 x 27cm"
+        },
+        {
+          "sku": "8936002093561",
+          "name": "Bộ Drap Daisy Premium Ngọc Hạnh Bedding 160x200x25cm (Giao Mẫu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936002092212",
+          "name": "Drap Lẻ Đũi Ngọc Hạnh Bedding 160x200x18cm (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0091",
+      "query": "vật dụng sắp xếp tủ quần áo",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936039271970",
+          "name": "Bộ Kẹp Áo Hoa Mai Tự Lập TL32 12 Cái (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936060491606",
+          "name": "Móc Áo Đa Năng Choice L Lốc 6 Cái (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935275201017",
+          "name": "Lốc 5 Móc Áo Xoay Vuông Inochi Hara 175 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936039270928",
+          "name": "Kẹp Xếp Treo Tự Lập TL336 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936060491620",
+          "name": "Móc Áo Choice L Lốc 6 Cái (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0092",
+      "query": "đồ dùng ngoài sân vườn",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 5,
+      "actual_total_before_cap": 5,
+      "actual_top_items": [
+        {
+          "sku": "6973388932925",
+          "name": "Đồ Chơi Phun Nước 9218 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6973388931973",
+          "name": "Đồ Chơi Phun Nước 95577 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6931941227697",
+          "name": "Đồ Chơi Phun Nước 202 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6947806402536",
+          "name": "Đồ Chơi Phun Nước LY401 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "6959434104386",
+          "name": "Đồ Chơi Phun Nước M205T (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0093",
+      "query": "thiết bị làm sạch không khí trong nhà",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "9555222610472",
+          "name": "Xịt Tự Động Glade Hương Anh Đào & Lily Chai 175G"
+        },
+        {
+          "sku": "4987176236319",
+          "name": "Xịt Phòng Ambi Pur Hương Huyền Bí 275ml"
+        },
+        {
+          "sku": "8936007982433",
+          "name": "Viên Tẩy Bồn Cầu Hando Vỉ 6 Viên"
+        },
+        {
+          "sku": "9555222605461",
+          "name": "Xịt Tự Động Glade Hương Sớm Mai Chai 175G"
+        },
+        {
+          "sku": "9555222605942",
+          "name": "Xịt Tự Động Glade Hương Dâu Tươi 252ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0094",
+      "query": "dụng cụ nhà bếp cho người mới nấu ăn",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8936059011822",
+          "name": "Bộ Dao Thép Không Gỉ Và Dụng Cụ Gọt Vỏ 6 Món Delaware"
+        },
+        {
+          "sku": "8936040513137",
+          "name": "Dụng Cụ Kẹp Càng Cua Inox 304 Ticook"
+        },
+        {
+          "sku": "8936190941606",
+          "name": "Bộ 2 Đôi Đũa Chiên Gỗ Cà Chít Choice L"
+        },
+        {
+          "sku": "8935275211870",
+          "name": "Dụng Cụ Xay Tỏi Ớt Inochi Yoko Hộp 400ml (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936063012464",
+          "name": "Đũa Bếp Ohi@Ma HM-1808"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0096",
+      "query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 3,
+      "actual_total_before_cap": 3,
+      "actual_top_items": [
+        {
+          "sku": "4511413614846",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe DHC Bổ Sung Collagen Túi 180 Viên"
+        },
+        {
+          "sku": "4511413609941",
+          "name": "Thực Phẩm Bảo Vệ Sức Khỏe DHC Bổ Sung Kẽm Zinc Cho Cơ Thể Túi 30 Viên"
+        },
+        {
+          "sku": "8935049014355",
+          "name": "Thực Phẩm Dinh Dưỡng Pha Sẵn Nutifood Varna Complete Chai 237ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0097",
+      "query": "viên uống hỗ trợ giấc ngủ",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8809422041231",
+          "name": "Viên Uống Bảo Vệ Sức Khỏe Kolmar Condition Liver Hộp 90 Viên"
+        },
+        {
+          "sku": "8936101421012",
+          "name": "Viên Hà Thủ Ô 5In1 120G"
+        },
+        {
+          "sku": "8936203161342",
+          "name": "Gối Cao Su Non Nin House Supportive 60X40X12Cm"
+        },
+        {
+          "sku": "8936147851057",
+          "name": "Viên nhộng nhàu Noni Vitian Vĩnh Tiến (500mgx 100 Viên)"
+        },
+        {
+          "sku": "8938524161025",
+          "name": "Viên Nhàu Noni Nguyên Chất 100% Novi 250G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0098",
+      "query": "sản phẩm tăng đề kháng cho trẻ em",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934673400541",
+          "name": "Bột Ăn Dặm Ridielac Gold Gạo Sữa Hộp Giấy 200G"
+        },
+        {
+          "sku": "8934673425032",
+          "name": "Bột Ăn Dặm Ridielac Gold Bò Rau Củ Hộp 200G"
+        },
+        {
+          "sku": "8934673431033",
+          "name": "Bột Ăn Dặm Ridielac Gold Yến Mạch Sữa 200G"
+        },
+        {
+          "sku": "2273590000004",
+          "name": "Khoai tây vàng 400g"
+        },
+        {
+          "sku": "8934673424035",
+          "name": "Bột Ăn Dặm Ridielac Gold Heo Cà Rốt Hộp 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-SEM-0100",
+      "query": "đồ dùng chăm sóc sức khỏe người cao tuổi",
+      "dimension": "semantic_phrase",
+      "route": "keyword_ai",
+      "asis_total_before_cap": 0,
+      "actual_count": 30,
+      "actual_total_before_cap": 50,
+      "actual_top_items": [
+        {
+          "sku": "8934755040047",
+          "name": "Tã Giấy Người Lớn Caryn XL10 Gói 10 Miếng"
+        },
+        {
+          "sku": "8934755040030",
+          "name": "Tấm Đệm Lót Siêu Thấm Caryn Dành Cho Người Lớn L10 (10 Miếng)"
+        },
+        {
+          "sku": "8934755040009",
+          "name": "Tã Dán Người Lớn Caryn Size M-L 10 Miếng (Vòng Hông 68-122cm)"
+        },
+        {
+          "sku": "8934755040207",
+          "name": "Tấm Đệm Lót Caryn Mỏng Nhẹ Gói 14 Miếng (60x70cm)"
+        },
+        {
+          "sku": "8934755040177",
+          "name": "Tã Quần Người Lớn Caryn Mỏng Nhẹ Size M Gói 16 Miếng (Vòng Bụng 60 - 85cm)"
+        }
+      ]
+    }
+  ]
+}

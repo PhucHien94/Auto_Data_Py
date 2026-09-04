@@ -2,7 +2,7 @@
 
 This folder contains everything specific to the **Smart Search & Autocomplete** feature (REQ, test cases, QnA log, golden test data, run reports, manual-QC assets, full-catalog exports, AI context). Shared infrastructure — `scripts/`, `data/` (source product catalogs), `config/environments.yaml`, `.claude/` — stays at the repo root (`Auto_Data_Py/`) so other feature modules can reuse it. All commands below are run **from the repo root**, not from inside this folder.
 
-See [`AI_CONTEXT.md`](AI_CONTEXT.md) for the full architecture/decisions context (written for another AI to onboard quickly).
+See [`AI_CONTEXT.md`](AI_CONTEXT.md) for the full architecture/decisions context (written for another AI to onboard quickly). See [`RUNBOOK_data_and_compare.md`](RUNBOOK_data_and_compare.md) (in Vietnamese) for the day-to-day manual runbook covering the Expected/Actual/As-Is data workflow and `compare_results.py` step by step.
 
 ## Layout
 

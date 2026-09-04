@@ -2,7 +2,7 @@
   "generatedDate": "2026-08-31",
   "store": "nsg",
   "batchRange": "demo_asis_vs_actual",
-  "totalScenarios": 9,
+  "totalScenarios": 78,
   "purpose": "Bo query THU CONG (khong phai sinh tu real-search-history hay engine gia lap) danh cho demo khach hang - minh hoa su khac biet ro giua As-Is (he thong hien tai tren lottemart.vn) va Actual (he thong dev-gateway dang test). File nay KHONG co du lieu Expected (khong co search_results) - mo bang compare_results.py roi doi toggle 'So sanh' sang 'As-Is <-> Actual' de xem, panel Expected se hien trong/TBD vi khong ap dung cho file nay.",
   "howToUse": [
     "1. Lay Actual: python scripts/automation/export_actual_search_results.py --env dev --batch demo_asis_vs_actual --no-auth (hoi lai auth mode truoc khi chay that)",
@@ -64,6 +64,420 @@
       "query": "bếp từ",
       "dimension": "manual_demo_asis_vs_actual",
       "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual."
+    },
+    {
+      "test_id": "NSG-DEMO-0010",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0011",
+      "query": "chế độ ăn eat clean",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0012",
+      "query": "đồ ăn organic",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0013",
+      "query": "protein tăng cơ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0014",
+      "query": "nước rửa chuyên dụng bình sữa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0015",
+      "query": "cá kèo",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0016",
+      "query": "pepci",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0017",
+      "query": "thớt gỗ nhà bếp",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0018",
+      "query": "rổ nhựa đựng đồ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0019",
+      "query": "thuốc diệt côn trùng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03)."
+    },
+    {
+      "test_id": "NSG-DEMO-0020",
+      "query": "nước giac",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03, dot 2 - typo test)."
+    },
+    {
+      "test_id": "NSG-DEMO-0021",
+      "query": "túi rát",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-03, dot 2 - typo test)."
+    },
+    {
+      "test_id": "NSG-DEMO-0022",
+      "query": "nho",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0023",
+      "query": "ca hoi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0024",
+      "query": "đồ ăn hàn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0025",
+      "query": "sua",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0026",
+      "query": "comfort",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0027",
+      "query": "redbull",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0028",
+      "query": "mắm",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0029",
+      "query": "tui thuc pham",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0030",
+      "query": "hop qua tết kinh đô",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0031",
+      "query": "bnh kinh do",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0032",
+      "query": "lays",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0033",
+      "query": "lê hàn quốc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0034",
+      "query": "hộp đựng thực phẩm thủy tinh",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0035",
+      "query": "dưa hâu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0036",
+      "query": "nem rán",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0037",
+      "query": "bột giạt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0038",
+      "query": "kệ để đồ đa năng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0039",
+      "query": "tăng cân healthy",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0040",
+      "query": "bành mì",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0041",
+      "query": "gochujang",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0042",
+      "query": "nước hoa nam",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0043",
+      "query": "hạt dưa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0044",
+      "query": "rice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0045",
+      "query": "mi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0046",
+      "query": "gel vuốt tóc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0047",
+      "query": "củ hành tím",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0048",
+      "query": "rau tần ô",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0049",
+      "query": "củ kiệu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0050",
+      "query": "trái thanh long",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0051",
+      "query": "thực phẩm tươi sống",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0052",
+      "query": "chống lão hóa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0053",
+      "query": "cocacola",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0054",
+      "query": "わさび",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0055",
+      "query": "라면",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0056",
+      "query": "kit cat",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0057",
+      "query": "netsle",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0058",
+      "query": "lchoice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0059",
+      "query": "yên mạch giảm cân",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0060",
+      "query": "thùng rác thông minh",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0061",
+      "query": "mỹ phẩm thiên nhiên",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0062",
+      "query": "ốc bươu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0063",
+      "query": "gói hút ẩm chống mốc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0064",
+      "query": "nc mắm",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0065",
+      "query": "tổ iến",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0066",
+      "query": "đồ chơi trẻ em thông minh",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0067",
+      "query": "trái sầu riêng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0068",
+      "query": "bình xịt côn trùng jumbo vape không mùi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0069",
+      "query": "hộp cơm giữ nhiệt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0070",
+      "query": "vali du lịch",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0071",
+      "query": "thức ăn dặm cho bé 6 tháng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0072",
+      "query": "bình nước giữ nhiệt thể thao",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0073",
+      "query": "bánh hotteok",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0074",
+      "query": "khan giấy",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0075",
+      "query": "rượu vang đỏ khai vị",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0076",
+      "query": "sủa tươi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0077",
+      "query": "bột tẩy lồng máy giặt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
+    },
+    {
+      "test_id": "NSG-DEMO-0078",
+      "query": "dâu ăn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "note": "Query thu cong do user cung cap de demo khach hang - so sanh As-Is vs Actual (bo sung 2026-09-04, dot 3)."
     }
   ]
 }

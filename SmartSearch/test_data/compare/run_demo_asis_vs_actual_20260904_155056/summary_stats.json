@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-04T15:50:56.734424",
+  "expected_file": "SmartSearch\\test_data\\json\\batches\\NSG_ExpectedData_demo_asis_vs_actual_20260831.json",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_demo_asis_vs_actual_20260904_154954.json",
+  "asis_cache_file": "SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache.json",
+  "asis_match_threshold_pct": 50,
+  "asis_scenarios_used": 78,
+  "asis_newly_fetched": 3,
+  "total_scenarios": 78,
+  "matched_by_test_id": 78,
+  "matched_by_query": 0,
+  "unmatched_scenarios": 0,
+  "exact_order_count": 0,
+  "exact_order_pct": 0.0,
+  "set_match_count": 0,
+  "set_match_pct": 0.0,
+  "top1_match_count": 0,
+  "top1_match_pct": 0.0,
+  "mismatch_count": 78,
+  "mismatch_pct": 100.0,
+  "zero_result_count": 0,
+  "avg_overlap_pct": 0.0,
+  "avg_top5_overlap_pct": 0.0,
+  "avg_top10_overlap_pct": 0.0,
+  "avg_top20_overlap_pct": 0.0,
+  "breakdown_by_category": {
+    "100_PERCENT_EXACT": 0,
+    "100_PERCENT_SET": 0,
+    "HIGH_MATCH": 10,
+    "PARTIAL_MATCH": 21,
+    "LOW_MATCH": 16,
+    "ZERO_RESULT": 0,
+    "NO_MATCH": 30
+  },
+  "passed_count": 23,
+  "failed_count": 55,
+  "regression_count": 0,
+  "regression_alerts": [],
+  "response_changed_count": 1,
+  "response_change_alerts": [
+    {
+      "test_id": "NSG-DEMO-0011",
+      "query": "chế độ ăn eat clean",
+      "dimension": "manual_demo_asis_vs_actual",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-04T15:23:37.961008"
+    }
+  ],
+  "pass_fail_state_file": "SmartSearch\\test_data\\compare\\pass_fail_state_nsg.json",
+  "pass_fail_store": "nsg"
+}
