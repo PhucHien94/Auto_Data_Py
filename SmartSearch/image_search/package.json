@@ -1,0 +1,33 @@
+{
+  "name": "image-search-eval",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "So sánh các cơ chế image search trên dev console playground",
+  "scripts": {
+    "auth": "node scripts/auth.mjs",
+    "check": "node scripts/check-images.mjs",
+    "test": "playwright test --grep-invert @record",
+    "record": "playwright test --grep @record --headed",
+    "smoke": "node scripts/run.mjs --limit 3 --headed",
+    "run": "node scripts/run.mjs",
+    "score": "node scripts/score.mjs",
+    "codegen": "playwright codegen \"https://dev-console.martonline.lotte.vn/#/search-service/playground?q=&size=100\"",
+    "excel:extract": "python scripts/extract_excel_images.py",
+    "excel:run": "node scripts/run-excel-top40.mjs",
+    "excel:images": "node scripts/fetch-result-images.mjs",
+    "excel:write": "python scripts/write_excel_results.py",
+    "dashboard": "python scripts/build_image_dashboard.py --open",
+    "dashboard:apply": "python scripts/build_image_dashboard.py --apply",
+    "renumber": "python scripts/renumber_keywords.py",
+    "audit": "python scripts/audit_consistency.py",
+    "coverage": "python scripts/category_coverage.py",
+    "add-keywords": "python scripts/add_keywords.py",
+    "cattree": "python scripts/build_category_tree.py",
+    "review": "python scripts/build_review_report.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0"
+  }
+}

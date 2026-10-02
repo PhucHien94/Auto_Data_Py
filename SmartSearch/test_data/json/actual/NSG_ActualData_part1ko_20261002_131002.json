@@ -1,0 +1,5068 @@
+{
+  "generatedDate": "2026-10-02",
+  "store": "nsg",
+  "batchRange": "part1ko",
+  "lang": "ko",
+  "totalScenarios": 3,
+  "sourceExpectedFile": "NSG_ExpectedData_part1ko_20260929.json",
+  "apiEndpoint": "https://dev-gateway.martonline.lotte.vn/api/v2/ko/nsg/products/search",
+  "recommendationsApiEndpoint": "https://dev-gateway.martonline.lotte.vn/api/v2/ko/nsg/products/recommendations",
+  "recommendationTriggerMaxResults": 20,
+  "autocompleteApiEndpoint": "https://dev-gateway.martonline.lotte.vn/api/v2/ko/nsg/products/autocomplete",
+  "autocompleteLimit": 8,
+  "scenarios": [
+    {
+      "test_id": "NSG-P1KO-0001",
+      "fetched_at": "2026-10-02T13:12:13",
+      "query": "수박씨",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #1] Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt M",
+      "route": null,
+      "search_results": [
+        {
+          "rank": 1,
+          "productId": "16032",
+          "sku": "8934760132249",
+          "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "urlKey": "huu-nghi-mooncake-with-mung-bean-and-melon-seed-filling-no-egg-yolk-180g-8934760132249",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "116",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 68000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 22,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934760132249-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "20948",
+          "sku": "8934680093156",
+          "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "urlKey": "kinh-do-black-sesame-and-melon-seed-mooncake-without-egg-150g-8934680093156",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "112",
+            "113",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 80000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 73,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934680093156-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "42410",
+          "sku": "8934680095242",
+          "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "urlKey": "kinh-do-soft-mooncake-with-mung-bean-melon-seeds-and-one-egg-230g-8934680095242",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "112",
+            "113",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 85000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": false,
+          "stockQty": null,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934680095242.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "response_meta": {
+        "queryId": "q_94226ad8463e43cc",
+        "normalizedQuery": "수박씨",
+        "corrected": false,
+        "originalQuery": "수박씨",
+        "didYouMean": null,
+        "redirect": null,
+        "totalHits": 3,
+        "tookMs": 18,
+        "fallbackUsed": false,
+        "accentRelaxed": false,
+        "resolvedMode": "lexical",
+        "pageCeiling": 1,
+        "lexicalConfidence": 0.7073985448344432,
+        "paginationMode": "page",
+        "page": 1,
+        "pageSize": 50,
+        "hasMore": false,
+        "nextCursor": null,
+        "facets": {
+          "brands": [
+            {
+              "value": "Vietnam",
+              "count": 3
+            }
+          ],
+          "categories": [
+            {
+              "value": "110",
+              "label": "가공식품",
+              "count": 3
+            },
+            {
+              "value": "111",
+              "label": "건과류",
+              "count": 3
+            },
+            {
+              "value": "745",
+              "label": "Virtual cat",
+              "count": 3
+            },
+            {
+              "value": "770",
+              "label": "추석",
+              "count": 3
+            },
+            {
+              "value": "771",
+              "label": "Bánh Trung Thu",
+              "count": 3
+            },
+            {
+              "value": "112",
+              "label": "스펀지케이크",
+              "count": 2
+            },
+            {
+              "value": "113",
+              "label": "비스킷",
+              "count": 2
+            },
+            {
+              "value": "116",
+              "label": "기타 과자",
+              "count": 1
+            }
+          ],
+          "priceRanges": [
+            {
+              "from": 50000,
+              "to": 100000,
+              "max": 99999,
+              "count": 3
+            }
+          ],
+          "tags": [
+            {
+              "value": "Ăn Vặt",
+              "label": "Ăn Vặt",
+              "count": 3
+            },
+            {
+              "value": "Bánh Quy",
+              "label": "Bánh Quy",
+              "count": 2
+            }
+          ],
+          "viTags": [
+            {
+              "value": "Ăn Vặt",
+              "label": "Ăn Vặt",
+              "count": 3
+            },
+            {
+              "value": "Bánh Quy",
+              "label": "Bánh Quy",
+              "count": 2
+            }
+          ],
+          "enTags": [
+            {
+              "value": "Snacks",
+              "label": "Snacks",
+              "count": 3
+            },
+            {
+              "value": "Cookies",
+              "label": "Cookies",
+              "count": 2
+            }
+          ],
+          "krTags": [
+            {
+              "value": "간식",
+              "label": "간식",
+              "count": 3
+            },
+            {
+              "value": "쿠키",
+              "label": "쿠키",
+              "count": 2
+            }
+          ],
+          "delivery": [
+            {
+              "value": "Giao hàng tiêu chuẩn",
+              "count": 3
+            }
+          ],
+          "inStock": [
+            {
+              "value": "true",
+              "count": 2
+            }
+          ],
+          "attrs": {
+            "brand_origin": [
+              {
+                "value": "Vietnam",
+                "label": "Vietnam",
+                "count": 3
+              }
+            ],
+            "country_of_manufacture": [
+              {
+                "value": "Vietnam",
+                "label": "Vietnam",
+                "count": 3
+              }
+            ],
+            "enable_gift_wraping": [
+              {
+                "value": "No",
+                "label": "No",
+                "count": 3
+              }
+            ],
+            "is_installation": [
+              {
+                "value": "No",
+                "label": "No",
+                "count": 3
+              }
+            ],
+            "sub_brand": [
+              {
+                "value": "Kinh Đô",
+                "label": "Kinh Đô",
+                "count": 2
+              },
+              {
+                "value": "Hữu Nghị",
+                "label": "Hữu Nghị",
+                "count": 1
+              }
+            ]
+          }
+        },
+        "suggestedFilters": [
+          "inStockOnly",
+          "categoryId:110"
+        ]
+      },
+      "api_latency_ms": 252,
+      "api_error": null,
+      "recommendation_triggered": true,
+      "recommendation_results": [
+        {
+          "rank": 1,
+          "productId": "63044",
+          "sku": "2292190000009",
+          "name": "수세미 500G",
+          "urlKey": "muop-huong-2292190000009",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "뿌리채소",
+          "categoryIds": [
+            "265",
+            "3",
+            "512"
+          ],
+          "price": 17450,
+          "originalPrice": 20750,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2040470000009.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "241288",
+          "sku": "8936235530215",
+          "name": "VITEC FARM 일본식 고구마 및 우유 고구마 혼합 1kg",
+          "urlKey": "hh-khoai-lang-giong-nhat-va-sua-1kg-8936235530215",
+          "typeId": "simple",
+          "brand": "VITEC FARM",
+          "brandId": null,
+          "category": "SPECIAL CATEGORIES",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "492",
+            "7"
+          ],
+          "price": 49900,
+          "originalPrice": 59900,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 31,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936235530215-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "236470",
+          "sku": "8809641613707",
+          "name": "한국 백만송이 버섯 150G",
+          "urlKey": "kr-nam-thuy-tien-trang-hq-150g-8809641613707",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "생버섯",
+          "categoryIds": [
+            "265",
+            "3",
+            "297",
+            "627"
+          ],
+          "price": 33900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 9996,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8809641613707-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 4,
+          "productId": "232820",
+          "sku": "8936200652249",
+          "name": "Bio Ngon 유기농 수세미오이 200G",
+          "urlKey": "muop-huong-huu-co-200g-8936200652249",
+          "typeId": "simple",
+          "brand": "Bio_Ngon",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 17900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 10,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936200652249-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 5,
+          "productId": "7950",
+          "sku": "8936005871647",
+          "name": "Doi Dua Vang 냉동스위트콘 400G",
+          "urlKey": "ngo-my-ngot-dong-lanh-doi-dua-vang-400g-8936005871647",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "채소",
+          "categoryIds": [
+            "110",
+            "167",
+            "728"
+          ],
+          "price": 60900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 60,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936005871647.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 6,
+          "productId": "63028",
+          "sku": "2292110000003",
+          "name": "미국종 땅콩호박 1.2kg",
+          "urlKey": "bi-ho-lo-giong-my-2292110000003",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "뿌리채소",
+          "categoryIds": [
+            "265",
+            "3",
+            "512"
+          ],
+          "price": 23880,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2040310000008-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 7,
+          "productId": "228788",
+          "sku": "8936138400028",
+          "name": "옥수수 200G",
+          "urlKey": "bap-my-tach-hat-200g-8936138400028",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "레디 투 쿡",
+          "categoryIds": [
+            "265",
+            "506"
+          ],
+          "price": 17900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 7,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/0/4/0400255650003-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 8,
+          "productId": "228891",
+          "sku": "8936138400035",
+          "name": "찰옥수수 (2개입)",
+          "urlKey": "lo-2-bap-nep-8936138400035",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 20500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 9869,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/0/4/0400221060003-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 9,
+          "productId": "228619",
+          "sku": "8936138400042",
+          "name": "365 Fresh 미국종 옥수수 (2개)",
+          "urlKey": "sb-lo-2-bap-ngot-giong-my-8936138400042",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 18900,
+          "originalPrice": 22900,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 9644,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936138400042-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 10,
+          "productId": "17043",
+          "sku": "8852849147086",
+          "name": "Good Farm 달콤한 옥수수 425G",
+          "urlKey": "good-farm-whole-kernel-sweet-canned-corn-425g-8852849147086",
+          "typeId": "simple",
+          "brand": "Thailand",
+          "brandId": null,
+          "category": "과일통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "165"
+          ],
+          "price": 28700,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 70,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8852849147086.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 11,
+          "productId": "241287",
+          "sku": "8936235530208",
+          "name": "VITEC FARM 스위트 밀크 고구마 1kg",
+          "urlKey": "khoai-lang-sua-1kg-8936235530208",
+          "typeId": "simple",
+          "brand": "VITEC FARM",
+          "brandId": null,
+          "category": "SPECIAL CATEGORIES",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "492",
+            "7"
+          ],
+          "price": 49900,
+          "originalPrice": 59900,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 199,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936235530208-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 12,
+          "productId": "7883",
+          "sku": "8935023100074",
+          "name": "Agri Foods Co 달랏 냉동 스위트콘 500G",
+          "urlKey": "bap-my-ngot-dong-lanh-dalat-agri-foods-co-500g-8935023100074",
+          "typeId": "simple",
+          "brand": "Dalat Agri Foods",
+          "brandId": null,
+          "category": "채소",
+          "categoryIds": [
+            "110",
+            "167",
+            "728"
+          ],
+          "price": 41900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 21,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935023100074-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 13,
+          "productId": "231775",
+          "sku": "2311600000009",
+          "name": "1등급 수박 2.7kg",
+          "urlKey": "dua-hau-ruot-do-loai-1-2311600000009",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "멜론",
+          "categoryIds": [
+            "265",
+            "303",
+            "304"
+          ],
+          "price": 37530,
+          "originalPrice": 40230,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 97,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/3/2311600000009-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 14,
+          "productId": "10038",
+          "sku": "8938505002293",
+          "name": "Phu Minh Tam 찹쌀 1KG",
+          "urlKey": "nep-sap-phu-minh-tam-1kg-8938505002293",
+          "typeId": "simple",
+          "brand": "Phú Minh Tâm",
+          "brandId": null,
+          "category": "쌀",
+          "categoryIds": [
+            "110",
+            "186",
+            "187",
+            "584"
+          ],
+          "price": 44900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 23,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8938505002293-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 15,
+          "productId": "52708",
+          "sku": "8809261532730",
+          "name": "오늘좋은 그래놀라 후르츠&아몬드 570G",
+          "urlKey": "good-today-granola-fruit-almond-570g-8809261532730",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "시리얼",
+          "categoryIds": [
+            "110",
+            "111",
+            "120",
+            "524"
+          ],
+          "price": 181700,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 70,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8809261532730-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 16,
+          "productId": "232815",
+          "sku": "8936200652119",
+          "name": "Bio Ngon 유기농 박 500G",
+          "urlKey": "bau-xanh-huu-co-500g-8936200652119",
+          "typeId": "simple",
+          "brand": "Bio_Ngon",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "3",
+            "512",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 38900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 14,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936200652119-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 17,
+          "productId": "47826",
+          "sku": "8850015152803",
+          "name": "Taste-T 옥수수 통조림 420G",
+          "urlKey": "bap-hat-dong-hop-taste-t-420g-8850015152803",
+          "typeId": "simple",
+          "brand": "Thailand",
+          "brandId": null,
+          "category": "채소통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "565"
+          ],
+          "price": 29500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 47,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8850015152803-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 18,
+          "productId": "71750",
+          "sku": "2297260000002",
+          "name": "콩호박 1KG",
+          "urlKey": "bi-hat-dau-2297260000002",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "뿌리채소",
+          "categoryIds": [
+            "265",
+            "3",
+            "512"
+          ],
+          "price": 83900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2297260000002-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 19,
+          "productId": "52705",
+          "sku": "8809010968261",
+          "name": "오늘좋은 국내산 19곡 크리스피롤 미니 초코 130G",
+          "urlKey": "good-today-crispy-roll-mini-choco-130g-8809010968261",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "시리얼",
+          "categoryIds": [
+            "110",
+            "111",
+            "120",
+            "524"
+          ],
+          "price": 54000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 78,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8809010968261-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 20,
+          "productId": "222056",
+          "sku": "8936006344645",
+          "name": "Jojo 고추 소금맛 초록호박씨 50G",
+          "urlKey": "hat-bi-xanh-jojo-muoi-ot-60g-8936006344645",
+          "typeId": "simple",
+          "brand": "Jojo",
+          "brandId": null,
+          "category": "넛",
+          "categoryIds": [
+            "110",
+            "111",
+            "120",
+            "525",
+            "526"
+          ],
+          "price": 28900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 12,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936006344645-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "recommendation_count": 20,
+      "recommendation_api_latency_ms": 422,
+      "recommendation_api_error": null,
+      "autocomplete_suggestions": [
+        {
+          "rank": 1,
+          "text": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 2,
+          "text": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 3,
+          "text": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "type": "product",
+          "hitCount": null
+        }
+      ],
+      "autocomplete_suggestion_count": 3,
+      "autocomplete_products": [
+        {
+          "rank": 1,
+          "productId": "16032",
+          "sku": "8934760132249",
+          "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "urlKey": "huu-nghi-mooncake-with-mung-bean-and-melon-seed-filling-no-egg-yolk-180g-8934760132249",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "116",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 68000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 22,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934760132249-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "42410",
+          "sku": "8934680095242",
+          "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "urlKey": "kinh-do-soft-mooncake-with-mung-bean-melon-seeds-and-one-egg-230g-8934680095242",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "112",
+            "113",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 85000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": false,
+          "stockQty": null,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934680095242.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "20948",
+          "sku": "8934680093156",
+          "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "urlKey": "kinh-do-black-sesame-and-melon-seed-mooncake-without-egg-150g-8934680093156",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "110",
+            "111",
+            "112",
+            "113",
+            "745",
+            "771",
+            "770"
+          ],
+          "price": 80000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 73,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_199k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934680093156-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "autocomplete_product_count": 3,
+      "autocomplete_api_latency_ms": 229,
+      "autocomplete_api_error": null
+    },
+    {
+      "test_id": "NSG-P1KO-0002",
+      "fetched_at": "2026-10-02T13:12:14",
+      "query": "돼지파",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+      "route": null,
+      "search_results": [
+        {
+          "rank": 1,
+          "productId": "235995",
+          "sku": "8936146448302",
+          "name": "G Kitchen 돼지 사태 300G (EA)",
+          "urlKey": "bap-gio-g-300g-8936146448302",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "족발",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "282"
+          ],
+          "price": 55000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 6,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146448302-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "2055",
+          "sku": "2211820000004",
+          "name": "Sagri 허브 돼지족 500G",
+          "urlKey": "dung-heo-thao-moc-2211820000004",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "기타 돼지고기",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283"
+          ],
+          "price": 90000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211820000004-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "6987",
+          "sku": "2204430000007",
+          "name": "365 Fresh 돼지고기 족발 500G",
+          "urlKey": "chan-gio-heo-2204430000007",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "282",
+            "745",
+            "808"
+          ],
+          "price": 62500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204430000007-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 4,
+          "productId": "1902",
+          "sku": "2088850000003",
+          "name": "돼지 염통 400G",
+          "urlKey": "tim-heo-2088850000003",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283",
+            "745",
+            "808"
+          ],
+          "price": 136000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2088850000003-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 5,
+          "productId": "68433",
+          "sku": "2204450000001",
+          "name": "365 Fresh 돼지족발 500g",
+          "urlKey": "365-fresh-pork-trotter-500g-2204450000001",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "282",
+            "745",
+            "808"
+          ],
+          "price": 80000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204450000001-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 6,
+          "productId": "241190",
+          "sku": "8936194975560",
+          "name": "Japfa 뼈 없는 돼지 앞다리살 300G",
+          "urlKey": "bap-gio-rut-xuong-japfa-300g-8936194975560",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 55000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 25,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975560-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 7,
+          "productId": "236004",
+          "sku": "8936146441051",
+          "name": "G Kitchen 돼지고기 뒷다리살 300G",
+          "urlKey": "thit-dui-g-300g-8936146441051",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "안심",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279"
+          ],
+          "price": 59000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 36,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146441051-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 8,
+          "productId": "51221",
+          "sku": "2211990000002",
+          "name": "Sagri 허브 돼지고기 등뼈 500G",
+          "urlKey": "sagri-herbal-pork-bone-2211990000002",
+          "typeId": "simple",
+          "brand": "Sagri",
+          "brandId": null,
+          "category": "뼈",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "280"
+          ],
+          "price": 74000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211990000002-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 9,
+          "productId": "241182",
+          "sku": "8936194975355",
+          "name": "Japfa 돼지 넓적다리살 300G",
+          "urlKey": "thit-dui-japfa-300g-8936194975355",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 53000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 3,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975355-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 10,
+          "productId": "88504",
+          "sku": "8936207132010",
+          "name": "Meaty Chopshop 소고기 사태 250G",
+          "urlKey": "bap-bo-uc-meaty-chopshop-250g-8936207132010",
+          "typeId": "simple",
+          "brand": "Meaty ChopShop",
+          "brandId": null,
+          "category": "사태",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "272"
+          ],
+          "price": 129000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 33,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936207132010-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 11,
+          "productId": "236016",
+          "sku": "8936146448296",
+          "name": "G Kitchen 돼지고기 앞다리 뼈 300G",
+          "urlKey": "dung-heo-g-300g-8936146448296",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "기타 돼지고기",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283"
+          ],
+          "price": 59000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 4,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146448296-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 12,
+          "productId": "2090",
+          "sku": "2211930000000",
+          "name": "Sagri 허브 돼지고기 다리살 500G",
+          "urlKey": "thit-dui-heo-thao-moc-2211930000000",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "안심",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279"
+          ],
+          "price": 74500,
+          "originalPrice": 97500,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211930000000-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 13,
+          "productId": "239801",
+          "sku": "2319130000001",
+          "name": "Organic TTC 유기농 호주산 소고기 사태살 슬라이스 250G",
+          "urlKey": "so-bap-bo-uc-organic-cat-lat-2319130000001",
+          "typeId": "simple",
+          "brand": "Organic TTC",
+          "brandId": null,
+          "category": "사태",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "272"
+          ],
+          "price": 159750,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/3/2319130000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 14,
+          "productId": "2053",
+          "sku": "2211800000000",
+          "name": "Sagri 허브 돼지고기 족발 500G",
+          "urlKey": "chan-gio-heo-thao-moc-2211800000000",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "족발",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "282"
+          ],
+          "price": 83500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211800000000-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 15,
+          "productId": "241186",
+          "sku": "8936194975409",
+          "name": "Japfa 돼지 목심 300G",
+          "urlKey": "nac-dam-japfa-300g-8936194975409",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 49000,
+          "originalPrice": 70000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 1,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975409-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 16,
+          "productId": "241187",
+          "sku": "8936194975454",
+          "name": "Japfa 돼지 갈비 300G",
+          "urlKey": "suon-gia-japfa-300g-8936194975454",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 49500,
+          "originalPrice": 68000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 24,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975454-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 17,
+          "productId": "230221",
+          "sku": "2306260000001",
+          "name": "365 Fresh 호주산 소고기 사태 200G",
+          "urlKey": "365-fresh-australian-beef-shank-roll-200g-2306260000001",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "사태",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "272"
+          ],
+          "price": 139800,
+          "originalPrice": 145800,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/3/2306260000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 18,
+          "productId": "236014",
+          "sku": "8936146448272",
+          "name": "G Kitchen 돼지 사골 300G",
+          "urlKey": "xuong-ong-g-300g-8936146448272",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "280",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 39000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 2,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146448272-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 19,
+          "productId": "2136",
+          "sku": "2212270000002",
+          "name": "돼지꼬리 500G",
+          "urlKey": "duoi-cut-heo-2212270000002",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "기타 돼지고기",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283"
+          ],
+          "price": 114500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2212270000002.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 20,
+          "productId": "241185",
+          "sku": "8936194975348",
+          "name": "Japfa 다진 돼지고기 300G",
+          "urlKey": "thit-xay-japfa-300g-8936194975348",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 35000,
+          "originalPrice": 44000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 8,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975348-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 21,
+          "productId": "231866",
+          "sku": "2310250000001",
+          "name": "365 Fresh 소고기 사태 300G",
+          "urlKey": "bap-bo-365-fresh-300g-2310250000001",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "사태",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "272"
+          ],
+          "price": 104700,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/3/2310250000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 22,
+          "productId": "2095",
+          "sku": "2211980000005",
+          "name": "Sagri 허브 돼지고기 경골 500G",
+          "urlKey": "xuong-ong-heo-thao-moc-2211980000005",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "뼈",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "280"
+          ],
+          "price": 74000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 97,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211980000005-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 23,
+          "productId": "241181",
+          "sku": "8936194975317",
+          "name": "Japfa 돼지 삼겹살 300G",
+          "urlKey": "ba-roi-japfa-300g-8936194975317",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 75000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 25,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975317-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 24,
+          "productId": "26723",
+          "sku": "2204440000004",
+          "name": "365 Fresh 뼈없는 돼지족발 300g",
+          "urlKey": "so-gio-heo-rut-xuong-2204440000004",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "282",
+            "745",
+            "808"
+          ],
+          "price": 64500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 97,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204440000004-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 25,
+          "productId": "68528",
+          "sku": "2204490000009",
+          "name": "365 Fresh 돼지 등심 300g",
+          "urlKey": "so-nac-lung-heo-cat-lat-2204490000009",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "745",
+            "808"
+          ],
+          "price": 47700,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204490000009-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 26,
+          "productId": "239461",
+          "sku": "8935128778390",
+          "name": "365 Fresh 호주산 소 부채살 스테이크용 300G",
+          "urlKey": "f365-l-vai-bo-uc-cat-steak-300g-8935128778390",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "274",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 195000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 47,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935128778390-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 27,
+          "productId": "46890",
+          "sku": "8936146445776",
+          "name": "G Kitchen 돼지고기 편육 475G",
+          "urlKey": "gio-thu-g-475g-8936146445776",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "중국 소시지, 쩌짜",
+          "categoryIds": [
+            "110",
+            "167",
+            "168",
+            "170",
+            "745",
+            "746",
+            "806"
+          ],
+          "price": 89000,
+          "originalPrice": 109000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 24,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146445776-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 28,
+          "productId": "61168",
+          "sku": "2252050000006",
+          "name": "365 Fresh 돼지고기 다짐육 볼 300g",
+          "urlKey": "so-thit-heo-xay-vien-2252050000006",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "745",
+            "808"
+          ],
+          "price": 43500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2251900000005-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 29,
+          "productId": "241188",
+          "sku": "8936194975416",
+          "name": "Japfa 돼지 등심 300G",
+          "urlKey": "cot-let-japfa-300g-8936194975416",
+          "typeId": "simple",
+          "brand": "Japfa",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 39000,
+          "originalPrice": 55000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 10,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936194975416-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 30,
+          "productId": "62574",
+          "sku": "8938546870080",
+          "name": "오키니 일본산 눈꽃 돼지고기 등심 250G",
+          "urlKey": "than-heo-tuyet-cat-lat-okini-250g-8938546870080",
+          "typeId": "simple",
+          "brand": "Japan",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 93000,
+          "originalPrice": 100000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 92,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8938546870080-2.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 31,
+          "productId": "8153",
+          "sku": "2204320000001",
+          "name": "365 Fresh 돼지고기 다리살 300G",
+          "urlKey": "thit-dui-heo-2204320000001",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "안심",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279"
+          ],
+          "price": 43500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204320000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 32,
+          "productId": "62501",
+          "sku": "2220360000009",
+          "name": "365 Fresh 돼지고기 목심 300G",
+          "urlKey": "so-nac-dam-cat-lat-2220360000009",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 59700,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 93,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2247790000003-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 33,
+          "productId": "2341",
+          "sku": "2215460000004",
+          "name": "PTV 소고기 사태 300G",
+          "urlKey": "vg-bap-bo-ptv-2215460000004",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "사태",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "272"
+          ],
+          "price": 97500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2215460000004.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 34,
+          "productId": "1904",
+          "sku": "2088870000007",
+          "name": "돼지콩팥 300G",
+          "urlKey": "cat-heo-2088870000007",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283",
+            "745",
+            "808"
+          ],
+          "price": 58500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2088870000007-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 35,
+          "productId": "5193",
+          "sku": "8936045450598",
+          "name": "Nipponham 돼지간 파테 200G",
+          "urlKey": "pate-gan-heo-nipponham-200g-8936045450598",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "기타 레디투잇",
+          "categoryIds": [
+            "110",
+            "167",
+            "178",
+            "583"
+          ],
+          "price": 40900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 4,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936045450598.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 36,
+          "productId": "236010",
+          "sku": "8936146447312",
+          "name": "G Kitchen 돼지 꼬리뼈 300G (EA)",
+          "urlKey": "xuong-duoi-g-300g-8936146447312",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "280",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 39000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 2,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146447312-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 37,
+          "productId": "236008",
+          "sku": "8936146442362",
+          "name": "G Kitchen 다진 돼지고기 300G (EA)",
+          "urlKey": "thit-xay-g-300g-8936146442362",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 45000,
+          "originalPrice": 59000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 59,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146442362-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 38,
+          "productId": "235991",
+          "sku": "8936146447930",
+          "name": "G Kitchen 슬라이스 삼겹살 300G (EA)",
+          "urlKey": "ba-roi-cat-mieng-g-300g-8936146447930",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "277",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 79000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 28,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146447930-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 39,
+          "productId": "2092",
+          "sku": "2211950000004",
+          "name": "Sagri 허브 돼지고기 목심 500G",
+          "urlKey": "thit-vai-heo-thao-moc-2211950000004",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "안심",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279"
+          ],
+          "price": 74500,
+          "originalPrice": 96000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211950000004-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 40,
+          "productId": "2345",
+          "sku": "2215500000001",
+          "name": "Phuc Thinh Vuong 양지머리 300G",
+          "urlKey": "vg-nam-bo-ptv-2215500000001",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "다짐육",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "271"
+          ],
+          "price": 73500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2215500000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 41,
+          "productId": "60774",
+          "sku": "8936146442614",
+          "name": "Feddy 돼지 피 400G",
+          "urlKey": "feddy-pork-blood-400g-8936146442614",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 27000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 51,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146442614-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 42,
+          "productId": "1916",
+          "sku": "2089120000006",
+          "name": "돼지 꼬리뼈 500G",
+          "urlKey": "xuong-duoi-heo-2089120000006",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "SPECIAL CATEGORIES",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "280",
+            "750",
+            "745",
+            "490",
+            "7"
+          ],
+          "price": 54500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 98,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2089120000006.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 43,
+          "productId": "1906",
+          "sku": "2088890000001",
+          "name": "G-Kitchen 돼지 혀",
+          "urlKey": "luoi-heo-2088890000001",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "기타 돼지고기",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "283"
+          ],
+          "price": 126000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/0/2088890000001-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 44,
+          "productId": "235990",
+          "sku": "8936146447923",
+          "name": "G Kitchen 슬라이스 삼겹살 300G (EA)",
+          "urlKey": "ba-roi-da-nang-g-300g-8936146447923",
+          "typeId": "simple",
+          "brand": "G_Kitchen",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "277",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 79000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 21,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936146447923-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 45,
+          "productId": "239805",
+          "sku": "2319040000009",
+          "name": "Organic TTC 유기농 호주 소고기 다리살 슬라이스 250G",
+          "urlKey": "so-dui-go-bo-uc-org-cat-lat-2319040000009",
+          "typeId": "simple",
+          "brand": "Organic TTC",
+          "brandId": null,
+          "category": "기타 소고기",
+          "categoryIds": [
+            "265",
+            "266",
+            "267",
+            "274"
+          ],
+          "price": 162250,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/3/2319040000009-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 46,
+          "productId": "12884",
+          "sku": "8935101604319",
+          "name": "Đức Việt 염장 족발 450G",
+          "urlKey": "duc-viet-salted-pork-knuckle-450g-8935101604319",
+          "typeId": "simple",
+          "brand": "Đức Việt",
+          "brandId": null,
+          "category": "중국 소시지, 쩌짜",
+          "categoryIds": [
+            "110",
+            "167",
+            "172",
+            "174",
+            "579",
+            "745",
+            "746",
+            "806"
+          ],
+          "price": 109000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 23,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935101604319-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 47,
+          "productId": "4630",
+          "sku": "8934572221902",
+          "name": "비산 돼지 간 파테 팩 150G",
+          "urlKey": "pate-gan-vissan-150g-8934572221902",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "기타 레디투잇",
+          "categoryIds": [
+            "110",
+            "167",
+            "178",
+            "583"
+          ],
+          "price": 17900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 15,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934572221902.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 48,
+          "productId": "2713",
+          "sku": "2204360000009",
+          "name": "365 Fresh 돼지고기 다짐육 300G",
+          "urlKey": "so-thit-heo-xay-2204360000009",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "60분배송",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "279",
+            "820",
+            "745",
+            "821"
+          ],
+          "price": 43500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 98,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/Giao_60P_VN_m_i.png",
+              "position": 3
+            },
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204360000009-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 49,
+          "productId": "2051",
+          "sku": "2211780000007",
+          "name": "Sagri 허브 돼지고기 삼겹살 500G",
+          "urlKey": "ba-roi-thao-moc-2211780000007",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "삼겹살",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "277"
+          ],
+          "price": 144500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2211780000007-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 50,
+          "productId": "26716",
+          "sku": "2204150000004",
+          "name": "365 Fresh 뼈없는 갈비살 삼겹 500g",
+          "urlKey": "ba-roi-rut-suon-2204150000004",
+          "typeId": "simple",
+          "brand": "365 Fresh",
+          "brandId": null,
+          "category": "365 Fresh",
+          "categoryIds": [
+            "265",
+            "266",
+            "276",
+            "277",
+            "745",
+            "808"
+          ],
+          "price": 125000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 94,
+          "promotion": null,
+          "labels": [
+            {
+              "imageUrl": "https://www.lottemart.vn/media/amasty/amlabel/coupon_10k_o_n_249k_vn.png",
+              "position": 0
+            }
+          ],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/2/2/2204150000004-1-bb.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "response_meta": {
+        "queryId": "q_a56692f4a46e0836",
+        "normalizedQuery": "돼지파",
+        "corrected": false,
+        "originalQuery": "돼지파",
+        "didYouMean": null,
+        "redirect": null,
+        "totalHits": 100,
+        "tookMs": 164,
+        "fallbackUsed": false,
+        "accentRelaxed": false,
+        "resolvedMode": "hybrid",
+        "pageCeiling": 2,
+        "lexicalConfidence": 0,
+        "paginationMode": "page",
+        "page": 1,
+        "pageSize": 50,
+        "hasMore": true,
+        "nextCursor": "cur_eyJvIjo1MCwicCI6Mn0",
+        "facets": {
+          "brands": [
+            {
+              "value": "Vietnam",
+              "count": 58
+            },
+            {
+              "value": "South Korea",
+              "count": 27
+            },
+            {
+              "value": "CP",
+              "count": 13
+            },
+            {
+              "value": "G_Kitchen",
+              "count": 11
+            },
+            {
+              "value": "365 Fresh",
+              "count": 10
+            },
+            {
+              "value": "Japfa",
+              "count": 10
+            },
+            {
+              "value": "Kewpie",
+              "count": 6
+            },
+            {
+              "value": "Phú Minh Tâm",
+              "count": 6
+            },
+            {
+              "value": "Bảo Minh",
+              "count": 5
+            },
+            {
+              "value": "Ottogi",
+              "count": 5
+            },
+            {
+              "value": "Cheese & Dough",
+              "count": 4
+            },
+            {
+              "value": "Meaty ChopShop",
+              "count": 4
+            },
+            {
+              "value": "Thọ Phát",
+              "count": 4
+            },
+            {
+              "value": "Vinabeef",
+              "count": 4
+            },
+            {
+              "value": "WILMAR",
+              "count": 4
+            },
+            {
+              "value": "Ông Chà Và",
+              "count": 4
+            },
+            {
+              "value": "Choice L",
+              "count": 3
+            },
+            {
+              "value": "DHC",
+              "count": 3
+            },
+            {
+              "value": "Freshfoco",
+              "count": 3
+            },
+            {
+              "value": "Kenvue",
+              "count": 3
+            }
+          ],
+          "tags": [
+            {
+              "value": "Thịt Heo",
+              "label": "Thịt Heo",
+              "count": 89
+            },
+            {
+              "value": "Thực Phẩm Tươi",
+              "label": "Thực Phẩm Tươi",
+              "count": 87
+            },
+            {
+              "value": "Thịt Tươi",
+              "label": "Thịt Tươi",
+              "count": 73
+            },
+            {
+              "value": "Gạo",
+              "label": "Gạo",
+              "count": 46
+            },
+            {
+              "value": "Gạo Thơm",
+              "label": "Gạo Thơm",
+              "count": 36
+            },
+            {
+              "value": "Đông Lạnh",
+              "label": "Đông Lạnh",
+              "count": 32
+            },
+            {
+              "value": "Pizza",
+              "label": "Pizza",
+              "count": 30
+            },
+            {
+              "value": "Thịt Bò",
+              "label": "Thịt Bò",
+              "count": 29
+            },
+            {
+              "value": "Gạo Dẻo",
+              "label": "Gạo Dẻo",
+              "count": 28
+            },
+            {
+              "value": "Bánh Tươi",
+              "label": "Bánh Tươi",
+              "count": 27
+            },
+            {
+              "value": "Gia Vị",
+              "label": "Gia Vị",
+              "count": 25
+            },
+            {
+              "value": "Pizza Tươi",
+              "label": "Pizza Tươi",
+              "count": 22
+            },
+            {
+              "value": "Thịt Gà",
+              "label": "Thịt Gà",
+              "count": 22
+            },
+            {
+              "value": "Ăn Vặt",
+              "label": "Ăn Vặt",
+              "count": 21
+            },
+            {
+              "value": "Sốt Ướp",
+              "label": "Sốt Ướp",
+              "count": 15
+            },
+            {
+              "value": "Thịt Khô",
+              "label": "Thịt Khô",
+              "count": 15
+            },
+            {
+              "value": "Chân Giò",
+              "label": "Chân Giò",
+              "count": 14
+            },
+            {
+              "value": "Hàng Nhập Khẩu",
+              "label": "Hàng Nhập Khẩu",
+              "count": 14
+            },
+            {
+              "value": "Xúc Xích",
+              "label": "Xúc Xích",
+              "count": 14
+            },
+            {
+              "value": "Thịt Nguội",
+              "label": "Thịt Nguội",
+              "count": 12
+            },
+            {
+              "value": "Nạc Heo",
+              "label": "Nạc Heo",
+              "count": 11
+            },
+            {
+              "value": "Úc",
+              "label": "Úc",
+              "count": 11
+            },
+            {
+              "value": "Sốt Chấm",
+              "label": "Sốt Chấm",
+              "count": 9
+            },
+            {
+              "value": "Bánh Quy",
+              "label": "Bánh Quy",
+              "count": 8
+            },
+            {
+              "value": "Hữu Cơ",
+              "label": "Hữu Cơ",
+              "count": 8
+            },
+            {
+              "value": "Bánh Gấu",
+              "label": "Bánh Gấu",
+              "count": 6
+            },
+            {
+              "value": "Gạo ST25",
+              "label": "Gạo ST25",
+              "count": 6
+            },
+            {
+              "value": "Hàn Quốc",
+              "label": "Hàn Quốc",
+              "count": 6
+            },
+            {
+              "value": "Nấu Lẩu",
+              "label": "Nấu Lẩu",
+              "count": 6
+            },
+            {
+              "value": "Sốt Mayonnaise",
+              "label": "Sốt Mayonnaise",
+              "count": 6
+            }
+          ],
+          "viTags": [
+            {
+              "value": "Thịt Heo",
+              "label": "Thịt Heo",
+              "count": 89
+            },
+            {
+              "value": "Thực Phẩm Tươi",
+              "label": "Thực Phẩm Tươi",
+              "count": 87
+            },
+            {
+              "value": "Thịt Tươi",
+              "label": "Thịt Tươi",
+              "count": 73
+            },
+            {
+              "value": "Gạo",
+              "label": "Gạo",
+              "count": 46
+            },
+            {
+              "value": "Gạo Thơm",
+              "label": "Gạo Thơm",
+              "count": 36
+            }
+          ],
+          "enTags": [
+            {
+              "value": "Pork",
+              "label": "Pork",
+              "count": 89
+            },
+            {
+              "value": "Fresh Food",
+              "label": "Fresh Food",
+              "count": 87
+            },
+            {
+              "value": "Fresh Meat",
+              "label": "Fresh Meat",
+              "count": 73
+            },
+            {
+              "value": "Rice",
+              "label": "Rice",
+              "count": 46
+            },
+            {
+              "value": "Fragrant Rice",
+              "label": "Fragrant Rice",
+              "count": 36
+            }
+          ],
+          "krTags": [
+            {
+              "value": "돼지고기",
+              "label": "돼지고기",
+              "count": 89
+            },
+            {
+              "value": "신선식품",
+              "label": "신선식품",
+              "count": 87
+            },
+            {
+              "value": "신선 육류",
+              "label": "신선 육류",
+              "count": 73
+            },
+            {
+              "value": "쌀",
+              "label": "쌀",
+              "count": 46
+            },
+            {
+              "value": "향미 쌀",
+              "label": "향미 쌀",
+              "count": 36
+            }
+          ]
+        },
+        "suggestedFilters": [
+          "inStockOnly",
+          "brand:Vietnam"
+        ]
+      },
+      "api_latency_ms": 490,
+      "api_error": null,
+      "recommendation_triggered": false,
+      "recommendation_results": [],
+      "recommendation_count": 0,
+      "recommendation_api_latency_ms": null,
+      "recommendation_api_error": null,
+      "autocomplete_suggestions": [
+        {
+          "rank": 1,
+          "text": "Vissan 돼지간 파테 170G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 2,
+          "text": "Vissan 돼지고기 파테 397G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 3,
+          "text": "Nipponham 돼지간 파테 200G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 4,
+          "text": "Vissan 돼지고기 파테 170G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 5,
+          "text": "Seaspimex 돼지고기 파테 170G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 6,
+          "text": "Wyn 돼지 간 파테 150G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 7,
+          "text": "비산 돼지 간 파테 팩 150G",
+          "type": "product",
+          "hitCount": null
+        },
+        {
+          "rank": 8,
+          "text": "Barona 새우 돼지고기 볶음용 완성 양념소스 80G 파우치",
+          "type": "product",
+          "hitCount": null
+        }
+      ],
+      "autocomplete_suggestion_count": 8,
+      "autocomplete_products": [
+        {
+          "rank": 1,
+          "productId": "2875",
+          "sku": "8934572070012",
+          "name": "Vissan 돼지간 파테 170G",
+          "urlKey": "pate-gan-heo-vissan-170g-8934572070012",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "고기통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "163"
+          ],
+          "price": 26200,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 57,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934572070012.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "2809",
+          "sku": "8934572000217",
+          "name": "Vissan 돼지고기 파테 397G",
+          "urlKey": "pate-thit-heo-vissan-397g-8934572000217",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "고기통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "163"
+          ],
+          "price": 56200,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 113,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934572000217.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "5193",
+          "sku": "8936045450598",
+          "name": "Nipponham 돼지간 파테 200G",
+          "urlKey": "pate-gan-heo-nipponham-200g-8936045450598",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "기타 레디투잇",
+          "categoryIds": [
+            "110",
+            "167",
+            "178",
+            "583"
+          ],
+          "price": 40900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 4,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936045450598.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 4,
+          "productId": "2808",
+          "sku": "8934572000019",
+          "name": "Vissan 돼지고기 파테 170G",
+          "urlKey": "pate-thit-heo-vissan-170g-8934572000019",
+          "typeId": "simple",
+          "brand": "Vietnam",
+          "brandId": null,
+          "category": "고기통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "163"
+          ],
+          "price": 32500,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 104,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8934572000019-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 5,
+          "productId": "873",
+          "sku": "8935025530091",
+          "name": "Seaspimex 돼지고기 파테 170G",
+          "urlKey": "seaspimex-pork-liver-pate-170g-can-8935025530091",
+          "typeId": "simple",
+          "brand": "Seaspimex",
+          "brandId": null,
+          "category": "고기통조림",
+          "categoryIds": [
+            "110",
+            "161",
+            "162",
+            "163"
+          ],
+          "price": 28400,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 62,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935025530091.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "autocomplete_product_count": 5,
+      "autocomplete_api_latency_ms": 273,
+      "autocomplete_api_error": null
+    },
+    {
+      "test_id": "NSG-P1KO-0003",
+      "fetched_at": "2026-10-02T13:12:15",
+      "query": "선물 바구니",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+      "route": null,
+      "search_results": [
+        {
+          "rank": 1,
+          "productId": "228238",
+          "sku": "8936192562168",
+          "name": "인형 키 체인 2168 18x16cm (랜덤 배송)",
+          "urlKey": "do-choi-nhua-2168-8936192562168",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "남아완구",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "679"
+          ],
+          "price": 95000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936192562168-1-16cm.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 2,
+          "productId": "234304",
+          "sku": "8936230480904",
+          "name": "데이지 꽃다발 봉제인형 50cm",
+          "urlKey": "tnb-tui-qua-thu-bong-hoa-cuc-50cm-8936230480904",
+          "typeId": "simple",
+          "brand": "Thái Dương Hệ",
+          "brandId": null,
+          "category": "인형",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "678"
+          ],
+          "price": 109000,
+          "originalPrice": 139000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 5,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936230480904-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 3,
+          "productId": "61769",
+          "sku": "8936039277422",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (연회색)",
+          "urlKey": "ro-nhua-hinh-chu-nhat-mau-xam-sua-choice-l-25-2-x-19-5-x-10-5cm-8936039277422",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 28900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 12,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277422-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 4,
+          "productId": "62158",
+          "sku": "8936039277408",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (연회색)",
+          "urlKey": "ro-nhua-hinh-chu-nhat-mau-xam-sua-choice-l-25-8-x-17-5-x-7-3cm-8936039277408",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 28900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 35,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277408-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 5,
+          "productId": "62209",
+          "sku": "8936039277552",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (황록색)",
+          "urlKey": "choice-l-moss-green-rectangular-plastic-basket-25-2x19-5x10-5cm-ea-8936039277552",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 28900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277552-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 6,
+          "productId": "70218",
+          "sku": "8936039277538",
+          "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (황록색)",
+          "urlKey": "cl-ro-nhua-cnhat-xanh-reu-34-8-25-8-8-8936039277538",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 50900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 26,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277538.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 7,
+          "productId": "32803",
+          "sku": "4710731091029",
+          "name": "Farcent 향기주머니 라벤더향 10G",
+          "urlKey": "tui-thom-farcent-oai-huong-10g-4710731091029",
+          "typeId": "simple",
+          "brand": "Farcent",
+          "brandId": null,
+          "category": "방향제",
+          "categoryIds": [
+            "245",
+            "351",
+            "356",
+            "637",
+            "640"
+          ],
+          "price": 21900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 40,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/4/7/4710731091029.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 8,
+          "productId": "61033",
+          "sku": "8935243506755",
+          "name": "Mr.Fresh GSG09 장미 향기 복주머니 10Gx3개입",
+          "urlKey": "mr-fresh-rose-scent-gsg09-scented-sachets-10g-x-3-packs-8935243506755",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "캔들",
+          "categoryIds": [
+            "245",
+            "369",
+            "405"
+          ],
+          "price": 43900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 52,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935243506755-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 9,
+          "productId": "70228",
+          "sku": "8936039277477",
+          "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (연회색)",
+          "urlKey": "cl-ro-nhua-cnhat-xam-sua-35-3-29-2-13-5-8936039277477",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 57900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 19,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277477-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 10,
+          "productId": "70239",
+          "sku": "8936039277453",
+          "name": "초이스엘 사각형 프라스틱 바구니 29.6 x 29.6 x 8.8cm (연회색)",
+          "urlKey": "cl-ro-nhua-vuong-xam-sua-29-6-29-6-13-8936039277453",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 71900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 15,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277453.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 11,
+          "productId": "62862",
+          "sku": "8936039277446",
+          "name": "초이스엘 직사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (연회색)",
+          "urlKey": "ro-nhua-hinh-vuong-mau-xam-sua-choice-l-23-8-x-23-8-x-11-5cm-8936039277446",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 49900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 12,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277446.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 12,
+          "productId": "19384",
+          "sku": "8936053921448",
+          "name": "대형 곰 봉제 인형",
+          "urlKey": "plush-toy-assorted-styles-40cm-8936053921448",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "Trang Trí Giáng Sinh",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "678",
+            "745",
+            "817",
+            "818"
+          ],
+          "price": 157000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 94,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053921448-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 13,
+          "productId": "39966",
+          "sku": "8935275213065",
+          "name": "Inochi Yoko 고급 바스켓 23CM (컬러랜덤)",
+          "urlKey": "ro-cao-cap-yoko-23cm-8935275213065",
+          "typeId": "simple",
+          "brand": "Inochi",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 29900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 20,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935275213065.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 14,
+          "productId": "227465",
+          "sku": "8936190717591",
+          "name": "바이오홈 꽃무늬 세탁 바구니 45x46cm",
+          "urlKey": "gio-giat-biohome-ht-hoa-45-46-8936190717591",
+          "typeId": "simple",
+          "brand": "BioHome",
+          "brandId": null,
+          "category": "수납장",
+          "categoryIds": [
+            "245",
+            "369",
+            "380",
+            "665"
+          ],
+          "price": 159000,
+          "originalPrice": 241000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 67,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936190717591-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 15,
+          "productId": "61812",
+          "sku": "8936039277569",
+          "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (황록색)",
+          "urlKey": "choice-l-moss-green-rectangular-plastic-basket-35-3x29-2x13-5cm-ea-8936039277569",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 57900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 8,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277569.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 16,
+          "productId": "33517",
+          "sku": "4710731091050",
+          "name": "Farcent 향기주머니 프레쉬향 10G",
+          "urlKey": "farcent-fragrance-bag-huong-mai-mai-package-10g-4710731091050",
+          "typeId": "simple",
+          "brand": "Farcent",
+          "brandId": null,
+          "category": "방향제",
+          "categoryIds": [
+            "245",
+            "351",
+            "356",
+            "637",
+            "640"
+          ],
+          "price": 21900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 30,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/4/7/4710731091050-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 17,
+          "productId": "60959",
+          "sku": "8936039277484",
+          "name": "타원형 대야 및 바구니 세트33 x 29 x 12.5cm (황록색)",
+          "urlKey": "cl-bo-thau-ro-oval-xanh-reu-33-29-12-5-8936039277484",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 60900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277484.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 18,
+          "productId": "70219",
+          "sku": "8936039277415",
+          "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (연회색)",
+          "urlKey": "cl-ro-nhua-cnhat-xam-sua-19-5-13-7-6-8936039277415",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 17900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 34,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277415-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 19,
+          "productId": "70209",
+          "sku": "8936039277521",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (황록색)",
+          "urlKey": "cl-ro-nhua-cnhat-xanh-reu-25-8-17-5-7-3-8936039277521",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 28900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277521-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 20,
+          "productId": "61027",
+          "sku": "8935243506779",
+          "name": "Mr.Fresh GSG09 라벤더 향기 복주머니 10Gx3개입",
+          "urlKey": "mr-fresh-lavender-scent-gsg09-scented-sachets-10g-x-3-packs-8935243506779",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "캔들",
+          "categoryIds": [
+            "245",
+            "369",
+            "405"
+          ],
+          "price": 43900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 28,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935243506779-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 21,
+          "productId": "59475",
+          "sku": "8936039277514",
+          "name": "원형 대야 및 바구니 세트 35 x 39.2 x 14.5cm (황록색)",
+          "urlKey": "bo-thau-ro-tron-choice-l-mau-xanh-reu-35-x-39-2-x-14-5cm-8936039277514",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 103900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 12,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277514.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 22,
+          "productId": "60994",
+          "sku": "8935243505598",
+          "name": "Pure Aroma 로맨틱 앰버향 향낭 26G",
+          "urlKey": "pure-aroma-romantic-amber-scented-sachet-26g-8935243505598",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "방향제",
+          "categoryIds": [
+            "245",
+            "351",
+            "356",
+            "637",
+            "640"
+          ],
+          "price": 29900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 25,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935243505598-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 23,
+          "productId": "59476",
+          "sku": "8936039277507",
+          "name": "원형 대야 및 바구니 세트 31 x 35 x 13.2cm (황록색)",
+          "urlKey": "bo-thau-ro-tron-choice-l-mau-xanh-reu-31-x-35-x-13-2cm-8936039277507",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 72900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 15,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277507.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 24,
+          "productId": "232142",
+          "sku": "4894680039889",
+          "name": "Zuru Fuggler 골드 퍼그스 15708 (랜덤배송)",
+          "urlKey": "dc-suu-tam-zuru-toys-fuggler-gold-fuggs-15708-9-4894680039889",
+          "typeId": "simple",
+          "brand": "Zuru",
+          "brandId": null,
+          "category": "남아완구",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "679"
+          ],
+          "price": 399000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/4/8/4894680039889-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 25,
+          "productId": "232152",
+          "sku": "4894680036857",
+          "name": "Mini Brands 수집용 장난감 스낵클즈 77572 (랜덤배송)",
+          "urlKey": "dc-suu-tam-zuru-mini-brands-snackles-77572-4894680036857",
+          "typeId": "simple",
+          "brand": "Zuru",
+          "brandId": null,
+          "category": "남아완구",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "679"
+          ],
+          "price": 299000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/4/8/4894680036857-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 26,
+          "productId": "239628",
+          "sku": "8936053920045",
+          "name": "펭귄 봉제인형",
+          "urlKey": "dc-chim-canh-cut-to-8936053920045",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "인형",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "678"
+          ],
+          "price": 142100,
+          "originalPrice": 198000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053920045-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 27,
+          "productId": "20821",
+          "sku": "8936053922056",
+          "name": "대형 각종 등불 (랜덤배송)",
+          "urlKey": "large-lanterns-random-delivery-8936053922056",
+          "typeId": "simple",
+          "brand": "China",
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "745",
+            "772",
+            "770"
+          ],
+          "price": 43500,
+          "originalPrice": 58000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 99,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053922056-1-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 28,
+          "productId": "70231",
+          "sku": "8936039277439",
+          "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (연회색)",
+          "urlKey": "cl-ro-nhua-vuong-xam-sua-16-8-16-8-10-8936039277439",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 22900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277439-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 29,
+          "productId": "39625",
+          "sku": "8935275213072",
+          "name": "Inochi Yoko 고급 바스켓 30CM (컬러랜덤)",
+          "urlKey": "ro-cao-cap-yoko-30cm-8935275213072",
+          "typeId": "simple",
+          "brand": "Inochi",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 46900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 21,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935275213072.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 30,
+          "productId": "61672",
+          "sku": "8936039277545",
+          "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (황록색)",
+          "urlKey": "choice-l-moss-green-rectangular-plastic-basket-19-5x13-7x6cm-ea-8936039277545",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 17900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 15,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277545-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 31,
+          "productId": "61028",
+          "sku": "8935243506786",
+          "name": "Mr.Fresh GSG09 대양 향기 복주머니 10Gx3개입",
+          "urlKey": "mr-fresh-ocean-scent-gsg09-scented-sachets-10g-x-3-packs-8935243506786",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "캔들",
+          "categoryIds": [
+            "245",
+            "369",
+            "405"
+          ],
+          "price": 43900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 19,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935243506786-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 32,
+          "productId": "67771",
+          "sku": "8936039277590",
+          "name": "초이스엘 직사각형 프라스틱 바구니 29.6 x 29.6 x 13cm (황록색)",
+          "urlKey": "choice-l-moss-green-square-plastic-basket-29-6x29-6x13cm-ea-8936039277590",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 71900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 16,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277590.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 33,
+          "productId": "15675",
+          "sku": "8936036831139",
+          "name": "호파코 투명 비누받침대",
+          "urlKey": "hofaco-soap-box-8936036831139",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "수납장",
+          "categoryIds": [
+            "245",
+            "369",
+            "380",
+            "665"
+          ],
+          "price": 18900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 23,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936036831139.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 34,
+          "productId": "70217",
+          "sku": "8936039277460",
+          "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (연회색)",
+          "urlKey": "cl-ro-nhua-cnhat-xam-sua-34-8-25-8-8-8936039277460",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 50900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 26,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277460-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 35,
+          "productId": "70235",
+          "sku": "8936039277576",
+          "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (황록색)",
+          "urlKey": "cl-ro-nhua-vuong-xanh-reu-16-8-16-8-10-8936039277576",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 22900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 10,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277576-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 36,
+          "productId": "70236",
+          "sku": "8936039277583",
+          "name": "초이스엘 사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (황록색)",
+          "urlKey": "cl-ro-nhua-vuong-xanh-reu-23-8-23-8-11-5-8936039277583",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 49900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936039277583.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 37,
+          "productId": "59526",
+          "sku": "8935275211542",
+          "name": "Inochi 사각형 플라스틱 뚜껑 티슈",
+          "urlKey": "hop-dung-giay-sano-vuong-8935275211542",
+          "typeId": "simple",
+          "brand": "Inochi",
+          "brandId": null,
+          "category": "밀폐용기",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "376"
+          ],
+          "price": 58900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 13,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935275211542-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 38,
+          "productId": "33569",
+          "sku": "4710731091012",
+          "name": "Farcent 향기주머니 로즈향 10G",
+          "urlKey": "farcent-fragrant-fragrance-of-rose-with-10g-package-4710731091012",
+          "typeId": "simple",
+          "brand": "Farcent",
+          "brandId": null,
+          "category": "방향제",
+          "categoryIds": [
+            "245",
+            "351",
+            "356",
+            "637",
+            "640"
+          ],
+          "price": 21900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 33,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/4/7/4710731091012-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 39,
+          "productId": "237086",
+          "sku": "8936236550342",
+          "name": "Bioplas 플라스틱 바구니 2종 세트 22cm - 26cm (랜덤배송)",
+          "urlKey": "bo-2-ro-trong-biohome-22-26cm-8936236550342",
+          "typeId": "simple",
+          "brand": "Bioplas",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 62900,
+          "originalPrice": 78900,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 65,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936236550342-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 40,
+          "productId": "17587",
+          "sku": "8936053926603",
+          "name": "동물 인형 60x35cm (랜덤 배송)",
+          "urlKey": "fluffy-plush-toy-60x35cm-random-sample-delivery-8936053926603",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "인형",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "678"
+          ],
+          "price": 250000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053926603.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 41,
+          "productId": "61005",
+          "sku": "8935243506762",
+          "name": "Mr.Fresh GSG09 재스민 향기 복주머니 10Gx 3개입",
+          "urlKey": "mr-fresh-jasmine-scent-gsg09-scented-sachets-10g-x-3-packs-8935243506762",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "캔들",
+          "categoryIds": [
+            "245",
+            "369",
+            "405"
+          ],
+          "price": 43900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 12,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935243506762-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 42,
+          "productId": "39782",
+          "sku": "8936106085974",
+          "name": "초이스엘 돼지 인형 75cm",
+          "urlKey": "cl-tnb-heo-hon-ho-75cm-8936106085974",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "인형",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "678"
+          ],
+          "price": 230000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 2,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936106085974.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 43,
+          "productId": "240524",
+          "sku": "8935007728560",
+          "name": "Duy Tân Crystal 플라스틱 아이스 버킷 3.5L (색상 랜덤 발송)",
+          "urlKey": "xo-da-duy-tan-crystal-3-5l-8935007728560",
+          "typeId": "simple",
+          "brand": "Duy Tân",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 74900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 72,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935007728560-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 44,
+          "productId": "62399",
+          "sku": "8809696920256",
+          "name": "초이스엘 RE:EARTH 친환경백 사이즈 S 그린 31x13x42cm",
+          "urlKey": "choice-l-re-earth-green-eco-bag-size-s-31x13x42cm-8809696920256",
+          "typeId": "simple",
+          "brand": "South Korea",
+          "brandId": null,
+          "category": "클리어화일",
+          "categoryIds": [
+            "245",
+            "369",
+            "413",
+            "414",
+            "671"
+          ],
+          "price": 12900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 164,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8809696920256-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 45,
+          "productId": "61955",
+          "sku": "8936050473247",
+          "name": "Choice L 친환경 생활백 대형 40x45x22cm",
+          "urlKey": "choice-l-40x45x22cm-ea-8936050473247",
+          "typeId": "simple",
+          "brand": "Choice L",
+          "brandId": null,
+          "category": "클리어화일",
+          "categoryIds": [
+            "245",
+            "369",
+            "413",
+            "414",
+            "671"
+          ],
+          "price": 14300,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 8,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936050473247-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 46,
+          "productId": "221123",
+          "sku": "8936053922155",
+          "name": "작은 장난감 북 (랜덤배송)",
+          "urlKey": "dc-tui-trong-be-8936053922155",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "추석",
+          "categoryIds": [
+            "745",
+            "772",
+            "770"
+          ],
+          "price": 98000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 100,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053922155-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 47,
+          "productId": "220773",
+          "sku": "6976693309086",
+          "name": "Weibo 필통 1개입 9827 (색상 란덤 배송)",
+          "urlKey": "bao-dung-viet-9827-weibo-6976693309086",
+          "typeId": "simple",
+          "brand": "China",
+          "brandId": null,
+          "category": "기타 페이셜케어",
+          "categoryIds": [
+            "245",
+            "369",
+            "413",
+            "414",
+            "673"
+          ],
+          "price": 95000,
+          "originalPrice": 119000,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/6/9/6976693309086-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 48,
+          "productId": "18950",
+          "sku": "8936053921004",
+          "name": "문어 인형",
+          "urlKey": "reversible-emotional-octopus-plush-toy-8936053921004",
+          "typeId": "simple",
+          "brand": null,
+          "brandId": null,
+          "category": "여아완구",
+          "categoryIds": [
+            "245",
+            "516",
+            "519",
+            "680"
+          ],
+          "price": 198000,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 96,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8936053921004.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 49,
+          "productId": "89",
+          "sku": "8804513004485",
+          "name": "Sta Ami 내추럴채반_중",
+          "urlKey": "ro-inox-vanh-cao-sta-ami-st448-8804513004485",
+          "typeId": "simple",
+          "brand": "Sta Ami",
+          "brandId": null,
+          "category": "기타 주방용품",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "379"
+          ],
+          "price": 186400,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 14,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/8/8804513004485.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        },
+        {
+          "rank": 50,
+          "productId": "59528",
+          "sku": "8935275211504",
+          "name": "Inochi 원형 플라스틱 뚜껑 티슈",
+          "urlKey": "hop-dung-giay-sano-tron-8935275211504",
+          "typeId": "simple",
+          "brand": "Inochi",
+          "brandId": null,
+          "category": "밀폐용기",
+          "categoryIds": [
+            "245",
+            "369",
+            "370",
+            "376"
+          ],
+          "price": 48900,
+          "originalPrice": null,
+          "currency": "VND",
+          "inStock": true,
+          "stockQty": 3,
+          "promotion": null,
+          "labels": [],
+          "imageUrl": "https://www.lottemart.vn/media/catalog/product/cache/300x300/8/9/8935275211504-1.jpg.webp",
+          "sponsored": false,
+          "pinned": false
+        }
+      ],
+      "response_meta": {
+        "queryId": "q_973db12e5e9c7e3f",
+        "normalizedQuery": "선물 바구니",
+        "corrected": false,
+        "originalQuery": "선물 바구니",
+        "didYouMean": null,
+        "redirect": null,
+        "totalHits": 100,
+        "tookMs": 295,
+        "fallbackUsed": false,
+        "accentRelaxed": false,
+        "resolvedMode": "hybrid",
+        "pageCeiling": 2,
+        "lexicalConfidence": 0,
+        "paginationMode": "page",
+        "page": 1,
+        "pageSize": 50,
+        "hasMore": true,
+        "nextCursor": "cur_eyJvIjo1MCwicCI6Mn0",
+        "facets": {
+          "brands": [
+            {
+              "value": "South Korea",
+              "count": 33
+            },
+            {
+              "value": "Unicharm",
+              "count": 33
+            },
+            {
+              "value": "Vietnam",
+              "count": 27
+            },
+            {
+              "value": "Gift",
+              "count": 19
+            },
+            {
+              "value": "Choice L",
+              "count": 18
+            },
+            {
+              "value": "Inochi",
+              "count": 13
+            },
+            {
+              "value": "BioHome",
+              "count": 8
+            },
+            {
+              "value": "China",
+              "count": 8
+            },
+            {
+              "value": "Kao",
+              "count": 8
+            },
+            {
+              "value": "Thái Dương Hệ",
+              "count": 8
+            },
+            {
+              "value": "Diana",
+              "count": 7
+            },
+            {
+              "value": "Kotex",
+              "count": 7
+            },
+            {
+              "value": "Bouquet Garni",
+              "count": 6
+            },
+            {
+              "value": "Bless You",
+              "count": 5
+            },
+            {
+              "value": "Hoàng Thu",
+              "count": 5
+            },
+            {
+              "value": "Tự Lập",
+              "count": 5
+            },
+            {
+              "value": "CubicFun",
+              "count": 4
+            },
+            {
+              "value": "Duy Tân",
+              "count": 4
+            },
+            {
+              "value": "Zuru",
+              "count": 4
+            },
+            {
+              "value": "Bioplas",
+              "count": 3
+            }
+          ],
+          "tags": [
+            {
+              "value": "Đồ Chơi",
+              "label": "Đồ Chơi",
+              "count": 55
+            },
+            {
+              "value": "Nhà Bếp",
+              "label": "Nhà Bếp",
+              "count": 46
+            },
+            {
+              "value": "Dụng Cụ Nhà Bếp",
+              "label": "Dụng Cụ Nhà Bếp",
+              "count": 38
+            },
+            {
+              "value": "Túi Rác",
+              "label": "Túi Rác",
+              "count": 32
+            },
+            {
+              "value": "Thú Bông",
+              "label": "Thú Bông",
+              "count": 31
+            },
+            {
+              "value": "Bánh Quy",
+              "label": "Bánh Quy",
+              "count": 14
+            },
+            {
+              "value": "Ăn Vặt",
+              "label": "Ăn Vặt",
+              "count": 14
+            },
+            {
+              "value": "Tã Giấy",
+              "label": "Tã Giấy",
+              "count": 12
+            },
+            {
+              "value": "Vệ Sinh Bếp",
+              "label": "Vệ Sinh Bếp",
+              "count": 10
+            },
+            {
+              "value": "Gia Vị",
+              "label": "Gia Vị",
+              "count": 9
+            },
+            {
+              "value": "Nước Mắm",
+              "label": "Nước Mắm",
+              "count": 8
+            },
+            {
+              "value": "Giặt Xả",
+              "label": "Giặt Xả",
+              "count": 7
+            },
+            {
+              "value": "Sáp Thơm",
+              "label": "Sáp Thơm",
+              "count": 7
+            },
+            {
+              "value": "Thơm Phòng",
+              "label": "Thơm Phòng",
+              "count": 7
+            },
+            {
+              "value": "Khăn Giấy Khô",
+              "label": "Khăn Giấy Khô",
+              "count": 6
+            },
+            {
+              "value": "Kẹo",
+              "label": "Kẹo",
+              "count": 6
+            },
+            {
+              "value": "Nhà Tắm",
+              "label": "Nhà Tắm",
+              "count": 6
+            },
+            {
+              "value": "Dầu Ăn",
+              "label": "Dầu Ăn",
+              "count": 5
+            },
+            {
+              "value": "Hàn Quốc",
+              "label": "Hàn Quốc",
+              "count": 5
+            },
+            {
+              "value": "Hàng Nhập Khẩu",
+              "label": "Hàng Nhập Khẩu",
+              "count": 5
+            },
+            {
+              "value": "Hạt Nêm",
+              "label": "Hạt Nêm",
+              "count": 4
+            },
+            {
+              "value": "Hộp Đựng Thực Phẩm",
+              "label": "Hộp Đựng Thực Phẩm",
+              "count": 4
+            },
+            {
+              "value": "Mật Ong",
+              "label": "Mật Ong",
+              "count": 4
+            },
+            {
+              "value": "Trà Gói",
+              "label": "Trà Gói",
+              "count": 4
+            },
+            {
+              "value": "Xịt Vải",
+              "label": "Xịt Vải",
+              "count": 4
+            },
+            {
+              "value": "Đĩa Giấy",
+              "label": "Đĩa Giấy",
+              "count": 4
+            },
+            {
+              "value": "Diệt Côn Trùng",
+              "label": "Diệt Côn Trùng",
+              "count": 3
+            },
+            {
+              "value": "Giặt Máy",
+              "label": "Giặt Máy",
+              "count": 3
+            },
+            {
+              "value": "Nước Rửa Chén",
+              "label": "Nước Rửa Chén",
+              "count": 3
+            },
+            {
+              "value": "Sữa Tắm",
+              "label": "Sữa Tắm",
+              "count": 3
+            }
+          ],
+          "viTags": [
+            {
+              "value": "Đồ Chơi",
+              "label": "Đồ Chơi",
+              "count": 55
+            },
+            {
+              "value": "Nhà Bếp",
+              "label": "Nhà Bếp",
+              "count": 46
+            },
+            {
+              "value": "Dụng Cụ Nhà Bếp",
+              "label": "Dụng Cụ Nhà Bếp",
+              "count": 38
+            },
+            {
+              "value": "Túi Rác",
+              "label": "Túi Rác",
+              "count": 32
+            },
+            {
+              "value": "Thú Bông",
+              "label": "Thú Bông",
+              "count": 31
+            }
+          ],
+          "enTags": [
+            {
+              "value": "Toys",
+              "label": "Toys",
+              "count": 55
+            },
+            {
+              "value": "Kitchen",
+              "label": "Kitchen",
+              "count": 46
+            },
+            {
+              "value": "Kitchen Utensils",
+              "label": "Kitchen Utensils",
+              "count": 38
+            },
+            {
+              "value": "Trash Bags",
+              "label": "Trash Bags",
+              "count": 32
+            },
+            {
+              "value": "Plush Toys",
+              "label": "Plush Toys",
+              "count": 31
+            }
+          ],
+          "krTags": [
+            {
+              "value": "장난감",
+              "label": "장난감",
+              "count": 55
+            },
+            {
+              "value": "주방",
+              "label": "주방",
+              "count": 46
+            },
+            {
+              "value": "주방용품",
+              "label": "주방용품",
+              "count": 38
+            },
+            {
+              "value": "쓰레기봉투",
+              "label": "쓰레기봉투",
+              "count": 32
+            },
+            {
+              "value": "봉제인형",
+              "label": "봉제인형",
+              "count": 31
+            }
+          ]
+        },
+        "suggestedFilters": [
+          "inStockOnly",
+          "brand:South Korea"
+        ]
+      },
+      "api_latency_ms": 564,
+      "api_error": null,
+      "recommendation_triggered": false,
+      "recommendation_results": [],
+      "recommendation_count": 0,
+      "recommendation_api_latency_ms": null,
+      "recommendation_api_error": null,
+      "autocomplete_suggestions": [],
+      "autocomplete_suggestion_count": 0,
+      "autocomplete_products": [],
+      "autocomplete_product_count": 0,
+      "autocomplete_api_latency_ms": 252,
+      "autocomplete_api_error": null
+    }
+  ]
+}

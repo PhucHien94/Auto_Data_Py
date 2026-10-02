@@ -1,0 +1,4661 @@
+{
+  "updatedAt": "2026-09-29T15:33:40",
+  "rounds": {
+    "2026-09-22": {
+      "verdicts": {
+        "kw006": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "2 loại titan đang hiển thị các loại chả cá, xúc xích phía trên",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw001": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw011": {
+          "verdict": [
+            "caption",
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw005": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw012": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw008": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw003": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw013": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw004": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan multi  đang hiển thị thêm súp chả cá, bánh canh,....",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw010": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Novalite có kết quả ok hơn\n- Titan đang hiển thị xen kẽ dầu thực vật, dầu đậu nành",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw009": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan"
+          ],
+          "note": "Titan multi trả về độ ưu tiên của em đánh răng chưa chuẩn",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw007": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw039": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "một số sp nước tương đang bị đẩy về phía sau",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw054": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw103": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw104": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw057": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw067": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw112": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw018": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "2 loại Titan đang hiển thị thêm há cảo, chả cá, bánh gạo",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw024": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "titan đang có hiển thị thêm chuối vàng, xà lách, khoai tây",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw014": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "2 loại Titan đang hiển thị ưu tiên cùng brand lên trước (gel rửa mặt cocoon hiển thị trước các loại dầu gội khác)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw017": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw032": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan đang show nhiều sp k liên quan (giò bê, chả lụa, nem chua , xúc xích)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw113": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw028": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw053": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw027": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw020": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw051": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw025": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Top 20-40 của cả 3 cơ chế đang hiển thị nhiều sản phẩm k liên quan (mực ống, chả giò,  thạch dừa, bánh men)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw058": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "1 sp k liên quan đang hiển thị : thạch lắc, hồ dán giấy",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw038": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "top sau đang hiển thị các sp k liên quan (sữa lúa mạch, snack da cá, kẹo hương dâu)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw046": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw106": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw049": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw036": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "caption"
+          ],
+          "note": "titan vẫn có các sản phẩm kim chi nhưng đang nằm ở top sau",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw019": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw047": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan: một số sp bánh gạo đang bị đẩy về phía sau",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw060": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw030": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw107": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Titan chất lượng result k tốt bằng. đang lẫn vài sp k liên quan ( cơm tự sôi, cá viên, pizza)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw045": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "caption"
+          ],
+          "note": "Titan kq không khớp (chỉ 1 vài sp sọt rác, túi rác)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw056": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw021": {
+          "verdict": [
+            "vector",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw108": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan: 1 số sp nước ngọt đang hiển thị trong result",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw015": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw022": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "2 loại titan đang hiển thị thêm các loại muối, gạo tắm, chăn trẻ em",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw048": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Titan : một số sp cà chua bị đẩy về sau. nhiều sp k tương đương đang hiển thị (trứng, đầu cá hồi, ba rọi heo)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw105": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw034": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "một số sp k liên quan đang hiển thị ở top sau : sữa trái cây, nấm đông trùng, phở thịt bò",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw037": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw069": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan : 1 số sp khăn giấy, khăn ướt đang hiển thị trên tả dán, tả quần",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw102": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Titan: 1 số sp k liên quan đang hthi (nước có ga, mặt nạ, bánh cosy)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw040": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw055": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "1 số sp k liên quan : set cá hồi, kimbap, banh donut",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw026": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "nước rửa tay phải cần được ưu tiên ở cả 4 cơ chế",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw031": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đang show ít sản phẩm tương ớt\n- Titan show nhiều sp nước tương, nước mắm, dầu hào (một số sản phẩm tương ớt đang hiển thị phía sau nước tương, nước sốt)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw066": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw043": {
+          "verdict": [
+            "vector_titan",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "một số sp sữa chua đang bị đẩy về sau",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw023": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw059": {
+          "verdict": [
+            "vector_titan",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw111": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Tian, novalite : 1 số sp xoài đang bị đẩy về sau (xoài đỏ, xoài cát chu)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw044": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "đang hiển thị thêm nhiều sp cùng cate",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw110": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw041": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw050": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "một số sp k liên quan : mơ dẻo, mứt me",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw109": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw068": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw101": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan có hiển thị 1 số sp bánh quy, nhưng hthi sau top5",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw029": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan multi cần ưu tiên thịt heo hơn",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw033": {
+          "verdict": [
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Result của NovaLite ok hơn\ntian (mực ghim, tép đồng, cá bống,...) đang hiển trên các sp tôm khô, tôm sú tươi",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw082": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw115": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "titan : cần ưu tiên hành tím lên top 1. các loại hành tím, hành tây cần đẩy lên top",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw074": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan show nhiều sp k liên quan : nước ngọt, xúc xích, bia\nNovaLite show vài sp k liên quan : ổ cắm điện, bút dạ quang",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw002": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan có lẫn sp k liên quan ở top đầu (Lốc 3 hộp cơm trắng, bánh ngũ cốc, cá ngừ dầu ottogi)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw076": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "kq search của Vector và NovaLite ok hơn (Titan có nhiều sp k liên quan, ít sp mật ong hơn thực tế dù top 1 đang hiển thị đúng sp cần tìm)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw122": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw124": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan show sp k liên quan : nước mắm nhiều sp rượu vodka bị đẩy về sau nước khoáng",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw016": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "các sp dừa xiêm cần ưu tiên lên top (thay vì khoai sọ, bò viên, hành tăm)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw120": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw088": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan: mì, banh trung thu, sữa tắm, kem nhuộm cũng đang hiển thị",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw117": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "nấm, dép , quần cũng đang hiển thị, cần check lại cate",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw035": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan chưa hiển thị ưu tiên dc cá ngừ (đang hiển thị xưng heo, thăn bò, gừng trên top)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw123": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw096": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Result của vector và novalite ok hơn, Tian đang lọt vài sp k liên quan (nước mắm, mật ong)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw072": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw083": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw087": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan : cá lóc, gà thả vườn, bộ lau nhà đa năng cũng đang hiển thị\nNovaLite : cà phê, nước rửa chén cũng đang hiển thị",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw062": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw079": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw121": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan hiển thị thêm bộ nồi, sandwich, tỏi",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw077": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "Vector, Titan chỉ đúng top 1. con flaij các sp phía sau k hiển thị dc nước yê",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw042": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw090": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "các sp sau top 5 đang k liên quan : băng vs, bánh ngũ cốc, cá ngừ, snack, hành bột, gia vị",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw100": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan đang hiển thị nhiều sp k liên quan : cá thu, ba rọi, đầu mực,.....",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw097": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw085": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw126": {
+          "verdict": [
+            "vector_titan",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw064": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- kq của vector ok nhất  \ntuy nhiên cả 3 cơ chế trả về sản phẩm tàu hủ lọt về top sau, cần ưu tiên",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw052": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "kq của vector ổn nhất vì là snack (titan có bao gồm bánh quy)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw081": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "hành, tỏi, chanh đang xen lẫn (vài sp chuối bị đẩy về sau)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw092": {
+          "verdict": [
+            "vector_titan",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "đang hthi thêm đậu phộng, mâm xôi, chuối",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw089": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "1 số sp k liên quan cũng đang hiển thị : giò heo rút xương, cốt lếch heo, mực lá , cá thu",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw094": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan : cần check top 1, ưu tiên các sản phẩm là hạt giống",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw099": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "sữa tươi, bút chì, bàn chải, trứng gà, chén dĩa cũng đang hiển thị",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw119": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw070": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Kết quả của Vector ok nhất",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw078": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Top 1 của titan chưa đúng kq mong đợi",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw118": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Result của Vector ok hơn\nTitan cần ưu tiên các sản phẩm trà sữa hơn đường mía",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw071": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw063": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw073": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Vector : mắm tôm cần đẩy lên top\nTitan : mắm tôm, mắm tép, mắm ruốc cần đẩy lên trước mật ong",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw114": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw086": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan đang lẫn 1 số sp k liên quan : nước mắm, xoài keo, cá dìa, củ ải trắng",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw095": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Nếu matching sp quá ít thì sao? htai limit 200 cho titan và vector nên luôn trả về cố định 200 sp (nhiều sp k liên quan hình ảnh tìm kiếm)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw091": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "titan đang có hiển thị thêm nạc thăn",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw093": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "1 số sp k cùng cate đang hthi: bưởi, lẩu, yubu cá hồi, nấm, chè, xôi",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw080": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Top 1 của Titan chưa đúng",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw116": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw065": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- titan multi đang bao gồm xúc xích",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw127": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw098": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw075": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw061": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "kq của vector đúng hơn (bao gồm kem tẩy)",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw084": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Chỉ vector nhận diện được trứng gà ăn liền nhưng result đang nằm rải rác\nTitan multi có trứng ăn liền nhưng ở top 30-200",
+          "markedAt": "2026-09-24T11:27:02"
+        },
+        "kw125": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "kq ủa Vector ổn hơn",
+          "markedAt": "2026-09-24T11:27:02"
+        }
+      }
+    },
+    "2026-09-24": {
+      "verdicts": {
+        "kw023": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Cá Rô Phi Phi Lê…, Cá Lóc Phi Lê 320G, Cá Diêu Hồng Tươi Phi…, Cá Lóc Làm Sạch 600G …\n- Titan không đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Cá Lóc Phi Lê 320G, Cá Rô Phi Phi Lê…, Cá Lóc Làm Sạch 600G, Cá Diêu Hồng Tươi Phi… …\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ top20: Cá Lóc Phi Lê 320G, Cá Rô Phi Phi Lê…, Cá Lăng Đen Phi Lê…, Cá Lóc Làm Sạch 600G …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Thịt Hàu Sữa Nhật Minh…, Rong Biển Ăn Liền Ottogi…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw009": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Gel Dưỡng Ẩm Hada Labo…\n- Titan đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Băng Vệ Sinh Sofy Organic…, Dầu Dưỡng Thể Moaw Moaws…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Sữa Rửa Mặt Nivea Tinh…, Sữa Rửa Mặt Hada Labo…, Sữa Rửa Mặt Nivea Men…, Tinh Chất Vi Kim VT… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Gel Dưỡng Da Milaganics Nha…, Gel Dưỡng Da Banana Boat…, Gel Dưỡng Ẩm Hada Labo…, Sữa Dưỡng Ẩm Cetaphil Moisturising… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw058": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite chỉ trả 1 KQ,",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw016": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "titan và vector đang hthi thêm các sp cùng cate",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw099": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: chỉ trả 6 KQ, đúng 6/6\n- Titan đạt: chỉ trả 5 KQ, đúng 5/5\n- Titan Multi đạt: chỉ trả 5 KQ, đúng 5/5\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw106": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Nước Mắm Cốt Nhĩ Việt…\n- Titan , Titan Multi đạt top10 đúng nhưng hiển thị thêm 1 sp cùng cate : tương ớt, sốt mayonaise\n- NovaLite đạt (cần xem kỹ): chỉ trả 2 KQ, đúng 2/2",
+          "markedAt": "2026-09-28T09:00:20"
+        },
+        "kw038": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector không đạt: chỉ trả 6 KQ, đúng 0/6 · sp lạ: Kẹo Dynamite Chews Vị Trái…, Bánh Snack Khoai Tây Swing…, Snack Cà Chua Tomati Gói…, Snack Swing Vị Bít Tết… …\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw011": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan không đạt: top10 đúng 1/10 · sp lạ top20: Cơm Nắm Cá Hồi Mayo…, Cơm Nắm Yorihada Nhân Cá…, Cơm Nắm Yorihada Origini Nhân…, Gừng Muối Hồng 100g …\n- Titan Multi không đạt: top10 đúng 2/10 · sp lạ top20: Cơm Nắm Cá Hồi Mayo…, Cơm Nắm Yorihada Nhân Cá…, Cơm Nắm Yorihada Origini Nhân…, Gừng Muối Hồng 100g …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10\n- Dùng case này discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw100": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt - sp lạ top20: Thịt Viên Dinh Dưỡng Nấm…, Bánh Xếp Hàn Quốc bibigo…, Cơm Chiên Nấm Rau Củ…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw047": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector chứa sp lạ top 10: bánh quy, bánh đuôn , bánh đồng tiền\n- Titan· sp lạ top20: Bánh Cuộn Ngọt Marukin Soft, bánh quy…\n- Titan Multi sp lạ top20: Bánh Cuộn Ngọt Marukin Soft…\n- NovaLite không đạt (cần xem kỹ):  · sp lạ top20: Bánh Custas 6 Cái 138G, Bánh Orion Chocopie Hộp 653.4G…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw057": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "k tìm thấy được nui gạo lức / nui. nhưng show các hình ảnh tưởng tự : gạo lức, đậu đỏ\ndùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw091": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt- sp lạ : Mận Đá 800G, Bí Hạt Đậu 1kg, Rong Biển Ăn Liền Ottogi…, Bí Hồ Lô Giống Mỹ… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw010": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "caption"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi không đạt: top10 đúng 2/10 · sp lạ top20: Nước Giặt Xả True Care…, Nước Giặt Xả Fily Hương…, Nước Giặt Xả Fily Hương…, Nước Tẩy Quần Áo Zonrox… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10\n- Dùng case này discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw051": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector , Titan, Titan Multi lọt sp mì, phở\n- NovaLite không đạt : Mì Xốt Kem Koreno Bulgogi…, Mì Hoành Thánh Vifon Hoàng…, Mì Tương Đen Jin Ottogi…, Mì Good Today Sợi Nhỏ… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw126": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite: sp lạ thú Nhồi Bông Tỵ Tung…, Thú Nhồi Bông Bóng Thể…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw029": {
+          "verdict": [
+            "vector",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Thăn Chuột Heo 365 Fresh…, Sụn Heo Kiaora 400G, Nạc Đùi (Nạc Vai Heo)…\n- Titan đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Nạc Dăm Heo 365 Fresh…, Sườn Non BBQ 365 Fresh…, Thịt Vai Heo 365 Fresh…, Thịt Đùi Heo 365 Fresh…\n- Titan Multi không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Đùi Bò Bít Tết (Cắt…, Thăn Bò (Bò Lúc Lắc)…, Lõi Vai Bò Mỹ Cắt…, Phi Lê Bò 365 Fresh… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Thịt Đùi Heo Thảo Mộc…, Thịt Nách Heo Thảo Mộc…, Combo Thịt Ba Chỉ Heo…, Combo Thịt Ba Chỉ Heo,…\ndùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw114": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite đạt (cần xem kỹ): chỉ trả 1 KQ",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw063": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "NovaLite show nhiều sp k liên quan",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw005": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan trả sai kết quả : k có sp ST25 đang tìm (đề xuất kết hợp thêm caption đề xuất text)\nLấy case này discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw006": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt (cần xem kỹ): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Sandwich Ngũ Cốc POONGMISO 200G, Bột Chiên Xù Panko 200G, Bánh Mì Mè Đen O'smiles…, Bột Ngọt Ajinomoto Gói 230G …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw085": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Vector, titan đang hiển thị thêm các sp cùng cate (dưa lưới, dưa lê)\nNovaLite · sp lạ: Dưa Lê Giống Hàn Quốc…, Dưa Món Sông Hương Hũ…, Dưa Món Sông Hương Foods…, Dưa Món Sông Hương Foods…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw113": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Kimbap Gạo Lứt Cá Ngừ…, Bánh Gạo Tokpokki O'food Vị…, Bánh Cuốn Tôm Và Rau…, Kimbap Rong Biển Trộn Dầu… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw052": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw102": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không trả kết quả",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw104": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw101": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "- Vector sp lạ top20: Bánh Puff Pastry Nhân Táo…, Bánh Danish Phô Mai Dasumy…, Bánh Mì Que Pate Thịt…, Bánh Pizza Hải Sản Dasumy… …\n- Titan không đạt\n- Titan Multi không đạt\n- NovaLite không đạt (cần xem kỹ) sp lạ top20: Bánh Bạch Tuộc Xốt Phô…, Bánh Bạch Tuộc Truyền Thống…, Bánh Tráng Nướng Cà Khịa…, Bánh Tráng Nướng Phủ Gà… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw121": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw041": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt (cần xem kỹ): · sp lạ top20: Nước Rửa Tay Lifebuoy Vitamin…, Nước Rửa Tay Lifebuoy Vitamin…, Dầu Gội Lifebuoy Mềm Mượt…, Nước Rửa Tay Lifebuoy Vitamin… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw127": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "toàn bộ cơ chế đang hiển thị thêm các sp cùng cate",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw094": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Search 1 hình hạt giống thì titan có thể trả về được kqua",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw109": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite sp lạ: Bún Thịt Bò Xào Và…, Kimbap Gạo Lứt Cá Ngừ…, Combo Gà Thả Vườn Quay…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw103": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite đạt (cần xem kỹ):  Củ Cải Đỏ Hasfarm Greens…\n- titan chứa 1 số sp chén thủy tinh",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw060": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite sp lạ top20: Sữa Rửa Tay Choice-L Hương…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw050": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw053": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite (cần xem kỹ): sp lạ top20: Bò Cuộn Lá Lốt LC…, Lốc 3 Xà Bông Cục…, Kẹo Mút Lotte Lollipop Ice…, Socola Nón Lá Henk Đen… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw030": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "Dùng case này để discuss với khách\n- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Kẹo Chobisca Đức Hạnh 200g, Kẹo Cà Phê Sữa Maccofee…\n- Titan không đạt: top10 đúng 0/10 · sp lạ top20: Set 2 Bánh Cupcake POONGMISO…\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Set 2 Bánh Cupcake POONGMISO…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Mật Ong Rừng Tây Nguyên…, Mật Ong Nghệ Bee Honey…, Mật Ong Behonex Hộp 12…, Mật Ong Nguyên Chất Bee… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw097": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không hiển thị dc cải thảo",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw003": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw125": {
+          "verdict": [
+            "vector",
+            "caption",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan : một số sp gel vuốt tóc đang hiển thị sau sữa rửa mặt, dầu tắm gội",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw007": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Lạp Xưởng Tươi Tiến Tấn…\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw033": {
+          "verdict": [
+            "caption",
+            "vector_titan",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector  đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Cá Thu Cắt Khoanh 400G, Cá Ngừ Đại Dương Phi…, Cá Bạc Má 500G, Cá Tầm 300G …\n- Titan đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Cá Lăng 500G, Đầu cá hồi 500G, Cá Saba Jumbo Nauy 550G, Cá Dìa 500G …\n- Titan Multi đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Cá Lăng Đen Phi Lê…, Cá Diêu Hồng Tươi Phi…, Thịt Hàu Sữa Nhật Minh…, Cá Dìa 500G …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10\n\nMột số sp tôm đông lạnh bị đẩy về sau, dùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw110": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "vector, titan đang show thêm nhiều sp cùng cate",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw123": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw076": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "kq củ NovaLite ok hơn (nhiều sp mật ong được hiển thị)",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw086": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw119": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw105": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw118": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite  -  sp lạ Trà Hoa Đậu Biếc Moncha…, Trà Linh Chi Thái Bảo…, Trà Đào Hương Cam Sả… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw112": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw077": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Vector và NovaLite nhiều sp hơn Titan\ncó thể dùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw018": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan không đạt: top10 đúng 3/10\n- Titan Multi không đạt: top10 đúng 3/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Bánh Karo Trứng Chà Bông…, Bánh Đậu Xanh Hương Nguyên…, Bánh Quy Wondertok Thin Masterpieces…, Bánh Custas 6 Cái 138G …\nDùng để discuss với khách, có thể test hạ điểm để xem lại sp trả về",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw116": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw031": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Sốt Lẩu Thập Cẩm Ofood…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw070": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw004": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "24/9: ngưỡng 200, 0.72",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw090": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw089": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw093": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt (cần xem kỹ) - sp lạ top20: Bánh đậu xanh Rồng Vàng…, Trà Xanh Túi Lọc Phúc…, Trà Xanh Túi Lọc Trà…, Bánh đậu xanh Rồng Vàng… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw117": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite sp lạ:  Túi Canvas In Hình RONTAS…, Vali Kéo Du Lịch Go&Fly…, Vali Kéo Du Lịch Go&Fly…, Vali Kéo Du Lịch Go&Fly… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw013": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw111": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "các sp  liên quan trái xoài : xoài sấy dẻo, thạch vị xoài đã bị ẩn đi",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw072": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "NovaLite top đầu (cá mai, cá dứa, cá kèo) k phù hợp",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw084": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "trứng gà ăn liền chưa hiển thị cho titan",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw083": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw079": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite : chỉ trả 4 KQ",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw062": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw014": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Sữa Tắm Tẩy Tế Bào…, Gel Rửa Tay Choice L…, Sữa Rửa Tay Dr.Clean Hương…, Sữa Rửa Tay Choice-L Hương…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Sữa Tắm Tẩy Tế Bào…, Gel Rửa Tay Choice L…, Sữa Rửa Tay Dr.Clean Hương…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Sữa Tắm ON: The Body…, Tắm Gội Pureen Pro Vitamin…, Sữa Tắm ON: The Body…, Sữa Tắm ON: The Body… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw078": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: chỉ trả 2 KQ\n- NovaLite sp lạ Giấm Tinh Luyện ATK Chai…, Mật Ong Rừng Tây Nguyên…, Măng Búp Tươi Kim Bôi…, Mật Ong Chín Honimore Hoa… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw055": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector : sp lạ : Đồ Trang Trí Tết Các…\n- NovaLite(cần xem kỹ) sp lạ top20: Dung Dịch Hada Labo Dưỡng…, Bông Atiso Đỏ Sấy Dẻo…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw048": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "vector trả về danh sách đúng nhất. titan chỉ đang show hình ảnh tương tự",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw059": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: chỉ trả 3 KQ, đúng 3/3\n- NovaLite không đạt (cần xem kỹ) sp lạ: Nước Mắm Chay Pha Sẵn…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw124": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite chư bao gồm sp cần tìm",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw034": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 9/10 · sp lạ top20: Sữa Chua Uống Tiệt Trùng…, Lốc 5 Chai Sữa Uống…, Lốc 6 Sữa Chua Uống…, Lốc 6 Sữa Chua Fristi…\n- Titan đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Sữa Tươi Tiệt Trùng Lúa…, Sữa Dinh Dưỡng Vinamilk ADM…\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20:, Sữa Chua , sữa trái cây\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Nước Rửa Tay Lifebuoy Vitamin…, Nước Rửa Tay Lifebuoy Vitamin…, Nước Rửa Tay Lifebuoy Vitamin…, Sữa Tươi Tiệt Trùng TH… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw042": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw040": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ: Đu Đủ Giống Đài Loan…, Sapoche (Hồng Xiêm) 500G, Mãng Cầu Ta (Quả Na)…, Mận Đá 800G …\n- Titan đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Đu Đủ Giống Đài Loan…, Nhãn Xuồng Cơm Vàng 700G, Măng Cụt 1kg, Thanh Long Ruột Đỏ 1kg …\n- Titan Multi đạt: top10 đúng 2/10 · sp lạ top20: Đu Đủ Giống Đài Loan…, Nhãn Xuồng Cơm Vàng 700G, Măng Cụt 1kg, Dứa Mật MD2 Rồng Đỏ… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Bí Hồ Lô Giống Mỹ…, Bí Hạt Đậu 1kg, Chuối Sứ (Chuối Tây) 1.8kg, Nho Xanh Không Hạt Nhập… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw027": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Lốc 3 Xà Bông Cục…, Sữa Tắm Hương Nước Hoa…, Sữa Tắm Purité Dưỡng Da…, Dầu Gội Rejoice Hương Hoa… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw044": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: chỉ trả 6 KQ, đúng 4 · sp lạ: Khoai Lang Giống Nhật 1kg\n- Titan đạt: top10 đúng 2 · sp lạ top20: Khoai Lang Giống Nhật 1kg, Củ dền 500G, Khoai môn cao 800g, Cà Chua Beef 1kg …\n- Titan Multi đạt: top10 đúng 3 · sp lạ top20: Khoai Lang Giống Nhật 1kg, Củ dền 500G, Khoai Lang Sữa VITEC FARM…, Hỗn Hợp Khoai Lang Giống… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10 nhưng k phải là củ khoai mà là khoai đã chế biến",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw019": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw087": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector · sp lạ: Lẩu Điện Sunhouse SHD4528\n- Titan đạt,Titan Multi  · sp lạ: Lẩu Điện Sunhouse SHD4528, Nồi ủ La Gourmet 4.5L…, Bếp Hồng Ngoại Perfect PF-BH86\n- NovaLite đạt (cần xem kỹ) sp lạ : bình đun nước (No.5)Lẩu Điện Sunhouse SHD4528, Bếp Hồng Ngoại Perfect PF-BH86",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw026": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Dung Dịch Vệ Sinh Phụ…\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw061": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw108": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan , Titan Multi đạt:  sp lạ top20: Muối Chanh Ớt Dasavi Đỏ…, Dầu Hào Heinz 295G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Nước Tương Sempio Yangjo 701…, Giấm Ăn Sushi Kikkoman Vị…, Nước Tương Vedan 200ml, Nước Tương Chinsu Tỏi Ớt… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw068": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "NovaLite show chưa đủ sp nước khoáng aquafina",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw071": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector sp lạ: Kẹo Dẻo Yupi Hình Burger…, Thạch Dừa Hạnh Dung 200G…, Kẹo Xoài Bóc Vỏ 200G, Rau Câu Poke Bút Chì… …\n- NovaLite không đạt sp lạ top20: Nước Mắm Nam Ngư 3…, Nước Mắm Thuận Phát Cá…, Nước Mắm Cốt Nhỉ Hồng…, Nước Mắm Cá Cơm Vàng… …",
+          "markedAt": "2026-09-28T09:00:20"
+        },
+        "kw122": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw096": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw039": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Dầu Hào CHIN-SU Sò Điệp…\n- Titan đạt: top10 đúng 8/10 · sp lạ top20: Dầu Hào LEE KUM KEE…, Dầu Hào Chay LEE KUM…, Hắc Xì Dầu Lee Kum…, Xốt Ướp Teriyaki KIKKOMAN Vị… …\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Dầu Hào LEE KUM KEE…, Dầu Hào Chay LEE KUM…, Hắc Xì Dầu Lee Kum…, Dầu Hào Chay Âu Lạc… …\n- NovaLite đạt (cần xem kỹ): chỉ trả 7 KQ, đúng 7/7",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw022": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt (cần xem kỹ): top10 đúng 4/10 (có xen lấn muối) · sp lạ top20: Sốt Mayonnaise Kewpie 300G, Bột Ngọt Miwon 100G\n- Titan Multi đạt: top10 đúng 4/10 (có xen lấn muối) · sp lạ top20: Sốt Mayonnaise Kewpie 300G, Bột Ngọt Miwon 100G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 3/10\nDùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw046": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite  sp lạ top20: Bột Năng Vĩnh Thuận Gói…, Bột Năng Tài Ký Gói…, Bột Năng Đa Dụng Meizan…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw043": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite (cần xem kỹ): top10 đúng 9/10 · sp lạ: Sữa Uống Lên Men Betagen…",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw015": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Kẹo Socola LOTTE Crunch Hũ…, Socola Sữa Beryl's Vị Hỗn…, Socola Hershey's Kisses Kem Sữa…\n- Titan Multi không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Kẹo Socola LOTTE Crunch Hũ…, Socola Sữa Beryl's Vị Hỗn…, Socola Sữa Beryl's Nhân Nho…, Socola Hershey's Kisses Kem Sữa…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Kẹo Dream Vị Gừng 200G, Kẹo Dream Vị Quế 200G, Bột Ngọt Cánh Vừa Meizan…, Kẹo Coffeeshot Classic Kopiko 140G …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw021": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw073": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector ,Titan đạt: đang hiển thị thêm các sp cùng cate (mắm nên, mắm cà pháo)\n- NovaLite: chỉ trả 1 KQ",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw020": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw025": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector không đạt: top10 đúng 2/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw024": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan không đạt (cần xem kỹ): top10 đúng 9/10\n- Titan Multi không đạt: top10 đúng 9/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Bánh Cosy Marie 240g, Bánh Quy Cosy Marie 336G, Khoai Môn Lệ Phố Nhân…, Bánh Trung Thu Hữu Nghị… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw098": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Bánh Quy Nhân Kem Hành…, Bánh Quy Dừa Tròn Libra…, Bánh Khoai Tây Nướng Tok…, Bánh Nhân Trứng Muối Đài… …\n- Titan không đạt: top10 đúng 0/10 · sp lạ: Táo Đỏ Hòa Điền Tân…, Đậu Muối CK 350G, Hạt Điều Lụa Yến Nhung…, Hạt Điều Lụa Tuấn Đạt… …\n- Titan Multi không đạt: chỉ trả 6 KQ, đúng 0/6 · sp lạ: Táo Đỏ Hòa Điền Tân…, Đậu Muối CK 350G, Đậu phộng chiên muối Tài…, Hạt Điều Lụa Yến Nhung… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Trà Hòa Tan Kombucha Bio…, Trà Sữa Trân Châu Hoàng…, Trà Sữa Hòa Tan Moncha…, Trà Sữa Trân Châu Dawning… …\n- Có thể dùng để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw088": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector · sp lạ: Kẹo Thạch Zai Zai Plus…, Kẹo Thạch Akita Ngắn 200G, Thạch Lắc Ozai Hạt Chia…, Kẹo Xoài Bóc Vỏ 200G …\n- Titan đạt, Titan Multi sp lạ: Kẹo Thạch Zai Zai Plus…, Bánh Gạo Richy Vị Ngọt…\n- NovaLite không đạt  · sp lạ top20: Khoai Tây Chiên Pringles Vị…, Khoai tây vàng 400g, Mì Paldo Jumbo Koreno Vị…, Khoai mì làm sạch An… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw035": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw120": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt - sp lạ: Trà Dừa Xoài Teapins Farmer's…, Trà Oolong Hương Sữa Teapins…, Trà Đen Bá Tước Earl…, Trà Thảo Dược Gừng &… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw066": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw082": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw092": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "bug -> Titan multi k hiểu dc mũi khoan\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw056": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw081": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite đạt (cần xem kỹ): chỉ trả 3 KQ",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw065": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw001": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw008": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10 · sp lạ top20: Dầu Gội Rejoice Hương Hoa…, Dầu Gội Rejoice Siêu Mềm…\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Dầu Gội Rejoice Hương Hoa…, Dung Dịch Hada Labo Dưỡng…, Bọt Rửa Tay On1 Hương…, Dung Dịch Hada Labo Dưỡng… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw064": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "chưa ra kq tàu hủ",
+          "markedAt": "2026-09-28T09:00:20"
+        },
+        "kw017": {
+          "verdict": [
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector không đạt: top10 đúng 1/10 · sp lạ top20: Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi… …\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw036": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan không đạt: top10 đúng 3/10 · sp lạ top20: Hạt Nêm Good Today Thịt…, Bột Tương Đen Ottogi Gói…, Sốt BBQ Gà Xào Gochujang…, Sốt Gochungjang Bulgogi Sempio Gói… …\n- Titan Multi không đạt: top10 đúng 3/10 · sp lạ top20: Hạt Nêm Good Today Thịt…, Bột Tương Đen Ottogi Gói…, Sốt BBQ Gà Xào Gochujang…, Sốt Gochungjang Bulgogi Sempio Gói… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10\n dùng case này để discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw032": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw115": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite đạt (cần xem kỹ): chỉ trả 8 KQ,",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw075": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Titan , Titan Multi đang hiển thị thêm nồi lẩu\n- NovaLite không đạt (cần xem kỹ):  sp lạ  Cốc Đong Yoko 500ml",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw045": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10 · sp lạ: Dao Super Chef Chặt Xương…, Bộ 2 Chảo Chống Dính…\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10\nTitan chủ yếu là thùng rác (trong hình bao gồm cả túi rác và thùng rác)",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw012": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 8/10 · sp lạ top20: Má Đùi Gà Không Xương…, Xương Má Đùi Gà Niwatori…, Má Đùi Gà Leboucher 500G, Đùi Tỏi Gà Niwatori 480G …\n- Titan không đạt: top10 đúng 7/10 · sp lạ top20: Má Đùi Gà Không Xương…, Cánh Gà Leboucher 500G, Má Đùi Gà Leboucher 500G, Cánh Gà Niwatori 480G …\n- Titan Multi không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Má Đùi Gà Không Xương…, Đùi Gà Tháo Khớp Leboucher…, Cánh Gà Leboucher 500G, Đùi Gà Phi Lê Leboucher… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Thịt Gà Đóng Hộp Tulip…, Phở Thịt Gà Vifon (Có…, Phở Thịt Gà Vifon Hoàng…, Bánh Ăn Sáng C'est Bon… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw028": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan không đạt: top10 đúng 4/10 · sp lạ top20: Xương Ống Heo Thảo Mộc…, Ba Rọi Heo 365 Fresh…, Cốt Lết Heo 365 Fresh…, Thịt Nách Heo Thảo Mộc… …\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw080": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan và novalite đang hiển thị thức ăn cho chó,mèo\ncase này có thể dùng discuss với khách",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw054": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt: top10 đúng 10/10\n- Titan đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- NovaLite đạt : top10 đúng 10/10",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw067": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw049": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- Vector đạt sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…, Gia Vị Hoàn Chỉnh Knorr…, Gia Vị Hoàn Chỉnh Knorr…\n- Titan đạt: sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…\n- Titan Multi đạt: sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ : Tương Ớt Knorr Tròn 5…, Tương Tàu Xì LEE KUM…, Tương Cà Nam Dương Chai…, Tương Ớt Nam Dương Cay… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw107": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw002": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw037": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "Expec: sosola trứng. Dùn case này để discuss với khách\n- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Belcube Con Bò…\n- Titan không đạt: top10 đúng 0/10 · sp lạ top20: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Trái Cây Le…, Phô Mai Hoa Quả Kids… …\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Trái Cây Le…, Phô Mai Hoa Quả Kids… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Trứng Gà Đại Hỷ 365…, Trứng Gà Premium Happy Egg…, Trứng Gà Tươi Happy Egg…, Trứng Vịt Bắc Thảo V.food… …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw069": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Kẹo Xôi Thái Và Sầu…, Bơ lạt Vỉ Anchor Vỉ…, Kẹo Dream Vị Gừng 200G, Kẹo Dream Vị Quế 200G …",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw074": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-25T17:27:17"
+        },
+        "kw095": {
+          "verdict": [
+            "vector",
+            "vector_titan",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "Titan hiển thị đa dạng sp hơn",
+          "markedAt": "2026-09-25T17:27:17"
+        }
+      }
+    },
+    "2026-09-28": {
+      "verdicts": {
+        "kw072": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw092": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw096": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "caption"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw060": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw033": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "novalite đang trả ra nhiều sp khô hơn là tươi",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw056": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw067": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw018": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "kq của titan multi x caption nổi trội hơn hẳn",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw029": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw035": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw063": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw016": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw005": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw012": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw089": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw079": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw062": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw014": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw107": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw127": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw034": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw124": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw099": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw025": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw020": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw011": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "KQ trả về của titan multi x caption khá thấp. Dùng key này để trao đổi với khách",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw106": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw026": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "kết quả của vector ok nhất",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw086": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "Titan show khá ít sản phẩm rượu so với 2 cơ chế còn lại",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw077": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw111": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw013": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw022": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "kq của vector ổn nhất. Titan đang chứa thêm muối và mayonaise. dùng case này để trao đổi với khách",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw064": {
+          "verdict": [
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw015": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw073": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "cần dev check xem titan multi x caption k hiển thị được mắm tôm",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw091": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw080": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw088": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw019": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw093": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw032": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "Vector trả ra nhiều kq liên quan đến trà hơn",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw126": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw110": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "titan multi x caption : k hiển thị được bơ sáp, cần dev check lại",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw059": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw037": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [
+            "none"
+          ],
+          "note": "Dùng key này để trao đổi với khách",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw113": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw103": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw123": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw041": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw043": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw044": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw078": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "kết quả của vector ok nhất, (titan: măng muối đang ở No.26)",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw055": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw076": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw047": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw085": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw006": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw122": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw125": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw002": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw030": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [
+            "none"
+          ],
+          "note": "Có thể dùng case này để làm ví dụ với khách",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw010": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw028": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw017": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw115": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw066": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "caption",
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw083": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "Titan đang hiển thị khá ít sp so với 2 cơ chế còn lại (dù top1 vẫn đúng sp muốn tìm)",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw036": {
+          "verdict": [
+            "vector",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw098": {
+          "verdict": [
+            "none"
+          ],
+          "performance": [],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw082": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw116": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw045": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "caption",
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "kqua của novalite ổn nhất (bao gồm cả túi rác và thùng rác)",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw003": {
+          "verdict": [
+            "caption",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "caption",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw070": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw042": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw061": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "titan multi x caption vẫn có kem tẩy nhưng chỉ có 1 sp, và tổng sluong sp trả về ít so với 3 cơ chế còn lại",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw031": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw065": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw023": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw094": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw039": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "note": "kqua của vector ok hơn (titan multi lọc gắt hơn)",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw057": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw095": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw001": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw053": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw048": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "Titan k hiển thị được Cà Chua Beef 1kg, cần dev kiểm tra lại",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw074": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw068": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw120": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw084": {
+          "verdict": [
+            "vector"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "titan hiển thị thiếu sp trứng gà ăn liền + top 5 đang k chứa trứng gà ăn liền",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw054": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw040": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw052": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw046": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw024": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "caption"
+          ],
+          "note": "Vector ghi nhận nhiều sp bánh mì hơn",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw109": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw008": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw081": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw049": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw050": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw090": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw027": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw058": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw004": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw105": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw100": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw097": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw009": {
+          "verdict": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw087": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw071": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw069": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw117": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw102": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw007": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw021": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "caption",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw038": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw104": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw121": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw119": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw101": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw108": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw051": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw112": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw075": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw118": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw114": {
+          "verdict": [
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw128": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type",
+            "caption"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw130": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "Top 5 sp của titan chưa hợp lý cần ưu tiên nước súc miệng (dev cần check lại)",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw132": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw129": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "caption",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector",
+            "vector_titan_multi_caption_type"
+          ],
+          "note": "novalite show nhiều sp k liên quan",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw131": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi"
+          ],
+          "performance": [
+            "vector"
+          ],
+          "note": "cần dev check titan multi k ra đưuọc sản phẩm khăn lau mặt",
+          "markedAt": "2026-09-29T15:33:40"
+        },
+        "kw133": {
+          "verdict": [
+            "vector",
+            "vector_titan_multi",
+            "vector_titan_multi_caption_type"
+          ],
+          "performance": [
+            "vector_titan_multi_caption_type",
+            "vector"
+          ],
+          "note": "",
+          "markedAt": "2026-09-29T15:33:40"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2081 @@
+{
+  "description": "Danh sách các keyword bị lệch/lỗi so với expected",
+  "timestamp": "2026-10-02T13:12:34.194702",
+  "count": 3,
+  "scenarios": [
+    {
+      "test_id": "NSG-P1KO-0001",
+      "query": "수박씨",
+      "dimension": "part1_multilanguage",
+      "route": null,
+      "match_category": "NO_MATCH",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": false,
+      "top1_match": false,
+      "top5_overlap_count": 0,
+      "top5_overlap_pct": 0,
+      "top10_overlap_count": 0,
+      "top10_overlap_pct": 0,
+      "top20_overlap_count": 0,
+      "top20_overlap_pct": 0,
+      "top30_overlap_count": 0,
+      "top30_overlap_pct": 0,
+      "expected_count": 0,
+      "actual_count": 3,
+      "expected_total_before_cap": 0,
+      "actual_total_before_cap": 3,
+      "overlap_count": 0,
+      "overlap_pct": 0,
+      "missing_count": 0,
+      "extra_count": 3,
+      "expected_items": [],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8934760132249",
+          "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "price": 68000,
+          "category": "추석",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 2,
+          "sku": "8934680093156",
+          "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "price": 80000,
+          "category": "추석",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 3,
+          "sku": "8934680095242",
+          "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "price": 85000,
+          "category": "추석",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [
+        "8934760132249",
+        "8934680093156",
+        "8934680095242"
+      ],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "8859578600257",
+          "name": "Playmore 수박 캔디 22G",
+          "price": 33900
+        },
+        {
+          "rank": 2,
+          "sku": "8809004644287",
+          "name": "Twizel 수박 맛 젤리 스틱 70g",
+          "price": 19000
+        },
+        {
+          "rank": 3,
+          "sku": "0400317870004",
+          "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 M 2.6kg",
+          "price": 99000
+        },
+        {
+          "rank": 4,
+          "sku": "0400317880003",
+          "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 L 3.2kg",
+          "price": 115000
+        },
+        {
+          "rank": 5,
+          "sku": "0400317860005",
+          "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 S 2kg",
+          "price": 79000
+        },
+        {
+          "rank": 6,
+          "sku": "8935256611217",
+          "name": "Forange Block FC8292-6 과일 블록 수박 조립 (119조각)",
+          "price": 99000
+        },
+        {
+          "rank": 7,
+          "sku": "8809531280170",
+          "name": "Meet Seoul 수박 과일주스 230ml 파우치",
+          "price": 17900
+        },
+        {
+          "rank": 8,
+          "sku": "2311670000008",
+          "name": "일본종 수박 2.9kg",
+          "price": 49010
+        },
+        {
+          "rank": 9,
+          "sku": "2311600000009",
+          "name": "1등급 수박 2.7kg",
+          "price": 45630
+        },
+        {
+          "rank": 10,
+          "sku": "8936149091413",
+          "name": "Unisex 수박 무늬 버킷 모자",
+          "price": 55900
+        }
+      ],
+      "asis_total_before_cap": 10,
+      "asis_cached": true,
+      "actual_latency_ms": 252,
+      "resolved_mode": "lexical",
+      "lexical_confidence": 0.7073985448344432,
+      "fallback_used": false,
+      "actual_total_hits": 3,
+      "recommendation_triggered": true,
+      "recommendation_items": [
+        {
+          "rank": 1,
+          "sku": "2292190000009",
+          "name": "수세미 500G",
+          "price": 17450
+        },
+        {
+          "rank": 2,
+          "sku": "8936235530215",
+          "name": "VITEC FARM 일본식 고구마 및 우유 고구마 혼합 1kg",
+          "price": 49900
+        },
+        {
+          "rank": 3,
+          "sku": "8809641613707",
+          "name": "한국 백만송이 버섯 150G",
+          "price": 33900
+        },
+        {
+          "rank": 4,
+          "sku": "8936200652249",
+          "name": "Bio Ngon 유기농 수세미오이 200G",
+          "price": 17900
+        },
+        {
+          "rank": 5,
+          "sku": "8936005871647",
+          "name": "Doi Dua Vang 냉동스위트콘 400G",
+          "price": 60900
+        },
+        {
+          "rank": 6,
+          "sku": "2292110000003",
+          "name": "미국종 땅콩호박 1.2kg",
+          "price": 23880
+        },
+        {
+          "rank": 7,
+          "sku": "8936138400028",
+          "name": "옥수수 200G",
+          "price": 17900
+        },
+        {
+          "rank": 8,
+          "sku": "8936138400035",
+          "name": "찰옥수수 (2개입)",
+          "price": 20500
+        },
+        {
+          "rank": 9,
+          "sku": "8936138400042",
+          "name": "365 Fresh 미국종 옥수수 (2개)",
+          "price": 18900
+        },
+        {
+          "rank": 10,
+          "sku": "8852849147086",
+          "name": "Good Farm 달콤한 옥수수 425G",
+          "price": 28700
+        },
+        {
+          "rank": 11,
+          "sku": "8936235530208",
+          "name": "VITEC FARM 스위트 밀크 고구마 1kg",
+          "price": 49900
+        },
+        {
+          "rank": 12,
+          "sku": "8935023100074",
+          "name": "Agri Foods Co 달랏 냉동 스위트콘 500G",
+          "price": 41900
+        },
+        {
+          "rank": 13,
+          "sku": "2311600000009",
+          "name": "1등급 수박 2.7kg",
+          "price": 37530
+        },
+        {
+          "rank": 14,
+          "sku": "8938505002293",
+          "name": "Phu Minh Tam 찹쌀 1KG",
+          "price": 44900
+        },
+        {
+          "rank": 15,
+          "sku": "8809261532730",
+          "name": "오늘좋은 그래놀라 후르츠&아몬드 570G",
+          "price": 181700
+        },
+        {
+          "rank": 16,
+          "sku": "8936200652119",
+          "name": "Bio Ngon 유기농 박 500G",
+          "price": 38900
+        },
+        {
+          "rank": 17,
+          "sku": "8850015152803",
+          "name": "Taste-T 옥수수 통조림 420G",
+          "price": 29500
+        },
+        {
+          "rank": 18,
+          "sku": "2297260000002",
+          "name": "콩호박 1KG",
+          "price": 83900
+        },
+        {
+          "rank": 19,
+          "sku": "8809010968261",
+          "name": "오늘좋은 국내산 19곡 크리스피롤 미니 초코 130G",
+          "price": 54000
+        },
+        {
+          "rank": 20,
+          "sku": "8936006344645",
+          "name": "Jojo 고추 소금맛 초록호박씨 50G",
+          "price": 28900
+        }
+      ],
+      "autocomplete_actual_items": [
+        {
+          "rank": 1,
+          "text": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 2,
+          "text": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 3,
+          "text": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        }
+      ],
+      "autocomplete_expected_items": [],
+      "autocomplete_has_expected": false,
+      "autocomplete_comparable_count": 0,
+      "autocomplete_actual_in_expected_count": 0,
+      "autocomplete_actual_in_expected_pct": null,
+      "autocomplete_expected_topk_hit_count": 0,
+      "autocomplete_expected_topk_size": 0,
+      "autocomplete_expected_topk_pct": null,
+      "autocomplete_overlap_count": 0,
+      "autocomplete_overlap_pct": null,
+      "autocomplete_products": [
+        {
+          "rank": 1,
+          "sku": "8934760132249",
+          "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+          "price": 68000
+        },
+        {
+          "rank": 2,
+          "sku": "8934680095242",
+          "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+          "price": 85000
+        },
+        {
+          "rank": 3,
+          "sku": "8934680093156",
+          "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+          "price": 80000
+        }
+      ],
+      "autocomplete_error": null,
+      "autocomplete_latency_ms": 229,
+      "autocomplete_asis_items": [],
+      "autocomplete_asis_cached": false,
+      "asis_match_category": "NO_MATCH",
+      "ac_match_category": "NO_EXPECTED_AC",
+      "ac_pass_fail_manual_override": false,
+      "ac_pass_fail_reviewed": false,
+      "ac_pass_fail_status": "n/a",
+      "ac_prev_pass_fail_status": "n/a",
+      "ac_is_regression": false,
+      "ac_regression_kind": null,
+      "pass_fail_manual_override": false,
+      "pass_fail_reviewed": false,
+      "pass_fail_status": "failed",
+      "prev_pass_fail_status": "failed",
+      "prev_actual_top_items": [
+        {
+          "sku": "8934760132249",
+          "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G"
+        },
+        {
+          "sku": "8934680093156",
+          "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G"
+        },
+        {
+          "sku": "8934680095242",
+          "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G"
+        }
+      ],
+      "prev_run_at": "2026-09-29T16:11:08.962919",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_PART1_KO_act0929_20260929_161057",
+      "bug_note": null,
+      "discussion_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null,
+      "response_changed": false
+    },
+    {
+      "test_id": "NSG-P1KO-0002",
+      "query": "돼지파",
+      "dimension": "part1_multilanguage",
+      "route": null,
+      "match_category": "LOW_MATCH",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": false,
+      "top1_match": false,
+      "top5_overlap_count": 0,
+      "top5_overlap_pct": 0,
+      "top10_overlap_count": 0,
+      "top10_overlap_pct": 0,
+      "top20_overlap_count": 0,
+      "top20_overlap_pct": 0,
+      "top30_overlap_count": 0,
+      "top30_overlap_pct": 0,
+      "expected_count": 0,
+      "actual_count": 30,
+      "expected_total_before_cap": 0,
+      "actual_total_before_cap": 50,
+      "overlap_count": 0,
+      "overlap_pct": 0,
+      "missing_count": 0,
+      "extra_count": 30,
+      "expected_items": [],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936146448302",
+          "name": "G Kitchen 돼지 사태 300G (EA)",
+          "price": 55000,
+          "category": "족발",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 2,
+          "sku": "2211820000004",
+          "name": "Sagri 허브 돼지족 500G",
+          "price": 90000,
+          "category": "기타 돼지고기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 3,
+          "sku": "2204430000007",
+          "name": "365 Fresh 돼지고기 족발 500G",
+          "price": 62500,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 4,
+          "sku": "2088850000003",
+          "name": "돼지 염통 400G",
+          "price": 136000,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 5,
+          "sku": "2204450000001",
+          "name": "365 Fresh 돼지족발 500g",
+          "price": 80000,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 6,
+          "sku": "8936194975560",
+          "name": "Japfa 뼈 없는 돼지 앞다리살 300G",
+          "price": 55000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 7,
+          "sku": "8936146441051",
+          "name": "G Kitchen 돼지고기 뒷다리살 300G",
+          "price": 59000,
+          "category": "안심",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 8,
+          "sku": "2211990000002",
+          "name": "Sagri 허브 돼지고기 등뼈 500G",
+          "price": 74000,
+          "category": "뼈",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 9,
+          "sku": "8936194975355",
+          "name": "Japfa 돼지 넓적다리살 300G",
+          "price": 53000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 10,
+          "sku": "8936207132010",
+          "name": "Meaty Chopshop 소고기 사태 250G",
+          "price": 129000,
+          "category": "사태",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 11,
+          "sku": "8936146448296",
+          "name": "G Kitchen 돼지고기 앞다리 뼈 300G",
+          "price": 59000,
+          "category": "기타 돼지고기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 12,
+          "sku": "2211930000000",
+          "name": "Sagri 허브 돼지고기 다리살 500G",
+          "price": 74500,
+          "category": "안심",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 13,
+          "sku": "2319130000001",
+          "name": "Organic TTC 유기농 호주산 소고기 사태살 슬라이스 250G",
+          "price": 159750,
+          "category": "사태",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 14,
+          "sku": "2211800000000",
+          "name": "Sagri 허브 돼지고기 족발 500G",
+          "price": 83500,
+          "category": "족발",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 15,
+          "sku": "8936194975409",
+          "name": "Japfa 돼지 목심 300G",
+          "price": 49000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 16,
+          "sku": "8936194975454",
+          "name": "Japfa 돼지 갈비 300G",
+          "price": 49500,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 17,
+          "sku": "2306260000001",
+          "name": "365 Fresh 호주산 소고기 사태 200G",
+          "price": 139800,
+          "category": "사태",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 18,
+          "sku": "8936146448272",
+          "name": "G Kitchen 돼지 사골 300G",
+          "price": 39000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 19,
+          "sku": "2212270000002",
+          "name": "돼지꼬리 500G",
+          "price": 114500,
+          "category": "기타 돼지고기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 20,
+          "sku": "8936194975348",
+          "name": "Japfa 다진 돼지고기 300G",
+          "price": 35000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 21,
+          "sku": "2310250000001",
+          "name": "365 Fresh 소고기 사태 300G",
+          "price": 104700,
+          "category": "사태",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 22,
+          "sku": "2211980000005",
+          "name": "Sagri 허브 돼지고기 경골 500G",
+          "price": 74000,
+          "category": "뼈",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 23,
+          "sku": "8936194975317",
+          "name": "Japfa 돼지 삼겹살 300G",
+          "price": 75000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 24,
+          "sku": "2204440000004",
+          "name": "365 Fresh 뼈없는 돼지족발 300g",
+          "price": 64500,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 25,
+          "sku": "2204490000009",
+          "name": "365 Fresh 돼지 등심 300g",
+          "price": 47700,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 26,
+          "sku": "8935128778390",
+          "name": "365 Fresh 호주산 소 부채살 스테이크용 300G",
+          "price": 195000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 27,
+          "sku": "8936146445776",
+          "name": "G Kitchen 돼지고기 편육 475G",
+          "price": 89000,
+          "category": "중국 소시지, 쩌짜",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 28,
+          "sku": "2252050000006",
+          "name": "365 Fresh 돼지고기 다짐육 볼 300g",
+          "price": 43500,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 29,
+          "sku": "8936194975416",
+          "name": "Japfa 돼지 등심 300G",
+          "price": 39000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 30,
+          "sku": "8938546870080",
+          "name": "오키니 일본산 눈꽃 돼지고기 등심 250G",
+          "price": 93000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 31,
+          "sku": "2204320000001",
+          "name": "365 Fresh 돼지고기 다리살 300G",
+          "price": 43500,
+          "category": "안심",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 32,
+          "sku": "2220360000009",
+          "name": "365 Fresh 돼지고기 목심 300G",
+          "price": 59700,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 33,
+          "sku": "2215460000004",
+          "name": "PTV 소고기 사태 300G",
+          "price": 97500,
+          "category": "사태",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 34,
+          "sku": "2088870000007",
+          "name": "돼지콩팥 300G",
+          "price": 58500,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 35,
+          "sku": "8936045450598",
+          "name": "Nipponham 돼지간 파테 200G",
+          "price": 40900,
+          "category": "기타 레디투잇",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 36,
+          "sku": "8936146447312",
+          "name": "G Kitchen 돼지 꼬리뼈 300G (EA)",
+          "price": 39000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 37,
+          "sku": "8936146442362",
+          "name": "G Kitchen 다진 돼지고기 300G (EA)",
+          "price": 45000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 38,
+          "sku": "8936146447930",
+          "name": "G Kitchen 슬라이스 삼겹살 300G (EA)",
+          "price": 79000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 39,
+          "sku": "2211950000004",
+          "name": "Sagri 허브 돼지고기 목심 500G",
+          "price": 74500,
+          "category": "안심",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 40,
+          "sku": "2215500000001",
+          "name": "Phuc Thinh Vuong 양지머리 300G",
+          "price": 73500,
+          "category": "다짐육",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 41,
+          "sku": "8936146442614",
+          "name": "Feddy 돼지 피 400G",
+          "price": 27000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 42,
+          "sku": "2089120000006",
+          "name": "돼지 꼬리뼈 500G",
+          "price": 54500,
+          "category": "SPECIAL CATEGORIES",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 43,
+          "sku": "2088890000001",
+          "name": "G-Kitchen 돼지 혀",
+          "price": 126000,
+          "category": "기타 돼지고기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 44,
+          "sku": "8936146447923",
+          "name": "G Kitchen 슬라이스 삼겹살 300G (EA)",
+          "price": 79000,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 45,
+          "sku": "2319040000009",
+          "name": "Organic TTC 유기농 호주 소고기 다리살 슬라이스 250G",
+          "price": 162250,
+          "category": "기타 소고기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 46,
+          "sku": "8935101604319",
+          "name": "Đức Việt 염장 족발 450G",
+          "price": 109000,
+          "category": "중국 소시지, 쩌짜",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 47,
+          "sku": "8934572221902",
+          "name": "비산 돼지 간 파테 팩 150G",
+          "price": 17900,
+          "category": "기타 레디투잇",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 48,
+          "sku": "2204360000009",
+          "name": "365 Fresh 돼지고기 다짐육 300G",
+          "price": 43500,
+          "category": "60분배송",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 49,
+          "sku": "2211780000007",
+          "name": "Sagri 허브 돼지고기 삼겹살 500G",
+          "price": 144500,
+          "category": "삼겹살",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 50,
+          "sku": "2204150000004",
+          "name": "365 Fresh 뼈없는 갈비살 삼겹 500g",
+          "price": 125000,
+          "category": "365 Fresh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [
+        "8936146448302",
+        "2211820000004",
+        "2204430000007",
+        "2088850000003",
+        "2204450000001",
+        "8936194975560",
+        "8936146441051",
+        "2211990000002",
+        "8936194975355",
+        "8936207132010",
+        "8936146448296",
+        "2211930000000",
+        "2319130000001",
+        "2211800000000",
+        "8936194975409",
+        "8936194975454",
+        "2306260000001",
+        "8936146448272",
+        "2212270000002",
+        "8936194975348",
+        "2310250000001",
+        "2211980000005",
+        "8936194975317",
+        "2204440000004",
+        "2204490000009",
+        "8935128778390",
+        "8936146445776",
+        "2252050000006",
+        "8936194975416",
+        "8938546870080"
+      ],
+      "asis_items": [
+        {
+          "rank": 1,
+          "sku": "2089130000003",
+          "name": "돼지 사골뼈 500G",
+          "price": 49500
+        },
+        {
+          "rank": 2,
+          "sku": "2089120000006",
+          "name": "돼지 꼬리뼈  500G",
+          "price": 54500
+        },
+        {
+          "rank": 3,
+          "sku": "2211970000008",
+          "name": "Sagri 허브 돼지 꼬리뼈  500G",
+          "price": 74000
+        },
+        {
+          "rank": 4,
+          "sku": "8850987101014",
+          "name": "마마 다진 돼지 라면 60G",
+          "price": 8900
+        },
+        {
+          "rank": 5,
+          "sku": "8936146442614",
+          "name": "Feddy 돼지 피 400G",
+          "price": 27000
+        },
+        {
+          "rank": 6,
+          "sku": "8936035440943",
+          "name": "Truong Vinh 돼지 핫도그 500G",
+          "price": 94900
+        },
+        {
+          "rank": 7,
+          "sku": "3537580701388",
+          "name": "PATE 돼지 간 32% HENAFF 130G",
+          "price": 63900
+        },
+        {
+          "rank": 8,
+          "sku": "8936146445189",
+          "name": "Wyn 돼지 간 파테 150G",
+          "price": 30500
+        },
+        {
+          "rank": 9,
+          "sku": "2088850000003",
+          "name": "돼지 염통 400G",
+          "price": 136000
+        },
+        {
+          "rank": 10,
+          "sku": "2204490000009",
+          "name": "365 Fresh 돼지 등심 300g",
+          "price": 47700
+        },
+        {
+          "rank": 11,
+          "sku": "8936043371895",
+          "name": "Hoang My Gia 돼지 치실 누룽지 120G",
+          "price": 37900
+        },
+        {
+          "rank": 12,
+          "sku": "2211830000001",
+          "name": "Sagri 허브 뼈없는 돼지 족발 500G",
+          "price": 100000
+        },
+        {
+          "rank": 13,
+          "sku": "8936146445875",
+          "name": "Wyn 돼지 껍데기& 베트남 녹색 고추 햄 450G",
+          "price": 72500
+        },
+        {
+          "rank": 14,
+          "sku": "2204480000002",
+          "name": "365 Fresh 돼지 등심 500G",
+          "price": 74500
+        },
+        {
+          "rank": 15,
+          "sku": "2248580000005",
+          "name": "미국산 돼지 갈비  500G",
+          "price": 107500
+        },
+        {
+          "rank": 16,
+          "sku": "8936244040309",
+          "name": "Japfa 돼지 등심 300G",
+          "price": 41500
+        },
+        {
+          "rank": 17,
+          "sku": "8936244040248",
+          "name": "Japfa 돼지 넓적다리살 300G",
+          "price": 39000
+        },
+        {
+          "rank": 18,
+          "sku": "8936244040293",
+          "name": "Japfa 돼지 목심 300G",
+          "price": 70000
+        },
+        {
+          "rank": 19,
+          "sku": "8936244040347",
+          "name": "Japfa 돼지 갈비 300G",
+          "price": 68000
+        },
+        {
+          "rank": 20,
+          "sku": "8936244040378",
+          "name": "Japfa 뼈 없는 돼지 앞다리살 300G",
+          "price": 55000
+        }
+      ],
+      "asis_total_before_cap": 45,
+      "asis_cached": true,
+      "actual_latency_ms": 490,
+      "resolved_mode": "hybrid",
+      "lexical_confidence": 0,
+      "fallback_used": false,
+      "actual_total_hits": 100,
+      "recommendation_triggered": false,
+      "recommendation_items": [],
+      "autocomplete_actual_items": [
+        {
+          "rank": 1,
+          "text": "Vissan 돼지간 파테 170G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 2,
+          "text": "Vissan 돼지고기 파테 397G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 3,
+          "text": "Nipponham 돼지간 파테 200G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 4,
+          "text": "Vissan 돼지고기 파테 170G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 5,
+          "text": "Seaspimex 돼지고기 파테 170G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 6,
+          "text": "Wyn 돼지 간 파테 150G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 7,
+          "text": "비산 돼지 간 파테 팩 150G",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        },
+        {
+          "rank": 8,
+          "text": "Barona 새우 돼지고기 볶음용 완성 양념소스 80G 파우치",
+          "type": "product",
+          "hit_count": null,
+          "comparable": false,
+          "matched_expected": false
+        }
+      ],
+      "autocomplete_expected_items": [],
+      "autocomplete_has_expected": false,
+      "autocomplete_comparable_count": 0,
+      "autocomplete_actual_in_expected_count": 0,
+      "autocomplete_actual_in_expected_pct": null,
+      "autocomplete_expected_topk_hit_count": 0,
+      "autocomplete_expected_topk_size": 0,
+      "autocomplete_expected_topk_pct": null,
+      "autocomplete_overlap_count": 0,
+      "autocomplete_overlap_pct": null,
+      "autocomplete_products": [
+        {
+          "rank": 1,
+          "sku": "8934572070012",
+          "name": "Vissan 돼지간 파테 170G",
+          "price": 26200
+        },
+        {
+          "rank": 2,
+          "sku": "8934572000217",
+          "name": "Vissan 돼지고기 파테 397G",
+          "price": 56200
+        },
+        {
+          "rank": 3,
+          "sku": "8936045450598",
+          "name": "Nipponham 돼지간 파테 200G",
+          "price": 40900
+        },
+        {
+          "rank": 4,
+          "sku": "8934572000019",
+          "name": "Vissan 돼지고기 파테 170G",
+          "price": 32500
+        },
+        {
+          "rank": 5,
+          "sku": "8935025530091",
+          "name": "Seaspimex 돼지고기 파테 170G",
+          "price": 28400
+        }
+      ],
+      "autocomplete_error": null,
+      "autocomplete_latency_ms": 273,
+      "autocomplete_asis_items": [],
+      "autocomplete_asis_cached": false,
+      "asis_match_category": "LOW_MATCH",
+      "ac_match_category": "NO_EXPECTED_AC",
+      "ac_pass_fail_manual_override": false,
+      "ac_pass_fail_reviewed": false,
+      "ac_pass_fail_status": "n/a",
+      "ac_prev_pass_fail_status": "n/a",
+      "ac_is_regression": false,
+      "ac_regression_kind": null,
+      "pass_fail_manual_override": false,
+      "pass_fail_reviewed": false,
+      "pass_fail_status": "failed",
+      "prev_pass_fail_status": "failed",
+      "prev_actual_top_items": [
+        {
+          "sku": "8936146448302",
+          "name": "G Kitchen 돼지 사태 300G (EA)"
+        },
+        {
+          "sku": "2211820000004",
+          "name": "Sagri 허브 돼지족 500G"
+        },
+        {
+          "sku": "2204430000007",
+          "name": "365 Fresh 돼지고기 족발 500G"
+        },
+        {
+          "sku": "2088850000003",
+          "name": "돼지 염통 400G"
+        },
+        {
+          "sku": "2204450000001",
+          "name": "365 Fresh 돼지족발 500g"
+        },
+        {
+          "sku": "8936194975560",
+          "name": "Japfa 뼈 없는 돼지 앞다리살 300G"
+        },
+        {
+          "sku": "8936146441051",
+          "name": "G Kitchen 돼지고기 뒷다리살 300G"
+        },
+        {
+          "sku": "2211990000002",
+          "name": "Sagri 허브 돼지고기 등뼈 500G"
+        },
+        {
+          "sku": "8936194975355",
+          "name": "Japfa 돼지 넓적다리살 300G"
+        },
+        {
+          "sku": "8936207132010",
+          "name": "Meaty Chopshop 소고기 사태 250G"
+        }
+      ],
+      "prev_run_at": "2026-09-29T16:11:08.962919",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_PART1_KO_act0929_20260929_161057",
+      "bug_note": null,
+      "discussion_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null,
+      "response_changed": false
+    },
+    {
+      "test_id": "NSG-P1KO-0003",
+      "query": "선물 바구니",
+      "dimension": "part1_multilanguage",
+      "route": null,
+      "match_category": "NO_MATCH",
+      "is_100_percent_exact_order": false,
+      "is_100_percent_set_match": false,
+      "top1_match": false,
+      "top5_overlap_count": 0,
+      "top5_overlap_pct": 0,
+      "top10_overlap_count": 0,
+      "top10_overlap_pct": 0,
+      "top20_overlap_count": 0,
+      "top20_overlap_pct": 0,
+      "top30_overlap_count": 0,
+      "top30_overlap_pct": 0,
+      "expected_count": 0,
+      "actual_count": 30,
+      "expected_total_before_cap": 0,
+      "actual_total_before_cap": 50,
+      "overlap_count": 0,
+      "overlap_pct": 0,
+      "missing_count": 0,
+      "extra_count": 30,
+      "expected_items": [],
+      "actual_items": [
+        {
+          "rank": 1,
+          "sku": "8936192562168",
+          "name": "인형 키 체인 2168 18x16cm (랜덤 배송)",
+          "price": 95000,
+          "category": "남아완구",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 2,
+          "sku": "8936230480904",
+          "name": "데이지 꽃다발 봉제인형 50cm",
+          "price": 109000,
+          "category": "인형",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 3,
+          "sku": "8936039277422",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (연회색)",
+          "price": 28900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 4,
+          "sku": "8936039277408",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (연회색)",
+          "price": 28900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 5,
+          "sku": "8936039277552",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (황록색)",
+          "price": 28900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 6,
+          "sku": "8936039277538",
+          "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (황록색)",
+          "price": 50900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 7,
+          "sku": "4710731091029",
+          "name": "Farcent 향기주머니 라벤더향 10G",
+          "price": 21900,
+          "category": "방향제",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 8,
+          "sku": "8935243506755",
+          "name": "Mr.Fresh GSG09 장미 향기 복주머니 10Gx3개입",
+          "price": 43900,
+          "category": "캔들",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 9,
+          "sku": "8936039277477",
+          "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (연회색)",
+          "price": 57900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 10,
+          "sku": "8936039277453",
+          "name": "초이스엘 사각형 프라스틱 바구니 29.6 x 29.6 x 8.8cm (연회색)",
+          "price": 71900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 11,
+          "sku": "8936039277446",
+          "name": "초이스엘 직사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (연회색)",
+          "price": 49900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 12,
+          "sku": "8936053921448",
+          "name": "대형 곰 봉제 인형",
+          "price": 157000,
+          "category": "Trang Trí Giáng Sinh",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 13,
+          "sku": "8935275213065",
+          "name": "Inochi Yoko 고급 바스켓 23CM (컬러랜덤)",
+          "price": 29900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 14,
+          "sku": "8936190717591",
+          "name": "바이오홈 꽃무늬 세탁 바구니 45x46cm",
+          "price": 159000,
+          "category": "수납장",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 15,
+          "sku": "8936039277569",
+          "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (황록색)",
+          "price": 57900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 16,
+          "sku": "4710731091050",
+          "name": "Farcent 향기주머니 프레쉬향 10G",
+          "price": 21900,
+          "category": "방향제",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 17,
+          "sku": "8936039277484",
+          "name": "타원형 대야 및 바구니 세트33 x 29 x 12.5cm (황록색)",
+          "price": 60900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 18,
+          "sku": "8936039277415",
+          "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (연회색)",
+          "price": 17900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 19,
+          "sku": "8936039277521",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (황록색)",
+          "price": 28900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 20,
+          "sku": "8935243506779",
+          "name": "Mr.Fresh GSG09 라벤더 향기 복주머니 10Gx3개입",
+          "price": 43900,
+          "category": "캔들",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 21,
+          "sku": "8936039277514",
+          "name": "원형 대야 및 바구니 세트 35 x 39.2 x 14.5cm (황록색)",
+          "price": 103900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 22,
+          "sku": "8935243505598",
+          "name": "Pure Aroma 로맨틱 앰버향 향낭 26G",
+          "price": 29900,
+          "category": "방향제",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 23,
+          "sku": "8936039277507",
+          "name": "원형 대야 및 바구니 세트 31 x 35 x 13.2cm (황록색)",
+          "price": 72900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 24,
+          "sku": "4894680039889",
+          "name": "Zuru Fuggler 골드 퍼그스 15708 (랜덤배송)",
+          "price": 399000,
+          "category": "남아완구",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 25,
+          "sku": "4894680036857",
+          "name": "Mini Brands 수집용 장난감 스낵클즈 77572 (랜덤배송)",
+          "price": 299000,
+          "category": "남아완구",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 26,
+          "sku": "8936053920045",
+          "name": "펭귄 봉제인형",
+          "price": 142100,
+          "category": "인형",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 27,
+          "sku": "8936053922056",
+          "name": "대형 각종 등불 (랜덤배송)",
+          "price": 43500,
+          "category": "추석",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 28,
+          "sku": "8936039277439",
+          "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (연회색)",
+          "price": 22900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 29,
+          "sku": "8935275213072",
+          "name": "Inochi Yoko 고급 바스켓 30CM (컬러랜덤)",
+          "price": 46900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 30,
+          "sku": "8936039277545",
+          "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (황록색)",
+          "price": 17900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": true
+        },
+        {
+          "rank": 31,
+          "sku": "8935243506786",
+          "name": "Mr.Fresh GSG09 대양 향기 복주머니 10Gx3개입",
+          "price": 43900,
+          "category": "캔들",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 32,
+          "sku": "8936039277590",
+          "name": "초이스엘 직사각형 프라스틱 바구니 29.6 x 29.6 x 13cm (황록색)",
+          "price": 71900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 33,
+          "sku": "8936036831139",
+          "name": "호파코 투명 비누받침대",
+          "price": 18900,
+          "category": "수납장",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 34,
+          "sku": "8936039277460",
+          "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (연회색)",
+          "price": 50900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 35,
+          "sku": "8936039277576",
+          "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (황록색)",
+          "price": 22900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 36,
+          "sku": "8936039277583",
+          "name": "초이스엘 사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (황록색)",
+          "price": 49900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 37,
+          "sku": "8935275211542",
+          "name": "Inochi 사각형 플라스틱 뚜껑 티슈",
+          "price": 58900,
+          "category": "밀폐용기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 38,
+          "sku": "4710731091012",
+          "name": "Farcent 향기주머니 로즈향 10G",
+          "price": 21900,
+          "category": "방향제",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 39,
+          "sku": "8936236550342",
+          "name": "Bioplas 플라스틱 바구니 2종 세트 22cm - 26cm (랜덤배송)",
+          "price": 62900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 40,
+          "sku": "8936053926603",
+          "name": "동물 인형 60x35cm (랜덤 배송)",
+          "price": 250000,
+          "category": "인형",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 41,
+          "sku": "8935243506762",
+          "name": "Mr.Fresh GSG09 재스민 향기 복주머니 10Gx 3개입",
+          "price": 43900,
+          "category": "캔들",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 42,
+          "sku": "8936106085974",
+          "name": "초이스엘 돼지 인형 75cm",
+          "price": 230000,
+          "category": "인형",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 43,
+          "sku": "8935007728560",
+          "name": "Duy Tân Crystal 플라스틱 아이스 버킷 3.5L (색상 랜덤 발송)",
+          "price": 74900,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 44,
+          "sku": "8809696920256",
+          "name": "초이스엘 RE:EARTH 친환경백 사이즈 S 그린 31x13x42cm",
+          "price": 12900,
+          "category": "클리어화일",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 45,
+          "sku": "8936050473247",
+          "name": "Choice L 친환경 생활백 대형 40x45x22cm",
+          "price": 14300,
+          "category": "클리어화일",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 46,
+          "sku": "8936053922155",
+          "name": "작은 장난감 북 (랜덤배송)",
+          "price": 98000,
+          "category": "추석",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 47,
+          "sku": "6976693309086",
+          "name": "Weibo 필통 1개입 9827 (색상 란덤 배송)",
+          "price": 95000,
+          "category": "기타 페이셜케어",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 48,
+          "sku": "8936053921004",
+          "name": "문어 인형",
+          "price": 198000,
+          "category": "여아완구",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 49,
+          "sku": "8804513004485",
+          "name": "Sta Ami 내추럴채반_중",
+          "price": 186400,
+          "category": "기타 주방용품",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        },
+        {
+          "rank": 50,
+          "sku": "8935275211504",
+          "name": "Inochi 원형 플라스틱 뚜껑 티슈",
+          "price": 48900,
+          "category": "밀폐용기",
+          "tier": "",
+          "score": null,
+          "status": "extra",
+          "expected_rank": null,
+          "in_window": false
+        }
+      ],
+      "missing_skus": [],
+      "extra_skus": [
+        "8936192562168",
+        "8936230480904",
+        "8936039277422",
+        "8936039277408",
+        "8936039277552",
+        "8936039277538",
+        "4710731091029",
+        "8935243506755",
+        "8936039277477",
+        "8936039277453",
+        "8936039277446",
+        "8936053921448",
+        "8935275213065",
+        "8936190717591",
+        "8936039277569",
+        "4710731091050",
+        "8936039277484",
+        "8936039277415",
+        "8936039277521",
+        "8935243506779",
+        "8936039277514",
+        "8935243505598",
+        "8936039277507",
+        "4894680039889",
+        "4894680036857",
+        "8936053920045",
+        "8936053922056",
+        "8936039277439",
+        "8935275213072",
+        "8936039277545"
+      ],
+      "asis_items": [],
+      "asis_total_before_cap": 0,
+      "asis_cached": true,
+      "actual_latency_ms": 564,
+      "resolved_mode": "hybrid",
+      "lexical_confidence": 0,
+      "fallback_used": false,
+      "actual_total_hits": 100,
+      "recommendation_triggered": false,
+      "recommendation_items": [],
+      "autocomplete_actual_items": [],
+      "autocomplete_expected_items": [],
+      "autocomplete_has_expected": false,
+      "autocomplete_comparable_count": 0,
+      "autocomplete_actual_in_expected_count": 0,
+      "autocomplete_actual_in_expected_pct": null,
+      "autocomplete_expected_topk_hit_count": 0,
+      "autocomplete_expected_topk_size": 0,
+      "autocomplete_expected_topk_pct": null,
+      "autocomplete_overlap_count": 0,
+      "autocomplete_overlap_pct": null,
+      "autocomplete_products": [],
+      "autocomplete_error": null,
+      "autocomplete_latency_ms": 252,
+      "autocomplete_asis_items": [],
+      "autocomplete_asis_cached": false,
+      "asis_match_category": "ASIS_ZERO",
+      "ac_match_category": "NO_EXPECTED_AC",
+      "ac_pass_fail_manual_override": false,
+      "ac_pass_fail_reviewed": false,
+      "ac_pass_fail_status": "n/a",
+      "ac_prev_pass_fail_status": "n/a",
+      "ac_is_regression": false,
+      "ac_regression_kind": null,
+      "pass_fail_manual_override": false,
+      "pass_fail_reviewed": false,
+      "pass_fail_status": "failed",
+      "prev_pass_fail_status": "failed",
+      "prev_actual_top_items": [
+        {
+          "sku": "8936192562168",
+          "name": "인형 키 체인 2168 18x16cm (랜덤 배송)"
+        },
+        {
+          "sku": "8936230480904",
+          "name": "데이지 꽃다발 봉제인형 50cm"
+        },
+        {
+          "sku": "8936039277422",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (연회색)"
+        },
+        {
+          "sku": "8936039277408",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (연회색)"
+        },
+        {
+          "sku": "8936039277552",
+          "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (황록색)"
+        },
+        {
+          "sku": "8936039277538",
+          "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (황록색)"
+        },
+        {
+          "sku": "4710731091029",
+          "name": "Farcent 향기주머니 라벤더향 10G"
+        },
+        {
+          "sku": "8935243506755",
+          "name": "Mr.Fresh GSG09 장미 향기 복주머니 10Gx3개입"
+        },
+        {
+          "sku": "8936039277477",
+          "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (연회색)"
+        },
+        {
+          "sku": "8936039277453",
+          "name": "초이스엘 사각형 프라스틱 바구니 29.6 x 29.6 x 8.8cm (연회색)"
+        }
+      ],
+      "prev_run_at": "2026-09-29T16:11:08.962919",
+      "prev_compare_dir": "SmartSearch\\test_data\\compare\\run_PART1_KO_act0929_20260929_161057",
+      "bug_note": null,
+      "discussion_note": null,
+      "engine_note": null,
+      "is_regression": false,
+      "regression_kind": null,
+      "response_changed": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+node_modules/
+
+# Cookie đăng nhập dev console
+.auth/
+
+# Ảnh test: ảnh review của khách là dữ liệu khách hàng, không đẩy lên repo
+images/ugc/*
+images/marketplace/*
+images/aigen/*
+!images/*/.gitkeep
+
+# Kết quả chạy
+results/*/
+results/*.csv
+results/run-issues.txt
+
+# Playwright test runner
+test-results/
+playwright-report/
+
+# Ảnh trích từ Excel keyword + ảnh sản phẩm tải về cho dashboard
+images/excel_keywords/*
+!images/excel_keywords/manifest.json
+result_images/*
+!result_images/index.csv
+imageref-*.json
+
+# Dashboard: HTML sinh lại được từ results/ + verdict_state.json, ảnh chụp thử thì không cần
+dashboard/*.html
+dashboard/_*
+
+# Cache cây ngành hàng (dựng lại được từ data/ProductInfo)
+cache/
+
+# Gói bàn giao dev: chứa bản sao ảnh test (cùng lý do với images/), sinh lại bằng scripts/export_dev_testdata.py
+dev_handoff/

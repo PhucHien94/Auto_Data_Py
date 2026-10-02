@@ -1,3 +1,4 @@
 ~$*
 *.xlsx.lock
 data/ProductInfo/
+.ast-graph/

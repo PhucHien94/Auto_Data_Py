@@ -36,6 +36,19 @@ dev:
   lang: vi
   search_api: "https://dev-gateway.martonline.lotte.vn/api/v2/{lang}/{store}/products/search"
   autocomplete_api: "https://dev-gateway.martonline.lotte.vn/api/v2/{lang}/{store}/products/autocomplete"
+  # Recommendations - added 2026-09-07 to backfill low-result searches (product
+  # confirmed: actual search result <=20 sản phẩm thì gọi thêm API này). POST
+  # JSON body {"query","storeId","lang","size","excludeSkus","filters"} -
+  # excludeSkus is the SKU list of the search results already shown, so the
+  # recommendation call doesn't just repeat them. Response shape verified
+  # 2026-09-07 (no-auth curl): {"strategy": "...", "products":[...]} - same
+  # "products" key as the search endpoint, so search_result_path's "products"
+  # value is reused as recommendation_result_path too.
+  recommendations_api: "https://dev-gateway.martonline.lotte.vn/api/v2/{lang}/{store}/products/recommendations"
+  recommendation_method: POST
+  recommendation_result_path: products
+  recommendation_trigger_max_results: 20   # call recommendations only when actual search_results count <= this
+  recommendation_size: 20                  # "size" field in the recommendation request body
   search_method: POST
   autocomplete_method: GET
   search_param: query                  # JSON body field carrying the query text
@@ -74,6 +87,18 @@ dev:
 legacy:
   lang: vi
   search_api: "https://www.lottemart.vn/v1/p/mart/es/{lang}_{store}/products/search"
+  # Autocomplete của hệ thống CŨ (As-Is) - curl user cung cấp 2026-09-07, đã
+  # verify không cần auth (HTTP 200 với zero cookie/token, giống search legacy).
+  # Response phẳng hơn cả 2 API kia: {"data": ["Thịt Hến 300G", ...]} - chỉ là
+  # mảng STRING tên sản phẩm, không có type/hitCount như autocomplete mới, nên
+  # autocomplete_result_path trỏ vào "data" và mỗi item là string chứ không
+  # phải object.
+  autocomplete_api: "https://www.lottemart.vn/v1/p/mart/es/{lang}_{store}/search/suggestion"
+  autocomplete_method: GET
+  autocomplete_param: q
+  autocomplete_extra_params: {size: 10}
+  autocomplete_result_path: data
+  autocomplete_headers: {referer: "https://www.lottemart.vn/", accept: "application/json"}
   search_method: POST
   search_param: "where.query"
   search_extra_params:

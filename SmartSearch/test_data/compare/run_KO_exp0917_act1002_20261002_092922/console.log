@@ -1,0 +1,38 @@
+[as-is] ngôn ngữ ko -> gọi production bằng 'kr', cache riêng: AsIs_NSG_cache_ko.json
+
+=======================================================
+🎉 SO SÁNH HOÀN TẤT & ĐÃ TẠO HTML CÓ TOOLTIP!
+📂 Thư mục output: SmartSearch\test_data\compare\run_KO_exp0917_act1002_20261002_092922
+🕰️  As-Is: hiển thị cho 778/778 scenario (mọi mức % khớp, miễn có trong cache) - 0 query mới phải gọi hệ thống cũ thật (chỉ tự động gọi khi ≤50% khớp), 778 lấy từ cache có sẵn. Cache: SmartSearch\test_data\json\actual\AsIs_NSG_cache_ko.json
+✅ Passed: 292  ❌ Failed: 486
+🔴 486 keyword FAILED nhưng CHƯA ghi bug (đã ghi bug: 0) - lọc bằng tab 'Failed chưa ghi bug'
+🗑  2 keyword đã bị LOẠI khỏi bộ test (danh sách: SmartSearch\test_data\compare\removed_scenarios_nsg.json) - không còn xuất hiện trong báo cáo
+⚠️  3 keyword đổi trạng thái Pass/Fail so với lần compare trước:
+    - NSG-KO-00167: "봉투" (failed -> passed, cải thiện, HIGH_MATCH)
+    - NSG-KO-00212: "lays" (failed -> passed, cải thiện, HIGH_MATCH)
+    - NSG-KO-00759: "hand" (passed -> failed, regressed, NO_MATCH)
+🔄 193 keyword có Actual đổi so với lần compare trước (kể cả khi không đổi Pass/Fail):
+    - NSG-KO-00002: "치즈" (LOW_MATCH, failed)
+    - NSG-KO-00003: "커피" (LOW_MATCH, failed)
+    - NSG-KO-00005: "김치" (PARTIAL_MATCH, failed)
+    - NSG-KO-00006: "계란" (PARTIAL_MATCH, failed)
+    - NSG-KO-00009: "쌀" (PARTIAL_MATCH, failed)
+    - NSG-KO-00012: "과자" (NO_MATCH, failed)
+    - NSG-KO-00013: "세제" (LOW_MATCH, failed)
+    - NSG-KO-00014: "젤리" (LOW_MATCH, failed)
+    - NSG-KO-00017: "티슈" (LOW_MATCH, failed)
+    - NSG-KO-00020: "새우" (LOW_MATCH, failed)
+    - NSG-KO-00028: "바디워시" (LOW_MATCH, failed)
+    - NSG-KO-00029: "바나나" (PARTIAL_MATCH, failed)
+    - NSG-KO-00031: "소스" (LOW_MATCH, failed)
+    - NSG-KO-00037: "소고기" (PARTIAL_MATCH, failed)
+    - NSG-KO-00038: "레몬" (LOW_MATCH, failed)
+    - NSG-KO-00041: "초콜릿" (LOW_MATCH, failed)
+    - NSG-KO-00044: "올리브" (PARTIAL_MATCH, failed)
+    - NSG-KO-00048: "소시지" (LOW_MATCH, failed)
+    - NSG-KO-00050: "땅콩" (PARTIAL_MATCH, failed)
+    - NSG-KO-00051: "스파게티" (PARTIAL_MATCH, failed)
+    ... và 173 keyword khác, xem đầy đủ trong compare_report.html
+🗂️  Pass/Fail state (dùng cho lần compare tiếp theo): SmartSearch\test_data\compare\pass_fail_state_nsg.json
+=======================================================
+

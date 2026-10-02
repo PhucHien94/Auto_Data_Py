@@ -1,0 +1,2946 @@
+{
+  "generatedDate": "2026-09-29",
+  "store": "nsg",
+  "batchRange": "part1vi",
+  "lang": "vi",
+  "source": "Part1_SmartSearch_QueryList (1).xlsx",
+  "totalScenarios": 157,
+  "scenarios": [
+    {
+      "test_id": "NSG-P1-0001",
+      "query": "nho",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #1] hiện trái nho lên trước",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 1,
+          "raw_query": "nho",
+          "actual_expected": "hiện trái nho lên trước",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0002",
+      "query": "nước giac",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #2] k nên hiển thị nước mắm, nước tương, nước giải khát (chỉ nên hiển thị nước giặt)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 2,
+          "raw_query": "nước giac",
+          "actual_expected": "k nên hiển thị nước mắm, nước tương, nước giải khát (chỉ nên hiển thị nước giặt)",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9 :\n90\t8934804026831\tNước Tương Đậu Nành Maggi Chai 300ML\t411\n91\t8935015716702\tNước Mắm Hạnh Phúc 60 Độ Đạm 500ml\t75\n92\t8936221048076\tNước Mắm Nam Ngư 3 Trong 1 Chai 500ml\t245\n93\t0078895152869\tNước Tương Đậu Nành Lee Kum Kee Chai 500ml\t210\n94\t8935049501381\tNước Ngọt Coca Cola Giảm Đường Chai 1.5L (Giao Mẫu Ngẫu Nhiên)\t423\n95\t8935212831413\tCombo 2 Túi Nước Giặt Xả MaxKleen Hương Nước Hoa Cho Máy Giặt Cửa Trước 3kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0003",
+      "query": "ca hoi",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #3] ưu tiên cá hồi",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 3,
+          "raw_query": "ca hoi",
+          "actual_expected": "ưu tiên cá hồi",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9 : đang hiển thị sp tặng ở cuối\nONL-Mua 1 Cá Hồi Phi Lê Sài Gòn Food Tặng 1 Cá Trứng Tẩm Gia Vị 250g\nMã sản phẩm SGFOODCATRUNGTAMGIAVI250G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0004",
+      "query": "đồ ăn hàn",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #4] ưu tiên đồ xuất xứ hàn quốc",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 4,
+          "raw_query": "đồ ăn hàn",
+          "actual_expected": "ưu tiên đồ xuất xứ hàn quốc",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9: \n1\t8935337518039\tBộ Đồ Chơi Thức Ăn BBQ Thịt Nướng\n2\t8936099156422\tĐồ Chơi Giỏ Dụng Cụ Nhà Bếp LT6588-2H\n3\t8935337530741\tBộ Đồ Chơi Thức Ăn Sushi Sweet Heart SH23-43\n4\t4894680036628\tĐồ Chơi Sưu Tầm MAX Snacks 83186 (Giao Mẫu Ngẫu Nhiên)\n5\t4894680036857\tĐồ Chơi Sưu Tầm Mini Brands Snackles 77572 (Giao Mẫu Ngẫu Nhiên)\n6\t8935337547534\tĐồ Chơi Nồi Chiên Không Dầu Kèm Phụ Kiện Sweet Heart SH36441\n7\t4894680052130\tĐồ Chơi Sưu Tầm Mini Brands Retro Grocery 77802 (Giao Mẫu Ngẫu Nhiên)\n8\t8935337544830\tĐồ Chơi Mô Hình Roblox Grow A Garden Bí Ẩn PhatMojo MF6101 (Giao Mẫu Ngẫu Nhiên)\n9\t0400316010005\tSet Đồ Chiên Hương Vị Việt Yorihada 450G\n10\t8888235006620\tKẹo Đồ Chơi Minions Hình Camera 5G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0005",
+      "query": "sua",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #5] ưu tiên hiển thị các sản phẩm sữa",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 5,
+          "raw_query": "sua",
+          "actual_expected": "ưu tiên hiển thị các sản phẩm sữa",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 18/9:\n1\t8850329123575\tSữa Thanh Trùng Meiji Hương Dưa Lưới Hộp 946ml\t73\n2\t8934841902327\tSữa Đặc Completa 1.27KG\t58\n3\t8801033808210\tSữa Đậu Đen Vegemil Gói 190ml\t80\n4\t8010024003316\tSữa Yến Mạch Good Today 1L\t118\n5\t8010024003309\tSữa Hạnh Nhân Good Today 1L\t262\n6\t8934673002134\tSữa Bột Vinamilk Sure Diacerna 900G\t7\n7\t8886451008855\tSữa Bột Ensure Gold Hộp 380g\t12\n8\t7394376619533\tSữa Yến Mạch Oatly Barista Edition 1L\t28\n9\t8888470052000\tSữa Thanh Trùng Hương Dâu Meiji 200ml\t56\n10\t8888470012004\tSữa Tươi Thanh Trùng Meiji Chai 200ml\t28"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0006",
+      "query": "comfort",
+      "dimension": "part1_autocomplete+smartsearch",
+      "note": "[SmartSearch #6] | [AutoComplete #4] - nước xả vải\n- bột giặt",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 6,
+          "raw_query": "comfort",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9:\nThiếu một số sản phẩm của comfort : Băng Vệ Sinh Sofy Skin Comfort Siêu Mỏng Cánh 25cm Gói 8 Miếng, Nước Xả Vải Comfort Em Bé 1 Lần Xả Hương Phấn Thơm Túi 3.6L....."
+        },
+        {
+          "sheet": "AutoComplete",
+          "no": 4,
+          "raw_query": "comfort",
+          "actual_expected": "- nước xả vải\n- bột giặt",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": "đang hiển thị list sp"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0007",
+      "query": "redbull",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #7] hiển thị các sản phẩm nhãn hàng Red Bull",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 7,
+          "raw_query": "redbull",
+          "actual_expected": "hiển thị các sản phẩm nhãn hàng Red Bull",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0008",
+      "query": "mắm",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #8] ưu tiên các sản phẩm về mắm",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 8,
+          "raw_query": "mắm",
+          "actual_expected": "ưu tiên các sản phẩm về mắm",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : thiếu 1 số sp có chứa keyword mắm (Xốt Gia Vị Hoàn Chỉnh Barona - Gà Chiên Nước Mắm Gói 80G SKU: 8936028044295,\nCơm Chiên Gà Xốt Mắm Tỏi Yorihada 605G (ea) SKU: 0400297330000,..."
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0009",
+      "query": "hop qua tết kinh đô",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #9]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 9,
+          "raw_query": "hop qua tết kinh đô",
+          "actual_expected": null,
+          "fix_status_sep18": "IN_PROGRESS",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "IN_PROGRESS",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0010",
+      "query": "bnh kinh do",
+      "dimension": "part1_autocomplete+smartsearch",
+      "note": "[SmartSearch #10] | [AutoComplete #6] hiện tại : k tìm thấy gợi ý nào",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 10,
+          "raw_query": "bnh kinh do",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : đang hiển thị các sp k liên quan\n1\t9415007051398\tBơ lạt Vỉ Anchor Vỉ 7g x10 Hũ\t142\n2\t2215500000001\tNạm Bò Phúc Thịnh Vượng 300G\t99\n3\t8934680096270\tHộp 8 Bánh Trung Thu Kinh Đô Trăng Vàng Nguyệt Ánh Trường An 640G\t22\n4\t8809693270613\tKẹo Dream Vị Gừng 200G\t32\n5\t8809693270620\tKẹo Dream Vị Quế 200G\t23\n6\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\t36\n7\t8936077110170\tHoành Thánh Bamboo Thịt Súp 250G\t31\n8\t8938532826015\tBánh Mì Mè Đen O'smiles Gói 350g\t4\n9\t8934707032960\tHạt Nêm Knorr Thịt Thăn Xương Ống Và Tủy 1.2kg Kèm Đường Biên Hòa 500G\t74\n10\t8934680097789\tHộp 6 Bánh Trung Thu Kinh Đô Trăng Vàng An Phúc 480G"
+        },
+        {
+          "sheet": "AutoComplete",
+          "no": 6,
+          "raw_query": "bnh kinh do",
+          "actual_expected": "hiện tại : k tìm thấy gợi ý nào",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0011",
+      "query": "lays",
+      "dimension": "part1_autocomplete+smartsearch",
+      "note": "[SmartSearch #11] sản phẩm quá ít so với prod | [AutoComplete #7] hiện tại : k tìm thấy gợi ý nào",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 11,
+          "raw_query": "lays",
+          "actual_expected": "sản phẩm quá ít so với prod",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : Snack khoai tây lay's stax vị tôm hùm đang bị đẩy xuống recomendation\n 8936079126070"
+        },
+        {
+          "sheet": "AutoComplete",
+          "no": 7,
+          "raw_query": "lays",
+          "actual_expected": "hiện tại : k tìm thấy gợi ý nào",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0012",
+      "query": "lê hàn quốc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #12] cần ưu tiên lê lên đầu",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 12,
+          "raw_query": "lê hàn quốc",
+          "actual_expected": "cần ưu tiên lê lên đầu",
+          "fix_status_sep18": "IN_PROGRESS",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "IN_PROGRESS",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0013",
+      "query": "hộp đựng thực phẩm thủy tinh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #13] hiện tại ít sản phẩm so với prod",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 13,
+          "raw_query": "hộp đựng thực phẩm thủy tinh",
+          "actual_expected": "hiện tại ít sản phẩm so với prod",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9 :\nHộp nhựa No.2 đang hiển thị trước hộp thủy tinh\n1\t8936148094019\tBộ 3 Hộp Thủy Tinh Glasslock Đựng Thực Phẩm 400ml\t4\n2\t8936059009782\tHộp Nhựa Kokusai Đựng Thực Phẩm 1000ml\t27\n3\t8935275210330\tHộp Đựng Thực Phẩm Hokkaido 11.6cm x 11.4cm x 4.5cm\t9\n4\t8807246005828\tHộp Thủy Tinh Glasslock 1200ml\t27\n5\t8936148090301\tHộp Thủy Tinh Glasslock 210ml\t24\n6\t8807246005781\tHộp Thủy Tinh Tròn Glasslock 2000ml\t7\n7\t8807246010679\tHộp Thủy Tinh Tròn Glasslock 2000ml\t13"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0014",
+      "query": "dưa hâu",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #14] ưu tiên dưa hấu lên trên",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 14,
+          "raw_query": "dưa hâu",
+          "actual_expected": "ưu tiên dưa hấu lên trên",
+          "fix_status_sep18": "IN_PROGRESS",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "IN_PROGRESS",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0015",
+      "query": "nem rán",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #15] Prod 3sp nem rán, nem chua rán nhưng actual chỉ 1 sản phẩm nem chua rán . cần đề xuất thêm các sản phẩm nem nướng",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 15,
+          "raw_query": "nem rán",
+          "actual_expected": "Prod 3sp nem rán, nem chua rán nhưng actual chỉ 1 sản phẩm nem chua rán . cần đề xuất thêm các sản phẩm nem nướng",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0016",
+      "query": "bột giạt",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #16] cần ưu tiên các sản phẩm bột giặt (đang ở top 3,4,5) lên trước bột ngọt",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 16,
+          "raw_query": "bột giạt",
+          "actual_expected": "cần ưu tiên các sản phẩm bột giặt (đang ở top 3,4,5) lên trước bột ngọt",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9: thiếu nhiều sp bột giặt (Bột Giặt Power100 Hương Nước Hoa Pháp Quyến Rũ Cho Máy Giặt Cửa Trên Túi 5.3kg, Bột Giặt Lix Sạch Thơm 24 Giờ Ngát Hương Túi 5.5kg,...)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0017",
+      "query": "kệ để đồ đa năng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #17]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 17,
+          "raw_query": "kệ để đồ đa năng",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "cần thêm gợi ý các dụng cụ đa năng tương tự prod"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0018",
+      "query": "tăng cân healthy",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #18] đang ít hơn prod 1 sản phẩm sữa tăng cân, cần check lại data",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 18,
+          "raw_query": "tăng cân healthy",
+          "actual_expected": "đang ít hơn prod 1 sản phẩm sữa tăng cân, cần check lại data",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0019",
+      "query": "bành mì",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #19] top 5,8,9 đang lọt các sản phẩm bánh hỏi, khoai môn sấy lên trước bánh mì cần check lại rule",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 19,
+          "raw_query": "bành mì",
+          "actual_expected": "top 5,8,9 đang lọt các sản phẩm bánh hỏi, khoai môn sấy lên trước bánh mì cần check lại rule",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 4/9 : 8938511518627 bánh mì que pate và 0400316700005 bánh mì bò bulgogi đang bị đẩy khỏi top 15.xếp sau mì, cần check lại\nComment 15/9 : No4,6,7 là mì đang xếp trước bánh mì, cần check lại\n1\t8938532826015\tBánh Mì Mè Đen O'smiles Gói 350g\n2\t8936077113690\tBánh Mì Bơ Tỏi Phô Mai Bon 180G\n3\t0400288820008\tBánh Mì Ngũ Cốc Mè POONGMISO 260G\n4\t8936077114307\tMì Hoành Thánh Hải Sản Bamboo 250G\n5\t0400318260002\tSet 6 Bánh Mì Jambon POONGMISO 25G\n6\t8934746056811\tMì Quảng Khô Choice L Gói 300G\n7\t8938532826008\tBánh Mì Tươi Đông Lạnh O'Smiles 350G\n8\t8801043015981\tMì Nongshim Shin Ramyun 114G\n9\t0400231200000\tBánh Mì Lúa Mạch Đen POONGMISO 150G\n10\t8936010680449\tMì Cung Đình Thịt Hầm Nấm 79G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0020",
+      "query": "gochujang",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #20] actual thiếu mất 2 sản phẩm gochujang SKU  8938505912547 (\t\nXốt Gochujang Galbi Tomato T&P Chai 220G), 8801005931458 (Sốt BBQ Gà Xào Gochujang Sempio Gói 90G). Check lại data. Tương tự cho soba",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 20,
+          "raw_query": "gochujang",
+          "actual_expected": "actual thiếu mất 2 sản phẩm gochujang SKU  8938505912547 (\t\nXốt Gochujang Galbi Tomato T&P Chai 220G), 8801005931458 (Sốt BBQ Gà Xào Gochujang Sempio Gói 90G). Check lại data. Tương tự cho soba",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0021",
+      "query": "nước hoa nam",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #21] top 1 đang hiển thị nước dùng lẩu nấm",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 21,
+          "raw_query": "nước hoa nam",
+          "actual_expected": "top 1 đang hiển thị nước dùng lẩu nấm",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : Thiếu sp Nước Hoa Dành Cho Nam Romano Classic Chai 100ml\nSKU: 8992856897502 (phải hiển thị top 1 mới đúng)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0022",
+      "query": "hạt dưa",
+      "dimension": "part1_multilanguage+smartsearch",
+      "note": "[SmartSearch #22] top 2,3,4 đang là dưa hấu k hạt (đang xếp trên bánh trung thu đậu xanh hạt dưa), cần check lại rule | [Multilanguage #1] Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 22,
+          "raw_query": "hạt dưa",
+          "actual_expected": "top 2,3,4 đang là dưa hấu k hạt (đang xếp trên bánh trung thu đậu xanh hạt dưa), cần check lại rule",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 4/9 : top 7,8 (8934680090063,8934680095242)  hạt dưa đang nằm sau dưa k hạt\nComment 15/9 :\nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size L 3.2kg\t100\n6\t0400317870004\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg\t100\n7\t0400317860005\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size S 2kg\t100\n8\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0\nComment 16/9:\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0"
+        },
+        {
+          "sheet": "Multilanguage",
+          "no": 1,
+          "raw_query": "hạt dưa/수박씨",
+          "actual_expected": "Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size L 3.2kg\t100\n6\t0400317870004\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg\t100\n7\t0400317860005\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size S 2kg\t100\n8\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0\nKO :\n1\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0023",
+      "query": "rice",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #23] actual chưa thấy sản phẩm cơm chiên  8936013231211",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 23,
+          "raw_query": "rice",
+          "actual_expected": "actual chưa thấy sản phẩm cơm chiên  8936013231211",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0024",
+      "query": "mi",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #24] cần ưu tiên mì gói (hiện tại đang ưu tiên áo , có một số áo k chưa mi cũng đang hiển thị trên đầu)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 24,
+          "raw_query": "mi",
+          "actual_expected": "cần ưu tiên mì gói (hiện tại đang ưu tiên áo , có một số áo k chưa mi cũng đang hiển thị trên đầu)",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0025",
+      "query": "gel vuốt tóc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #25] đang thiếu các sản phẩm sáp vuốt tóc. tương tự cho xịt tạo kiểu tóc. Các sản phẩm này nên hiển thị luôn ở search result (hiện tại đang hiển thị ở recommendation)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 25,
+          "raw_query": "gel vuốt tóc",
+          "actual_expected": "đang thiếu các sản phẩm sáp vuốt tóc. tương tự cho xịt tạo kiểu tóc. Các sản phẩm này nên hiển thị luôn ở search result (hiện tại đang hiển thị ở recommendation)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0026",
+      "query": "củ hành tím",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #26] đang k hiển thị các sản phẩm hành tím phan rang, hành tím lý sơn",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 26,
+          "raw_query": "củ hành tím",
+          "actual_expected": "đang k hiển thị các sản phẩm hành tím phan rang, hành tím lý sơn",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0027",
+      "query": "rau tần ô",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #27] tần ô thủy canh đang ở top 15, cần điều chỉnh",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 27,
+          "raw_query": "rau tần ô",
+          "actual_expected": "tần ô thủy canh đang ở top 15, cần điều chỉnh",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0028",
+      "query": "củ kiệu",
+      "dimension": "part1_multilanguage+smartsearch",
+      "note": "[SmartSearch #28] thiếu các sản phẩm kiệu ngâm chua | [SmartSearch #None] thiếu các sản phẩm kiệu ngâm\n1\t8935063601401\tCủ Kiệu Chua Ngọt Ngọc Liên Hũ 390G | [Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Ke",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 28,
+          "raw_query": "củ kiệu",
+          "actual_expected": "thiếu các sản phẩm kiệu ngâm chua",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9:\n1\t8935063601401\tCủ Kiệu Chua Ngọt Ngọc Liên Hũ 390G\t17"
+        },
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "củ kiệu",
+          "actual_expected": "thiếu các sản phẩm kiệu ngâm\n1\t8935063601401\tCủ Kiệu Chua Ngọt Ngọc Liên Hũ 390G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        },
+        {
+          "sheet": "Multilanguage",
+          "no": 2,
+          "raw_query": "củ kiệu / 돼지파/ маринованный лук кьеу / 腌藠头",
+          "actual_expected": "KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướp Đồ Nướng LEE KUM KEE 45G\t202\n10\t8938504001785\tTàu Hũ Ky Tojy 80G\t79\n11\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\nZH: k show được sp củ kiệu\n1\t8935118500482\tCá tẩm cốm dẹp Việt Sin 500g\t64\n2\t8935297104167\tXốt Chiên Nước Mắm Cầu Tre Gói 80G\t73\n3\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\t72\n4\t8936035340656\tMắm Tôm Chua Sông Hương Hũ 430G\t28\n5\t8936191317820\tBộ Gia Vị X2 Hoàn Chỉnh Thịt Nướng Và Chiên Tứ Xuyên Má Bảy Gói 80G\t15",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0029",
+      "query": "trái thanh long",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #29] thiếu các sản phẩm thanh long vàng, thanh long trắng, thanh long ruột đỏ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 29,
+          "raw_query": "trái thanh long",
+          "actual_expected": "thiếu các sản phẩm thanh long vàng, thanh long trắng, thanh long ruột đỏ",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "Comment 15/9 : k thấy result SKU 2311630000000 Thanh Long Ruột Đỏ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0030",
+      "query": "thực phẩm tươi sống",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #30] các sản phẩm tặng (1đ) đang hiển thị ở top 1,2 (CLCACAPELIN300G , ONLTHUMSUP320). (expect ẩn)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 30,
+          "raw_query": "thực phẩm tươi sống",
+          "actual_expected": "các sản phẩm tặng (1đ) đang hiển thị ở top 1,2 (CLCACAPELIN300G , ONLTHUMSUP320). (expect ẩn)",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0031",
+      "query": "chống lão hóa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #31] cần bổ sung thêm các san phẩm ngăn lão hóa, cải thiện lão hóa",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 31,
+          "raw_query": "chống lão hóa",
+          "actual_expected": "cần bổ sung thêm các san phẩm ngăn lão hóa, cải thiện lão hóa",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 7/9 : Cần check lại list sản phẩm ở dev vì PROD có nhiều hơn 20 sản phẩm chống lão hóa\nComment 15/9: Các sản phẩm ngăn ngừa lão hóa đang hiển thị ở recommendation thay vì search result -> Check lại"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0032",
+      "query": "cocacola",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #32] cần ưu tiên các sản phẩm thương hiệu Coca cola",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 32,
+          "raw_query": "cocacola",
+          "actual_expected": "cần ưu tiên các sản phẩm thương hiệu Coca cola",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "comment 15/9 : \n1\t8935049590019\tLốc 6 Lon Nước Ngọt Coca Cola 320ml\t347\n2\t8935042909566\tSocola Sữa Beatitude 450G\t98\n3\t4902102019187\tNước Ngọt Coca Cola Nhật Lon 160ml\t122\n4\t8935042901997\tSocola Vifranco Tổng Hợp Túi 300g\t76\n5\t18935049502286\tNước Ngọt Coca Cola Light Lốc 24 Lon 320ml\t34\n6\t8934804040783\tBột Socola Milo 3 Trong 1 Túi 330G (15 Gói x 22G)\t142\n7\t48935049502263\tLốc 6 Chai Nước Ngọt Coca Cola Giảm Đường 600ml/Chai\t62\n8\t8935049500148\tNước Ngọt Coca Cola Zero Chai 390ml (Giao Mẫu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0033",
+      "query": "わさび",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #33] cần hiển thị các sản phẩm wasabi, すし cần hiển thị sushi",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 33,
+          "raw_query": "わさび",
+          "actual_expected": "cần hiển thị các sản phẩm wasabi, すし cần hiển thị sushi ",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0034",
+      "query": "라면",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #34] cần ưu tiên sản phẩm mì ramen lên trước",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 34,
+          "raw_query": "라면",
+          "actual_expected": "cần ưu tiên sản phẩm mì ramen lên trước",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 4/9 : 8936049052897 Mì Xốt Tương Đen Jin Jjajang Ramen, 8936049051715 Mì Xốt Tương Đen Jin Jjajang Ramen Ottogi tên sản phẩm chưa mì ramen cần đẩy lên top 1,2\nComment  15/9 : Gạo đang hiển thị ở top\n1\t8938530115081\tGạo Còn Cám Home Rice 2kg\t18\n2\t8936049051616\tMì Yeul Ramen Ottogi Ly 62G\t195\n3\t8801043046138\tMì Xào Khô Nongshim Shin Ramyun Vị Kim Chi 137G\t349\n4\t8801043070973\tMì Nongshim Shin Ramyun Vị Tomyum Tô 117G\t70\n5\t8801073143463\tMì Khô Gà Samyang Phô Mai Quattor Lốc 5 Gói 145g\t52\n6\t8934563165017\tMì Ăn Liền Đệ Nhất Vị Thịt Bằm 5 Gói x 82G\t258\n7\t8936049051708\tMì Jin Không Cay Ottogi Tô 110G\t29\n8\t8934563669133\tMì Handy Hảo Hảo Lẩu Nấm Chay Ly 66g\t529\n9\t8936071070388\tMì Ramen Thịt Hầm Tonkotsu Nissin Gói 97G\t277\n10\t8936028644501\tMì Koreno Premium Cay 7 Cấp Độ Vị Chua Cay 104G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0035",
+      "query": "túi rát",
+      "dimension": "part1_autocomplete+smartsearch",
+      "note": "[SmartSearch #35] cần hiển thị các sản phẩm túi rác | [AutoComplete #5] hiện tại : k tìm thấy gợi ý nào",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 35,
+          "raw_query": "túi rát",
+          "actual_expected": "cần hiển thị các sản phẩm túi rác",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        },
+        {
+          "sheet": "AutoComplete",
+          "no": 5,
+          "raw_query": "túi rát",
+          "actual_expected": "hiện tại : k tìm thấy gợi ý nào",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0036",
+      "query": "kit cat",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #36] cần ưu tiên kitkat",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 36,
+          "raw_query": "kit cat",
+          "actual_expected": "cần ưu tiên kitkat",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "Sữa bằng từ đồng nghĩa\nComment 15/9 : Cần hiển thị nhiều sp thuộc về KitKat hơn nữa \n1\t9556001032898\tSocola Kitkat 6 Thanh x 17G\t457"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0037",
+      "query": "netsle",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #37] cần ưu tiên các sản phẩm nestle lên trước",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 37,
+          "raw_query": "netsle",
+          "actual_expected": "cần ưu tiên các sản phẩm nestle lên trước",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 7/9 : Cần check lại list sản phẩm \n1\t\nNgũ Cốc Fitnesse Diêm Mạch Hạnh Nhân Socola Gói 300G\nSKU: 7613039028773 | 124,100 đ\t+ Extra\n2\t\nBánh Ăn Sáng Nestle Cornflakes 275G\nSKU: 4800361005500 | 61,200 đ\t+ Extra\n3\t\nSữa Lúa Mạch Nestle Milo A2 Ít Đường Lốc 4 Hộp 110ml\nSKU: 8934804054018 | 23,900 đ\t+ Extra\n4\t\nViên Uống Bảo Vệ Sức Khỏe Kolmar Condition Omega 369 Hộp 60 Viên\nSKU: 8806119826515 | 350,000 đ\t+ Extra\n5\t\nSữa Lúa Mạch Nestle Millo Ít Đường Hộp 110ml\nSKU: 8934804044453 | 20,500 đ\t+ Extra\n6\t\nBánh Ăn Sáng Nestle KoKo Krunch 150G\nSKU: 4800361002851 | 64,000 đ\t+ Extra\n7\t\nBánh Ăn Sáng Ngũ Cốc Ăn Sáng Nestlé Honey Stars 20G\nSKU: 4800361028011 | 10,900 đ\t+ Extra\n8\t\nThùng 48 Hộp Sữa Lúa Mạch Nestlé Milo A2 Ít Đường 180ml\nSKU: 18934804054060 | 420,000 đ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0038",
+      "query": "rổ nhựa đựng đồ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #38] ưu tiên hiển thị rổ nhựa trước rổ inox",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 38,
+          "raw_query": "rổ nhựa đựng đồ",
+          "actual_expected": "ưu tiên hiển thị rổ nhựa trước rổ inox",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : một số sp rổ nhựa đang bị đẩy qua section recommendation"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0039",
+      "query": "đồ ăn nhật",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #39] cần ưu tiên các sản phẩm là thức ăn và xuất xứ từ nhật (hiện tại hiển thị đồ chơi)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 39,
+          "raw_query": "đồ ăn nhật",
+          "actual_expected": "cần ưu tiên các sản phẩm là thức ăn và xuất xứ từ nhật (hiện tại hiển thị đồ chơi)",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "hiển thị 'thực phẩm', 'thức ăn' có tên 'nhật','nhật bản', 'xuất xứ nhật'\ncomment 16/9 : sai search result\n1\t8936099156422\tĐồ Chơi Giỏ Dụng Cụ Nhà Bếp LT6588-2H\t34\n2\t8936035100021\tDầu Ăn Cooking Tường An Nhãn Đỏ Chai 400ml\t425\n3\t8936035100014\tDầu Ăn Cooking Tường An Nhãn Đỏ Chai 250ml\t67\n4\t8936053921974\tĐồ Chơi Bộ Cánh Bướm (Giao mẫu ngẫu nhiên)\t94\n5\t8935337523941\tĐồ Chơi Chú Voi Âm Nhạc Vui Nhộn Winfun 23020\t7\n6\t8935337547534\tĐồ Chơi Nồi Chiên Không Dầu Kèm Phụ Kiện Sweet Heart SH36441\t4\n7\t8936075214474\tĐồ Chơi Giỏ Đồ Nghề Bác Sĩ HT7726\t95\n8\t8936035102919\tNước Mắm Tường An Ngư Phát Nhãn Đỏ Chai 750ml\t25\n9\t8935337508955\tĐồ Chơi Máy Gắp Thú Có Đèn Và Nhạc Champion Games CPG762\t5\n10\t8936178582197\tĐồ Chơi Bộ Dụng Cụ Bác Sĩ DK81147 Màu Hồng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0040",
+      "query": "lchoice",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #40]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 40,
+          "raw_query": "lchoice",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0041",
+      "query": "đường cát",
+      "dimension": "part1_autocomplete+smartsearch",
+      "note": "[SmartSearch #41] | [AutoComplete #9] Cần bổ sung các keyword gợi ý : đường phèn, đường mía",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 41,
+          "raw_query": "đường cát",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 17/9 : Đường tinh luyện (8935015510706 ) nhưng lại bị đẩy xuống section recommendation"
+        },
+        {
+          "sheet": "AutoComplete",
+          "no": 9,
+          "raw_query": "đường cát",
+          "actual_expected": "Cần bổ sung các keyword gợi ý : đường phèn, đường mía\n",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0042",
+      "query": "johnson",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #42]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 42,
+          "raw_query": "johnson",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0043",
+      "query": "nuowc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #43]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 43,
+          "raw_query": "nuowc",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Thiếu các loại nước soda, nước giặt, nước giải khát \nHIện tại ra 5 sp\n1\t8935007726573\tBình Nước Nhựa Duy Tân Sito 1.6L (Giao Màu Ngẫu Nhiên)\t210\n2\t8801043450690\tNước Ngọt Welch's Vị Nho\t115\n3\t8938519953048\tNước Mắm Tĩn Nhãn Đỏ 40 Độ Đạm Chai 500ml\t22\n4\t8934673701358\tNước Ép Táo Vinamilk Hộp 1L\t101\n5\t8934588233036\tLốc 6 Chai Nước Tăng Lực Sting Dâu 500ml\t61"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0044",
+      "query": "giỏ quà tết",
+      "dimension": "part1_multilanguage+smartsearch",
+      "note": "[SmartSearch #44] các sản phẩm \"quà\",\"đóng gói\",\"lễ\",\"tết\" | [Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu X",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 44,
+          "raw_query": "giỏ quà tết",
+          "actual_expected": "các sản phẩm \"quà\",\"đóng gói\",\"lễ\",\"tết\"",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Do các sản phẩm giỏ quà tết hêt hàng. Để em cập nhật cho tất cả sản phàm thành còn hàng\nComment 15/9: \n1\t8934637516561\tHộp Quà Tết Cholimex Xuân Như Ý\t0\n2\t0412037980000\tHộp Quà Tết Trọn Vị Sum Vầy\t0\n3\t8936221048786\tHộp Quà Chin-Su Tết Tâm Điểm\t0\n4\t8938559530285\tHộp Quà Tết Vạn Phúc Việt Nhĩ 1.4kg\t0\n5\t0412203400004\tHộp Quà Tết Mì Nongshim Shin Ramyun 2026 910G\t0\n6\t8936028043946\tHộp Quà Tết Nước Mắm Vị Xưa 40 Độ Đạm 2 Chai 500ml\t0\nComment 17/9 : actual bị đổi. k còn hiển thị hộp quà tết\n1\t8936190717591\tGiỏ Giặt BioHome Họa Tiết Hoa 46x45cm (Giao Màu Ngẫu Nhiên)\t67\n2\t8936013680163\tTrứng Gà Ta V.food Giỏ 10 Quả (EA)\t102\n3\t8936013680286\tTrứng Gà Ác V.food Giỏ 10 Quả (EA)\t30\n4\t8936236550946\tGiỏ Nhựa Caro Có Quai Xách Bioplas 43x32x30cm (Giao Màu Ngẫu Nhiên)\t0"
+        },
+        {
+          "sheet": "Multilanguage",
+          "no": null,
+          "raw_query": "giỏ quà tết / 선물 바구니 / 礼篮/ 正月ギフトバスケット",
+          "actual_expected": "KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0045",
+      "query": "power 100",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #45]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 45,
+          "raw_query": "power 100",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0046",
+      "query": "móc quần áo",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #46]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 46,
+          "raw_query": "móc quần áo",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 17/9 : Bộ 5 Móc Meghanger Inox x3 43x19x1.6cm đang bị đẩy qua section recommendation"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0047",
+      "query": "bếp từ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #47] cần ưu tiên các loại bếp : bếp nướng than, bếp hồng ngoại",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 47,
+          "raw_query": "bếp từ",
+          "actual_expected": "cần ưu tiên các loại bếp : bếp nướng than, bếp hồng ngoại",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0048",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #48] các \"thức ăn\",\"thực phẩm\" chưa ít đường, dầu, calo",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 48,
+          "raw_query": "đồ ăn cho người giảm cân",
+          "actual_expected": "các \"thức ăn\",\"thực phẩm\" chưa ít đường, dầu, calo",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 17/9 : Đang hiể thị đồ chơi\nĐồ Chơi Bowling MN562031 (0411318220002)\nĐồ Chơi Búp Bê XBE110 (0411317880009)\nĐồ Chơi Rubik 4x4x4 Cresta DK81084 (8936178581633)\nĐồ Chơi Rubik 2x2x2 Cresta DK81082 (8936178581619)\nĐồ Chơi Rubik 3x3x3 Cresta DK81081 (8936178581602)\nĐồ Chơi Xếp Hình Giáng Sinh Linkgo (EA) (8936053921530)\nĐồ Chơi Mô Hình Bò Sữa LT3333-33 (8936099151090)\nĐồ Chơi Bộ Câu Cá Và Đập Chuột Firstar DK81204 (8936178582760)\nĐồ Chơi Long Thủy Xe Cứu Hỏa LT231568T/LT231668T (8936140307094)\nĐồ Chơi Long Thủy Xe Công Trình Khủng Long (8936140307636)\nĐồ Chơi Rubik Khối Trụ Cạnh Tròn Cresta DK81297 (8936178583699)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0049",
+      "query": "chế độ ăn eat clean",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #49] Cần hiển thị đồ ăn phù hợp cho người giảm cân, ít calo",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 49,
+          "raw_query": "chế độ ăn eat clean",
+          "actual_expected": "Cần hiển thị đồ ăn phù hợp cho người giảm cân, ít calo",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Nó vẫn bị 1 cá gà rán :v\nComment 7/9 : có thể k hiển thị viên rửa chén, kem đánh răng k (nó k phải là đồ ăn)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0050",
+      "query": "đồ ăn organic",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #50] cần hiển thị 'thực phẩm,'thức ăn' chứ k phải đồ chơi | [SmartSearch #142] hiển thị các thực phẩm ăn được, sạch, tốt cho sức khỏe",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 50,
+          "raw_query": "đồ ăn organic",
+          "actual_expected": "cần hiển thị 'thực phẩm,'thức ăn' chứ k phải đồ chơi",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        },
+        {
+          "sheet": "SmartSearch",
+          "no": 142,
+          "raw_query": "đồ ăn organic",
+          "actual_expected": "hiển thị các thực phẩm ăn được, sạch, tốt cho sức khỏe",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "Comment 17/09 : đang hiển thị đồ chơi\nBộ Đồ Chơi Thức Ăn BBQ Thịt Nướng (8935337518039)\nĐồ Chơi Bowling MN562031 (0411318220002)\nĐồ Chơi Nhựa Sunkids (0411317650008)\nBộ Đồ Chơi Thức Ăn Sushi Sweet Heart SH23-43 (8935337530741)\nĐồ Chơi Búp Bê XBE110 (0411317880009)\nĐồ Chơi Rubik 4x4x4 Cresta DK81084 (8936178581633)\nĐồ Chơi Rubik 2x2x2 Cresta DK81082 (8936178581619)\nĐồ Chơi Búp Bê 686-709 (0411317810006)\nĐồ Chơi Máy Bay Winka DK81038 (8936178581091)\nĐồ Chơi Rubik 3x3x3 Cresta DK81081 (8936178581602)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0051",
+      "query": "protein tăng cơ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #51]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 51,
+          "raw_query": "protein tăng cơ",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "cần discuss thêm "
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0052",
+      "query": "cá kèo",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #52]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 52,
+          "raw_query": "cá kèo",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0053",
+      "query": "pepci",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #53]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 53,
+          "raw_query": "pepci",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0054",
+      "query": "thớt gỗ nhà bếp",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #54]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 54,
+          "raw_query": "thớt gỗ nhà bếp",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0055",
+      "query": "thuốc diệt côn trùng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #55]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 55,
+          "raw_query": "thuốc diệt côn trùng",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 :một số sp xịt côn trùng đang bị đẩy qua section recommendation\nthiếu nhiều sản phẩm \nXịt Côn Trùng Ars Pro.X Mạnh 500ml\nSKU: 8936013257389 \nBình Xịt Côn Trùng Jumbo Vape Hương Hoa & Trà 600ml\nSKU: 8934732202215"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0056",
+      "query": "yên mạch giảm cân",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #56]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 56,
+          "raw_query": "yên mạch giảm cân",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : \n- một số sản phẩm yến mạch đang hiển thị sau khoai môn sấy, trà sữa hòa tan, sữa tắm (sữa tắm k được hiển thị trong thực phẩm giảm cân)\n- no2 đang hiển thị Sữa Chua Sấy\n7\t8936188490734\tYến Mạch Nguyên Chất Choice L 500G\t191\n8\t8936003728943\tKhoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g\t78\n9\t8935011805844\tYến Mạch Trái Cây Socola Oatta Gói 250G\t15\n10\t8934743120188\tSữa Chua Sấy YOV Socola Hộp 120G\t41\n11\t8936235670706\tTrà Sữa Hòa Tan Moncha Matcha Latte Vị Dâu 180G\t12\n12\t8936092124015\tTrà Sữa Trân Châu Dawning Hộp 260G\t16\n13\t8938660132040\tĐường Ăn Kiêng Monk Fruit CT Hộp 20 Gói 5G\t45\n14\t8934673303576\tSữa Chua Uống Vinamilk Probi Ít Đường 400ml\t36\n15\t8936081298109\tCháo Yến Mạch Xuân An Thịt Bằm Gói 40g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0057",
+      "query": "thùng rác thông minh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #57]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 57,
+          "raw_query": "thùng rác thông minh",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : Các loại thùng rác khác đang hiển thị ở recommendation (search result chỉ ra 1 sp)\n1\t8935275208061\tThùng Rác Tròn Nắp Lật Inochi Hiro 12L (Giao Màu Ngẫu Nhiên)\n2\t8935007722186\tThùng Rác Oval Lớn Duy Tân 44 X 39.5 X 35Cm (Giao Màu Ngẫu Nhiên)\n3\t8935241702227\tThùng Rác Spriing 5L (Giao Màu Ngẫu Nhiên)  -> chỉ duy nhất sản phẩm này hiển thị ở search result\n4\t8935007721875\tThùng Rác Oval Trung Duy Tân 36 x 30 x 26cm (Giao Màu Ngẫu Nhiên)\n5\t8935275208078\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 6L (Giao Màu Ngẫu Nhiên)\n6\t8935275208214\tThùng Rác Nắp Lật Inochi Hiro 10L (Giao Màu Ngẫu Nhiên)\n7\t8935275208030\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Có Kèm Ruột 5L (Giao Màu Ngẫu Nhiên)\n8\t8935007721868\tThùng Rác Oval Nhỏ Duy Tân 31 X 25.5 X 22Cm (Giao Màu Ngẫu Nhiên)\n9\t8935275208054\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 15L (Giao Màu Ngẫu Nhiên)\n10\t8935275208115\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 15L (Giao Màu Ngẫu Nhiên)\n11\t8936186271311\tThùng Rác Treo Tường Megahome 9L (Giao Màu Ngẫu Nhiên)\n12\t8935275208092\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 5L (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0058",
+      "query": "mỹ phẩm thiên nhiên",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #58]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 58,
+          "raw_query": "mỹ phẩm thiên nhiên",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0059",
+      "query": "ốc bươu",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #59]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 59,
+          "raw_query": "ốc bươu",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Cần ưu tiên ốc lên (ốc móng tay đang top 6)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0060",
+      "query": "gói hút ẩm chống mốc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #60]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 60,
+          "raw_query": "gói hút ẩm chống mốc",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 :\ncác sản phẩm xịt ngăn mùi, khăn giấy, nước súc miệng, sữa tắm, ky rác đang hiển thị trong bộ search result"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0061",
+      "query": "nc mắm",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #61]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 61,
+          "raw_query": "nc mắm",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Xử lý bẳng từ đồng nghĩa "
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0062",
+      "query": "tổ iến",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #62]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 62,
+          "raw_query": "tổ iến",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : Các sản phẩm không liên quan (thú nhồi bông, lồng đnè, tàu hủ chay,....) đang hiển thị và hiển thị trên cả các sản phẩm chứa yến\n20\t8936230481178\tThú Nhồi Bông Chim Cánh Cụt Đeo Túi Màu Hồng 55cm\t22\n21\t8936053920045\tThú Nhồi Bông Chim Cánh Cụt To\t100\n22\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\t96\n23\t8934743126364\tSữa Chua Sấy YO'V Vị Sầu Riêng Hũ\t15\n24\t8936185663001\tTàu Hũ Ky Rau Củ Chay Thoại An 300G\t8\n25\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm\t19\n26\t8936092129294\tHộp Quà Mật Ong Bánh Tổ Honimore 550G\t35\n27\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\t15\n28\t8936230480782\tThú Nhồi Bông Ngựa Pony Hồng 60cm\t7\n29\t8938503416276\tCháo Yến Yến Việt Vị Gà Gói 50g\t415\n30\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\t100\n31\t8935077324532\tPhi Yến Đơn Dalat Hasfarm (Giao Màu Ngẫu Nhiên)\t994\n32\t8809693270613\tKẹo Dream Vị Gừng 200G\t32\n33\t8809693270620\tKẹo Dream Vị Quế 200G\t23\n34\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\t36\n35\t8936013234212\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, cá hồi SGFood 240G\t40\n36\t8936013234229\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, hạt sen lá dứa SGFood 240G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0063",
+      "query": "đồ chơi trẻ em thông minh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #63] hiển thị đồ chơi chứa chữ thông minh lên trước (8936140305472,8936140306400, 8936075214603) sau đó mới tới rubik và các đồ chơi khác",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 63,
+          "raw_query": "đồ chơi trẻ em thông minh",
+          "actual_expected": "hiển thị đồ chơi chứa chữ thông minh lên trước (8936140305472,8936140306400, 8936075214603) sau đó mới tới rubik và các đồ chơi khác",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : Các đồ chơi thử thách trí tuệ, phát triển giác quan đang hiển thị ở recommendation"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0064",
+      "query": "trái sầu riêng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #64] ưu tiên trái/quả có tên sầu riêng và các sản phẩm làm từ sầu riêng (hiện tại đang hiển thị trái cây sấy lên trước)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 64,
+          "raw_query": "trái sầu riêng",
+          "actual_expected": "ưu tiên trái/quả có tên sầu riêng và các sản phẩm làm từ sầu riêng (hiện tại đang hiển thị trái cây sấy lên trước) ",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0065",
+      "query": "thức ăn dặm cho bé 6 tháng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #65] cần hiển thị thức ăn dặm, bột ăn dặm , bánh ăn dặm,  cho em bé (chứ k phải động vật)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 65,
+          "raw_query": "thức ăn dặm cho bé 6 tháng",
+          "actual_expected": "cần hiển thị thức ăn dặm, bột ăn dặm , bánh ăn dặm,  cho em bé (chứ k phải động vật)",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 19/06 : đang hiển thị thức ăn cho chó , mèo\n1\t9310022866500\tThức Ăn Cho Mèo Lớn Whiskas Vị Cá Ngừ 480g\t18\n2\t8853301400107\tThức Ăn Cho Mèo Lớn Whiskas Vị Cá Biển 3kg\t11\n3\t8850477811027\tThức Ăn Cho Chó Con SmartHeart Vị Thịt Bò & Sữa 1.3kg\t24\n4\t8850477812024\tThức Ăn Cho Chó Con SmartHeart Vị Thịt Bò Nướng 1.3kg\t16\n5\t8850477251502\tThức Ăn Cho Chó Con Classic Pets Hương Vị Sữa 500g\t14\n6\t8938509770365\tThức Ăn Hạt Cho Chó Con Ganador Vị Sữa Trứng Túi 400G\t32\n7\t8850477001237\tThức Ăn Cho Chó Trưởng Thành SmartHeart Vị Thịt Cừu & Gạo 1.5kg\t17\n8\t8850477810051\tThức Ăn Cho Chó Trưởng Thành SmartHeart Vị Thịt Bò Nướng 1.5kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0066",
+      "query": "bình nước giữ nhiệt thể thao",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #66] cần ưu tên các loại bình giữ nhiệt, bình nước (bình xịt, bình nhựa k ưu tiên bằng)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 66,
+          "raw_query": "bình nước giữ nhiệt thể thao",
+          "actual_expected": "cần ưu tên các loại bình giữ nhiệt, bình nước (bình xịt, bình nhựa k ưu tiên bằng)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0067",
+      "query": "bánh hotteok",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #67] cần check lại list sản phẩm | [SmartSearch #91] k tìm thấy sản phẩm Bánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Mozzarella bibigo 280G (SKU 8935297103726) dù còn hàng\n1\t8801204205480\tBánh Cookie Hotteok Good Today 258G\n2\t8935297103733\tBánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Tan Chảy bibigo 280G\n3\t8938536904498\tBánh Hotteok Nhân Pizza Pulmuone 360G\n4\t8801114144015\tBánh Hotteok Nhân Phô Mai Mozzarella Pulmuone Gói 600G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 67,
+          "raw_query": "bánh hotteok",
+          "actual_expected": "cần check lại list sản phẩm ",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": null
+        },
+        {
+          "sheet": "SmartSearch",
+          "no": 91,
+          "raw_query": "bánh hotteok",
+          "actual_expected": "k tìm thấy sản phẩm Bánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Mozzarella bibigo 280G (SKU 8935297103726) dù còn hàng\n1\t8801204205480\tBánh Cookie Hotteok Good Today 258G\n2\t8935297103733\tBánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Tan Chảy bibigo 280G\n3\t8938536904498\tBánh Hotteok Nhân Pizza Pulmuone 360G\n4\t8801114144015\tBánh Hotteok Nhân Phô Mai Mozzarella Pulmuone Gói 600G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0068",
+      "query": "khan giấy",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #68] actual đang hiển thị giấm ở top 1",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 68,
+          "raw_query": "khan giấy",
+          "actual_expected": "actual đang hiển thị giấm ở top 1",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 16/9: \n1\t8935018802334\tKhăn Giấy Lụa Pulppy Polar Bear 180 Tờ (Giao Ngẫu Nhiên)\t500\n2\t8935018801603\tKhăn Giấy Lụa Pulppy 2 Lớp 180 Tờ (Giao Màu Ngẫu Nhiên)\t576\n3\t8938507729037\tKhăn Giấy Lụa Premier 2 Lớp 180 Tờ (Giao Màu Ngẫu Nhiên)\t43\n4\t8935250402583\tKhăn Giấy Emos Premium 2 Lớp Hộp 180 Tờ (Giao Màu Ngẫu Nhiên)\t52\n5\t8935018801627\tKhăn Giấy Bỏ Túi Pulppy Lốc 6 Gói\t400\n6\t8936020575698\tKhăn Giấy Rút Silkwell 3 Lớp 200 Tờ\t56\n7\t8936020760377\tKhăn Giấy Rút Elène 3 Lớp 160 Tờ\t832\n8\t8935250402019\tKhăn Giấy Ăn E'mos Premium Tím 100 Tờ\t22\n9\t8936020760094\tKhăn Giấy Lụa Elène 2 Lớp 260 Tờ\t916\n10\t8936017991036\tKhăn Giấy Rút Fairy 3 Lớp 150 Tờ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0069",
+      "query": "rượu vang đỏ khai vị",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #69] cần ưu tiên rượu vang đỏ hơn (hiện tại tope 1,2 là rượu vàng chát, rượu vang yello)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 69,
+          "raw_query": "rượu vang đỏ khai vị",
+          "actual_expected": "cần ưu tiên rượu vang đỏ hơn (hiện tại tope 1,2 là rượu vàng chát, rượu vang yello)",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 16/9 : No1,3,10 đang hiển thị trên rượu vang đỏ\n1\t9322214009060\tRượu Vang Yellow Tail Merlot 13.5% ABV 750ml\t11\n2\t8935020209657\tRượu Vang Đỏ Đà Lạt 12% ABV 375ml\t40\n3\t8935020201187\tRượu Chát Đà Lạt Xanh 14.5% ABV 750ml\t14\n4\t8935020228016\tRượu Vang Đỏ Nouvo Sangria 7% Vol Chai 750ml\t8\n5\t8008738006884\tRượu Vang Đỏ La Collina IGT 13.5% Chai 3l\t7\n6\t7804407000143\tRượu Vang Đỏ Quatro Montgras 14% ABV Chai 750ml\t3\n7\t8008530049706\tRượu Vang Đỏ Tavernello Sangiovese Merlot 13% ABV 750ml\t15\n8\t7804634122694\tRượu Vang Đỏ Viesta 12% ABV 750ml\t10\n9\t8935020210677\tRượu Vang Đỏ Đà Lạt Dankia 12.5% ABV 750ml\t25\n10\t3263286350611\tRượu Vang Syrah JP Chenet 13% ABV Chai 187ml\t8\n11\t8935020224025\tRượu Vang Đỏ Đà Lạt Superior 12% ABV 375ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0070",
+      "query": "sủa tươi",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #70] search result đang sai",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 70,
+          "raw_query": "sủa tươi",
+          "actual_expected": "search result đang sai",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0071",
+      "query": "dâu ăn",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #71] cần optimize lại kqua search bao gồm dầu ăn (chấp nhận xen xẽ dâu tây và dầu ăn , nhưng các sp này phải nằm ở top), hiện tại bánh ăn dặm đang top 1",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 71,
+          "raw_query": "dâu ăn",
+          "actual_expected": "cần optimize lại kqua search bao gồm dầu ăn (chấp nhận xen xẽ dâu tây và dầu ăn , nhưng các sp này phải nằm ở top), hiện tại bánh ăn dặm đang top 1",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 7/9 : \"Đào Tươi Đóng Hộp Kronos 820G\" k nên xuất hiện trong list này. "
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0072",
+      "query": "cam sành",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #72] cam vàng nam phi và cam xoàn đang bị đẩy xuống dưới nước lau sàn  và đèn pin (k nên hiển thị khi search cam sành)\n1\t2164130000007\tCam Sành Vắt Nước 1kg\n2\t8935268200775\tCam Sành Loại 1 Meko Star 1kg\n3\t8934868502838\tNước Lau Sàn Sunlight Hương Quế Và Cam Bergamot 3.4kg\n4\t8936020957883\tĐèn pin cầm tay LED SUNHOUSE SHE-4351\n5\t8938520657201\tHải Sản Thập Cẩm Đông Lạnh Vifoods 400G\n6\t8936073175173\tCháo Tươi Cây Thị Hải Sản Thập Cẩm Gói 240G\n7\t8934717402432\tBánh Xếp bibigo Kiểu Hàn Quố",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 72,
+          "raw_query": "cam sành",
+          "actual_expected": "cam vàng nam phi và cam xoàn đang bị đẩy xuống dưới nước lau sàn  và đèn pin (k nên hiển thị khi search cam sành)\n1\t2164130000007\tCam Sành Vắt Nước 1kg\n2\t8935268200775\tCam Sành Loại 1 Meko Star 1kg\n3\t8934868502838\tNước Lau Sàn Sunlight Hương Quế Và Cam Bergamot 3.4kg\n4\t8936020957883\tĐèn pin cầm tay LED SUNHOUSE SHE-4351\n5\t8938520657201\tHải Sản Thập Cẩm Đông Lạnh Vifoods 400G\n6\t8936073175173\tCháo Tươi Cây Thị Hải Sản Thập Cẩm Gói 240G\n7\t8934717402432\tBánh Xếp bibigo Kiểu Hàn Quốc 365 Hải Sản Thập Cẩm 250G x 2 Gói\n8\t9556173490427\tKẹo Mềm Đồ Chơi Khee San Fruit Plus Vị Vải Và Cam (Giao Mẫu Ngẫu Nhiên) 6G\n9\t2181670000007\tCam Vàng Nam Phi 1kg\n10\t8935268200881\tCam Xoàn Túi Lưới Meko Star 1kg",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0073",
+      "query": "colgate",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #73] Cần hiển thị sản phẩm của colgate chứ k phải coca cola\n1\t8935049501404\tNước Ngọt Coca Cola Vị Nguyên Bản Lon 235ml\n2\t28935049502092\tThùng 24 Lon Nước Ngọt Coca Cola Vị Nguyên Bản 235ml\n3\t4902102038690\tNước Ngọt Coca Cola Nhật Chai Nhôm 300ml\n4\t48935049502263\tLốc 6 Chai Nước Ngọt Coca Cola Giảm Đường 600ml/Chai\n5\t8935049501541\tNước Ngọt Coca Cola Plus Lon 320ml\n6\t8935049501374\tNước Ngọt Coca Cola Giảm Đường Chai 600ml\n7\t4902102019187\tNước Ngọt Coca Cola Nhật Lon 160ml\n8\t18935049",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 73,
+          "raw_query": "colgate",
+          "actual_expected": "Cần hiển thị sản phẩm của colgate chứ k phải coca cola\n1\t8935049501404\tNước Ngọt Coca Cola Vị Nguyên Bản Lon 235ml\n2\t28935049502092\tThùng 24 Lon Nước Ngọt Coca Cola Vị Nguyên Bản 235ml\n3\t4902102038690\tNước Ngọt Coca Cola Nhật Chai Nhôm 300ml\n4\t48935049502263\tLốc 6 Chai Nước Ngọt Coca Cola Giảm Đường 600ml/Chai\n5\t8935049501541\tNước Ngọt Coca Cola Plus Lon 320ml\n6\t8935049501374\tNước Ngọt Coca Cola Giảm Đường Chai 600ml\n7\t4902102019187\tNước Ngọt Coca Cola Nhật Lon 160ml\n8\t18935049510670\tNước Ngọt Coca Cola Vị Nguyên Bản Lốc 24 Chai 390ml\n9\t8935049590019\tLốc 6 Lon Nước Ngọt Coca Cola 320ml\n10\t8935049510673\tNước Ngọt Coca Cola Vị Nguyên Bản Chai 390ml (Giao Mẫu Ngẫu Nhiên)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0074",
+      "query": "bim bim",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #74] cần ưu tiên snack, bánh\n1\tP2317BIA333\tBia 333\n2\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n3\t8858727401837\tBia Lúa Mì Trắng San Miguel Cerveza Blanca 5.4% ABV Lon 490ml\n4\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n5\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n6\t8934803012880\tSnack Oishi bí đỏ vị bò nướng 68g\n7\t8936036028119\tSnack Tonnies soco 70G\n8\t8936079124908\tSnack Hình Cua Poca Vị Tảo Biển Gói 60G\n9\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n10\t5",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 74,
+          "raw_query": "bim bim",
+          "actual_expected": "cần ưu tiên snack, bánh\n1\tP2317BIA333\tBia 333\n2\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n3\t8858727401837\tBia Lúa Mì Trắng San Miguel Cerveza Blanca 5.4% ABV Lon 490ml\n4\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n5\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n6\t8934803012880\tSnack Oishi bí đỏ vị bò nướng 68g\n7\t8936036028119\tSnack Tonnies soco 70G\n8\t8936079124908\tSnack Hình Cua Poca Vị Tảo Biển Gói 60G\n9\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n10\t5410908000043\tBia Chimay Bruin 7% ABV Chai 750ml",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0075",
+      "query": "hạ long",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #75] có sản phẩm sữa chua hạ long k?",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 75,
+          "raw_query": "hạ long",
+          "actual_expected": "có sản phẩm sữa chua hạ long k?",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0076",
+      "query": "otto",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #76] ưu tiên sản phẩm ottogi, bánh mì otto (nếu có)\n1\tP2317BO2TO\tBộ 2 Tô\n2\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n3\t8935134592935\tDầu Ô Liu Latino Bella Pomace Olivoilà Chai 1L\n4\t8936049053283\tCháo Tươi Ottogi Thịt Bò Cà Rốt Gói 220G\n5\t8936049053320\tCháo Tươi Ottogi Nếp Cẩm Đậu Đỏ Gói 220G\n6\t8007150902941\tDầu Ô Liu Olitalia Pomace 1L\n7\t8936049050589\tXốt Spaghetti Ottogi 400G\n8\t8936049052514\tỚt Bột Hàn Quốc Ottogi Gói 500g\n9\t8936049052002\tXốt Spaghetti Ottogi Vị ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 76,
+          "raw_query": "otto",
+          "actual_expected": "ưu tiên sản phẩm ottogi, bánh mì otto (nếu có)\n1\tP2317BO2TO\tBộ 2 Tô\n2\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n3\t8935134592935\tDầu Ô Liu Latino Bella Pomace Olivoilà Chai 1L\n4\t8936049053283\tCháo Tươi Ottogi Thịt Bò Cà Rốt Gói 220G\n5\t8936049053320\tCháo Tươi Ottogi Nếp Cẩm Đậu Đỏ Gói 220G\n6\t8007150902941\tDầu Ô Liu Olitalia Pomace 1L\n7\t8936049050589\tXốt Spaghetti Ottogi 400G\n8\t8936049052514\tỚt Bột Hàn Quốc Ottogi Gói 500g\n9\t8936049052002\tXốt Spaghetti Ottogi Vị Cà Chua Gói 110G\n10\t8936049053290\tCháo Tươi Ottogi Thịt Heo Bí Đỏ Gói 220G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0077",
+      "query": "しょうゆ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #77] Cần hiển thị các sản phẩm nước tương / xì dầu\n1\t8936000750206\tTàu hũ trắng Ichi-Sakura 240G\n2\t8936000750237\tTàu Hũ Trắng Tươi Ichi-Sakura 350G\n3\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\n4\t8936000750077\tTàu hũ mềm Ome Ichiban 300G\n5\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n6\t8938504001839\tTàu Hủ Tojy Nấm 340G\n7\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\n8\t8938524577390\tXúc Xích School Phô Mai Shinshu 200G\n9\t8936000751036\tĐậu Hũ Làng Mơ Ichiban 500G\n10\t8938500844409\tĐậu ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 77,
+          "raw_query": "しょうゆ",
+          "actual_expected": "Cần hiển thị các sản phẩm nước tương / xì dầu\n1\t8936000750206\tTàu hũ trắng Ichi-Sakura 240G\n2\t8936000750237\tTàu Hũ Trắng Tươi Ichi-Sakura 350G\n3\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\n4\t8936000750077\tTàu hũ mềm Ome Ichiban 300G\n5\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n6\t8938504001839\tTàu Hủ Tojy Nấm 340G\n7\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\n8\t8938524577390\tXúc Xích School Phô Mai Shinshu 200G\n9\t8936000751036\tĐậu Hũ Làng Mơ Ichiban 500G\n10\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0078",
+      "query": "피시소스",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #78] ưu tiên nước mắm lên hàng đầu\n1\t8936236472187\tNước Mắm Nam Ngư Phú Quốc 32 Độ Đạm 500ml\n2\t8934712007014\tMắm Nêm Pha Sẵn Thuận Phát Chai 175g\n3\t8934712007021\tMắm Nêm Thuận Phát Pha Sẵn Chai 290G\n4\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml\n5\t8934637513430\tTương Ớt Chua Ngọt Cholimex Chai 830g\n6\t8936136161143\tTương Ớt Chinsu Cao Cấp 500G\n7\t8935084103311\tTương Ớt Choice L I’m Chef Chai 250G\n8\t8936221048076\tNước Mắm Nam Ngư 3 Trong 1 Chai 500ml\n9\t89346375137",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 78,
+          "raw_query": "피시소스",
+          "actual_expected": "ưu tiên nước mắm lên hàng đầu\n1\t8936236472187\tNước Mắm Nam Ngư Phú Quốc 32 Độ Đạm 500ml\n2\t8934712007014\tMắm Nêm Pha Sẵn Thuận Phát Chai 175g\n3\t8934712007021\tMắm Nêm Thuận Phát Pha Sẵn Chai 290G\n4\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml\n5\t8934637513430\tTương Ớt Chua Ngọt Cholimex Chai 830g\n6\t8936136161143\tTương Ớt Chinsu Cao Cấp 500G\n7\t8935084103311\tTương Ớt Choice L I’m Chef Chai 250G\n8\t8936221048076\tNước Mắm Nam Ngư 3 Trong 1 Chai 500ml\n9\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\n10\t8934637062525\tTương Ớt Chua Ngọt Cholimex Chai 270g\n11\t8934851262558\tNước Mắm Tỏi Ớt Thanh Hà Chai 250ml\n12\t8936221040100\tTương Ớt Chinsu Chai 2kg\n13\t8935121125504\tNước Mắm 584 25 Độ Đạm 500ML",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0079",
+      "query": "mỹ phẩm",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #79] không nên hiển thị các loại 'thực phẩm' / nếu hiển thị thì hiển thị ở cuối\n1\t8936040073105\tBông Trang Điểm Puffme 180 Miếng\n2\t4511413608944\tThực Phẩm Bảo Vệ Sức Khỏe DHC Sáng Da Adlay Extract Túi 30 Viên\n3\t8935006540583\tSon Dưỡng Mentholatum Medi Lip Stick 4.3G\n4\t8936006853307\tBông Trang Điểm Pop-Puf Không Ép Biên 100 Miếng\n5\t8935006546233\tKem Dưỡng Da Acnes Lab Acne Repair Hỗ Trợ Giảm Mụn 20G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 79,
+          "raw_query": "mỹ phẩm",
+          "actual_expected": "không nên hiển thị các loại 'thực phẩm' / nếu hiển thị thì hiển thị ở cuối\n1\t8936040073105\tBông Trang Điểm Puffme 180 Miếng\n2\t4511413608944\tThực Phẩm Bảo Vệ Sức Khỏe DHC Sáng Da Adlay Extract Túi 30 Viên\n3\t8935006540583\tSon Dưỡng Mentholatum Medi Lip Stick 4.3G\n4\t8936006853307\tBông Trang Điểm Pop-Puf Không Ép Biên 100 Miếng\n5\t8935006546233\tKem Dưỡng Da Acnes Lab Acne Repair Hỗ Trợ Giảm Mụn 20G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0080",
+      "query": "trái me",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #80] sai bộ kết quả \n1\t8935337518039\tBộ Đồ Chơi Thức Ăn BBQ Thịt Nướng\n2\t8935256611521\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-2 (100 Chi Tiết)\n3\t8935256611620\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-12 (116 Chi Tiết)\n4\t8935256611545\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-4 (105 Chi Tiết)\n5\t8935256611514\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-1 (118 Chi Tiết)\n6\t8935256611583\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-8 (113 Chi T",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 80,
+          "raw_query": "trái me",
+          "actual_expected": "sai bộ kết quả \n1\t8935337518039\tBộ Đồ Chơi Thức Ăn BBQ Thịt Nướng\n2\t8935256611521\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-2 (100 Chi Tiết)\n3\t8935256611620\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-12 (116 Chi Tiết)\n4\t8935256611545\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-4 (105 Chi Tiết)\n5\t8935256611514\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-1 (118 Chi Tiết)\n6\t8935256611583\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-8 (113 Chi Tiết)\n7\t8935256611613\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-11 (117 Chi Tiết)\n8\t8935256611576\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-7 (116 Chi Tiết)\n9\t8935256611569\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-6 (105 Chi Tiết)\n10\t8935256611606\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-10 (108 Chi Tiết)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0081",
+      "query": "hồng sâm hàn quốc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #81] ngoại trừ sâm đen thì cần hiển thị thêm các loại nhân sâm (Trà Nhân Sâm Hàn Quốc Nokchawon Hộp 150G)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 81,
+          "raw_query": "hồng sâm hàn quốc",
+          "actual_expected": "ngoại trừ sâm đen thì cần hiển thị thêm các loại nhân sâm (Trà Nhân Sâm Hàn Quốc Nokchawon Hộp 150G)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0082",
+      "query": "ca phê",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #82] Cần hiển thị các sản phẩm cà phê\n1\t8936045260159\tCa Cao Hòa Tan Passion 3In1 Bịch 30 Gói 16G\n2\t8938501634016\tBột Cacao Vietnamcacao Good Morning 150G\n3\t8934804025780\tThức Uống Lúa Mạch Milo Hũ 400G\n4\t8934804025636\tThức Uống Lúa Mạch Milo Active-Go Néstle 285G\n5\t8936045260135\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 450G\n6\t8936045260081\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 16G (Hộp 15 Gói)\n7\t8936045260074\tCacao Nguyên Chất Rich Cocoa Indochine 300G\n8\t89360452",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 82,
+          "raw_query": "ca phê",
+          "actual_expected": "Cần hiển thị các sản phẩm cà phê\n1\t8936045260159\tCa Cao Hòa Tan Passion 3In1 Bịch 30 Gói 16G\n2\t8938501634016\tBột Cacao Vietnamcacao Good Morning 150G\n3\t8934804025780\tThức Uống Lúa Mạch Milo Hũ 400G\n4\t8934804025636\tThức Uống Lúa Mạch Milo Active-Go Néstle 285G\n5\t8936045260135\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 450G\n6\t8936045260081\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 16G (Hộp 15 Gói)\n7\t8936045260074\tCacao Nguyên Chất Rich Cocoa Indochine 300G\n8\t8936045260579\tCacao Hòa Tan Passion Hot 16G (Hộp 10 Gói)\n9\t8936089173620\tBột Chocolate Vị Dừa Archcafe Hộp 12 Gói 20G\n10\t8850086142963\tBột Cacao Ovaltine Rich Chocolate 296G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0083",
+      "query": "double rich",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #83] số lượng result lệch nhiều so với prod, cần check lại\n1\t8935030228846\tSữa Tắm Double Rich Relaxing Purple 800G\n2\t8935030228822\tSữa Tắm Double Rich Relax Purple Chai 550G\n3\t8935030218236\tNước Dưỡng Tóc Double Rich UV Nutrition 120ml\n4\t8935030228839\tXịt Dưỡng Tóc Double Rich Perfume 10x Chai 200ml\n5\t8935030221656\tSữa Tắm Double Rich Dưỡng Sáng Da Hương Hoa Sen 550g\n6\t8935030228501\tSữa Tắm Double Rich Hương Hoa Hồng 6g Dây 10 Gói\n7\t8935030228495\tSữa Tắm Double Rich Tươi Sáng Da Hư",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 83,
+          "raw_query": "double rich",
+          "actual_expected": "số lượng result lệch nhiều so với prod, cần check lại\n1\t8935030228846\tSữa Tắm Double Rich Relaxing Purple 800G\n2\t8935030228822\tSữa Tắm Double Rich Relax Purple Chai 550G\n3\t8935030218236\tNước Dưỡng Tóc Double Rich UV Nutrition 120ml\n4\t8935030228839\tXịt Dưỡng Tóc Double Rich Perfume 10x Chai 200ml\n5\t8935030221656\tSữa Tắm Double Rich Dưỡng Sáng Da Hương Hoa Sen 550g\n6\t8935030228501\tSữa Tắm Double Rich Hương Hoa Hồng 6g Dây 10 Gói\n7\t8935030228495\tSữa Tắm Double Rich Tươi Sáng Da Hương Hoa Anh Đào 6g Dây 12 Gói\n8\t8935030228853\tSữa Tắm Double Rich Relaxing Purple 200G\n\ngap sản phẩm giữa catalog và actual khá nhiều (ví dụ query : rượu soju, x-men, cindy bloom, corona",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0084",
+      "query": "nước ion",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #84] cần hiển thị thêm các sản phẩm i-on\n\t8935339200031\tNước Ion Kiềm Ocany 1.5L\n2\t8935339200086\tThùng 24 Chai Nước Ion Kiềm Ocany 500ml\n3\t8935339200093\tThủng 12 Chai Nước Ion Kiềm Ocany 1.5L",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 84,
+          "raw_query": "nước ion",
+          "actual_expected": "cần hiển thị thêm các sản phẩm i-on\n\t8935339200031\tNước Ion Kiềm Ocany 1.5L\n2\t8935339200086\tThùng 24 Chai Nước Ion Kiềm Ocany 500ml\n3\t8935339200093\tThủng 12 Chai Nước Ion Kiềm Ocany 1.5L",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0085",
+      "query": "đầu cá hồi",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #85] cần đề xuất thêm các sản phẩm cá hồi\n1\t2275490000009\tĐầu cá hồi 500G\n2\t2262280000004\tCá Hồi Na Uy Phi Lê Đầu Đuôi 200G\n3\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 85,
+          "raw_query": "đầu cá hồi",
+          "actual_expected": "cần đề xuất thêm các sản phẩm cá hồi\n1\t2275490000009\tĐầu cá hồi 500G\n2\t2262280000004\tCá Hồi Na Uy Phi Lê Đầu Đuôi 200G\n3\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0086",
+      "query": "dứa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #86] dứa là từ đặc biệt, k thể hiển thị sáp thơm được, phải hiển thị trái dứa và các loại trái cây tương tự",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 86,
+          "raw_query": "dứa",
+          "actual_expected": "dứa là từ đặc biệt, k thể hiển thị sáp thơm được, phải hiển thị trái dứa và các loại trái cây tương tự",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0087",
+      "query": "ngủ cốc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #87] sai search result , tương tự cho 'sửa tắm'\n1\t8936203161342\tGối Cao Su Non Nin House Supportive 60X40X12Cm\n2\t8936203161359\tGối Cao Su Non Nin House Curved 50x30x10.7cm\n3\t8935297303102\tGối Foam Gel Koi Mayhome 30x50x10cm\n4\t8936115311057\tLốc 10 Ly Nhựa Tiện Lợi Choice L 700ml\n5\t8936115311439\tLốc 20 Nắp Ly Nhựa Tiện Lợi Choice L\n6\t8935295600937\tLy Rượu Vang Thủy Tinh Luminarc Elegance 140ml\n7\t8935297302136\tGối Ngủ Mayhome Kori 30x50cm\n8\t8936203166354\tGối Nằm I-Cool Nin House 40x60c",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 87,
+          "raw_query": "ngủ cốc",
+          "actual_expected": "sai search result , tương tự cho 'sửa tắm'\n1\t8936203161342\tGối Cao Su Non Nin House Supportive 60X40X12Cm\n2\t8936203161359\tGối Cao Su Non Nin House Curved 50x30x10.7cm\n3\t8935297303102\tGối Foam Gel Koi Mayhome 30x50x10cm\n4\t8936115311057\tLốc 10 Ly Nhựa Tiện Lợi Choice L 700ml\n5\t8936115311439\tLốc 20 Nắp Ly Nhựa Tiện Lợi Choice L\n6\t8935295600937\tLy Rượu Vang Thủy Tinh Luminarc Elegance 140ml\n7\t8935297302136\tGối Ngủ Mayhome Kori 30x50cm\n8\t8936203166354\tGối Nằm I-Cool Nin House 40x60cm (Giao Mẫu Ngẫu Nhiên)\n9\t8936115311422\tLốc 20 Ly Nhựa Tiện Lợi Choice L 300ml\n10\t8936218294301\tGối Nghỉ Trưa Go&Fly Snug",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0088",
+      "query": "oshi lays",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #88] cần hiển thị snack oshi, lays\n1\t5202631000557\tÔ Liu Olympias Tím Không Hạt 370G\n2\t8936040055590\tGối Ôm Cá Mập Hometex\n3\t8936002091741\tGối Trẻ Em Có Vỏ Tencel Ngọc Hạnh 22x70cm (Giao Mẫu Ngẫu Nhiên)\n4\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n5\t8936040051325\tGối Ôm Dây Kéo Phối Hometex 37x105cm (Giao Màu Ngẫu Nhiên)\n6\t5202631000564\tÔ Liu Olympias Xanh Không Hạt 370G\n7\t8936040058829\tGối Ôm Trẻ Em Hình Cây Tre Hometex 25x80cm (Giao Màu Ngẫu Nhiên)\n8\t8936040057327",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 88,
+          "raw_query": "oshi lays",
+          "actual_expected": "cần hiển thị snack oshi, lays\n1\t5202631000557\tÔ Liu Olympias Tím Không Hạt 370G\n2\t8936040055590\tGối Ôm Cá Mập Hometex\n3\t8936002091741\tGối Trẻ Em Có Vỏ Tencel Ngọc Hạnh 22x70cm (Giao Mẫu Ngẫu Nhiên)\n4\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n5\t8936040051325\tGối Ôm Dây Kéo Phối Hometex 37x105cm (Giao Màu Ngẫu Nhiên)\n6\t5202631000564\tÔ Liu Olympias Xanh Không Hạt 370G\n7\t8936040058829\tGối Ôm Trẻ Em Hình Cây Tre Hometex 25x80cm (Giao Màu Ngẫu Nhiên)\n8\t8936040057327\tGối Ôm Cá Sấu Thiên Hà\n9\t8936040058430\tGối Nằm Trẻ Em Nỉ Nhung Hometex 30 x 50cm (Giao Mẫu Ngẫu Nhiên)\n10\t8936105163062\tNệm Ngồi Thông Dụng Choice L Màu Xám Đậm",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0089",
+      "query": "dầu dừa vietcoco",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #89] cần ưu tiên sản phẩm dầu dừa, đậu phộng\n1\t4710731012338\tSáp Thơm Farcent Hương Hoa Oải Hương 170g\n2\t4710731012307\tSáp Thơm Farcent Hương Hoa Chanh Sả 170g\n3\t8935243504584\tSáp Thơm Khử Mùi Mr. Fresh Hương Vani 230g\n4\t4710731012321\tSáp Trứng Farcent Hương Tươi Mát Hũ 170G\n5\t4710731012383\tSáp Thơm Farcent Hương Hoa Hồng 170g\n6\t8850175024002\tSáp Thơm Glade Hương Trầm Hương Hộp 180G\n7\t6978292085743\tTinh Dầu UNA PIANTA Hương Hoa Poppy 120ml\n8\t6978292085804\tTinh Dầu UNA PIANTA Hương H",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 89,
+          "raw_query": "dầu dừa vietcoco / dầu dừa",
+          "actual_expected": "cần ưu tiên sản phẩm dầu dừa, đậu phộng\n1\t4710731012338\tSáp Thơm Farcent Hương Hoa Oải Hương 170g\n2\t4710731012307\tSáp Thơm Farcent Hương Hoa Chanh Sả 170g\n3\t8935243504584\tSáp Thơm Khử Mùi Mr. Fresh Hương Vani 230g\n4\t4710731012321\tSáp Trứng Farcent Hương Tươi Mát Hũ 170G\n5\t4710731012383\tSáp Thơm Farcent Hương Hoa Hồng 170g\n6\t8850175024002\tSáp Thơm Glade Hương Trầm Hương Hộp 180G\n7\t6978292085743\tTinh Dầu UNA PIANTA Hương Hoa Poppy 120ml\n8\t6978292085804\tTinh Dầu UNA PIANTA Hương Hoa Mộc Lan 120ml\n9\t8936079287221\tDầu Màu Điều DH Foods Chai 90ml\n10\t8850175020868\tSáp Thơm Glade Hương Hoa Anh Đào & Lily 180G Lô 2 Cái",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0090",
+      "query": "dầu dừa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #89] cần ưu tiên sản phẩm dầu dừa, đậu phộng\n1\t4710731012338\tSáp Thơm Farcent Hương Hoa Oải Hương 170g\n2\t4710731012307\tSáp Thơm Farcent Hương Hoa Chanh Sả 170g\n3\t8935243504584\tSáp Thơm Khử Mùi Mr. Fresh Hương Vani 230g\n4\t4710731012321\tSáp Trứng Farcent Hương Tươi Mát Hũ 170G\n5\t4710731012383\tSáp Thơm Farcent Hương Hoa Hồng 170g\n6\t8850175024002\tSáp Thơm Glade Hương Trầm Hương Hộp 180G\n7\t6978292085743\tTinh Dầu UNA PIANTA Hương Hoa Poppy 120ml\n8\t6978292085804\tTinh Dầu UNA PIANTA Hương H",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 89,
+          "raw_query": "dầu dừa vietcoco / dầu dừa",
+          "actual_expected": "cần ưu tiên sản phẩm dầu dừa, đậu phộng\n1\t4710731012338\tSáp Thơm Farcent Hương Hoa Oải Hương 170g\n2\t4710731012307\tSáp Thơm Farcent Hương Hoa Chanh Sả 170g\n3\t8935243504584\tSáp Thơm Khử Mùi Mr. Fresh Hương Vani 230g\n4\t4710731012321\tSáp Trứng Farcent Hương Tươi Mát Hũ 170G\n5\t4710731012383\tSáp Thơm Farcent Hương Hoa Hồng 170g\n6\t8850175024002\tSáp Thơm Glade Hương Trầm Hương Hộp 180G\n7\t6978292085743\tTinh Dầu UNA PIANTA Hương Hoa Poppy 120ml\n8\t6978292085804\tTinh Dầu UNA PIANTA Hương Hoa Mộc Lan 120ml\n9\t8936079287221\tDầu Màu Điều DH Foods Chai 90ml\n10\t8850175020868\tSáp Thơm Glade Hương Hoa Anh Đào & Lily 180G Lô 2 Cái",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0091",
+      "query": "sensodyne",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #90] không nên hiển thị các sản phẩm xúc xích, kẹo k liên quan đến sensodyne 14\t8936034876743\tXúc Xích Vòng Xông Khói Ponnie Premium 200G\n15\t8934572296894\tXúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)\n16\t8809693270613\tKẹo Dream Vị Gừng 200G\n17\t8809693270620\tKẹo Dream Vị Quế 200G\n18\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\n19\t8935337513744\tĐồ Chơi Bạn Ngỗng Phát Triển Giác Quan PEEK A BOO PAB047\n20\t8936034876811\tXúc Xích Xông Khói Eco Ponnie 450G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 90,
+          "raw_query": "sensodyne",
+          "actual_expected": "không nên hiển thị các sản phẩm xúc xích, kẹo k liên quan đến sensodyne 14\t8936034876743\tXúc Xích Vòng Xông Khói Ponnie Premium 200G\n15\t8934572296894\tXúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)\n16\t8809693270613\tKẹo Dream Vị Gừng 200G\n17\t8809693270620\tKẹo Dream Vị Quế 200G\n18\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\n19\t8935337513744\tĐồ Chơi Bạn Ngỗng Phát Triển Giác Quan PEEK A BOO PAB047\n20\t8936034876811\tXúc Xích Xông Khói Eco Ponnie 450G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0092",
+      "query": "gạo st25",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #92] k tìm thấy 8938530115111 , 8938516870713  dù còn hàng\n1\t8938563047113\tGạo ST25 Prime L 5kg\n2\t8938563047106\tGạo ST25 Lúa Tôm Prime L 3kg\n3\t8936087316661\tGạo ST25 Lúa Tôm Long Châu 5kg\n4\t8936096741294\tGạo ST25 Bảo Minh Lúa Ruộng Rươi 5kg\n5\t8938516870935\tGạo Thơm Dẻo ST25 Neptune Special 5kg\n6\t8936096741478\tGạo Bảo Minh ST25 Lúa Ruộng Rươi Túi 3kg\n7\t8938516870928\tGạo Thơm Đặc Sản Neptune ST25 Plus Lúa Tôm 5kg",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 92,
+          "raw_query": "gạo st25",
+          "actual_expected": "k tìm thấy 8938530115111 , 8938516870713  dù còn hàng\n1\t8938563047113\tGạo ST25 Prime L 5kg\n2\t8938563047106\tGạo ST25 Lúa Tôm Prime L 3kg\n3\t8936087316661\tGạo ST25 Lúa Tôm Long Châu 5kg\n4\t8936096741294\tGạo ST25 Bảo Minh Lúa Ruộng Rươi 5kg\n5\t8938516870935\tGạo Thơm Dẻo ST25 Neptune Special 5kg\n6\t8936096741478\tGạo Bảo Minh ST25 Lúa Ruộng Rươi Túi 3kg\n7\t8938516870928\tGạo Thơm Đặc Sản Neptune ST25 Plus Lúa Tôm 5kg",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0093",
+      "query": "cá diêu hồng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #93] k thấy hiển thị \t\nCanh Chua Cá Diêu Hồng 365 Fresh 0400297230003  dù còn hàng",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 93,
+          "raw_query": "cá diêu hồng",
+          "actual_expected": "k thấy hiển thị \t\nCanh Chua Cá Diêu Hồng 365 Fresh 0400297230003  dù còn hàng",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0094",
+      "query": "sữa tắm choice l",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #94] sản phẩm rổ nhựa k nên hiển thị khi search sữa tắm (dụng cụ nhà tắm thì có thể chấp nhận được)\n11\t8936039277385\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 31 x 35 x 13.2cm\n12\t8936039277378\tBộ Thau Rổ Oval Choice L Màu Xám Sữa 33 x 29 x 12.5cm\n13\t8936039277392\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 35 x 39.2 x 14.5cm\n14\t8936039277446\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 23.8 x 23.8 x 11.5cm\n15\t8936039277439\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 16.8 x 16.8 x 10cm\n16\t8936039277453\tR",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 94,
+          "raw_query": "sữa tắm choice l",
+          "actual_expected": "sản phẩm rổ nhựa k nên hiển thị khi search sữa tắm (dụng cụ nhà tắm thì có thể chấp nhận được)\n11\t8936039277385\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 31 x 35 x 13.2cm\n12\t8936039277378\tBộ Thau Rổ Oval Choice L Màu Xám Sữa 33 x 29 x 12.5cm\n13\t8936039277392\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 35 x 39.2 x 14.5cm\n14\t8936039277446\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 23.8 x 23.8 x 11.5cm\n15\t8936039277439\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 16.8 x 16.8 x 10cm\n16\t8936039277453\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 29.6 x 29.6 x 8.8cm",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0095",
+      "query": "bông cải xanh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #95] các sản phẩm thú nhồi bông, tăm bông, xà bông k nên hiển thị\n8\t4902430284264\tXà Bông Cục Safeguard Xanh 125g\n9\t8936230480966\tThú Nhồi Bông Ngựa Pony Xanh 60cm\n10\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 95,
+          "raw_query": "bông cải xanh",
+          "actual_expected": "các sản phẩm thú nhồi bông, tăm bông, xà bông k nên hiển thị\n8\t4902430284264\tXà Bông Cục Safeguard Xanh 125g\n9\t8936230480966\tThú Nhồi Bông Ngựa Pony Xanh 60cm\n10\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 14/9 : \n1\t2039610000009\tBông cải xanh 700g\n2\t8936114400042\tBông Cải Xanh Baby 250G (ea)\n3\t8936049694202\tBông Cải Xanh Cắt Khúc 365 Fresh 200G\n4\t8936049694257\tHỗn Hợp Bông Cải Xanh Và Bông Cải Trắng 365 Fresh 200G\n5\t2273530000002\tBông Cải Trắng 800G\n6\t2283800000007\tBông cải trắng Úc Perfection Fresh Koja 800g\n7\t8936049694219\tBông Cải Trắng Cắt Khúc 365 Fresh 200G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0096",
+      "query": "kem chống nắng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #96] một số sản phẩm kem chống nắng đang bị đẩy phía sau kem xịt,kem sữa\n22\t8999999059927\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Ngày 45g\n23\t8999999059941\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Đêm 50g\n24\t0079656603248\tKem Chống Nắng Thể Thao Banana Boat SPF50+ 90ml\n25\t8935006539525\tKem Chống Nắng Sunplay Dưỡng Thể Trắng Mịn 150g\n26\t4800888280220\tKem Chống Nắng Dưỡng Sáng Da Pond's Bright Miracle SPF 50+ PA++++ 50G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 96,
+          "raw_query": "kem chống nắng",
+          "actual_expected": "một số sản phẩm kem chống nắng đang bị đẩy phía sau kem xịt,kem sữa\n22\t8999999059927\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Ngày 45g\n23\t8999999059941\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Đêm 50g\n24\t0079656603248\tKem Chống Nắng Thể Thao Banana Boat SPF50+ 90ml\n25\t8935006539525\tKem Chống Nắng Sunplay Dưỡng Thể Trắng Mịn 150g\n26\t4800888280220\tKem Chống Nắng Dưỡng Sáng Da Pond's Bright Miracle SPF 50+ PA++++ 50G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0097",
+      "query": "băng vệ sinh hàng ngày",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #97] thiếu nhiều sản phẩm 'hằng ngày' so với thực tế",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 97,
+          "raw_query": "băng vệ sinh hàng ngày",
+          "actual_expected": "thiếu nhiều sản phẩm 'hằng ngày' so với thực tế",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0098",
+      "query": "ca cao",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #98] bột cacao đang xếp sau bột trà xanh \n16\t\nBột Trà Xanh StFood Gói 50G\nSKU: 8859405999073 | 88,900 đ\t+ Extra\n17\t\nBột Cacao Vinacacao 5In1 160G\nSKU: 8938501634542 | 39,500 đ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 98,
+          "raw_query": "ca cao",
+          "actual_expected": "bột cacao đang xếp sau bột trà xanh \n16\t\nBột Trà Xanh StFood Gói 50G\nSKU: 8859405999073 | 88,900 đ\t+ Extra\n17\t\nBột Cacao Vinacacao 5In1 160G\nSKU: 8938501634542 | 39,500 đ",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0099",
+      "query": "gia vị",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #None] Các sản phẩm bên dưới nên hiển thị sau các sản phẩm chứa keyword 'gia vị'\n3 Sốt Dầu Dấm Trộn Salad Nam Dương Chai 250G SKU: 8936134362573\n4 Dầu Hào LEE KUM KEE KUM CHUN Chai 510g SKU: 0078895155327\n23 Bột Tỏi Natural DH Foods 60g SKU: 8936079284268\n24 Hành Bột Natural Dh Foods Hũ 40G SKU: 8936079284251",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "gia vị",
+          "actual_expected": "Các sản phẩm bên dưới nên hiển thị sau các sản phẩm chứa keyword 'gia vị'\n3 Sốt Dầu Dấm Trộn Salad Nam Dương Chai 250G SKU: 8936134362573\n4 Dầu Hào LEE KUM KEE KUM CHUN Chai 510g SKU: 0078895155327\n23 Bột Tỏi Natural DH Foods 60g SKU: 8936079284268\n24 Hành Bột Natural Dh Foods Hũ 40G SKU: 8936079284251",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 16/9: \n1\t8936109180119\tGia Vị Hoàn Chỉnh Gia Vị Trân Châu Nấu Gà Tiềm Ớt Hiểm Gói 90G\t33\n2\t8936109183738\tBột Gia Vị Hoàn Chỉnh Mì Quảng Gia Vị Gói 65G\t111\n3\t8934637515465\tGia Vị Kho Thịt Cholimex 50G\t394\n4\t0044738206594\tGia Vị Lẩu Thái Maeploy 400G\t64\n5\t8938541066150\tGia Vị Tom Yum Vipep 75G\t36\n6\t8934637515472\tGia Vị Kho Thịt Cholimex 200G\t140\n7\t8938505722894\tGia Vị Nấu Phở Bò HTV 25G\t171\n8\t8936028040747\tGia Vị Thịt Nướng Ngũ Vị Barona 80g\t189\n9\t9300683009279\tGia Vị Tẩm Ướp Lá Thơm McCormick Kiểu Ý 35G\t36\n10\t8934637515441\tGia Vị Kho Cá Cholimex 50G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0100",
+      "query": "bột bánh bông lan",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #None] k nên hiển thị bột thông cống, thông tắc hầm cầu\n11\tBột Thông Cống Hando 100g\nSKU: 8936007980248x\n22\tBột Thông Tắc Hầm Cầu Hando 250g\nSKU: 8936007980118",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "bột bánh bông lan",
+          "actual_expected": "k nên hiển thị bột thông cống, thông tắc hầm cầu\n11\tBột Thông Cống Hando 100g\nSKU: 8936007980248x\n22\tBột Thông Tắc Hầm Cầu Hando 250g\nSKU: 8936007980118 ",
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 14/9\n1\t8936055280345\tBột Chuyên Dụng Dành Cho Bánh Bông Lan Meizan Hi-Ratio Cake Flour Gói 1Kg\n2\t8936013740379\tBột Bông Lan Nướng 320 Mikko gói 200Gr\n3\t8936013740133\tBột Bánh Bao Mikko 400G\n4\t9333527413574\tCây Lăn Bột Làm Bánh Uncle Bill 45cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0101",
+      "query": "bơ đậu phộng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #None] 1. 2 sản phẩm chứa bơ đậu phộng đang hiển thị sau bơ hạt phỉ ca cao\n14\tBơ Đậu Phộng Giòn Good Today Hũ 340G\nSKU: 0430001270117 | 67,900 đ\n15\tBơ Đậu Phộng Mịn Good Today Hũ 340G\nSKU: 0430001270094 | 67,900 đ\n2. Xem xét hiển thị đậu phộng? (cần thảo luận)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "bơ đậu phộng",
+          "actual_expected": "1. 2 sản phẩm chứa bơ đậu phộng đang hiển thị sau bơ hạt phỉ ca cao\n14\tBơ Đậu Phộng Giòn Good Today Hũ 340G\nSKU: 0430001270117 | 67,900 đ\n15\tBơ Đậu Phộng Mịn Good Today Hũ 340G\nSKU: 0430001270094 | 67,900 đ\n2. Xem xét hiển thị đậu phộng? (cần thảo luận)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0102",
+      "query": "bao cao",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #None] thiếu sp bao cao su. Các sản phẩm bao cao su cần hiển thị ở top đầu\n1\t8934637513140\tHá Cảo Cholimex Gói 300G\n2\t8936077110132\tHá Cảo Tôm Bamboo Gói 270g\n3\t8936077110118\tHá Cảo Hoa Hồng Bamboo 300G\n4\t5052197050233\tBao Cao Su Durex Invisible Hộp 3 Cái (New)\n5\t8935347400065\tSủi Cảo Nhân Tôm TH true Food 300G\n6\t8934717271236\tHá Cảo Cầu Tre Mini Gói 500G\n7\t8935118500222\tHá Cảo Việt Sin 500G\n8\t8936210411966\tHá Cảo LC Foods Gói 300G\n9\t8936077112334\tHá Cảo Choice L Nhân Tôm Thịt Cải B",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "bao cao",
+          "actual_expected": "thiếu sp bao cao su. Các sản phẩm bao cao su cần hiển thị ở top đầu\n1\t8934637513140\tHá Cảo Cholimex Gói 300G\n2\t8936077110132\tHá Cảo Tôm Bamboo Gói 270g\n3\t8936077110118\tHá Cảo Hoa Hồng Bamboo 300G\n4\t5052197050233\tBao Cao Su Durex Invisible Hộp 3 Cái (New)\n5\t8935347400065\tSủi Cảo Nhân Tôm TH true Food 300G\n6\t8934717271236\tHá Cảo Cầu Tre Mini Gói 500G\n7\t8935118500222\tHá Cảo Việt Sin 500G\n8\t8936210411966\tHá Cảo LC Foods Gói 300G\n9\t8936077112334\tHá Cảo Choice L Nhân Tôm Thịt Cải Bó Xôi Gói 360G\n10\t8934717271311\tHá Cảo Chay Cầu Tre Gói 500G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0103",
+      "query": "quà cho bố",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #104] Cần xử lý lại",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 104,
+          "raw_query": "quà cho bố",
+          "actual_expected": "Cần xử lý lại",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0104",
+      "query": "rèm cửa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #105]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 105,
+          "raw_query": "rèm cửa",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0105",
+      "query": "đồ dùng học tập",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #106] đang hiển thị đồ chơi. cần xử lý lại hiển thị giấy, viết , tập,...(các loại đồ dùng học tập)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 106,
+          "raw_query": "đồ dùng học tập",
+          "actual_expected": "đang hiển thị đồ chơi. cần xử lý lại hiển thị giấy, viết , tập,...(các loại đồ dùng học tập)",
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0106",
+      "query": "đồ khô",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #107]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 107,
+          "raw_query": "đồ khô",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": "Comment 15/9 : \n1\t8936051093222\tGà Sấy Tỏi Ớt Doxaco Hũ 150G\t27\n2\t8936036213164\tThịt Sấy Khô Ăn Liền Gia Định Hộp Oval 200G\t4\n3\t8935064420278\tKhô Bò Miếng Hải Châu 70G\t16\n4\t8938549018328\tKhô Gà Cay Lá Chanh Prime L 55G\t147\n5\t8938520099025\tKhô Gà Posi Cay Lá Chanh Gói 40G\t106\n6\t8938520099032\tKhô Heo Chảy Tỏi Posi 40G\t96\n7\t8938520099018\tKhô Gà Posi Cay Gói 50G\t145\n8\t8938549018311\tKhô Gà Lá Chanh Prime L 180G\t63\n9\t8936051093055\tGà Xé Lá Chanh Doxaco Gói 100G\t33\n10\t8938520099964\tHeo Cháy Tỏi Posi Hộp 150G\t96\nComment 16/9 \n1\t8936178583743\tĐồ Chơi Rubik Khối Mặt Cười Cresta DK81302\t96\n2\t8936178583750\tĐồ Chơi Rubik Khối Tam Giác Cresta DK81303\t97\n3\t8936178583705\tĐồ Chơi Rubik Khối Ma Thuật Cresta DK81298\t96\n4\t8936178583699\tĐồ Chơi Rubik Khối Trụ Cạnh Tròn Cresta DK81297\t95\n5\t8936178584252\tĐồ Chơi Lắp Ráp Mô Tô Phân Khối Lớn Winka DK81353\t96\n6\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n7\t8935337504810\tĐồ Chơi Thả Khối Và Chong Chóng Sắc Màu PEEK A BOO PAB999\t4\n8\t8936178581602\tĐồ Chơi Rubik 3x3x3 Cresta DK81081\t99\n9\t8936178581633\tĐồ Chơi Rubik 4x4x4 Cresta DK81084\t100\n10\t0411317650008\tĐồ Chơi Nhựa Sunkids"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0107",
+      "query": "thực đơn low carb",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #108]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 108,
+          "raw_query": "thực đơn low carb",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0108",
+      "query": "thực phẩm ít calo",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #109]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 109,
+          "raw_query": "thực phẩm ít calo",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0109",
+      "query": "thực phẩm giàu chất xơ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #110]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 110,
+          "raw_query": "thực phẩm giàu chất xơ",
+          "actual_expected": null,
+          "fix_status_sep18": "DONE",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "DONE",
+          "note": "Comment 15/9:\n1\t8001440132520\tĐậu Gà Cirio Hộp 380G\t51\n2\t8936081292060\tNgũ Cốc Yến Mạch Hạnh Nhân Hạt Chia Xuân An Gói 400g\t75\n3\t2273590000004\tKhoai tây vàng 400g\t99\n4\t8934804025483\tNgũ Cốc Dinh Dưỡng Nestlé Nesvita Ít Đường Bịch 14 Gói x 25G\t26\n5\t8935011861130\tBữa Ăn 1 Phút Oatta yến mạch trái cây hạnh nhân phô mai túi 800g\t102\n6\t8936081292329\tNgũ Cốc Dinh Dưỡng Canxi Ít Đường Xuân An Gói 400g\t100\n7\t8938530115081\tGạo Còn Cám Home Rice 2kg\t18\n8\t8938522955466\tYến Mạch Canada Your Super Food 200G\t89\n9\t8936087310041\tGạo Lứt Đỏ Cỏ May Túi 2kg\t22\n10\t8809257334720\tBột Ngũ Cốc Óc Chó Hạnh Nhân Ý Dĩ Không Đường DAMTUH Hộp 720G\t47"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0110",
+      "query": "đồ dùng đi phượt",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #111]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 111,
+          "raw_query": "đồ dùng đi phượt",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0111",
+      "query": "đồ điện gia dụng",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #112]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 112,
+          "raw_query": "đồ điện gia dụng",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0112",
+      "query": "đồ ăn nhanh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #113]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 113,
+          "raw_query": "đồ ăn nhanh",
+          "actual_expected": null,
+          "fix_status_sep18": "NEED TO FIX",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "NEED TO FIX",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0113",
+      "query": "đồ nội trợ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #114]",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 114,
+          "raw_query": "đồ nội trợ",
+          "actual_expected": null,
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0114",
+      "query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #115] ưu tiên các sản phẩm \"nghệ đen\",\"mật ong nghệ\",\"tinh nghệ\" lên đầu",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 115,
+          "raw_query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+          "actual_expected": "ưu tiên các sản phẩm \"nghệ đen\",\"mật ong nghệ\",\"tinh nghệ\" lên đầu",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0115",
+      "query": "áo khoác giữ ấm mùa đông",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #116] ưu tiên sản phẩm là quần , áo, vớ . không hiển thị các loại đồ ăn thức uống",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 116,
+          "raw_query": "áo khoác giữ ấm mùa đông",
+          "actual_expected": "ưu tiên sản phẩm là quần , áo, vớ . không hiển thị các loại đồ ăn thức uống",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0116",
+      "query": "chuẩn bị năm học mới",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #117] không hiển thị thực phẩm (bầu, dưa leo,...) . ưu tiên áo , quần, bút, tập ,...(dụng cụ học tập)\n1\t8935324035921\tBalo Chống Gù Thiên Long BP-025/T24 Màu Hồng\n2\t8936123160487\tBầu Xanh 550G\n3\t8936200652119\tBầu Xanh Hữu Cơ Bio Ngon 500G\n4\t8938503008358\tTăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)\n5\t8935324035808\tBalo Chống Gù Thiên Long BP-016/T24 Màu Đỏ\n6\t8936234171006\tĐầm Học Sinh BPC Size 1-15\n7\t8935107202380\tMiếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)\n8\t8938",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 117,
+          "raw_query": "chuẩn bị năm học mới",
+          "actual_expected": "không hiển thị thực phẩm (bầu, dưa leo,...) . ưu tiên áo , quần, bút, tập ,...(dụng cụ học tập)\n1\t8935324035921\tBalo Chống Gù Thiên Long BP-025/T24 Màu Hồng\n2\t8936123160487\tBầu Xanh 550G\n3\t8936200652119\tBầu Xanh Hữu Cơ Bio Ngon 500G\n4\t8938503008358\tTăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)\n5\t8935324035808\tBalo Chống Gù Thiên Long BP-016/T24 Màu Đỏ\n6\t8936234171006\tĐầm Học Sinh BPC Size 1-15\n7\t8935107202380\tMiếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)\n8\t8938510875165\tDưa Leo Baby 500G (ea)\n9\t8886451000057\tSữa Similac Mom IQ Plus Hương Vani 900G\n10\t8936009650118\tTăm Bông Trẻ Em Choice L Thân Nhựa Hộp Tròn 160 Que\n11\t8936231020000\tBí Đỏ Baby 300G\n12\t4903111241439\tTã Dán Moony Cao Cấp Natural Nhật Bản Size M 46 Miếng (6-11kg)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0117",
+      "query": "추석",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #118] hiển thị các sản phẩm trung thu : bánh, lồng đèn, quà trung thu \n4\t2040420000004\tSu su 700g\n5\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\n6\t2088510000008\tChim Cút Tam Nông 500G\n7\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\n8\t8935268201727\tQuýt Đường Lão Hiếu Liêm 1kg\n9\t8936053924036\tLồng Đèn Pin L2 (Giao Mẫu Ngẫu Nhiên)\n10\t8934609607211\tBánh Trung Thu Dẻo Bibica Nhân Dứa Hạt Sen Không Trứng 150G\n11\t8936053924043\tLồ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 118,
+          "raw_query": "추석 / Moon festival",
+          "actual_expected": "hiển thị các sản phẩm trung thu : bánh, lồng đèn, quà trung thu \n4\t2040420000004\tSu su 700g\n5\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\n6\t2088510000008\tChim Cút Tam Nông 500G\n7\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\n8\t8935268201727\tQuýt Đường Lão Hiếu Liêm 1kg\n9\t8936053924036\tLồng Đèn Pin L2 (Giao Mẫu Ngẫu Nhiên)\n10\t8934609607211\tBánh Trung Thu Dẻo Bibica Nhân Dứa Hạt Sen Không Trứng 150G\n11\t8936053924043\tLồng Đèn Pin L3 (Giao Mẫu Ngẫu Nhiên)\n12\t2215470000001\tBít Tết Bò Phúc Thịnh Vượng 300G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0118",
+      "query": "Moon festival",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #118] hiển thị các sản phẩm trung thu : bánh, lồng đèn, quà trung thu \n4\t2040420000004\tSu su 700g\n5\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\n6\t2088510000008\tChim Cút Tam Nông 500G\n7\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\n8\t8935268201727\tQuýt Đường Lão Hiếu Liêm 1kg\n9\t8936053924036\tLồng Đèn Pin L2 (Giao Mẫu Ngẫu Nhiên)\n10\t8934609607211\tBánh Trung Thu Dẻo Bibica Nhân Dứa Hạt Sen Không Trứng 150G\n11\t8936053924043\tLồ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 118,
+          "raw_query": "추석 / Moon festival",
+          "actual_expected": "hiển thị các sản phẩm trung thu : bánh, lồng đèn, quà trung thu \n4\t2040420000004\tSu su 700g\n5\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\n6\t2088510000008\tChim Cút Tam Nông 500G\n7\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\n8\t8935268201727\tQuýt Đường Lão Hiếu Liêm 1kg\n9\t8936053924036\tLồng Đèn Pin L2 (Giao Mẫu Ngẫu Nhiên)\n10\t8934609607211\tBánh Trung Thu Dẻo Bibica Nhân Dứa Hạt Sen Không Trứng 150G\n11\t8936053924043\tLồng Đèn Pin L3 (Giao Mẫu Ngẫu Nhiên)\n12\t2215470000001\tBít Tết Bò Phúc Thịnh Vượng 300G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0119",
+      "query": "Mùa tựu trường",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #119] không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 119,
+          "raw_query": "Mùa tựu trường / back to school/ quay lại trường học",
+          "actual_expected": "không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0120",
+      "query": "back to school",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #119] không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 119,
+          "raw_query": "Mùa tựu trường / back to school/ quay lại trường học",
+          "actual_expected": "không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0121",
+      "query": "quay lại trường học",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #119] không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 119,
+          "raw_query": "Mùa tựu trường / back to school/ quay lại trường học",
+          "actual_expected": "không cần hiển thị các sản phẩm cate đồ chơi (chỉ hiển thị sản phẩm liên quan đến trang thiết bị đồ dùng cần thiết cho việc học)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0122",
+      "query": "tía tô",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #120] chưa hiển thị sp tía tô Tía tô hữu cơ 100g (ea)\nSKU: 8938525767295",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 120,
+          "raw_query": "tía tô",
+          "actual_expected": "chưa hiển thị sp tía tô Tía tô hữu cơ 100g (ea)\nSKU: 8938525767295",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0123",
+      "query": "bia corona",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #121] search result k đúng \n1\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n2\tP2317BIA333\tBia 333\n3\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n4\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n5\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n6\t8936000440039\tBia Hà Nội 4.6% ABV Lon 330ml\n7\t18935012443301\tThùng 24 Lon Bia Sài Gòn Special Sleek 4.9% ABV 330ml\n8\t8935012443342\tBia Sài Gòn Export Premium 4.8% ABV Lon 330ml\n9\t8934692090051\tBia 1664 Blanc 5% ABV Lon 250ml\n1",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 121,
+          "raw_query": "bia corona",
+          "actual_expected": "search result k đúng \n1\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n2\tP2317BIA333\tBia 333\n3\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n4\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n5\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n6\t8936000440039\tBia Hà Nội 4.6% ABV Lon 330ml\n7\t18935012443301\tThùng 24 Lon Bia Sài Gòn Special Sleek 4.9% ABV 330ml\n8\t8935012443342\tBia Sài Gòn Export Premium 4.8% ABV Lon 330ml\n9\t8934692090051\tBia 1664 Blanc 5% ABV Lon 250ml\n10\t8935337000190\tBia Ngũ Hành Thổ 4.9% ABV Lon 330ml",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0124",
+      "query": "banh",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #122] cần ưu tiên hiển thị banh, bánh. result hiện tại k đúng\n1\t8935212830683\tNước Lau Sàn Maxkleen Ban Mai Thanh Mát Túi 3.6kg\n2\t4710731091050\tTúi Thơm Farcent Hương Ban Mai 10g\n3\t8690536829743\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 29Cm 4 Miếng\n4\t8690536829767\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 35Cm 3 Miếng\n5\t4006592420451\tĐồ Chơi Banh Mềm Cho Bé ABC 0M+\n6\t8936029424997\tBánh Cá Orion Bống Bang Mochi Cốm Xanh Đậu Đỏ Gói 145G\n7\t8858702403689\tRong Biển Taokaenoi B",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 122,
+          "raw_query": "banh",
+          "actual_expected": "cần ưu tiên hiển thị banh, bánh. result hiện tại k đúng\n1\t8935212830683\tNước Lau Sàn Maxkleen Ban Mai Thanh Mát Túi 3.6kg\n2\t4710731091050\tTúi Thơm Farcent Hương Ban Mai 10g\n3\t8690536829743\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 29Cm 4 Miếng\n4\t8690536829767\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 35Cm 3 Miếng\n5\t4006592420451\tĐồ Chơi Banh Mềm Cho Bé ABC 0M+\n6\t8936029424997\tBánh Cá Orion Bống Bang Mochi Cốm Xanh Đậu Đỏ Gói 145G\n7\t8858702403689\tRong Biển Taokaenoi Big Bang Vị Mực Cay 6G\n8\t8858702403672\tRong Biển Taokaenoi Big Bang Vị Truyền Thống 6G\n9\t8997226660328\tBánh Cracker Krisma Vị Socola Hộp 100G\n10\t8938234578274\tBánh Đồng Tiền Việt Hưng Gói 500G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0125",
+      "query": "giay",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #123] cần hiển thị sp giày, giấy . actual result đang sai\n1\t0412133790008\tCủ Gừng 100G (ea)\n2\t8934781061047\tViên Gia Vị Phở Bò Ông Chà Và Gold 126g\n3\t8936028042369\tXốt Gia Vị Hoàn Chỉnh Cà Ri Barona 80G\n4\t8936079284251\tHành Bột Natural Dh Foods Hũ 40G\n5\t8936079284268\tBột Tỏi Natural DH Foods 60g\n6\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n7\t0074880020021\tMù Tạt Xanh Wasabi Neri S&B Tuýp 43G\n8\t8935137601689\tTrà Gừng Hoà Tan Trà Đại Gia 100G (5G x 20 Gói)\n9\t8934637515236\tSốt Xá ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 123,
+          "raw_query": "giay",
+          "actual_expected": "cần hiển thị sp giày, giấy . actual result đang sai\n1\t0412133790008\tCủ Gừng 100G (ea)\n2\t8934781061047\tViên Gia Vị Phở Bò Ông Chà Và Gold 126g\n3\t8936028042369\tXốt Gia Vị Hoàn Chỉnh Cà Ri Barona 80G\n4\t8936079284251\tHành Bột Natural Dh Foods Hũ 40G\n5\t8936079284268\tBột Tỏi Natural DH Foods 60g\n6\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n7\t0074880020021\tMù Tạt Xanh Wasabi Neri S&B Tuýp 43G\n8\t8935137601689\tTrà Gừng Hoà Tan Trà Đại Gia 100G (5G x 20 Gói)\n9\t8934637515236\tSốt Xá Xíu Cholimex Gói 70g\n10\t8938509638122\tMật Ong Hoa Cà Phê Gia Lai Choice L Chai 380G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0126",
+      "query": "thit",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #124] search result chưa đúng, cần ưu tiên hiển thị các sản phẩm thịt\n1\t9310155100335\tMì San Remo Thin Spaghetti 500G\n2\t8809931430939\tBánh Quy Wondertok Thin Masterpieces Vị Sữa Gói 240G\n3\t8936039230298\tMực Trứng Phan Thiết Đông Lạnh Đại Nam 450G\n4\t4987176095794\tDao Cạo Râu Gillette Super Thin II Gói 8+2\n5\t8806035038085\tMiếng Dán Mụn Mayan Ultra Thin Spot 20+4 Miếng\n6\t8806035038078\tMiếng Dán Mụn Mayan Ultra Thin Spot Plus 12+8 Miếng\n7\t8936178584689\tĐồ Chơi Mô Hình Bộ Sưu Tập Xe Thiế",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 124,
+          "raw_query": "thit",
+          "actual_expected": "search result chưa đúng, cần ưu tiên hiển thị các sản phẩm thịt\n1\t9310155100335\tMì San Remo Thin Spaghetti 500G\n2\t8809931430939\tBánh Quy Wondertok Thin Masterpieces Vị Sữa Gói 240G\n3\t8936039230298\tMực Trứng Phan Thiết Đông Lạnh Đại Nam 450G\n4\t4987176095794\tDao Cạo Râu Gillette Super Thin II Gói 8+2\n5\t8806035038085\tMiếng Dán Mụn Mayan Ultra Thin Spot 20+4 Miếng\n6\t8806035038078\tMiếng Dán Mụn Mayan Ultra Thin Spot Plus 12+8 Miếng\n7\t8936178584689\tĐồ Chơi Mô Hình Bộ Sưu Tập Xe Thiết Giáp Winka DK81396\n8\t8934679455248\tCháo Ăn Liền Gấu Đỏ Vị Thịt Bằm Nấm Đùi Gà Có Thịt Thật Gói 74G\n9\t9556704326065\tNồi ủ La Gourmet 4.5L ( màu xám)\n10\t8935259818040\tLẩu Điện Sunhouse SHD4528",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0127",
+      "query": "cải cúc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #125] cần hiển thị tần ô\n1\t8938544896006\tCải Dún Thủy Canh VITEC FARM 300G (ea)\n2\t8938544896563\tCải Thìa Baby VITEC FARM 250G\n3\t2039620000006\tCải Thảo 900G\n4\t8938544896013\tCải Ngọt Thủy Canh VITEC FARM 300G (ea)\n5\t8936204033983\tCủ Cải Trắng Gọt Vỏ 365 Fresh 500G\n6\t8936049694240\tBắp Cải Tím Cắt Sợi 365 Fresh 200G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 125,
+          "raw_query": "cải cúc",
+          "actual_expected": "cần hiển thị tần ô\n1\t8938544896006\tCải Dún Thủy Canh VITEC FARM 300G (ea)\n2\t8938544896563\tCải Thìa Baby VITEC FARM 250G\n3\t2039620000006\tCải Thảo 900G\n4\t8938544896013\tCải Ngọt Thủy Canh VITEC FARM 300G (ea)\n5\t8936204033983\tCủ Cải Trắng Gọt Vỏ 365 Fresh 500G\n6\t8936049694240\tBắp Cải Tím Cắt Sợi 365 Fresh 200G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0128",
+      "query": "cá quả",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #126] cần ưu tiên cá lóc\n1\t8935105810297\tCá Trích Sốt Cà Lilly Lon 155G\n2\t8935105810259\tCá Trích Ngâm Dầu Sea Crown Lon 125G\n3\t2275220000002\tCá Đổng 500G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 126,
+          "raw_query": "cá quả",
+          "actual_expected": "cần ưu tiên cá lóc\n1\t8935105810297\tCá Trích Sốt Cà Lilly Lon 155G\n2\t8935105810259\tCá Trích Ngâm Dầu Sea Crown Lon 125G\n3\t2275220000002\tCá Đổng 500G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0129",
+      "query": "dụng cụ vệ sinh nhà cửa",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #127] sai bộ result . cần hiển thị dụng cụ làm vệ sinh\n1\t8935128261441\tTập Sinh Viên Thuận Tiến 300 Trang (Giao Mẫu Ngẫu Nhiên)\n2\t8858741710298\tGiấy Photo Double A A4 70gsm Sấp 500 Tờ\n3\t8935128264558\tGiấy Photo Choice L A5 70gsm Sấp 500 Tờ\n4\t6976693306986\tSổ Tay 3D Weibo 95590-2 Hình Cây Kem 1 Quyển (Giao mẫu ngẫu nhiên)\n5\t6976693306719\tSổ Tay 3D Weibo 95564-5 Hình Cún 1 Quyển (Giao mẫu ngẫu nhiên)\n6\t6975628222735\tSổ Tay Weibo 95410 Hình Thú 1 Quyển (Giao mẫu ngẫu nhiên)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 127,
+          "raw_query": "dụng cụ vệ sinh nhà cửa",
+          "actual_expected": "sai bộ result . cần hiển thị dụng cụ làm vệ sinh\n1\t8935128261441\tTập Sinh Viên Thuận Tiến 300 Trang (Giao Mẫu Ngẫu Nhiên)\n2\t8858741710298\tGiấy Photo Double A A4 70gsm Sấp 500 Tờ\n3\t8935128264558\tGiấy Photo Choice L A5 70gsm Sấp 500 Tờ\n4\t6976693306986\tSổ Tay 3D Weibo 95590-2 Hình Cây Kem 1 Quyển (Giao mẫu ngẫu nhiên)\n5\t6976693306719\tSổ Tay 3D Weibo 95564-5 Hình Cún 1 Quyển (Giao mẫu ngẫu nhiên)\n6\t6975628222735\tSổ Tay Weibo 95410 Hình Thú 1 Quyển (Giao mẫu ngẫu nhiên)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0130",
+      "query": "canh chua cá lóc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #128] result chưa đúng. đang hiển thị các sản phẩm k liên quan",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 128,
+          "raw_query": "canh chua cá lóc",
+          "actual_expected": "result chưa đúng. đang hiển thị các sản phẩm k liên quan",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0131",
+      "query": "nứơc ngọt",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #129] result bị sai, cần hiển thị sản phẩm nước ngọt\n1\t8935001719960\tKẹo Nhai Mentos Vị Quả Mọng Gói 94.5G\n2\t8935001719946\tKẹo Nhai Mentos Vị Quả Mọng Hũ 90G\n3\t8809714120712\tThạch Nổ Vị Dâu Tiktok Gói 160G\n4\t8935001716563\tKẹo Nhai Mentos Sữa Chua Hũ 90g\n5\t4895138305686\tKẹo Mút Nổ Striking Hương Nho Gói 13.8g\n6\t8858731201119\tThạch Sữa Chua Trái Cây Nanaco Vị Tổng Hợp 750G",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 129,
+          "raw_query": "nứơc ngọt",
+          "actual_expected": "result bị sai, cần hiển thị sản phẩm nước ngọt\n1\t8935001719960\tKẹo Nhai Mentos Vị Quả Mọng Gói 94.5G\n2\t8935001719946\tKẹo Nhai Mentos Vị Quả Mọng Hũ 90G\n3\t8809714120712\tThạch Nổ Vị Dâu Tiktok Gói 160G\n4\t8935001716563\tKẹo Nhai Mentos Sữa Chua Hũ 90g\n5\t4895138305686\tKẹo Mút Nổ Striking Hương Nho Gói 13.8g\n6\t8858731201119\tThạch Sữa Chua Trái Cây Nanaco Vị Tổng Hợp 750G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0132",
+      "query": "chay",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #130] cần ưu tiên thực phẩm chay\n1\t8935049501701\tTrà Đào Và Hạt Chia Fuze Tea+ Chai 1L\n2\t18935049501739\tLốc 24 Chai Trà Chanh Sả Fuze Tea+ 450ml/Chai\n3\t18935049500701\tLốc 24 Chai Trà Chanh Dây Và Hạt Chia Fuze Tea+ 350ml/Chai\n4\t8936127796613\tTrà Vải Tự Nhiên TH True Tea Chai 350ml\n5\t8936127796514\tTrà Đào Tự Nhiên TH True Tea Chai 350ml\n6\t4710105060019\tTrà Kuang Chuan Mật Ong Hoa Lài Jasmine Honey Tea Chai 585ML\n7\t8935049500704\tTrà Chanh Dây Và Hạt Chia Fuze Tea+ Chai 350ml\n8\t1893504",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 130,
+          "raw_query": "chay",
+          "actual_expected": "cần ưu tiên thực phẩm chay\n1\t8935049501701\tTrà Đào Và Hạt Chia Fuze Tea+ Chai 1L\n2\t18935049501739\tLốc 24 Chai Trà Chanh Sả Fuze Tea+ 450ml/Chai\n3\t18935049500701\tLốc 24 Chai Trà Chanh Dây Và Hạt Chia Fuze Tea+ 350ml/Chai\n4\t8936127796613\tTrà Vải Tự Nhiên TH True Tea Chai 350ml\n5\t8936127796514\tTrà Đào Tự Nhiên TH True Tea Chai 350ml\n6\t4710105060019\tTrà Kuang Chuan Mật Ong Hoa Lài Jasmine Honey Tea Chai 585ML\n7\t8935049500704\tTrà Chanh Dây Và Hạt Chia Fuze Tea+ Chai 350ml\n8\t18935049500695\tLốc 24 Chai Trà Đào Và Hạt Chia Fuze Tea+ 450ml/Chai\n9\t8938557832008\tTrà Xanh Oi Ocha Không Đường Chai 1L\n10\t8935001460077\tDầu Hào Chay Âu Lạc Chai 250 ml",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0133",
+      "query": "dầu gội dau lchoice",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #131] Cần ưu tiên lên top 1: Dầu Gội Choice L Shinie Làm Sạch Gàu 800ml\nMã sản phẩm 8938520295816",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 131,
+          "raw_query": "dầu gội dau lchoice",
+          "actual_expected": "Cần ưu tiên lên top 1: Dầu Gội Choice L Shinie Làm Sạch Gàu 800ml\nMã sản phẩm 8938520295816",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0134",
+      "query": "tương ớt hàn quốc",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #132] đang hiển thị các sp k có nguồn gốc hàn quốc",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 132,
+          "raw_query": "tương ớt hàn quốc",
+          "actual_expected": "đang hiển thị các sp k có nguồn gốc hàn quốc",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0135",
+      "query": "promess",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #133] các sản phẩm k phải Promess thì k nên hiển thị\n5\t\nKhoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g\nSKU: 8936003728943 | 141,000 đ\t+ Extra\n6\t\nKẹo Trái Cây Bạc Hà Fox's Gói 90G\nSKU: 8997212800332 | 21,500 đ\t+ Extra\n7\t\nKẹo Ngậm Không Đường Mentos Pure Fresh Hương Bạc Hà Hộp 35g\nSKU: 8935001712282 | 35,900 đ\t+ Extra\n8\t\nKẹo Dream Vị Quế 200G\nSKU: 8809693270620 | 49,900 đ\t+ Extra",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 133,
+          "raw_query": "promess",
+          "actual_expected": "các sản phẩm k phải Promess thì k nên hiển thị\n5\t\nKhoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g\nSKU: 8936003728943 | 141,000 đ\t+ Extra\n6\t\nKẹo Trái Cây Bạc Hà Fox's Gói 90G\nSKU: 8997212800332 | 21,500 đ\t+ Extra\n7\t\nKẹo Ngậm Không Đường Mentos Pure Fresh Hương Bạc Hà Hộp 35g\nSKU: 8935001712282 | 35,900 đ\t+ Extra\n8\t\nKẹo Dream Vị Quế 200G\nSKU: 8809693270620 | 49,900 đ\t+ Extra",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0136",
+      "query": "oatside",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #134] Search result không thấy hiển thị 2 sp này\t\nSữa Yến Mạch Oatside Truyền Thống 1L\nSKU 8997240600041\nSữa Yến Mạch Oatside Vị Socola Hộp 1L\nSKU 8997240600058",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 134,
+          "raw_query": "oatside",
+          "actual_expected": "Search result không thấy hiển thị 2 sp này\t\nSữa Yến Mạch Oatside Truyền Thống 1L\nSKU 8997240600041\nSữa Yến Mạch Oatside Vị Socola Hộp 1L\nSKU 8997240600058 ",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0137",
+      "query": "diana",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #135] top 16,20,21,22 thuộc về diana nhưng không hiển thị ở search result mà đang nằm trong recommendation\n15\t8938506010310\tChuối Nam Huy Sấy Giòn Gói 200G\n16\t8934755010477\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size M-L Bịch 12 Chiếc\n17\t8935095028405\tĐĩa Tròn Melamine PV086-8 Nhám Màu Light Brown 20cm\n18\t0400285460009\tPizza Phô Mai Cheese & Dough 1 Miếng 166g\n19\t0400285400005\tPizza Phô Mai Cheese & Dough 1/2 Cái 500g\n20\t8934755010729\tBăng Vệ Sinh Dạng Quần Diana Double Fresh Size L-X",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 135,
+          "raw_query": "diana",
+          "actual_expected": "top 16,20,21,22 thuộc về diana nhưng không hiển thị ở search result mà đang nằm trong recommendation\n15\t8938506010310\tChuối Nam Huy Sấy Giòn Gói 200G\n16\t8934755010477\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size M-L Bịch 12 Chiếc\n17\t8935095028405\tĐĩa Tròn Melamine PV086-8 Nhám Màu Light Brown 20cm\n18\t0400285460009\tPizza Phô Mai Cheese & Dough 1 Miếng 166g\n19\t0400285400005\tPizza Phô Mai Cheese & Dough 1/2 Cái 500g\n20\t8934755010729\tBăng Vệ Sinh Dạng Quần Diana Double Fresh Size L-XL Gói 2 Miếng\n21\t8934755010484\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size L-XL Bịch 2 Chiếc\n22\t8934755010163\tBăng Vệ Sinh Diana Mama Cho Mẹ Sau Sinh Không Cánh 44.5cm Gói 12 Miếng\n23\t8938523699093\tPizza Thập Cẩm Thịt Manna 120g",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0138",
+      "query": "sandwich",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #136] thiếu sp\nBánh Sandwich Lạt POONGMISO 300G\nSKU: 0400205560000 | 25,000 đ\n3\t\nBánh Sandwich Sữa POONGMISO 300G\nSKU: 0400205580008 | 49,000 đ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 136,
+          "raw_query": "sandwich",
+          "actual_expected": "thiếu sp\nBánh Sandwich Lạt POONGMISO 300G\nSKU: 0400205560000 | 25,000 đ\n3\t\nBánh Sandwich Sữa POONGMISO 300G\nSKU: 0400205580008 | 49,000 đ",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0139",
+      "query": "quần áo thể thao nam",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #137] thiếu các sp mà ngày 10/9 đã có\nQuần Thể Dục Học Sinh BPC Size 1-15 (8936234171068)\nQuần Thể Dục Thun 4 Chiều BPC Size 6-20 (8936234171075)\nÁo Thể Thao Nam Cổ Tròn Ngắn Tay Màu Trắng Xanh Size M-XL (8936051242705)\nQuần Boxer Nam ONOFF Cotton 20018 Size M-XXL (8936032987014)\nQuần Boxer Nam Basic Icon BX007 Size S-XL Màu Xám (8938527961721)\nÁo Thể Dục BPC Size 1-15 (8936234171105)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 137,
+          "raw_query": "quần áo thể thao nam",
+          "actual_expected": "thiếu các sp mà ngày 10/9 đã có\nQuần Thể Dục Học Sinh BPC Size 1-15 (8936234171068)\nQuần Thể Dục Thun 4 Chiều BPC Size 6-20 (8936234171075)\nÁo Thể Thao Nam Cổ Tròn Ngắn Tay Màu Trắng Xanh Size M-XL (8936051242705)\nQuần Boxer Nam ONOFF Cotton 20018 Size M-XXL (8936032987014)\nQuần Boxer Nam Basic Icon BX007 Size S-XL Màu Xám (8938527961721)\nÁo Thể Dục BPC Size 1-15 (8936234171105)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0140",
+      "query": "nước điện giải",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #138] nước điện giải đang ở no.16\nNước Giải Khát Có Gas Fanta Xá Xị Lon 320ml (8935049501589)\nNước Giải Khát Có Gas Fanta Soda Kem Chai 1.5L (8935049501305)\nNước Giải Khát Có Gas Fanta Cam Lon 235ml (8935049501466)\nNước Giải Khát Có Gas Mirinda Xá Xị 390ml x Lốc 6 Chai (8934588133275)\nLốc 6 Nước Điện Giải Revive Không Calo Chai 500ml (8934588743030)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 138,
+          "raw_query": "nước điện giải",
+          "actual_expected": "nước điện giải đang ở no.16\nNước Giải Khát Có Gas Fanta Xá Xị Lon 320ml (8935049501589)\nNước Giải Khát Có Gas Fanta Soda Kem Chai 1.5L (8935049501305)\nNước Giải Khát Có Gas Fanta Cam Lon 235ml (8935049501466)\nNước Giải Khát Có Gas Mirinda Xá Xị 390ml x Lốc 6 Chai (8934588133275)\nLốc 6 Nước Điện Giải Revive Không Calo Chai 500ml (8934588743030)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0141",
+      "query": "clear",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #139] các sản phẩm clear cần ưu tiên hiển thị ở top\n10\t8935006543188\tMiếng Dán Mụn Acnes Clear Patch Hộp 48 Miếng\n11\t8935049500414\tNước Tinh Khiết Dasani Chai 350ml\n12\t8934868152811\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 900G\n13\t8934868152804\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 630G\n14\t8934868171829\tKem Tẩy Sunlight Chuyên Dụng Siêu Sạch Siêu Sáng Chai 690G\n15\t8936186271915\tBộ Lau Nhà Clean Home Tiện Dụng\n16\t8934868163404\tDầ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 139,
+          "raw_query": "clear",
+          "actual_expected": "các sản phẩm clear cần ưu tiên hiển thị ở top\n10\t8935006543188\tMiếng Dán Mụn Acnes Clear Patch Hộp 48 Miếng\n11\t8935049500414\tNước Tinh Khiết Dasani Chai 350ml\n12\t8934868152811\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 900G\n13\t8934868152804\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 630G\n14\t8934868171829\tKem Tẩy Sunlight Chuyên Dụng Siêu Sạch Siêu Sáng Chai 690G\n15\t8936186271915\tBộ Lau Nhà Clean Home Tiện Dụng\n16\t8934868163404\tDầu Gội Dành Cho Nam Clear Men 3 In 1 Tắm, Gội, Dưỡng Active Cool Chai 340G\n17\t8938512632032\tNước Tinh Khiết Satori 1.5L\n18\t8934868152590\tDầu Gội Sạch Gàu Clear Bạc Hà Mát Lạnh Chai 880G\n19\t8938512632230\tNước Uống Tinh Khiết Choice L 1.5L",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0142",
+      "query": "bao tay",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #140] đang hiển thị thêm các sản phẩm tây tế bào chết",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 140,
+          "raw_query": "bao tay",
+          "actual_expected": "đang hiển thị thêm các sản phẩm tây tế bào chết",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0143",
+      "query": "roi",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #141] cần ưu tiên mận, roi. HIện tại một số sản phẩm ba rọi đang hiển thị trên mận\n7\t8936194975317\tThịt Ba Rọi Heo Japfa 300G\t25\n8\t8938524577314\tBa Rọi Xông Khói Shinshu 200G\t4\n9\t2204240000006\tBa Rọi Heo 365 Fresh 300G\t98\n10\t8935210904539\tMận Dẻo Đặc Biệt 200G\t10\n11\t8801382126560\tMước Mận Xanh Woongjin 500ML\t2\n12\t2204150000004\tBa Rọi Rút Sườn 365 Fresh 500G\t94\n13\t8935019514113\tBa Rọi Xông Khói Le Gourmet 200G\t28\n14\t2220330000008\tBa Rọi Khứa BBQ 365 Fresh 300G\t98\n15\t8935019514137\tBa ",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 141,
+          "raw_query": "roi",
+          "actual_expected": "cần ưu tiên mận, roi. HIện tại một số sản phẩm ba rọi đang hiển thị trên mận\n7\t8936194975317\tThịt Ba Rọi Heo Japfa 300G\t25\n8\t8938524577314\tBa Rọi Xông Khói Shinshu 200G\t4\n9\t2204240000006\tBa Rọi Heo 365 Fresh 300G\t98\n10\t8935210904539\tMận Dẻo Đặc Biệt 200G\t10\n11\t8801382126560\tMước Mận Xanh Woongjin 500ML\t2\n12\t2204150000004\tBa Rọi Rút Sườn 365 Fresh 500G\t94\n13\t8935019514113\tBa Rọi Xông Khói Le Gourmet 200G\t28\n14\t2220330000008\tBa Rọi Khứa BBQ 365 Fresh 300G\t98\n15\t8935019514137\tBa Rọi Xông Khói Le Gourmet 500G\t36\n16\t2211780000007\tBa Rọi Heo Thảo Mộc Sagri 500G\t99\n17\t8938541718110\tMận Róc Hạt Nhập Khẩu Hộp 500G",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0144",
+      "query": "kem dưỡng ẩm cerave 170g",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #143] đang hiển thị thêm các sản phẩm kem đánh răng, xịt ngăn mùi",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 143,
+          "raw_query": "kem dưỡng ẩm cerave 170g",
+          "actual_expected": "đang hiển thị thêm các sản phẩm kem đánh răng, xịt ngăn mùi",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0145",
+      "query": "dép lào",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #144] cần ưu tiên dép lào, dép kẹp.\nk nên hiển thị sáp ngăn mùi, đậu hà lan",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": 144,
+          "raw_query": "dép lào",
+          "actual_expected": "cần ưu tiên dép lào, dép kẹp.\nk nên hiển thị sáp ngăn mùi, đậu hà lan",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "Comment 18/9 \n1\t8936070126987\tDép Quai Ngang Nam Trơn Hù Kiệt HK3172 Màu Kem Size 39-42\t3\n2\t8936218291850\tDép Rọ Nam Nữ Siêu Nhẹ Eva Vietmadeco HY1912 Size 35-45 Inch 03.24 (Giao mẫu ngẫu nhiên)\t96\n3\t8936070126253\tDép Kẹp Nữ Hù Kiệt 3192 Màu Xám Đậm Size 35-38\t34\n4\t8936070126598\tDép Kẹp Nam Hù Kiệt 3192 Màu Xám Đỏ Size 39-42\t1\n5\t8936070126345\tDép Nữ Bít Mũi Hai Quai Hù Kiệt 3162 Màu Kem Size 35-38\t12\n6\t8936070125874\tDép Quai Ngang Nam Trơn Hù Kiệt HK3172 Màu Xám Đỏ Size 39-42\t3\n7\t8936070121142\tDép Quai Ngang Nữ Hù Kiệt HK3207 Size 35-38\t50\n8\t8936085120406\tDép Cói Quai Kẹp Choice L Màu Đỏ Đô\t14\n9\t8936070126314\tDép Nữ Bít Mũi Hai Quai Hù Kiệt 3162 Màu Xám Đỏ Size 35-38\t3\n10\t8936085120437\tDép Cói Quai Kẹp Choice L Màu Xanh Dương\t18"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0146",
+      "query": "trái bơ",
+      "dimension": "part1_smartsearch",
+      "note": "[SmartSearch #None] cần hiển thị ưu tiên bơ sáp \nhiện tại khi search quả bơ thì k ra kết quả bơ sáp (dù có sản phẩm)",
+      "sources": [
+        {
+          "sheet": "SmartSearch",
+          "no": null,
+          "raw_query": "trái bơ",
+          "actual_expected": "cần hiển thị ưu tiên bơ sáp \nhiện tại khi search quả bơ thì k ra kết quả bơ sáp (dù có sản phẩm)",
+          "fix_status_sep18": "OPEN",
+          "last_fix_date": "Sep 18",
+          "last_fix_status": "OPEN",
+          "note": "Comment 18/09:\n1\t8935256611200\tĐồ Chơi Lắp Ráp Trái Cây Forange Block FC8292-5 Trái Bơ (117 Chi Tiết)\t94\n2\t8936037367149\tKem Hấp Dầu M-Pros Phục Hồi Tóc Khô Xơ Trái Bơ 500ml\t9"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0147",
+      "query": "x-men",
+      "dimension": "part1_autocomplete",
+      "note": "[AutoComplete #1]",
+      "sources": [
+        {
+          "sheet": "AutoComplete",
+          "no": 1,
+          "raw_query": "x-men",
+          "actual_expected": null,
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": "đang hiển thị list sp"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0148",
+      "query": "hộp quà",
+      "dimension": "part1_autocomplete",
+      "note": "[AutoComplete #2] - hộp quà tết\n- hộp quà du lịch\n- hộp quà dầu đậu nành",
+      "sources": [
+        {
+          "sheet": "AutoComplete",
+          "no": 2,
+          "raw_query": "hộp quà",
+          "actual_expected": "- hộp quà tết\n- hộp quà du lịch\n- hộp quà dầu đậu nành",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": "đang hiển thị list sp"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0149",
+      "query": "sữa bột p",
+      "dimension": "part1_autocomplete",
+      "note": "[AutoComplete #3] - sữa bột pha sẵn\n- sữa bột Pediasure",
+      "sources": [
+        {
+          "sheet": "AutoComplete",
+          "no": 3,
+          "raw_query": "sữa bột p",
+          "actual_expected": "- sữa bột pha sẵn\n- sữa bột Pediasure",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": "đang hiển thị list sp"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0150",
+      "query": "bột giặt",
+      "dimension": "part1_autocomplete",
+      "note": "[AutoComplete #8] Cần bổ sung thêm các gợi ý bột giặt khác.(Surf,Ariel,...)",
+      "sources": [
+        {
+          "sheet": "AutoComplete",
+          "no": 8,
+          "raw_query": "bột giặt",
+          "actual_expected": "Cần bổ sung thêm các gợi ý bột giặt khác.(Surf,Ariel,...)\n",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 17",
+          "last_fix_status": "OPEN",
+          "note": "Comment 15/9: #\tSuggestion Text\n1\tbột giặt\n2\tbột giặt omo\n3\tbột giặt omo comfort"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0151",
+      "query": "수박씨",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #1] Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt M",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 1,
+          "raw_query": "hạt dưa/수박씨",
+          "actual_expected": "Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size L 3.2kg\t100\n6\t0400317870004\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg\t100\n7\t0400317860005\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size S 2kg\t100\n8\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0\nKO :\n1\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0152",
+      "query": "돼지파",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 2,
+          "raw_query": "củ kiệu / 돼지파/ маринованный лук кьеу / 腌藠头",
+          "actual_expected": "KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướp Đồ Nướng LEE KUM KEE 45G\t202\n10\t8938504001785\tTàu Hũ Ky Tojy 80G\t79\n11\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\nZH: k show được sp củ kiệu\n1\t8935118500482\tCá tẩm cốm dẹp Việt Sin 500g\t64\n2\t8935297104167\tXốt Chiên Nước Mắm Cầu Tre Gói 80G\t73\n3\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\t72\n4\t8936035340656\tMắm Tôm Chua Sông Hương Hũ 430G\t28\n5\t8936191317820\tBộ Gia Vị X2 Hoàn Chỉnh Thịt Nướng Và Chiên Tứ Xuyên Má Bảy Gói 80G\t15",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0153",
+      "query": "маринованный лук кьеу",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 2,
+          "raw_query": "củ kiệu / 돼지파/ маринованный лук кьеу / 腌藠头",
+          "actual_expected": "KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướp Đồ Nướng LEE KUM KEE 45G\t202\n10\t8938504001785\tTàu Hũ Ky Tojy 80G\t79\n11\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\nZH: k show được sp củ kiệu\n1\t8935118500482\tCá tẩm cốm dẹp Việt Sin 500g\t64\n2\t8935297104167\tXốt Chiên Nước Mắm Cầu Tre Gói 80G\t73\n3\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\t72\n4\t8936035340656\tMắm Tôm Chua Sông Hương Hũ 430G\t28\n5\t8936191317820\tBộ Gia Vị X2 Hoàn Chỉnh Thịt Nướng Và Chiên Tứ Xuyên Má Bảy Gói 80G\t15",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0154",
+      "query": "腌藠头",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 2,
+          "raw_query": "củ kiệu / 돼지파/ маринованный лук кьеу / 腌藠头",
+          "actual_expected": "KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướp Đồ Nướng LEE KUM KEE 45G\t202\n10\t8938504001785\tTàu Hũ Ky Tojy 80G\t79\n11\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\nZH: k show được sp củ kiệu\n1\t8935118500482\tCá tẩm cốm dẹp Việt Sin 500g\t64\n2\t8935297104167\tXốt Chiên Nước Mắm Cầu Tre Gói 80G\t73\n3\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\t72\n4\t8936035340656\tMắm Tôm Chua Sông Hương Hũ 430G\t28\n5\t8936191317820\tBộ Gia Vị X2 Hoàn Chỉnh Thịt Nướng Và Chiên Tứ Xuyên Má Bảy Gói 80G\t15",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0155",
+      "query": "선물 바구니",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": null,
+          "raw_query": "giỏ quà tết / 선물 바구니 / 礼篮/ 正月ギフトバスケット",
+          "actual_expected": "KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0156",
+      "query": "礼篮",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": null,
+          "raw_query": "giỏ quà tết / 선물 바구니 / 礼篮/ 正月ギフトバスケット",
+          "actual_expected": "KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1-0157",
+      "query": "正月ギフトバスケット",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": null,
+          "raw_query": "giỏ quà tết / 선물 바구니 / 礼篮/ 正月ギフトバスケット",
+          "actual_expected": "KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

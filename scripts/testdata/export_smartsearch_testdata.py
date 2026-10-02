@@ -40,12 +40,16 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import product_source as _product_source  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 SRC_DIR = ROOT / "SmartSearch" / "test_data" / "json" / "_source"
 BATCHES_DIR = ROOT / "SmartSearch" / "test_data" / "json" / "batches"
 OUT_DIR_DEV = ROOT / "SmartSearch" / "test_data" / "json" / "for_dev"
 OUT_DIR_XLSX = ROOT / "SmartSearch" / "test_data" / "excel"
-PRODUCT_NDJSON = ROOT / "data" / "ProductInfo" / "mart_vi_nsg_product.ndjson"
+PRODUCT_NDJSON = _product_source.ndjson("nsg")  # xem scripts/product_source.py
 
 TODAY = date.today().strftime("%Y%m%d")
 
@@ -72,7 +76,7 @@ def fmt_price(v) -> str:
 
 def load_catalog(store: str = "nsg") -> dict[str, dict]:
     out: dict[str, dict] = {}
-    product_ndjson = ROOT / "data" / "ProductInfo" / f"mart_vi_{store}_product.ndjson"
+    product_ndjson = _product_source.ndjson(store)  # xem scripts/product_source.py
     with open(product_ndjson, encoding="utf-8") as f:
         for line in f:
             line = line.strip()

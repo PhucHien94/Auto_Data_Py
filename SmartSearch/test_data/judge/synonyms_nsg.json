@@ -1,0 +1,967 @@
+{
+ "about": "Từ điển đồng nghĩa cho judge_search_results.py. Mỗi group: 'terms' tương đương hai chiều (oneway=true: chỉ terms[0] -> các từ sau). rel='equiv' (mặc định): luật thay từ trong intent (type/constraints/accept) rồi chấm như từ gốc (5/4). rel='substitute': biến thể vào accept (điểm 3). 'risky' = từ trần dễ trùng chữ: biến thể đúng bằng từ đó không dùng để luật cho điểm, chỉ đẩy cặp sang AI. 'not_in' = cụm mà từ bên trong KHÔNG được thay (vd 'hiệu quả'). Thay theo cụm dài nhất trước ('bắp cải' không thành 'ngô cải'). Nguồn: user + indexer_synonyms_api.txt + Bắc/Nam + SYNONYMS/REGIONAL của search_engine.js (user yêu cầu gộp 2026-10-02).",
+ "groups": [
+  {
+   "terms": [
+    "cải cúc",
+    "tần ô"
+   ],
+   "src": "user"
+  },
+  {
+   "terms": [
+    "dứa",
+    "thơm",
+    "khóm"
+   ],
+   "risky": [
+    "thơm"
+   ],
+   "src": "user + indexer"
+  },
+  {
+   "terms": [
+    "heo",
+    "lợn"
+   ],
+   "src": "user + indexer"
+  },
+  {
+   "terms": [
+    "trái",
+    "quả"
+   ],
+   "src": "indexer",
+   "risky": [
+    "trái",
+    "quả"
+   ],
+   "not_in": [
+    "hiệu quả",
+    "kết quả",
+    "hậu quả",
+    "thành quả",
+    "cá quả",
+    "quả quyết",
+    "trái phép",
+    "trái tim",
+    "bên trái",
+    "tay trái",
+    "trái ngược",
+    "trái mùa"
+   ],
+   "note": "user 2026-10-02: trái = quả, nhưng không phải hiệu quả / kết quả / cá quả"
+  },
+  {
+   "terms": [
+    "đậu phộng",
+    "lạc"
+   ],
+   "risky": [
+    "lạc"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "mè",
+    "vừng"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "bắp",
+    "ngô"
+   ],
+   "risky": [
+    "bắp"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "dĩa",
+    "đĩa"
+   ],
+   "src": "indexer",
+   "risky": [
+    "dĩa"
+   ],
+   "note": "miền Bắc \"dĩa\" = cái nĩa"
+  },
+  {
+   "terms": [
+    "chén",
+    "bát"
+   ],
+   "src": "indexer",
+   "not_in": [
+    "bát bửu",
+    "bát giác",
+    "bát bảo",
+    "bát quái"
+   ]
+  },
+  {
+   "terms": [
+    "ký",
+    "kg"
+   ],
+   "src": "indexer",
+   "risky": [
+    "ký"
+   ],
+   "note": "\"Ký\" còn là một phần tên hãng (Tài Ký, Mã Ký)"
+  },
+  {
+   "terms": [
+    "sapoche",
+    "hồng xiêm",
+    "sabôchê"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "khoai mì",
+    "sắn"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "chanh dây",
+    "chanh leo"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "nồi",
+    "xoong"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "gói",
+    "bịch"
+   ],
+   "src": "indexer"
+  },
+  {
+   "terms": [
+    "dưa leo",
+    "dưa chuột"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "khổ qua",
+    "mướp đắng"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "ngò rí",
+    "rau mùi",
+    "ngò"
+   ],
+   "src": "bắc/nam",
+   "risky": [
+    "ngò"
+   ]
+  },
+  {
+   "terms": [
+    "xì dầu",
+    "nước tương"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "bột ngọt",
+    "mì chính"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "đậu hũ",
+    "đậu phụ",
+    "đậu hủ"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "hành lá",
+    "hành hoa"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "muỗng",
+    "thìa"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "ly",
+    "cốc"
+   ],
+   "src": "bắc/nam",
+   "risky": [
+    "ly",
+    "cốc"
+   ],
+   "not_in": [
+    "ngũ cốc"
+   ]
+  },
+  {
+   "terms": [
+    "khăn giấy",
+    "giấy ăn"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "cá lóc",
+    "cá quả"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "bông cải",
+    "súp lơ"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "bắp cải",
+    "cải bắp"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "ớt chuông",
+    "ớt ngọt"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "mãng cầu ta",
+    "na"
+   ],
+   "risky": [
+    "na"
+   ],
+   "src": "bắc/nam"
+  },
+  {
+   "terms": [
+    "đồ uống",
+    "thức uống"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "trứng gà",
+    "hột gà"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "mì ăn liền",
+    "mì gói",
+    "mì tôm"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "kem đánh răng",
+    "thuốc đánh răng",
+    "kem chải răng"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "băng vệ sinh",
+    "bvs"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tã",
+    "bỉm"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước giải khát",
+    "nước ngọt"
+   ],
+   "src": "search_engine.js",
+   "oneway": true,
+   "note": "nước giải khát rộng hơn (trà, tăng lực)"
+  },
+  {
+   "terms": [
+    "snack",
+    "bim bim"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước hoa quả",
+    "nước trái cây",
+    "nước ép trái cây"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "dầu ăn",
+    "dầu thực vật"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "giấy vệ sinh",
+    "giấy toilet"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "kem chống nắng",
+    "sữa chống nắng"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước lau sàn",
+    "nước lau nhà"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước xả vải",
+    "nước làm mềm vải"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "khăn ướt",
+    "khăn giấy ướt"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "sữa bột",
+    "sữa công thức"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bánh quy",
+    "bánh bích quy"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "mì ý",
+    "spaghetti"
+   ],
+   "oneway": true,
+   "note": "spaghetti là một loại mì Ý",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "gạo lứt",
+    "gạo lức"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "rượu vang",
+    "vang đỏ"
+   ],
+   "oneway": true,
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "dao cạo râu",
+    "dao cạo"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "thức ăn cho chó",
+    "hạt cho chó"
+   ],
+   "oneway": true,
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "thức ăn cho mèo",
+    "hạt cho mèo"
+   ],
+   "oneway": true,
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "chả lụa",
+    "giò lụa"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "mực khô",
+    "khô mực"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tôm khô",
+    "khô tôm"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước suối",
+    "nước khoáng",
+    "nước tinh khiết"
+   ],
+   "oneway": true,
+   "note": "nước suối = nước đóng chai nói chung",
+   "src": "search_engine.js",
+   "rel": "substitute"
+  },
+  {
+   "terms": [
+    "nước tinh khiết",
+    "nước lọc"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "trà túi lọc",
+    "trà lọc"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nồi cơm",
+    "nồi cơm điện"
+   ],
+   "oneway": true,
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "áo mưa",
+    "áo đi mưa"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "giày thể thao",
+    "giày sneaker"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "túi rác",
+    "bọc rác"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "cải bó xôi",
+    "rau chân vịt",
+    "rau bina"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bánh tráng",
+    "bánh đa nem"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "cá viên",
+    "chả cá viên"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "kem ủ tóc",
+    "hấp dầu"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "sữa chua",
+    "yaourt",
+    "yogurt"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bánh trung thu",
+    "bánh nướng",
+    "bánh dẻo"
+   ],
+   "oneway": true,
+   "src": "search_engine.js",
+   "risky": [
+    "bánh nướng",
+    "bánh dẻo"
+   ]
+  },
+  {
+   "terms": [
+    "hộp cơm",
+    "hộp đựng cơm"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bình giữ nhiệt",
+    "bình nước giữ nhiệt"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "đường phèn",
+    "đường cục"
+   ],
+   "src": "search_engine.js",
+   "rel": "substitute"
+  },
+  {
+   "terms": [
+    "trái cây sấy",
+    "trái cây khô"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước yến",
+    "yến sào nước"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tổ yến",
+    "yến sào"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "ớt bột",
+    "bột ớt"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tiêu xay",
+    "tiêu bột"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "cháo ăn liền",
+    "cháo gói"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bánh quy giòn",
+    "bánh cracker"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "kẹo cao su",
+    "chewing gum"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "dép đi trong nhà",
+    "dép trong nhà"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "quần jean",
+    "quần bò",
+    "jean"
+   ],
+   "risky": [
+    "jean"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bao tay",
+    "găng tay"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "dây sạc",
+    "cáp sạc"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bi bi",
+    "bibigo"
+   ],
+   "oneway": true,
+   "note": "lỗi gõ tách chữ",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "heniken",
+    "heineken"
+   ],
+   "oneway": true,
+   "note": "lỗi gõ",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "sô cô la",
+    "socola",
+    "chocolate"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "chai",
+    "lọ"
+   ],
+   "risky": [
+    "chai",
+    "lọ"
+   ],
+   "note": "chỉ thay trong cụm",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "wasabi",
+    "わさび",
+    "mù tạt xanh"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "sushi",
+    "すし"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "chăn",
+    "mền"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "áo phông",
+    "áo thun"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "thịt ba chỉ",
+    "thịt ba rọi",
+    "ba chỉ",
+    "ba rọi"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tất",
+    "vớ"
+   ],
+   "risky": [
+    "tất"
+   ],
+   "not_in": [
+    "tất cả",
+    "tất niên"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "mỳ",
+    "mì"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "đường cát",
+    "đường trắng",
+    "đường tinh luyện"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bí đỏ",
+    "bí ngô"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "mũ",
+    "nón"
+   ],
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bột canh",
+    "bột nêm",
+    "hạt nêm"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "tôm",
+    "tép"
+   ],
+   "rel": "substitute",
+   "oneway": true,
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "xúc xích",
+    "lạp xưởng"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước rửa tay",
+    "gel rửa tay"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "cá basa",
+    "cá tra"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "kẹo dẻo",
+    "kẹo mềm"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bột giặt",
+    "xà phòng giặt"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước tẩy trang",
+    "sữa tẩy trang"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước súc miệng",
+    "nước súc họng"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "hộp xốp",
+    "hộp nhựa đựng thực phẩm"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bột nở",
+    "baking soda"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "muối tinh",
+    "muối i-ốt"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "hạt dinh dưỡng",
+    "hạt sấy khô"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "nước mắm nhĩ",
+    "nước mắm nguyên chất"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "khăn lông",
+    "khăn tắm"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "dép lê",
+    "dép trong nhà"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "rổ",
+    "rá"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  },
+  {
+   "terms": [
+    "bánh chưng",
+    "bánh tét"
+   ],
+   "rel": "substitute",
+   "src": "search_engine.js"
+  }
+ ],
+ "not_used_from_indexer": {
+  "sữa tươi -> sữa tươi tiệt trùng": "một chiều (tiệt trùng là tập con), không tương đương",
+  "vịt -> ngan": "hai loại gia cầm khác nhau",
+  "hộp -> lon": "khác bao bì, dễ khớp oan",
+  "hành -> hành tây": "hành tím/hành lá không phải hành tây",
+  "bầu -> bí": "hai loại rau khác nhau",
+  "mận -> roi": "mận miền Bắc là plum; intent 'roi' đã tự ghi mận"
+ },
+ "not_used_from_engine": {
+  "rau mùi -> rau húng": "khác loại rau",
+  "men nở -> baking soda": "men nở là yeast, không phải baking soda",
+  "nước xịt muỗi/thuốc xịt muỗi -> muỗi": "mở rộng query, không phải đồng nghĩa",
+  "sữa tắm/sữa rửa mặt/dầu gội/dầu xả/bàn chải/nước giặt/nước rửa rau/cục pin -> bản dài": "tên dài đã chứa từ gốc, không cần",
+  "kem dưỡng da -> kem dưỡng, quạt máy -> quạt, máy xay sinh tố -> máy xay, tã giấy -> tã, khẩu trang y tế -> khẩu trang, màng bọc thực phẩm -> màng bọc, quần lót -> đồ lót, gạo nếp -> nếp, sữa đặc có đường -> sữa đặc, tiêu xay -> tiêu": "một bên rộng hơn hẳn, dùng làm đồng nghĩa sẽ cho điểm 5 oan",
+  "nước mắm -> mắm": "mắm (mắm tôm, mắm nêm) là sp khác",
+  "quả X / trái X -> X (xoài, ổi, dưa hấu...)": "bỏ chữ trái/quả dễ khớp oan (trái bơ -> bơ lạt); trái X <-> quả X đã do nhóm trái/quả lo",
+  "th 1l -> th true milk": "viết tắt brand + size, intent tự ghi",
+  "na -> mãng cầu": "na = mãng cầu ta (đã có nhóm); mãng cầu xiêm là loại khác",
+  "ngan -> vịt, hộp <-> lon, bầu <-> bí, hành -> hành tây, roi -> mận": "giữ quyết định cũ ở not_used_from_indexer",
+  "cái nồi/cái xoong -> nồi, rau dền -> dền, hủ -> hộp": "không cần / dễ khớp oan"
+ },
+ "review_20261002": "search-judge agent review: ly/cốc not_in ngũ cốc, chén/bát not_in bát bửu, ký/dĩa risky, nước suối & đường phèn -> substitute, nước giải khát -> nước ngọt oneway, bánh nướng/bánh dẻo risky"
+}

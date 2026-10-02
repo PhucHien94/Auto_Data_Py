@@ -1,0 +1,534 @@
+[1/532] kw001 "sữa milo" / vector ... 185 total, 100 trả về, 1426ms
+[2/532] kw001 "sữa milo" / vector_titan_multi ... 146 total, 100 trả về, 1963ms
+[3/532] kw001 "sữa milo" / vector_titan_multi_caption_type ... 150 total, 100 trả về, 2354ms
+[4/532] kw001 "sữa milo" / caption ... 25 total, 25 trả về, 1039ms caption=query/sữa tiệt trùng nestle milo 180ml
+[5/532] kw003 "nước giặt" / vector ... 2 total, 2 trả về, 429ms
+[6/532] kw003 "nước giặt" / vector_titan_multi ... 108 total, 100 trả về, 457ms
+[7/532] kw003 "nước giặt" / vector_titan_multi_caption_type ... 108 total, 100 trả về, 447ms
+[8/532] kw003 "nước giặt" / caption ... 100 total, 100 trả về, 581ms caption=query/nước giặt nuoc giat hoa hồng
+[9/532] kw004 "mì" / vector ... 187 total, 100 trả về, 1193ms
+[10/532] kw004 "mì" / vector_titan_multi ... 138 total, 100 trả về, 1406ms
+[11/532] kw004 "mì" / vector_titan_multi_caption_type ... 137 total, 100 trả về, 579ms
+[12/532] kw004 "mì" / caption ... 56 total, 56 trả về, 643ms caption=query/mì tôm chua cay ramyun
+[13/532] kw005 "gạo ST25" / vector ... 64 total, 64 trả về, 1181ms
+[14/532] kw005 "gạo ST25" / vector_titan_multi ... 20 total, 20 trả về, 1412ms
+[15/532] kw005 "gạo ST25" / vector_titan_multi_caption_type ... 27 total, 27 trả về, 680ms
+[16/532] kw005 "gạo ST25" / caption ... 100 total, 100 trả về, 939ms caption=query/bột gạo st 25 5kg
+[17/532] kw006 "phô mai" / vector ... 33 total, 33 trả về, 824ms
+[18/532] kw006 "phô mai" / vector_titan_multi ... 20 total, 20 trả về, 1162ms
+[19/532] kw006 "phô mai" / vector_titan_multi_caption_type ... 20 total, 20 trả về, 566ms
+[20/532] kw006 "phô mai" / caption ... 100 total, 100 trả về, 968ms caption=query/bánh mì gourmet slices 200g
+[21/532] kw007 "xúc xích" / vector ... 105 total, 100 trả về, 974ms
+[22/532] kw007 "xúc xích" / vector_titan_multi ... 116 total, 100 trả về, 938ms
+[23/532] kw007 "xúc xích" / vector_titan_multi_caption_type ... 107 total, 100 trả về, 502ms
+[24/532] kw007 "xúc xích" / caption ... 30 total, 30 trả về, 734ms caption=query/xúc xích cocktail 100g
+[25/532] kw008 "sữa tắm" / vector ... 151 total, 100 trả về, 522ms
+[26/532] kw008 "sữa tắm" / vector_titan_multi ... 184 total, 100 trả về, 972ms
+[27/532] kw008 "sữa tắm" / vector_titan_multi_caption_type ... 184 total, 100 trả về, 492ms
+[28/532] kw008 "sữa tắm" / caption ... 100 total, 100 trả về, 986ms caption=query/dầu tắm double rich hoa hồng 1000ml
+[29/532] kw009 "kem đánh răng" / vector ... 1 total, 1 trả về, 696ms
+[30/532] kw009 "kem đánh răng" / vector_titan_multi ... 92 total, 92 trả về, 691ms
+[31/532] kw009 "kem đánh răng" / vector_titan_multi_caption_type ... 94 total, 94 trả về, 418ms
+[32/532] kw009 "kem đánh răng" / caption ... 100 total, 100 trả về, 876ms caption=query/kem dưỡng da metrolan 93 100ml
+[33/532] kw010 "nước rửa chén" / vector ... 35 total, 35 trả về, 791ms
+[34/532] kw010 "nước rửa chén" / vector_titan_multi ... 85 total, 85 trả về, 981ms
+[35/532] kw010 "nước rửa chén" / vector_titan_multi_caption_type ... 32 total, 32 trả về, 516ms
+[36/532] kw010 "nước rửa chén" / caption ... 100 total, 100 trả về, 1237ms caption=query/xà phòng myhao chanh 5l
+[37/532] kw011 "rong biển" / vector ... 65 total, 65 trả về, 986ms
+[38/532] kw011 "rong biển" / vector_titan_multi ... 8 total, 8 trả về, 1414ms
+[39/532] kw011 "rong biển" / vector_titan_multi_caption_type ... 7 total, 7 trả về, 875ms
+[40/532] kw011 "rong biển" / caption ... 100 total, 100 trả về, 1028ms caption=query/rau biển khô sẵn sàng ăn 100g
+[41/532] kw012 "ức gà" / vector ... 67 total, 67 trả về, 550ms
+[42/532] kw012 "ức gà" / vector_titan_multi ... 62 total, 62 trả về, 1164ms
+[43/532] kw012 "ức gà" / vector_titan_multi_caption_type ... 55 total, 55 trả về, 528ms
+[44/532] kw012 "ức gà" / caption ... 2 total, 2 trả về, 705ms caption=query/thịt gà thẻ thịt gà nguyên khối
+[45/532] kw013 "dầu ăn gạo lức" / vector ... 80 total, 80 trả về, 1179ms
+[46/532] kw013 "dầu ăn gạo lức" / vector_titan_multi ... 89 total, 89 trả về, 1404ms
+[47/532] kw013 "dầu ăn gạo lức" / vector_titan_multi_caption_type ... 89 total, 89 trả về, 1132ms
+[48/532] kw013 "dầu ăn gạo lức" / caption ... 1 total, 1 trả về, 643ms caption=query/dầu gấu lựt simply 100 1l
+[49/532] kw014 "dầu gội cocoon" / vector ... 170 total, 100 trả về, 1062ms
+[50/532] kw014 "dầu gội cocoon" / vector_titan_multi ... 82 total, 82 trả về, 1436ms
+[51/532] kw014 "dầu gội cocoon" / vector_titan_multi_caption_type ... 36 total, 36 trả về, 565ms
+[52/532] kw014 "dầu gội cocoon" / caption ... 100 total, 100 trả về, 1043ms caption=query/dầu gội tắm the cocoon 500ml
+[53/532] kw015 "kẹo m&m" / vector ... 17 total, 17 trả về, 915ms
+[54/532] kw015 "kẹo m&m" / vector_titan_multi ... 21 total, 21 trả về, 1210ms
+[55/532] kw015 "kẹo m&m" / vector_titan_multi_caption_type ... 21 total, 21 trả về, 1116ms
+[56/532] kw015 "kẹo m&m" / caption ... 100 total, 100 trả về, 731ms caption=query/kẹo m m peanut 62g
+[57/532] kw017 "cà phê" / vector ... 20 total, 20 trả về, 948ms
+[58/532] kw017 "cà phê" / vector_titan_multi ... 76 total, 76 trả về, 973ms
+[59/532] kw017 "cà phê" / vector_titan_multi_caption_type ... 75 total, 75 trả về, 934ms
+[60/532] kw017 "cà phê" / caption ... 100 total, 100 trả về, 602ms caption=query/cafe 3in1 77 300g
+[61/532] kw018 "bánh bao" / vector ... 52 total, 52 trả về, 568ms
+[62/532] kw018 "bánh bao" / vector_titan_multi ... 3 total, 3 trả về, 1415ms
+[63/532] kw018 "bánh bao" / vector_titan_multi_caption_type ... 3 total, 3 trả về, 1319ms
+[64/532] kw018 "bánh bao" / caption ... 100 total, 100 trả về, 1009ms caption=query/bánh bao giá hương 1k 25k
+[65/532] kw019 "trứng" / vector ... 38 total, 38 trả về, 883ms
+[66/532] kw019 "trứng" / vector_titan_multi ... 34 total, 34 trả về, 1214ms
+[67/532] kw019 "trứng" / vector_titan_multi_caption_type ... 33 total, 33 trả về, 550ms
+[68/532] kw019 "trứng" / caption ... 48 total, 48 trả về, 589ms caption=query/trứng trứng 6 quả
+[69/532] kw020 "giấy" / vector ... 66 total, 66 trả về, 540ms
+[70/532] kw020 "giấy" / vector_titan_multi ... 58 total, 58 trả về, 1217ms
+[71/532] kw020 "giấy" / vector_titan_multi_caption_type ... 59 total, 59 trả về, 547ms
+[72/532] kw020 "giấy" / caption ... 100 total, 100 trả về, 810ms caption=query/giấy klennex gói 100
+[73/532] kw021 "vinamilk" / vector ... 197 total, 100 trả về, 1275ms
+[74/532] kw021 "vinamilk" / vector_titan_multi ... 151 total, 100 trả về, 1678ms
+[75/532] kw021 "vinamilk" / vector_titan_multi_caption_type ... 139 total, 100 trả về, 755ms
+[76/532] kw021 "vinamilk" / caption ... 30 total, 30 trả về, 917ms caption=query/sữa vinamilk 100 1l
+[77/532] kw022 "đường" / vector ... 40 total, 40 trả về, 489ms
+[78/532] kw022 "đường" / vector_titan_multi ... 39 total, 39 trả về, 764ms
+[79/532] kw022 "đường" / vector_titan_multi_caption_type ... 33 total, 33 trả về, 475ms
+[80/532] kw022 "đường" / caption ... 3 total, 3 trả về, 543ms caption=query/đường tinh luyện bien hoa pure 1kg
+[81/532] kw023 "cá hồi" / vector ... 28 total, 28 trả về, 483ms
+[82/532] kw023 "cá hồi" / vector_titan_multi ... 38 total, 38 trả về, 876ms
+[83/532] kw023 "cá hồi" / vector_titan_multi_caption_type ... 39 total, 39 trả về, 512ms
+[84/532] kw023 "cá hồi" / caption ... 100 total, 100 trả về, 861ms caption=query/cá hồi açoa 1kg
+[85/532] kw024 "bánh mì" / vector ... 16 total, 16 trả về, 990ms
+[86/532] kw024 "bánh mì" / vector_titan_multi ... 9 total, 9 trả về, 1050ms
+[87/532] kw024 "bánh mì" / vector_titan_multi_caption_type ... 9 total, 9 trả về, 560ms
+[88/532] kw024 "bánh mì" / caption ... 100 total, 100 trả về, 760ms caption=query/bánh mì hoa quả 500g
+[89/532] kw025 "nấm" / vector ... 2 total, 2 trả về, 957ms
+[90/532] kw025 "nấm" / vector_titan_multi ... 25 total, 25 trả về, 868ms
+[91/532] kw025 "nấm" / vector_titan_multi_caption_type ... 25 total, 25 trả về, 550ms
+[92/532] kw025 "nấm" / caption ... 100 total, 100 trả về, 1054ms caption=query/nấm chay namkim 100g
+[93/532] kw026 "nước rửa tay" / vector ... 122 total, 100 trả về, 842ms
+[94/532] kw026 "nước rửa tay" / vector_titan_multi ... 93 total, 93 trả về, 921ms
+[95/532] kw026 "nước rửa tay" / vector_titan_multi_caption_type ... 93 total, 93 trả về, 554ms
+[96/532] kw026 "nước rửa tay" / caption ... 100 total, 100 trả về, 784ms caption=query/xà phòng rửa tay lifebuoy 1l
+[97/532] kw027 "nước xả" / vector ... 164 total, 100 trả về, 1217ms
+[98/532] kw027 "nước xả" / vector_titan_multi ... 103 total, 100 trả về, 1101ms
+[99/532] kw027 "nước xả" / vector_titan_multi_caption_type ... 103 total, 100 trả về, 613ms
+[100/532] kw027 "nước xả" / caption ... 100 total, 100 trả về, 1228ms caption=query/xà phòng tắm hygiène hoa hồng 180g
+[101/532] kw028 "bò" / vector ... 75 total, 75 trả về, 963ms
+[102/532] kw028 "bò" / vector_titan_multi ... 86 total, 86 trả về, 912ms
+[103/532] kw028 "bò" / vector_titan_multi_caption_type ... 83 total, 83 trả về, 590ms
+[104/532] kw028 "bò" / caption ... 2 total, 2 trả về, 632ms caption=query/thịt bò wagyu 450g
+[105/532] kw029 "thịt heo" / vector ... 113 total, 100 trả về, 975ms
+[106/532] kw029 "thịt heo" / vector_titan_multi ... 170 total, 100 trả về, 1052ms
+[107/532] kw029 "thịt heo" / vector_titan_multi_caption_type ... 166 total, 100 trả về, 627ms
+[108/532] kw029 "thịt heo" / caption ... 7 total, 7 trả về, 1127ms caption=query/thịt heo cp 500g
+[109/532] kw030 "kem" / vector ... 2 total, 2 trả về, 895ms
+[110/532] kw030 "kem" / vector_titan_multi ... 1 total, 1 trả về, 889ms
+[111/532] kw030 "kem" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 1119ms
+[112/532] kw030 "kem" / caption ... 100 total, 100 trả về, 892ms caption=query/kem vani celano 202g
+[113/532] kw031 "tương ớt chinsu" / vector ... 181 total, 100 trả về, 787ms
+[114/532] kw031 "tương ớt chinsu" / vector_titan_multi ... 136 total, 100 trả về, 690ms
+[115/532] kw031 "tương ớt chinsu" / vector_titan_multi_caption_type ... 64 total, 64 trả về, 543ms
+[116/532] kw031 "tương ớt chinsu" / caption ... 100 total, 100 trả về, 732ms caption=query/sốt cay chin su 250ml
+[117/532] kw032 "trà oolong" / vector ... 90 total, 90 trả về, 703ms
+[118/532] kw032 "trà oolong" / vector_titan_multi ... 46 total, 46 trả về, 729ms
+[119/532] kw032 "trà oolong" / vector_titan_multi_caption_type ... 46 total, 46 trả về, 500ms
+[120/532] kw032 "trà oolong" / caption ... 12 total, 12 trả về, 716ms caption=query/trà oolong tra be 100g
+[121/532] kw033 "tôm" / vector ... 14 total, 14 trả về, 946ms
+[122/532] kw033 "tôm" / vector_titan_multi ... 32 total, 32 trả về, 883ms
+[123/532] kw033 "tôm" / vector_titan_multi_caption_type ... 32 total, 32 trả về, 527ms
+[124/532] kw033 "tôm" / caption ... 50 total, 50 trả về, 1096ms caption=query/tôm thủy sản 1kg
+[125/532] kw034 "sữa đặc" / vector ... 14 total, 14 trả về, 908ms
+[126/532] kw034 "sữa đặc" / vector_titan_multi ... 18 total, 18 trả về, 903ms
+[127/532] kw034 "sữa đặc" / vector_titan_multi_caption_type ... 18 total, 18 trả về, 606ms
+[128/532] kw034 "sữa đặc" / caption ... 100 total, 100 trả về, 772ms caption=query/sữa tiệt trùng ong tho 100ml
+[129/532] kw036 "kim chi" / vector ... 29 total, 29 trả về, 959ms
+[130/532] kw036 "kim chi" / vector_titan_multi ... 53 total, 53 trả về, 959ms
+[131/532] kw036 "kim chi" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 898ms
+[132/532] kw036 "kim chi" / caption ... 100 total, 100 trả về, 839ms caption=query/kimchi cải bắp jongca 170g
+[133/532] kw037 "socola" / vector ... 4 total, 4 trả về, 972ms
+[134/532] kw037 "socola" / vector_titan_multi ... 6 total, 6 trả về, 964ms
+[135/532] kw037 "socola" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 1022ms
+[136/532] kw037 "socola" / caption ... 100 total, 100 trả về, 1285ms caption=query/trứng trứng trứng kinder 20 2019
+[137/532] kw038 "bột giặt" / vector ... 6 total, 6 trả về, 730ms
+[138/532] kw038 "bột giặt" / vector_titan_multi ... 42 total, 42 trả về, 777ms
+[139/532] kw038 "bột giặt" / vector_titan_multi_caption_type ... 41 total, 41 trả về, 834ms
+[140/532] kw038 "bột giặt" / caption ... 100 total, 100 trả về, 899ms caption=query/bột giặt omo magic 1,5kg
+[141/532] kw039 "nước tương" / vector ... 158 total, 100 trả về, 930ms
+[142/532] kw039 "nước tương" / vector_titan_multi ... 124 total, 100 trả về, 959ms
+[143/532] kw039 "nước tương" / vector_titan_multi_caption_type ... 65 total, 65 trả về, 611ms
+[144/532] kw039 "nước tương" / caption ... 6 total, 6 trả về, 607ms caption=query/nước tương kikkoman 1l
+[145/532] kw040 "bơ" / vector ... 14 total, 14 trả về, 660ms
+[146/532] kw040 "bơ" / vector_titan_multi ... 22 total, 22 trả về, 1101ms
+[147/532] kw040 "bơ" / vector_titan_multi_caption_type ... 22 total, 22 trả về, 536ms
+[148/532] kw040 "bơ" / caption ... 100 total, 100 trả về, 765ms caption=query/quả bơ hass 1pc
+[149/532] kw041 "nước lau sàn" / vector ... 117 total, 100 trả về, 559ms
+[150/532] kw041 "nước lau sàn" / vector_titan_multi ... 78 total, 78 trả về, 929ms
+[151/532] kw041 "nước lau sàn" / vector_titan_multi_caption_type ... 78 total, 78 trả về, 562ms
+[152/532] kw041 "nước lau sàn" / caption ... 100 total, 100 trả về, 1432ms caption=query/xà phòng lau sàn lifebuoy 24h 1.5l
+[153/532] kw043 "sữa chua" / vector ... 141 total, 100 trả về, 924ms
+[154/532] kw043 "sữa chua" / vector_titan_multi ... 86 total, 86 trả về, 936ms
+[155/532] kw043 "sữa chua" / vector_titan_multi_caption_type ... 87 total, 87 trả về, 951ms
+[156/532] kw043 "sữa chua" / caption ... 14 total, 14 trả về, 1217ms caption=query/sữa chua vinamilk tự nhiên 100g
+[157/532] kw044 "khoai tây" / vector ... 6 total, 6 trả về, 982ms
+[158/532] kw044 "khoai tây" / vector_titan_multi ... 40 total, 40 trả về, 928ms
+[159/532] kw044 "khoai tây" / vector_titan_multi_caption_type ... 39 total, 39 trả về, 520ms
+[160/532] kw044 "khoai tây" / caption ... 100 total, 100 trả về, 618ms caption=query/khoai tây 1kg
+[161/532] kw045 "túi rác" / vector ... 14 total, 14 trả về, 931ms
+[162/532] kw045 "túi rác" / vector_titan_multi ... 18 total, 18 trả về, 736ms
+[163/532] kw045 "túi rác" / vector_titan_multi_caption_type ... 18 total, 18 trả về, 426ms
+[164/532] kw045 "túi rác" / caption ... 39 total, 39 trả về, 455ms caption=query/túi rác 50l
+[165/532] kw046 "ngũ cốc" / vector ... 67 total, 67 trả về, 932ms
+[166/532] kw046 "ngũ cốc" / vector_titan_multi ... 35 total, 35 trả về, 974ms
+[167/532] kw046 "ngũ cốc" / vector_titan_multi_caption_type ... 35 total, 35 trả về, 1062ms
+[168/532] kw046 "ngũ cốc" / caption ... 100 total, 100 trả về, 729ms caption=query/bột ngũ cốc calbee 100g
+[169/532] kw047 "bánh gạo" / vector ... 86 total, 86 trả về, 505ms
+[170/532] kw047 "bánh gạo" / vector_titan_multi ... 58 total, 58 trả về, 914ms
+[171/532] kw047 "bánh gạo" / vector_titan_multi_caption_type ... 58 total, 58 trả về, 913ms
+[172/532] kw047 "bánh gạo" / caption ... 100 total, 100 trả về, 762ms caption=query/bánh ngọt ngũ cung 12gói
+[173/532] kw048 "cà chua" / vector ... 19 total, 19 trả về, 898ms
+[174/532] kw048 "cà chua" / vector_titan_multi ... 29 total, 29 trả về, 919ms
+[175/532] kw048 "cà chua" / vector_titan_multi_caption_type ... 24 total, 24 trả về, 1173ms
+[176/532] kw048 "cà chua" / caption ... 100 total, 100 trả về, 701ms caption=query/quả bưởi tươi 5kg
+[177/532] kw049 "hạt nêm" / vector ... 57 total, 57 trả về, 810ms
+[178/532] kw049 "hạt nêm" / vector_titan_multi ... 34 total, 34 trả về, 948ms
+[179/532] kw049 "hạt nêm" / vector_titan_multi_caption_type ... 34 total, 34 trả về, 552ms
+[180/532] kw049 "hạt nêm" / caption ... 100 total, 100 trả về, 788ms caption=query/tương chua knorr 100g
+[181/532] kw050 "muối" / vector ... 74 total, 74 trả về, 1002ms
+[182/532] kw050 "muối" / vector_titan_multi ... 69 total, 69 trả về, 968ms
+[183/532] kw050 "muối" / vector_titan_multi_caption_type ... 70 total, 70 trả về, 603ms
+[184/532] kw050 "muối" / caption ... 100 total, 100 trả về, 717ms caption=query/muối tỏi cay dh 125g
+[185/532] kw051 "miến" / vector ... 41 total, 41 trả về, 811ms
+[186/532] kw051 "miến" / vector_titan_multi ... 78 total, 78 trả về, 913ms
+[187/532] kw051 "miến" / vector_titan_multi_caption_type ... 78 total, 78 trả về, 921ms
+[188/532] kw051 "miến" / caption ... 100 total, 100 trả về, 735ms caption=query/mì sợi huân liên 100g
+[189/532] kw053 "xà lách" / vector ... 23 total, 23 trả về, 942ms
+[190/532] kw053 "xà lách" / vector_titan_multi ... 68 total, 68 trả về, 951ms
+[191/532] kw053 "xà lách" / vector_titan_multi_caption_type ... 68 total, 68 trả về, 887ms
+[192/532] kw053 "xà lách" / caption ... 100 total, 100 trả về, 805ms caption=query/xà lách lollo rossa gói
+[193/532] kw054 "pizza" / vector ... 36 total, 36 trả về, 510ms
+[194/532] kw054 "pizza" / vector_titan_multi ... 33 total, 33 trả về, 964ms
+[195/532] kw054 "pizza" / vector_titan_multi_caption_type ... 33 total, 33 trả về, 553ms
+[196/532] kw054 "pizza" / caption ... 100 total, 100 trả về, 824ms caption=query/pizza pizza manna thịt gà sốt bbq vi
+[197/532] kw055 "hoa" / vector ... 24 total, 24 trả về, 954ms
+[198/532] kw055 "hoa" / vector_titan_multi ... 35 total, 35 trả về, 944ms
+[199/532] kw055 "hoa" / vector_titan_multi_caption_type ... 34 total, 34 trả về, 562ms
+[200/532] kw055 "hoa" / caption ... 100 total, 100 trả về, 780ms caption=query/bó hoa hồng màu hỗn hợp
+[201/532] kw056 "omo" / vector ... 133 total, 100 trả về, 793ms
+[202/532] kw056 "omo" / vector_titan_multi ... 69 total, 69 trả về, 960ms
+[203/532] kw056 "omo" / vector_titan_multi_caption_type ... 66 total, 66 trả về, 560ms
+[204/532] kw056 "omo" / caption ... 100 total, 100 trả về, 1033ms caption=query/bột giặt omo matic hương hoa lan 3gói
+[205/532] kw057 "nui" / vector ... 56 total, 56 trả về, 1168ms
+[206/532] kw057 "nui" / vector_titan_multi ... 42 total, 42 trả về, 1105ms
+[207/532] kw057 "nui" / vector_titan_multi_caption_type ... 42 total, 42 trả về, 563ms
+[208/532] kw057 "nui" / caption ... 100 total, 100 trả về, 1463ms caption=query/gạo lứt nước quảng duyên 2kg
+[209/532] kw058 "Bình Xịt Côn Trùng Jumbo Vape Không Mùi" / vector ... 42 total, 42 trả về, 914ms
+[210/532] kw058 "Bình Xịt Côn Trùng Jumbo Vape Không Mùi" / vector_titan_multi ... 45 total, 45 trả về, 937ms
+[211/532] kw058 "Bình Xịt Côn Trùng Jumbo Vape Không Mùi" / vector_titan_multi_caption_type ... 45 total, 45 trả về, 592ms
+[212/532] kw058 "Bình Xịt Côn Trùng Jumbo Vape Không Mùi" / caption ... 2 total, 2 trả về, 598ms caption=query/xịt diệt muỗi jumbo vape 400ml
+[213/532] kw059 "sốt" / vector ... 3 total, 3 trả về, 934ms
+[214/532] kw059 "sốt" / vector_titan_multi ... 127 total, 100 trả về, 948ms
+[215/532] kw059 "sốt" / vector_titan_multi_caption_type ... 127 total, 100 trả về, 562ms
+[216/532] kw059 "sốt" / caption ... 100 total, 100 trả về, 1283ms caption=query/nước sốt tía mía chua cay
+[217/532] kw060 "rửa chén" / vector ... 99 total, 99 trả về, 1219ms
+[218/532] kw060 "rửa chén" / vector_titan_multi ... 94 total, 94 trả về, 1101ms
+[219/532] kw060 "rửa chén" / vector_titan_multi_caption_type ... 79 total, 79 trả về, 922ms
+[220/532] kw060 "rửa chén" / caption ... 100 total, 100 trả về, 1162ms caption=query/xà phòng rửa chén sunlight chanh 4l
+[221/532] kw101 "hộp bánh gival" / vector ... 101 total, 100 trả về, 434ms
+[222/532] kw101 "hộp bánh gival" / vector_titan_multi ... 9 total, 9 trả về, 736ms
+[223/532] kw101 "hộp bánh gival" / vector_titan_multi_caption_type ... 17 total, 17 trả về, 473ms
+[224/532] kw101 "hộp bánh gival" / caption ... 100 total, 100 trả về, 995ms caption=query/bánh nướng gyraff 12 cái
+[225/532] kw102 "sendodyne" / vector ... 13 total, 13 trả về, 470ms
+[226/532] kw102 "sendodyne" / vector_titan_multi ... 10 total, 10 trả về, 558ms
+[227/532] kw102 "sendodyne" / vector_titan_multi_caption_type ... 10 total, 10 trả về, 344ms
+[228/532] kw102 "sendodyne" / caption ... 0 total, 0 trả về, 307ms caption=no_product/-
+[229/532] kw103 "rổ nhựa" / vector ... 26 total, 26 trả về, 400ms
+[230/532] kw103 "rổ nhựa" / vector_titan_multi ... 39 total, 39 trả về, 763ms
+[231/532] kw103 "rổ nhựa" / vector_titan_multi_caption_type ... 57 total, 57 trả về, 454ms
+[232/532] kw103 "rổ nhựa" / caption ... 100 total, 100 trả về, 631ms caption=query/thùng đựng rau củ red
+[233/532] kw104 "Phô mai - miraflores - gouda 200g" / vector ... 39 total, 39 trả về, 702ms
+[234/532] kw104 "Phô mai - miraflores - gouda 200g" / vector_titan_multi ... 41 total, 41 trả về, 727ms
+[235/532] kw104 "Phô mai - miraflores - gouda 200g" / vector_titan_multi_caption_type ... 41 total, 41 trả về, 480ms
+[236/532] kw104 "Phô mai - miraflores - gouda 200g" / caption ... 100 total, 100 trả về, 635ms caption=query/phô mai gouda miraflores 200g
+[237/532] kw105 "kệ gỗ" / vector ... 0 total, 0 trả về, 743ms
+[238/532] kw105 "kệ gỗ" / vector_titan_multi ... 2 total, 2 trả về, 595ms
+[239/532] kw105 "kệ gỗ" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 609ms
+[240/532] kw105 "kệ gỗ" / caption ... 100 total, 100 trả về, 726ms caption=query/giá đỡ rau quả 3 tầng
+[241/532] kw106 "giấm trắng" / vector ... 25 total, 25 trả về, 1769ms
+[242/532] kw106 "giấm trắng" / vector_titan_multi ... 60 total, 60 trả về, 1600ms
+[243/532] kw106 "giấm trắng" / vector_titan_multi_caption_type ... 33 total, 33 trả về, 1445ms
+[244/532] kw106 "giấm trắng" / caption ... 2 total, 2 trả về, 2547ms caption=query/giấm trắng heinz 473ml
+[245/532] kw107 "chảo chống dính" / vector ... 59 total, 59 trả về, 2850ms
+[246/532] kw107 "chảo chống dính" / vector_titan_multi ... 41 total, 41 trả về, 1542ms
+[247/532] kw107 "chảo chống dính" / vector_titan_multi_caption_type ... 41 total, 41 trả về, 1210ms
+[248/532] kw107 "chảo chống dính" / caption ... 100 total, 100 trả về, 1577ms caption=query/chảo hikaru 26cm 2.2l
+[249/532] kw108 "tương ớt tabasco" / vector ... 81 total, 81 trả về, 1988ms
+[250/532] kw108 "tương ớt tabasco" / vector_titan_multi ... 77 total, 77 trả về, 1372ms
+[251/532] kw108 "tương ớt tabasco" / vector_titan_multi_caption_type ... 77 total, 77 trả về, 908ms
+[252/532] kw108 "tương ớt tabasco" / caption ... 100 total, 100 trả về, 1450ms caption=query/nước tiêu tabasco 150ml
+[253/532] kw109 "chả cá xào myungga" / vector ... 24 total, 24 trả về, 1672ms
+[254/532] kw109 "chả cá xào myungga" / vector_titan_multi ... 50 total, 50 trả về, 1559ms
+[255/532] kw109 "chả cá xào myungga" / vector_titan_multi_caption_type ... 50 total, 50 trả về, 1158ms
+[256/532] kw109 "chả cá xào myungga" / caption ... 100 total, 100 trả về, 1624ms caption=query/thực phẩm yorihada cha ca xào mỳ lưng
+[257/532] kw110 "bơ" / vector ... 3 total, 3 trả về, 1592ms
+[258/532] kw110 "bơ" / vector_titan_multi ... 54 total, 54 trả về, 1569ms
+[259/532] kw110 "bơ" / vector_titan_multi_caption_type ... 25 total, 25 trả về, 1906ms
+[260/532] kw110 "bơ" / caption ... 5 total, 5 trả về, 1172ms caption=query/dưa leo tươi 1kg
+[261/532] kw111 "xoài" / vector ... 10 total, 10 trả về, 1510ms
+[262/532] kw111 "xoài" / vector_titan_multi ... 10 total, 10 trả về, 1316ms
+[263/532] kw111 "xoài" / vector_titan_multi_caption_type ... 10 total, 10 trả về, 660ms
+[264/532] kw111 "xoài" / caption ... 100 total, 100 trả về, 816ms caption=query/quả xoài 1kg
+[265/532] kw112 "dép" / vector ... 3 total, 3 trả về, 483ms
+[266/532] kw112 "dép" / vector_titan_multi ... 31 total, 31 trả về, 620ms
+[267/532] kw112 "dép" / vector_titan_multi_caption_type ... 31 total, 31 trả về, 512ms
+[268/532] kw112 "dép" / caption ... 18 total, 18 trả về, 370ms caption=query/dép tắm màu xám
+[269/532] kw113 "bánh trung thu" / vector ... 5 total, 5 trả về, 632ms
+[270/532] kw113 "bánh trung thu" / vector_titan_multi ... 7 total, 7 trả về, 759ms
+[271/532] kw113 "bánh trung thu" / vector_titan_multi_caption_type ... 7 total, 7 trả về, 482ms
+[272/532] kw113 "bánh trung thu" / caption ... 100 total, 100 trả về, 892ms caption=query/bánh thóp cơm thọp cơm gói 100g
+[273/532] kw066 "nước ngọt" / vector ... 161 total, 100 trả về, 1148ms
+[274/532] kw066 "nước ngọt" / vector_titan_multi ... 137 total, 100 trả về, 1103ms
+[275/532] kw066 "nước ngọt" / vector_titan_multi_caption_type ... 137 total, 100 trả về, 585ms
+[276/532] kw066 "nước ngọt" / caption ... 100 total, 100 trả về, 745ms caption=query/nước ngọt c2 chai 330ml
+[277/532] kw067 "bia" / vector ... 128 total, 100 trả về, 1433ms
+[278/532] kw067 "bia" / vector_titan_multi ... 85 total, 85 trả về, 1115ms
+[279/532] kw067 "bia" / vector_titan_multi_caption_type ... 85 total, 85 trả về, 658ms
+[280/532] kw067 "bia" / caption ... 9 total, 9 trả về, 661ms caption=query/bia saigon lager 330ml
+[281/532] kw068 "aquafina" / vector ... 78 total, 78 trả về, 829ms
+[282/532] kw068 "aquafina" / vector_titan_multi ... 71 total, 71 trả về, 929ms
+[283/532] kw068 "aquafina" / vector_titan_multi_caption_type ... 72 total, 72 trả về, 543ms
+[284/532] kw068 "aquafina" / caption ... 4 total, 4 trả về, 667ms caption=query/nước suối aquafina 500ml
+[285/532] kw069 "tã" / vector ... 56 total, 56 trả về, 940ms
+[286/532] kw069 "tã" / vector_titan_multi ... 57 total, 57 trả về, 973ms
+[287/532] kw069 "tã" / vector_titan_multi_caption_type ... 55 total, 55 trả về, 572ms
+[288/532] kw069 "tã" / caption ... 100 total, 100 trả về, 854ms caption=query/tã bé bobby tq l 111
+[289/532] kw070 "miếng lót" / vector ... 47 total, 47 trả về, 992ms
+[290/532] kw070 "miếng lót" / vector_titan_multi ... 38 total, 38 trả về, 1371ms
+[291/532] kw070 "miếng lót" / vector_titan_multi_caption_type ... 38 total, 38 trả về, 1911ms
+[292/532] kw070 "miếng lót" / caption ... 100 total, 100 trả về, 1299ms caption=query/tã bé bobby miềng lột 108 lớn
+[293/532] kw071 "thịt hộp" / vector ... 14 total, 14 trả về, 1020ms
+[294/532] kw071 "thịt hộp" / vector_titan_multi ... 66 total, 66 trả về, 939ms
+[295/532] kw071 "thịt hộp" / vector_titan_multi_caption_type ... 66 total, 66 trả về, 567ms
+[296/532] kw071 "thịt hộp" / caption ... 100 total, 100 trả về, 1394ms caption=query/nước mắm pate cá ngừ 140g
+[297/532] kw072 "khô mực" / vector ... 36 total, 36 trả về, 1158ms
+[298/532] kw072 "khô mực" / vector_titan_multi ... 29 total, 29 trả về, 1109ms
+[299/532] kw072 "khô mực" / vector_titan_multi_caption_type ... 32 total, 32 trả về, 1154ms
+[300/532] kw072 "khô mực" / caption ... 100 total, 100 trả về, 714ms caption=query/cá mòi khô tự nhiên
+[301/532] kw073 "mắm tôm" / vector ... 19 total, 19 trả về, 626ms
+[302/532] kw073 "mắm tôm" / vector_titan_multi ... 20 total, 20 trả về, 916ms
+[303/532] kw073 "mắm tôm" / vector_titan_multi_caption_type ... 80 total, 80 trả về, 558ms
+[304/532] kw073 "mắm tôm" / caption ... 1 total, 1 trả về, 661ms caption=query/nước mắm mắm tôm ba lan 500ml
+[305/532] kw074 "pin" / vector ... 22 total, 22 trả về, 1955ms
+[306/532] kw074 "pin" / vector_titan_multi ... 21 total, 21 trả về, 1263ms
+[307/532] kw074 "pin" / vector_titan_multi_caption_type ... 21 total, 21 trả về, 1037ms
+[308/532] kw074 "pin" / caption ... 100 total, 100 trả về, 1129ms caption=query/pin maxell aa 4 chiếc
+[309/532] kw075 "ấm siêu tốc" / vector ... 14 total, 14 trả về, 1441ms
+[310/532] kw075 "ấm siêu tốc" / vector_titan_multi ... 17 total, 17 trả về, 1073ms
+[311/532] kw075 "ấm siêu tốc" / vector_titan_multi_caption_type ... 15 total, 15 trả về, 701ms
+[312/532] kw075 "ấm siêu tốc" / caption ... 100 total, 100 trả về, 929ms caption=query/cốc đun nước inoch 1.8l
+[313/532] kw076 "mật ong" / vector ... 29 total, 29 trả về, 1395ms
+[314/532] kw076 "mật ong" / vector_titan_multi ... 19 total, 19 trả về, 1235ms
+[315/532] kw076 "mật ong" / vector_titan_multi_caption_type ... 21 total, 21 trả về, 711ms
+[316/532] kw076 "mật ong" / caption ... 100 total, 100 trả về, 1300ms caption=query/mật ong kirkland organic raw 680g
+[317/532] kw077 "nước yến" / vector ... 7 total, 7 trả về, 493ms
+[318/532] kw077 "nước yến" / vector_titan_multi ... 3 total, 3 trả về, 1035ms
+[319/532] kw077 "nước yến" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 545ms
+[320/532] kw077 "nước yến" / caption ... 100 total, 100 trả về, 1003ms caption=query/nước tương bird s nest nature 300ml
+[321/532] kw078 "măng muối" / vector ... 46 total, 46 trả về, 1007ms
+[322/532] kw078 "măng muối" / vector_titan_multi ... 37 total, 37 trả về, 1045ms
+[323/532] kw078 "măng muối" / vector_titan_multi_caption_type ... 37 total, 37 trả về, 717ms
+[324/532] kw078 "măng muối" / caption ... 100 total, 100 trả về, 1206ms caption=query/dưa chua kimboi thái củ dấm ớt 500g
+[325/532] kw079 "thức ăn cho chó" / vector ... 37 total, 37 trả về, 1293ms
+[326/532] kw079 "thức ăn cho chó" / vector_titan_multi ... 30 total, 30 trả về, 1267ms
+[327/532] kw079 "thức ăn cho chó" / vector_titan_multi_caption_type ... 30 total, 30 trả về, 1252ms
+[328/532] kw079 "thức ăn cho chó" / caption ... 82 total, 82 trả về, 1038ms caption=query/thức ăn cho chó smartheart sữa sữa chua
+[329/532] kw080 "cát vệ sinh cho mèo" / vector ... 9 total, 9 trả về, 1257ms
+[330/532] kw080 "cát vệ sinh cho mèo" / vector_titan_multi ... 32 total, 32 trả về, 1281ms
+[331/532] kw080 "cát vệ sinh cho mèo" / vector_titan_multi_caption_type ... 9 total, 9 trả về, 897ms
+[332/532] kw080 "cát vệ sinh cho mèo" / caption ... 100 total, 100 trả về, 1863ms caption=query/thức ăn mèo cat s best original 13kg
+[333/532] kw127 "băng keo" / vector ... 6 total, 6 trả về, 756ms
+[334/532] kw127 "băng keo" / vector_titan_multi ... 34 total, 34 trả về, 1102ms
+[335/532] kw127 "băng keo" / vector_titan_multi_caption_type ... 6 total, 6 trả về, 713ms
+[336/532] kw127 "băng keo" / caption ... 100 total, 100 trả về, 948ms caption=query/băng dính 3m 467mp
+[337/532] kw126 "đồ chơi" / vector ... 19 total, 19 trả về, 1622ms
+[338/532] kw126 "đồ chơi" / vector_titan_multi ... 88 total, 88 trả về, 1068ms
+[339/532] kw126 "đồ chơi" / vector_titan_multi_caption_type ... 88 total, 88 trả về, 751ms
+[340/532] kw126 "đồ chơi" / caption ... 100 total, 100 trả về, 1472ms caption=query/giỏ hàng đồ chơi bbt global 42pcs
+[341/532] kw125 "gel vuốt tóc" / vector ... 28 total, 28 trả về, 1610ms
+[342/532] kw125 "gel vuốt tóc" / vector_titan_multi ... 21 total, 21 trả về, 1285ms
+[343/532] kw125 "gel vuốt tóc" / vector_titan_multi_caption_type ... 13 total, 13 trả về, 820ms
+[344/532] kw125 "gel vuốt tóc" / caption ... 100 total, 100 trả về, 1259ms caption=query/keo cầm tóc gatsby wg ultimate hold
+[345/532] kw124 "vodka" / vector ... 14 total, 14 trả về, 483ms
+[346/532] kw124 "vodka" / vector_titan_multi ... 20 total, 20 trả về, 896ms
+[347/532] kw124 "vodka" / vector_titan_multi_caption_type ... 19 total, 19 trả về, 561ms
+[348/532] kw124 "vodka" / caption ... 2 total, 2 trả về, 543ms caption=query/rượu vodka hanoi 750ml
+[349/532] kw123 "cá ngừ hộp" / vector ... 72 total, 72 trả về, 1291ms
+[350/532] kw123 "cá ngừ hộp" / vector_titan_multi ... 69 total, 69 trả về, 1078ms
+[351/532] kw123 "cá ngừ hộp" / vector_titan_multi_caption_type ... 61 total, 61 trả về, 673ms
+[352/532] kw123 "cá ngừ hộp" / caption ... 100 total, 100 trả về, 1491ms caption=query/thịt cá ngừ ngâm dầu can ngu bien
+[353/532] kw122 "khăn tắm" / vector ... 67 total, 67 trả về, 1435ms
+[354/532] kw122 "khăn tắm" / vector_titan_multi ... 77 total, 77 trả về, 1054ms
+[355/532] kw122 "khăn tắm" / vector_titan_multi_caption_type ... 77 total, 77 trả về, 635ms
+[356/532] kw122 "khăn tắm" / caption ... 0 total, 0 trả về, 579ms caption=no_product/-
+[357/532] kw121 "gối ôm" / vector ... 14 total, 14 trả về, 1797ms
+[358/532] kw121 "gối ôm" / vector_titan_multi ... 24 total, 24 trả về, 1253ms
+[359/532] kw121 "gối ôm" / vector_titan_multi_caption_type ... 27 total, 27 trả về, 808ms
+[360/532] kw121 "gối ôm" / caption ... 1 total, 1 trả về, 926ms caption=query/gối lông vũ 50x60cm
+[361/532] kw120 "trà đóng chai" / vector ... 89 total, 89 trả về, 874ms
+[362/532] kw120 "trà đóng chai" / vector_titan_multi ... 61 total, 61 trả về, 1284ms
+[363/532] kw120 "trà đóng chai" / vector_titan_multi_caption_type ... 61 total, 61 trả về, 1000ms
+[364/532] kw120 "trà đóng chai" / caption ... 14 total, 14 trả về, 766ms caption=query/trà chanh c2 500ml
+[365/532] kw119 "son môi" / vector ... 28 total, 28 trả về, 674ms
+[366/532] kw119 "son môi" / vector_titan_multi ... 24 total, 24 trả về, 877ms
+[367/532] kw119 "son môi" / vector_titan_multi_caption_type ... 28 total, 28 trả về, 554ms
+[368/532] kw119 "son môi" / caption ... 100 total, 100 trả về, 1424ms caption=query/son dưỡng môi laneige lip glowy balm berry
+[369/532] kw118 "trà sữa" / vector ... 17 total, 17 trả về, 1451ms
+[370/532] kw118 "trà sữa" / vector_titan_multi ... 16 total, 16 trả về, 1082ms
+[371/532] kw118 "trà sữa" / vector_titan_multi_caption_type ... 16 total, 16 trả về, 866ms
+[372/532] kw118 "trà sữa" / caption ... 100 total, 100 trả về, 1062ms caption=query/trà matcha birdy 68g
+[373/532] kw117 "túi đeo chéo" / vector ... 1 total, 1 trả về, 977ms
+[374/532] kw117 "túi đeo chéo" / vector_titan_multi ... 2 total, 2 trả về, 1082ms
+[375/532] kw117 "túi đeo chéo" / vector_titan_multi_caption_type ... 2 total, 2 trả về, 556ms
+[376/532] kw117 "túi đeo chéo" / caption ... 100 total, 100 trả về, 850ms caption=query/túi xách louis vuitton black
+[377/532] kw116 "cá saba" / vector ... 48 total, 48 trả về, 840ms
+[378/532] kw116 "cá saba" / vector_titan_multi ... 56 total, 56 trả về, 925ms
+[379/532] kw116 "cá saba" / vector_titan_multi_caption_type ... 56 total, 56 trả về, 558ms
+[380/532] kw116 "cá saba" / caption ... 100 total, 100 trả về, 699ms caption=query/cá ngừ thái lát gói
+[381/532] kw115 "hành tím" / vector ... 21 total, 21 trả về, 1697ms
+[382/532] kw115 "hành tím" / vector_titan_multi ... 29 total, 29 trả về, 1288ms
+[383/532] kw115 "hành tím" / vector_titan_multi_caption_type ... 29 total, 29 trả về, 735ms
+[384/532] kw115 "hành tím" / caption ... 8 total, 8 trả về, 693ms caption=query/hành tây hồng 1kg
+[385/532] kw114 "bánh croissant" / vector ... 15 total, 15 trả về, 930ms
+[386/532] kw114 "bánh croissant" / vector_titan_multi ... 24 total, 24 trả về, 905ms
+[387/532] kw114 "bánh croissant" / vector_titan_multi_caption_type ... 24 total, 24 trả về, 553ms
+[388/532] kw114 "bánh croissant" / caption ... 1 total, 1 trả về, 663ms caption=query/bánh croissant savoyard 100g
+[389/532] kw100 "nấm đùi gà" / vector ... 40 total, 40 trả về, 1329ms
+[390/532] kw100 "nấm đùi gà" / vector_titan_multi ... 25 total, 25 trả về, 1291ms
+[391/532] kw100 "nấm đùi gà" / vector_titan_multi_caption_type ... 25 total, 25 trả về, 851ms
+[392/532] kw100 "nấm đùi gà" / caption ... 100 total, 100 trả về, 1165ms caption=query/nấm cục gói 3 cái
+[393/532] kw099 "quần áo trẻ em" / vector ... 6 total, 6 trả về, 835ms
+[394/532] kw099 "quần áo trẻ em" / vector_titan_multi ... 5 total, 5 trả về, 732ms
+[395/532] kw099 "quần áo trẻ em" / vector_titan_multi_caption_type ... 5 total, 5 trả về, 447ms
+[396/532] kw099 "quần áo trẻ em" / caption ... 0 total, 0 trả về, 429ms caption=no_product/-
+[397/532] kw098 "lương khô" / vector ... 96 total, 96 trả về, 1442ms
+[398/532] kw098 "lương khô" / vector_titan_multi ... 6 total, 6 trả về, 1068ms
+[399/532] kw098 "lương khô" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 648ms
+[400/532] kw098 "lương khô" / caption ... 100 total, 100 trả về, 1072ms caption=query/sữa trà sữa tử cung 10g
+[401/532] kw097 "cải thảo" / vector ... 41 total, 41 trả về, 784ms
+[402/532] kw097 "cải thảo" / vector_titan_multi ... 68 total, 68 trả về, 1259ms
+[403/532] kw097 "cải thảo" / vector_titan_multi_caption_type ... 62 total, 62 trả về, 760ms
+[404/532] kw097 "cải thảo" / caption ... 3 total, 3 trả về, 1835ms caption=query/bắp cải tím 1kg
+[405/532] kw096 "bia sài gòn" / vector ... 92 total, 92 trả về, 1524ms
+[406/532] kw096 "bia sài gòn" / vector_titan_multi ... 48 total, 48 trả về, 1282ms
+[407/532] kw096 "bia sài gòn" / vector_titan_multi_caption_type ... 48 total, 48 trả về, 854ms
+[408/532] kw096 "bia sài gòn" / caption ... 100 total, 100 trả về, 1004ms caption=query/bia saigon lager 450ml
+[409/532] kw095 "rau củ đông lạnh" / vector ... 503 EMBEDDING_UNAVAILABLE, thử lại... 7 total, 7 trả về, 860ms
+[410/532] kw095 "rau củ đông lạnh" / vector_titan_multi ... 12 total, 12 trả về, 1491ms
+[411/532] kw095 "rau củ đông lạnh" / vector_titan_multi_caption_type ... 3 total, 3 trả về, 952ms
+[412/532] kw095 "rau củ đông lạnh" / caption ... 100 total, 100 trả về, 1531ms caption=query/rau hón hóp v safefood 400g
+[413/532] kw094 "hạt giống" / vector ... 16 total, 16 trả về, 1449ms
+[414/532] kw094 "hạt giống" / vector_titan_multi ... 81 total, 81 trả về, 1094ms
+[415/532] kw094 "hạt giống" / vector_titan_multi_caption_type ... 16 total, 16 trả về, 695ms
+[416/532] kw094 "hạt giống" / caption ... 100 total, 100 trả về, 855ms caption=query/hạt giống rau phu quy
+[417/532] kw093 "bánh kem" / vector ... 16 total, 16 trả về, 925ms
+[418/532] kw093 "bánh kem" / vector_titan_multi ... 14 total, 14 trả về, 894ms
+[419/532] kw093 "bánh kem" / vector_titan_multi_caption_type ... 15 total, 15 trả về, 674ms
+[420/532] kw093 "bánh kem" / caption ... 100 total, 100 trả về, 1175ms caption=query/bánh tổ ngũ cốc gói 4 cái
+[421/532] kw092 "mũi khoan" / vector ... 3 total, 3 trả về, 792ms
+[422/532] kw092 "mũi khoan" / vector_titan_multi ... 3 total, 3 trả về, 896ms
+[423/532] kw092 "mũi khoan" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 544ms
+[424/532] kw092 "mũi khoan" / caption ... 0 total, 0 trả về, 507ms caption=no_product/-
+[425/532] kw091 "kiwi" / vector ... 12 total, 12 trả về, 1438ms
+[426/532] kw091 "kiwi" / vector_titan_multi ... 14 total, 14 trả về, 1119ms
+[427/532] kw091 "kiwi" / vector_titan_multi_caption_type ... 14 total, 14 trả về, 674ms
+[428/532] kw091 "kiwi" / caption ... 100 total, 100 trả về, 888ms caption=query/quả kiwi zesp 322s 1kg
+[429/532] kw090 "thực phẩm chức năng" / vector ... 5 total, 5 trả về, 580ms
+[430/532] kw090 "thực phẩm chức năng" / vector_titan_multi ... 5 total, 5 trả về, 1057ms
+[431/532] kw090 "thực phẩm chức năng" / vector_titan_multi_caption_type ... 5 total, 5 trả về, 568ms
+[432/532] kw090 "thực phẩm chức năng" / caption ... 100 total, 100 trả về, 783ms caption=query/vitamin c dh c 20 gói
+[433/532] kw089 "bưởi da xanh" / vector ... 7 total, 7 trả về, 702ms
+[434/532] kw089 "bưởi da xanh" / vector_titan_multi ... 14 total, 14 trả về, 1050ms
+[435/532] kw089 "bưởi da xanh" / vector_titan_multi_caption_type ... 14 total, 14 trả về, 609ms
+[436/532] kw089 "bưởi da xanh" / caption ... 100 total, 100 trả về, 776ms caption=query/quả bưởi thái bình 1kg
+[437/532] kw088 "nước sâm" / vector ... 17 total, 17 trả về, 967ms
+[438/532] kw088 "nước sâm" / vector_titan_multi ... 16 total, 16 trả về, 879ms
+[439/532] kw088 "nước sâm" / vector_titan_multi_caption_type ... 18 total, 18 trả về, 564ms
+[440/532] kw088 "nước sâm" / caption ... 100 total, 100 trả về, 1349ms caption=query/sản phẩm cỏ nổi 6 gói
+[441/532] kw087 "nồi cơm điện" / vector ... 11 total, 11 trả về, 1623ms
+[442/532] kw087 "nồi cơm điện" / vector_titan_multi ... 12 total, 12 trả về, 1273ms
+[443/532] kw087 "nồi cơm điện" / vector_titan_multi_caption_type ... 13 total, 13 trả về, 771ms
+[444/532] kw087 "nồi cơm điện" / caption ... 100 total, 100 trả về, 1080ms caption=query/nồi cơm điện sharp 3 lít
+[445/532] kw086 "vang trắng" / vector ... 78 total, 78 trả về, 885ms
+[446/532] kw086 "vang trắng" / vector_titan_multi ... 17 total, 17 trả về, 1304ms
+[447/532] kw086 "vang trắng" / vector_titan_multi_caption_type ... 28 total, 28 trả về, 970ms
+[448/532] kw086 "vang trắng" / caption ... 100 total, 100 trả về, 1387ms caption=query/rượu undurraga late harvest 375ml
+[449/532] kw085 "dưa hấu" / vector ... 14 total, 14 trả về, 1922ms
+[450/532] kw085 "dưa hấu" / vector_titan_multi ... 15 total, 15 trả về, 1292ms
+[451/532] kw085 "dưa hấu" / vector_titan_multi_caption_type ... 15 total, 15 trả về, 1016ms
+[452/532] kw085 "dưa hấu" / caption ... 7 total, 7 trả về, 1149ms caption=query/dưa thẳng hàng tây
+[453/532] kw084 "trứng vịt" / vector ... 16 total, 16 trả về, 1407ms
+[454/532] kw084 "trứng vịt" / vector_titan_multi ... 20 total, 20 trả về, 1096ms
+[455/532] kw084 "trứng vịt" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 708ms
+[456/532] kw084 "trứng vịt" / caption ... 100 total, 100 trả về, 1535ms caption=query/mặt nạ dưỡng da duck brand 1pack
+[457/532] kw083 "bia nhập khẩu" / vector ... 56 total, 56 trả về, 1462ms
+[458/532] kw083 "bia nhập khẩu" / vector_titan_multi ... 14 total, 14 trả về, 1264ms
+[459/532] kw083 "bia nhập khẩu" / vector_titan_multi_caption_type ... 15 total, 15 trả về, 769ms
+[460/532] kw083 "bia nhập khẩu" / caption ... 100 total, 100 trả về, 1166ms caption=query/bia chimay peres trappistes 330ml
+[461/532] kw082 "bột nghệ" / vector ... 154 total, 100 trả về, 1255ms
+[462/532] kw082 "bột nghệ" / vector_titan_multi ... 41 total, 41 trả về, 1094ms
+[463/532] kw082 "bột nghệ" / vector_titan_multi_caption_type ... 41 total, 41 trả về, 1312ms
+[464/532] kw082 "bột nghệ" / caption ... 7 total, 7 trả về, 701ms caption=query/gia vị hach 100g
+[465/532] kw081 "chuối" / vector ... 10 total, 10 trả về, 928ms
+[466/532] kw081 "chuối" / vector_titan_multi ... 10 total, 10 trả về, 1299ms
+[467/532] kw081 "chuối" / vector_titan_multi_caption_type ... 10 total, 10 trả về, 924ms
+[468/532] kw081 "chuối" / caption ... 3 total, 3 trả về, 784ms caption=query/chuối phi chuối 1kg
+[469/532] kw128 "shower mate" / vector ... 151 total, 100 trả về, 1188ms
+[470/532] kw128 "shower mate" / vector_titan_multi ... 52 total, 52 trả về, 1121ms
+[471/532] kw128 "shower mate" / vector_titan_multi_caption_type ... 42 total, 42 trả về, 765ms
+[472/532] kw128 "shower mate" / caption ... 100 total, 100 trả về, 1399ms caption=query/dầu tắm shower mate cotton 1200g
+[473/532] kw129 "sáp vuốt tóc" / vector ... 12 total, 12 trả về, 1364ms
+[474/532] kw129 "sáp vuốt tóc" / vector_titan_multi ... 12 total, 12 trả về, 1087ms
+[475/532] kw129 "sáp vuốt tóc" / vector_titan_multi_caption_type ... 17 total, 17 trả về, 617ms
+[476/532] kw129 "sáp vuốt tóc" / caption ... 100 total, 100 trả về, 1034ms caption=query/dầu gội gatsbv moving rubber
+[477/532] kw130 "nước súc miệng trẻ em" / vector ... 55 total, 55 trả về, 1486ms
+[478/532] kw130 "nước súc miệng trẻ em" / vector_titan_multi ... 27 total, 27 trả về, 1243ms
+[479/532] kw130 "nước súc miệng trẻ em" / vector_titan_multi_caption_type ... 27 total, 27 trả về, 775ms
+[480/532] kw130 "nước súc miệng trẻ em" / caption ... 100 total, 100 trả về, 1165ms caption=query/nước súc miệng trẻ em kids care 380ml
+[481/532] kw131 "khăn lau mặt khô" / vector ... 12 total, 12 trả về, 1289ms
+[482/532] kw131 "khăn lau mặt khô" / vector_titan_multi ... 1 total, 1 trả về, 1051ms
+[483/532] kw131 "khăn lau mặt khô" / vector_titan_multi_caption_type ... 0 total, 0 trả về, 650ms
+[484/532] kw131 "khăn lau mặt khô" / caption ... 100 total, 100 trả về, 1427ms caption=query/nước khoáng omi 80ml
+[485/532] kw132 "giấy thấm dầu" / vector ... 4 total, 4 trả về, 1102ms
+[486/532] kw132 "giấy thấm dầu" / vector_titan_multi ... 2 total, 2 trả về, 1074ms
+[487/532] kw132 "giấy thấm dầu" / vector_titan_multi_caption_type ... 10 total, 10 trả về, 1462ms
+[488/532] kw132 "giấy thấm dầu" / caption ... 100 total, 100 trả về, 1189ms caption=query/mặt nạ tẩy dầu joni 100ml
+[489/532] kw133 "serum" / vector ... 23 total, 23 trả về, 852ms
+[490/532] kw133 "serum" / vector_titan_multi ... 108 total, 100 trả về, 717ms
+[491/532] kw133 "serum" / vector_titan_multi_caption_type ... 25 total, 25 trả về, 510ms
+[492/532] kw133 "serum" / caption ... 100 total, 100 trả về, 800ms caption=query/huyết thanh lebél truly panthenol 33ml
+[493/532] kw002 "우유" / vector ... 141 total, 100 trả về, 493ms
+[494/532] kw002 "우유" / vector_titan_multi ... 74 total, 74 trả về, 867ms
+[495/532] kw002 "우유" / vector_titan_multi_caption_type ... 73 total, 73 trả về, 576ms
+[496/532] kw002 "우유" / caption ... 100 total, 100 trả về, 1253ms caption=query/sữa chua yakult light plus 100ml
+[497/532] kw016 "코코넛" / vector ... 13 total, 13 trả về, 974ms
+[498/532] kw016 "코코넛" / vector_titan_multi ... 23 total, 23 trả về, 1047ms
+[499/532] kw016 "코코넛" / vector_titan_multi_caption_type ... 23 total, 23 trả về, 645ms
+[500/532] kw016 "코코넛" / caption ... 100 total, 100 trả về, 994ms caption=query/dừa cô cóc
+[501/532] kw035 "참치" / vector ... 29 total, 29 trả về, 1148ms
+[502/532] kw035 "참치" / vector_titan_multi ... 33 total, 33 trả về, 885ms
+[503/532] kw035 "참치" / vector_titan_multi_caption_type ... 33 total, 33 trả về, 575ms
+[504/532] kw035 "참치" / caption ... 2 total, 2 trả về, 903ms caption=query/sashimi cá ngừ 100g
+[505/532] kw042 "사과" / vector ... 27 total, 27 trả về, 1830ms
+[506/532] kw042 "사과" / vector_titan_multi ... 31 total, 31 trả về, 1464ms
+[507/532] kw042 "사과" / vector_titan_multi_caption_type ... 31 total, 31 trả về, 2509ms
+[508/532] kw042 "사과" / caption ... 100 total, 100 trả về, 1400ms caption=query/táo queen newzealand 100g
+[509/532] kw052 "과자" / vector ... 105 total, 100 trả về, 1542ms
+[510/532] kw052 "과자" / vector_titan_multi ... 62 total, 62 trả về, 1486ms
+[511/532] kw052 "과자" / vector_titan_multi_caption_type ... 62 total, 62 trả về, 2960ms
+[512/532] kw052 "과자" / caption ... 100 total, 100 trả về, 1630ms caption=query/bánh quy onion rings 100g
+[513/532] kw061 "세제" / vector ... 89 total, 89 trả về, 513ms
+[514/532] kw061 "세제" / vector_titan_multi ... 55 total, 55 trả về, 915ms
+[515/532] kw061 "세제" / vector_titan_multi_caption_type ... 27 total, 27 trả về, 570ms
+[516/532] kw061 "세제" / caption ... 100 total, 100 trả về, 926ms caption=query/dầu rửa chén cif cream 1l
+[517/532] kw062 "젤리" / vector ... 156 total, 100 trả về, 634ms
+[518/532] kw062 "젤리" / vector_titan_multi ... 109 total, 100 trả về, 1089ms
+[519/532] kw062 "젤리" / vector_titan_multi_caption_type ... 108 total, 100 trả về, 582ms
+[520/532] kw062 "젤리" / caption ... 100 total, 100 trả về, 734ms caption=query/kẹo cao su trail mix stars
+[521/532] kw063 "만두" / vector ... 39 total, 39 trả về, 562ms
+[522/532] kw063 "만두" / vector_titan_multi ... 42 total, 42 trả về, 1064ms
+[523/532] kw063 "만두" / vector_titan_multi_caption_type ... 42 total, 42 trả về, 956ms
+[524/532] kw063 "만두" / caption ... 100 total, 100 trả về, 1203ms caption=query/mì ăn liền bibiggo mandu thịt 120g
+[525/532] kw064 "두부" / vector ... 22 total, 22 trả về, 1531ms
+[526/532] kw064 "두부" / vector_titan_multi ... 23 total, 23 trả về, 1275ms
+[527/532] kw064 "두부" / vector_titan_multi_caption_type ... 15 total, 15 trả về, 1027ms
+[528/532] kw064 "두부" / caption ... 100 total, 100 trả về, 1127ms caption=query/bánh bao tôm tươi 1kg
+[529/532] kw065 "yogurt" / vector ... 173 total, 100 trả về, 1145ms
+[530/532] kw065 "yogurt" / vector_titan_multi ... 110 total, 100 trả về, 1104ms
+[531/532] kw065 "yogurt" / vector_titan_multi_caption_type ... 87 total, 87 trả về, 1142ms
+[532/532] kw065 "yogurt" / caption ... 3 total, 3 trả về, 663ms caption=query/sữa chua true kem chua 4x200g
+
+Kết quả thô: D:\Testing\Project\2026_MartRenew\Auto_Data_Py\SmartSearch\image_search\results\excel_top40_lang\ko/<mode>/<image_id>.json

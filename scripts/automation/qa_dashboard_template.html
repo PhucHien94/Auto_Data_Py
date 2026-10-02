@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Search QA Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Dashboard QA Smart Search - sinh bởi scripts/automation/build_qa_dashboard.py.
+   Đừng sửa tay file HTML đầu ra; sửa template này rồi chạy lại script. */
+:root {
+  color-scheme: light;
+  --page: #f3f4f1; --surface: #fcfcfb; --sunk: #eef0ec;
+  --ink: #141816; --ink-2: #4f5452; --muted: #858882;
+  --line: #e1e2dc; --line-2: #cfd1ca;
+  --accent: #1c5cab; --accent-wash: #e3edf9;
+  --s1: #2a78d6; --s2: #eb6834; --seq: #3987e5;
+  --pass: #0ca30c; --pass-ink: #006300; --pass-wash: #e5f4e3;
+  --fail: #d03b3b; --fail-ink: #a92828; --fail-wash: #fae6e4;
+  --disc: #fab219; --disc-ink: #7a5000; --disc-wash: #fdf1d6;
+  --neutral: #898781; --neutral-wash: #ecebe6;
+  --shadow: 0 1px 2px rgba(20,24,22,.06);
+  --sans: "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0f1110; --surface: #1a1a19; --sunk: #222321;
+    --ink: #f3f3f0; --ink-2: #c3c2b7; --muted: #8f8e88;
+    --line: #2c2c2a; --line-2: #3a3a37;
+    --accent: #6da7ec; --accent-wash: #1b2a3d;
+    --s1: #3987e5; --s2: #d95926; --seq: #5598e7;
+    --pass-ink: #4cc44c; --pass-wash: #16301a;
+    --fail-ink: #f07a7a; --fail-wash: #3a1d1c;
+    --disc-ink: #f6c453; --disc-wash: #3a2e12;
+    --neutral-wash: #2a2a27;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0f1110; --surface: #1a1a19; --sunk: #222321;
+  --ink: #f3f3f0; --ink-2: #c3c2b7; --muted: #8f8e88;
+  --line: #2c2c2a; --line-2: #3a3a37;
+  --accent: #6da7ec; --accent-wash: #1b2a3d;
+  --s1: #3987e5; --s2: #d95926; --seq: #5598e7;
+  --pass-ink: #4cc44c; --pass-wash: #16301a;
+  --fail-ink: #f07a7a; --fail-wash: #3a1d1c;
+  --disc-ink: #f6c453; --disc-wash: #3a2e12;
+  --neutral-wash: #2a2a27;
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 0 64px; }
+.mono { font-family: var(--mono); font-size: 12px; }
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+.ink2 { color: var(--ink-2); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ---------- top bar ---------- */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.topbar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; flex-wrap: wrap; }
+.brand { display: flex; align-items: baseline; gap: 10px; flex: 1 1 auto; min-width: 0; }
+.brand b { font-size: 15px; font-weight: 700; letter-spacing: -.01em; }
+.brand span { color: var(--muted); font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tools { display: flex; gap: 6px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--line-2); background: var(--surface); border-radius: 8px; padding: 6px 12px; cursor: pointer;
+  font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: var(--sunk); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+:root[data-theme="dark"] .btn.primary { color: #0b1420; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { color: #0b1420; } }
+.btn.primary:hover { filter: brightness(1.08); background: var(--accent); }
+.btn svg { width: 14px; height: 14px; }
+
+/* ---------- cover ---------- */
+.cover { padding-block: 28px 8px; display: grid; gap: 6px; }
+.eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.cover h1 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 22px; color: var(--ink-2); font-size: 13px; }
+.meta b { font-weight: 600; color: var(--ink); }
+.print-hint { font-size: 12.5px; color: var(--muted); }
+
+/* ---------- sections ---------- */
+details.sec { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; margin-top: 16px; box-shadow: var(--shadow); }
+details.sec > summary { list-style: none; cursor: pointer; padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+details.sec > summary::-webkit-details-marker, details > summary::-webkit-details-marker { display: none; }
+details.sec > summary h2 { font-size: 17px; font-weight: 650; letter-spacing: -.01em; }
+.sum-note { color: var(--muted); font-size: 13px; flex: 1 1 auto; min-width: 0; }
+.chev { width: 18px; height: 18px; flex: none; color: var(--muted); transition: transform .18s ease; }
+details[open] > summary .chev { transform: rotate(90deg); }
+.sec-body { padding: 4px 20px 22px; border-top: 1px solid var(--line); display: grid; gap: 22px; }
+.sec-body > *:first-child { margin-top: 16px; }
+h3.sub { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 10px; }
+.lede { color: var(--ink-2); max-width: 78ch; margin: 0; }
+.note { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; max-width: 90ch; }
+
+/* ---------- tiles ---------- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tile { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: var(--surface); display: grid; gap: 2px; align-content: start; }
+.tile .k { font-size: 12.5px; color: var(--ink-2); display: flex; align-items: center; gap: 7px; font-weight: 500; }
+.tile .v { font-size: 30px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; }
+.tile .s { font-size: 12.5px; color: var(--muted); }
+.tile.pass { background: var(--pass-wash); border-color: transparent; } .tile.pass .v { color: var(--pass-ink); }
+.tile.fail { background: var(--fail-wash); border-color: transparent; } .tile.fail .v { color: var(--fail-ink); }
+.tile.disc { background: var(--disc-wash); border-color: transparent; } .tile.disc .v { color: var(--disc-ink); }
+.tile.lead { background: var(--sunk); border-color: transparent; }
+.ico { width: 16px; height: 16px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 10px; font-weight: 700; color: #fff; flex: none; line-height: 1; }
+.ico.pass { background: var(--pass); } .ico.fail { background: var(--fail); } .ico.disc { background: var(--disc); color: #3b2800; }
+.ico.neutral { background: var(--neutral); }
+
+/* ---------- stacked bars ---------- */
+.stack { display: flex; gap: 2px; height: 28px; border-radius: 6px; overflow: hidden; background: var(--surface); }
+.stack > span { display: block; height: 100%; min-width: 2px; }
+.stack.sm { height: 12px; border-radius: 4px; }
+.seg-pass { background: var(--pass); } .seg-fail { background: var(--fail); } .seg-disc { background: var(--disc); }
+.seg-neutral { background: var(--line-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12.5px; color: var(--ink-2); margin-top: 8px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+.progress { display: grid; gap: 8px; padding: 14px 16px; border-radius: 10px; background: var(--sunk); }
+.progress .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.progress .big { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+.track { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; display: flex; gap: 2px; }
+.track > span { display: block; height: 100%; }
+
+/* ---------- tables ---------- */
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+thead th { font-size: 11.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--sunk); white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.bar { min-width: 160px; width: 28%; }
+.rowlabel b { display: block; font-weight: 600; }
+.rowlabel span { font-size: 12px; color: var(--muted); }
+.good { color: var(--pass-ink); font-weight: 600; } .bad { color: var(--fail-ink); font-weight: 600; }
+
+/* ---------- charts ---------- */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+.panel { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.panel h4 { margin: 0; font-size: 14px; font-weight: 600; }
+.panel .cap { font-size: 12.5px; color: var(--muted); margin: -4px 0 0; }
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+svg.chart text { fill: var(--muted); font-family: var(--sans); font-size: 11px; }
+svg.chart .grid { stroke: var(--line); stroke-width: 1; }
+svg.chart .base { stroke: var(--line-2); stroke-width: 1; }
+svg.chart .vlab { fill: var(--ink-2); font-size: 10.5px; font-weight: 500; }
+.hbar { display: grid; grid-template-columns: minmax(110px, 38%) 1fr auto; gap: 6px 10px; align-items: center; font-size: 13px; }
+.hbar .lab { color: var(--ink); overflow-wrap: anywhere; }
+.hbar .lab small { display: block; color: var(--muted); font-size: 11.5px; }
+.hbar .bars { display: grid; gap: 3px; }
+.hbar .b { height: 10px; border-radius: 0 4px 4px 0; background: var(--seq); min-width: 2px; }
+.hbar .b.old { background: var(--s2); } .hbar .b.new { background: var(--s1); }
+.hbar .val { font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: 12.5px; text-align: right; white-space: nowrap; }
+.hbar.clickable .row { cursor: pointer; }
+.hbar .row { display: contents; }
+.hbar .row:hover .lab { color: var(--accent); }
+.hbar .row.active .lab { color: var(--accent); font-weight: 600; }
+.delta { font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 99px; white-space: nowrap; }
+.delta.down { background: var(--pass-wash); color: var(--pass-ink); }
+.delta.up { background: var(--fail-wash); color: var(--fail-ink); }
+.cmp { display: grid; gap: 2px; }
+.cmp .pair { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.cmp .old { color: var(--muted); font-size: 13px; text-decoration: line-through; text-decoration-color: var(--line-2); }
+
+/* ---------- pills ---------- */
+.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.pill.pass { background: var(--pass-wash); color: var(--pass-ink); }
+.pill.fail { background: var(--fail-wash); color: var(--fail-ink); }
+.pill.disc { background: var(--disc-wash); color: var(--disc-ink); }
+.pill.neutral { background: var(--neutral-wash); color: var(--ink-2); }
+.pill.accent { background: var(--accent-wash); color: var(--accent); }
+.pill .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+/* ---------- filters + lists ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { border: 1px solid var(--line-2); background: var(--surface); border-radius: 99px; padding: 4px 11px; font-size: 12.5px; cursor: pointer; }
+.chip:hover { background: var(--sunk); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.chip .c { opacity: .7; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.search { flex: 1 1 200px; min-width: 0; max-width: 320px; border: 1px solid var(--line-2); border-radius: 8px; padding: 6px 10px; background: var(--surface); }
+select.sel { border: 1px solid var(--line-2); border-radius: 8px; padding: 5px 8px; background: var(--surface); }
+.count-line { font-size: 12.5px; color: var(--muted); }
+
+details.grp { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+details.grp + details.grp { margin-top: 10px; }
+details.grp > summary { list-style: none; cursor: pointer; padding: 11px 14px; display: flex; gap: 10px; align-items: center; background: var(--sunk); }
+details.grp > summary .t { font-weight: 600; }
+details.grp > summary .d { color: var(--muted); font-size: 12.5px; flex: 1 1 auto; min-width: 0; }
+details.grp > summary .cnt { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink-2); }
+details.item { border-top: 1px solid var(--line); }
+details.item > summary { list-style: none; cursor: pointer; padding: 9px 14px; display: grid; grid-template-columns: 14px minmax(0, 1.6fr) minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+details.item > summary:hover { background: var(--sunk); }
+details.item > summary .chev { width: 14px; height: 14px; }
+.q { font-weight: 600; overflow-wrap: anywhere; }
+.q small { font-weight: 400; color: var(--muted); font-family: var(--mono); font-size: 11.5px; margin-left: 6px; }
+.item-sec { font-size: 12.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+.item-pills { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+.item-body { padding: 4px 14px 14px 38px; display: grid; gap: 8px; font-size: 13px; }
+.item-body pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--sans); font-size: 13px; line-height: 1.6;
+  background: var(--sunk); border-radius: 8px; padding: 10px 12px; max-height: 360px; overflow: auto; }
+.kv { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12.5px; color: var(--ink-2); }
+.kv b { color: var(--ink); font-weight: 600; }
+.hist-strip { display: flex; gap: 3px; flex-wrap: wrap; }
+.hist-strip span { font-size: 10.5px; padding: 1px 6px; border-radius: 4px; background: var(--neutral-wash); color: var(--ink-2); font-family: var(--mono); }
+.empty { padding: 14px; color: var(--muted); font-size: 13px; }
+.ol { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 12.5px; }
+
+.def { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 13px; margin: 0; }
+.def dt { font-weight: 600; } .def dd { margin: 0; color: var(--ink-2); }
+
+#tip { position: fixed; z-index: 50; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12px; line-height: 1.45;
+  padding: 7px 10px; border-radius: 7px; max-width: 280px; opacity: 0; transition: opacity .08s; }
+#tip.on { opacity: 1; }
+footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .wrap { padding-inline: 16px; }
+  details.sec > summary, .sec-body { padding-inline: 14px; }
+  details.item > summary { grid-template-columns: 14px 1fr; }
+  details.item > summary .item-sec { grid-column: 2; }
+  details.item > summary .item-pills { grid-column: 2; justify-content: flex-start; }
+  .item-body { padding-left: 14px; }
+  .brand span { display: none; }
+  .hbar { grid-template-columns: 1fr auto; }
+  .hbar .bars { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ---------- PDF / in ấn: in đúng những phần đang mở ---------- */
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { color-scheme: light; --page: #fff; --surface: #fff; --sunk: #f3f4f1; --ink: #111; --ink-2: #444; --muted: #6d6f6a;
+    --line: #dcddd7; --line-2: #c9cbc4; --accent: #1c5cab; --accent-wash: #e3edf9; --s1: #2a78d6; --s2: #eb6834; --seq: #3987e5;
+    --pass-ink: #006300; --pass-wash: #e5f4e3; --fail-ink: #a92828; --fail-wash: #fae6e4; --disc-ink: #7a5000; --disc-wash: #fdf1d6;
+    --neutral-wash: #ecebe6; --shadow: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 11.5px; background: #fff; }
+  .topbar, .filters, .no-print, #tip { display: none !important; }
+  .wrap { max-width: none; padding-inline: 0; }
+  .cover { padding-top: 0; }
+  details.sec { break-inside: auto; box-shadow: none; }
+  details.sec > summary { padding-block: 10px; }
+  .tile, .panel, .progress, tr, details.item > summary, .hbar .row { break-inside: avoid; }
+  details.sec > summary { break-after: avoid; }
+  .item-body pre { max-height: none; overflow: visible; }
+  .tbl-wrap { overflow: visible; }
+  .chev { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand"><b>Smart Search · Text Search</b><span id="brandMeta"></span></div>
+    <div class="tools">
+      <button class="btn" id="btnExpand" type="button" title="Mở tất cả các phần và danh sách con">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg>Mở tất cả</button>
+      <button class="btn" id="btnCollapse" type="button" title="Thu gọn danh sách con, giữ các phần chính">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10l4-4 4 4"/></svg>Thu gọn</button>
+      <button class="btn primary" id="btnPdf" type="button" title="Mở hộp thoại in - chọn “Save as PDF / Lưu dưới dạng PDF”">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2v8M5 7l3 3 3-3M3 12.5h10"/></svg>Xuất PDF</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="app"></main>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const DATA = __DATA__;
+</script>
+<script>
+(() => {
+const D = DATA, M = D.meta;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nf = n => n == null ? '—' : Number(n).toLocaleString('vi-VN');
+const pct = (a, b) => b ? (a / b * 100) : 0;
+const pf = (a, b, d = 1) => b ? (a / b * 100).toFixed(d).replace('.', ',') + '%' : '—';
+const ms = v => v == null ? '—' : nf(v) + ' ms';
+const CHEV = '<svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5l4.5 4.5L6 12.5"/></svg>';
+const SEC = D.sec_labels;
+const STATUS = {
+  passed: ['pass', '✓', 'Passed'], failed: ['fail', '✕', 'Failed'],
+  discussion: ['disc', '?', 'Discussion'], removed: ['neutral', '–', 'Đã loại khỏi bộ test'],
+};
+const TRACK = { 'DONE': 'pass', 'FIXED': 'pass', 'NEED TO FIX': 'fail', 'IN_PROGRESS': 'disc', 'OPEN': 'neutral', 'NEED_DISCUSS': 'disc' };
+const statusPill = s => { const [c, i, l] = STATUS[s] || STATUS.removed; return `<span class="pill ${c}"><span class="dot"></span>${l}</span>`; };
+const trackPill = s => s ? `<span class="pill ${TRACK[s] || 'neutral'}" data-tip="Trạng thái trên tracker của khách (${esc(M.tracker_date || '')})">${esc(s)}</span>` : '';
+const deltaPill = (nw, old) => {
+  if (nw == null || old == null || !old) return '';
+  const d = (nw - old) / old * 100;
+  return `<span class="delta ${d <= 0 ? 'down' : 'up'}">${d <= 0 ? '−' : '+'}${Math.abs(d).toFixed(0)}%</span>`;
+};
+const section = (id, title, note, body, open = true) =>
+  `<details class="sec" id="${id}" ${open ? 'open' : ''}><summary>${CHEV}<h2>${title}</h2><span class="sum-note">${note}</span></summary><div class="sec-body">${body}</div></details>`;
+const stack = (p, f, d, cls = '') => {
+  const t = p + f + d;
+  return `<div class="stack ${cls}" role="img" aria-label="Passed ${p}, Failed ${f}, Discussion ${d}">
+    ${p ? `<span class="seg-pass" style="flex:${p}" data-tip="Passed · ${nf(p)} (${pf(p, t)})"></span>` : ''}
+    ${f ? `<span class="seg-fail" style="flex:${f}" data-tip="Failed · ${nf(f)} (${pf(f, t)})"></span>` : ''}
+    ${d ? `<span class="seg-disc" style="flex:${d}" data-tip="Discussion · ${nf(d)} (${pf(d, t)})"></span>` : ''}</div>`;
+};
+
+const S = D.summary;
+// Bản tóm tắt: ẩn danh sách bug, câu hỏi discussion, định nghĩa & nguồn dữ liệu
+const SUMMARY = !!D.summary_only;
+const LIST_CAP = SUMMARY ? '' : '<p class="cap">Bấm một dòng để lọc danh sách bên dưới</p>';
+const BASIS = { manual_verdict: 'QA chấm tay Pass/Fail', bug_note: 'QA ghi bug', discussion_note: 'QA ghi discussion' };
+$('#brandMeta').textContent = `${M.store} · ${nf(S.total)} case đã duyệt tay`;
+document.title = 'Smart Search QA Dashboard';
+
+// =============================== COVER ===============================
+let html = `<header class="cover">
+  <div class="eyebrow">Báo cáo QA · Smart Search / Text Search · Tiếng Việt${SUMMARY ? ' · Bản tóm tắt' : ''}</div>
+  <h1>Kết quả kiểm thử Text Search — ${esc(M.store)}</h1>
+  <div class="meta"><span>Phạm vi: <b>${nf(S.total)} kịch bản QA đã duyệt tay</b></span>
+    <span>Hệ cũ: <b>As-Is production, crawl ${esc(M.asis_crawled)}</b></span>
+    <span>Hệ mới: <b>run ${esc(M.run_at)}</b></span><span>Tạo báo cáo: <b>${esc(M.generated)}</b></span></div>
+  <div class="print-hint no-print">Xuất PDF in đúng những phần đang mở trên màn hình — mở/thu gọn trước rồi bấm “Xuất PDF”, chọn “Save as PDF”.</div>
+</header>`;
+
+// =============================== 1. TỔNG QUAN ===============================
+{
+  const T = S.total, comparable = S.passed + S.failed;
+  let b = `<div class="tiles">
+    <div class="tile lead"><div class="k">Tổng kịch bản đã duyệt tay</div><div class="v num">${nf(T)}</div>
+      <div class="s">Passed + Failed + Discussion</div></div>
+    <div class="tile pass"><div class="k"><span class="ico pass">✓</span>Passed</div><div class="v num">${nf(S.passed)}</div>
+      <div class="s">${pf(S.passed, T)} tổng · ${pf(S.passed, comparable)} trên case đã kết luận</div></div>
+    <div class="tile fail"><div class="k"><span class="ico fail">✕</span>Failed</div><div class="v num">${nf(S.failed)}</div>
+      <div class="s">${pf(S.failed, T)} tổng</div></div>
+    <div class="tile disc"><div class="k"><span class="ico disc">?</span>Discussion</div><div class="v num">${nf(S.discuss)}</div>
+      <div class="s">${pf(S.discuss, T)} tổng · chờ chốt expected</div></div>
+  </div>
+  <div>${stack(S.passed, S.failed, S.discuss)}
+    <div class="legend"><span><i class="seg-pass"></i>Passed ${nf(S.passed)}</span><span><i class="seg-fail"></i>Failed ${nf(S.failed)}</span><span><i class="seg-disc"></i>Discussion ${nf(S.discuss)}</span></div></div>
+  <div class="progress">
+    <div class="row"><div><div class="k ink2" style="font-size:12.5px;font-weight:500">Căn cứ xếp loại</div></div>
+      <div class="kv">${Object.entries(BASIS).map(([k, l]) => `<span>${l}: <b class="num">${nf(S.basis[k] || 0)}</b></span>`).join('')}</div></div>
+    <div class="note" style="margin:0">Một kịch bản có nhiều dấu vết thì xét theo thứ tự: có discussion → Discussion; đã chấm tay → theo chấm tay; chỉ có bug → Failed.</div>
+  </div>`;
+  html += section('overview', 'Tổng quan kết quả', `${nf(T)} kịch bản đã duyệt · ${pf(S.passed, comparable)} đạt trên case đã kết luận`, b);
+}
+
+// =============================== 2. THEO NHÓM ===============================
+{
+  const rows = D.sections;
+  let b = `<p class="lede">Kịch bản đã duyệt tay, chia theo loại truy vấn. Nhóm full-text là phần lớn traffic thật; các nhóm còn lại là tình huống khó (ngữ nghĩa, vùng miền, sai chính tả…).</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Nhóm truy vấn</th><th class="n">Đã duyệt</th><th class="n">Passed</th><th class="n">Failed</th><th class="n">Discussion</th><th class="n">Tỉ lệ đạt*</th><th class="n">Bug</th><th>Phân bố</th></tr></thead><tbody>
+  ${rows.map(r => `<tr><td class="rowlabel"><b>${esc(r.label)}</b><span>${esc(r.desc)}</span></td>
+    <td class="n">${nf(r.total)}</td><td class="n good">${nf(r.passed)}</td><td class="n bad">${nf(r.failed)}</td><td class="n">${nf(r.discuss)}</td>
+    <td class="n">${pf(r.passed, r.passed + r.failed)}</td><td class="n">${nf(r.bugs)}</td>
+    <td class="bar">${stack(r.passed, r.failed, r.discuss, 'sm')}</td></tr>`).join('')}
+  </tbody></table></div><p class="note">* Trên kịch bản đã kết luận (Passed + Failed), không tính Discussion.</p>`;
+  html += section('groups', 'Kết quả theo nhóm truy vấn', `${rows.length} nhóm`, b);
+}
+
+// =============================== 3. PERFORMANCE ===============================
+{
+  const P = D.perf, n = P.new, o = P.old;
+  const tile = (label, nw, old, sub) => `<div class="tile"><div class="k">${label}</div>
+    <div class="cmp"><div class="pair"><span class="v num">${ms(nw)}</span>${deltaPill(nw, old)}</div>
+    <div class="s">Hệ cũ: <span class="num">${ms(old)}</span>${sub ? ' · ' + sub : ''}</div></div></div>`;
+  let b = `<p class="lede">Thời gian phản hồi API search cho ${nf(n.count)} truy vấn đã duyệt tay, gọi tuần tự từng truy vấn. Hệ cũ: production lottemart.vn, crawl ngày ${esc(M.asis_crawled)}. Hệ mới: môi trường dev, run ${esc(M.run_at)}. Hai hệ đo khác ngày và khác môi trường nên con số dùng để tham khảo xu hướng.</p>
+  <div class="tiles">
+    ${tile('Trung vị (P50)', n.p50, o.p50)}
+    ${tile('P95', n.p95, o.p95)}
+    ${tile('P99', n.p99, o.p99)}
+    ${tile('Trung bình', Math.round(n.avg), Math.round(o.avg))}
+    <div class="tile"><div class="k">Phản hồi dưới 1 giây</div><div class="v num">${String(P.under1000_new).replace('.', ',')}%</div>
+      <div class="s">Hệ cũ: ${String(P.under1000_old).replace('.', ',')}% · dưới 500 ms: ${String(P.under500_new).replace('.', ',')}% so với ${String(P.under500_old).replace('.', ',')}%</div></div>
+  </div>`;
+
+  // histogram
+  const edges = M.hist_edges, labs = [];
+  for (let i = 0; i < edges.length - 1; i++) labs.push(edges[i + 1] == null ? `≥ ${nf(edges[i])}` : `${nf(edges[i])}–${nf(edges[i + 1])}`);
+  const W = 600, H = 250, pl = 40, pr = 8, pt = 16, pb = 42, iw = W - pl - pr, ih = H - pt - pb;
+  const tn = n.count, to = o.count;
+  const vn = P.hist_new.map(v => v / tn * 100), vo = P.hist_old.map(v => v / to * 100);
+  const vtop = Math.max(...vn, ...vo), vstep = vtop > 40 ? 20 : 10;
+  const vmax = Math.ceil(vtop / vstep) * vstep;
+  const y = v => pt + ih - v / vmax * ih, gw = iw / labs.length, bw = Math.min(26, gw / 2 - 6);
+  let svg = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Phân bố thời gian phản hồi">`;
+  for (let t = 0; t <= vmax; t += vstep) svg += `<line class="grid" x1="${pl}" x2="${W - pr}" y1="${y(t)}" y2="${y(t)}"/><text x="${pl - 6}" y="${y(t) + 4}" text-anchor="end">${t}%</text>`;
+  labs.forEach((l, i) => {
+    const cx = pl + gw * i + gw / 2;
+    [[vn[i], P.hist_new[i], 'var(--s1)', -1, 'Hệ mới'], [vo[i], P.hist_old[i], 'var(--s2)', 1, 'Hệ cũ']].forEach(([v, c, col, side, nm]) => {
+      const x = side < 0 ? cx - bw - 1 : cx + 1, yy = y(v), h = Math.max(0, pt + ih - yy);
+      svg += `<path d="M${x},${pt + ih} V${yy + Math.min(4, h)} q0,-4 4,-4 h${bw - 8} q4,0 4,4 V${pt + ih} Z" fill="${col}" data-tip="${nm} · ${l} ms: ${nf(c)} truy vấn (${v.toFixed(1).replace('.', ',')}%)"/>`;
+      if (v >= 1) svg += `<text class="vlab" x="${x + bw / 2}" y="${yy - 4}" text-anchor="middle">${Math.round(v)}%</text>`;
+    });
+    svg += `<text x="${cx}" y="${H - pb + 16}" text-anchor="middle">${l}</text>`;
+  });
+  svg += `<line class="base" x1="${pl}" x2="${W - pr}" y1="${pt + ih}" y2="${pt + ih}"/><text x="${pl + iw / 2}" y="${H - 6}" text-anchor="middle">thời gian phản hồi (ms)</text></svg>`;
+
+  // percentile bars
+  const keys = [['P50', 'p50'], ['P90', 'p90'], ['P95', 'p95']];
+  const pmax = Math.max(...keys.map(([, k]) => Math.max(n[k] || 0, o[k] || 0)));
+  const pbars = `<div class="hbar">${keys.map(([lab, k]) => `<div class="row"><div class="lab">${lab}</div>
+    <div class="bars"><div class="b new" style="width:${pct(n[k], pmax)}%" data-tip="Hệ mới ${lab}: ${ms(n[k])}"></div><div class="b old" style="width:${pct(o[k], pmax)}%" data-tip="Hệ cũ ${lab}: ${ms(o[k])}"></div></div>
+    <div class="val">${ms(n[k])}<br><span class="muted">${ms(o[k])}</span></div></div>`).join('')}</div>`;
+
+  b += `<div class="grid2">
+    <div class="panel"><h4>Phân bố thời gian phản hồi</h4><p class="cap">% số truy vấn rơi vào từng khoảng</p>${svg}
+      <div class="legend"><span><i style="background:var(--s1)"></i>Hệ mới</span><span><i style="background:var(--s2)"></i>Hệ cũ (As-Is)</span></div></div>
+    <div class="panel"><h4>Phân vị độ trễ</h4><p class="cap">Thanh trên: hệ mới · thanh dưới: hệ cũ. P99 và max ở bảng bên dưới.</p>${pbars}
+      <div class="legend"><span><i style="background:var(--s1)"></i>Hệ mới</span><span><i style="background:var(--s2)"></i>Hệ cũ (As-Is)</span></div></div>
+  </div>`;
+
+  // group p95
+  const gmax = Math.max(...D.sections.map(r => Math.max(r.p95_new || 0, r.p95_old || 0)));
+  b += `<div class="panel"><h4>P95 theo nhóm truy vấn</h4><p class="cap">Thanh trên: hệ mới · thanh dưới: hệ cũ</p><div class="hbar">
+    ${D.sections.map(r => `<div class="row"><div class="lab">${esc(r.label)}<small>${nf(r.total)} truy vấn</small></div>
+      <div class="bars"><div class="b new" style="width:${pct(r.p95_new, gmax)}%" data-tip="Hệ mới P95: ${ms(r.p95_new)} · P50: ${ms(r.p50_new)}"></div><div class="b old" style="width:${pct(r.p95_old, gmax)}%" data-tip="Hệ cũ P95: ${ms(r.p95_old)} · P50: ${ms(r.p50_old)}"></div></div>
+      <div class="val">${ms(r.p95_new)} ${deltaPill(r.p95_new, r.p95_old)}</div></div>`).join('')}</div>
+    <p class="cap" style="margin:4px 0 0">Nhóm ít truy vấn (dưới ~30) có P95 dao động mạnh, chỉ nên đọc xu hướng.</p></div>`;
+
+  // tables
+  const statRow = (lab, s, sub = '') => `<tr><td class="rowlabel"><b>${lab}</b>${sub ? `<span>${sub}</span>` : ''}</td><td class="n">${nf(s.count)}</td><td class="n">${ms(s.p50)}</td><td class="n">${ms(s.p90)}</td><td class="n">${ms(s.p95)}</td><td class="n">${ms(s.p99)}</td><td class="n">${ms(s.max)}</td><td class="n">${ms(s.avg == null ? null : Math.round(s.avg))}</td></tr>`;
+  const head = `<thead><tr><th></th><th class="n">Số truy vấn</th><th class="n">P50</th><th class="n">P90</th><th class="n">P95</th><th class="n">P99</th><th class="n">Max</th><th class="n">TB</th></tr></thead>`;
+  let rows = statRow('Search · hệ mới', n) + statRow('Search · hệ cũ (As-Is)', o, `Production, crawl ${esc(M.asis_crawled)}`);
+  Object.entries(P.by_mode).forEach(([m, s]) => rows += statRow(`Search · hệ mới · ${m}`, s, m === 'hybrid' ? 'Truy vấn đi nhánh lai (lexical + vector)' : 'Truy vấn đi nhánh từ khoá'));
+  rows += statRow('AutoComplete · hệ mới', P.ac_new, 'Tham khảo') + statRow('AutoComplete · hệ cũ', P.ac_old, 'Tham khảo');
+  b += `<div><h3 class="sub">Chi tiết số liệu</h3><div class="tbl-wrap"><table>${head}<tbody>${rows}</tbody></table></div>
+    <p class="note">Lỗi gọi API hệ mới: ${nf(P.errors)} / ${nf(n.count)}. Hệ mới chậm nhất ${ms(n.max)}; hệ cũ có đuôi dài tới ${ms(o.max)}.</p></div>`;
+
+  b += `<details class="grp"><summary>${CHEV}<span class="t">20 truy vấn chậm nhất (hệ mới)</span><span class="d">so với hệ cũ cùng truy vấn</span></summary>
+    <div class="tbl-wrap" style="border:0;border-radius:0"><table><thead><tr><th>Truy vấn</th><th>Nhóm</th><th>Nhánh</th><th class="n">Hệ mới</th><th class="n">Hệ cũ</th><th class="n">Tổng hit</th></tr></thead><tbody>
+    ${D.slowest.map(s => `<tr><td><span class="q">${esc(s.q)}<small>${esc(s.id)}</small></span></td><td class="item-sec">${esc(SEC[s.sec] || s.sec)}</td><td>${esc(s.mode || '')}</td>
+      <td class="n">${ms(s.ms)}</td><td class="n">${ms(s.old)}</td><td class="n">${nf(s.hits)}</td></tr>`).join('')}
+    </tbody></table></div></details>`;
+
+  html += section('perf', 'Performance — Text Search', `P95 ${ms(n.p95)} (hệ cũ ${ms(o.p95)}) · ${String(P.under1000_new).replace('.', ',')}% dưới 1 giây`, b);
+}
+
+// =============================== list helpers ===============================
+function itemHtml(r) {
+  const hist = r.track_hist ? `<div class="hist-strip">${Object.entries(r.track_hist).map(([d, s]) => `<span data-tip="${esc(d)}: ${esc(s)}">${esc(d)} · ${esc(s)}</span>`).join('')}</div>` : '';
+  return `<details class="item" data-status="${esc(r.status)}" data-q="${esc((r.q + ' ' + r.id + ' ' + (r.note || '')).toLowerCase())}">
+    <summary>${CHEV}<span class="q">${esc(r.q)}<small>${esc(r.id)}</small></span><span class="item-sec">${esc(SEC[r.sec] || r.sec || '')}</span>
+      <span class="item-pills">${statusPill(r.status)}${trackPill(r.track)}</span></summary>
+    <div class="item-body">
+      <div class="kv"><span>Căn cứ: <b>${esc(BASIS[r.basis] || r.basis)}</b></span><span>Máy tự chấm: <b>${esc(r.auto || '—')}</b></span>
+        <span>Độ trùng As-Is: <b>${esc(r.asis || '—')}</b></span><span>Ghi nhận: <b>${esc(r.at || '—')}</b></span>
+        ${r.shot ? '<span>Có ảnh chụp trong compare report</span>' : ''}</div>
+      ${r.note ? `<pre>${esc(r.note)}</pre>` : '<div class="muted">Chưa có ghi chú.</div>'}
+      ${hist}
+    </div></details>`;
+}
+
+function catBars(list, cats, target) {
+  const cnt = {}; list.forEach(r => cnt[r.cat] = (cnt[r.cat] || 0) + 1);
+  const rows = cats.filter(c => cnt[c.key]).sort((a, b) => cnt[b.key] - cnt[a.key]);
+  const max = Math.max(...rows.map(c => cnt[c.key]));
+  const click = !SUMMARY;
+  return `<div class="hbar${click ? ' clickable' : ''}"${click ? ` data-target="${target}"` : ''}>${rows.map(c => `<div class="row" data-cat="${c.key}"${click ? ` tabindex="0" role="button" aria-label="Lọc: ${esc(c.label)}"` : ''}>
+    <div class="lab">${esc(c.label)}<small>${esc(c.desc)}</small></div>
+    <div class="bars"><div class="b" style="width:${pct(cnt[c.key], max)}%" data-tip="${esc(c.label)}: ${cnt[c.key]} (${pf(cnt[c.key], list.length)})"></div></div>
+    <div class="val">${cnt[c.key]} · ${pf(cnt[c.key], list.length, 0)}</div></div>`).join('')}</div>`;
+}
+
+function groupedList(id, list, cats, openFirst) {
+  const chips = `<div class="filters" data-list="${id}">
+    <button class="chip" type="button" data-f="cat" data-v="" aria-pressed="true">Tất cả<span class="c">${list.length}</span></button>
+    ${cats.filter(c => list.some(r => r.cat === c.key)).map(c => `<button class="chip" type="button" data-f="cat" data-v="${c.key}" aria-pressed="false">${esc(c.label)}<span class="c">${list.filter(r => r.cat === c.key).length}</span></button>`).join('')}
+    <select class="sel" data-f="status" id="${id}-status" aria-label="Lọc theo trạng thái"><option value="">Mọi trạng thái</option>
+      ${['failed', 'passed', 'discussion'].filter(s => list.some(r => r.status === s)).map(s => `<option value="${s}">${STATUS[s][2]}</option>`).join('')}</select>
+    <input class="search" type="search" data-f="text" id="${id}-search" placeholder="Tìm từ khoá, mã, ghi chú…">
+    <span class="count-line" data-count></span></div>`;
+  const groups = cats.filter(c => list.some(r => r.cat === c.key)).map((c, i) => {
+    const items = list.filter(r => r.cat === c.key);
+    return `<details class="grp" data-cat="${c.key}" ${openFirst && i === 0 ? 'open' : ''}><summary>${CHEV}<span class="t">${esc(c.label)}</span><span class="d">${esc(c.desc)}</span><span class="cnt" data-gcount>${items.length}</span></summary>
+      ${items.map(r => itemHtml(r)).join('')}<div class="empty" hidden>Không có mục nào khớp bộ lọc.</div></details>`;
+  }).join('');
+  return `${chips}<div id="${id}">${groups}</div>`;
+}
+
+// =============================== 4. BUG ===============================
+{
+  const B = D.bugs;
+  const byStatus = s => B.filter(r => r.status === s).length;
+  const tracked = B.filter(r => r.track);
+  const tc = {}; tracked.forEach(r => tc[r.track] = (tc[r.track] || 0) + 1);
+  const bySec = {}; B.forEach(r => bySec[r.sec] = (bySec[r.sec] || 0) + 1);
+  const secRows = Object.entries(bySec).sort((a, b) => b[1] - a[1]);
+  const smax = Math.max(...secRows.map(x => x[1]));
+  let b = `<div class="tiles">
+    <div class="tile lead"><div class="k">Bug QA đã ghi nhận</div><div class="v num">${nf(B.length)}</div><div class="s">trên ${nf(S.total)} kịch bản đã duyệt</div></div>
+    <div class="tile fail"><div class="k"><span class="ico fail">✕</span>Kịch bản Failed</div><div class="v num">${nf(byStatus('failed'))}</div><div class="s">bug đang chặn kịch bản</div></div>
+    <div class="tile pass"><div class="k"><span class="ico pass">✓</span>Kịch bản Passed</div><div class="v num">${nf(byStatus('passed'))}</div><div class="s">QA chấm Passed, bug giữ làm đề xuất cải thiện</div></div>
+    <div class="tile disc"><div class="k"><span class="ico disc">?</span>Kịch bản Discussion</div><div class="v num">${nf(byStatus('discussion'))}</div><div class="s">có kèm câu hỏi cần chốt</div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h4>Phân loại theo nguyên nhân</h4>${LIST_CAP}${catBars(B, D.bug_cats, 'bugList')}</div>
+    <div class="panel"><h4>Theo nhóm truy vấn</h4><p class="cap">Số bug trên mỗi nhóm</p><div class="hbar">
+      ${secRows.map(([k, v]) => `<div class="row"><div class="lab">${esc(SEC[k] || k)}</div><div class="bars"><div class="b" style="width:${pct(v, smax)}%"></div></div><div class="val">${v}</div></div>`).join('')}</div>
+      ${SUMMARY ? '' : `<h4 style="margin-top:10px">Trạng thái trên tracker của khách</h4><p class="cap">${nf(tracked.length)}/${nf(B.length)} bug khớp từ khoá trên sheet Search result (${esc(M.tracker_date || '')})</p>
+      <div class="filters" style="gap:6px">${Object.entries(tc).sort((a, b) => b[1] - a[1]).map(([s, v]) => `<span class="pill ${TRACK[s] || 'neutral'}">${esc(s)} · ${v}</span>`).join('')}
+        <span class="pill neutral">Chưa có trên tracker · ${B.length - tracked.length}</span></div>`}</div>
+  </div>
+  ${SUMMARY ? '' : `<div><h3 class="sub">Danh sách bug</h3>${groupedList('bugList', B, D.bug_cats, true)}</div>
+  <p class="note">Phân loại tự động theo từ khoá trong ghi chú QA (phần danh sách SKU dán vào được bỏ qua); bug nhắc tới nhiều vấn đề được xếp theo vấn đề nghiêm trọng hơn.</p>`}`;
+  html += section('bugs', 'Bug', `${nf(B.length)} bug · ${nf(byStatus('failed'))} kịch bản Failed`, b);
+}
+
+// =============================== 5. DISCUSSION ===============================
+{
+  const Q = D.discs;
+  const tracked = Q.filter(r => r.track).length;
+  let b = `<div class="tiles"${SUMMARY ? ' style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"' : ''}>
+    <div class="tile disc"><div class="k"><span class="ico disc">?</span>Kịch bản cần discuss</div><div class="v num">${nf(Q.length)}</div><div class="s">câu hỏi QA cần chốt với khách</div></div>
+    ${SUMMARY ? '' : `<div class="tile"><div class="k">Có trên tracker của khách</div><div class="v num">${nf(tracked)}</div><div class="s">khớp từ khoá sheet Search result</div></div>`}
+  </div>
+  <div class="panel"><h4>Chủ đề cần chốt với khách</h4>${LIST_CAP}${catBars(Q, D.disc_cats, 'discList')}</div>
+  ${SUMMARY ? '' : `<div><h3 class="sub">Câu hỏi theo chủ đề</h3>${groupedList('discList', Q, D.disc_cats, true)}</div>`}`;
+  html += section('discuss', 'Discussion', `${nf(Q.length)} kịch bản cần chốt`, b);
+}
+
+// =============================== 6. PHƯƠNG PHÁP ===============================
+{
+  const b = `<dl class="def">
+    <dt>Đã duyệt tay</dt><dd>Kịch bản QA đã để lại dấu vết: tự chấm Pass/Fail, ghi bug hoặc ghi discussion. Kịch bản chưa ai xem (chỉ có kết quả máy chấm) không tính vào báo cáo.</dd>
+    <dt>Passed</dt><dd>QA chấm tay Passed (kể cả khi có bug note — bug giữ làm đề xuất cải thiện).</dd>
+    <dt>Failed</dt><dd>QA chấm tay Failed, hoặc QA ghi bug trên kịch bản chưa chấm tay.</dd>
+    <dt>Discussion</dt><dd>QA ghi câu hỏi discussion — expected chưa chốt nên chưa kết luận Pass/Fail.</dd>
+    <dt>Latency</dt><dd>Đo phía client cho từng request, tuần tự, không tải song song. Không phải kết quả load test.</dd>
+  </dl>
+  <div class="kv"><span>Bộ test: <b>Tiếng Việt, ${nf(S.all_scenarios)} kịch bản (${nf(S.total)} đã duyệt tay)</b></span>
+    <span>Run hệ mới: <b class="mono">${esc(M.run)}</b></span>
+    <span>Hệ cũ: <b class="mono">${esc(M.asis_file)}</b> · ${esc(M.asis_api || '')}</span></div>`;
+  if (!SUMMARY) html += section('method', 'Định nghĩa & nguồn dữ liệu', 'cách tính các con số trong báo cáo', b, false);
+}
+
+html += `<footer>Sinh tự động bởi build_qa_dashboard.py · ${esc(M.generated)}</footer>`;
+$('#app').innerHTML = html;
+
+// =============================== interactions ===============================
+function applyFilter(listId) {
+  const bar = $(`.filters[data-list="${listId}"]`), root = $('#' + listId);
+  const cat = $('.chip[aria-pressed="true"]', bar)?.dataset.v || '';
+  const st = $('select[data-f="status"]', bar).value;
+  const txt = $('input[data-f="text"]', bar).value.trim().toLowerCase();
+  let shown = 0;
+  $$('details.grp', root).forEach(g => {
+    const catOk = !cat || g.dataset.cat === cat;
+    g.hidden = !catOk;
+    let n = 0;
+    $$('details.item', g).forEach(it => {
+      const ok = catOk && (!st || it.dataset.status === st) && (!txt || it.dataset.q.includes(txt));
+      it.hidden = !ok; if (ok) n++;
+    });
+    $('[data-gcount]', g).textContent = n;
+    $('.empty', g).hidden = n > 0;
+    if (catOk && (cat || txt || st)) g.open = n > 0;
+    shown += n;
+  });
+  $('[data-count]', bar).textContent = `Hiển thị ${shown} mục`;
+  $$(`.hbar[data-target="${listId}"] .row`).forEach(r => r.classList.toggle('active', !!cat && r.dataset.cat === cat));
+}
+function setCat(listId, v) {
+  const bar = $(`.filters[data-list="${listId}"]`);
+  $$('.chip', bar).forEach(c => c.setAttribute('aria-pressed', String(c.dataset.v === v)));
+  applyFilter(listId);
+}
+$$('.filters[data-list]').forEach(bar => {
+  const id = bar.dataset.list;
+  bar.addEventListener('click', e => { const c = e.target.closest('.chip'); if (c) setCat(id, c.dataset.v); });
+  bar.addEventListener('input', () => applyFilter(id));
+  applyFilter(id);
+});
+$$('.hbar[data-target] .row').forEach(r => {
+  const go = () => {
+    const id = r.closest('.hbar').dataset.target;
+    const cur = $(`.filters[data-list="${id}"] .chip[aria-pressed="true"]`)?.dataset.v;
+    setCat(id, cur === r.dataset.cat ? '' : r.dataset.cat);
+    $(`.filters[data-list="${id}"]`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  r.addEventListener('click', go);
+  r.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+});
+
+$('#btnExpand').addEventListener('click', () => $$('details').forEach(d => { if (!d.hidden) d.open = true; }));
+$('#btnCollapse').addEventListener('click', () => { $$('details.grp, details.item').forEach(d => d.open = false); const m = $('#method'); if (m) m.open = false; });
+$('#btnPdf').addEventListener('click', () => window.print());
+
+// tooltip
+const tip = $('#tip');
+document.addEventListener('mouseover', e => {
+  const t = e.target.closest('[data-tip]');
+  if (!t) { tip.classList.remove('on'); return; }
+  tip.textContent = t.getAttribute('data-tip'); tip.classList.add('on');
+});
+document.addEventListener('mousemove', e => {
+  if (!tip.classList.contains('on')) return;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = e.clientX + 14, y = e.clientY + 14;
+  if (x + w > innerWidth - 8) x = e.clientX - w - 14;
+  if (y + h > innerHeight - 8) y = e.clientY - h - 14;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+});
+document.addEventListener('scroll', () => tip.classList.remove('on'), { passive: true });
+})();
+</script>
+</body>
+</html>

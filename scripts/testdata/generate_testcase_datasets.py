@@ -1,6 +1,6 @@
 """Generate a real-DB-backed Test Data workbook for the MART Smart Search test cases.
 
-Reads the actual product catalog (data/ProductInfo/*.ndjson) and, for every test
+Reads the actual product catalog (nguon do scripts/product_source.py chon) and, for every test
 case that needs concrete search/product data, pulls 5-10 REAL records (SKU,
 name, price, stock, category, rating, discount...) that satisfy that test
 case's condition (keyword match, price sort, out-of-stock, purchase-limit,
@@ -31,11 +31,16 @@ import openpyxl
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import product_source as _product_source  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = ROOT / "data" / "ProductInfo"
 OUT_DIR_XLSX = ROOT / "SmartSearch" / "test_data" / "excel"
 OUT_DIR_JSON = ROOT / "SmartSearch" / "test_data" / "json"
 STORE = "nsg"
+# Nguon do scripts/product_source.py quyet dinh (nsg -> anh chup v1.1 2026-08-28).
+DATA_DIR = _product_source.store_dir(STORE) or (ROOT / "data" / "ProductInfo")
 
 random.seed(42)
 
@@ -245,7 +250,7 @@ def write_cover(wb, generated_date):
     ws.column_dimensions["A"].width = 100
     lines = [
         ("MART Smart Search – Test Data (từ DB sản phẩm thực tế)", 16, True),
-        (f"Nguồn DB: data/ProductInfo/mart_{{vi,en,kr}}_{STORE}_product.ndjson (store {STORE})", 11, False),
+        (f"Nguồn DB: {_product_source.rel(DATA_DIR)}/mart_{{vi,en,kr}}_{STORE}_product.ndjson (store {STORE})", 11, False),
         (f"Ngày tạo: {generated_date}", 11, False),
         ("", 11, False),
         ("Cách đọc file:", 12, True),

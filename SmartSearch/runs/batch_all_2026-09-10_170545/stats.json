@@ -1,0 +1,452 @@
+{
+  "title": "Batch Test Dashboard - NSG - all",
+  "subtitle": "Chạy lúc 2026-09-12 03:10 - 2355 scenario - 122668s",
+  "n_scenarios": 2355,
+  "batches": [
+    "all"
+  ],
+  "search": {
+    "latency": {
+      "n": 2355,
+      "n_errors": 224,
+      "avg": 468.5,
+      "p50": 392,
+      "p90": 734,
+      "p95": 922.0,
+      "p99": 1158.5,
+      "min": 207,
+      "max": 11945
+    },
+    "recall_avg_pct": 35.5,
+    "perfect_match_pct": 2.0,
+    "any_missing_pct": 93.2,
+    "by_dimension": {
+      "manual_demo_asis_vs_actual": {
+        "n": 78,
+        "avg_latency": 482.8,
+        "avg_recall_pct": 24.0
+      },
+      "generic_vague_intent": {
+        "n": 109,
+        "avg_latency": 643.7,
+        "avg_recall_pct": 16.7
+      },
+      "misspelling": {
+        "n": 57,
+        "avg_latency": 357.2,
+        "avg_recall_pct": 2.7
+      },
+      "synonym_variant": {
+        "n": 72,
+        "avg_latency": 450.9,
+        "avg_recall_pct": 10.5
+      },
+      "foreign_language": {
+        "n": 88,
+        "avg_latency": 536.6,
+        "avg_recall_pct": 7.1
+      },
+      "benchmark_raw": {
+        "n": 1070,
+        "avg_latency": 475.7,
+        "avg_recall_pct": 41.6
+      },
+      "real_search_history": {
+        "n": 1,
+        "avg_latency": 355.0,
+        "avg_recall_pct": 80.0
+      },
+      "history_verification": {
+        "n": 741,
+        "avg_latency": 432.8,
+        "avg_recall_pct": 42.0
+      },
+      "regional_dialect": {
+        "n": 56,
+        "avg_latency": 359.4,
+        "avg_recall_pct": 25.0
+      },
+      "semantic_phrase": {
+        "n": 83,
+        "avg_latency": 652.0,
+        "avg_recall_pct": 4.3
+      }
+    },
+    "latency_histogram": [
+      [
+        "<200ms",
+        0
+      ],
+      [
+        "200-500ms",
+        1447
+      ],
+      [
+        "500-1000ms",
+        598
+      ],
+      [
+        "1000-2000ms",
+        83
+      ],
+      [
+        "2000-5000ms",
+        2
+      ],
+      [
+        ">5000ms",
+        1
+      ]
+    ]
+  },
+  "autocomplete": {
+    "latency": {
+      "n": 2355,
+      "n_errors": 225,
+      "avg": 240.1,
+      "p50": 231.0,
+      "p90": 267.0,
+      "p95": 275.0,
+      "p99": 317.3,
+      "min": 176,
+      "max": 11388
+    },
+    "recall_avg_pct": 12.9,
+    "by_dimension": {
+      "manual_demo_asis_vs_actual": {
+        "n": 78,
+        "avg_latency": 235.6,
+        "avg_recall_pct": 8.0
+      },
+      "generic_vague_intent": {
+        "n": 109,
+        "avg_latency": 336.7,
+        "avg_recall_pct": 3.9
+      },
+      "misspelling": {
+        "n": 57,
+        "avg_latency": 222.7,
+        "avg_recall_pct": 0.4
+      },
+      "synonym_variant": {
+        "n": 72,
+        "avg_latency": 235.0,
+        "avg_recall_pct": 1.0
+      },
+      "foreign_language": {
+        "n": 88,
+        "avg_latency": 222.0,
+        "avg_recall_pct": 0.0
+      },
+      "benchmark_raw": {
+        "n": 1070,
+        "avg_latency": 234.4,
+        "avg_recall_pct": 14.0
+      },
+      "real_search_history": {
+        "n": 1,
+        "avg_latency": 226.0,
+        "avg_recall_pct": 40.0
+      },
+      "history_verification": {
+        "n": 741,
+        "avg_latency": 235.5,
+        "avg_recall_pct": 17.7
+      },
+      "regional_dialect": {
+        "n": 56,
+        "avg_latency": 231.8,
+        "avg_recall_pct": 12.3
+      },
+      "semantic_phrase": {
+        "n": 83,
+        "avg_latency": 273.7,
+        "avg_recall_pct": 0.2
+      }
+    }
+  },
+  "worst_search": [
+    {
+      "test_id": "NSG-ALL-0001",
+      "query": "l choice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0004",
+      "query": "nuowc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-0005",
+      "query": "đồ ăn nhật",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0010",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0011",
+      "query": "chế độ ăn eat clean",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-0012",
+      "query": "đồ ăn organic",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0024",
+      "query": "đồ ăn hàn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-0034",
+      "query": "hộp đựng thực phẩm thủy tinh",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0035",
+      "query": "dưa hâu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0042",
+      "query": "nước hoa nam",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-0051",
+      "query": "thực phẩm tươi sống",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 19,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0052",
+      "query": "chống lão hóa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 0
+    },
+    {
+      "test_id": "NSG-ALL-0053",
+      "query": "cocacola",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 1,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0054",
+      "query": "わさび",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 16,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0055",
+      "query": "라면",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 16,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-0058",
+      "query": "lchoice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-0061",
+      "query": "mỹ phẩm thiên nhiên",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0074",
+      "query": "khan giấy",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0,
+      "missing_count": 16,
+      "extra_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-0079",
+      "query": "mì",
+      "dimension": "generic_vague_intent",
+      "recall_pct": 0.0,
+      "missing_count": 20,
+      "extra_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-0083",
+      "query": "tía tô",
+      "dimension": "generic_vague_intent",
+      "recall_pct": 0.0,
+      "missing_count": 3,
+      "extra_count": 20
+    }
+  ],
+  "worst_autocomplete": [
+    {
+      "test_id": "NSG-ALL-0001",
+      "query": "l choice",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0002",
+      "query": "đường cát",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0004",
+      "query": "nuowc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0005",
+      "query": "đồ ăn nhật",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0006",
+      "query": "giỏ quà tết",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0007",
+      "query": "power 100",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0008",
+      "query": "móc quần áo",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0009",
+      "query": "bếp từ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0010",
+      "query": "đồ ăn cho người giảm cân",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0011",
+      "query": "chế độ ăn eat clean",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0012",
+      "query": "đồ ăn organic",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0013",
+      "query": "protein tăng cơ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0014",
+      "query": "nước rửa chuyên dụng bình sữa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0016",
+      "query": "pepci",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0017",
+      "query": "thớt gỗ nhà bếp",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0018",
+      "query": "rổ nhựa đựng đồ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0019",
+      "query": "thuốc diệt côn trùng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0020",
+      "query": "nước giac",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0021",
+      "query": "túi rát",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    },
+    {
+      "test_id": "NSG-ALL-0024",
+      "query": "đồ ăn hàn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "recall_pct": 0.0
+    }
+  ]
+}

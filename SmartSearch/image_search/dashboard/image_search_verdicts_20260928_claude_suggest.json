@@ -1,0 +1,1242 @@
+{
+  "kind": "image_search_verdicts",
+  "report_id": "excel_top40",
+  "round": "2026-09-28",
+  "store": "nsg",
+  "exported_at": "2026-09-29T08:51:16",
+  "source": "claude_suggest",
+  "model": {
+    "caption": {
+      "weights": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "threshold": 1.0,
+      "train_acc": 0.705,
+      "cv_acc": 0.677
+    },
+    "vector": {
+      "weights": [
+        0.2,
+        0.3,
+        0.3,
+        0.2,
+        0
+      ],
+      "threshold": 0.65,
+      "train_acc": 0.945,
+      "cv_acc": 0.925
+    },
+    "vector_titan": {
+      "weights": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "threshold": 0.65,
+      "train_acc": 0.961,
+      "cv_acc": 0.957
+    },
+    "vector_titan_multi": {
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "threshold": 0.5,
+      "train_acc": 0.976,
+      "cv_acc": 0.969
+    }
+  },
+  "borrowed": {
+    "vector_titan_multi_caption_type": "vector_titan_multi"
+  },
+  "learned_from": [
+    "2026-09-22",
+    "2026-09-24"
+  ],
+  "reviewed_ids": [],
+  "verdicts": {
+    "kw001": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw003": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw004": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw005": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw006": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw007": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw008": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw009": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw010": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw011": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw012": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw013": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw014": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw015": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw017": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw018": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw019": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw020": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw021": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw022": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw023": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw024": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw025": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw026": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw027": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw028": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw029": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw030": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw031": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw032": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw033": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw034": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw036": [
+      "vector",
+      "caption"
+    ],
+    "kw037": [
+      "none"
+    ],
+    "kw038": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw039": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw040": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw041": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw043": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw044": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw045": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw046": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw047": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw048": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw049": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw050": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw051": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw053": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw054": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw055": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw056": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw057": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw058": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw059": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw060": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw101": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw102": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw103": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw104": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw105": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw106": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw107": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw108": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw109": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw110": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw111": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw112": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw113": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw066": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw067": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw068": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw069": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw070": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw071": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw072": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw073": [
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw074": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw075": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw076": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw077": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw078": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw079": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw080": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw127": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw126": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw125": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw124": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw123": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw122": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw121": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw120": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw119": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw118": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw117": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw116": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw115": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw114": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw100": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw099": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw098": [
+      "none"
+    ],
+    "kw097": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw096": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw095": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw094": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw093": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw092": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw091": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw090": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw089": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw088": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw087": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw086": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw085": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw084": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw083": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw082": [
+      "none"
+    ],
+    "kw081": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw002": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw016": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw035": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw042": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw052": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw061": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw062": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw063": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw064": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw065": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ]
+  },
+  "performance": {
+    "kw001": [
+      "vector_titan_multi"
+    ],
+    "kw003": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw004": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw005": [
+      "vector"
+    ],
+    "kw006": [
+      "vector"
+    ],
+    "kw007": [
+      "caption"
+    ],
+    "kw008": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw009": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw010": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw011": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw012": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw013": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw014": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw015": [
+      "vector"
+    ],
+    "kw017": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw018": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw019": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw020": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw021": [
+      "caption"
+    ],
+    "kw022": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw023": [
+      "vector"
+    ],
+    "kw024": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw025": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw026": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw027": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw028": [
+      "vector"
+    ],
+    "kw029": [
+      "vector"
+    ],
+    "kw030": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw031": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw032": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw033": [
+      "caption"
+    ],
+    "kw034": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw036": [
+      "vector"
+    ],
+    "kw038": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw039": [
+      "caption"
+    ],
+    "kw040": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw041": [
+      "vector"
+    ],
+    "kw043": [
+      "vector"
+    ],
+    "kw044": [
+      "caption"
+    ],
+    "kw045": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw046": [
+      "vector"
+    ],
+    "kw047": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw048": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw049": [
+      "vector"
+    ],
+    "kw050": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw051": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw053": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw054": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw055": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw056": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw057": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw058": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw059": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw060": [
+      "vector"
+    ],
+    "kw101": [
+      "vector"
+    ],
+    "kw102": [
+      "vector"
+    ],
+    "kw103": [
+      "vector"
+    ],
+    "kw104": [
+      "vector"
+    ],
+    "kw105": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw106": [
+      "vector_titan_multi"
+    ],
+    "kw107": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw108": [
+      "vector"
+    ],
+    "kw109": [
+      "vector_titan_multi"
+    ],
+    "kw110": [
+      "vector"
+    ],
+    "kw111": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw112": [
+      "caption"
+    ],
+    "kw113": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw066": [
+      "caption"
+    ],
+    "kw067": [
+      "vector"
+    ],
+    "kw068": [
+      "caption"
+    ],
+    "kw069": [
+      "vector"
+    ],
+    "kw070": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw071": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw072": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw073": [
+      "vector_titan_multi"
+    ],
+    "kw074": [
+      "vector"
+    ],
+    "kw075": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw076": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw077": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw078": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw079": [
+      "vector"
+    ],
+    "kw080": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw127": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw126": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw125": [
+      "vector"
+    ],
+    "kw124": [
+      "vector"
+    ],
+    "kw123": [
+      "vector"
+    ],
+    "kw122": [
+      "vector_titan_multi"
+    ],
+    "kw121": [
+      "caption"
+    ],
+    "kw120": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw119": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw118": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw117": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw116": [
+      "vector"
+    ],
+    "kw115": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw114": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw100": [
+      "vector_titan_multi"
+    ],
+    "kw099": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw097": [
+      "vector"
+    ],
+    "kw096": [
+      "caption"
+    ],
+    "kw095": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw094": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw093": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw092": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw091": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw090": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw089": [
+      "vector"
+    ],
+    "kw088": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw087": [
+      "vector"
+    ],
+    "kw086": [
+      "vector"
+    ],
+    "kw085": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw084": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw083": [
+      "vector"
+    ],
+    "kw081": [
+      "vector"
+    ],
+    "kw002": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw016": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw035": [
+      "vector"
+    ],
+    "kw042": [
+      "vector_titan_multi"
+    ],
+    "kw052": [
+      "vector"
+    ],
+    "kw061": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw062": [
+      "caption"
+    ],
+    "kw063": [
+      "vector_titan_multi"
+    ],
+    "kw064": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw065": [
+      "vector_titan_multi_caption_type"
+    ]
+  },
+  "notes": {
+    "kw001": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Sữa Lúa Mạch Nestle Millo…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Sữa Lúa Mạch Nestle Millo…, Sữa Dinh Dưỡng Socola Lúa…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Sữa Lúa Mạch Nestle Millo…, Sữa Dinh Dưỡng Socola Lúa…\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw003": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 2 KQ, đúng 0/2 · sp lạ: Phân Đầu Trâu Ra Nhiều…, Phân Bò Hapi Green Phú…\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ top20: Nước Xả Vải Gift Hương…, Nước Xả Vải Blue Đậm…, Nước Xả Vải Blue Đậm…, Nước Xả Vải Gift Lãng… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 4/10 · sp lạ top20: Nước Xả Vải Gift Hương…, Nước Xả Vải Blue Đậm…, Nước Xả Vải Blue Đậm…, Nước Xả Vải Gift Lãng… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw004": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Súp Gà Táo Đỏ Ăn…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw005": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi không đạt: top10 đúng 6/10 · sp lạ top20: Giò lụa Vissan cây 250g, Giò lụa đặc biệt Vissan…, Giò bò Vissan cây 500g, Giò lụa Vissan cây 500g …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Bột Gạo Vĩnh Thuận Gói…, Bột Nếp Vĩnh Thuận Gói…, Bột Gạo Tài Ký Gói…, Bột Phụ Gia Làm Xốp… …",
+    "kw006": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Sandwich Ngũ Cốc POONGMISO 200G, Bột Chiên Xù Panko 200G, Bánh Mì Mè Đen O'smiles…, Bánh Quy Bơ Ít Đường… …",
+    "kw007": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw008": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Dầu Gội Rejoice Hương Hoa…, Dầu Gội Rejoice Hương Hoa…, Dầu Gội Rejoice Siêu Mềm…\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 7/10 · sp lạ top20: Dầu Gội Rejoice Hương Hoa…, Dầu Gội Rejoice Hương Hoa…, Dung Dịch Hada Labo Dưỡng…, Dung Dịch Hada Labo Dưỡng… …",
+    "kw009": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 1 KQ, đúng 0/1 · sp lạ: Gel Dưỡng Ẩm Hada Labo…\n- Titan Multi đạt: top10 đúng 6/10 · sp lạ top20: Sữa Rửa Mặt Nivea Men…, Sữa Rửa Mặt Nivea Men…, Sữa Rửa Mặt Tạo Bọt…, Sữa Rửa Mặt Nivea Tinh… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 6/10 · sp lạ top20: Sữa Rửa Mặt Nivea Men…, Sữa Rửa Mặt Nivea Men…, Sữa Rửa Mặt Nivea Tinh…, Sữa Rửa Mặt Hada Labo… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Gel Dưỡng Da Milaganics Nha…, Gel Dưỡng Da Banana Boat…, Gel Dưỡng Ẩm Hada Labo…, Sữa Dưỡng Ẩm Cetaphil Moisturising… …",
+    "kw010": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Nước Giặt Xả Fily Hương…, Nước Giặt Lix Hương Nước…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Sữa Rửa Tay Choice-L Hương…, Dầu Gội Romano Classic Sạch…, Dầu Gội Dược Liệu Nguyen_Xuan…, Dầu Gội Bondy Care Sạch… …",
+    "kw011": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi không đạt: chỉ trả 8 KQ, đúng 3/8 · sp lạ: Cơm Nắm Cá Hồi Mayo…, Cơm Nắm Yorihada Nhân Cá…, Cơm Nắm Yorihada Origini Nhân…, Gừng Muối Hồng 100g …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw012": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 6/10 · sp lạ top20: Xương Đùi Gà CP 500G, Gà ta Gò Công nguyên…, Xương Gà CP 1kg, Xương Má Đùi Gà Niwatori… …\n- Titan Multi đạt: top10 đúng 6/10 · sp lạ top20: Cánh Tỏi Gà Japfa Best…, Cánh Giữa Gà Japfa Best…, Gà ta Gò Công nguyên…, Xương Đùi Gà CP 500G …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 6/10 · sp lạ top20: Cánh Tỏi Gà Japfa Best…, Cánh Giữa Gà Japfa Best…, Gà ta Gò Công nguyên…, Xương Đùi Gà CP 500G …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 7/10 · sp lạ top20: Đùi Cánh Tỏi Gà CP…, Cánh Giữa Gà Niwatori 450G, Thịt Gà Đóng Hộp Tulip…, Tim Gà CP 250G …",
+    "kw013": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 7/10 · sp lạ top20: Dầu Gạo Lứt Simply 100%…, Dầu Đậu Nành Simply 100%…, Dầu Đậu Nành Simply 100%…, Dầu Thực Vật I'm Chef…\n- Titan Multi đạt: top10 đúng 7/10 · sp lạ top20: Dầu Gạo Lứt Simply 100%…, Dầu Đậu Nành Simply 100%…, Dầu Đậu Nành Simply 100%…, Dầu Ăn Cao Cấp Meizan…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 7/10 · sp lạ top20: Dầu Gạo Lứt Simply 100%…, Dầu Đậu Nành Simply 100%…, Dầu Đậu Nành Simply 100%…\n- NovaLite đạt (cần xem kỹ): chỉ trả 1 KQ, đúng 0/1 · sp lạ: Dầu Gạo Lứt Simply 100%…",
+    "kw014": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ top20: Gel Rửa Tay Choice L…, Sữa Tắm Tẩy Tế Bào…, Gel Rửa Tay Choice L…, Sữa Rửa Tay Dr.Clean Hương…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Nước Tẩy Trang Cocoon Bí…, Sữa Tắm ON: The Body…, Nước Cân Bằng Da Cocoon…, Tắm Gội Pureen Pro Vitamin… …",
+    "kw015": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ: Kẹo Socola Sữa M&M's Gói…, Kẹo Socola Sữa M&M Character…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Kẹo Socola Sữa M&M's Gói…, Socola Sữa Beryl's Vị Hỗn…, Socola Sữa Beryl's Nhân Nho…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Kẹo Socola Sữa M&M's Gói…, Socola Sữa Beryl's Vị Hỗn…, Socola Sữa Beryl's Nhân Nho…, Kẹo Trái Cây Skittles 100G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Kẹo Dream Vị Gừng 200G, Kẹo Dream Vị Quế 200G, Kẹo Xôi Thái Và Sầu…, Kẹo Gum Cuộn Hubba Bubba… …",
+    "kw017": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: top10 đúng 1/10 · sp lạ top20: Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi…, Lốc 4 Hộp Sữa Tươi… …\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Ca Cao Hòa Tan Passion…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw018": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Bánh Karo Trứng Chà Bông…, Bánh Đậu Xanh Hương Nguyên…, Bánh Quy Wondertok Thin Masterpieces…, Bánh Custas 6 Cái 138G …",
+    "kw019": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw020": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Tã Quần Molfix Oxygen Size…, Tã Quần Molfix Sweet Dreams…, Tã Quần Huggies Super Jumbo…, Tã Quần Người Lớn Caryn… …",
+    "kw021": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw022": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Sốt Mayonnaise Kewpie 300G, Bột Ngọt Miwon 100G\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 3 KQ, đúng 3/3",
+    "kw023": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Thịt Hàu Sữa Nhật Minh…, Cá Mối 500G, Mực Xào Cay Hàn Quốc…",
+    "kw024": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ: Bánh Sandwich Lạt POONGMISO 300G\n- Titan Multi đạt: chỉ trả 9 KQ, đúng 8/9 · sp lạ: Bánh Sandwich Lạt POONGMISO 300G\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 9 KQ, đúng 8/9 · sp lạ: Bánh Sandwich Lạt POONGMISO 300G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Bánh Hạnh Nhân Hoàng Mỹ…, Bánh Mochi Royal Family Khoai…, Bánh Quy Bibica Jamy Nhân…, Bánh đậu xanh cốm Rồng… …",
+    "kw025": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 2 KQ, đúng 0/2 · sp lạ: Phô Mai Hun Khói Solse…, Phô Mai Hun Khói Nguyễn…\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw026": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Dầu Gội Lifebuoy Mềm Mượt…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Dầu Gội Lifebuoy Mềm Mượt…, Dầu Gội Lifebuoy Dưỡng Tóc…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Dầu Gội Lifebuoy Mềm Mượt…, Dầu Gội Lifebuoy Dưỡng Tóc…\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Dầu Gội Lifebuoy Mềm Mượt…",
+    "kw027": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Túi Thơm Hygiene Hương Mẫu…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Túi Thơm Hygiene Hương Mẫu…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Sữa Tắm Hương Nước Hoa…, Lốc 3 Xà Bông Cục…, Sữa Tắm Purité Dưỡng Da…, Dầu Gội Rejoice Hương Hoa… …",
+    "kw028": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 2 KQ, đúng 2/2",
+    "kw029": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 8/10 · sp lạ top20: Giò Heo Rút Xương Thảo…, Ba Rọi Heo Thảo Mộc…, Giò Heo Rút Xương 365…, Sườn Già Heo Japfa 300G …\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Sườn Bò 365 Fresh 800G, Diềm Thăn Bò 300G, Nạm Bò 365 Fresh 300G, Bắp Bò 365 Fresh 300G …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 8/10 · sp lạ top20: Ba Rọi Heo 365 Fresh…, Giò Heo Rút Xương 365…, Ba Rọi Heo Thảo Mộc…, Ba Rọi Heo Cắt Lát… …\n- NovaLite không đạt (cần xem kỹ): chỉ trả 7 KQ, đúng 5/7 · sp lạ: Combo Thịt Ba Chỉ Heo…, Combo Thịt Ba Chỉ Heo,…",
+    "kw030": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 2 KQ, đúng 0/2 · sp lạ: Kẹo Chobisca Đức Hạnh 200g, Kẹo Cà Phê Sữa Maccofee…\n- Titan Multi không đạt: chỉ trả 1 KQ, đúng 0/1 · sp lạ: Set 2 Bánh Cupcake POONGMISO…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 5 KQ, đúng 5/5\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Mật Ong Rừng Tây Nguyên…, Mật Ong Nghệ Bee Honey…, Mật Ong Behonex Hộp 12…, Mật Ong Nguyên Chất Bee… …",
+    "kw031": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw032": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw033": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 7/10 · sp lạ: Tép Đồng 500G, Mực Ghim Trứng 350G, Cá Diêu Hồng Tươi Phi…, Cá Rô Phi Phi Lê… …\n- Titan Multi đạt: top10 đúng 5/10 · sp lạ top20: Tép Đồng 500G, Mực Nang 300G, Cá Lăng Đen Phi Lê…, Cá Diêu Hồng Tươi Phi… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 6/10 · sp lạ top20: Tép Đồng 500G, Mực Nang 300G, Cá Lăng Đen Phi Lê…, Cá Diêu Hồng Tươi Phi… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw034": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ: Sữa Trái Cây Hương Trái…, Sữa Tươi Tiệt Trùng Nuvi…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ: Sữa Trái Cây Hương Trái…, Sữa Tươi Tiệt Trùng Nuvi…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Nước Rửa Tay Lifebuoy Vitamin…, Nước Rửa Tay Lifebuoy Vitamin…, Sữa Tươi Tiệt Trùng TH…, Nước Rửa Tay Lifebuoy Vitamin… …",
+    "kw036": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi không đạt: top10 đúng 2/10 · sp lạ top20: Hạt Nêm Good Today Thịt…, Bột Tương Đen Ottogi Gói…, Sốt Kimchi Jjigae Sempio Gói…, Sốt BBQ Gà Xào Gochujang… …\n- Titan Multi Caption Type không đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 2/10 · sp lạ top20: Hạt Nêm Good Today Thịt…, Bột Tương Đen Ottogi Gói…, Sốt Kimchi Jjigae Sempio Gói…, Sốt BBQ Gà Xào Gochujang… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw037": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 4 KQ, đúng 0/4 · sp lạ: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Belcube Con Bò…\n- Titan Multi không đạt: chỉ trả 6 KQ, đúng 0/6 · sp lạ: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Trái Cây Le…, Phô Mai Hoa Quả Kids… …\n- Titan Multi Caption Type không đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 6 KQ, đúng 0/6 · sp lạ: Phô Mai Hoa Quả Kids…, Phô Mai Hoa Quả Kids…, Phô Mai Trái Cây Le…, Phô Mai Hoa Quả Kids… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Trứng Gà Tươi Happy Egg…, Trứng Vịt Bắc Thảo V.food…, Trứng Gà Đại Hỷ 365…, Trứng Gà Hồng V.Food Hộp… …",
+    "kw038": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: chỉ trả 6 KQ, đúng 0/6 · sp lạ: Kẹo Dynamite Chews Vị Trái…, Bánh Snack Khoai Tây Swing…, Snack Cà Chua Tomati Gói…, Snack Swing Vị Bít Tết… …\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw039": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 6 KQ, đúng 6/6",
+    "kw040": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 5/10 · sp lạ: Đu Đủ Giống Đài Loan…, Sapoche (Hồng Xiêm) 500G, Mãng Cầu Ta (Quả Na)…, Mận Đá 800G …\n- Titan Multi đạt: top10 đúng 6/10 · sp lạ top20: Đu Đủ Giống Đài Loan…, Nhãn Xuồng Cơm Vàng 700G, Măng Cụt 1kg, Mãng Cầu Ta (Quả Na)… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 6/10 · sp lạ top20: Đu Đủ Giống Đài Loan…, Nhãn Xuồng Cơm Vàng 700G, Măng Cụt 1kg, Mãng Cầu Ta (Quả Na)… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Bí Hồ Lô Giống Mỹ…, Hạt Phỉ Cacao Nutella Hũ…, Bí Xanh Gọt Vỏ 365…, Bí Hạt Đậu 1kg …",
+    "kw041": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Nước Rửa Tay Lifebuoy Vitamin…, Nước Rửa Tay Lifebuoy Vitamin…, Sữa Tắm Lifebuoy Bảo Vệ…, Nước Rửa Tay Lifebuoy Vitamin… …",
+    "kw043": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ: Sữa Uống Lên Men Betagen…",
+    "kw044": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 6 KQ, đúng 5/6 · sp lạ: Khoai Lang Giống Nhật 1kg\n- Titan Multi đạt: top10 đúng 5/10 · sp lạ top20: Khoai Lang Giống Nhật 1kg, Củ dền 500G, Khoai Lang Sữa VITEC FARM…, Hỗn Hợp Khoai Lang Giống… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 6/10 · sp lạ top20: Khoai Lang Giống Nhật 1kg, Khoai Lang Sữa VITEC FARM…, Hỗn Hợp Khoai Lang Giống…, Khoai môn cao 800g …\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw045": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw046": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Bột Năng Vĩnh Thuận Gói…, Bột Năng Tài Ký Gói…, Bột Năng Đa Dụng Meizan…",
+    "kw047": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Bánh Cuộn Ngọt Marukin Soft…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Bánh Cuộn Ngọt Marukin Soft…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Bánh Custas 6 Cái 138G, Bánh Orion Chocopie Hộp 653.4G…, Kẹo Thập Cẩm Yến Nhung…",
+    "kw048": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ: Khoai Tây Bi Hồng Giống…, Cà Tím Hữu Cơ Bio…, Cà Tím Giống Nhật Dalat…, Củ Dền Baby 300G (ea)\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Mận Đá 800G, Mít Thái Và Mít Đỏ…, Hồng Giòn Mộc Châu 1kg, Khoai Tây Bi Hồng Giống… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Mận Đá 800G, Mít Thái Và Mít Đỏ…, Hồng Giòn Mộc Châu 1kg, Khoai Tây Bi Hồng Giống… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 3/10 · sp lạ top20: Bưởi Tách Múi Hỗn Hợp…, Bưởi Hồng Da Xanh Túi…, Bưởi Ruby 9 Phẻ 1.6kg, Quýt Đường 500G …",
+    "kw049": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 7/10 · sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…, Gia Vị Hoàn Chỉnh Knorr…, Gia Vị Hoàn Chỉnh Knorr…\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Gia Vị Hoàn Chỉnh Knorr…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Tương Ớt Knorr Tròn 5…, Tương Tàu Xì LEE KUM…, Tương Cà Nam Dương Chai…, Tương Đen Choice L I'm… …",
+    "kw050": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw051": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Mì Xốt Kem Koreno Bulgogi…, Mì Hoành Thánh Vifon Hoàng…, Mì Good Today Sợi Nhỏ…, Mì Udon Nguyên Vị Hanil… …",
+    "kw053": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Bò Cuộn Lá Lốt LC…, Lốc 3 Xà Bông Cục…, Củ Sen Kho Nấm Tâm…, Kẹo Mút Lotte Lollipop Ice… …",
+    "kw054": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw055": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Đồ Trang Trí Tết Các…\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Dung Dịch Hada Labo Dưỡng…",
+    "kw056": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw057": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Đậu Ngự Choice L Gói…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Đậu Ngự Choice L Gói…\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Dầu Gạo Lứt Simply 100%…, Dầu Gạo Lứt Coba Plus…, Sữa Gạo Lứt Ngọc Maxinutri…, Nước Gạo Buổi Sáng Woongjin… …",
+    "kw058": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Xịt Chống Muỗi Remos Hương…, Xịt Chống Muỗi Soffell Hương…, Xịt Chống Muỗi Soffell Hương…",
+    "kw059": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Nước Mắm Chua Ngọt Làng…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Nước Mắm Chua Ngọt Làng…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Nước Mắm Chay Pha Sẵn…, Nước Tương Đậu Nành Nam…",
+    "kw060": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Sữa Rửa Tay Choice-L Hương…",
+    "kw101": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Bánh Pizza Hải Sản Dasumy…, Bánh Bông Lan Hura Deli…\n- Titan Multi không đạt: chỉ trả 9 KQ, đúng 0/9 · sp lạ: Màng Bọc Thực Phẩm Sunhouse…, Giấy Chống Dính Choice L…, Màng Bọc Thực Phẩm Sunhouse…, Giấy Chống Dính Kokusai 30cm… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Bánh Quy Bơ LU Hộp…, Mayora Bánh Quy Cà Phê…, Bánh Quy Gạo Nếp CW…, Bánh Quy Margaret LOTTE 176g\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Bánh Tráng Nướng Cà Khịa…, Bánh Bạch Tuộc Xốt Phô…, Bánh Tráng Nướng Phủ Gà…, Bánh Bạch Tuộc Truyền Thống… …",
+    "kw102": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+    "kw103": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Củ Cải Đỏ Hasfarm Greens…",
+    "kw104": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw105": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: không trả kết quả\n- Titan Multi đạt: chỉ trả 2 KQ, đúng 2/2\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 2 KQ, đúng 2/2\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Khoai tây vàng 400g, Cải Bó Xôi Baby Dalat…, Hộp Trữ Rau Củ Inochi…, Combo Giá Hẹ An Lạc… …",
+    "kw106": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Nước Mắm Cốt Nhĩ Việt…\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Nước Mắm Tỏi Ớt Thanh…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 2 KQ, đúng 2/2",
+    "kw107": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw108": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Muối Chanh Ớt Dasavi Đỏ…, Dầu Hào Heinz 295G\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Muối Chanh Ớt Dasavi Đỏ…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 4/10 · sp lạ top20: Giấm Ăn Sushi Kikkoman Vị…, Nước Tương Sempio Yangjo 701…, Nước Tương Vedan 200ml, Nước Tương Chinsu Tỏi Ớt… …",
+    "kw109": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Kimbap Gạo Lứt Cá Ngừ…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Kimbap Gạo Lứt Cá Ngừ…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Kimbap Gạo Lứt Cá Ngừ…\n- NovaLite đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Bún Thịt Bò Xào Và…, Kimbap Gạo Lứt Cá Ngừ…, Combo Gà Thả Vườn Quay…",
+    "kw110": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Bí Ngòi Giống Hàn Quốc…, Su su 700g, Bí Đỏ Tròn 1.2kg, Đu Đủ Giống Đài Loan…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Bí Đỏ Tròn 1.2kg, Đậu Bắp 200G, Cà Chua Ngọc Bích Dalat…, Khoai Lang Giống Nhật 1kg …\n- NovaLite không đạt (cần xem kỹ): chỉ trả 5 KQ, đúng 4/5 · sp lạ: Dưa Chuột Ngâm Ớt Kuehne…",
+    "kw111": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw112": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Vớ Nữ Noshow Basic Icon…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw113": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 5 KQ, đúng 5/5\n- Titan Multi đạt: chỉ trả 7 KQ, đúng 7/7\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 7 KQ, đúng 7/7\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Kimbap Gạo Lứt Cá Ngừ…, Bánh Cuốn Tôm Và Rau…, Bánh Gạo Tokpokki O'food Vị…, Kimbap Rong Biển Trộn Dầu… …",
+    "kw066": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Nước Tăng Lực Sting Gold…, Nước Tăng Lực Sting Gold…\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw067": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 9 KQ, đúng 9/9",
+    "kw068": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ top20: Nước Khoáng Vĩnh Hảo Chai…, Nước Khoáng Lavie Chai 350ml\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ top20: Nước Khoáng Vĩnh Hảo Chai…, Nước Khoáng Thiên Nhiên La…, Nước Tinh Khiết Satori Chai…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 8/10 · sp lạ top20: Nước Khoáng Vĩnh Hảo Chai…, Nước Khoáng Thiên Nhiên La…, Nước Tinh Khiết Satori Chai…\n- NovaLite đạt (cần xem kỹ): chỉ trả 4 KQ, đúng 4/4",
+    "kw069": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Kẹo Xôi Thái Và Sầu…, Bơ lạt Vỉ Anchor Vỉ…, Bí Đỏ Cắt Sẵn 350G, Kẹo Dream Vị Gừng 200G …",
+    "kw070": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Khăn Tắm Em Bé Choice…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw071": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: top10 đúng 0/10 · sp lạ: Kẹo Dẻo Yupi Hình Burger…, Kẹo Dynamite Energy Nhân Hương…, Thạch Dừa Hạnh Dung 200G…, Kẹo Alpenliebe Hương Xoài Nhân… …\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Cá Ngừ Cắt Khúc Ngâm…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Cá Ngừ Cắt Khúc Ngâm…, Cá Hộp Ba Cô Gái…, Cá Sốt Cà Vissan Hộp…, Cá Ngừ Cắt Khúc Ngâm…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Nước Mắm Nam Ngư 3…, Nước Mắm Thuận Phát Cá…, Nước Mắm Cốt Nhỉ Hồng…, Nước Mắm Nam Ngư Phú… …",
+    "kw072": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 8/10 · sp lạ top20: Mực Ống Khô Côn Đảo…, Mực Ống Một Nắng A1…, Mực Trứng Đỏ Đại Nam…, Mực Ống Ghim An Vĩnh…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Mực Ống Khô Côn Đảo…, Mực Trứng Đỏ Đại Nam…, Mực Ống Một Nắng A1…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Mực Ống Khô Côn Đảo…, Mực Ống Một Nắng A1…, Cá Thu Một Nắng Côn…, Cá Nục Nướng 350G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Mực Ống Khô 365 Fresh…, Mực Nướng Xé Sợi Seafood…, Khô Cá Chỉ Vàng Bông…, Khô cá mai tẩm mè… …",
+    "kw073": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ: Nước Chấm Đầu Bếp Tôm…, Nước Mắm Đầu Bếp Tôm…, Nước Mắm Cá Cơm Tròn…, Nước Mắm Tĩn Trẻ Em… …\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type không đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 0/10 · sp lạ top20: Nước Chấm Đầu Bếp Tôm…, Nước Tương Ăn Bún Shiitake…, Nước Mắm Bà Hai Dành…, Nước Mắm Nhỉ Cá Cơm… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Nước Mắm Cốt Tôm 25…, Nước Mắm Đầu Bếp Tôm…, Nước Mắm Lú Bà Hai…, Nước Mắm Lú Bà Hai… …",
+    "kw074": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw075": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Nồi Inox Đáy Từ 5…, Nồi Inox Đáy Từ 5…, Nồi Inox 3 Lớp Đáy…, Nồi Inox Đáy Từ 5… …",
+    "kw076": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw077": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 7 KQ, đúng 7/7\n- Titan Multi đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 3 KQ, đúng 3/3\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Tổ Yến Nguyên Chất Chưng…, Nước Tương Chinsu Tỏi Ớt…, Nước Tương Đậu Nành Cholimex…, Nước Tương Maggi Đậu Nành… …",
+    "kw078": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Dưa Leo Giống Nhật 365…, Dưa Hấu Không Hạt Mặt…, Dưa Hấu Không Hạt Mặt…, Kim Chi Dưa Cải Bibigo… …",
+    "kw079": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 4 KQ, đúng 4/4",
+    "kw080": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 9 KQ, đúng 9/9\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Thức Ăn Cho Chó Lớn…, Thức Ăn Cho Mèo Lớn…, Thức Ăn Cho Mèo Trưởng…, Thức Ăn Cho Chó Nhỏ… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 9 KQ, đúng 9/9\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Thức Ăn Cho Mèo Trưởng…, Thức Ăn Cho Mèo Lớn…, Thức Ăn Cho Mèo Lớn…, Hạt Thức Ăn Cho Mèo… …",
+    "kw127": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 6 KQ, đúng 6/6\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 6 KQ, đúng 6/6\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Móc Oval Đại Hofaco HPG177, Móc Treo Command 3M 17008…",
+    "kw126": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Thú Nhồi Bông Tỵ Tung…, Thú Nhồi Bông Bóng Thể…",
+    "kw125": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Keo Xịt Tóc Gatsby XH…, Keo Xịt Tóc Gatsby Tạo…\n- Titan Multi đạt: top10 đúng 7/10 · sp lạ top20: Dầu Tắm Gội X-Men 2In1…, Dầu Tắm Gội Romano Force…, Dầu Tắm Gội Gentology 3…, Xịt Ngăn Mùi Nivea Men… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ: Dầu Tắm Gội Coast Classic…\n- NovaLite đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Keo Xịt Tóc Gatsby Tạo…, Keo Xịt Tóc Gatsby XH…, Sáp Vuốt Tóc Gatsby Moving…, Sáp Vuốt Tóc Gatsby Moving… …",
+    "kw124": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ: Cocktail Rio Việt Quất Brandy…\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Cocktail Rio Việt Quất Brandy…, Rượu Gin Tanqueray 47.3% ABV…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Rượu Gin Tanqueray 47.3% ABV…\n- NovaLite đạt (cần xem kỹ): chỉ trả 2 KQ, đúng 2/2",
+    "kw123": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw122": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+    "kw121": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 1 KQ, đúng 1/1",
+    "kw120": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 7/10 · sp lạ: Trà Dừa Xoài Teapins Farmer's…, Trà Oolong Hương Sữa Teapins…, Trà Đen Bá Tước Earl…, Trà Thảo Dược Gừng &… …",
+    "kw119": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Son Dưỡng Môi LipIce Sheer…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Son Dưỡng Môi LipIce Sheer…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Son Dưỡng Môi LipIce Sheer…\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Son Dưỡng Môi LipIce Sheer…, Son Dưỡng Môi Lipice Sheer…",
+    "kw118": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ: Trà trái nhàu Novi 50G\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ: Trà Gạo Lứt Hùng Phát…, Trà Thanh Nhiệt Trà Đại…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ: Trà Gạo Lứt Hùng Phát…, Trà Thanh Nhiệt Trà Đại…\n- NovaLite đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Matcha Sữa Archcafé Hộp 162G…, Trà Hoa Đậu Biếc Moncha…, Trà Linh Chi Thái Bảo…, Trà Đào Hương Cam Sả… …",
+    "kw117": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 1 KQ, đúng 1/1\n- Titan Multi đạt: chỉ trả 2 KQ, đúng 2/2\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 2 KQ, đúng 2/2\n- NovaLite không đạt (cần xem kỹ): top10 đúng 5/10 · sp lạ top20: Vali Kéo Du Lịch Go&Fly…, Vali Kéo Du Lịch Go&Fly…, Vali Kéo Du Lịch Go&Fly…, Vali Kéo Du Lịch Go&Fly… …",
+    "kw116": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Cá kèo tươi 500G\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Cá Ngừ Xắt Lát Ngâm…, Cá Ngừ Cắt Khúc Ngâm…, Cá Ngừ Biển Xé Nhỏ…, Cá Ngừ Cắt Khúc Ngâm… …",
+    "kw115": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Hồng Giòn Mộc Châu 1kg, Muối Hồng Và Tiêu Nắp…, Khoai tây vàng 400g, Muối Hồng Himalaya Nắp Xoay… …",
+    "kw114": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 1 KQ, đúng 1/1",
+    "kw100": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Cơm Chiên Nấm Rau Củ…",
+    "kw099": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 6 KQ, đúng 6/6\n- Titan Multi đạt: chỉ trả 5 KQ, đúng 5/5\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 5 KQ, đúng 5/5\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+    "kw098": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Bánh Quy Nhân Kem Hành…, Bánh Quy Dừa Tròn Libra…, Bánh Khoai Tây Nướng Tok…, Bánh Nhân Trứng Muối Đài… …\n- Titan Multi không đạt: chỉ trả 6 KQ, đúng 0/6 · sp lạ: Táo Đỏ Hòa Điền Tân…, Đậu Muối CK 350G, Đậu phộng chiên muối Tài…, Hạt Điều Lụa Yến Nhung… …\n- Titan Multi Caption Type không đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 0/10 · sp lạ: Mì Xào Tiểu Nhị Unif…, Mì Cung Đình Lẩu Tôm…, Mì Omachi Special Xốt Bò…, Mì Cung Đình Bò Hầm… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Trà Hòa Tan Kombucha Bio…, Trà Sữa Trân Châu Hoàng…, Trà Sữa Hòa Tan Moncha…, Trà Sữa Trân Châu Dawning… …",
+    "kw097": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): chỉ trả 3 KQ, đúng 2/3 · sp lạ: Bắp Cải Tím Cắt Sợi…",
+    "kw096": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10 · sp lạ top20: Bia Ngũ Hành Kim 4.6%…, Bia Ngũ Hành Thổ 4.9%…, Bia Ngũ Hành Mộc 5.2%…, Bia Halida 4.5% ABV Lon…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ top20: Bia Ngũ Hành Mộc 5.2%…, Bia Orion 5% ABV Chai…, Bia Chimay Triple Ale 8%…, Bia Đức Sanwald Hefe 4.9%… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ top20: Bia Ngũ Hành Mộc 5.2%…, Bia Orion 5% ABV Chai…, Bia Chimay Triple Ale 8%…, Bia Đức Sanwald Hefe 4.9%… …\n- NovaLite đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Bia Tiger Sleek 5% ABV…, Bia Paulaner Munchner Hell 4.9%…",
+    "kw095": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt (cần xem kỹ): chỉ trả 7 KQ, đúng 4/7 · sp lạ: Nguyên Liệu Chiên Cơm Dương…, Hỗn Hợp Rau Củ An…, Hỗn Hợp Rau Củ Nấu…\n- Titan Multi đạt: top10 đúng 9/10 · sp lạ: Nguyên Liệu Chiên Cơm Dương…, Hải Sản Ngũ Sắc Saigon…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ: Nguyên Liệu Chiên Cơm Dương…, Hải Sản Ngũ Sắc Saigon…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Hỗn Hợp Su Su Cà…, Combo Canh Mướp Mồng Tơi…, Hỗn Hợp Bắp Cải Và…, Rau răm hữu cơ 50g… …",
+    "kw094": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Rau Dền Thạnh Hưng 500G, Rau Thơm Hỗn Hợp Hữu…, Cải Bó Xôi Gói 350G…, Xà Lách Lolo Xanh Giống… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Tần Ô Thủy Canh VITEC…, Mầm Củ Cải Trắng 200G, Mầm Củ Cải Đỏ 200G, Rau Muống Bào An Lạc… …",
+    "kw093": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ: Set 6 Bánh Muffin 3…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ: Set 6 Bánh Muffin 3…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 1/10 · sp lạ top20: Bánh đậu xanh Rồng Vàng…, Trà Xanh Túi Lọc Phúc…, Trà Xanh Túi Lọc Trà…, Bánh đậu xanh Rồng Vàng… …",
+    "kw092": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi đạt: chỉ trả 3 KQ, đúng 3/3\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 3 KQ, đúng 3/3\n- NovaLite không đạt (cần xem kỹ): không trả kết quả",
+    "kw091": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Mận Đá 800G, Bí Hạt Đậu 1kg, Táo Dazzle nhập khẩu New…, Táo Premier Star New Zealand… …",
+    "kw090": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 5 KQ, đúng 5/5\n- Titan Multi đạt: chỉ trả 5 KQ, đúng 5/5\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): chỉ trả 5 KQ, đúng 5/5\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Ngũ Cốc Mccereal Canxi D3…, Tinh Nghệ Canxi Honimore Hộp…, Trà Hòa Tan Chanh Dawning…, Tinh Nghệ Canxi Honimore Hộp… …",
+    "kw089": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: chỉ trả 7 KQ, đúng 6/7 · sp lạ: Bưởi Tách Múi Hỗn Hợp…\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ: Quýt Đường 500G, Cam Sành Vắt Nước 1kg, Bưởi Tách Múi Hỗn Hợp…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 8/10 · sp lạ: Quýt Đường 500G, Cam Sành Vắt Nước 1kg, Bưởi Tách Múi Hỗn Hợp…\n- NovaLite đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Bưởi Tách Múi Hỗn Hợp…, Chuối Sứ (Chuối Tây) 1.8kg, Bí Hạt Đậu 1kg, Chuối Cau 1.2kg …",
+    "kw088": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Cháo Tươi Cây Thị Hải…, Cỏ Ngọt Sấy Khô Langfarm…, Sương Sáo Đen 3K Gói…, Bột Sương Sáo Rovin Gói… …",
+    "kw087": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 9/10 · sp lạ: Lẩu Điện Sunhouse SHD4528\n- Titan Multi đạt: top10 đúng 7/10 · sp lạ: Lẩu Điện Sunhouse SHD4528, Nồi ủ La Gourmet 4.5L…, Bếp Hồng Ngoại Perfect PF-BH86\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 8/10 · sp lạ: Lẩu Điện Sunhouse SHD4528, Bếp Hồng Ngoại Perfect PF-BH86\n- NovaLite đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Lẩu Điện Sunhouse SHD4528, Bếp Hồng Ngoại Perfect PF-BH86",
+    "kw086": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 8/10 · sp lạ top20: Rượu Vang Đỏ Nouvo Sangria…, Rượu Vang Đỏ Đà Lạt…",
+    "kw085": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ: Thanh Long Ruột Đỏ 1kg\n- NovaLite không đạt (cần xem kỹ): top10 đúng 9/10 · sp lạ top20: Dưa Món Sông Hương Foods…, Dưa Món Sông Hương Hũ…, Dưa Món Sông Hương Foods…",
+    "kw084": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10 · sp lạ top20: Trứng Gà Song Hỷ Emivest…, Trứng Gà Đại Hỷ 365…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10 · sp lạ top20: Trứng Gà Đại Hỷ 365…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Mặt Nạ Thạch Luvum Kiểm…, Mặt Nạ Senka Perfect Aqua…, Mặt Nạ Banobagi Làm Sáng…, Mặt Nạ Vedette Sữa Chua… …",
+    "kw083": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 7/10 · sp lạ top20: Bia Chimay Triple Ale 8%…, Bia Chimay Bruin 7% ABV…, Bia Chimay Đỏ 7% ABV…, Bia Đức Sanwald Hefe 4.9%…\n- Titan Multi đạt: top10 đúng 7/10 · sp lạ: Bia Chimay Triple Ale 8%…, Bia Chimay Bruin 7% ABV…, Bia Orion 5% ABV Chai…, Bia Đức Sanwald Hefe 4.9%…\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 7/10 · sp lạ: Bia Chimay Triple Ale 8%…, Bia Chimay Bruin 7% ABV…, Bia Orion 5% ABV Chai…, Bia Đức Sanwald Hefe 4.9%…\n- NovaLite không đạt (cần xem kỹ): top10 đúng 6/10 · sp lạ top20: Bia Chimay Triple Ale 8%…, Bia 333 5.3% ABV Lon…, Bia Chimay Đỏ 7% ABV…, Bia Chimay Bruin 7% ABV… …",
+    "kw082": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: top10 đúng 0/10 · sp lạ top20: Sốt Cà Ri Nosa Ông…, Tương Ớt Unicook Chai 310G, Nước Tương Kikkoman Sushi &…, Gia Vị Lẩu Thái Cholimex… …\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Nghệ Bột Hữu Cơ Farmer's…, Giấm Ăn Sushi Kikkoman Vị…, Muối Tiêu Lá Chanh Natural…, Bột Tỏi Natural DH Foods… …\n- Titan Multi Caption Type không đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 0/10 · sp lạ top20: Hạt Mắc Khén Natural Dh…, Nghệ Bột Hữu Cơ Farmer's…, Nghệ Bột Natural Dh Foods…, Giấm Ăn Sushi Kikkoman Vị… …\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Gia vị súp gà Vipep…, Bột Gia Vị Ngũ Vị…, Gia vị Ướp Thịt Chẩm…, Hành Bột Natural Dh Foods… …",
+    "kw081": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 3 KQ, đúng 3/3",
+    "kw002": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw016": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 6/10 · sp lạ: Mận Sữa 800G, Mận Đá 800G, Mít Thái Và Mít Đỏ…, Mít Giống Thái 9 Phẻ… …\n- Titan Multi đạt: top10 đúng 6/10 · sp lạ top20: Nhãn Xuồng Cơm Vàng 700G, Mận Đá 800G, Măng Cụt 1kg, Sapoche (Hồng Xiêm) 500G …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 7/10 · sp lạ: Mận Đá 800G, Măng Cụt 1kg, Sapoche (Hồng Xiêm) 500G, Xoài Tươi Cắt Sẵn Fresh…\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw035": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 8/10 · sp lạ top20: Mực Ghim Trứng 350G, Mực Ống Size Trung 500G, Tôm Thẻ Size Nhỏ 400G\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 8/10 · sp lạ top20: Mực Ghim Trứng 350G, Mực Ống Size Trung 500G, Tôm Thẻ Size Nhỏ 400G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 2/10 · sp lạ top20: Sashimi Cá Hồi 10 Lát…, Cá Hồi Nauy Xông Khói…, Hải Sản Thập Cẩm Đông…, Mực Xé Tẩm Gia Vị… …",
+    "kw042": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 10/10 · sp lạ top20: Trà Xanh Thái Nguyên Thượng…, Mật Ong Rừng Tây Nguyên…, Trà Xanh Thái Nguyên Cao…, Trà Cozy Vân Tiên Thái… …",
+    "kw052": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw061": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw062": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): top10 đúng 10/10",
+    "kw063": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite không đạt (cần xem kỹ): top10 đúng 3/10 · sp lạ top20: Đùi Gọ Bò Úc Organic…, Thăn Cổ Bò Mỹ Cắt…, Gù Hoa Bò Úc Meaty…, Lõi Vai Bò Úc 365… …",
+    "kw064": "[Claude gợi ý — cần QA duyệt]\n- Vector không đạt: top10 đúng 1/10 · sp lạ top20: Tôm viên Việt Sin gói…, Cá viên Việt Sin 500g, Bò viên tiêu xanh Việt…, Bò viên tiêu xanh Việt… …\n- Titan Multi không đạt: top10 đúng 0/10 · sp lạ top20: Bánh Gạo Vetrue vị trứng…, Bánh Gạo Vetrue Vị Phô…, Bánh Gạo Vetrue Nhân Phô…, Bánh Gạo Vetrue Vị Rau… …\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 9/10 · sp lạ: Váng Đậu Haidilao 120G\n- NovaLite không đạt (cần xem kỹ): top10 đúng 0/10 · sp lạ top20: Bánh Phồng Tôm 15% Mini…, Sủi Cảo Tôm Hải Thanh…, Bánh Bao Thọ Phát Thịt…, Bánh Phồng Tôm Đặc Sản… …",
+    "kw065": "[Claude gợi ý — cần QA duyệt]\n- Vector đạt: top10 đúng 10/10\n- Titan Multi đạt: top10 đúng 10/10\n- Titan Multi Caption Type đạt (cần xem kỹ — cơ chế mới, dùng ngưỡng Titan Multi): top10 đúng 10/10\n- NovaLite đạt (cần xem kỹ): chỉ trả 3 KQ, đúng 3/3"
+  }
+}

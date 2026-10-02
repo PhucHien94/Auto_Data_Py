@@ -1,0 +1,6265 @@
+{
+  "generatedDate": "2026-09-09",
+  "batch": "pending_review",
+  "purpose": "Scenario KHÔNG ĐẠT mà QA chưa rà soát tay - tách riêng để tập trung xử lý. Đây là bản CHỤP tại thời điểm tạo: mỗi lần QA duyệt thêm thì chạy lại scripts/automation/split_pending_batch.py để làm mới.",
+  "sourceReport": "SmartSearch/test_data/compare/run_all_20260909_112622/compare_report.html",
+  "criteria": "pass_fail_status == \"failed\" AND pass_fail_reviewed != true",
+  "scenarioCount": 695,
+  "queries": [
+    {
+      "test_id": "NSG-ALL-1731",
+      "query": "365",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1668",
+      "query": "axe apollo",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1813",
+      "query": "ba cô gái",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1559",
+      "query": "baby",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0902",
+      "query": "bac ha",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1920",
+      "query": "baking",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-2362",
+      "query": "balo đi học cho trẻ",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0822",
+      "query": "bamboo",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1514",
+      "query": "ban chai",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0566",
+      "query": "bang ve sinh",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1763",
+      "query": "bang vệ sinh",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0267",
+      "query": "banh",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0954",
+      "query": "banh gao",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1349",
+      "query": "banh mi kinh do",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1304",
+      "query": "banh quy",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0612",
+      "query": "bao",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1472",
+      "query": "bao bao",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1779",
+      "query": "bao cao",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0275",
+      "query": "bao tay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0850",
+      "query": "bao tay cao su",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-1663",
+      "query": "bao tay nilon",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2201",
+      "query": "bao đựng rác tự phân hủy",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0818",
+      "query": "bap",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1740",
+      "query": "bap cai",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1964",
+      "query": "bat",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1902",
+      "query": "beer",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0102",
+      "query": "bia corona",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-1577",
+      "query": "bia sai gon",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0536",
+      "query": "bia sài gòn",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2283",
+      "query": "bibimbap",
+      "dimension": "foreign_language",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1498",
+      "query": "bifnh xông đuổi muỗi jumbo vape",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-0925",
+      "query": "blue",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0031",
+      "query": "bnh kinh do",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0783",
+      "query": "bo",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0748",
+      "query": "bo bo",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0708",
+      "query": "bon",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0862",
+      "query": "bong bóng",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1905",
+      "query": "bong cai xanh",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1316",
+      "query": "bot",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1493",
+      "query": "bun",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1301",
+      "query": "bàn chải colgate",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1818",
+      "query": "bàn chải điện",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1796",
+      "query": "bàn chải đánh răng colgate",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1793",
+      "query": "bàn chải đánh răng trẻ em",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 19,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2178",
+      "query": "bàn chải đánh răng điện",
+      "dimension": "synonym_variant",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2223",
+      "query": "bàn chảy đánh răng",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1090",
+      "query": "bánh bao chay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1955",
+      "query": "bánh bông lan chà bông",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1400",
+      "query": "bánh chà bông",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1289",
+      "query": "bánh cream crackers roma malkist 107g",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0581",
+      "query": "bánh giò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0197",
+      "query": "bánh gạo",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0576",
+      "query": "bánh gạo an",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1676",
+      "query": "bánh hoa cúc",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0073",
+      "query": "bánh hotteok",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 4,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-0702",
+      "query": "bánh kem",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2120",
+      "query": "bánh khọt",
+      "dimension": "regional_dialect",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0819",
+      "query": "bánh mì hoa cúc",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1543",
+      "query": "bánh mì mè",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2325",
+      "query": "bánh mì tươi mỗi sáng",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1055",
+      "query": "bánh phồng tôm",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1414",
+      "query": "bánh quy roma malkist crackers 140g",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-0812",
+      "query": "bánh snack",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1360",
+      "query": "bánh su kem",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2237",
+      "query": "bánh trang cuốn",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0343",
+      "query": "bánh trung thu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2323",
+      "query": "bánh trung thu cao cấp",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 7,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1106",
+      "query": "bánh tươi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0951",
+      "query": "bánh yến mạch",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 23,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1513",
+      "query": "bánh ăn kiêng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1725",
+      "query": "bát",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2172",
+      "query": "bình sữa cho bé",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-2173",
+      "query": "bình sữa trẻ em",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1364",
+      "query": "bình thủy tinh",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1471",
+      "query": "bình xịt côn trùng jumbo vape",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1266",
+      "query": "bình xịt côn trùng jumbo vape h1",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-1554",
+      "query": "bình xịt côn trùng jumbo vape hương cam chanh tự nhiên chai 300ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1932",
+      "query": "bình xịt côn trùng jumbo vape hương hoa oải hương chai 300ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1457",
+      "query": "bình xịt côn trùng jumbo vape hương hoa và trà 300ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0068",
+      "query": "bình xịt côn trùng jumbo vape không mùi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1271",
+      "query": "bình xịt côn trùng raid",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1877",
+      "query": "bình xịt côn trùng raid hương cam chanh 600ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1978",
+      "query": "bình xịt côn trùng raid hương lavender 600ml",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 7,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1694",
+      "query": "bình xịt côn trùng raid không mùi chai 600ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 4,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1246",
+      "query": "bình xịt muỗi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 22,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1565",
+      "query": "bình xịt muỗi raid hương lavender chai 600ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2022",
+      "query": "bình đun nước siêu tốc",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-1014",
+      "query": "bí ngòi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 2,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0204",
+      "query": "bò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0396",
+      "query": "bò viên",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0523",
+      "query": "bông cải",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 7,
+      "asis_count": 12
+    },
+    {
+      "test_id": "NSG-ALL-0586",
+      "query": "bông cải xanh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 10,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1456",
+      "query": "bông lau nhà",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2110",
+      "query": "bông so đũa",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0609",
+      "query": "bông tắm",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2111",
+      "query": "bông điên điển",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0674",
+      "query": "bún khô",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0868",
+      "query": "bút",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2151",
+      "query": "băng cá nhân",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0856",
+      "query": "băng vệ sinh hàng ngày",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1484",
+      "query": "băng vệ sinh hằng ngày",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1882",
+      "query": "băng vệ sinh laurier siêu mỏng bảo vệ 30cm gói 8 miếng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1825",
+      "query": "băng vệ sinh laurier siêu mỏng bảo vệ 30cm gói 8 miếng (ea)",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1914",
+      "query": "bơ thực vật",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1386",
+      "query": "bơ tường an",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0442",
+      "query": "bơ đậu phộng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 15,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0384",
+      "query": "bạc hà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0840",
+      "query": "bầu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-0875",
+      "query": "bắp bò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 11,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1801",
+      "query": "bắp bò úc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 11,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1619",
+      "query": "bắp chiên giòn",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 4,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1505",
+      "query": "bộ nồi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 12
+    },
+    {
+      "test_id": "NSG-ALL-2032",
+      "query": "bộ nồi nấu ăn",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1411",
+      "query": "bộ xông đuổi muỗi jumbo vape l5 hương hoa lily",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0367",
+      "query": "bột",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0462",
+      "query": "bột bánh bông lan",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 2,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0610",
+      "query": "bột canh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1692",
+      "query": "bột cà ri",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0037",
+      "query": "bột giạt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0077",
+      "query": "bột tẩy lồng máy giặt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 2,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1723",
+      "query": "bột ăn dặm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 8,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0525",
+      "query": "ca",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0380",
+      "query": "ca phe",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1894",
+      "query": "ca phe sua",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0505",
+      "query": "ca phê",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1394",
+      "query": "cafe trung nguyen",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0579",
+      "query": "cafe trung nguyên",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0919",
+      "query": "cai",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0239",
+      "query": "cam",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1572",
+      "query": "camen",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0663",
+      "query": "canh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2133",
+      "query": "canh chua cá lóc",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0946",
+      "query": "canh rong biển",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 15,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1480",
+      "query": "caryn",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 15
+    },
+    {
+      "test_id": "NSG-ALL-1549",
+      "query": "cat",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1721",
+      "query": "cay",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1539",
+      "query": "cha",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1921",
+      "query": "chai xịt",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0456",
+      "query": "chao",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0308",
+      "query": "chay",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0858",
+      "query": "cheese",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0402",
+      "query": "cherry",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-1322",
+      "query": "chim",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1620",
+      "query": "chin-su",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 14,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1810",
+      "query": "chivas",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-1765",
+      "query": "cho bé",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0371",
+      "query": "chocolate",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0201",
+      "query": "choice l",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0544",
+      "query": "cholimex",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1603",
+      "query": "chà bồn cầu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1880",
+      "query": "chà sàn",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 15
+    },
+    {
+      "test_id": "NSG-ALL-2122",
+      "query": "chè đậu xanh",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2092",
+      "query": "chả bò",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0052",
+      "query": "chống lão hóa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0652",
+      "query": "chổi",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1532",
+      "query": "co co",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1242",
+      "query": "coca-cola",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1762",
+      "query": "combo tinh dầu xông đuổi muỗi jumbo vape l5 hương lily",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-2276",
+      "query": "conditioner",
+      "dimension": "foreign_language",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0815",
+      "query": "cp",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0684",
+      "query": "cream",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2212",
+      "query": "cà fê hòa tan",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0975",
+      "query": "cà phê hoà tan",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0614",
+      "query": "cà phê hòa tan",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1768",
+      "query": "cà phê king",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1811",
+      "query": "cà phê vina",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1027",
+      "query": "cá ba sa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 10,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-2332",
+      "query": "cá basa làm chả cá",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1237",
+      "query": "cá diêu hồng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 4,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-1058",
+      "query": "cá phi lê",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 16,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2078",
+      "query": "cá quả",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-2115",
+      "query": "cá rô đồng",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1446",
+      "query": "cá thác lác",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0811",
+      "query": "cá trứng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2087",
+      "query": "cá viên chiên",
+      "dimension": "regional_dialect",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1669",
+      "query": "cân",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0454",
+      "query": "cơm",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2063",
+      "query": "cơm văn phòng",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0291",
+      "query": "cải",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0784",
+      "query": "cải bó xôi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2086",
+      "query": "cải cúc",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0426",
+      "query": "cần tây",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-1899",
+      "query": "cồi sò điệp",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-0049",
+      "query": "củ kiệu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 1,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-2081",
+      "query": "củ sắn nước",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1315",
+      "query": "da cá hồi",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 19,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1108",
+      "query": "da lat milk",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0768",
+      "query": "dai",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0618",
+      "query": "dai dai",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0578",
+      "query": "dalat",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1634",
+      "query": "dalat hasfarm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0718",
+      "query": "dau dau",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0431",
+      "query": "dau goi",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0691",
+      "query": "dau goi dau",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1350",
+      "query": "dau goi goi",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0876",
+      "query": "den",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1995",
+      "query": "detox cơ thể",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-1890",
+      "query": "diana sensi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 13,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1997",
+      "query": "dinh dưỡng cho người già",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-0355",
+      "query": "do",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1606",
+      "query": "do choi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0796",
+      "query": "double rich",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 8,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0413",
+      "query": "dua",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2199",
+      "query": "dung dịch vệ sinh máy giặt",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1499",
+      "query": "duong bien hoa",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0335",
+      "query": "dâu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2202",
+      "query": "dâu gọi",
+      "dimension": "misspelling",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0078",
+      "query": "dâu ăn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1895",
+      "query": "dăm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0597",
+      "query": "dĩa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0452",
+      "query": "dưa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2106",
+      "query": "dưa cải chua",
+      "dimension": "regional_dialect",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0035",
+      "query": "dưa hâu",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1412",
+      "query": "dưỡng tóc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1876",
+      "query": "dưỡng ẩm jonhson",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0552",
+      "query": "dầu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0762",
+      "query": "dầu dừa",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1724",
+      "query": "dầu dừa vietcoco",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0995",
+      "query": "dầu gội dau lchoice",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0687",
+      "query": "dầu gội dove",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0823",
+      "query": "dầu gội nguyên xuân",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 8,
+      "asis_count": 12
+    },
+    {
+      "test_id": "NSG-ALL-1105",
+      "query": "dầu gội palmolive",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1463",
+      "query": "dầu gội thái dương",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1717",
+      "query": "dầu gội tresemme",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0554",
+      "query": "dầu gội đầu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1698",
+      "query": "dầu gội đầu nguyên xuân",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2073",
+      "query": "dụng cụ vệ sinh nhà cửa",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0540",
+      "query": "dứa",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1059",
+      "query": "fresh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0972",
+      "query": "ga",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0743",
+      "query": "gao",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1504",
+      "query": "gel rửa tay",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 16,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0046",
+      "query": "gel vuốt tóc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 4,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1450",
+      "query": "ghế",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-1473",
+      "query": "gia vi",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0303",
+      "query": "gia vị",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1940",
+      "query": "gia vị hầm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0965",
+      "query": "giao màu ngẫu nhiên",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0620",
+      "query": "giay",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1923",
+      "query": "giay rut hop",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0352",
+      "query": "giá",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2019",
+      "query": "giá phơi đồ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-1743",
+      "query": "giò lụa",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-0832",
+      "query": "giò sống",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0175",
+      "query": "giấy",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1258",
+      "query": "giấy chống dính",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0553",
+      "query": "giấy rút",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1045",
+      "query": "giấy vệ sinh choice l",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1294",
+      "query": "giấy vệ sinh choice l cuộn lớn 600g",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1933",
+      "query": "giấy vệ sinh l choice",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1098",
+      "query": "giặt",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1283",
+      "query": "giỏ quà",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 15
+    },
+    {
+      "test_id": "NSG-ALL-0006",
+      "query": "giỏ quà tết",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2345",
+      "query": "giỏ trái cây quà tặng",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2025",
+      "query": "giỏ đi chợ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-1347",
+      "query": "gold",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1550",
+      "query": "green",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0163",
+      "query": "gà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1103",
+      "query": "gà chiên giòn",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1635",
+      "query": "gà nguyên con",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1919",
+      "query": "gạo hữu cơ",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1947",
+      "query": "gạo neptune st25 plus lúa tôm túi 5kg",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-2252",
+      "query": "gạo nêp",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0259",
+      "query": "gạo st25",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 7,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1330",
+      "query": "gạo tây đô",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1958",
+      "query": "gối nằm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 10,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1607",
+      "query": "gừng mật ong",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1006",
+      "query": "hanh nhan",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0967",
+      "query": "hat",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1449",
+      "query": "hat huong duong",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0320",
+      "query": "heo",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1555",
+      "query": "heo ăn chuối",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-1604",
+      "query": "hoa quả",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-1897",
+      "query": "honey",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-0030",
+      "query": "hop qua tết kinh đô",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0461",
+      "query": "hàn quốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0307",
+      "query": "hành lá",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 5,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-1680",
+      "query": "hành tây tím",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 8,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1486",
+      "query": "hũ thủy tinh",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0411",
+      "query": "hạt",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1642",
+      "query": "hạt dinh dưỡng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 11,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0577",
+      "query": "hạt hướng dương",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1659",
+      "query": "hạt ngũ cốc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 17,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0835",
+      "query": "hải sản",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2326",
+      "query": "hải sản tươi sống nấu lẩu",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1857",
+      "query": "hằng nga",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0146",
+      "query": "hồng sâm hàn quốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 4,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-2364",
+      "query": "hộp bút màu cho bé vẽ",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0069",
+      "query": "hộp cơm giữ nhiệt",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0561",
+      "query": "hộp quà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2342",
+      "query": "hộp quà trái cây nhập khẩu",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0450",
+      "query": "hộp quà tết",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2047",
+      "query": "hộp quà tết cao cấp",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2246",
+      "query": "hộp xóp",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-2195",
+      "query": "hộp đựng đồ đa năng",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-1839",
+      "query": "hủ thủy tinh",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0757",
+      "query": "hữu cơ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0671",
+      "query": "inox",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1265",
+      "query": "isoup",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-2286",
+      "query": "japchae",
+      "dimension": "foreign_language",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1867",
+      "query": "japfa",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1495",
+      "query": "jumbo vape hoa lài",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 4,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-0216",
+      "query": "kem",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1616",
+      "query": "kem béo rich",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-2219",
+      "query": "kem chóng nắng",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0591",
+      "query": "kem chống nắng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 28,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0631",
+      "query": "kem danh rang",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1934",
+      "query": "kem khoai môn",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 15,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1941",
+      "query": "kem sữa béo",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1286",
+      "query": "kem đánh răng colgate than tre",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1067",
+      "query": "kem đánh răng trẻ em",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 20,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0834",
+      "query": "keo deo",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2186",
+      "query": "keo xịt tóc",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-0732",
+      "query": "khan giay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0988",
+      "query": "khan giay uot",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0074",
+      "query": "khan giấy",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0654",
+      "query": "khay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0511",
+      "query": "khoai",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0760",
+      "query": "khoai mỡ",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0820",
+      "query": "khoai tay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1942",
+      "query": "khoai tay chien",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0187",
+      "query": "khoai tây",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2034",
+      "query": "khuôn làm bánh",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0655",
+      "query": "khô bò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0550",
+      "query": "không đường",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0286",
+      "query": "khăn",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0666",
+      "query": "khăn giấy cuộn",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1744",
+      "query": "khăn giấy hộp rút",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2200",
+      "query": "khăn giấy lau bếp",
+      "dimension": "synonym_variant",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1501",
+      "query": "khăn giấy pulppy",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0373",
+      "query": "khăn giấy rút",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0830",
+      "query": "khăn giấy ướt choice l",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1647",
+      "query": "khăn giấy ướt l choice",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1273",
+      "query": "khăn lau đa năng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 16,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2177",
+      "query": "khăn sữa cho bé",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1018",
+      "query": "khăn đa năng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 14,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0923",
+      "query": "khăn ướt choice l gói 120 tờ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-2187",
+      "query": "khẩu trang than hoạt tính",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1887",
+      "query": "kẹo dưa hấu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1451",
+      "query": "kẹo hàn quốc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 19,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0980",
+      "query": "kệ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2030",
+      "query": "kệ gia vị",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2196",
+      "query": "kệ đựng gia vị treo tường",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0562",
+      "query": "lau nhà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0538",
+      "query": "laurier",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1797",
+      "query": "lay",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1520",
+      "query": "lego",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-1368",
+      "query": "lemon",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0361",
+      "query": "lix",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2168",
+      "query": "loa di động",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0489",
+      "query": "lotte",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1994",
+      "query": "làm đẹp da từ bên trong",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0033",
+      "query": "lê hàn quốc",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0360",
+      "query": "lăn khử mùi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2116",
+      "query": "lươn đồng",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2134",
+      "query": "lẩu mắm",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1359",
+      "query": "mang",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0722",
+      "query": "maxkleen",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1423",
+      "query": "mayonaise",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0992",
+      "query": "men",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0045",
+      "query": "mi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1291",
+      "query": "milk",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1284",
+      "query": "miến hàn quốc",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1021",
+      "query": "miếng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0395",
+      "query": "miếng rửa chén",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 10,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0504",
+      "query": "muoi",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0203",
+      "query": "muối",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0766",
+      "query": "má đùi gà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 17,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2027",
+      "query": "máy hút bụi cầm tay",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-2229",
+      "query": "máy sinh tố",
+      "dimension": "misspelling",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1576",
+      "query": "máy sấy tóc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-2179",
+      "query": "máy tăm nước",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2023",
+      "query": "máy ép trái cây",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2143",
+      "query": "máy đánh kem",
+      "dimension": "synonym_variant",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2142",
+      "query": "máy đánh trứng",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 13
+    },
+    {
+      "test_id": "NSG-ALL-0397",
+      "query": "mì gói",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1376",
+      "query": "mì siu cay",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1003",
+      "query": "mì siu kay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0985",
+      "query": "mì trứng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-0797",
+      "query": "măng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0679",
+      "query": "măng tây",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0622",
+      "query": "mận",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1454",
+      "query": "mền",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0821",
+      "query": "mỡ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0613",
+      "query": "mỳ",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0036",
+      "query": "nem rán",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-1716",
+      "query": "nghệ mật ong",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0738",
+      "query": "ngu coc",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2330",
+      "query": "nguyên liệu nấu lẩu hải sản",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-2371",
+      "query": "nguyên liệu nấu món Hàn Quốc",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0650",
+      "query": "ngò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-1019",
+      "query": "ngủ cốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1469",
+      "query": "nhan",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1420",
+      "query": "nhang muỗi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 14,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-1898",
+      "query": "nhang muỗi ars ít khói hương sakura hộp 10 khoanh",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-1652",
+      "query": "nhang muỗi raid hương lavender hộp 10 khoanh",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-1038",
+      "query": "nhat",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0482",
+      "query": "nivea",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1727",
+      "query": "noi",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1613",
+      "query": "nuoc giat comfort",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1918",
+      "query": "nuoc giat lix",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0661",
+      "query": "nuoc mam",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1434",
+      "query": "nuoc man",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0744",
+      "query": "nuoc ngot",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0400",
+      "query": "nuoc rua chen",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0895",
+      "query": "nuoc tuong",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0950",
+      "query": "nuoc xa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1409",
+      "query": "nutri",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0227",
+      "query": "nước",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1671",
+      "query": "nước cốt lẩu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1403",
+      "query": "nước giặt blue",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1476",
+      "query": "nước giặt choice l",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1064",
+      "query": "nước giặt comfort",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1583",
+      "query": "nước giặt cửa trên",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0570",
+      "query": "nước giặt cửa trước",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1589",
+      "query": "nước giặt downy",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0512",
+      "query": "nước giặt lix",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1767",
+      "query": "nước giặt maxkleen",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0829",
+      "query": "nước giặt xả",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1526",
+      "query": "nước giặt đồ",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0896",
+      "query": "nước gạo",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-0042",
+      "query": "nước hoa nam",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2183",
+      "query": "nước hoa nữ",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1337",
+      "query": "nước hồng sâm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 12,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1487",
+      "query": "nước ion",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 3,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-0696",
+      "query": "nước mắm liên thành",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 13
+    },
+    {
+      "test_id": "NSG-ALL-2238",
+      "query": "nước mắn",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-1137",
+      "query": "nước ngọt",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0014",
+      "query": "nước rửa chuyên dụng bình sữa",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-1077",
+      "query": "nước rửa chén choice l",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 8,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0472",
+      "query": "nước rửa chén sunlight",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2213",
+      "query": "nước rữa chén",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0190",
+      "query": "nước suối",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2148",
+      "query": "nước súc miệng diệt khuẩn",
+      "dimension": "synonym_variant",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1475",
+      "query": "nước tinh khiết aquafina chai 500ml",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 11,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0886",
+      "query": "nước tương maggi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0515",
+      "query": "nước tương nam dương",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 10,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0824",
+      "query": "nước tẩy bồn cầu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-2357",
+      "query": "nước tẩy trang dịu nhẹ",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1354",
+      "query": "nước xã",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2204",
+      "query": "nước xã vải",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0193",
+      "query": "nước xả",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2389",
+      "query": "nước yến bồi bổ sức khỏe",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-2008",
+      "query": "nước ép detox",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1049",
+      "query": "nạm bò",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 10,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-1545",
+      "query": "nấm bào ngư",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0936",
+      "query": "nấm kim châm",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-0853",
+      "query": "nấm mèo",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1272",
+      "query": "nấm mỡ",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0774",
+      "query": "nấm đông cô",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1353",
+      "query": "nến",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2228",
+      "query": "nồi cơm điên",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 15
+    },
+    {
+      "test_id": "NSG-ALL-2240",
+      "query": "nứơc giặt xả",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2216",
+      "query": "nứơc ngọt",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0224",
+      "query": "oatside",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1329",
+      "query": "old spice",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0860",
+      "query": "oliu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1917",
+      "query": "olong tea plus",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 15,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1511",
+      "query": "omo matic máy giặt cửa trên + chuyên gia giữ màu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 5,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-1906",
+      "query": "ot trai cay",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0616",
+      "query": "ottogi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1817",
+      "query": "pho mai que",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1068",
+      "query": "phô mai con bò cười",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 14,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1051",
+      "query": "phô mai mai",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1082",
+      "query": "phô mai mascarpone",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0981",
+      "query": "phô mai qbb",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0685",
+      "query": "phô mai que",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0248",
+      "query": "phở",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1896",
+      "query": "phở cung đình",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1509",
+      "query": "pie",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1297",
+      "query": "plus",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0901",
+      "query": "promess",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-1916",
+      "query": "ptv",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1842",
+      "query": "quat",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2340",
+      "query": "quà biếu trái cây cao cấp",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-2043",
+      "query": "quà cho bố",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-2042",
+      "query": "quà cho mẹ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-2044",
+      "query": "quà tết cho gia đình",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2016",
+      "query": "quạt điều hòa",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-2096",
+      "query": "quả bơ",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2076",
+      "query": "quả dứa",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1381",
+      "query": "quần",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1615",
+      "query": "rau thơm hỗn hợp hữu cơ gói 150g (ea)",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0998",
+      "query": "rich",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1655",
+      "query": "riềng",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0986",
+      "query": "romano",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1253",
+      "query": "ruou",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0253",
+      "query": "rượu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1678",
+      "query": "rượu nấu ăn",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-1066",
+      "query": "rượu soju",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 21,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1609",
+      "query": "rượu vang nổ",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0075",
+      "query": "rượu vang đỏ khai vị",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2352",
+      "query": "rượu whisky quà biếu sếp",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1733",
+      "query": "saigon",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2298",
+      "query": "sake",
+      "dimension": "foreign_language",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2267",
+      "query": "salt",
+      "dimension": "foreign_language",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0294",
+      "query": "sandwich",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1627",
+      "query": "selsun",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-0963",
+      "query": "sensodyne",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-2349",
+      "query": "set quà rượu cao cấp",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2253",
+      "query": "shampoo",
+      "dimension": "foreign_language",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1100",
+      "query": "siukay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-2320",
+      "query": "snack thưởng cho chó",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1755",
+      "query": "so co la",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2296",
+      "query": "soba",
+      "dimension": "foreign_language",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2258",
+      "query": "soy sauce",
+      "dimension": "foreign_language",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0025",
+      "query": "sua",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0412",
+      "query": "sua chua",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1858",
+      "query": "sua chua khong duong",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1540",
+      "query": "sua khong duong",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0388",
+      "query": "sua tam",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0176",
+      "query": "sunlight bioshield",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-0646",
+      "query": "sâm hàn quốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0588",
+      "query": "sô cô la",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 13,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1521",
+      "query": "sô-cô-la",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2334",
+      "query": "sườn heo nấu canh chua",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2058",
+      "query": "sản phẩm cho gia đình",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-2036",
+      "query": "sản phẩm hữu cơ cho bé",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-2056",
+      "query": "sản phẩm không hóa chất",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1777",
+      "query": "sốt mè",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-1944",
+      "query": "sốt xá xíu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 7,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-0076",
+      "query": "sủa tươi",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1373",
+      "query": "sửa tắm",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2241",
+      "query": "sửa đặc có đường",
+      "dimension": "misspelling",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1812",
+      "query": "sữa bột pha sẵn",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 17
+    },
+    {
+      "test_id": "NSG-ALL-0580",
+      "query": "sữa chua không đường",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1088",
+      "query": "sữa chua meiji",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1848",
+      "query": "sữa chua đà lạt milk",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-2037",
+      "query": "sữa công thức cho bé sơ sinh",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1250",
+      "query": "sữa dưa lưới",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1859",
+      "query": "sữa dưỡng thể nivea",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 18,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1107",
+      "query": "sữa long thành",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1704",
+      "query": "sữa ngũ cốc",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0971",
+      "query": "sữa oatside",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1568",
+      "query": "sữa pha sẵn",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 19,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1911",
+      "query": "sữa rửa mặt senka",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0888",
+      "query": "sữa tiệt trùng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0927",
+      "query": "sữa tươi th",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0725",
+      "query": "sữa tươi thanh trùng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2220",
+      "query": "sữa tấm",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2321",
+      "query": "sữa tắm cho mèo",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1922",
+      "query": "sữa tắm choice l",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 26,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0633",
+      "query": "sữa tắm lifebuoy",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1517",
+      "query": "sữa tắm olay",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1269",
+      "query": "sữa óc chó",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 19,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0809",
+      "query": "sữa đà lạt",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 8,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1241",
+      "query": "sữa đà lạt milk",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-1084",
+      "query": "tam",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1846",
+      "query": "th khong duong",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1515",
+      "query": "th ít đường",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 21,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1047",
+      "query": "than",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0802",
+      "query": "thit",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1397",
+      "query": "thit bo",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1907",
+      "query": "thot",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0864",
+      "query": "thì là",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-0334",
+      "query": "thơm",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1012",
+      "query": "thạch rau câu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 15,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0899",
+      "query": "thảm",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0260",
+      "query": "thịt",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2328",
+      "query": "thịt bò làm bít tết",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0475",
+      "query": "thịt gà",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0563",
+      "query": "thịt heo xay",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2049",
+      "query": "thực phẩm",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2009",
+      "query": "thực phẩm bổ sung canxi",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 19
+    },
+    {
+      "test_id": "NSG-ALL-1979",
+      "query": "thực phẩm cho người ăn kiêng",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1985",
+      "query": "thực phẩm hữu cơ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1981",
+      "query": "thực phẩm keto",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1983",
+      "query": "thực phẩm không đường",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-1989",
+      "query": "thực phẩm tăng cơ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-0051",
+      "query": "thực phẩm tươi sống",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2059",
+      "query": "thực phẩm đóng gói sẵn",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-1259",
+      "query": "tieu",
+      "dimension": "history_verification",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0758",
+      "query": "tom",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1249",
+      "query": "tonic",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0611",
+      "query": "tra",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1094",
+      "query": "tra xanh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0528",
+      "query": "trai cay",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0195",
+      "query": "trà",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2006",
+      "query": "trà giảm cân",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-0746",
+      "query": "trà hoa cúc",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 27,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1903",
+      "query": "trà pha sẵn",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2095",
+      "query": "trái bơ",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-0229",
+      "query": "trái cây",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2344",
+      "query": "trái cây giải nhiệt mùa nóng",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 10
+    },
+    {
+      "test_id": "NSG-ALL-2336",
+      "query": "trái cây nhập khẩu cao cấp",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 13
+    },
+    {
+      "test_id": "NSG-ALL-0526",
+      "query": "trái cây sấy",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2337",
+      "query": "trái cây theo mùa hè",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2343",
+      "query": "trái cây tươi cho bé ăn dặm",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2341",
+      "query": "trái cây ít ngọt cho người tiểu đường",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-2104",
+      "query": "trái măng cụt",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-2101",
+      "query": "trái mận bắc",
+      "dimension": "regional_dialect",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2103",
+      "query": "trái nhãn",
+      "dimension": "regional_dialect",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-0067",
+      "query": "trái sầu riêng",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0050",
+      "query": "trái thanh long",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 13,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2102",
+      "query": "trái vú sữa",
+      "dimension": "regional_dialect",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1455",
+      "query": "trẻ em",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1799",
+      "query": "trộn",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0165",
+      "query": "trứng",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1623",
+      "query": "trứng bắc thảo",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-0897",
+      "query": "tui",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0029",
+      "query": "tui thuc pham",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1930",
+      "query": "tuong den",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0518",
+      "query": "tàu hũ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 14,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0508",
+      "query": "tàu hủ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1236",
+      "query": "táo new zealand",
+      "dimension": "real_search_history",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 16,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0719",
+      "query": "táo đỏ",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 9,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-0083",
+      "query": "tía tô",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1596",
+      "query": "tóc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0198",
+      "query": "tôm",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0531",
+      "query": "túi",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1667",
+      "query": "túi môi trường",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 6,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-0764",
+      "query": "túi thực phẩm",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1443",
+      "query": "túi đựng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-1701",
+      "query": "tăm chỉ",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-2180",
+      "query": "tăm nước vệ sinh răng",
+      "dimension": "synonym_variant",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1988",
+      "query": "tăng cơ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1987",
+      "query": "tăng cơ bắp",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-1056",
+      "query": "tương",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0589",
+      "query": "tương đen",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0506",
+      "query": "tương ớt hàn quốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-1866",
+      "query": "tả dán",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2230",
+      "query": "tả giấy",
+      "dimension": "misspelling",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0915",
+      "query": "tẩy",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1641",
+      "query": "tẩy nhà tắm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1781",
+      "query": "uc ga",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 13
+    },
+    {
+      "test_id": "NSG-ALL-1238",
+      "query": "vali",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-0070",
+      "query": "vali du lịch",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 5,
+      "asis_count": 14
+    },
+    {
+      "test_id": "NSG-ALL-1319",
+      "query": "vani",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0500",
+      "query": "vifon",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0191",
+      "query": "vinamilk",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1356",
+      "query": "vit",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1936",
+      "query": "vitamin",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0785",
+      "query": "viên",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1783",
+      "query": "viên bồn cầu",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 11,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0522",
+      "query": "viên giặt",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2192",
+      "query": "viên tẩy lồng máy giặt",
+      "dimension": "synonym_variant",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 8
+    },
+    {
+      "test_id": "NSG-ALL-0688",
+      "query": "váng sữa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2055",
+      "query": "vật dụng hàng ngày",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0900",
+      "query": "vệ sinh",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1778",
+      "query": "vỉ nướng bánh",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1840",
+      "query": "whisky",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 16
+    },
+    {
+      "test_id": "NSG-ALL-0979",
+      "query": "x men",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0839",
+      "query": "x-men",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1260",
+      "query": "xmen",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1645",
+      "query": "xúc xích cocktail",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1945",
+      "query": "xúc xích l",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1535",
+      "query": "xúc xích lc",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0918",
+      "query": "xúc xích ponnie",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0928",
+      "query": "xả",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0750",
+      "query": "xịt khử mùi",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1277",
+      "query": "xịt muỗi jumbo vape f10 hương cam chanh chai 600ml",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 6
+    },
+    {
+      "test_id": "NSG-ALL-1808",
+      "query": "xịt muỗi jumbo vape one plus 16ml",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-2185",
+      "query": "xịt tạo kiểu tóc",
+      "dimension": "synonym_variant",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 9,
+      "asis_count": 15
+    },
+    {
+      "test_id": "NSG-ALL-1946",
+      "query": "xốt mì ý",
+      "dimension": "history_verification",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 26,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0636",
+      "query": "yorihada",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1175",
+      "query": "yến mạch giảm cân",
+      "dimension": "benchmark_raw",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0968",
+      "query": "áo",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0917",
+      "query": "đu đủ",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 3,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0521",
+      "query": "đà lạt milk",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1586",
+      "query": "đào ngâm",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 1,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2017",
+      "query": "đèn ngủ",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-0323",
+      "query": "đũa",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2090",
+      "query": "đường thốt nốt",
+      "dimension": "regional_dialect",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 2,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-1452",
+      "query": "đường vàng",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-1097",
+      "query": "đầu cá hồi",
+      "dimension": "benchmark_raw",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": true,
+      "actual_count": 3,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0321",
+      "query": "đậu",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0374",
+      "query": "đậu hà lan",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1295",
+      "query": "đậu đóng hộp",
+      "dimension": "history_verification",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 22,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2015",
+      "query": "đồ bếp inox",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 7
+    },
+    {
+      "test_id": "NSG-ALL-2365",
+      "query": "đồ chơi cho bé 1 tuổi",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2316",
+      "query": "đồ chơi cho chó nhỏ",
+      "dimension": "semantic_phrase",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2070",
+      "query": "đồ chơi cho thú cưng",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2035",
+      "query": "đồ chơi giáo dục cho bé",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2367",
+      "query": "đồ chơi ngoài trời cho trẻ em",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-0066",
+      "query": "đồ chơi trẻ em thông minh",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 9
+    },
+    {
+      "test_id": "NSG-ALL-2370",
+      "query": "đồ chơi tắm cho bé sơ sinh",
+      "dimension": "semantic_phrase",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2057",
+      "query": "đồ dùng cho mẹ và bé",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 18
+    },
+    {
+      "test_id": "NSG-ALL-2039",
+      "query": "đồ dùng cắm trại",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2041",
+      "query": "đồ dùng dã ngoại",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2012",
+      "query": "đồ dùng gia dụng",
+      "dimension": "generic_vague_intent",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2074",
+      "query": "đồ dùng nhà bếp thông minh",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 11
+    },
+    {
+      "test_id": "NSG-ALL-2381",
+      "query": "đồ dùng phòng bếp hiện đại",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 2
+    },
+    {
+      "test_id": "NSG-ALL-2028",
+      "query": "đồ dùng phòng tắm",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2045",
+      "query": "đồ dùng đi du lịch",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2013",
+      "query": "đồ gia dụng thông minh",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 5
+    },
+    {
+      "test_id": "NSG-ALL-2048",
+      "query": "đồ ăn",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2378",
+      "query": "đồ ăn cho tiệc sinh nhật trẻ em",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-1986",
+      "query": "đồ ăn healthy",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0024",
+      "query": "đồ ăn hàn",
+      "dimension": "manual_demo_asis_vs_actual",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": true,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-1982",
+      "query": "đồ ăn keto",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-2372",
+      "query": "đồ ăn kiểu Nhật tại nhà",
+      "dimension": "semantic_phrase",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 1
+    },
+    {
+      "test_id": "NSG-ALL-2038",
+      "query": "đồ ăn vặt văn phòng",
+      "dimension": "generic_vague_intent",
+      "asis_match": "NO_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 3
+    },
+    {
+      "test_id": "NSG-ALL-2031",
+      "query": "đồ đựng gia vị",
+      "dimension": "generic_vague_intent",
+      "asis_match": "LOW_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 4
+    },
+    {
+      "test_id": "NSG-ALL-1032",
+      "query": "ốc",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    },
+    {
+      "test_id": "NSG-ALL-0264",
+      "query": "ớt",
+      "dimension": "benchmark_raw",
+      "asis_match": "PARTIAL_MATCH",
+      "has_bug_note": false,
+      "actual_count": 30,
+      "asis_count": 20
+    }
+  ]
+}

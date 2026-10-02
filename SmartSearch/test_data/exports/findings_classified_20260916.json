@@ -1,0 +1,3101 @@
+{
+  "generatedDate": "2026-09-16",
+  "store": "nsg",
+  "method": "Phân nhóm theo dấu hiệu trong CHÍNH NỘI DUNG ghi chú của QA. ĐA NHÃN: một ghi chú nêu 2 vấn đề thì thuộc cả 2 nhóm, nên tổng các nhóm > số mục.",
+  "bugTotal": 129,
+  "discussionTotal": 40,
+  "bugGroups": [
+    {
+      "code": "missing_sku",
+      "name": "Thiếu sản phẩm",
+      "action": "Sản phẩm CÓ trong catalog và còn hàng nhưng search không trả về. Nghi vấn thiếu index hoặc điều kiện lọc quá chặt - xem thêm exports/missing_from_search_index_*.json.",
+      "count": 42,
+      "items": [
+        {
+          "test_id": "NSG-ALL-1779",
+          "query": "bao cao",
+          "dimension": "history_verification",
+          "note": "thiếu sp bao cao su. Các sản phẩm bao cao su cần hiển thị ở top đầu\n1\t8934637513140\tHá Cảo Cholimex Gói 300G\n2\t8936077110132\tHá Cảo Tôm Bamboo Gói 270g\n3\t8936077110118\tHá Cảo Hoa Hồng Bamboo 300G\n4\t5052197050233\tBao Cao Su Durex Invisible Hộp 3 Cái (New)\n5\t8935347400065\tSủi Cảo Nhân Tôm TH true Food 300G\n6\t8934717271236\tHá Cảo Cầu Tre Mini Gói 500G\n7\t8935118500222\tHá Cảo Việt Sin 500G\n8\t8936210411966\tHá Cảo LC Foods Gói 300G\n9\t8936077112334\tHá Cảo Choice L Nhân Tôm Thịt Cải Bó Xôi Gói 360G\n10\t8934717271311\tHá Cảo Chay Cầu Tre Gói 500G",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T03:12:38.226Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0378",
+          "query": "bao cao su",
+          "dimension": "benchmark_raw",
+          "note": "\"thiếu sp bao cao su. Các sản phẩm bao cao su cần hiển thị ở top đầu\n1\t8934637513140\tHá Cảo Cholimex Gói 300G\n2\t8936077110132\tHá Cảo Tôm Bamboo Gói 270g\n3\t8936077110118\tHá Cảo Hoa Hồng Bamboo 300G\n4\t5052197050233\tBao Cao Su Durex Invisible Hộp 3 Cái (New)\n5\t8935347400065\tSủi Cảo Nhân Tôm TH true Food 300G\n6\t8934717271236\tHá Cảo Cầu Tre Mini Gói 500G\n7\t8935118500222\tHá Cảo Việt Sin 500G\n8\t8936210411966\tHá Cảo LC Foods Gói 300G\n9\t8936077112334\tHá Cảo Choice L Nhân Tôm Thịt Cải Bó Xôi Gói 360G\n10\t8934717271311\tHá Cảo Chay Cầu Tre Gói 500G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:10:52.823Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0073",
+          "query": "bánh hotteok",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"k tìm thấy sản phẩm Bánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Mozzarella bibigo 280G (SKU 8935297103726) dù còn hàng\n1\t8801204205480\tBánh Cookie Hotteok Good Today 258G\n2\t8935297103733\tBánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Tan Chảy bibigo 280G\n3\t8938536904498\tBánh Hotteok Nhân Pizza Pulmuone 360G\n4\t8801114144015\tBánh Hotteok Nhân Phô Mai Mozzarella Pulmuone Gói 600G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:13:01.807Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1543",
+          "query": "bánh mì mè",
+          "dimension": "history_verification",
+          "note": "Bánh Quy Senbei Vị Mè Rang  thiếu sản phẩm còn hàng",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:46:43.114Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1360",
+          "query": "bánh su kem",
+          "dimension": "history_verification",
+          "note": "Bánh Su Que Hộp 8 Cái x 35g\nSKU 0400276050004 BỮA ĂN NGON / Bánh Tươi \nthiếu sản phẩm",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:48:43.984Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1753",
+          "query": "bình xịt côn trùng jumbo",
+          "dimension": "history_verification",
+          "note": "Xịt Côn Trùng Ars Pro.X Mạnh 500ml thiếu sp còn hàng",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:44:51.278Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1014",
+          "query": "bí ngòi",
+          "dimension": "benchmark_raw",
+          "note": "1. thiếu sp\nBí Ngòi Xanh 300G\nSKU: 8936117051616\n2. Recommend k hợp lý",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:27:51.821Z",
+          "groups": [
+            "missing_sku",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0856",
+          "query": "băng vệ sinh hàng ngày",
+          "dimension": "benchmark_raw",
+          "note": "thiếu nhiều sp bvs hằng ngày so với as is",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T11:02:59.818Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1484",
+          "query": "băng vệ sinh hằng ngày",
+          "dimension": "history_verification",
+          "note": "thiếu nhiều sp so với asis",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T11:06:07.037Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0037",
+          "query": "bột giạt",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 16/9: thiếu nhiều sp bột giặt (Bột Giặt Power100 Hương Nước Hoa Pháp Quyến Rũ Cho Máy Giặt Cửa Trên Túi 5.3kg, Bột Giặt Lix Sạch Thơm 24 Giờ Ngát Hương Túi 5.5kg,...)",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T10:11:53.890Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0077",
+          "query": "bột tẩy lồng máy giặt",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "không tìm thấy nước tẩy lồng máy giặt",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:48:29.092Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0052",
+          "query": "chống lão hóa",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần bổ sung thêm các sản phẩm ngăn lão hóa, cải thiện lão hóa",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:49:03.139Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0026",
+          "query": "comfort",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9:\nThiếu một số sản phẩm của comfort : Băng Vệ Sinh Sofy Skin Comfort Siêu Mỏng Cánh 25cm Gói 8 Miếng, Nước Xả Vải Comfort Em Bé 1 Lần Xả Hương Phấn Thơm Túi 3.6L.....\"",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:54:50.396Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-1237",
+          "query": "cá diêu hồng",
+          "dimension": "history_verification",
+          "note": "\"k thấy hiển thị \t\nCanh Chua Cá Diêu Hồng 365 Fresh 0400297230003  dù còn hàng\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:38:53.763Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0049",
+          "query": "củ kiệu",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "thiếu các sản phẩm kiệu ngâm\n1\t8935063601401\tCủ Kiệu Chua Ngọt Ngọc Liên Hũ 390G",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:43:50.481Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1890",
+          "query": "diana sensi",
+          "dimension": "history_verification",
+          "note": "Băng Vệ Sinh Diana Sensi Ban Đêm Có Cánh 35cm Gói 3 Miếng\n thiếu sản phẩm",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:50:15.809Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0796",
+          "query": "double rich",
+          "dimension": "benchmark_raw",
+          "note": "\"số lượng result lệch nhiều so với prod, cần check lại\n1\t8935030228846\tSữa Tắm Double Rich Relaxing Purple 800G\n2\t8935030228822\tSữa Tắm Double Rich Relax Purple Chai 550G\n3\t8935030218236\tNước Dưỡng Tóc Double Rich UV Nutrition 120ml\n4\t8935030228839\tXịt Dưỡng Tóc Double Rich Perfume 10x Chai 200ml\n5\t8935030221656\tSữa Tắm Double Rich Dưỡng Sáng Da Hương Hoa Sen 550g\n6\t8935030228501\tSữa Tắm Double Rich Hương Hoa Hồng 6g Dây 10 Gói\n7\t8935030228495\tSữa Tắm Double Rich Tươi Sáng Da Hương Hoa Anh Đào 6g Dây 12 Gói\n8\t8935030228853\tSữa Tắm Double Rich Relaxing Purple 200G\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:34:04.711Z",
+          "groups": [
+            "missing_sku",
+            "needs_confirm"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0823",
+          "query": "dầu gội nguyên xuân",
+          "dimension": "benchmark_raw",
+          "note": "thiếu sp\nDầu Gội Dược Liệu Nguyên Xuân Dành Cho Tóc Thường Chai 450ml",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:25:21.767Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0046",
+          "query": "gel vuốt tóc",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "đang thiếu các sản phẩm sáp vuốt tóc. tương tự cho xịt tạo kiểu tóc",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:22:13.901Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0041",
+          "query": "gochujang",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "actual thiếu mất 2 sản phẩm gochujang SKU  8938505912547, 8801005931458. Check lại data. Tương tự cho soba",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:21:46.758Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0259",
+          "query": "gạo st25",
+          "dimension": "benchmark_raw",
+          "note": "\"k tìm thấy 8938530115111 , 8938516870713  dù còn hàng\n1\t8938563047113\tGạo ST25 Prime L 5kg\n2\t8938563047106\tGạo ST25 Lúa Tôm Prime L 3kg\n3\t8936087316661\tGạo ST25 Lúa Tôm Long Châu 5kg\n4\t8936096741294\tGạo ST25 Bảo Minh Lúa Ruộng Rươi 5kg\n5\t8938516870935\tGạo Thơm Dẻo ST25 Neptune Special 5kg\n6\t8936096741478\tGạo Bảo Minh ST25 Lúa Ruộng Rươi Túi 3kg\n7\t8938516870928\tGạo Thơm Đặc Sản Neptune ST25 Plus Lúa Tôm 5kg\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:21:53.520Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0307",
+          "query": "hành lá",
+          "dimension": "benchmark_raw",
+          "note": "Hành Lá Hữu Cơ 50G thiếu sp",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:49:23.532Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0146",
+          "query": "hồng sâm hàn quốc",
+          "dimension": "benchmark_raw",
+          "note": "ngoại trừ sâm đen thì cần hiển thị thêm các loại nhân sâm (Trà Nhân Sâm Hàn Quốc Nokchawon Hộp 150G)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:17:20.103Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0069",
+          "query": "hộp cơm giữ nhiệt",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần hiển thị thêm các hộp thủy tinh & túi giữ nhiệt (8936148094002)/ bộ túi giữ nhiệt (8936148090189)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:35:18.338Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0760",
+          "query": "khoai mỡ",
+          "dimension": "benchmark_raw",
+          "note": "\"thiếu sp Khoai mỡ 500g\nSKU: 2292270000004, các loại sản phẩm khác cần đẩy qua recommend\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:11:03.737Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0373",
+          "query": "khăn giấy rút",
+          "dimension": "benchmark_raw",
+          "note": "Khăn Giấy Rút Treo Tường Silkwell 2 Lớp Túi 350 Tờ\nthiếu sp",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:52:20.595Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0679",
+          "query": "măng tây",
+          "dimension": "benchmark_raw",
+          "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:09:21.548Z",
+          "groups": [
+            "missing_sku",
+            "irrelevant_shown",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0028",
+          "query": "mắm",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : thiếu 1 số sp có chứa keyword mắm (Xốt Gia Vị Hoàn Chỉnh Barona - Gà Chiên Nước Mắm Gói 80G SKU: 8936028044295,\nCơm Chiên Gà Xốt Mắm Tỏi Yorihada 605G (ea) SKU: 0400297330000,...\"",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T10:04:06.343Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0022",
+          "query": "nho",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Thiếu nhiều sản phẩm vị nho (Kẹo Gum Cool Air Vị Nho Siêu The Mát 55.4G, Nước Ngọt Có Gas Fanta Vị Nho Nhật Bản Lon 500ml,.....)",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:43:32.508Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0042",
+          "query": "nước hoa nam",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Thiếu sp Nước Hoa Dành Cho Nam Romano Classic Chai 100ml\nSKU: 8992856897502 (phải hiển thị top 1 mới đúng)\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T10:14:34.213Z",
+          "groups": [
+            "missing_sku",
+            "wrong_results"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-1487",
+          "query": "nước ion",
+          "dimension": "history_verification",
+          "note": "\"cần hiển thị thêm các sản phẩm i-on\n\t8935339200031\tNước Ion Kiềm Ocany 1.5L\n2\t8935339200086\tThùng 24 Chai Nước Ion Kiềm Ocany 500ml\n3\t8935339200093\tThủng 12 Chai Nước Ion Kiềm Ocany 1.5L\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:37:48.275Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0886",
+          "query": "nước tương maggi",
+          "dimension": "benchmark_raw",
+          "note": "Nước Tương Hảo Hạng Maggi Chai 200ml\nthiếu sp",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T11:00:30.212Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0224",
+          "query": "oatside",
+          "dimension": "benchmark_raw",
+          "note": "\"Search result không thấy hiển thị 2 sp này\t\nSữa Yến Mạch Oatside Truyền Thống 1L\nSKU 8997240600041\nSữa Yến Mạch Oatside Vị Socola Hộp 1L\nSKU 8997240600058 \"",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T03:36:06.657Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2314",
+          "query": "quần áo thể thao nam",
+          "dimension": "semantic_phrase",
+          "note": "thiếu các sp mà ngày 10/9 đã có\nQuần Thể Dục Học Sinh BPC Size 1-15 (8936234171068)\nQuần Thể Dục Thun 4 Chiều BPC Size 6-20 (8936234171075)\nÁo Thể Thao Nam Cổ Tròn Ngắn Tay Màu Trắng Xanh Size M-XL (8936051242705)\nQuần Boxer Nam ONOFF Cotton 20018 Size M-XXL (8936032987014)\nQuần Boxer Nam Basic Icon BX007 Size S-XL Màu Xám (8938527961721)\nÁo Thể Dục BPC Size 1-15 (8936234171105)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:22:00.248Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0294",
+          "query": "sandwich",
+          "dimension": "benchmark_raw",
+          "note": "thiếu sp\nBánh Sandwich Lạt POONGMISO 300G\nSKU: 0400205560000 | 25,000 đ\n3\t\nBánh Sandwich Sữa POONGMISO 300G\nSKU: 0400205580008 | 49,000 đ",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:02:01.140Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2296",
+          "query": "soba",
+          "dimension": "foreign_language",
+          "note": "thiếu sản phẩm sốt ớt soba",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:45:56.838Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0176",
+          "query": "sunlight bioshield",
+          "dimension": "benchmark_raw",
+          "note": "thiếu sp Nước Lau Sàn Sunlight BIOSHIELD Hương Quế và Cam Bergamot Túi 3.4kg\nSKU: 8934868172734",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T09:50:41.075Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1521",
+          "query": "sô-cô-la",
+          "dimension": "history_verification",
+          "note": "Socola Đen Dars Morinaga 42G \nthiếu sản phẩm",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T11:09:48.966Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0050",
+          "query": "trái thanh long",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "thiếu sp\nThanh Long Sấy Dẻo Langfarm",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:46:55.666Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0083",
+          "query": "tía tô",
+          "dimension": "generic_vague_intent",
+          "note": "\"chưa hiển thị sp tía tô Tía tô hữu cơ 100g (ea)\nSKU: 8938525767295\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T07:58:25.399Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2185",
+          "query": "xịt tạo kiểu tóc",
+          "dimension": "synonym_variant",
+          "note": "cần bổ sung các loại gel vuốt",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:59:16.661Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0221",
+          "query": "yến mạch",
+          "dimension": "benchmark_raw",
+          "note": "Ngũ Cốc Yến Mạch Hạnh Nhân Hạt Chia Xuân An Gói 400g\nthiếu sp",
+          "pass_fail": "passed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:50:58.409Z",
+          "groups": [
+            "missing_sku"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "wrong_results",
+      "name": "Sai hẳn bộ kết quả",
+      "action": "Top kết quả không liên quan gì tới từ khoá - người dùng gõ xong không thấy thứ mình cần. Đây là nhóm nghiêm trọng nhất với trải nghiệm mua hàng.",
+      "count": 22,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0267",
+          "query": "banh",
+          "dimension": "benchmark_raw",
+          "note": "\"cần ưu tiên hiển thị banh, bánh. result hiện tại k đúng\n1\t8935212830683\tNước Lau Sàn Maxkleen Ban Mai Thanh Mát Túi 3.6kg\n2\t4710731091050\tTúi Thơm Farcent Hương Ban Mai 10g\n3\t8690536829743\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 29Cm 4 Miếng\n4\t8690536829767\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 35Cm 3 Miếng\n5\t4006592420451\tĐồ Chơi Banh Mềm Cho Bé ABC 0M+\n6\t8936029424997\tBánh Cá Orion Bống Bang Mochi Cốm Xanh Đậu Đỏ Gói 145G\n7\t8858702403689\tRong Biển Taokaenoi Big Bang Vị Mực Cay 6G\n8\t8858702403672\tRong Biển Taokaenoi Big Bang Vị Truyền Thống 6G\n9\t8997226660328\tBánh Cracker Krisma Vị Socola Hộp 100G\n10\t8938234578274\tBánh Đồng Tiền Việt Hưng Gói 500G\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:02:43.516Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0102",
+          "query": "bia corona",
+          "dimension": "synonym_variant",
+          "note": "\"search result k đúng \n1\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n2\tP2317BIA333\tBia 333\n3\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n4\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n5\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n6\t8936000440039\tBia Hà Nội 4.6% ABV Lon 330ml\n7\t18935012443301\tThùng 24 Lon Bia Sài Gòn Special Sleek 4.9% ABV 330ml\n8\t8935012443342\tBia Sài Gòn Export Premium 4.8% ABV Lon 330ml\n9\t8934692090051\tBia 1664 Blanc 5% ABV Lon 250ml\n10\t8935337000190\tBia Ngũ Hành Thổ 4.9% ABV Lon 330ml\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:01:01.805Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2110",
+          "query": "bông so đũa",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:13.879Z",
+          "groups": [
+            "wrong_results",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2111",
+          "query": "bông điên điển",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:20.816Z",
+          "groups": [
+            "wrong_results",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0505",
+          "query": "ca phê",
+          "dimension": "benchmark_raw",
+          "note": "Cần hiển thị các sản phẩm cà phê\n1\t8936045260159\tCa Cao Hòa Tan Passion 3In1 Bịch 30 Gói 16G\n2\t8938501634016\tBột Cacao Vietnamcacao Good Morning 150G\n3\t8934804025780\tThức Uống Lúa Mạch Milo Hũ 400G\n4\t8934804025636\tThức Uống Lúa Mạch Milo Active-Go Néstle 285G\n5\t8936045260135\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 450G\n6\t8936045260081\tBột Cacao Hòa Tan Passion 3 In 1 Cocoa Indochine 16G (Hộp 15 Gói)\n7\t8936045260074\tCacao Nguyên Chất Rich Cocoa Indochine 300G\n8\t8936045260579\tCacao Hòa Tan Passion Hot 16G (Hộp 10 Gói)\n9\t8936089173620\tBột Chocolate Vị Dừa Archcafe Hộp 12 Gói 20G\n10\t8850086142963\tBột Cacao Ovaltine Rich Chocolate 296G",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:23:41.194Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2133",
+          "query": "canh chua cá lóc",
+          "dimension": "regional_dialect",
+          "note": "result chưa đúng. đang hiển thị các sản phẩm k liên quan",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:55:25.412Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0493",
+          "query": "clear",
+          "dimension": "benchmark_raw",
+          "note": "các sản phẩm clear cần ưu tiên hiển thị ở top\n10\t8935006543188\tMiếng Dán Mụn Acnes Clear Patch Hộp 48 Miếng\n11\t8935049500414\tNước Tinh Khiết Dasani Chai 350ml\n12\t8934868152811\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 900G\n13\t8934868152804\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 630G\n14\t8934868171829\tKem Tẩy Sunlight Chuyên Dụng Siêu Sạch Siêu Sáng Chai 690G\n15\t8936186271915\tBộ Lau Nhà Clean Home Tiện Dụng\n16\t8934868163404\tDầu Gội Dành Cho Nam Clear Men 3 In 1 Tắm, Gội, Dưỡng Active Cool Chai 340G\n17\t8938512632032\tNước Tinh Khiết Satori 1.5L\n18\t8934868152590\tDầu Gội Sạch Gàu Clear Bạc Hà Mát Lạnh Chai 880G\n19\t8938512632230\tNước Uống Tinh Khiết Choice L 1.5L",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:13:09.738Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2073",
+          "query": "dụng cụ vệ sinh nhà cửa",
+          "dimension": "generic_vague_intent",
+          "note": "\"sai bộ result . cần hiển thị dụng cụ làm vệ sinh\n1\t8935128261441\tTập Sinh Viên Thuận Tiến 300 Trang (Giao Mẫu Ngẫu Nhiên)\n2\t8858741710298\tGiấy Photo Double A A4 70gsm Sấp 500 Tờ\n3\t8935128264558\tGiấy Photo Choice L A5 70gsm Sấp 500 Tờ\n4\t6976693306986\tSổ Tay 3D Weibo 95590-2 Hình Cây Kem 1 Quyển (Giao mẫu ngẫu nhiên)\n5\t6976693306719\tSổ Tay 3D Weibo 95564-5 Hình Cún 1 Quyển (Giao mẫu ngẫu nhiên)\n6\t6975628222735\tSổ Tay Weibo 95410 Hình Thú 1 Quyển (Giao mẫu ngẫu nhiên)\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:36:06.318Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0620",
+          "query": "giay",
+          "dimension": "benchmark_raw",
+          "note": "\"cần hiển thị sp giày, giấy . actual result đang sai\n1\t0412133790008\tCủ Gừng 100G (ea)\n2\t8934781061047\tViên Gia Vị Phở Bò Ông Chà Và Gold 126g\n3\t8936028042369\tXốt Gia Vị Hoàn Chỉnh Cà Ri Barona 80G\n4\t8936079284251\tHành Bột Natural Dh Foods Hũ 40G\n5\t8936079284268\tBột Tỏi Natural DH Foods 60g\n6\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n7\t0074880020021\tMù Tạt Xanh Wasabi Neri S&B Tuýp 43G\n8\t8935137601689\tTrà Gừng Hoà Tan Trà Đại Gia 100G (5G x 20 Gói)\n9\t8934637515236\tSốt Xá Xíu Cholimex Gói 70g\n10\t8938509638122\tMật Ong Hoa Cà Phê Gia Lai Choice L Chai 380G\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:07:59.580Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0074",
+          "query": "khan giấy",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "actual đang hiển thị giấm ở top 1",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:24:11.672Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1019",
+          "query": "ngủ cốc",
+          "dimension": "benchmark_raw",
+          "note": "\"sai search result \n1\t8936203161342\tGối Cao Su Non Nin House Supportive 60X40X12Cm\n2\t8936203161359\tGối Cao Su Non Nin House Curved 50x30x10.7cm\n3\t8935297303102\tGối Foam Gel Koi Mayhome 30x50x10cm\n4\t8936115311057\tLốc 10 Ly Nhựa Tiện Lợi Choice L 700ml\n5\t8936115311439\tLốc 20 Nắp Ly Nhựa Tiện Lợi Choice L\n6\t8935295600937\tLy Rượu Vang Thủy Tinh Luminarc Elegance 140ml\n7\t8935297302136\tGối Ngủ Mayhome Kori 30x50cm\n8\t8936203166354\tGối Nằm I-Cool Nin House 40x60cm (Giao Mẫu Ngẫu Nhiên)\n9\t8936115311422\tLốc 20 Ly Nhựa Tiện Lợi Choice L 300ml\n10\t8936218294301\tGối Nghỉ Trưa Go&Fly Snug\"",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:34:01.149Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0042",
+          "query": "nước hoa nam",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Thiếu sp Nước Hoa Dành Cho Nam Romano Classic Chai 100ml\nSKU: 8992856897502 (phải hiển thị top 1 mới đúng)\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T10:14:34.213Z",
+          "groups": [
+            "missing_sku",
+            "wrong_results"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-2216",
+          "query": "nứơc ngọt",
+          "dimension": "misspelling",
+          "note": "result bị sai, cần hiển thị sản phẩm nước ngọt\n1\t8935001719960\tKẹo Nhai Mentos Vị Quả Mọng Gói 94.5G\n2\t8935001719946\tKẹo Nhai Mentos Vị Quả Mọng Hũ 90G\n3\t8809714120712\tThạch Nổ Vị Dâu Tiktok Gói 160G\n4\t8935001716563\tKẹo Nhai Mentos Sữa Chua Hũ 90g\n5\t4895138305686\tKẹo Mút Nổ Striking Hương Nho Gói 13.8g\n6\t8858731201119\tThạch Sữa Chua Trái Cây Nanaco Vị Tổng Hợp 750G",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:58:35.535Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1209",
+          "query": "oshi lays",
+          "dimension": "benchmark_raw",
+          "note": "\"cần hiển thị snack oshi, lays\n1\t5202631000557\tÔ Liu Olympias Tím Không Hạt 370G\n2\t8936040055590\tGối Ôm Cá Mập Hometex\n3\t8936002091741\tGối Trẻ Em Có Vỏ Tencel Ngọc Hạnh 22x70cm (Giao Mẫu Ngẫu Nhiên)\n4\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n5\t8936040051325\tGối Ôm Dây Kéo Phối Hometex 37x105cm (Giao Màu Ngẫu Nhiên)\n6\t5202631000564\tÔ Liu Olympias Xanh Không Hạt 370G\n7\t8936040058829\tGối Ôm Trẻ Em Hình Cây Tre Hometex 25x80cm (Giao Màu Ngẫu Nhiên)\n8\t8936040057327\tGối Ôm Cá Sấu Thiên Hà\n9\t8936040058430\tGối Nằm Trẻ Em Nỉ Nhung Hometex 30 x 50cm (Giao Mẫu Ngẫu Nhiên)\n10\t8936105163062\tNệm Ngồi Thông Dụng Choice L Màu Xám Đậm\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:37:09.546Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0963",
+          "query": "sensodyne",
+          "dimension": "benchmark_raw",
+          "note": "\"không nên hiển thị các sản phẩm xúc xích, kẹo k liên quan đến sensodyne 14\t8936034876743\tXúc Xích Vòng Xông Khói Ponnie Premium 200G\n15\t8934572296894\tXúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)\n16\t8809693270613\tKẹo Dream Vị Gừng 200G\n17\t8809693270620\tKẹo Dream Vị Quế 200G\n18\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\n19\t8935337513744\tĐồ Chơi Bạn Ngỗng Phát Triển Giác Quan PEEK A BOO PAB047\n20\t8936034876811\tXúc Xích Xông Khói Eco Ponnie 450G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:09:07.540Z",
+          "groups": [
+            "wrong_results",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0076",
+          "query": "sủa tươi",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "search result đang sai",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:42:31.210Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1373",
+          "query": "sửa tắm",
+          "dimension": "history_verification",
+          "note": "top 5 search result bị sai \n1\t8935275213058\tThau Cao Cấp Inochi Yoko 35cm (Giao Màu Ngẫu Nhiên)\n2\t8936039276821\tThau Vuông Tự Lập 823 Màu Xanh Rêu 33cm\n3\t8936007980439\tThông Tắc Hầm Cầu M.Phốt Hando 600ml\n4\t8934889801231\tNước Tẩy Nhà Tắm Duck Mr Muslce Pro 900ml Lốc 2 Chai\n5\t8935275213041\tThau Cao Cấp Inochi Yoko 30Cm (Màu Ngẫu Nhiên)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:39:36.105Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0802",
+          "query": "thit",
+          "dimension": "benchmark_raw",
+          "note": "search result chưa đúng, cần ưu tiên hiển thị các sản phẩm thịt\n1\t9310155100335\tMì San Remo Thin Spaghetti 500G\n2\t8809931430939\tBánh Quy Wondertok Thin Masterpieces Vị Sữa Gói 240G\n3\t8936039230298\tMực Trứng Phan Thiết Đông Lạnh Đại Nam 450G\n4\t4987176095794\tDao Cạo Râu Gillette Super Thin II Gói 8+2\n5\t8806035038085\tMiếng Dán Mụn Mayan Ultra Thin Spot 20+4 Miếng\n6\t8806035038078\tMiếng Dán Mụn Mayan Ultra Thin Spot Plus 12+8 Miếng\n7\t8936178584689\tĐồ Chơi Mô Hình Bộ Sưu Tập Xe Thiết Giáp Winka DK81396\n8\t8934679455248\tCháo Ăn Liền Gấu Đỏ Vị Thịt Bằm Nấm Đùi Gà Có Thịt Thật Gói 74G\n9\t9556704326065\tNồi ủ La Gourmet 4.5L ( màu xám)\n10\t8935259818040\tLẩu Điện Sunhouse SHD4528",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:21:04.525Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0051",
+          "query": "thực phẩm tươi sống",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "các sản phẩm tặng (1đ) đang hiển thị ở top 1,2 (CLCACAPELIN300G , ONLTHUMSUP320). (expect ẩn)",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:48:11.311Z",
+          "groups": [
+            "wrong_results",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1153",
+          "query": "trái me",
+          "dimension": "benchmark_raw",
+          "note": "\"sai bộ kết quả \n1\t8935337518039\tBộ Đồ Chơi Thức Ăn BBQ Thịt Nướng\n2\t8935256611521\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-2 (100 Chi Tiết)\n3\t8935256611620\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-12 (116 Chi Tiết)\n4\t8935256611545\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-4 (105 Chi Tiết)\n5\t8935256611514\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-1 (118 Chi Tiết)\n6\t8935256611583\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-8 (113 Chi Tiết)\n7\t8935256611613\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-11 (117 Chi Tiết)\n8\t8935256611576\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-7 (116 Chi Tiết)\n9\t8935256611569\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-6 (105 Chi Tiết)\n10\t8935256611606\tĐồ Chơi Lắp Ráp Giày Thể Thao Forange Block FC8285-10 (108 Chi Tiết)\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T06:41:29.617Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2291",
+          "query": "しょうゆ",
+          "dimension": "foreign_language",
+          "note": "Cần hiển thị các sản phẩm nước tương / xì dầu\n1\t8936000750206\tTàu hũ trắng Ichi-Sakura 240G\n2\t8936000750237\tTàu Hũ Trắng Tươi Ichi-Sakura 350G\n3\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\n4\t8936000750077\tTàu hũ mềm Ome Ichiban 300G\n5\t8934743126364\tSữa Chua Sấy Yo'V Vị Sầu Riêng Hũ\n6\t8938504001839\tTàu Hủ Tojy Nấm 340G\n7\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\n8\t8938524577390\tXúc Xích School Phô Mai Shinshu 200G\n9\t8936000751036\tĐậu Hũ Làng Mơ Ichiban 500G\n10\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:45:09.647Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2292",
+          "query": "すし",
+          "dimension": "foreign_language",
+          "note": "hiển thị các sản phẩm sushi",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:42:56.783Z",
+          "groups": [
+            "wrong_results"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "wrong_ranking",
+      "name": "Sai thứ tự ưu tiên",
+      "action": "Sản phẩm đúng CÓ trong kết quả nhưng bị xếp sau sản phẩm kém liên quan hơn. Sửa ở tầng xếp hạng (boost/scoring), không phải tầng index.",
+      "count": 39,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0267",
+          "query": "banh",
+          "dimension": "benchmark_raw",
+          "note": "\"cần ưu tiên hiển thị banh, bánh. result hiện tại k đúng\n1\t8935212830683\tNước Lau Sàn Maxkleen Ban Mai Thanh Mát Túi 3.6kg\n2\t4710731091050\tTúi Thơm Farcent Hương Ban Mai 10g\n3\t8690536829743\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 29Cm 4 Miếng\n4\t8690536829767\tBăng Vệ Sinh Molped Tự Nhiên Siêu Ban Đêm Cánh 35Cm 3 Miếng\n5\t4006592420451\tĐồ Chơi Banh Mềm Cho Bé ABC 0M+\n6\t8936029424997\tBánh Cá Orion Bống Bang Mochi Cốm Xanh Đậu Đỏ Gói 145G\n7\t8858702403689\tRong Biển Taokaenoi Big Bang Vị Mực Cay 6G\n8\t8858702403672\tRong Biển Taokaenoi Big Bang Vị Truyền Thống 6G\n9\t8997226660328\tBánh Cracker Krisma Vị Socola Hộp 100G\n10\t8938234578274\tBánh Đồng Tiền Việt Hưng Gói 500G\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:02:43.516Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1112",
+          "query": "bim bim",
+          "dimension": "benchmark_raw",
+          "note": "\"cần ưu tiên snack, bánh\n1\tP2317BIA333\tBia 333\n2\t6901035617628\tBia Tsingtao 1903 5% ABV 500ml (EA)\n3\t8858727401837\tBia Lúa Mì Trắng San Miguel Cerveza Blanca 5.4% ABV Lon 490ml\n4\t8934692090037\tThùng 24 Lon Bia 1664 Blanc 5% ABV 330ml\n5\t8936094291401\tBia Budweiser Aluminum 5% ABV Chai 355ml\n6\t8934803012880\tSnack Oishi bí đỏ vị bò nướng 68g\n7\t8936036028119\tSnack Tonnies soco 70G\n8\t8936079124908\tSnack Hình Cua Poca Vị Tảo Biển Gói 60G\n9\t8935012413338\tBia 333 5.3% ABV Lon 330ml\n10\t5410908000043\tBia Chimay Bruin 7% ABV Chai 750ml\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:08:12.996Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0072",
+          "query": "bình nước giữ nhiệt thể thao",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tên các loại bình giữ nhiệt, bình nước (bình xịt, bình nhựa k ưu tiên bằng)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:20:21.830Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0442",
+          "query": "bơ đậu phộng",
+          "dimension": "benchmark_raw",
+          "note": "1. 2 sản phẩm chứa bơ đậu phộng đang hiển thị sau bơ hạt phỉ ca cao\n14\tBơ Đậu Phộng Giòn Good Today Hũ 340G\nSKU: 0430001270117 | 67,900 đ\n15\tBơ Đậu Phộng Mịn Good Today Hũ 340G\nSKU: 0430001270094 | 67,900 đ\n2. Xem xét hiển thị đậu phộng? (cần thảo luận)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T03:06:22.626Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0009",
+          "query": "bếp từ",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên các loại bếp : bếp nướng than, bếp hồng ngoại",
+          "pass_fail": "passed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T02:48:22.015Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1254",
+          "query": "ca cao",
+          "dimension": "history_verification",
+          "note": "\"bột cacao đang xếp sau bột trà xanh \n16\t\nBột Trà Xanh StFood Gói 50G\nSKU: 8859405999073 | 88,900 đ\t+ Extra\n17\t\nBột Cacao Vinacacao 5In1 160G\nSKU: 8938501634542 | 39,500 đ\"",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T11:07:55.505Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1581",
+          "query": "cam sành",
+          "dimension": "history_verification",
+          "note": "cam vàng nam phi và cam xoàn đang bị đẩy xuống dưới nước lau sàn  và đèn pin (k nên hiển thị khi search cam sành)\n1\t2164130000007\tCam Sành Vắt Nước 1kg\n2\t8935268200775\tCam Sành Loại 1 Meko Star 1kg\n3\t8934868502838\tNước Lau Sàn Sunlight Hương Quế Và Cam Bergamot 3.4kg\n4\t8936020957883\tĐèn pin cầm tay LED SUNHOUSE SHE-4351\n5\t8938520657201\tHải Sản Thập Cẩm Đông Lạnh Vifoods 400G\n6\t8936073175173\tCháo Tươi Cây Thị Hải Sản Thập Cẩm Gói 240G\n7\t8934717402432\tBánh Xếp bibigo Kiểu Hàn Quốc 365 Hải Sản Thập Cẩm 250G x 2 Gói\n8\t9556173490427\tKẹo Mềm Đồ Chơi Khee San Fruit Plus Vị Vải Và Cam (Giao Mẫu Ngẫu Nhiên) 6G\n9\t2181670000007\tCam Vàng Nam Phi 1kg\n10\t8935268200881\tCam Xoàn Túi Lưới Meko Star 1kg",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T03:28:09.834Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0308",
+          "query": "chay",
+          "dimension": "benchmark_raw",
+          "note": "cần ưu tiên thực phẩm chay\n1\t8935049501701\tTrà Đào Và Hạt Chia Fuze Tea+ Chai 1L\n2\t18935049501739\tLốc 24 Chai Trà Chanh Sả Fuze Tea+ 450ml/Chai\n3\t18935049500701\tLốc 24 Chai Trà Chanh Dây Và Hạt Chia Fuze Tea+ 350ml/Chai\n4\t8936127796613\tTrà Vải Tự Nhiên TH True Tea Chai 350ml\n5\t8936127796514\tTrà Đào Tự Nhiên TH True Tea Chai 350ml\n6\t4710105060019\tTrà Kuang Chuan Mật Ong Hoa Lài Jasmine Honey Tea Chai 585ML\n7\t8935049500704\tTrà Chanh Dây Và Hạt Chia Fuze Tea+ Chai 350ml\n8\t18935049500695\tLốc 24 Chai Trà Đào Và Hạt Chia Fuze Tea+ 450ml/Chai\n9\t8938557832008\tTrà Xanh Oi Ocha Không Đường Chai 1L\n10\t8935001460077\tDầu Hào Chay Âu Lạc Chai 250 ml",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T09:54:04.554Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2040",
+          "query": "chuẩn bị năm học mới",
+          "dimension": "generic_vague_intent",
+          "note": "\"không hiển thị thực phẩm (bầu, dưa leo,...) . ưu tiên áo , quần, bút, tập ,...(dụng cụ học tập)\n1\t8935324035921\tBalo Chống Gù Thiên Long BP-025/T24 Màu Hồng\n2\t8936123160487\tBầu Xanh 550G\n3\t8936200652119\tBầu Xanh Hữu Cơ Bio Ngon 500G\n4\t8938503008358\tTăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)\n5\t8935324035808\tBalo Chống Gù Thiên Long BP-016/T24 Màu Đỏ\n6\t8936234171006\tĐầm Học Sinh BPC Size 1-15\n7\t8935107202380\tMiếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)\n8\t8938510875165\tDưa Leo Baby 500G (ea)\n9\t8886451000057\tSữa Similac Mom IQ Plus Hương Vani 900G\n10\t8936009650118\tTăm Bông Trẻ Em Choice L Thân Nhựa Hộp Tròn 160 Que\n11\t8936231020000\tBí Đỏ Baby 300G\n12\t4903111241439\tTã Dán Moony Cao Cấp Natural Nhật Bản Size M 46 Miếng (6-11kg)\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T06:58:58.335Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0493",
+          "query": "clear",
+          "dimension": "benchmark_raw",
+          "note": "các sản phẩm clear cần ưu tiên hiển thị ở top\n10\t8935006543188\tMiếng Dán Mụn Acnes Clear Patch Hộp 48 Miếng\n11\t8935049500414\tNước Tinh Khiết Dasani Chai 350ml\n12\t8934868152811\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 900G\n13\t8934868152804\tDầu Gội Sạch Gàu Dành Cho Nam Clear Men Deep Cleanse Sạch Sâu Chai 630G\n14\t8934868171829\tKem Tẩy Sunlight Chuyên Dụng Siêu Sạch Siêu Sáng Chai 690G\n15\t8936186271915\tBộ Lau Nhà Clean Home Tiện Dụng\n16\t8934868163404\tDầu Gội Dành Cho Nam Clear Men 3 In 1 Tắm, Gội, Dưỡng Active Cool Chai 340G\n17\t8938512632032\tNước Tinh Khiết Satori 1.5L\n18\t8934868152590\tDầu Gội Sạch Gàu Clear Bạc Hà Mát Lạnh Chai 880G\n19\t8938512632230\tNước Uống Tinh Khiết Choice L 1.5L",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:13:09.738Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2078",
+          "query": "cá quả",
+          "dimension": "regional_dialect",
+          "note": "\"cần ưu tiên cá lóc\n1\t8935105810297\tCá Trích Sốt Cà Lilly Lon 155G\n2\t8935105810259\tCá Trích Ngâm Dầu Sea Crown Lon 125G\n3\t2275220000002\tCá Đổng 500G\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:34:47.528Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0078",
+          "query": "dâu ăn",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên dầu ăn và dâu",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T09:46:09.923Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0035",
+          "query": "dưa hâu",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Ưu tiên dưa hấu lên trên",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": true,
+          "markedAt": "2026-09-07T10:29:18.224Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0762",
+          "query": "dầu dừa",
+          "dimension": "benchmark_raw",
+          "note": "cần ưu tiên sản phẩm dầu dừa, đậu phộng",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:16:45.456Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1724",
+          "query": "dầu dừa vietcoco",
+          "dimension": "history_verification",
+          "note": "cần ưu tiên sản phẩm dầu dừa, đậu phộng",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:41:03.281Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0995",
+          "query": "dầu gội dau lchoice",
+          "dimension": "benchmark_raw",
+          "note": "\"Cần ưu tiên lên top 1: Dầu Gội Choice L Shinie Làm Sạch Gàu 800ml\nMã sản phẩm 8938520295816\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T08:36:51.973Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0972",
+          "query": "ga",
+          "dimension": "benchmark_raw",
+          "note": "cần ưu tiên gà trước hay sản phẩm có ga, gas?\n1\t6970399925786\tNước Khoáng Có Ga Genki Vị Vải Lon 330ml\n2\t6970399920576\tNước Khoáng Có Ga Genki Vị Đào Lon 330ml\n3\t8801223100179\tNước Uống Có Gas Chojung 500ml\n4\t8935004500794\tNước Khoáng Thiên Nhiên Có Ga Choice L Chai 500ml\n5\t8445291045750\tNước Khoáng Có Ga Maison Perrier Hương Chanh Vàng Lon 250ml\n6\t8934840000185\tNước Khoáng Thiên Nhiên Có Ga Vĩnh Hảo Chai 500ML\n7\t8809495076482\tNước Soda Cloop Vị Táo Xanh Không Đường 500ml\n8\t8934588690112\tNước Có Gas Aquafina Soda Lốc 6 Lon 320 ml\n9\t8801223010478\tNước Uống Có Gas BRRR Vị Cola Không Đường Lon 250ml\n10\t8801223012243\tNước Uống Có Gas BRRR Vị Cola Không Cafein Không Đường Lon 250ml",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:23:04.855Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0303",
+          "query": "gia vị",
+          "dimension": "benchmark_raw",
+          "note": "Các sản phẩm bên dưới nên hiển thị sau các sản phẩm chứa keyword 'gia vị'\n3 Sốt Dầu Dấm Trộn Salad Nam Dương Chai 250G SKU: 8936134362573\n4 Dầu Hào LEE KUM KEE KUM CHUN Chai 510g SKU: 0078895155327\n23 Bột Tỏi Natural DH Foods 60g SKU: 8936079284268\n24 Hành Bột Natural Dh Foods Hũ 40G SKU: 8936079284251",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:57:24.050Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0030",
+          "query": "hop qua tết kinh đô",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "1\t8934680095129\tHộp 6 Bánh Trung Thu Kinh Đô Thu Đoàn Viên 480G\n2\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\n3\t5201047241417\tĐào Tươi Đóng Hộp Kronos 820G\n4\t8936009510146\tHộp 4 Bánh Trung Thu Thành Long Tinh Hoa 600G\n5\t8934680097291\tHộp 5 Bánh Trung Thu Kinh Đô Trăng Vàng Nguyệt Ánh Tường Vinh 400G\n6\t4013197767010\tKẹo Cavendish & Harvey Hương Trái Cây Hỗn Hợp Hộp 200g\n7\t8809693270613\tKẹo Dream Vị Gừng 200G\n8\t8809693270620\tKẹo Dream Vị Quế 200G\n9\t4037719066986\tKẹo Trái Cây Nhiệt Đới Cavendish & Harvey Hộp 200G\n10\t8934680092937\tHộp 4 Bánh Trung Thu Kinh Đô Trăng Vàng Hồng Ngọc An Lành 640G",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:12:24.820Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0450",
+          "query": "hộp quà tết",
+          "dimension": "benchmark_raw",
+          "note": "cần ưu tiên các sản phẩm chưa quà hoặc liên quan tết",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:21:05.681Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0591",
+          "query": "kem chống nắng",
+          "dimension": "benchmark_raw",
+          "note": "\"một số sản phẩm kem chống nắng đang bị đẩy phía sau kem xịt,kem sữa\n22\t8999999059927\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Ngày 45g\n23\t8999999059941\tKem Dưỡng Pond's Age Miracle Chống Lão Hóa Ban Đêm 50g\n24\t0079656603248\tKem Chống Nắng Thể Thao Banana Boat SPF50+ 90ml\n25\t8935006539525\tKem Chống Nắng Sunplay Dưỡng Thể Trắng Mịn 150g\n26\t4800888280220\tKem Chống Nắng Dưỡng Sáng Da Pond's Bright Miracle SPF 50+ PA++++ 50G\"",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:59:44.716Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0056",
+          "query": "kit cat",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên kitkat",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T03:56:42.514Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0033",
+          "query": "lê hàn quốc",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên lê lên đầu",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T09:48:08.574Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0045",
+          "query": "mi",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên mì gói (hiện tại đang ưu tiên áo , có một số áo k chưa mi cũng đang hiển thị trên đầu)",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": true,
+          "markedAt": "2026-09-07T10:30:03.277Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0057",
+          "query": "netsle",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên các sản phẩm nestle lên trước",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T03:51:09.334Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0014",
+          "query": "nước rửa chuyên dụng bình sữa",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên các sản phẩm liên quan em bé (hiện tại nước tẩy bồn cầu đang nằm trên nước giặt cho bé)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T02:58:19.273Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1809",
+          "query": "nước điện giải",
+          "dimension": "history_verification",
+          "note": "\"nước điện giải đang ở no.16\nNước Giải Khát Có Gas Fanta Xá Xị Lon 320ml (8935049501589)\nNước Giải Khát Có Gas Fanta Soda Kem Chai 1.5L (8935049501305)\nNước Giải Khát Có Gas Fanta Cam Lon 235ml (8935049501466)\nNước Giải Khát Có Gas Mirinda Xá Xị 390ml x Lốc 6 Chai (8934588133275)\nLốc 6 Nước Điện Giải Revive Không Calo Chai 500ml (8934588743030)\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:09:35.771Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1121",
+          "query": "otto",
+          "dimension": "benchmark_raw",
+          "note": "\"ưu tiên sản phẩm ottogi, bánh mì otto (nếu có)\n1\tP2317BO2TO\tBộ 2 Tô\n2\t8935134594045\tQuả Ô Liu Xanh Latino Bella Không Hạt Hũ 450G\n3\t8935134592935\tDầu Ô Liu Latino Bella Pomace Olivoilà Chai 1L\n4\t8936049053283\tCháo Tươi Ottogi Thịt Bò Cà Rốt Gói 220G\n5\t8936049053320\tCháo Tươi Ottogi Nếp Cẩm Đậu Đỏ Gói 220G\n6\t8007150902941\tDầu Ô Liu Olitalia Pomace 1L\n7\t8936049050589\tXốt Spaghetti Ottogi 400G\n8\t8936049052514\tỚt Bột Hàn Quốc Ottogi Gói 500g\n9\t8936049052002\tXốt Spaghetti Ottogi Vị Cà Chua Gói 110G\n10\t8936049053290\tCháo Tươi Ottogi Thịt Heo Bí Đỏ Gói 220G\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:22:55.235Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0075",
+          "query": "rượu vang đỏ khai vị",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên rượu vang đỏ hơn (hiện tại top 1,2 là rượu vàng chát, rượu vang yello)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:38:45.516Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0802",
+          "query": "thit",
+          "dimension": "benchmark_raw",
+          "note": "search result chưa đúng, cần ưu tiên hiển thị các sản phẩm thịt\n1\t9310155100335\tMì San Remo Thin Spaghetti 500G\n2\t8809931430939\tBánh Quy Wondertok Thin Masterpieces Vị Sữa Gói 240G\n3\t8936039230298\tMực Trứng Phan Thiết Đông Lạnh Đại Nam 450G\n4\t4987176095794\tDao Cạo Râu Gillette Super Thin II Gói 8+2\n5\t8806035038085\tMiếng Dán Mụn Mayan Ultra Thin Spot 20+4 Miếng\n6\t8806035038078\tMiếng Dán Mụn Mayan Ultra Thin Spot Plus 12+8 Miếng\n7\t8936178584689\tĐồ Chơi Mô Hình Bộ Sưu Tập Xe Thiết Giáp Winka DK81396\n8\t8934679455248\tCháo Ăn Liền Gấu Đỏ Vị Thịt Bằm Nấm Đùi Gà Có Thịt Thật Gói 74G\n9\t9556704326065\tNồi ủ La Gourmet 4.5L ( màu xám)\n10\t8935259818040\tLẩu Điện Sunhouse SHD4528",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:21:04.525Z",
+          "groups": [
+            "wrong_results",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2390",
+          "query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+          "dimension": "semantic_phrase",
+          "note": "ưu tiên các sản phẩm \"nghệ đen\",\"mật ong nghệ\",\"tinh nghệ\" lên đầu",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:26:32.050Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0067",
+          "query": "trái sầu riêng",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "ưu tiên trái/quả có tên sầu riêng và các sản phẩm làm từ sầu riêng (hiện tại đang hiển thị trái cây sấy lên trước)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:21:53.629Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0065",
+          "query": "tổ iến",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Các sản phẩm không liên quan (thú nhồi bông, lồng đnè, tàu hủ chay,....) đang hiển thị và hiển thị trên cả các sản phẩm chứa yến\n20\t8936230481178\tThú Nhồi Bông Chim Cánh Cụt Đeo Túi Màu Hồng 55cm\t22\n21\t8936053920045\tThú Nhồi Bông Chim Cánh Cụt To\t100\n22\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\t96\n23\t8934743126364\tSữa Chua Sấy YO'V Vị Sầu Riêng Hũ\t15\n24\t8936185663001\tTàu Hũ Ky Rau Củ Chay Thoại An 300G\t8\n25\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm\t19\n26\t8936092129294\tHộp Quà Mật Ong Bánh Tổ Honimore 550G\t35\n27\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\t15\n28\t8936230480782\tThú Nhồi Bông Ngựa Pony Hồng 60cm\t7\n29\t8938503416276\tCháo Yến Yến Việt Vị Gà Gói 50g\t415\n30\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\t100\n31\t8935077324532\tPhi Yến Đơn Dalat Hasfarm (Giao Màu Ngẫu Nhiên)\t994\n32\t8809693270613\tKẹo Dream Vị Gừng 200G\t32\n33\t8809693270620\tKẹo Dream Vị Quế 200G\t23\n34\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\t36\n35\t8936013234212\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, cá hồi SGFood 240G\t40\n36\t8936013234229\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, hạt sen lá dứa SGFood 240G\"",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T08:36:03.237Z",
+          "groups": [
+            "irrelevant_shown",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0059",
+          "query": "yên mạch giảm cân",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : \n- một số sản phẩm yến mạch đang hiển thị sau khoai môn sấy, trà sữa hòa tan, sữa tắm (sữa tắm k được hiển thị trong thực phẩm giảm cân)\n- no2 đang hiển thị Sữa Chua Sấy\n7\t8936188490734\tYến Mạch Nguyên Chất Choice L 500G\t191\n8\t8936003728943\tKhoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g\t78\n9\t8935011805844\tYến Mạch Trái Cây Socola Oatta Gói 250G\t15\n10\t8934743120188\tSữa Chua Sấy YOV Socola Hộp 120G\t41\n11\t8936235670706\tTrà Sữa Hòa Tan Moncha Matcha Latte Vị Dâu 180G\t12\n12\t8936092124015\tTrà Sữa Trân Châu Dawning Hộp 260G\t16\n13\t8938660132040\tĐường Ăn Kiêng Monk Fruit CT Hộp 20 Gói 5G\t45\n14\t8934673303576\tSữa Chua Uống Vinamilk Probi Ít Đường 400ml\t36\n15\t8936081298109\tCháo Yến Mạch Xuân An Thịt Bằm Gói 40g\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:08:54.373Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2311",
+          "query": "áo khoác giữ ấm mùa đông",
+          "dimension": "semantic_phrase",
+          "note": "ưu tiên sản phẩm là quần , áo, vớ . không hiển thị các loại đồ ăn thức uống",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:36:47.484Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0066",
+          "query": "đồ chơi trẻ em thông minh",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "hiển thị đồ chơi chứa chữ thông minh lên trước (8936140305472,8936140306400, 8936075214603) sau đó mới tới rubik và các đồ chơi khác",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:17:54.974Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0024",
+          "query": "đồ ăn hàn",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "ưu tiên đồ xuất xứ hàn quốc",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-07T10:27:18.110Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0062",
+          "query": "ốc bươu",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Cần ưu tiên ốc lên (ốc móng tay đang top 6)",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T03:52:28.465Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0109",
+          "query": "피시소스",
+          "dimension": "foreign_language",
+          "note": "\"ưu tiên nước mắm lên hàng đầu\n1\t8936236472187\tNước Mắm Nam Ngư Phú Quốc 32 Độ Đạm 500ml\n2\t8934712007014\tMắm Nêm Pha Sẵn Thuận Phát Chai 175g\n3\t8934712007021\tMắm Nêm Thuận Phát Pha Sẵn Chai 290G\n4\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml\n5\t8934637513430\tTương Ớt Chua Ngọt Cholimex Chai 830g\n6\t8936136161143\tTương Ớt Chinsu Cao Cấp 500G\n7\t8935084103311\tTương Ớt Choice L I’m Chef Chai 250G\n8\t8936221048076\tNước Mắm Nam Ngư 3 Trong 1 Chai 500ml\n9\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\n10\t8934637062525\tTương Ớt Chua Ngọt Cholimex Chai 270g\n11\t8934851262558\tNước Mắm Tỏi Ớt Thanh Hà Chai 250ml\n12\t8936221040100\tTương Ớt Chinsu Chai 2kg\n13\t8935121125504\tNước Mắm 584 25 Độ Đạm 500ML\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:48:09.103Z",
+          "groups": [
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "irrelevant_shown",
+      "name": "Hiển thị sản phẩm không liên quan",
+      "action": "Kết quả có lẫn sản phẩm sai ngữ cảnh cần loại bỏ hoặc đẩy xuống cuối (vd search 'sensodyne' ra xúc xích, search 'mỹ phẩm' ra thực phẩm).",
+      "count": 21,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0275",
+          "query": "bao tay",
+          "dimension": "benchmark_raw",
+          "note": "tẩy tế bào chết có nên hiển thị k (hiện tại hiển thị)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T08:54:17.535Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0031",
+          "query": "bnh kinh do",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 9/9 : \nCác sp k phải của kinh đô cũng đang hiển thị (nạm bò, bơ lạt)\n1\t9415007051398\tBơ lạt Vỉ Anchor Vỉ 7g x10 Hũ\t142\n2\t2215500000001\tNạm Bò Phúc Thịnh Vượng 300G\t99\n3\t8934680096270\tHộp 8 Bánh Trung Thu Kinh Đô Trăng Vàng Nguyệt Ánh Trường An 640G\t22\n4\t8809693270613\tKẹo Dream Vị Gừng 200G\t32\n5\t8809693270620\tKẹo Dream Vị Quế 200G\t23\n6\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\t36\n7\t8936077110170\tHoành Thánh Bamboo Thịt Súp 250G\t31\n8\t8938532826015\tBánh Mì Mè Đen O'smiles Gói 350g\t4\n9\t8934707032960\tHạt Nêm Knorr Thịt Thăn Xương Ống Và Tủy 1.2kg Kèm Đường Biên Hòa 500G\t74\n10\t8934680097789\tHộp 6 Bánh Trung Thu Kinh Đô Trăng Vàng An Phúc 480G",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T10:06:56.669Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0586",
+          "query": "bông cải xanh",
+          "dimension": "benchmark_raw",
+          "note": "\"các sản phẩm thú nhồi bông, tăm bông, xà bông k nên hiển thị\n8\t4902430284264\tXà Bông Cục Safeguard Xanh 125g\n9\t8936230480966\tThú Nhồi Bông Ngựa Pony Xanh 60cm\n10\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm\"",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:57:40.326Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0462",
+          "query": "bột bánh bông lan",
+          "dimension": "benchmark_raw",
+          "note": "\"k nên hiển thị bột thông cống, thông tắc hầm cầu\n11\tBột Thông Cống Hando 100g\nSKU: 8936007980248x\n22\tBột Thông Tắc Hầm Cầu Hando 250g\nSKU: 8936007980118 \"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T03:01:17.213Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1581",
+          "query": "cam sành",
+          "dimension": "history_verification",
+          "note": "cam vàng nam phi và cam xoàn đang bị đẩy xuống dưới nước lau sàn  và đèn pin (k nên hiển thị khi search cam sành)\n1\t2164130000007\tCam Sành Vắt Nước 1kg\n2\t8935268200775\tCam Sành Loại 1 Meko Star 1kg\n3\t8934868502838\tNước Lau Sàn Sunlight Hương Quế Và Cam Bergamot 3.4kg\n4\t8936020957883\tĐèn pin cầm tay LED SUNHOUSE SHE-4351\n5\t8938520657201\tHải Sản Thập Cẩm Đông Lạnh Vifoods 400G\n6\t8936073175173\tCháo Tươi Cây Thị Hải Sản Thập Cẩm Gói 240G\n7\t8934717402432\tBánh Xếp bibigo Kiểu Hàn Quốc 365 Hải Sản Thập Cẩm 250G x 2 Gói\n8\t9556173490427\tKẹo Mềm Đồ Chơi Khee San Fruit Plus Vị Vải Và Cam (Giao Mẫu Ngẫu Nhiên) 6G\n9\t2181670000007\tCam Vàng Nam Phi 1kg\n10\t8935268200881\tCam Xoàn Túi Lưới Meko Star 1kg",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T03:28:09.834Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2040",
+          "query": "chuẩn bị năm học mới",
+          "dimension": "generic_vague_intent",
+          "note": "\"không hiển thị thực phẩm (bầu, dưa leo,...) . ưu tiên áo , quần, bút, tập ,...(dụng cụ học tập)\n1\t8935324035921\tBalo Chống Gù Thiên Long BP-025/T24 Màu Hồng\n2\t8936123160487\tBầu Xanh 550G\n3\t8936200652119\tBầu Xanh Hữu Cơ Bio Ngon 500G\n4\t8938503008358\tTăm Bông Sakura Baby Sanyo TB02 Hộp 180 Cái 158G (EA)\n5\t8935324035808\tBalo Chống Gù Thiên Long BP-016/T24 Màu Đỏ\n6\t8936234171006\tĐầm Học Sinh BPC Size 1-15\n7\t8935107202380\tMiếng Lót Huggies New Born N1-108 (Cho Trẻ Dưới 5 kg)\n8\t8938510875165\tDưa Leo Baby 500G (ea)\n9\t8886451000057\tSữa Similac Mom IQ Plus Hương Vani 900G\n10\t8936009650118\tTăm Bông Trẻ Em Choice L Thân Nhựa Hộp Tròn 160 Que\n11\t8936231020000\tBí Đỏ Baby 300G\n12\t4903111241439\tTã Dán Moony Cao Cấp Natural Nhật Bản Size M 46 Miếng (6-11kg)\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T06:58:58.335Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0011",
+          "query": "chế độ ăn eat clean",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 7/9 : có thể k hiển thị viên rửa chén, kem đánh răng k (nó k phải là đồ ăn)",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-07T09:59:07.169Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0104",
+          "query": "colgate",
+          "dimension": "synonym_variant",
+          "note": "Cần hiển thị sản phẩm của colgate chứ k phải coca cola\n1\t8935049501404\tNước Ngọt Coca Cola Vị Nguyên Bản Lon 235ml\n2\t28935049502092\tThùng 24 Lon Nước Ngọt Coca Cola Vị Nguyên Bản 235ml\n3\t4902102038690\tNước Ngọt Coca Cola Nhật Chai Nhôm 300ml\n4\t48935049502263\tLốc 6 Chai Nước Ngọt Coca Cola Giảm Đường 600ml/Chai\n5\t8935049501541\tNước Ngọt Coca Cola Plus Lon 320ml\n6\t8935049501374\tNước Ngọt Coca Cola Giảm Đường Chai 600ml\n7\t4902102019187\tNước Ngọt Coca Cola Nhật Lon 160ml\n8\t18935049510670\tNước Ngọt Coca Cola Vị Nguyên Bản Lốc 24 Chai 390ml\n9\t8935049590019\tLốc 6 Lon Nước Ngọt Coca Cola 320ml\n10\t8935049510673\tNước Ngọt Coca Cola Vị Nguyên Bản Chai 390ml (Giao Mẫu Ngẫu Nhiên)",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:01:33.343Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0289",
+          "query": "diana",
+          "dimension": "benchmark_raw",
+          "note": "\"top 16,20,21,22 thuộc về diana nhưng không hiển thị ở search result mà đang nằm trong recommendation\n15\t8938506010310\tChuối Nam Huy Sấy Giòn Gói 200G\n16\t8934755010477\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size M-L Bịch 12 Chiếc\n17\t8935095028405\tĐĩa Tròn Melamine PV086-8 Nhám Màu Light Brown 20cm\n18\t0400285460009\tPizza Phô Mai Cheese & Dough 1 Miếng 166g\n19\t0400285400005\tPizza Phô Mai Cheese & Dough 1/2 Cái 500g\n20\t8934755010729\tBăng Vệ Sinh Dạng Quần Diana Double Fresh Size L-XL Gói 2 Miếng\n21\t8934755010484\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size L-XL Bịch 2 Chiếc\n22\t8934755010163\tBăng Vệ Sinh Diana Mama Cho Mẹ Sau Sinh Không Cánh 44.5cm Gói 12 Miếng\n23\t8938523699093\tPizza Thập Cẩm Thịt Manna 120g\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T03:48:52.522Z",
+          "groups": [
+            "irrelevant_shown",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0063",
+          "query": "gói hút ẩm chống mốc",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 :\ncác sản phẩm xịt ngăn mùi, khăn giấy, nước súc miệng, sữa tắm, ky rác đang hiển thị trong bộ search result\"",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T08:56:49.863Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0045",
+          "query": "mi",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên mì gói (hiện tại đang ưu tiên áo , có một số áo k chưa mi cũng đang hiển thị trên đầu)",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": true,
+          "markedAt": "2026-09-07T10:30:03.277Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0679",
+          "query": "măng tây",
+          "dimension": "benchmark_raw",
+          "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:09:21.548Z",
+          "groups": [
+            "missing_sku",
+            "irrelevant_shown",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1118",
+          "query": "mỹ phẩm",
+          "dimension": "benchmark_raw",
+          "note": "\"không nên hiển thị các loại 'thực phẩm' / nếu hiển thị thì hiển thị ở cuối\n1\t8936040073105\tBông Trang Điểm Puffme 180 Miếng\n2\t4511413608944\tThực Phẩm Bảo Vệ Sức Khỏe DHC Sáng Da Adlay Extract Túi 30 Viên\n3\t8935006540583\tSon Dưỡng Mentholatum Medi Lip Stick 4.3G\n4\t8936006853307\tBông Trang Điểm Pop-Puf Không Ép Biên 100 Miếng\n5\t8935006546233\tKem Dưỡng Da Acnes Lab Acne Repair Hỗ Trợ Giảm Mụn 20G\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T06:22:45.178Z",
+          "groups": [
+            "irrelevant_shown",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0901",
+          "query": "promess",
+          "dimension": "benchmark_raw",
+          "note": "\"các sản phẩm k phải Promess thì k nên hiển thị\n5\t\nKhoai Môn Sấy Mẫu Mawashi L'angfarm Gói 350g\nSKU: 8936003728943 | 141,000 đ\t+ Extra\n6\t\nKẹo Trái Cây Bạc Hà Fox's Gói 90G\nSKU: 8997212800332 | 21,500 đ\t+ Extra\n7\t\nKẹo Ngậm Không Đường Mentos Pure Fresh Hương Bạc Hà Hộp 35g\nSKU: 8935001712282 | 35,900 đ\t+ Extra\n8\t\nKẹo Dream Vị Quế 200G\nSKU: 8809693270620 | 49,900 đ\t+ Extra\"",
+          "pass_fail": "passed",
+          "asis_match": "100_PERCENT_SET",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:25:07.079Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0963",
+          "query": "sensodyne",
+          "dimension": "benchmark_raw",
+          "note": "\"không nên hiển thị các sản phẩm xúc xích, kẹo k liên quan đến sensodyne 14\t8936034876743\tXúc Xích Vòng Xông Khói Ponnie Premium 200G\n15\t8934572296894\tXúc Xích Tiệt Trùng Boom Boom Vissan 115G (23Gx5)\n16\t8809693270613\tKẹo Dream Vị Gừng 200G\n17\t8809693270620\tKẹo Dream Vị Quế 200G\n18\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\n19\t8935337513744\tĐồ Chơi Bạn Ngỗng Phát Triển Giác Quan PEEK A BOO PAB047\n20\t8936034876811\tXúc Xích Xông Khói Eco Ponnie 450G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:09:07.540Z",
+          "groups": [
+            "wrong_results",
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1922",
+          "query": "sữa tắm choice l",
+          "dimension": "history_verification",
+          "note": "\"sản phẩm rổ nhựa k nên hiển thị khi search sữa tắm (dụng cụ nhà tắm thì có thể chấp nhận được)\n11\t8936039277385\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 31 x 35 x 13.2cm\n12\t8936039277378\tBộ Thau Rổ Oval Choice L Màu Xám Sữa 33 x 29 x 12.5cm\n13\t8936039277392\tBộ Thau Rổ Tròn Choice L Màu Xám Sữa 35 x 39.2 x 14.5cm\n14\t8936039277446\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 23.8 x 23.8 x 11.5cm\n15\t8936039277439\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 16.8 x 16.8 x 10cm\n16\t8936039277453\tRổ Nhựa Hình Vuông Màu Xám Sữa Choice L 29.6 x 29.6 x 8.8cm\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:43:57.209Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0071",
+          "query": "thức ăn dặm cho bé 6 tháng",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 19/06 : đang hiển thị thức ăn cho chó , mèo\n1\t9310022866500\tThức Ăn Cho Mèo Lớn Whiskas Vị Cá Ngừ 480g\t18\n2\t8853301400107\tThức Ăn Cho Mèo Lớn Whiskas Vị Cá Biển 3kg\t11\n3\t8850477811027\tThức Ăn Cho Chó Con SmartHeart Vị Thịt Bò & Sữa 1.3kg\t24\n4\t8850477812024\tThức Ăn Cho Chó Con SmartHeart Vị Thịt Bò Nướng 1.3kg\t16\n5\t8850477251502\tThức Ăn Cho Chó Con Classic Pets Hương Vị Sữa 500g\t14\n6\t8938509770365\tThức Ăn Hạt Cho Chó Con Ganador Vị Sữa Trứng Túi 400G\t32\n7\t8850477001237\tThức Ăn Cho Chó Trưởng Thành SmartHeart Vị Thịt Cừu & Gạo 1.5kg\t17\n8\t8850477810051\tThức Ăn Cho Chó Trưởng Thành SmartHeart Vị Thịt Bò Nướng 1.5kg\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T08:16:03.075Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0506",
+          "query": "tương ớt hàn quốc",
+          "dimension": "benchmark_raw",
+          "note": "đang hiển thị các sp k có nguồn gốc hàn quốc",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:23:18.050Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0065",
+          "query": "tổ iến",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Các sản phẩm không liên quan (thú nhồi bông, lồng đnè, tàu hủ chay,....) đang hiển thị và hiển thị trên cả các sản phẩm chứa yến\n20\t8936230481178\tThú Nhồi Bông Chim Cánh Cụt Đeo Túi Màu Hồng 55cm\t22\n21\t8936053920045\tThú Nhồi Bông Chim Cánh Cụt To\t100\n22\t6931941227734\tLồng Đèn Tre Con Lân Có Pin YN-24008 (Giao mẫu ngẫu nhiên)\t96\n23\t8934743126364\tSữa Chua Sấy YO'V Vị Sầu Riêng Hũ\t15\n24\t8936185663001\tTàu Hũ Ky Rau Củ Chay Thoại An 300G\t8\n25\t8936230481161\tThú Nhồi Bông Chim Cánh Cụt Dễ Thương Màu Xanh 55cm\t19\n26\t8936092129294\tHộp Quà Mật Ong Bánh Tổ Honimore 550G\t35\n27\t8938504001815\tTàu Hủ Tojy Rong Biển Hộp 340G\t15\n28\t8936230480782\tThú Nhồi Bông Ngựa Pony Hồng 60cm\t7\n29\t8938503416276\tCháo Yến Yến Việt Vị Gà Gói 50g\t415\n30\t6931941227802\tLồng Đèn Con Sứa Lấp Lánh Có Pin YN-24019 (Giao màu ngẫu nhiên)\t100\n31\t8935077324532\tPhi Yến Đơn Dalat Hasfarm (Giao Màu Ngẫu Nhiên)\t994\n32\t8809693270613\tKẹo Dream Vị Gừng 200G\t32\n33\t8809693270620\tKẹo Dream Vị Quế 200G\t23\n34\t8852291610206\tKẹo Xôi Thái Và Sầu Riêng Mitmai Gói 114G\t36\n35\t8936013234212\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, cá hồi SGFood 240G\t40\n36\t8936013234229\tCháo dinh dưỡng ăn liền Sài Gòn vị tổ yến, hạt sen lá dứa SGFood 240G\"",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T08:36:03.237Z",
+          "groups": [
+            "irrelevant_shown",
+            "wrong_ranking"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-2311",
+          "query": "áo khoác giữ ấm mùa đông",
+          "dimension": "semantic_phrase",
+          "note": "ưu tiên sản phẩm là quần , áo, vớ . không hiển thị các loại đồ ăn thức uống",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:36:47.484Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0012",
+          "query": "đồ ăn organic",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần hiển thị 'thực phẩm,'thức ăn' chứ k phải đồ chơi",
+          "pass_fail": "passed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T02:57:15.603Z",
+          "groups": [
+            "irrelevant_shown"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "semantic_gap",
+      "name": "Thiếu mở rộng ngữ nghĩa / từ đồng nghĩa",
+      "action": "Engine chưa hiểu quan hệ đồng nghĩa hoặc quan hệ nhu cầu - từ địa phương (cải cúc = tần ô), biến thể (gel/sáp/xịt vuốt tóc), hoặc cụm mô tả nhu cầu.",
+      "count": 22,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0072",
+          "query": "bình nước giữ nhiệt thể thao",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tên các loại bình giữ nhiệt, bình nước (bình xịt, bình nhựa k ưu tiên bằng)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:20:21.830Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0068",
+          "query": "bình xịt côn trùng jumbo vape không mùi",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần đề xuất thêm các sản phẩm xịt muỗi/bình xịt không mùi của hãng khác",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:25:40.071Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0009",
+          "query": "bếp từ",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần ưu tiên các loại bếp : bếp nướng than, bếp hồng ngoại",
+          "pass_fail": "passed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T02:48:22.015Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2086",
+          "query": "cải cúc",
+          "dimension": "regional_dialect",
+          "note": "cần hiển thị tần ô",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:31:44.646Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0540",
+          "query": "dứa",
+          "dimension": "benchmark_raw",
+          "note": "dứa là từ đặc biệt, k thể hiển thị sáp thơm được, phải hiển thị trái dứa và các loại trái cây tương tự",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:32:34.427Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0046",
+          "query": "gel vuốt tóc",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "đang thiếu các sản phẩm sáp vuốt tóc. tương tự cho xịt tạo kiểu tóc",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:22:13.901Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0006",
+          "query": "giỏ quà tết",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "các sản phẩm \"quà\",\"đóng gói\",\"lễ\",\"tết\"",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-07T10:25:16.579Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0041",
+          "query": "gochujang",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "actual thiếu mất 2 sản phẩm gochujang SKU  8938505912547, 8801005931458. Check lại data. Tương tự cho soba",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:21:46.758Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0146",
+          "query": "hồng sâm hàn quốc",
+          "dimension": "benchmark_raw",
+          "note": "ngoại trừ sâm đen thì cần hiển thị thêm các loại nhân sâm (Trà Nhân Sâm Hàn Quốc Nokchawon Hộp 150G)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:17:20.103Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0760",
+          "query": "khoai mỡ",
+          "dimension": "benchmark_raw",
+          "note": "\"thiếu sp Khoai mỡ 500g\nSKU: 2292270000004, các loại sản phẩm khác cần đẩy qua recommend\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:11:03.737Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0679",
+          "query": "măng tây",
+          "dimension": "benchmark_raw",
+          "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:09:21.548Z",
+          "groups": [
+            "missing_sku",
+            "irrelevant_shown",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1118",
+          "query": "mỹ phẩm",
+          "dimension": "benchmark_raw",
+          "note": "\"không nên hiển thị các loại 'thực phẩm' / nếu hiển thị thì hiển thị ở cuối\n1\t8936040073105\tBông Trang Điểm Puffme 180 Miếng\n2\t4511413608944\tThực Phẩm Bảo Vệ Sức Khỏe DHC Sáng Da Adlay Extract Túi 30 Viên\n3\t8935006540583\tSon Dưỡng Mentholatum Medi Lip Stick 4.3G\n4\t8936006853307\tBông Trang Điểm Pop-Puf Không Ép Biên 100 Miếng\n5\t8935006546233\tKem Dưỡng Da Acnes Lab Acne Repair Hỗ Trợ Giảm Mụn 20G\"",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T06:22:45.178Z",
+          "groups": [
+            "irrelevant_shown",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0036",
+          "query": "nem rán",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Prod 3sp nem rán, nem chua rán nhưng actual chỉ 1 sản phẩm nem chua rán . cần đề xuất thêm các sản phẩm nem nướng",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:40:49.337Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0060",
+          "query": "thùng rác thông minh",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Các loại thùng rác khác đang hiển thị ở recommendation (search result chỉ ra 1 sp)\n1\t8935275208061\tThùng Rác Tròn Nắp Lật Inochi Hiro 12L (Giao Màu Ngẫu Nhiên)\n2\t8935007722186\tThùng Rác Oval Lớn Duy Tân 44 X 39.5 X 35Cm (Giao Màu Ngẫu Nhiên)\n3\t8935241702227\tThùng Rác Spriing 5L (Giao Màu Ngẫu Nhiên)  -> chỉ duy nhất sản phẩm này hiển thị ở search result\n4\t8935007721875\tThùng Rác Oval Trung Duy Tân 36 x 30 x 26cm (Giao Màu Ngẫu Nhiên)\n5\t8935275208078\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 6L (Giao Màu Ngẫu Nhiên)\n6\t8935275208214\tThùng Rác Nắp Lật Inochi Hiro 10L (Giao Màu Ngẫu Nhiên)\n7\t8935275208030\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Có Kèm Ruột 5L (Giao Màu Ngẫu Nhiên)\n8\t8935007721868\tThùng Rác Oval Nhỏ Duy Tân 31 X 25.5 X 22Cm (Giao Màu Ngẫu Nhiên)\n9\t8935275208054\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 15L (Giao Màu Ngẫu Nhiên)\n10\t8935275208115\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 15L (Giao Màu Ngẫu Nhiên)\n11\t8936186271311\tThùng Rác Treo Tường Megahome 9L (Giao Màu Ngẫu Nhiên)\n12\t8935275208092\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 5L (Giao Màu Ngẫu Nhiên)\"",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:01:09.195Z",
+          "groups": [
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0067",
+          "query": "trái sầu riêng",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "ưu tiên trái/quả có tên sầu riêng và các sản phẩm làm từ sầu riêng (hiện tại đang hiển thị trái cây sấy lên trước)",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:21:53.629Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0070",
+          "query": "vali du lịch",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "cần đề xuất thêm các sản phẩm du lịch khác",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T04:40:04.843Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2185",
+          "query": "xịt tạo kiểu tóc",
+          "dimension": "synonym_variant",
+          "note": "cần bổ sung các loại gel vuốt",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T06:59:16.661Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2311",
+          "query": "áo khoác giữ ấm mùa đông",
+          "dimension": "semantic_phrase",
+          "note": "ưu tiên sản phẩm là quần , áo, vớ . không hiển thị các loại đồ ăn thức uống",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:36:47.484Z",
+          "groups": [
+            "wrong_ranking",
+            "irrelevant_shown",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1097",
+          "query": "đầu cá hồi",
+          "dimension": "benchmark_raw",
+          "note": "\"cần đề xuất thêm các sản phẩm cá hồi\n1\t2275490000009\tĐầu cá hồi 500G\n2\t2262280000004\tCá Hồi Na Uy Phi Lê Đầu Đuôi 200G\n3\t8936234610109\tNước Mắm Cá Hồi Đầu Bếp Tôm Hảo Hạng 20 Độ Đạm 500ml\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:40:10.343Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0010",
+          "query": "đồ ăn cho người giảm cân",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "các \"thức ăn\",\"thực phẩm\" chưa ít đường, dầu calo",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T02:49:20.725Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-0024",
+          "query": "đồ ăn hàn",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "ưu tiên đồ xuất xứ hàn quốc",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-07T10:27:18.110Z",
+          "groups": [
+            "wrong_ranking",
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0005",
+          "query": "đồ ăn nhật",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "hiển thị 'thực phẩm', 'thức ăn' có tên 'nhật','nhật bản', 'xuất xứ nhật'",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-04T03:37:17.296Z",
+          "groups": [
+            "semantic_gap"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "promo_stock",
+      "name": "Sản phẩm khuyến mãi / hết hàng hiển thị sai chỗ",
+      "action": "SKU tặng 1đ hoặc sản phẩm đã hết hàng vẫn chiếm vị trí top.",
+      "count": 6,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0073",
+          "query": "bánh hotteok",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"k tìm thấy sản phẩm Bánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Mozzarella bibigo 280G (SKU 8935297103726) dù còn hàng\n1\t8801204205480\tBánh Cookie Hotteok Good Today 258G\n2\t8935297103733\tBánh Rán Kiểu Hàn Quốc Hotteok Nhân Phô Mai Tan Chảy bibigo 280G\n3\t8938536904498\tBánh Hotteok Nhân Pizza Pulmuone 360G\n4\t8801114144015\tBánh Hotteok Nhân Phô Mai Mozzarella Pulmuone Gói 600G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:13:01.807Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1543",
+          "query": "bánh mì mè",
+          "dimension": "history_verification",
+          "note": "Bánh Quy Senbei Vị Mè Rang  thiếu sản phẩm còn hàng",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:46:43.114Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1753",
+          "query": "bình xịt côn trùng jumbo",
+          "dimension": "history_verification",
+          "note": "Xịt Côn Trùng Ars Pro.X Mạnh 500ml thiếu sp còn hàng",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:44:51.278Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1237",
+          "query": "cá diêu hồng",
+          "dimension": "history_verification",
+          "note": "\"k thấy hiển thị \t\nCanh Chua Cá Diêu Hồng 365 Fresh 0400297230003  dù còn hàng\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:38:53.763Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0259",
+          "query": "gạo st25",
+          "dimension": "benchmark_raw",
+          "note": "\"k tìm thấy 8938530115111 , 8938516870713  dù còn hàng\n1\t8938563047113\tGạo ST25 Prime L 5kg\n2\t8938563047106\tGạo ST25 Lúa Tôm Prime L 3kg\n3\t8936087316661\tGạo ST25 Lúa Tôm Long Châu 5kg\n4\t8936096741294\tGạo ST25 Bảo Minh Lúa Ruộng Rươi 5kg\n5\t8938516870935\tGạo Thơm Dẻo ST25 Neptune Special 5kg\n6\t8936096741478\tGạo Bảo Minh ST25 Lúa Ruộng Rươi Túi 3kg\n7\t8938516870928\tGạo Thơm Đặc Sản Neptune ST25 Plus Lúa Tôm 5kg\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:21:53.520Z",
+          "groups": [
+            "missing_sku",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0051",
+          "query": "thực phẩm tươi sống",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "các sản phẩm tặng (1đ) đang hiển thị ở top 1,2 (CLCACAPELIN300G , ONLTHUMSUP320). (expect ẩn)",
+          "pass_fail": "passed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:48:11.311Z",
+          "groups": [
+            "wrong_results",
+            "promo_stock"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "needs_confirm",
+      "name": "Cần xác nhận dữ liệu / nghiệp vụ trước",
+      "action": "QA chưa chốt được đây là lỗi hay không - phải xác nhận sản phẩm có tồn tại trong danh mục hay quy tắc nghiệp vụ là gì trước khi giao dev.",
+      "count": 4,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0796",
+          "query": "double rich",
+          "dimension": "benchmark_raw",
+          "note": "\"số lượng result lệch nhiều so với prod, cần check lại\n1\t8935030228846\tSữa Tắm Double Rich Relaxing Purple 800G\n2\t8935030228822\tSữa Tắm Double Rich Relax Purple Chai 550G\n3\t8935030218236\tNước Dưỡng Tóc Double Rich UV Nutrition 120ml\n4\t8935030228839\tXịt Dưỡng Tóc Double Rich Perfume 10x Chai 200ml\n5\t8935030221656\tSữa Tắm Double Rich Dưỡng Sáng Da Hương Hoa Sen 550g\n6\t8935030228501\tSữa Tắm Double Rich Hương Hoa Hồng 6g Dây 10 Gói\n7\t8935030228495\tSữa Tắm Double Rich Tươi Sáng Da Hương Hoa Anh Đào 6g Dây 12 Gói\n8\t8935030228853\tSữa Tắm Double Rich Relaxing Purple 200G\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:34:04.711Z",
+          "groups": [
+            "missing_sku",
+            "needs_confirm"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1120",
+          "query": "hạ long",
+          "dimension": "benchmark_raw",
+          "note": "có sản phẩm sữa chua hạ long k?",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T04:17:56.994Z",
+          "groups": [
+            "needs_confirm"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0025",
+          "query": "sua",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 16/9 : search result chỉ còn 1 sp, cần check lại",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:44:38.050Z",
+          "groups": [
+            "needs_confirm"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2059",
+          "query": "thực phẩm đóng gói sẵn",
+          "dimension": "generic_vague_intent",
+          "note": "NEED_DISCUSS",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:28:40.767Z",
+          "groups": [
+            "needs_confirm"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "recommend_quality",
+      "name": "Chất lượng khối Recommend",
+      "action": "Phần gợi ý (recommendations) trả về sản phẩm không hợp lý, hoặc cần đẩy sản phẩm liên quan sang khối này thay vì trộn vào kết quả chính.",
+      "count": 10,
+      "items": [
+        {
+          "test_id": "NSG-ALL-1014",
+          "query": "bí ngòi",
+          "dimension": "benchmark_raw",
+          "note": "1. thiếu sp\nBí Ngòi Xanh 300G\nSKU: 8936117051616\n2. Recommend k hợp lý",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:27:51.821Z",
+          "groups": [
+            "missing_sku",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2110",
+          "query": "bông so đũa",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:13.879Z",
+          "groups": [
+            "wrong_results",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2111",
+          "query": "bông điên điển",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:20.816Z",
+          "groups": [
+            "wrong_results",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0289",
+          "query": "diana",
+          "dimension": "benchmark_raw",
+          "note": "\"top 16,20,21,22 thuộc về diana nhưng không hiển thị ở search result mà đang nằm trong recommendation\n15\t8938506010310\tChuối Nam Huy Sấy Giòn Gói 200G\n16\t8934755010477\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size M-L Bịch 12 Chiếc\n17\t8935095028405\tĐĩa Tròn Melamine PV086-8 Nhám Màu Light Brown 20cm\n18\t0400285460009\tPizza Phô Mai Cheese & Dough 1 Miếng 166g\n19\t0400285400005\tPizza Phô Mai Cheese & Dough 1/2 Cái 500g\n20\t8934755010729\tBăng Vệ Sinh Dạng Quần Diana Double Fresh Size L-XL Gói 2 Miếng\n21\t8934755010484\tBăng Vệ Sinh Diana Dạng Quần Ban Đêm Size L-XL Bịch 2 Chiếc\n22\t8934755010163\tBăng Vệ Sinh Diana Mama Cho Mẹ Sau Sinh Không Cánh 44.5cm Gói 12 Miếng\n23\t8938523699093\tPizza Thập Cẩm Thịt Manna 120g\"",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T03:48:52.522Z",
+          "groups": [
+            "irrelevant_shown",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0577",
+          "query": "hạt hướng dương",
+          "dimension": "benchmark_raw",
+          "note": "Recommend: dầu hướng dương",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T07:26:19.500Z",
+          "groups": [
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0760",
+          "query": "khoai mỡ",
+          "dimension": "benchmark_raw",
+          "note": "\"thiếu sp Khoai mỡ 500g\nSKU: 2292270000004, các loại sản phẩm khác cần đẩy qua recommend\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:11:03.737Z",
+          "groups": [
+            "missing_sku",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0679",
+          "query": "măng tây",
+          "dimension": "benchmark_raw",
+          "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:09:21.548Z",
+          "groups": [
+            "missing_sku",
+            "irrelevant_shown",
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0018",
+          "query": "rổ nhựa đựng đồ",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 16/9 : một số sp rổ nhựa đang bị đẩy qua section recommendation",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:12:19.965Z",
+          "groups": [
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0019",
+          "query": "thuốc diệt côn trùng",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Comment 16/9 : một số sp xịt côn trùng đang bị đẩy qua section recommendation",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:11:10.117Z",
+          "groups": [
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0060",
+          "query": "thùng rác thông minh",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "\"Comment 16/9 : Các loại thùng rác khác đang hiển thị ở recommendation (search result chỉ ra 1 sp)\n1\t8935275208061\tThùng Rác Tròn Nắp Lật Inochi Hiro 12L (Giao Màu Ngẫu Nhiên)\n2\t8935007722186\tThùng Rác Oval Lớn Duy Tân 44 X 39.5 X 35Cm (Giao Màu Ngẫu Nhiên)\n3\t8935241702227\tThùng Rác Spriing 5L (Giao Màu Ngẫu Nhiên)  -> chỉ duy nhất sản phẩm này hiển thị ở search result\n4\t8935007721875\tThùng Rác Oval Trung Duy Tân 36 x 30 x 26cm (Giao Màu Ngẫu Nhiên)\n5\t8935275208078\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 6L (Giao Màu Ngẫu Nhiên)\n6\t8935275208214\tThùng Rác Nắp Lật Inochi Hiro 10L (Giao Màu Ngẫu Nhiên)\n7\t8935275208030\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Có Kèm Ruột 5L (Giao Màu Ngẫu Nhiên)\n8\t8935007721868\tThùng Rác Oval Nhỏ Duy Tân 31 X 25.5 X 22Cm (Giao Màu Ngẫu Nhiên)\n9\t8935275208054\tThùng Rác Nắp Lật Inochi Hiro Kháng Khuẩn Khử Mùi 15L (Giao Màu Ngẫu Nhiên)\n10\t8935275208115\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 15L (Giao Màu Ngẫu Nhiên)\n11\t8936186271311\tThùng Rác Treo Tường Megahome 9L (Giao Màu Ngẫu Nhiên)\n12\t8935275208092\tSọt Rác Kháng Khuẩn Khử Mùi Inochi Hiro 5L (Giao Màu Ngẫu Nhiên)\"",
+          "pass_fail": "failed",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-16T09:01:09.195Z",
+          "groups": [
+            "semantic_gap",
+            "recommend_quality"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    }
+  ],
+  "bugUnclassified": [],
+  "discussionGroups": [
+    {
+      "code": "zero_or_recommend",
+      "name": "Zero result hay trả recommend?",
+      "action": "Khi không có sản phẩm khớp: hiển thị 0 kết quả kèm gợi ý, hay trả sản phẩm gần đúng? MỘT quyết định nghiệp vụ áp cho cả nhóm - chốt một lần là xong hết.",
+      "count": 9,
+      "items": [
+        {
+          "test_id": "NSG-ALL-2201",
+          "query": "bao đựng rác tự phân hủy",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:57:43.348Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2172",
+          "query": "bình sữa cho bé",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:57:01.476Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2110",
+          "query": "bông so đũa",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:08.936Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2111",
+          "query": "bông điên điển",
+          "dimension": "regional_dialect",
+          "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:39:16.826Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2151",
+          "query": "băng cá nhân",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:56:33.171Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2168",
+          "query": "loa di động",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:56:51.395Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2134",
+          "query": "lẩu mắm",
+          "dimension": "regional_dialect",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "passed",
+          "asis_match": "100_PERCENT_SET",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:56:07.692Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2142",
+          "query": "máy đánh trứng",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:56:24.771Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2180",
+          "query": "tăm nước vệ sinh răng",
+          "dimension": "synonym_variant",
+          "note": "zero result kèm recommend?",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:57:13.364Z",
+          "groups": [
+            "zero_or_recommend"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "scope_search_vs_recommend",
+      "name": "Sản phẩm liên quan: search result hay recommend?",
+      "action": "Sản phẩm cùng nhóm/liên quan (rượu khi search bia, đậu phộng khi search đậu bắp) nên nằm trong kết quả chính hay tách sang khối gợi ý?",
+      "count": 23,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0593",
+          "query": "ba chỉ bò",
+          "dimension": "benchmark_raw",
+          "note": "có bao gồm Giò Bê Ba Chỉ Tứ Phương 500G, Thịt Ba Rọi Heo Rút Sườn G Kitchen 300G (EA)  trong search result k?",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:35:18.299Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0275",
+          "query": "bao tay",
+          "dimension": "benchmark_raw",
+          "note": "các sản phẩm tẩy tế bào chết có nên hiển thị trong list này?",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:53:48.280Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1802",
+          "query": "bình thuỷ tinh",
+          "dimension": "history_verification",
+          "note": "hiển thị thêm các sp chén thủy tinh, bình nước nhựa",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:51:25.613Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0396",
+          "query": "bò viên",
+          "dimension": "benchmark_raw",
+          "note": "cá viên, hải sản viên có hiển thị trong result k . hãy sẽ nằm riêng ở api recommend",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T08:56:29.088Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0467",
+          "query": "bột giặt omo",
+          "dimension": "benchmark_raw",
+          "note": "search resutl có bao gồm nước giặt hay k?\ncó bao gồm Bột Giặt Surf , Ariel hay không (hay nằm ở recommendation)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:43:32.342Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1537",
+          "query": "chả chay",
+          "dimension": "history_verification",
+          "note": "đang hiển thị thêm chả bò, chả giò, chả tôm,....",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:02:59.060Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0727",
+          "query": "củ cải trắng",
+          "dimension": "benchmark_raw",
+          "note": "đang hiển thị xen kẽ củ đậu, bông cải xanh, bông cải trắng, củ riềng",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:46:49.160Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0452",
+          "query": "dưa",
+          "dimension": "benchmark_raw",
+          "note": "có hiển thị các sản phẩm dừa k? (PROD có)",
+          "pass_fail": "passed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T03:04:23.127Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1470",
+          "query": "dưa hấu vàng",
+          "dimension": "history_verification",
+          "note": "đang hiển thị thêm dưa lưới, dưa lê",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:50:26.377Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0359",
+          "query": "heineken",
+          "dimension": "benchmark_raw",
+          "note": "các loại rượu có nên hiển thị trong list result này không? hay ở section recommend",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:24:15.517Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0760",
+          "query": "khoai mỡ",
+          "dimension": "benchmark_raw",
+          "note": "\"thiếu sp Khoai mỡ 500g\nSKU: 2292270000004, các loại sản phẩm khác cần đẩy qua recommend\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:11:16.870Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-1544",
+          "query": "khô cá cơm",
+          "dimension": "history_verification",
+          "note": "đang hiển thị khô cá mai, khô cá chỉ vàng, khô cá bống,....",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:02:17.616Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0941",
+          "query": "kokomi",
+          "dimension": "benchmark_raw",
+          "note": "có nên show list này trong search result?\nSocola Sữa Beatitude 450G (8935042909566)\nSocola Hạnh Nhân Lotte Gói 70g (8801062634354)\nSocola Sữa Viên Henk Nhân Hạt Mắc Ca Nón Lá Hộp 120G (8936013566740)\nKẹo Socola Viên Đá Lotte Gói 90g (8801062629190)\nChân Giò Heo Muối Vị Tayaki Ngọc Thơm Foods 450G (8938529045832)\nBánh Mochi Mè Đen Với Cơm Dừa 152G (4711931029522)\nSocola Vifranco Tổng Hợp Túi 300g (8935042901997)\nKẹo Socola Sữa Popit Doremon Túi 95.4G (8935006359369)\nKẹo Socola ABC Lotte Gói 187g (8801062629992)\nSocola Ferrero Rocher 5 Viên 62.5G (0000080135906)",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T06:26:33.181Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0679",
+          "query": "măng tây",
+          "dimension": "benchmark_raw",
+          "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:09:40.516Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0573",
+          "query": "nồi cơm điện",
+          "dimension": "benchmark_raw",
+          "note": "sp nồi đất, nổi lẩu có nằm trong search result k, hay ở recommendation (hiện tại đang ở search result)",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:45:09.041Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0224",
+          "query": "oatside",
+          "dimension": "benchmark_raw",
+          "note": "các sản phẩm này hiển thị ở recommend hay search result\n7\t\nBữa Ăn 1 Phút Oatta yến mạch trái cây hạnh nhân phô mai túi 300g\nSKU: 8935011861239 | 125,500 đ\t+ Extra\n8\t\nHạt Chia Oh Smile Nuts 500G\nSKU: 8935319200303 | 118,000 đ\t+ Extra\n9\t\nBữa Ăn 1 Phút Oatta yến mạch trái cây hạnh nhân phô mai túi 800g\nSKU: 8935011861130 | 265,900 đ\t+ Extra\n10\t\nYến Mạch Trái Cây Matcha Oatta Gói 250G\nSKU: 8935011805820 | 86,500 đ\t+ Extra\n11\t\nMù Tạt Wasabi Ottogi Tuýp 35G\nSKU: 8801045450377 | 43,700 đ\t+ Extra",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:19:31.518Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0294",
+          "query": "sandwich",
+          "dimension": "benchmark_raw",
+          "note": "có hiển thị các loại bánh quy, bánh kem hay k?\nhay đẩy hết về discussion",
+          "pass_fail": "failed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T09:52:47.071Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0225",
+          "query": "sữa hạt",
+          "dimension": "benchmark_raw",
+          "note": "đang hiển thị thêm sữa đậu đen, sữa yến mạch",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T06:03:44.540Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0029",
+          "query": "tui thuc pham",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "Xem xét có hiển thị thêm các sản phẩm hộp thực phẩm, màng bọc thực phẩm hay không",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T02:39:13.028Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0198",
+          "query": "tôm",
+          "dimension": "benchmark_raw",
+          "note": "nghêu nằm ở search result hay recommend",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:17:41.611Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0575",
+          "query": "tương ớt cholimex",
+          "dimension": "benchmark_raw",
+          "note": "đang hiển thị xen kẽ các brand khác",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-14T04:46:03.265Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0522",
+          "query": "viên giặt",
+          "dimension": "benchmark_raw",
+          "note": "bột giặt, nước giặt hiển thị ở search result hay recommend",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T09:22:18.253Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0779",
+          "query": "đậu bắp",
+          "dimension": "benchmark_raw",
+          "note": "đậu phộng, đậu hà lan có nên nằm trong search result k , hay toàn bộ đẩy qua recommend?",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T09:39:35.839Z",
+          "groups": [
+            "scope_search_vs_recommend"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "ambiguous_keyword",
+      "name": "Từ khoá nhập nhằng - ưu tiên nghĩa nào?",
+      "action": "Từ khoá có 2 nghĩa hợp lệ ('ca' = cá hay mắc ca, 'ga' = gà hay nước có ga). Cần quy tắc chọn nghĩa ưu tiên.",
+      "count": 4,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0525",
+          "query": "ca",
+          "dimension": "benchmark_raw",
+          "note": "mắc ca đang hiển thị trước cá . cần thảo luận lại thứ tự hiển thị",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:06:02.074Z",
+          "groups": [
+            "ambiguous_keyword",
+            "expected_undefined"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0972",
+          "query": "ga",
+          "dimension": "benchmark_raw",
+          "note": "cần ưu tiên gà trước hay sản phẩm có ga, gas?\n1\t6970399925786\tNước Khoáng Có Ga Genki Vị Vải Lon 330ml\n2\t6970399920576\tNước Khoáng Có Ga Genki Vị Đào Lon 330ml\n3\t8801223100179\tNước Uống Có Gas Chojung 500ml\n4\t8935004500794\tNước Khoáng Thiên Nhiên Có Ga Choice L Chai 500ml\n5\t8445291045750\tNước Khoáng Có Ga Maison Perrier Hương Chanh Vàng Lon 250ml\n6\t8934840000185\tNước Khoáng Thiên Nhiên Có Ga Vĩnh Hảo Chai 500ML\n7\t8809495076482\tNước Soda Cloop Vị Táo Xanh Không Đường 500ml\n8\t8934588690112\tNước Có Gas Aquafina Soda Lốc 6 Lon 320 ml\n9\t8801223010478\tNước Uống Có Gas BRRR Vị Cola Không Đường Lon 250ml\n10\t8801223012243\tNước Uống Có Gas BRRR Vị Cola Không Cafein Không Đường Lon 250ml",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:23:00.191Z",
+          "groups": [
+            "ambiguous_keyword"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0504",
+          "query": "muoi",
+          "dimension": "benchmark_raw",
+          "note": "\"cà phê muối đang hiển thị sau vá gỗ \n10\t\nVá Gỗ Nhỏ Choice L\nSKU: 8936190941644 | 42,900 đ\t+ Extra\n11\t\nNui Ống Dài Meizan Gói 400G\nSKU: 8938509627119 | 24,500 đ\t+ Extra\n12\t\nNui Gạo Meizan Cao Cấp Hình Ống Dài 400G\nSKU: 8938509627218 | 23,500 đ\t+ Extra\n13\t\nCà Phê Muối Hòa Tan SaltCoffee Vị Gừng Hộp 9 Gói x 20G\"",
+          "pass_fail": "failed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:04:31.233Z",
+          "groups": [
+            "ambiguous_keyword"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-1434",
+          "query": "nuoc man",
+          "dimension": "history_verification",
+          "note": "theo ngữ nghĩa có cần bổ sung nước mắm và đẩy lên top k",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-10T08:53:04.455Z",
+          "groups": [
+            "ambiguous_keyword"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "out_of_stock_policy",
+      "name": "Chính sách hàng hết tồn",
+      "action": "Sản phẩm hết hàng có nên tiếp tục chiếm vị trí đầu kết quả?",
+      "count": 1,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0832",
+          "query": "giò sống",
+          "dimension": "benchmark_raw",
+          "note": "tất cả sản phẩm giò sống đang hết hàng -> vẫn hiển thị ở top . sau đó các sản phẩm thịt heo khác hiển thị ở recommend đúng k",
+          "pass_fail": "passed",
+          "asis_match": "HIGH_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:19:16.577Z",
+          "groups": [
+            "out_of_stock_policy"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    },
+    {
+      "code": "expected_undefined",
+      "name": "Chưa xác định được kết quả mong đợi",
+      "action": "QA chưa chốt được đúng/sai cho query này, cần BA/nghiệp vụ định nghĩa trước.",
+      "count": 4,
+      "items": [
+        {
+          "test_id": "NSG-ALL-0525",
+          "query": "ca",
+          "dimension": "benchmark_raw",
+          "note": "mắc ca đang hiển thị trước cá . cần thảo luận lại thứ tự hiển thị",
+          "pass_fail": "failed",
+          "asis_match": "LOW_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:06:02.074Z",
+          "groups": [
+            "ambiguous_keyword",
+            "expected_undefined"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-0047",
+          "query": "củ hành tím",
+          "dimension": "manual_demo_asis_vs_actual",
+          "note": "",
+          "pass_fail": "passed",
+          "asis_match": "PARTIAL_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T10:09:41.755Z",
+          "groups": [
+            "expected_undefined"
+          ],
+          "manuallyAssigned": true
+        },
+        {
+          "test_id": "NSG-ALL-1190",
+          "query": "nhu yếu phẩm",
+          "dimension": "benchmark_raw",
+          "note": "chưa xác định dc expect",
+          "pass_fail": "discussion",
+          "asis_match": "ASIS_ZERO",
+          "has_screenshot": false,
+          "markedAt": "2026-09-08T08:35:10.227Z",
+          "groups": [
+            "expected_undefined"
+          ],
+          "manuallyAssigned": false
+        },
+        {
+          "test_id": "NSG-ALL-2059",
+          "query": "thực phẩm đóng gói sẵn",
+          "dimension": "generic_vague_intent",
+          "note": "cần trao đổi lại",
+          "pass_fail": "failed",
+          "asis_match": "NO_MATCH",
+          "has_screenshot": false,
+          "markedAt": "2026-09-09T08:28:28.182Z",
+          "groups": [
+            "expected_undefined"
+          ],
+          "manuallyAssigned": false
+        }
+      ]
+    }
+  ],
+  "discussionUnclassified": []
+}

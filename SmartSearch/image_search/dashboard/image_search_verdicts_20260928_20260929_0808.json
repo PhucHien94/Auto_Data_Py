@@ -1,0 +1,1064 @@
+{
+  "kind": "image_search_verdicts",
+  "report_id": "excel_top40",
+  "round": "2026-09-28",
+  "store": "nsg",
+  "exported_at": "2026-09-29T08:08:11.895Z",
+  "verdicts": {
+    "kw001": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw003": [
+      "caption",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw004": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw005": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw006": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw007": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw008": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw009": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw010": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw011": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw012": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw013": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw014": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw015": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw017": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw018": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw019": [
+      "vector_titan_multi_caption_type",
+      "vector",
+      "vector_titan_multi",
+      "caption"
+    ],
+    "kw020": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw021": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw022": [
+      "vector_titan_multi_caption_type",
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw023": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw024": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw025": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw026": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw027": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw028": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw029": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw030": [
+      "none"
+    ],
+    "kw031": [
+      "vector_titan_multi",
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw032": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw033": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw034": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw036": [
+      "vector",
+      "caption"
+    ],
+    "kw037": [
+      "none"
+    ],
+    "kw038": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw039": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw040": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw041": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw043": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw044": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw045": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw046": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw047": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw048": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw049": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw050": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw051": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw053": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw054": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw055": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw056": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw057": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw058": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw059": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw060": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw101": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw102": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw103": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw104": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw105": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw106": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw107": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw108": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw109": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw110": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw111": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw112": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw113": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw066": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw067": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw068": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw069": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw070": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw071": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw072": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw073": [
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw074": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw075": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw076": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw077": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw078": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw079": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw080": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw127": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw126": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw125": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw124": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw123": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw122": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw121": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw120": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw119": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw118": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw117": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw116": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw115": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw114": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw100": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw099": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw098": [
+      "none"
+    ],
+    "kw097": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw096": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw095": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw094": [
+      "vector",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw093": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw092": [
+      "vector"
+    ],
+    "kw091": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw090": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw089": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw088": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw087": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw086": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw085": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw084": [
+      "vector"
+    ],
+    "kw083": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "caption"
+    ],
+    "kw082": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw081": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw002": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw016": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw035": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw042": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw052": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw061": [
+      "vector",
+      "vector_titan_multi",
+      "caption"
+    ],
+    "kw062": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw063": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw064": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw065": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ]
+  },
+  "performance": {
+    "kw001": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type",
+      "vector"
+    ],
+    "kw003": [
+      "caption",
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw004": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw005": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw006": [
+      "vector"
+    ],
+    "kw007": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw008": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw009": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw010": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw011": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw012": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw013": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw014": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw015": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw017": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw018": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw019": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw020": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw021": [
+      "caption",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw022": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw023": [
+      "vector_titan_multi_caption_type",
+      "vector"
+    ],
+    "kw024": [
+      "vector",
+      "caption"
+    ],
+    "kw025": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw026": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw027": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw028": [
+      "vector_titan_multi_caption_type",
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw029": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw030": [
+      "none"
+    ],
+    "kw031": [
+      "vector_titan_multi_caption_type",
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw032": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw033": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw034": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw036": [
+      "vector"
+    ],
+    "kw037": [
+      "none"
+    ],
+    "kw038": [
+      "vector_titan_multi"
+    ],
+    "kw039": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw040": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw041": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw043": [
+      "vector"
+    ],
+    "kw044": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw045": [
+      "caption",
+      "vector_titan_multi_caption_type",
+      "vector"
+    ],
+    "kw046": [
+      "vector"
+    ],
+    "kw047": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw048": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw049": [
+      "vector"
+    ],
+    "kw050": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw051": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw053": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw054": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw055": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw056": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw057": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw058": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw059": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw060": [
+      "vector"
+    ],
+    "kw101": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw102": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi",
+      "vector"
+    ],
+    "kw103": [
+      "vector_titan_multi_caption_type",
+      "vector"
+    ],
+    "kw104": [
+      "vector"
+    ],
+    "kw105": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw106": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw107": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw108": [
+      "vector"
+    ],
+    "kw109": [
+      "vector_titan_multi"
+    ],
+    "kw110": [
+      "vector"
+    ],
+    "kw111": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw112": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw113": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw066": [
+      "caption",
+      "vector_titan_multi_caption_type",
+      "vector"
+    ],
+    "kw067": [
+      "vector"
+    ],
+    "kw068": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw069": [
+      "vector"
+    ],
+    "kw070": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw071": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw072": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw073": [
+      "vector_titan_multi"
+    ],
+    "kw074": [
+      "vector"
+    ],
+    "kw075": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw076": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw077": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw078": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw079": [
+      "vector"
+    ],
+    "kw080": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw127": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw126": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw125": [
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw124": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw123": [
+      "vector"
+    ],
+    "kw122": [
+      "vector_titan_multi"
+    ],
+    "kw121": [
+      "vector_titan_multi"
+    ],
+    "kw120": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw119": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw118": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw117": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw116": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw115": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw114": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw100": [
+      "vector_titan_multi"
+    ],
+    "kw099": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw097": [
+      "vector"
+    ],
+    "kw096": [
+      "caption"
+    ],
+    "kw095": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw094": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw093": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw092": [
+      "vector"
+    ],
+    "kw091": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw090": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw089": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw088": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw087": [
+      "vector",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw086": [
+      "vector",
+      "vector_titan_multi"
+    ],
+    "kw085": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw084": [
+      "vector"
+    ],
+    "kw083": [
+      "vector"
+    ],
+    "kw082": [
+      "vector_titan_multi_caption_type",
+      "vector_titan_multi"
+    ],
+    "kw081": [
+      "vector"
+    ],
+    "kw002": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw016": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw035": [
+      "vector"
+    ],
+    "kw042": [
+      "vector_titan_multi"
+    ],
+    "kw052": [
+      "vector"
+    ],
+    "kw061": [
+      "vector_titan_multi"
+    ],
+    "kw062": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw063": [
+      "vector",
+      "vector_titan_multi",
+      "vector_titan_multi_caption_type"
+    ],
+    "kw064": [
+      "vector_titan_multi_caption_type"
+    ],
+    "kw065": [
+      "vector_titan_multi_caption_type"
+    ]
+  },
+  "notes": {
+    "kw011": "KQ trả về của titan multi x caption khá thấp. Dùng key này để trao đổi với khách",
+    "kw018": "kq của titan multi x caption nổi trội hơn hẳn",
+    "kw022": "kq của vector ổn nhất. Titan đang chứa thêm muối và mayonaise. dùng case này để trao đổi với khách",
+    "kw024": "Vector ghi nhận nhiều sp bánh mì hơn",
+    "kw026": "kết quả của vector ok nhất",
+    "kw030": "Có thể dùng case này để làm ví dụ với khách",
+    "kw032": "Vector trả ra nhiều kq liên quan đến trà hơn",
+    "kw033": "novalite đang trả ra nhiều sp khô hơn là tươi",
+    "kw037": "Dùng key này để trao đổi với khách",
+    "kw039": "kqua của vector ok hơn (titan multi lọc gắt hơn)",
+    "kw045": "kqua của novalite ổn nhất (bao gồm cả túi rác và thùng rác)",
+    "kw048": "Titan k hiển thị được Cà Chua Beef 1kg, cần dev kiểm tra lại",
+    "kw110": "titan multi x caption : k hiển thị được bơ sáp, cần dev check lại",
+    "kw073": "cần dev check xem titan multi x caption k hiển thị được mắm tôm",
+    "kw078": "kết quả của vector ok nhất, (titan: măng muối đang ở No.26)",
+    "kw086": "Titan show khá ít sản phẩm rượu so với 2 cơ chế còn lại",
+    "kw084": "titan hiển thị thiếu sp trứng gà ăn liền + top 5 đang k chứa trứng gà ăn liền",
+    "kw083": "Titan đang hiển thị khá ít sp so với 2 cơ chế còn lại (dù top1 vẫn đúng sp muốn tìm)",
+    "kw061": "titan multi x caption vẫn có kem tẩy nhưng chỉ có 1 sp, và tổng sluong sp trả về ít so với 3 cơ chế còn lại"
+  }
+}

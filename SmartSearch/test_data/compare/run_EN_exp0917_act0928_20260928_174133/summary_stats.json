@@ -1,0 +1,3620 @@
+{
+  "timestamp": "2026-09-28T17:41:43.540885",
+  "expected_file": "SmartSearch\\test_data\\json\\batches\\NSG_ExpectedData_en_20260917.json",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_en_20260928_173214.json",
+  "asis_cache_file": "SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache_en.json",
+  "asis_match_threshold_pct": 50,
+  "asis_scenarios_used": 559,
+  "asis_newly_fetched": 0,
+  "total_scenarios": 559,
+  "matched_by_test_id": 559,
+  "matched_by_query": 0,
+  "unmatched_scenarios": 0,
+  "exact_order_count": 0,
+  "exact_order_pct": 0.0,
+  "set_match_count": 0,
+  "set_match_pct": 0.0,
+  "top1_match_count": 0,
+  "top1_match_pct": 0.0,
+  "mismatch_count": 559,
+  "mismatch_pct": 100.0,
+  "zero_result_count": 0,
+  "avg_overlap_pct": 0.0,
+  "avg_top5_overlap_pct": 0.0,
+  "avg_top10_overlap_pct": 0.0,
+  "avg_top20_overlap_pct": 0.0,
+  "breakdown_by_category": {
+    "100_PERCENT_EXACT": 0,
+    "100_PERCENT_SET": 0,
+    "HIGH_MATCH": 51,
+    "PARTIAL_MATCH": 93,
+    "LOW_MATCH": 50,
+    "ZERO_RESULT": 0,
+    "NO_MATCH": 361
+  },
+  "scoring_top_n": 30,
+  "passed_count": 55,
+  "failed_count": 504,
+  "na_count": 0,
+  "asis_zero_count": 0,
+  "failed_no_bug_count": 504,
+  "has_bug_count": 0,
+  "reviewed_count": 0,
+  "not_reviewed_count": 559,
+  "regression_count": 1,
+  "regression_alerts": [
+    {
+      "test_id": "NSG-EN-00074",
+      "query": "oishi",
+      "dimension": "real_search_history",
+      "prev_status": "passed",
+      "current_status": "failed",
+      "kind": "regressed",
+      "match_category": "PARTIAL_MATCH",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    }
+  ],
+  "response_changed_count": 444,
+  "ac_passed_count": 0,
+  "ac_failed_count": 0,
+  "ac_na_count": 559,
+  "ac_regression_alerts": [],
+  "discussion_count": 0,
+  "removed_scenarios_count": 1,
+  "response_change_alerts": [
+    {
+      "test_id": "NSG-EN-00001",
+      "query": "coffee",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00003",
+      "query": "cheese",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00004",
+      "query": "yogurt",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00006",
+      "query": "chicken",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00008",
+      "query": "water",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00009",
+      "query": "beef",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00010",
+      "query": "tissue",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00013",
+      "query": "sausage",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00015",
+      "query": "tomato",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00016",
+      "query": "butter",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00017",
+      "query": "noodles",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00022",
+      "query": "sauce",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00023",
+      "query": "choice L",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00025",
+      "query": "shampoo",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00027",
+      "query": "egg",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00030",
+      "query": "potato",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00031",
+      "query": "bag",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00032",
+      "query": "beer",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00033",
+      "query": "eggs",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00034",
+      "query": "pork",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00037",
+      "query": "salt",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00039",
+      "query": "mango",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00040",
+      "query": "tuna",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00041",
+      "query": "lemon",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00042",
+      "query": "onion",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00043",
+      "query": "garlic",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00044",
+      "query": "flour",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00047",
+      "query": "apple",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00050",
+      "query": "olive oil",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00053",
+      "query": "oil",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00054",
+      "query": "wine",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00056",
+      "query": "shrimp",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00058",
+      "query": "candy",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00059",
+      "query": "chili",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00060",
+      "query": "pepper",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00062",
+      "query": "noodle",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00064",
+      "query": "detergent",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00065",
+      "query": "9555046446677",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00066",
+      "query": "fish",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00067",
+      "query": "banana",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00068",
+      "query": "beans",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00069",
+      "query": "cake",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00073",
+      "query": "corn",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00076",
+      "query": "deodorant",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00078",
+      "query": "8993137004114",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00080",
+      "query": "paper",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00084",
+      "query": "dried",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00090",
+      "query": "9555046447452",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00092",
+      "query": "lime",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00094",
+      "query": "9555046465760",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00095",
+      "query": "strawberry",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00097",
+      "query": "Matcha",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00098",
+      "query": "l choice",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00100",
+      "query": "dalat",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00105",
+      "query": "9555046467726",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00108",
+      "query": "bakery",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00110",
+      "query": "9555046467443",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00111",
+      "query": "9555046467450",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00112",
+      "query": "9555046467467",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00113",
+      "query": "sesame",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00114",
+      "query": "9555046467474",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00117",
+      "query": "9555046438870",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00118",
+      "query": "9555046449043",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00119",
+      "query": "9555046438863",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00120",
+      "query": "9555046467481",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00121",
+      "query": "9555046457406",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00122",
+      "query": "9555046438757",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00123",
+      "query": "9555046452654",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00125",
+      "query": "9555046438795",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00126",
+      "query": "9555046459035",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00127",
+      "query": "9555046438931",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00128",
+      "query": "9555046438948",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00129",
+      "query": "9555046438733",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00130",
+      "query": "9555046431826",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00131",
+      "query": "9555046407470",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00132",
+      "query": "9555046438856",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00133",
+      "query": "9555046440675",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00134",
+      "query": "9555046447551",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00135",
+      "query": "9555046458731",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00137",
+      "query": "Pillows",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00138",
+      "query": "9555046446073",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00139",
+      "query": "9555046462394",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00140",
+      "query": "9555046448770",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00141",
+      "query": "9555046438924",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00142",
+      "query": "9555046454351",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00143",
+      "query": "9555046451695",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00144",
+      "query": "9555046443577",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00146",
+      "query": "9555046450346",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00147",
+      "query": "9555046459875",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00148",
+      "query": "9555046441566",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00149",
+      "query": "9555046454375",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00150",
+      "query": "9555046465838",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00151",
+      "query": "cucumber",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00152",
+      "query": "9555046465883",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00153",
+      "query": "9555046455020",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00154",
+      "query": "9555046454986",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00155",
+      "query": "9555046454382",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00156",
+      "query": "9555046454368",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00157",
+      "query": "9555046441481",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00158",
+      "query": "9555046405995",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00159",
+      "query": "9555046450377",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00161",
+      "query": "9555046450339",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00162",
+      "query": "9555046454979",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00163",
+      "query": "9555046403816",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00164",
+      "query": "9555046454702",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00165",
+      "query": "9555046422015",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00166",
+      "query": "9555046446080",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00167",
+      "query": "9555046466217",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00168",
+      "query": "9555046456683",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00169",
+      "query": "9555046456324",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00170",
+      "query": "9555046441436",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00171",
+      "query": "9555046450315",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00172",
+      "query": "9555046439884",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00173",
+      "query": "9555046462417",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00174",
+      "query": "lettuce",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00176",
+      "query": "9555046450322",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00177",
+      "query": "9555046465623",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00178",
+      "query": "9555046465432",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00179",
+      "query": "9555046459448",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00180",
+      "query": "9555046444703",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00181",
+      "query": "choice",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00183",
+      "query": "9555046454719",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00184",
+      "query": "9555046462356",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00186",
+      "query": "9555046448565",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00187",
+      "query": "9555046462370",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00188",
+      "query": "9555046465692",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00189",
+      "query": "9555046406206",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00190",
+      "query": "9555046455068",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00191",
+      "query": "9555046458410",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00192",
+      "query": "squid",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00193",
+      "query": "9555046421940",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00195",
+      "query": "8886469299757",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00196",
+      "query": "9555046467214",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00197",
+      "query": "9555046461120",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00198",
+      "query": "9555046466866",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00199",
+      "query": "8938512105031",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00200",
+      "query": "9555046405988",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00201",
+      "query": "9555046454160",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00202",
+      "query": "9555046422190",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00203",
+      "query": "9555046467832",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00204",
+      "query": "9555046459653",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00205",
+      "query": "9555046447643",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00209",
+      "query": "carrot",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00210",
+      "query": "blueberry",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00211",
+      "query": "cp",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00212",
+      "query": "8936029423983",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00213",
+      "query": "9555046458038",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00214",
+      "query": "cabbage",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00216",
+      "query": "9555046421971",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00217",
+      "query": "9555046461113",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00218",
+      "query": "8936034878037",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00219",
+      "query": "9555046446769",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00220",
+      "query": "sponge",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00221",
+      "query": "Legend",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00222",
+      "query": "8936139394364",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00223",
+      "query": "breakfast",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00224",
+      "query": "9555046467825",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00225",
+      "query": "9555046465647",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00227",
+      "query": "9555046467023",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00228",
+      "query": "9555046467030",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00230",
+      "query": "9555046448558",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00231",
+      "query": "9555046467412",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00232",
+      "query": "8936076279335",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00233",
+      "query": "9555046466101",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00234",
+      "query": "9555046442433",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00235",
+      "query": "9555046465852",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00236",
+      "query": "9555046459288",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00237",
+      "query": "peanut",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00238",
+      "query": "9555046404561",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00239",
+      "query": "9555046465616",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00240",
+      "query": "9555046466064",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00242",
+      "query": "9555046459325",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00243",
+      "query": "9555046406039",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00244",
+      "query": "9555046444253",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00245",
+      "query": "9555046403854",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00246",
+      "query": "trứng",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00249",
+      "query": "9555046451145",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00250",
+      "query": "9555046454467",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00251",
+      "query": "9555046465715",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00252",
+      "query": "spaghetti",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00253",
+      "query": "8938562884849",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00254",
+      "query": "9555046465777",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00255",
+      "query": "9555046465678",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00256",
+      "query": "9555046467405",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00257",
+      "query": "9555046467306",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00258",
+      "query": "8936139394449",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00259",
+      "query": "vegetables",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00260",
+      "query": "9555046454726",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00261",
+      "query": "8936079121167",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00262",
+      "query": "9555046465937",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00263",
+      "query": "8935314800003",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00264",
+      "query": "9555046466187",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00265",
+      "query": "8936076453667",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00266",
+      "query": "ham",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00267",
+      "query": "gummy",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00268",
+      "query": "8936013680835",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00269",
+      "query": "9555046465630",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00270",
+      "query": "ofood",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00271",
+      "query": "9555046467290",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00272",
+      "query": "8938512632025",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00273",
+      "query": "8934680047340",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00274",
+      "query": "8936227750294",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00276",
+      "query": "oatmeal",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00278",
+      "query": "9555046466439",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00279",
+      "query": "9555046465821",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00280",
+      "query": "5060583850725",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00281",
+      "query": "8936079121778",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00282",
+      "query": "9555046466385",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00283",
+      "query": "cracker",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00284",
+      "query": "dried candied fruit",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00285",
+      "query": "8938545001324",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00286",
+      "query": "8936034878624",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00287",
+      "query": "8936079121013",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00288",
+      "query": "snacks",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00289",
+      "query": "8938504806502",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00290",
+      "query": "9555046467344",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00291",
+      "query": "chicken breast",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00293",
+      "query": "9555046467559",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00294",
+      "query": "9555046465708",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00295",
+      "query": "8935297104747",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00296",
+      "query": "8935001713128",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00297",
+      "query": "chocopie",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00298",
+      "query": "green tea",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00299",
+      "query": "choice l ketchup",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00300",
+      "query": "8936221048557",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00301",
+      "query": "8936028644013",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00302",
+      "query": "8936227750249",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00303",
+      "query": "laundry",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00305",
+      "query": "8935049501763",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00306",
+      "query": "9555046466330",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00307",
+      "query": "8936013680521",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00308",
+      "query": "8936221048595",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00309",
+      "query": "8936110051835",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00310",
+      "query": "1200108005528",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00311",
+      "query": "9555046446776",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00312",
+      "query": "8938545500025",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00313",
+      "query": "9555046467498",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00314",
+      "query": "8938562884856",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00318",
+      "query": "9555046466163",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00319",
+      "query": "9555046404998",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00320",
+      "query": "8938545001058",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00321",
+      "query": "9555046404967",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00323",
+      "query": "orange",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00325",
+      "query": "9555046466071",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00326",
+      "query": "8938561761028",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00327",
+      "query": "8935318100093",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00328",
+      "query": "8936036021721",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00329",
+      "query": "8938557078093",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00330",
+      "query": "8938561761004",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00331",
+      "query": "soju",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00332",
+      "query": "soup",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00335",
+      "query": "8936183006336",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00336",
+      "query": "8938552123064",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00337",
+      "query": "8938533329157",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00339",
+      "query": "9555046465685",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00340",
+      "query": "9555046406022",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00341",
+      "query": "8936219620192",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00342",
+      "query": "8936221048281",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00344",
+      "query": "sữa",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00345",
+      "query": "hair",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00346",
+      "query": "8859533603712",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00347",
+      "query": "8938533329065",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00348",
+      "query": "0000029493593",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00349",
+      "query": "9555046467313",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00350",
+      "query": "9555046466019",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00351",
+      "query": "8938545001003",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00352",
+      "query": "9555046468020",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00355",
+      "query": "8934680047326",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00356",
+      "query": "8938561761011",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00357",
+      "query": "8934680047333",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00359",
+      "query": "8935058913366",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00360",
+      "query": "8935342400022",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00361",
+      "query": "9555046467238",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00362",
+      "query": "9555046448541",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00363",
+      "query": "8938545001157",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00364",
+      "query": "9555046466279",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00365",
+      "query": "8936034878648",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00366",
+      "query": "drink",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00368",
+      "query": "8938552123040",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00369",
+      "query": "9555046465739",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00370",
+      "query": "8935001718260",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00371",
+      "query": "8938561096137",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00372",
+      "query": "8934841901641",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00373",
+      "query": "8935299660562",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00375",
+      "query": "8936146447701",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00376",
+      "query": "8938552123033",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00377",
+      "query": "8938556329004",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00378",
+      "query": "9555046466125",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00379",
+      "query": "8852014010887",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00380",
+      "query": "9555046447650",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00381",
+      "query": "5060583851371",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00382",
+      "query": "8936219620178",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00383",
+      "query": "4710059080248",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00384",
+      "query": "8934572174178",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00385",
+      "query": "8938520099865",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00386",
+      "query": "8934952008079",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00388",
+      "query": "8936170702227",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00389",
+      "query": "9555046466422",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00390",
+      "query": "8934563669133",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00391",
+      "query": "8936034877993",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00394",
+      "query": "8934839128142",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00395",
+      "query": "8936094510236",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00396",
+      "query": "8936013680507",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00397",
+      "query": "8801068939842",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00398",
+      "query": "8935101607969",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00399",
+      "query": "8935049501213",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00400",
+      "query": "8938562884818",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00402",
+      "query": "8886469299733",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00403",
+      "query": "8934803024128",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00404",
+      "query": "8936079124991",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00405",
+      "query": "8934841900293",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00406",
+      "query": "1200108005559",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00407",
+      "query": "8809652020358",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00408",
+      "query": "8934681596946",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00409",
+      "query": "8936117790164",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00410",
+      "query": "8934563653132",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00411",
+      "query": "8935058913359",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00412",
+      "query": "8936170702203",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00413",
+      "query": "8936029424393",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00414",
+      "query": "8938545001027",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00415",
+      "query": "8852014008372",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00417",
+      "query": "8934563550196",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00418",
+      "query": "8938503131773",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00419",
+      "query": "8936104380446",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00420",
+      "query": "9555046466415",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00421",
+      "query": "8936013681122",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00422",
+      "query": "8936079121815",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00423",
+      "query": "8934563619138",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00424",
+      "query": "8936204410265",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00425",
+      "query": "8935001715535",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00426",
+      "query": "8936079126247",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00427",
+      "query": "9555046466354",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00428",
+      "query": "8934563502195",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00429",
+      "query": "9555046465753",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00430",
+      "query": "8935311103541",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00431",
+      "query": "0000080768258",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00432",
+      "query": "9555046465814",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00433",
+      "query": "frozen",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00434",
+      "query": "bowls",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00435",
+      "query": "choice L fruit",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00437",
+      "query": "8934673101615",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00438",
+      "query": "8935299665314",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00439",
+      "query": "9555046467320",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00440",
+      "query": "8886469299740",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00441",
+      "query": "9555046421964",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00442",
+      "query": "8934673101608",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00443",
+      "query": "6906791588861",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00444",
+      "query": "9555046416847",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00445",
+      "query": "8936036028355",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00446",
+      "query": "8934803071023",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00447",
+      "query": "4719745093715",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00448",
+      "query": "8936029425307",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00449",
+      "query": "8935001713135",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00450",
+      "query": "8852014011778",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00451",
+      "query": "9555046467535",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00452",
+      "query": "8938557078147",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00453",
+      "query": "8936170702210",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00454",
+      "query": "9555046403779",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00457",
+      "query": "8936079124236",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00458",
+      "query": "8936136164403",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00459",
+      "query": "8935001720430",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00460",
+      "query": "8936079121020",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00462",
+      "query": "4710085206346",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00463",
+      "query": "8938533329003",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00465",
+      "query": "9555046466255",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00466",
+      "query": "8936146446711",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00467",
+      "query": "5099864017946",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00468",
+      "query": "8934673702164",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00469",
+      "query": "8936034878006",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00474",
+      "query": "8936079120139",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00475",
+      "query": "8938545001041",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00476",
+      "query": "8935318100062",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00477",
+      "query": "5099864016291",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00478",
+      "query": "9555046466903",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00479",
+      "query": "8936176751021",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00480",
+      "query": "8934673314572",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00481",
+      "query": "8935304201803",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00482",
+      "query": "8934681978360",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00483",
+      "query": "meat",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00485",
+      "query": "cup",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00487",
+      "query": "8938531758287",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00488",
+      "query": "9555046468051",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00489",
+      "query": "8936034878051",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00490",
+      "query": "9555046467061",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00491",
+      "query": "8938511021356",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00492",
+      "query": "9555046406220",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00493",
+      "query": "8935347400300",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00494",
+      "query": "8859578603258",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00495",
+      "query": "8859578600011",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00496",
+      "query": "8936110050395",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00497",
+      "query": "8859578600073",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00498",
+      "query": "8935217411580",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00499",
+      "query": "9555046468099",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00500",
+      "query": "5099864017960",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00501",
+      "query": "5099864016253",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00502",
+      "query": "spray",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00503",
+      "query": "8934673581349",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00504",
+      "query": "8936183006312",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00505",
+      "query": "9300682001304",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00507",
+      "query": "pot",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00508",
+      "query": "Cozy",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00509",
+      "query": "8938562884016",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00510",
+      "query": "8936079124472",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00511",
+      "query": "8850007814306",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00512",
+      "query": "8936079121839",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00513",
+      "query": "8938530880002",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00514",
+      "query": "8938562884368",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00515",
+      "query": "8850199586722",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00516",
+      "query": "8904280103326",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00517",
+      "query": "8938562884375",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00518",
+      "query": "8934564620072",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00519",
+      "query": "3086123242401",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00520",
+      "query": "8936034875333",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00521",
+      "query": "8936023251636",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00523",
+      "query": "8934673701488",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00524",
+      "query": "8936146447718",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00525",
+      "query": "8934673302814",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00526",
+      "query": "8935311112185",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00527",
+      "query": "8936221250097",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00529",
+      "query": "8936221043897",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00530",
+      "query": "8936025776991",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00531",
+      "query": "vanilla",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00532",
+      "query": "8936076278727",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00533",
+      "query": "8938511301502",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00534",
+      "query": "8934588923555",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00535",
+      "query": "8935001720478",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00536",
+      "query": "8936010680999",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00537",
+      "query": "8934868177630",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00538",
+      "query": "4713105913583",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00542",
+      "query": "8936236470732",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00544",
+      "query": "8938561096168",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00545",
+      "query": "8934681960075",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00546",
+      "query": "4903111424283",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00547",
+      "query": "8938508547388",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00549",
+      "query": "8934755010408",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00550",
+      "query": "5099864016239",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00551",
+      "query": "8934563544201",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00552",
+      "query": "8938533329010",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00553",
+      "query": "8809931430571",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00554",
+      "query": "8938508547562",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00555",
+      "query": "8938562194337",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00556",
+      "query": "8934952008116",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00558",
+      "query": "cream cheese",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    },
+    {
+      "test_id": "NSG-EN-00559",
+      "query": "pulppy",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-17T18:31:14.710810"
+    }
+  ],
+  "pass_fail_state_file": "SmartSearch\\test_data\\compare\\pass_fail_state_nsg.json",
+  "pass_fail_store": "nsg"
+}

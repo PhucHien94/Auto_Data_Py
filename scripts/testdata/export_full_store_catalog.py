@@ -10,9 +10,23 @@ Artifact pages where the whole catalog fits under the 16MB artifact size cap
 (~13k SKU/store * ~300 bytes/SKU minified =~ 4-5MB, well under budget), which
 embedding all 20 stores at once (~78MB) cannot.
 
+NGUON DU LIEU (doc truoc khi chay lai):
+  --product-dir nhan NHIEU thu muc ngan cach bang dau phay, XET THEO THU TU UU
+  TIEN tu trai sang phai. Voi moi store, thu muc DAU TIEN co file
+  mart_vi_<store>_product.ndjson se duoc dung. Mac dinh:
+
+    data/ProductInfo_v1.1/v1.1   anh chup 2026-08-28, CHI co store nsg
+                                 18.122 SKU - ban dung cho nsg
+    data/ProductInfo             anh chup 2026-07-27, 21 store
+                                 nsg trong day chi 16.340 SKU, da cu
+
+  Vi sao can thu tu uu tien: truoc day mac dinh tro thang vao data/ProductInfo,
+  nen chay lai ma khong kem tham so se AM THAM sinh lai catalog nsg tu ban cu,
+  de mat dung 1.797 san pham ma v1.1 them vao. manifest.json ghi ro tung store
+  lay tu dau de khong con phai doan. Xem them scripts/product_source.py.
+
 Usage:
-  python scripts/testdata/export_full_store_catalog.py --stores nsg,dng,gvp,wle,tbh \
-    --product-dir data/ProductInfo --out-dir SmartSearch/full_store_catalog
+  python scripts/testdata/export_full_store_catalog.py --stores nsg --desc-keywords
 """
 import argparse
 import json
@@ -39,6 +53,14 @@ def norm_ascii(s):
     s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     return s.replace("đ", "d").replace("Đ", "D").lower()
+
+
+def resolve_store_dir(product_dirs, store):
+    """Thu muc dau tien (theo thu tu uu tien) thuc su co du lieu cua store nay."""
+    for d in product_dirs:
+        if (Path(d) / f"mart_vi_{store}_product.ndjson").exists():
+            return Path(d)
+    return None
 
 
 def load_boilerplate(product_dir):
@@ -114,7 +136,13 @@ def category_label(rec):
     return "Khac"
 
 
-def export_store(store, product_dir, out_dir, with_desc_keywords=False, desc_kw_max=20):
+def export_store(store, product_dirs, out_dir, with_desc_keywords=False, desc_kw_max=20):
+    product_dir = resolve_store_dir(product_dirs, store)
+    if product_dir is None:
+        print(f"[{store}] khong tim thay mart_vi_{store}_product.ndjson trong: "
+              + ", ".join(str(d) for d in product_dirs) + " - bo qua")
+        return None
+    print(f"[{store}] nguon: {product_dir}")
     per_lang = {lang: load_lang(product_dir, lang, store) for lang in LANGS}
     vi = per_lang["vi"]
     if not vi:
@@ -178,13 +206,18 @@ def export_store(store, product_dir, out_dir, with_desc_keywords=False, desc_kw_
     out_path.write_text(payload, encoding="utf-8")
     size_mb = len(payload.encode("utf-8")) / (1024 * 1024)
     print(f"[{store}] {len(rows)} SKU, {size_mb:.2f} MB -> {out_path}")
-    return {"store": store, "count": len(rows), "size_mb": round(size_mb, 2)}
+    return {"store": store, "count": len(rows), "size_mb": round(size_mb, 2),
+            "source_dir": str(product_dir).replace("\\", "/")}
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--stores", required=True, help="comma-separated store codes")
-    p.add_argument("--product-dir", default="data/ProductInfo")
+    p.add_argument("--product-dir", default="data/ProductInfo_v1.1/v1.1,data/ProductInfo",
+                    help="danh sach thu muc nguon, ngan cach bang dau phay, theo THU TU "
+                         "UU TIEN. Moi store lay tu thu muc dau tien co du lieu cua no. "
+                         "Mac dinh uu tien anh chup v1.1 (2026-08-28, chi co nsg) roi moi "
+                         "den v1 (2026-07-27, 21 store).")
     p.add_argument("--out-dir", default="SmartSearch/full_store_catalog")
     p.add_argument("--desc-keywords", action="store_true",
                     help="include a compact 'desc_kw' field (deduped description keywords, "
@@ -193,9 +226,12 @@ def main():
     args = p.parse_args()
 
     stores = [s.strip() for s in args.stores.split(",") if s.strip()]
+    product_dirs = [d.strip() for d in args.product_dir.split(",") if d.strip()]
+    print("Thu tu uu tien nguon: " + " > ".join(product_dirs))
+    print()
     manifest = []
     for store in stores:
-        result = export_store(store, args.product_dir, args.out_dir,
+        result = export_store(store, product_dirs, args.out_dir,
                                with_desc_keywords=args.desc_keywords,
                                desc_kw_max=args.desc_keywords_max)
         if result:

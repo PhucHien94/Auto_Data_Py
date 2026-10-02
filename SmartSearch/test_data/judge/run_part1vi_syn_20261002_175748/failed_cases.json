@@ -1,0 +1,962 @@
+[
+ {
+  "test_id": "NSG-P1-0001",
+  "query": "nho",
+  "kind": "exact",
+  "interpretation": "trái nho",
+  "dev_reason": "top-96: 32 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.87,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.82
+ },
+ {
+  "test_id": "NSG-P1-0003",
+  "query": "ca hoi",
+  "kind": "typo",
+  "interpretation": "cá hồi (thiếu dấu)",
+  "dev_reason": "top-60: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #40",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0004",
+  "query": "đồ ăn hàn",
+  "kind": "concept",
+  "interpretation": "đồ ăn Hàn Quốc",
+  "dev_reason": "top-110: 8 sp không liên quan (0), 29 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.147,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.344
+ },
+ {
+  "test_id": "NSG-P1-0009",
+  "query": "hop qua tết kinh đô",
+  "kind": "typo",
+  "interpretation": "hộp quà Tết Kinh Đô",
+  "dev_reason": "top-103: 21 sp không liên quan (0), 10 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.294,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0011",
+  "query": "lays",
+  "kind": "brand",
+  "interpretation": "brand Lay's",
+  "dev_reason": "top-32: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #29",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0016",
+  "query": "bột giạt",
+  "kind": "typo",
+  "interpretation": "bột giặt",
+  "dev_reason": "top-28: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #22",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.801
+ },
+ {
+  "test_id": "NSG-P1-0017",
+  "query": "kệ để đồ đa năng",
+  "kind": "exact",
+  "interpretation": "kệ để đồ",
+  "dev_reason": "top-8: 2 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #4",
+  "dev_ndcg10": 0.696,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.691
+ },
+ {
+  "test_id": "NSG-P1-0019",
+  "query": "bành mì",
+  "kind": "typo",
+  "interpretation": "bánh mì",
+  "dev_reason": "top-40: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #29",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.923
+ },
+ {
+  "test_id": "NSG-P1-0021",
+  "query": "nước hoa nam",
+  "kind": "exact",
+  "interpretation": "nước hoa (nam)",
+  "dev_reason": "top-171: 19 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.376,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0022",
+  "query": "hạt dưa",
+  "kind": "exact",
+  "interpretation": "hạt dưa",
+  "dev_reason": "top-5: 2 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.723,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.846
+ },
+ {
+  "test_id": "NSG-P1-0023",
+  "query": "rice",
+  "kind": "foreign",
+  "interpretation": "EN: gạo / cơm",
+  "dev_reason": "top-410: 36 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #11",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0025",
+  "query": "gel vuốt tóc",
+  "kind": "exact",
+  "interpretation": "gel/sáp vuốt tóc",
+  "dev_reason": "top-43: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #8",
+  "dev_ndcg10": 0.814,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0026",
+  "query": "củ hành tím",
+  "kind": "exact",
+  "interpretation": "hành tím",
+  "dev_reason": "top-8: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #8",
+  "dev_ndcg10": 0.554,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.755
+ },
+ {
+  "test_id": "NSG-P1-0029",
+  "query": "trái thanh long",
+  "kind": "exact",
+  "interpretation": "thanh long",
+  "dev_reason": "top-12: 2 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.87,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0030",
+  "query": "thực phẩm tươi sống",
+  "kind": "concept",
+  "interpretation": "thực phẩm tươi sống (thịt, cá, rau, trái cây...)",
+  "dev_reason": "top-3732: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #48",
+  "dev_ndcg10": 0.916,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.966
+ },
+ {
+  "test_id": "NSG-P1-0032",
+  "query": "cocacola",
+  "kind": "brand",
+  "interpretation": "brand Coca-Cola",
+  "dev_reason": "top-124: 3 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #15",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.746
+ },
+ {
+  "test_id": "NSG-P1-0033",
+  "query": "わさび",
+  "kind": "foreign",
+  "interpretation": "JA: wasabi / mù tạt",
+  "dev_reason": "top-26: 26 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0034",
+  "query": "라면",
+  "kind": "foreign",
+  "interpretation": "KO: mì ramen",
+  "dev_reason": "top-576: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #4",
+  "dev_ndcg10": 0.905,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0035",
+  "query": "túi rát",
+  "kind": "typo",
+  "interpretation": "túi rác",
+  "dev_reason": "top-24: 0 sp không liên quan (0), 5 sp sai loại / không chấp nhận được (1-2) - đầu tiên #15",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0036",
+  "query": "kit cat",
+  "kind": "typo",
+  "interpretation": "brand KitKat",
+  "dev_reason": "top-13: 6 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.22,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0037",
+  "query": "netsle",
+  "kind": "typo",
+  "interpretation": "brand Nestlé",
+  "dev_reason": "top-35: 11 sp không liên quan (0), 7 sp sai loại / không chấp nhận được (1-2) - đầu tiên #8",
+  "dev_ndcg10": 0.801,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0038",
+  "query": "rổ nhựa đựng đồ",
+  "kind": "exact",
+  "interpretation": "rổ (nhựa)",
+  "dev_reason": "top-68: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #38",
+  "dev_ndcg10": 0.964,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0039",
+  "query": "đồ ăn nhật",
+  "kind": "concept",
+  "interpretation": "đồ ăn Nhật",
+  "dev_reason": "top-154: 0 sp không liên quan (0), 10 sp sai loại / không chấp nhận được (1-2) - đầu tiên #12",
+  "dev_ndcg10": 0.762,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.41
+ },
+ {
+  "test_id": "NSG-P1-0043",
+  "query": "nuowc",
+  "kind": "typo",
+  "interpretation": "nước (gõ telex sót)",
+  "dev_reason": "top-1858: 36 sp không liên quan (0), 7 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.069,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0044",
+  "query": "giỏ quà tết",
+  "kind": "exact",
+  "interpretation": "giỏ/hộp quà Tết",
+  "dev_reason": "top-148: 42 sp không liên quan (0), 7 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.042,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.436
+ },
+ {
+  "test_id": "NSG-P1-0046",
+  "query": "móc quần áo",
+  "kind": "exact",
+  "interpretation": "móc treo quần áo",
+  "dev_reason": "top-47: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #15",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.238
+ },
+ {
+  "test_id": "NSG-P1-0047",
+  "query": "bếp từ",
+  "kind": "exact",
+  "interpretation": "bếp (từ, nướng, ga...)",
+  "dev_reason": "top-2: 0 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.772,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0048",
+  "query": "đồ ăn cho người giảm cân",
+  "kind": "concept",
+  "interpretation": "thực phẩm giảm cân / ít calo",
+  "dev_reason": "top-516: 0 sp không liên quan (0), 49 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.046,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0049",
+  "query": "chế độ ăn eat clean",
+  "kind": "concept",
+  "interpretation": "thực phẩm eat clean / giảm cân",
+  "dev_reason": "top-516: 4 sp không liên quan (0), 30 sp sai loại / không chấp nhận được (1-2) - đầu tiên #6",
+  "dev_ndcg10": 0.587,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0050",
+  "query": "đồ ăn organic",
+  "kind": "exact",
+  "interpretation": "thực phẩm organic / hữu cơ",
+  "dev_reason": "top-80: 37 sp không liên quan (0), 10 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.005,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.132
+ },
+ {
+  "test_id": "NSG-P1-0051",
+  "query": "protein tăng cơ",
+  "kind": "exact",
+  "interpretation": "protein / whey",
+  "dev_reason": "top-2: 2 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.293,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0055",
+  "query": "thuốc diệt côn trùng",
+  "kind": "exact",
+  "interpretation": "thuốc diệt côn trùng/muỗi/gián/kiến",
+  "dev_reason": "top-77: 0 sp không liên quan (0), 12 sp sai loại / không chấp nhận được (1-2) - đầu tiên #39",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0056",
+  "query": "yên mạch giảm cân",
+  "kind": "typo",
+  "interpretation": "yến mạch",
+  "dev_reason": "top-77: 22 sp không liên quan (0), 15 sp sai loại / không chấp nhận được (1-2) - đầu tiên #5",
+  "dev_ndcg10": 0.806,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.22
+ },
+ {
+  "test_id": "NSG-P1-0058",
+  "query": "mỹ phẩm thiên nhiên",
+  "kind": "concept",
+  "interpretation": "mỹ phẩm thiên nhiên / organic",
+  "dev_reason": "top-358: 0 sp không liên quan (0), 22 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.285,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0059",
+  "query": "ốc bươu",
+  "kind": "exact",
+  "interpretation": "ốc bươu",
+  "dev_reason": "top-11: 8 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.27,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0062",
+  "query": "tổ iến",
+  "kind": "typo",
+  "interpretation": "tổ yến",
+  "dev_reason": "top-63: 25 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #15",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0063",
+  "query": "đồ chơi trẻ em thông minh",
+  "kind": "exact",
+  "interpretation": "đồ chơi",
+  "dev_reason": "top-310: 0 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #4",
+  "dev_ndcg10": 0.68,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.852
+ },
+ {
+  "test_id": "NSG-P1-0064",
+  "query": "trái sầu riêng",
+  "kind": "exact",
+  "interpretation": "sầu riêng",
+  "dev_reason": "top-34: 19 sp không liên quan (0), 9 sp sai loại / không chấp nhận được (1-2) - đầu tiên #5",
+  "dev_ndcg10": 0.712,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0065",
+  "query": "thức ăn dặm cho bé 6 tháng",
+  "kind": "exact",
+  "interpretation": "đồ ăn dặm",
+  "dev_reason": "top-30: 5 sp không liên quan (0), 15 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.696,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.232
+ },
+ {
+  "test_id": "NSG-P1-0066",
+  "query": "bình nước giữ nhiệt thể thao",
+  "kind": "exact",
+  "interpretation": "bình nước / giữ nhiệt",
+  "dev_reason": "top-168: 0 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #24",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0071",
+  "query": "dâu ăn",
+  "kind": "typo",
+  "interpretation": "dầu ăn (QA chấp nhận xen dâu tây)",
+  "dev_reason": "top-481: 7 sp không liên quan (0), 11 sp sai loại / không chấp nhận được (1-2) - đầu tiên #10",
+  "dev_ndcg10": 0.936,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0073",
+  "query": "colgate",
+  "kind": "brand",
+  "interpretation": "brand Colgate",
+  "dev_reason": "top-1: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0074",
+  "query": "bim bim",
+  "kind": "exact",
+  "interpretation": "bim bim / snack",
+  "dev_reason": "top-1466: 14 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #12",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0076",
+  "query": "otto",
+  "kind": "brand",
+  "interpretation": "brand Ottogi / Otto",
+  "dev_reason": "top-161: 5 sp không liên quan (0), 8 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.597,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0077",
+  "query": "しょうゆ",
+  "kind": "foreign",
+  "interpretation": "JA: nước tương / xì dầu",
+  "dev_reason": "top-75: 36 sp không liên quan (0), 13 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0078",
+  "query": "피시소스",
+  "kind": "foreign",
+  "interpretation": "KO: nước mắm",
+  "dev_reason": "top-133: 0 sp không liên quan (0), 25 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.567,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0079",
+  "query": "mỹ phẩm",
+  "kind": "concept",
+  "interpretation": "mỹ phẩm (chăm sóc da, trang điểm)",
+  "dev_reason": "top-766: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #8",
+  "dev_ndcg10": 0.933,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0080",
+  "query": "trái me",
+  "kind": "exact",
+  "interpretation": "trái me",
+  "dev_reason": "top-30: 21 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.306,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0086",
+  "query": "dứa",
+  "kind": "exact",
+  "interpretation": "trái dứa (thơm) - không phải sáp thơm",
+  "dev_reason": "top-51: 31 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #13",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.226
+ },
+ {
+  "test_id": "NSG-P1-0088",
+  "query": "oshi lays",
+  "kind": "brand",
+  "interpretation": "brand Oshi / Lay's",
+  "dev_reason": "top-32: 25 sp không liên quan (0), 7 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.03,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0094",
+  "query": "sữa tắm choice l",
+  "kind": "brand",
+  "interpretation": "sữa tắm brand Choice L",
+  "dev_reason": "top-404: 0 sp không liên quan (0), 5 sp sai loại / không chấp nhận được (1-2) - đầu tiên #7",
+  "dev_ndcg10": 0.836,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.798
+ },
+ {
+  "test_id": "NSG-P1-0095",
+  "query": "bông cải xanh",
+  "kind": "exact",
+  "interpretation": "bông cải xanh / súp lơ",
+  "dev_reason": "top-10: 1 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.872,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.704
+ },
+ {
+  "test_id": "NSG-P1-0096",
+  "query": "kem chống nắng",
+  "kind": "exact",
+  "interpretation": "kem chống nắng",
+  "dev_reason": "top-76: 0 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #47",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0098",
+  "query": "ca cao",
+  "kind": "exact",
+  "interpretation": "ca cao",
+  "dev_reason": "top-39: 12 sp không liên quan (0), 12 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.724,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.813
+ },
+ {
+  "test_id": "NSG-P1-0100",
+  "query": "bột bánh bông lan",
+  "kind": "exact",
+  "interpretation": "bột làm bánh (bông lan)",
+  "dev_reason": "top-55: 24 sp không liên quan (0), 14 sp sai loại / không chấp nhận được (1-2) - đầu tiên #7",
+  "dev_ndcg10": 0.823,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.629
+ },
+ {
+  "test_id": "NSG-P1-0101",
+  "query": "bơ đậu phộng",
+  "kind": "exact",
+  "interpretation": "bơ đậu phộng",
+  "dev_reason": "top-10: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #8",
+  "dev_ndcg10": 0.828,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.82
+ },
+ {
+  "test_id": "NSG-P1-0103",
+  "query": "quà cho bố",
+  "kind": "concept",
+  "interpretation": "quà tặng cho bố/nam",
+  "dev_reason": "top-464: 1 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.115,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.064
+ },
+ {
+  "test_id": "NSG-P1-0105",
+  "query": "đồ dùng học tập",
+  "kind": "concept",
+  "interpretation": "dụng cụ học tập",
+  "dev_reason": "top-454: 1 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #11",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0107",
+  "query": "thực đơn low carb",
+  "kind": "concept",
+  "interpretation": "thực phẩm low carb",
+  "dev_reason": "top-516: 0 sp không liên quan (0), 31 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.043,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0108",
+  "query": "thực phẩm ít calo",
+  "kind": "concept",
+  "interpretation": "thực phẩm ít calo",
+  "dev_reason": "top-516: 0 sp không liên quan (0), 47 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.129,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0109",
+  "query": "thực phẩm giàu chất xơ",
+  "kind": "concept",
+  "interpretation": "thực phẩm giàu chất xơ",
+  "dev_reason": "top-1372: 0 sp không liên quan (0), 5 sp sai loại / không chấp nhận được (1-2) - đầu tiên #25",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0110",
+  "query": "đồ dùng đi phượt",
+  "kind": "concept",
+  "interpretation": "đồ du lịch / dã ngoại",
+  "dev_reason": "top-203: 37 sp không liên quan (0), 11 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.019,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0111",
+  "query": "đồ điện gia dụng",
+  "kind": "concept",
+  "interpretation": "đồ điện gia dụng",
+  "dev_reason": "top-350: 5 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #27",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0112",
+  "query": "đồ ăn nhanh",
+  "kind": "concept",
+  "interpretation": "đồ ăn nhanh / ăn liền",
+  "dev_reason": "top-1688: 1 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #36",
+  "dev_ndcg10": 0.678,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.431
+ },
+ {
+  "test_id": "NSG-P1-0113",
+  "query": "đồ nội trợ",
+  "kind": "concept",
+  "interpretation": "đồ dùng nhà bếp / nội trợ",
+  "dev_reason": "top-1279: 34 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.237,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0114",
+  "query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+  "kind": "concept",
+  "interpretation": "TPCN hỗ trợ tiêu hóa",
+  "dev_reason": "top-47: 5 sp không liên quan (0), 26 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.231,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0115",
+  "query": "áo khoác giữ ấm mùa đông",
+  "kind": "exact",
+  "interpretation": "quần áo giữ ấm",
+  "dev_reason": "top-441: 6 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #5",
+  "dev_ndcg10": 0.851,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0117",
+  "query": "추석",
+  "kind": "foreign",
+  "interpretation": "KO: Trung thu (Chuseok)",
+  "dev_reason": "top-298: 37 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.066,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0119",
+  "query": "Mùa tựu trường",
+  "kind": "concept",
+  "interpretation": "đồ dùng học tập",
+  "dev_reason": "top-454: 41 sp không liên quan (0), 4 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0120",
+  "query": "back to school",
+  "kind": "foreign",
+  "interpretation": "EN: đồ dùng học tập",
+  "dev_reason": "top-454: 12 sp không liên quan (0), 11 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.832,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0121",
+  "query": "quay lại trường học",
+  "kind": "concept",
+  "interpretation": "đồ dùng học tập",
+  "dev_reason": "top-454: 2 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #3",
+  "dev_ndcg10": 0.89,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0123",
+  "query": "bia corona",
+  "kind": "brand",
+  "interpretation": "bia Corona",
+  "dev_reason": "mart có 3 sp đúng hoàn toàn nhưng top-202 không có sp nào",
+  "dev_ndcg10": 0.563,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.546
+ },
+ {
+  "test_id": "NSG-P1-0127",
+  "query": "cải cúc",
+  "kind": "exact",
+  "interpretation": "cải cúc / tần ô",
+  "dev_reason": "top-2: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.35,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0128",
+  "query": "cá quả",
+  "kind": "exact",
+  "interpretation": "cá quả / cá lóc",
+  "dev_reason": "top-5: 0 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #3",
+  "dev_ndcg10": 0.55,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.017
+ },
+ {
+  "test_id": "NSG-P1-0129",
+  "query": "dụng cụ vệ sinh nhà cửa",
+  "kind": "concept",
+  "interpretation": "dụng cụ vệ sinh nhà cửa",
+  "dev_reason": "top-1095: 2 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.71,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.124
+ },
+ {
+  "test_id": "NSG-P1-0130",
+  "query": "canh chua cá lóc",
+  "kind": "exact",
+  "interpretation": "canh chua / cá lóc",
+  "dev_reason": "top-11: 0 sp không liên quan (0), 11 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.032,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 0.359
+ },
+ {
+  "test_id": "NSG-P1-0131",
+  "query": "nứơc ngọt",
+  "kind": "typo",
+  "interpretation": "nước ngọt (sai vị trí dấu)",
+  "dev_reason": "top-247: 0 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #29",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0132",
+  "query": "chay",
+  "kind": "typo",
+  "interpretation": "thiếu dấu: chay (thực phẩm chay) / chày / chạy / chảy - user chấp nhận mọi nghĩa (2026-10-02)",
+  "dev_reason": "top-104: 2 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #36",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0133",
+  "query": "dầu gội dau lchoice",
+  "kind": "typo",
+  "interpretation": "dầu gội Choice L",
+  "dev_reason": "top-280: 0 sp không liên quan (0), 6 sp sai loại / không chấp nhận được (1-2) - đầu tiên #16",
+  "dev_ndcg10": 0.772,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.723
+ },
+ {
+  "test_id": "NSG-P1-0134",
+  "query": "tương ớt hàn quốc",
+  "kind": "exact",
+  "interpretation": "tương ớt Hàn Quốc",
+  "dev_reason": "top-66: 0 sp không liên quan (0), 27 sp sai loại / không chấp nhận được (1-2) - đầu tiên #3",
+  "dev_ndcg10": 0.441,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.067
+ },
+ {
+  "test_id": "NSG-P1-0137",
+  "query": "diana",
+  "kind": "brand",
+  "interpretation": "brand Diana",
+  "dev_reason": "top-82: 0 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #46",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0138",
+  "query": "sandwich",
+  "kind": "exact",
+  "interpretation": "bánh sandwich",
+  "dev_reason": "top-10: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #9",
+  "dev_ndcg10": 0.883,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0139",
+  "query": "quần áo thể thao nam",
+  "kind": "exact",
+  "interpretation": "quần áo thể thao",
+  "dev_reason": "top-251: 0 sp không liên quan (0), 2 sp sai loại / không chấp nhận được (1-2) - đầu tiên #34",
+  "dev_ndcg10": 0.946,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.767
+ },
+ {
+  "test_id": "NSG-P1-0140",
+  "query": "nước điện giải",
+  "kind": "exact",
+  "interpretation": "nước điện giải",
+  "dev_reason": "top-33: 0 sp không liên quan (0), 31 sp sai loại / không chấp nhận được (1-2) - đầu tiên #3",
+  "dev_ndcg10": 0.38,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.38
+ },
+ {
+  "test_id": "NSG-P1-0142",
+  "query": "bao tay",
+  "kind": "exact",
+  "interpretation": "bao tay / găng tay",
+  "dev_reason": "top-19: 16 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #3",
+  "dev_ndcg10": 0.359,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.392
+ },
+ {
+  "test_id": "NSG-P1-0143",
+  "query": "roi",
+  "kind": "typo",
+  "interpretation": "trái roi / mận (thiếu dấu)",
+  "dev_reason": "top-21: 19 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #2",
+  "dev_ndcg10": 0.315,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.359
+ },
+ {
+  "test_id": "NSG-P1-0144",
+  "query": "kem dưỡng ẩm cerave 170g",
+  "kind": "brand",
+  "interpretation": "kem dưỡng CeraVe",
+  "dev_reason": "top-149: 1 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #17",
+  "dev_ndcg10": 0.949,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0145",
+  "query": "dép lào",
+  "kind": "exact",
+  "interpretation": "dép (lào, kẹp)",
+  "dev_reason": "top-53: 10 sp không liên quan (0), 8 sp sai loại / không chấp nhận được (1-2) - đầu tiên #25",
+  "dev_ndcg10": 0.683,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0146",
+  "query": "trái bơ",
+  "kind": "exact",
+  "interpretation": "trái bơ (không phải bơ lạt/bơ thực vật)",
+  "dev_reason": "top-2: 2 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0149",
+  "query": "sữa bột p",
+  "kind": "exact",
+  "interpretation": "sữa bột (gõ dở)",
+  "dev_reason": "top-41: 0 sp không liên quan (0), 3 sp sai loại / không chấp nhận được (1-2) - đầu tiên #36",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0150",
+  "query": "bột giặt",
+  "kind": "exact",
+  "interpretation": "bột giặt",
+  "dev_reason": "top-28: 0 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #28",
+  "dev_ndcg10": 1.0,
+  "prod_verdict": "PASSED",
+  "prod_ndcg10": 1.0
+ },
+ {
+  "test_id": "NSG-P1-0152",
+  "query": "돼지파",
+  "kind": "foreign",
+  "interpretation": "KO: củ kiệu (염교)",
+  "dev_reason": "top-4: 4 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0154",
+  "query": "腌藠头",
+  "kind": "foreign",
+  "interpretation": "ZH: kiệu ngâm",
+  "dev_reason": "top-4: 3 sp không liên quan (0), 1 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.007,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0155",
+  "query": "선물 바구니",
+  "kind": "foreign",
+  "interpretation": "KO: giỏ quà",
+  "dev_reason": "top-148: 41 sp không liên quan (0), 9 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.021,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0156",
+  "query": "礼篮",
+  "kind": "foreign",
+  "interpretation": "ZH: giỏ quà",
+  "dev_reason": "top-148: 33 sp không liên quan (0), 10 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.065,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ },
+ {
+  "test_id": "NSG-P1-0157",
+  "query": "正月ギフトバスケット",
+  "kind": "foreign",
+  "interpretation": "JA: giỏ quà Tết",
+  "dev_reason": "top-167: 48 sp không liên quan (0), 0 sp sai loại / không chấp nhận được (1-2) - đầu tiên #1",
+  "dev_ndcg10": 0.0,
+  "prod_verdict": "FAILED",
+  "prod_ndcg10": 0.0
+ }
+]

@@ -1,0 +1,381 @@
+test_id	lang	query	vi_goc
+NSG-ALL-0002	ko	백설탕 그래뉴당	đường cát
+NSG-ALL-0002	en	granulated sugar	đường cát
+NSG-ALL-0002	ru	сахарный песок	đường cát
+NSG-ALL-0002	zh	白砂糖	đường cát
+NSG-ALL-0005	ko	일식	đồ ăn nhật
+NSG-ALL-0005	en	japanese food	đồ ăn nhật
+NSG-ALL-0005	ru	японская еда	đồ ăn nhật
+NSG-ALL-0005	zh	日本料理	đồ ăn nhật
+NSG-ALL-0010	ko	체중 감량자용 음식	đồ ăn cho người giảm cân
+NSG-ALL-0010	en	food for people losing weight	đồ ăn cho người giảm cân
+NSG-ALL-0010	ru	еда для худеющих	đồ ăn cho người giảm cân
+NSG-ALL-0010	zh	减肥人士食品	đồ ăn cho người giảm cân
+NSG-ALL-0012	ko	유기농 음식	đồ ăn organic
+NSG-ALL-0012	en	organic food	đồ ăn organic
+NSG-ALL-0012	ru	органическая еда	đồ ăn organic
+NSG-ALL-0012	zh	有机食品	đồ ăn organic
+NSG-ALL-0024	ko	한식	đồ ăn hàn
+NSG-ALL-0024	en	korean food	đồ ăn hàn
+NSG-ALL-0024	ru	корейская еда	đồ ăn hàn
+NSG-ALL-0024	zh	韩国料理	đồ ăn hàn
+NSG-ALL-0062	ko	우렁이	ốc bươu
+NSG-ALL-0062	en	apple snail	ốc bươu
+NSG-ALL-0062	ru	ампулярия улитка	ốc bươu
+NSG-ALL-0062	zh	田螺	ốc bươu
+NSG-ALL-0066	ko	어린이 스마트 완구	đồ chơi trẻ em thông minh
+NSG-ALL-0066	en	smart toys for children	đồ chơi trẻ em thông minh
+NSG-ALL-0066	ru	умные игрушки для детей	đồ chơi trẻ em thông minh
+NSG-ALL-0066	zh	儿童智能玩具	đồ chơi trẻ em thông minh
+NSG-ALL-0167	ko	설탕	đường
+NSG-ALL-0167	en	sugar	đường
+NSG-ALL-0167	ru	сахар	đường
+NSG-ALL-0167	zh	糖	đường
+NSG-ALL-0241	ko	닭가슴살	ức gà
+NSG-ALL-0241	en	chicken breast	ức gà
+NSG-ALL-0241	ru	куриная грудка	ức gà
+NSG-ALL-0241	zh	鸡胸肉	ức gà
+NSG-ALL-0254	ko	땅콩	đậu phộng
+NSG-ALL-0254	en	peanut	đậu phộng
+NSG-ALL-0254	ru	арахис	đậu phộng
+NSG-ALL-0254	zh	花生	đậu phộng
+NSG-ALL-0264	ko	고추	ớt
+NSG-ALL-0264	en	chili pepper	ớt
+NSG-ALL-0264	ru	перец чили	ớt
+NSG-ALL-0264	zh	辣椒	ớt
+NSG-ALL-0266	ko	두부	đậu hũ
+NSG-ALL-0266	en	tofu	đậu hũ
+NSG-ALL-0266	ru	тофу	đậu hũ
+NSG-ALL-0266	zh	豆腐	đậu hũ
+NSG-ALL-0321	ko	콩	đậu
+NSG-ALL-0321	en	bean	đậu
+NSG-ALL-0321	ru	бобы фасоль	đậu
+NSG-ALL-0321	zh	豆	đậu
+NSG-ALL-0323	ko	젓가락	đũa
+NSG-ALL-0323	en	chopsticks	đũa
+NSG-ALL-0323	ru	палочки для еды	đũa
+NSG-ALL-0323	zh	筷子	đũa
+NSG-ALL-0326	ko	빨대	ống hút
+NSG-ALL-0326	en	drinking straw	ống hút
+NSG-ALL-0326	ru	трубочка для питья	ống hút
+NSG-ALL-0326	zh	吸管	ống hút
+NSG-ALL-0364	ko	두부	đậu hủ
+NSG-ALL-0364	en	tofu	đậu hủ
+NSG-ALL-0364	ru	тофу	đậu hủ
+NSG-ALL-0364	zh	豆腐	đậu hủ
+NSG-ALL-0374	ko	완두콩	đậu hà lan
+NSG-ALL-0374	en	green pea	đậu hà lan
+NSG-ALL-0374	ru	зелёный горошек	đậu hà lan
+NSG-ALL-0374	zh	豌豆	đậu hà lan
+NSG-ALL-0376	ko	닭다리	đùi gà
+NSG-ALL-0376	en	chicken drumstick	đùi gà
+NSG-ALL-0376	ru	куриная голень	đùi gà
+NSG-ALL-0376	zh	鸡腿	đùi gà
+NSG-ALL-0399	ko	파프리카 피망	ớt chuông
+NSG-ALL-0399	en	bell pepper	ớt chuông
+NSG-ALL-0399	ru	болгарский перец	ớt chuông
+NSG-ALL-0399	zh	甜椒	ớt chuông
+NSG-ALL-0494	ko	장난감	đồ chơi
+NSG-ALL-0494	en	toy	đồ chơi
+NSG-ALL-0494	ru	игрушка	đồ chơi
+NSG-ALL-0494	zh	玩具	đồ chơi
+NSG-ALL-0541	ko	구아바	ổi
+NSG-ALL-0541	en	guava	ổi
+NSG-ALL-0541	ru	гуава	ổi
+NSG-ALL-0541	zh	番石榴	ổi
+NSG-ALL-0559	ko	얼음설탕	đường phèn
+NSG-ALL-0559	en	rock sugar	đường phèn
+NSG-ALL-0559	ru	леденцовый сахар	đường phèn
+NSG-ALL-0559	zh	冰糖	đường phèn
+NSG-ALL-0598	ko	종이 빨대	ống hút giấy
+NSG-ALL-0598	en	paper straw	ống hút giấy
+NSG-ALL-0598	ru	бумажная трубочка	ống hút giấy
+NSG-ALL-0598	zh	纸吸管	ống hút giấy
+NSG-ALL-0601	ko	한국 고추	ớt hàn quốc
+NSG-ALL-0601	en	korean chili	ớt hàn quốc
+NSG-ALL-0601	ru	корейский перец чили	ớt hàn quốc
+NSG-ALL-0601	zh	韩国辣椒	ớt hàn quốc
+NSG-ALL-0647	ko	녹두	đậu xanh
+NSG-ALL-0647	en	mung bean	đậu xanh
+NSG-ALL-0647	ru	маш	đậu xanh
+NSG-ALL-0647	zh	绿豆	đậu xanh
+NSG-ALL-0779	ko	오크라	đậu bắp
+NSG-ALL-0779	en	okra	đậu bắp
+NSG-ALL-0779	ru	бамия окра	đậu bắp
+NSG-ALL-0779	zh	秋葵	đậu bắp
+NSG-ALL-0805	ko	팥	đậu đỏ
+NSG-ALL-0805	en	red bean	đậu đỏ
+NSG-ALL-0805	ru	красная фасоль адзуки	đậu đỏ
+NSG-ALL-0805	zh	红豆	đậu đỏ
+NSG-ALL-0866	ko	대두 콩	đậu nành
+NSG-ALL-0866	en	soybean	đậu nành
+NSG-ALL-0866	ru	соя	đậu nành
+NSG-ALL-0866	zh	黄豆	đậu nành
+NSG-ALL-0958	ko	줄기콩 그린빈	đậu que
+NSG-ALL-0958	en	green bean	đậu que
+NSG-ALL-0958	ru	стручковая фасоль	đậu que
+NSG-ALL-0958	zh	四季豆	đậu que
+NSG-ALL-0980	ko	선반	kệ
+NSG-ALL-0980	en	shelf rack	kệ
+NSG-ALL-0980	ru	полка	kệ
+NSG-ALL-0980	zh	架子	kệ
+NSG-ALL-0984	ko	다이어트 감미료	đường ăn kiêng
+NSG-ALL-0984	en	diet sweetener sugar	đường ăn kiêng
+NSG-ALL-0984	ru	диетический сахарозаменитель	đường ăn kiêng
+NSG-ALL-0984	zh	代糖	đường ăn kiêng
+NSG-ALL-1032	ko	고둥 소라	ốc
+NSG-ALL-1032	en	snail	ốc
+NSG-ALL-1032	ru	улитки	ốc
+NSG-ALL-1032	zh	螺	ốc
+NSG-ALL-1052	ko	비엔호아 설탕	đường biên hòa
+NSG-ALL-1052	en	bien hoa sugar	đường biên hòa
+NSG-ALL-1052	ru	сахар bien hoa	đường biên hòa
+NSG-ALL-1052	zh	边和糖	đường biên hòa
+NSG-ALL-1097	ko	연어 머리	đầu cá hồi
+NSG-ALL-1097	en	salmon head	đầu cá hồi
+NSG-ALL-1097	ru	голова лосося	đầu cá hồi
+NSG-ALL-1097	zh	三文鱼头	đầu cá hồi
+NSG-ALL-1156	ko	생활 가전	đồ điện gia dụng
+NSG-ALL-1156	en	home electrical appliances	đồ điện gia dụng
+NSG-ALL-1156	ru	бытовая электротехника	đồ điện gia dụng
+NSG-ALL-1156	zh	家用电器	đồ điện gia dụng
+NSG-ALL-1163	ko	건조 식품 건어물	đồ khô
+NSG-ALL-1163	en	dried goods	đồ khô
+NSG-ALL-1163	ru	сухие продукты	đồ khô
+NSG-ALL-1163	zh	干货	đồ khô
+NSG-ALL-1186	ko	간편 빠른 식사	đồ ăn nhanh gọn
+NSG-ALL-1186	en	quick easy food	đồ ăn nhanh gọn
+NSG-ALL-1186	ru	быстрая простая еда	đồ ăn nhanh gọn
+NSG-ALL-1186	zh	快捷简餐	đồ ăn nhanh gọn
+NSG-ALL-1196	ko	백패킹 여행 용품	đồ dùng đi phượt
+NSG-ALL-1196	en	backpacking travel gear	đồ dùng đi phượt
+NSG-ALL-1196	ru	снаряжение для похода	đồ dùng đi phượt
+NSG-ALL-1196	zh	背包旅行装备	đồ dùng đi phượt
+NSG-ALL-1197	ko	개인 용품	đồ dùng cá nhân
+NSG-ALL-1197	en	personal items	đồ dùng cá nhân
+NSG-ALL-1197	ru	личные принадлежности	đồ dùng cá nhân
+NSG-ALL-1197	zh	个人用品	đồ dùng cá nhân
+NSG-ALL-1230	ko	얼음설탕	đường phèng
+NSG-ALL-1230	en	rock sugar	đường phèng
+NSG-ALL-1230	ru	леденцовый сахар	đường phèng
+NSG-ALL-1230	zh	冰糖	đường phèng
+NSG-ALL-1232	ko	클린이팅 음식	đồ ăn eat clean
+NSG-ALL-1232	en	eat clean food	đồ ăn eat clean
+NSG-ALL-1232	ru	еда чистого питания	đồ ăn eat clean
+NSG-ALL-1232	zh	清洁饮食食品	đồ ăn eat clean
+NSG-ALL-1233	ko	저탄수 음식	đồ ăn low carb
+NSG-ALL-1233	en	low carb food	đồ ăn low carb
+NSG-ALL-1233	ru	низкоуглеводная еда	đồ ăn low carb
+NSG-ALL-1233	zh	低碳水食品	đồ ăn low carb
+NSG-ALL-1234	ko	논 개구리	ếch đồng
+NSG-ALL-1234	en	field frog	ếch đồng
+NSG-ALL-1234	ru	полевая лягушка	ếch đồng
+NSG-ALL-1234	zh	田鸡	ếch đồng
+NSG-ALL-1235	ko	작은 고둥	ốc len
+NSG-ALL-1235	en	mud creeper snail	ốc len
+NSG-ALL-1235	ru	мелкие улитки	ốc len
+NSG-ALL-1235	zh	小螺	ốc len
+NSG-ALL-1295	ko	콩 통조림	đậu đóng hộp
+NSG-ALL-1295	en	canned beans	đậu đóng hộp
+NSG-ALL-1295	ru	консервированная фасоль	đậu đóng hộp
+NSG-ALL-1295	zh	豆类罐头	đậu đóng hộp
+NSG-ALL-1367	ko	마늘 고추 땅콩	đậu phộng tỏi ớt
+NSG-ALL-1367	en	garlic chili peanut	đậu phộng tỏi ớt
+NSG-ALL-1367	ru	арахис с чесноком и чили	đậu phộng tỏi ớt
+NSG-ALL-1367	zh	蒜香辣花生	đậu phộng tỏi ớt
+NSG-ALL-1452	ko	황설탕	đường vàng
+NSG-ALL-1452	en	brown sugar	đường vàng
+NSG-ALL-1452	ru	коричневый сахар	đường vàng
+NSG-ALL-1452	zh	黄糖	đường vàng
+NSG-ALL-1462	ko	떤떤 땅콩	đậu phộng tân tân
+NSG-ALL-1462	en	tan tan peanut	đậu phộng tân tân
+NSG-ALL-1462	ru	арахис tan tan	đậu phộng tân tân
+NSG-ALL-1462	zh	tan tan 花生	đậu phộng tân tân
+NSG-ALL-1478	ko	주전자	ấm đun
+NSG-ALL-1478	en	kettle	ấm đun
+NSG-ALL-1478	ru	чайник	ấm đun
+NSG-ALL-1478	zh	水壶	ấm đun
+NSG-ALL-1579	ko	전기 콘센트 멀티탭	ổ cắm điện
+NSG-ALL-1579	en	power socket outlet	ổ cắm điện
+NSG-ALL-1579	ru	электрическая розетка	ổ cắm điện
+NSG-ALL-1579	zh	电源插座	ổ cắm điện
+NSG-ALL-1594	ko	스테인리스 젓가락	đũa inox
+NSG-ALL-1594	en	stainless steel chopsticks	đũa inox
+NSG-ALL-1594	ru	палочки из нержавеющей стали	đũa inox
+NSG-ALL-1594	zh	不锈钢筷	đũa inox
+NSG-ALL-1602	ko	전기 포트	ấm đun siêu tốc
+NSG-ALL-1602	en	electric kettle	ấm đun siêu tốc
+NSG-ALL-1602	ru	электрочайник	ấm đun siêu tốc
+NSG-ALL-1602	zh	电热水壶	ấm đun siêu tốc
+NSG-ALL-1690	ko	청고추	ớt xanh
+NSG-ALL-1690	en	green chili	ớt xanh
+NSG-ALL-1690	ru	зелёный чили	ớt xanh
+NSG-ALL-1690	zh	青辣椒	ớt xanh
+NSG-ALL-1728	ko	식품 보관	đựng thực phẩm
+NSG-ALL-1728	en	food storage	đựng thực phẩm
+NSG-ALL-1728	ru	хранение продуктов	đựng thực phẩm
+NSG-ALL-1728	zh	食品储存	đựng thực phẩm
+NSG-ALL-1736	ko	득비엣	đức việt
+NSG-ALL-1736	en	duc viet	đức việt
+NSG-ALL-1736	ru	duc viet	đức việt
+NSG-ALL-1736	zh	duc viet	đức việt
+NSG-ALL-1773	ko	닭 봉 윗날개	đùi tỏi gà
+NSG-ALL-1773	en	chicken drumette	đùi tỏi gà
+NSG-ALL-1773	ru	куриные крылышки голень	đùi tỏi gà
+NSG-ALL-1773	zh	鸡翅根	đùi tỏi gà
+NSG-ALL-1982	ko	키토 음식	đồ ăn keto
+NSG-ALL-1982	en	keto food	đồ ăn keto
+NSG-ALL-1982	ru	кето еда	đồ ăn keto
+NSG-ALL-1982	zh	生酮食品	đồ ăn keto
+NSG-ALL-1986	ko	건강식	đồ ăn healthy
+NSG-ALL-1986	en	healthy food	đồ ăn healthy
+NSG-ALL-1986	ru	здоровая еда	đồ ăn healthy
+NSG-ALL-1986	zh	健康食品	đồ ăn healthy
+NSG-ALL-2011	ko	당뇨 환자용 감미료	đường dành cho người tiểu đường
+NSG-ALL-2011	en	sugar for diabetics	đường dành cho người tiểu đường
+NSG-ALL-2011	ru	сахар для диабетиков	đường dành cho người tiểu đường
+NSG-ALL-2011	zh	糖尿病人用糖	đường dành cho người tiểu đường
+NSG-ALL-2012	ko	생활 가정용품	đồ dùng gia dụng
+NSG-ALL-2012	en	household items	đồ dùng gia dụng
+NSG-ALL-2012	ru	хозяйственные товары	đồ dùng gia dụng
+NSG-ALL-2012	zh	家居用品	đồ dùng gia dụng
+NSG-ALL-2013	ko	스마트 가전 생활용품	đồ gia dụng thông minh
+NSG-ALL-2013	en	smart household appliances	đồ gia dụng thông minh
+NSG-ALL-2013	ru	умная бытовая техника	đồ gia dụng thông minh
+NSG-ALL-2013	zh	智能家居用品	đồ gia dụng thông minh
+NSG-ALL-2015	ko	스테인리스 주방용품	đồ bếp inox
+NSG-ALL-2015	en	stainless steel kitchenware	đồ bếp inox
+NSG-ALL-2015	ru	кухонная утварь из нержавейки	đồ bếp inox
+NSG-ALL-2015	zh	不锈钢厨具	đồ bếp inox
+NSG-ALL-2028	ko	화장실 욕실 용품	đồ dùng phòng tắm
+NSG-ALL-2028	en	bathroom supplies	đồ dùng phòng tắm
+NSG-ALL-2028	ru	товары для ванной комнаты	đồ dùng phòng tắm
+NSG-ALL-2028	zh	卫浴用品	đồ dùng phòng tắm
+NSG-ALL-2029	ko	욕실 용품	đồ dùng nhà tắm
+NSG-ALL-2029	en	bathroom items	đồ dùng nhà tắm
+NSG-ALL-2029	ru	принадлежности для ванной	đồ dùng nhà tắm
+NSG-ALL-2029	zh	浴室用品	đồ dùng nhà tắm
+NSG-ALL-2031	ko	양념통	đồ đựng gia vị
+NSG-ALL-2031	en	spice container	đồ đựng gia vị
+NSG-ALL-2031	ru	ёмкость для специй	đồ đựng gia vị
+NSG-ALL-2031	zh	调味盒	đồ đựng gia vị
+NSG-ALL-2035	ko	유아 교육 완구	đồ chơi giáo dục cho bé
+NSG-ALL-2035	en	educational toys for kids	đồ chơi giáo dục cho bé
+NSG-ALL-2035	ru	развивающие игрушки для детей	đồ chơi giáo dục cho bé
+NSG-ALL-2035	zh	儿童益智玩具	đồ chơi giáo dục cho bé
+NSG-ALL-2038	ko	사무실 간식	đồ ăn vặt văn phòng
+NSG-ALL-2038	en	office snacks	đồ ăn vặt văn phòng
+NSG-ALL-2038	ru	офисные снеки	đồ ăn vặt văn phòng
+NSG-ALL-2038	zh	办公室零食	đồ ăn vặt văn phòng
+NSG-ALL-2039	ko	캠핑 용품	đồ dùng cắm trại
+NSG-ALL-2039	en	camping supplies	đồ dùng cắm trại
+NSG-ALL-2039	ru	туристическое снаряжение	đồ dùng cắm trại
+NSG-ALL-2039	zh	露营用品	đồ dùng cắm trại
+NSG-ALL-2041	ko	야외 나들이 용품	đồ dùng dã ngoại
+NSG-ALL-2041	en	picnic outdoor supplies	đồ dùng dã ngoại
+NSG-ALL-2041	ru	принадлежности для пикника	đồ dùng dã ngoại
+NSG-ALL-2041	zh	户外野餐用品	đồ dùng dã ngoại
+NSG-ALL-2045	ko	여행 용품	đồ dùng đi du lịch
+NSG-ALL-2045	en	travel supplies	đồ dùng đi du lịch
+NSG-ALL-2045	ru	дорожные принадлежности	đồ dùng đi du lịch
+NSG-ALL-2045	zh	旅行用品	đồ dùng đi du lịch
+NSG-ALL-2046	ko	사무용품	đồ dùng văn phòng
+NSG-ALL-2046	en	office supplies	đồ dùng văn phòng
+NSG-ALL-2046	ru	офисные принадлежности	đồ dùng văn phòng
+NSG-ALL-2046	zh	办公用品	đồ dùng văn phòng
+NSG-ALL-2048	ko	음식	đồ ăn
+NSG-ALL-2048	en	food	đồ ăn
+NSG-ALL-2048	ru	еда	đồ ăn
+NSG-ALL-2048	zh	食物	đồ ăn
+NSG-ALL-2050	ko	탄산음료	đồ uống có ga
+NSG-ALL-2050	en	carbonated drink	đồ uống có ga
+NSG-ALL-2050	ru	газированный напиток	đồ uống có ga
+NSG-ALL-2050	zh	碳酸饮料	đồ uống có ga
+NSG-ALL-2054	ko	살림 주방 용품	đồ nội trợ
+NSG-ALL-2054	en	housekeeping items	đồ nội trợ
+NSG-ALL-2054	ru	товары для домашнего хозяйства	đồ nội trợ
+NSG-ALL-2054	zh	家务用品	đồ nội trợ
+NSG-ALL-2057	ko	엄마와 아기 용품	đồ dùng cho mẹ và bé
+NSG-ALL-2057	en	mother and baby supplies	đồ dùng cho mẹ và bé
+NSG-ALL-2057	ru	товары для мамы и малыша	đồ dùng cho mẹ và bé
+NSG-ALL-2057	zh	母婴用品	đồ dùng cho mẹ và bé
+NSG-ALL-2062	ko	직장인 식사	đồ ăn cho dân văn phòng
+NSG-ALL-2062	en	food for office workers	đồ ăn cho dân văn phòng
+NSG-ALL-2062	ru	еда для офисных работников	đồ ăn cho dân văn phòng
+NSG-ALL-2062	zh	上班族食品	đồ ăn cho dân văn phòng
+NSG-ALL-2065	ko	운동 후 음료	đồ uống sau khi tập gym
+NSG-ALL-2065	en	post workout drink	đồ uống sau khi tập gym
+NSG-ALL-2065	ru	напиток после тренировки	đồ uống sau khi tập gym
+NSG-ALL-2065	zh	健身后饮品	đồ uống sau khi tập gym
+NSG-ALL-2069	ko	반려동물 케어 용품	đồ dùng chăm sóc thú cưng
+NSG-ALL-2069	en	pet care supplies	đồ dùng chăm sóc thú cưng
+NSG-ALL-2069	ru	товары по уходу за питомцами	đồ dùng chăm sóc thú cưng
+NSG-ALL-2069	zh	宠物护理用品	đồ dùng chăm sóc thú cưng
+NSG-ALL-2070	ko	반려동물 장난감	đồ chơi cho thú cưng
+NSG-ALL-2070	en	pet toys	đồ chơi cho thú cưng
+NSG-ALL-2070	ru	игрушки для питомцев	đồ chơi cho thú cưng
+NSG-ALL-2070	zh	宠物玩具	đồ chơi cho thú cưng
+NSG-ALL-2074	ko	스마트 주방 용품	đồ dùng nhà bếp thông minh
+NSG-ALL-2074	en	smart kitchen items	đồ dùng nhà bếp thông minh
+NSG-ALL-2074	ru	умные кухонные принадлежности	đồ dùng nhà bếp thông minh
+NSG-ALL-2074	zh	智能厨房用品	đồ dùng nhà bếp thông minh
+NSG-ALL-2090	ko	팜슈가	đường thốt nốt
+NSG-ALL-2090	en	palm sugar	đường thốt nốt
+NSG-ALL-2090	ru	пальмовый сахар	đường thốt nốt
+NSG-ALL-2090	zh	棕榈糖	đường thốt nốt
+NSG-ALL-2310	ko	해변용 의류 비치웨어	đồ mặc đi biển
+NSG-ALL-2310	en	beachwear	đồ mặc đi biển
+NSG-ALL-2310	ru	пляжная одежда	đồ mặc đi biển
+NSG-ALL-2310	zh	沙滩装	đồ mặc đi biển
+NSG-ALL-2313	ko	편안한 남성 속옷	đồ lót nam thoải mái
+NSG-ALL-2313	en	comfortable men underwear	đồ lót nam thoải mái
+NSG-ALL-2313	ru	удобное мужское бельё	đồ lót nam thoải mái
+NSG-ALL-2313	zh	舒适男士内衣	đồ lót nam thoải mái
+NSG-ALL-2316	ko	소형견 장난감	đồ chơi cho chó nhỏ
+NSG-ALL-2316	en	toys for small dogs	đồ chơi cho chó nhỏ
+NSG-ALL-2316	ru	игрушки для маленьких собак	đồ chơi cho chó nhỏ
+NSG-ALL-2316	zh	小型犬玩具	đồ chơi cho chó nhỏ
+NSG-ALL-2351	ko	연말 파티용 주류	đồ uống có cồn cho tiệc cuối năm
+NSG-ALL-2351	en	alcoholic drinks for year end party	đồ uống có cồn cho tiệc cuối năm
+NSG-ALL-2351	ru	алкогольные напитки для новогодней вечеринки	đồ uống có cồn cho tiệc cuối năm
+NSG-ALL-2351	zh	年终派对酒类	đồ uống có cồn cho tiệc cuối năm
+NSG-ALL-2363	ko	새 학기 준비 용품	đồ dùng chuẩn bị năm học mới
+NSG-ALL-2363	en	back to school supplies	đồ dùng chuẩn bị năm học mới
+NSG-ALL-2363	ru	принадлежности к новому учебному году	đồ dùng chuẩn bị năm học mới
+NSG-ALL-2363	zh	新学期用品	đồ dùng chuẩn bị năm học mới
+NSG-ALL-2365	ko	1세 아기 장난감	đồ chơi cho bé 1 tuổi
+NSG-ALL-2365	en	toys for 1 year old baby	đồ chơi cho bé 1 tuổi
+NSG-ALL-2365	ru	игрушки для годовалого малыша	đồ chơi cho bé 1 tuổi
+NSG-ALL-2365	zh	1岁宝宝玩具	đồ chơi cho bé 1 tuổi
+NSG-ALL-2366	ko	지능 발달 블록 퍼즐	đồ chơi xếp hình phát triển trí tuệ
+NSG-ALL-2366	en	puzzle blocks for intelligence development	đồ chơi xếp hình phát triển trí tuệ
+NSG-ALL-2366	ru	пазлы и блоки для развития интеллекта	đồ chơi xếp hình phát triển trí tuệ
+NSG-ALL-2366	zh	益智拼装积木	đồ chơi xếp hình phát triển trí tuệ
+NSG-ALL-2367	ko	어린이 야외 놀이기구	đồ chơi ngoài trời cho trẻ em
+NSG-ALL-2367	en	outdoor toys for children	đồ chơi ngoài trời cho trẻ em
+NSG-ALL-2367	ru	уличные игрушки для детей	đồ chơi ngoài trời cho trẻ em
+NSG-ALL-2367	zh	儿童户外玩具	đồ chơi ngoài trời cho trẻ em
+NSG-ALL-2370	ko	신생아 목욕 장난감	đồ chơi tắm cho bé sơ sinh
+NSG-ALL-2370	en	bath toys for newborn	đồ chơi tắm cho bé sơ sinh
+NSG-ALL-2370	ru	игрушки для купания новорождённых	đồ chơi tắm cho bé sơ sinh
+NSG-ALL-2370	zh	新生儿洗澡玩具	đồ chơi tắm cho bé sơ sinh
+NSG-ALL-2372	ko	집에서 먹는 일식	đồ ăn kiểu Nhật tại nhà
+NSG-ALL-2372	en	japanese style food at home	đồ ăn kiểu Nhật tại nhà
+NSG-ALL-2372	ru	японская еда дома	đồ ăn kiểu Nhật tại nhà
+NSG-ALL-2372	zh	居家日式料理	đồ ăn kiểu Nhật tại nhà
+NSG-ALL-2378	ko	어린이 생일파티 음식	đồ ăn cho tiệc sinh nhật trẻ em
+NSG-ALL-2378	en	food for kids birthday party	đồ ăn cho tiệc sinh nhật trẻ em
+NSG-ALL-2378	ru	еда для детского дня рождения	đồ ăn cho tiệc sinh nhật trẻ em
+NSG-ALL-2378	zh	儿童生日派对食品	đồ ăn cho tiệc sinh nhật trẻ em
+NSG-ALL-2381	ko	모던 주방 용품	đồ dùng phòng bếp hiện đại
+NSG-ALL-2381	en	modern kitchen supplies	đồ dùng phòng bếp hiện đại
+NSG-ALL-2381	ru	современные кухонные принадлежности	đồ dùng phòng bếp hiện đại
+NSG-ALL-2381	zh	现代厨房用品	đồ dùng phòng bếp hiện đại
+NSG-ALL-2384	ko	거실 인테리어 소품	đồ decor phòng khách
+NSG-ALL-2384	en	living room decor items	đồ decor phòng khách
+NSG-ALL-2384	ru	декор для гостиной	đồ decor phòng khách
+NSG-ALL-2384	zh	客厅装饰品	đồ decor phòng khách
+NSG-ALL-2394	ko	노인 건강 관리 용품	đồ dùng chăm sóc sức khỏe người cao tuổi
+NSG-ALL-2394	en	elderly health care supplies	đồ dùng chăm sóc sức khỏe người cao tuổi
+NSG-ALL-2394	ru	товары для ухода за пожилыми	đồ dùng chăm sóc sức khỏe người cao tuổi
+NSG-ALL-2394	zh	老年人保健用品	đồ dùng chăm sóc sức khỏe người cao tuổi

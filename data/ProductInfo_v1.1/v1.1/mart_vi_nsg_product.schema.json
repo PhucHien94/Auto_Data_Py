@@ -1,0 +1,2542 @@
+{
+  "alias": "mart_vi_nsg_product",
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "keyword_mapping": {
+          "match": "att_*",
+          "mapping": {
+            "ignore_above": 1536,
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "formatted_fields": {
+          "match": "*_formated",
+          "match_mapping_type": "string",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "formatted_fields": {
+          "match": "*_formatted",
+          "match_mapping_type": "string",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "price_mapping": {
+          "match": "*price",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "price_mapping": {
+          "match": "price",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "weight_mapping": {
+          "match": "*_weight",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "height_mapping": {
+          "match": "*_height",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "width_mapping": {
+          "match": "*_width",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "depth_mapping": {
+          "match": "*_depth",
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "id_mapping": {
+          "match_mapping_type": "string",
+          "mapping": {
+            "ignore_above": 256,
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "id_mapping": {
+          "match_mapping_type": "long",
+          "mapping": {
+            "ignore_above": 256,
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "url_mapping": {
+          "match": "*url",
+          "match_mapping_type": "string",
+          "mapping": {
+            "index": false,
+            "type": "text"
+          }
+        }
+      },
+      {
+        "key_mapping": {
+          "match": "*key*",
+          "mapping": {
+            "ignore_above": 256,
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "default_string_mapping": {
+          "match_mapping_type": "string",
+          "mapping": {
+            "fields": {
+              "keyword": {
+                "ignore_above": 256,
+                "type": "keyword"
+              }
+            },
+            "ignore_above": 256,
+            "type": "keyword"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "attribute_set_id": {
+        "type": "long"
+      },
+      "benefits_filter": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "best_sellings": {
+        "properties": {
+          "180days": {
+            "type": "double"
+          },
+          "30days": {
+            "type": "double"
+          },
+          "360days": {
+            "type": "double"
+          },
+          "7days": {
+            "type": "double"
+          }
+        }
+      },
+      "bundle_options": {
+        "properties": {
+          "100": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "101": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "102": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "103": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "93": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "94": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "95": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "96": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "97": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "98": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "99": {
+            "properties": {
+              "option_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "options": {
+                "properties": {
+                  "can_change_quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "is_default": {
+                    "type": "boolean"
+                  },
+                  "is_enabled": {
+                    "type": "boolean"
+                  },
+                  "position": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "price_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "product_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "selection_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "thumbnail": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "option_id": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "options": {
+            "properties": {
+              "can_change_quantity": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "is_default": {
+                "type": "boolean"
+              },
+              "is_enabled": {
+                "type": "boolean"
+              },
+              "position": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "price": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "price_type": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "product_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "qty": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "selection_id": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "sku": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "thumbnail": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "title": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "type": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "category_full_path": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "category_ids": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "category_path": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "child_price": {
+        "properties": {
+          "VND": {
+            "properties": {
+              "default": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_discount": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_discount_label": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_formated": {
+                "type": "keyword"
+              },
+              "default_original": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_original_formated": {
+                "type": "keyword"
+              },
+              "price": {
+                "type": "float"
+              },
+              "price_formated": {
+                "type": "keyword"
+              },
+              "special_from_date": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "special_price": {
+                "type": "float"
+              },
+              "special_price_formated": {
+                "type": "keyword"
+              },
+              "special_to_date": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "tier_prices": {
+                "properties": {
+                  "customer_group_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_discount_label": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_original": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_original_formated": {
+                    "type": "keyword"
+                  },
+                  "price": {
+                    "type": "float"
+                  },
+                  "price_formated": {
+                    "type": "keyword"
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value_formated": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "tier_prices_ec": {
+                "properties": {
+                  "customer_group_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_discount_label": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_original": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "default_original_formated": {
+                    "type": "keyword"
+                  },
+                  "price": {
+                    "type": "float"
+                  },
+                  "price_formated": {
+                    "type": "keyword"
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value_formated": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "id": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "child_stock": {
+        "properties": {
+          "id": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "in_stock": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "max_sale_qty": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "min_sale_qty": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "stock_qty": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "color": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "convert_rate": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "created_at": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "cron_run_at": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "custom_attribute": {
+        "type": "nested",
+        "dynamic": "true",
+        "properties": {
+          "*": {
+            "type": "keyword"
+          },
+          "abv": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "acidity": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "aging_potential": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "body": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "box_inside": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "brand": {
+            "type": "text",
+            "fields": {
+              "value": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "analyzer": "positionPayloadAnalyzer"
+          },
+          "brand_origin": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "bundle_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "buy_price_inc_tax": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "certifications": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "class": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "code_1_cat": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "code_2_cat": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "code_3_cat": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "code_4_cat": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "color": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "conformity_mark": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "country_of_manufacture": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "daily_limit_by_cart": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "daily_limit_by_user": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "daily_limit_by_user_from_date": {
+            "type": "date"
+          },
+          "daily_limit_by_user_to_date": {
+            "type": "date"
+          },
+          "description": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "discount_display": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "display_uom": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "disposal_instructions": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "dry_sweet": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_alcohol_concentration": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_daily_limit_by_cart": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_disclaimer": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_priority": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_sale_channels": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_vendor_description": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ec_weight_count": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "enable_gift_wraping": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "enable_rma": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "food_theme": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "fresh_classification": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "fresh_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "fresh_meat": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "gmd_source": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "grape_varietal": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "import_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "importer_address": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "importer_name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "include_saving_point": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "ingredients": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_bnpl": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_bulky": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_dietary_supplement": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_free_gift": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_hamper": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_installation": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_pwp": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_set_up": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_with_gift": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "limit_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "manufacturer_address": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "manufacturer_name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "manufacturer_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "material": {
+            "type": "text",
+            "fielddata": true
+          },
+          "max_delivery_duration": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "maximum_storage_days": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "md_comment": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "meta_description": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "meta_keyword": {
+            "type": "text",
+            "analyzer": "custom_comma_analyzer"
+          },
+          "meta_title": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "min_sale_weight": {
+            "type": "float"
+          },
+          "model": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "nationwide_delivery": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "need_ice_pack": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "non_cod_payment": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "packaging_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "paper_weight": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "popup_notice": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_warranty": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "promo_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "promo_profit_rate": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "published_at": {
+            "type": "date"
+          },
+          "purchase_tax_rate": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "quantity": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "rating": {
+            "type": "long"
+          },
+          "region_village_aop": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "rma_condition": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "rma_duration": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sale_off_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sales_code": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sales_price_exc_tax": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sales_tax_rate": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sales_uom_unit_of_measure": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "shipping_fee_amount": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "short_description": {
+            "type": "text"
+          },
+          "sixty_min_delivery": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "size": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "size_height": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "size_horizontal": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "size_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "size_vertical": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sku": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "special_care_instructions": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "specifications": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "standard_no": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "stop_selling": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "storage_category": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "storage_precautions": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "store_code": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sub_brand": {
+            "type": "text",
+            "fields": {
+              "value": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "analyzer": "positionPayloadAnalyzer"
+          },
+          "sub_brand_new": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sugar_content": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "supplier_name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "tannin": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "tax": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "tax_class_id": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "trader": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "unit": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "usage_duration": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "usage_notes": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "use_default_shipping_fee": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "vendor": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "vendor_address": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "vietnam_registration_no": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "vintage": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "volume": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "volume_metrics_weight": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "warranty_address": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "warranty_period": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "weight": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "weight_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "weight_type_mart": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "delivery": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "description": {
+        "type": "text",
+        "index": false
+      },
+      "ec_status": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "esLastUpdateAtHCM": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ext_overall_rating": {
+        "type": "double"
+      },
+      "ext_overall_review": {
+        "type": "double"
+      },
+      "ext_viewed": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "image_url": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "in_stock": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "label": {
+        "properties": {
+          "active_from": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "active_to": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "bnpl_display_on_category_page": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "bnpl_display_on_detail_page": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "bnpl_display_on_landing_page": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "category_image": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "category_image_size": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "category_label_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "category_position": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "category_style": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "display_in_home_page": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "display_in_my_account": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "display_in_search_page": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "is_single": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "label_id": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "priority": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_image": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_image_size": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_label_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_position": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "product_style": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "status": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "updated_at": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "use_for_parent": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_category_image": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_category_image_size": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_category_label_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_category_position": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_category_style": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_product_image": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_product_image_size": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_product_label_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_product_position": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "web_product_style": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "max_sale_qty": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "media_gallery": {
+        "properties": {
+          "big": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "thumb": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "media_gallery_video": {
+        "properties": {
+          "thumb_image_url": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "video_title": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "video_url": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "min_sale_qty": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "name": {
+        "type": "text",
+        "fields": {
+          "ascii": {
+            "type": "text",
+            "term_vector": "with_positions_offsets",
+            "analyzer": "index_ascii_analyzer",
+            "search_analyzer": "standard_ascii_search_analyzer",
+            "similarity": "similarity_BM25"
+          },
+          "complete": {
+            "type": "text",
+            "term_vector": "with_positions_offsets",
+            "analyzer": "autocomplete_analyzer",
+            "search_analyzer": "autocomplete_search_analyzer",
+            "similarity": "similarity_BM25"
+          },
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "offsets": {
+            "type": "text",
+            "term_vector": "with_positions_offsets",
+            "analyzer": "default",
+            "search_analyzer": "positionPayloadAnalyzer",
+            "similarity": "similarity_BM25"
+          },
+          "prefix": {
+            "type": "text",
+            "term_vector": "with_positions",
+            "norms": false,
+            "analyzer": "default",
+            "search_analyzer": "edge_ngram",
+            "similarity": "similarity_BM25"
+          },
+          "shingle": {
+            "type": "text",
+            "norms": false,
+            "analyzer": "shingle"
+          },
+          "utf8": {
+            "type": "text",
+            "term_vector": "with_positions_offsets",
+            "analyzer": "index_utf8_analyzer",
+            "search_analyzer": "standard_utf8_search_analyzer",
+            "similarity": "similarity_BM25"
+          }
+        },
+        "similarity": "similarity_BM25"
+      },
+      "news_from_date": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "news_to_date": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "objectId": {
+        "type": "long"
+      },
+      "price": {
+        "properties": {
+          "VND": {
+            "properties": {
+              "default": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_bundle_label": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_discount": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_discount_label": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_formated": {
+                "type": "keyword"
+              },
+              "default_original": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_original_formated": {
+                "type": "keyword"
+              },
+              "default_range": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "default_range_original": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "price": {
+                "type": "float"
+              },
+              "price_formated": {
+                "type": "keyword"
+              },
+              "special_from_date": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "special_price": {
+                "type": "float"
+              },
+              "special_price_formated": {
+                "type": "keyword"
+              },
+              "special_to_date": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "tier_prices": {
+                "properties": {
+                  "customer_group_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value_formated": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "tier_prices_ec": {
+                "properties": {
+                  "customer_group_id": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "value_formated": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "price_default": {
+        "type": "double"
+      },
+      "price_discount_amount": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "price_discount_percent": {
+        "type": "long"
+      },
+      "promotion": {
+        "properties": {
+          "coupon_code": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "customer_filter": {
+            "properties": {
+              "action": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "type": {
+                "type": "keyword",
+                "ignore_above": 256
+              },
+              "value": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "discount_description": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "discount_name": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "expire_date": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "expire_date_text": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "from_date": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "image": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "promotion_info": {
+            "properties": {
+              "condition_groups": {
+                "properties": {
+                  "amount": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "conditions": {
+                    "properties": {
+                      "amount": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                      },
+                      "quantity": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                      },
+                      "sku": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                      }
+                    }
+                  },
+                  "quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "title": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "discounts": {
+                "properties": {
+                  "amount": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "buy_qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "disc_qty": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "limit": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "gifts": {
+                "properties": {
+                  "limit": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "quantity": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "sku": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "points": {
+                "properties": {
+                  "limit": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "point_amount": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "point_type": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  },
+                  "sku": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              }
+            }
+          },
+          "promotion_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "rule_id": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "sort_label": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "tc_type": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "term_and_condition": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "term_and_condition_url": {
+            "type": "keyword",
+            "ignore_above": 256
+          },
+          "to_date": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "published_at": {
+        "type": "long"
+      },
+      "related_product_sku": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "score_card": {
+        "type": "long"
+      },
+      "short_description": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "size": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "sku": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "stock_qty": {
+        "type": "long"
+      },
+      "substitute_product_sku": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "thumbnail_url": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "type_id": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "updated_at": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "url": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "url_key": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "visibility_catalog": {
+        "type": "boolean"
+      },
+      "visibility_search": {
+        "type": "boolean"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "analysis": {
+        "filter": {
+          "edge_ngram_back": {
+            "min_gram": "3",
+            "side": "back",
+            "type": "edgeNGram",
+            "max_gram": "64"
+          },
+          "ascii_filter_index": {
+            "type": "asciifolding",
+            "preserve_original": "false"
+          },
+          "edge_ngram_front": {
+            "min_gram": "3",
+            "side": "front",
+            "type": "edgeNGram",
+            "max_gram": "64"
+          },
+          "synonym": {
+            "type": "synonym",
+            "updatable": "true",
+            "synonyms": [
+              "serum,tinh chất"
+            ]
+          },
+          "shingle": {
+            "max_shingle_size": "3",
+            "min_shingle_size": "2",
+            "output_unigrams": "false",
+            "type": "shingle"
+          },
+          "first_word_filter": {
+            "type": "limit",
+            "max_token_count": "2"
+          },
+          "ascii_filter": {
+            "type": "asciifolding",
+            "preserve_original": "true"
+          },
+          "word_delimiter": {
+            "split_on_numerics": "true",
+            "generate_word_parts": "false",
+            "preserve_original": "true",
+            "catenate_words": "false",
+            "generate_number_parts": "false",
+            "catenate_all": "true",
+            "split_on_case_change": "false",
+            "type": "word_delimiter",
+            "catenate_numbers": "false",
+            "stem_english_possessive": "false"
+          }
+        },
+        "char_filter": {
+          "html_strip": {
+            "type": "html_strip"
+          },
+          "special_character": {
+            "pattern": "([\\(\\)_])",
+            "type": "pattern_replace",
+            "replacement": ""
+          },
+          "kill_numbers": {
+            "pattern": "(\\d+)",
+            "replace": "",
+            "type": "pattern_replace"
+          }
+        },
+        "analyzer": {
+          "standard_utf8_analyzer": {
+            "filter": [
+              "lowercase",
+              "word_delimiter",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "keyword"
+          },
+          "index_utf8_analyzer": {
+            "filter": [
+              "word_delimiter",
+              "lowercase",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "standard_ascii_search_analyzer": {
+            "filter": [
+              "ascii_filter_index",
+              "lowercase",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "standard_utf8_search_analyzer": {
+            "filter": [
+              "lowercase",
+              "synonym",
+              "word_delimiter",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "autocomplete_search_analyzer": {
+            "filter": [
+              "lowercase",
+              "ascii_filter",
+              "trim",
+              "synonym"
+            ],
+            "tokenizer": "keyword"
+          },
+          "positionPayloadAnalyzer": {
+            "filter": [
+              "lowercase",
+              "word_delimiter",
+              "ascii_filter",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "shingle": {
+            "filter": [
+              "lowercase",
+              "word_delimiter",
+              "shingle",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "standard_ascii_analyzer": {
+            "filter": [
+              "lowercase",
+              "word_delimiter",
+              "ascii_filter",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "keyword"
+          },
+          "custom_comma_analyzer": {
+            "filter": [
+              "lowercase",
+              "word_delimiter",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "custom_comma_tokenizer"
+          },
+          "edge_ngram": {
+            "filter": [
+              "lowercase",
+              "ascii_filter",
+              "trim",
+              "edge_ngram_front",
+              "edge_ngram_back"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character",
+              "kill_numbers"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          },
+          "autocomplete_analyzer": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "autocomplete"
+          },
+          "index_ascii_analyzer": {
+            "filter": [
+              "ascii_filter_index",
+              "lowercase",
+              "trim"
+            ],
+            "char_filter": [
+              "html_strip",
+              "special_character"
+            ],
+            "type": "custom",
+            "tokenizer": "whitespace"
+          }
+        },
+        "tokenizer": {
+          "comma_pattern": {
+            "pattern": "(,(\\s+)?)",
+            "type": "pattern"
+          },
+          "custom_comma_tokenizer": {
+            "pattern": ",",
+            "type": "pattern"
+          },
+          "autocomplete": {
+            "token_chars": [
+              "letter",
+              "digit",
+              "whitespace"
+            ],
+            "min_gram": "1",
+            "type": "edge_ngram",
+            "max_gram": "30"
+          }
+        }
+      },
+      "number_of_shards": "1",
+      "number_of_replicas": "1"
+    }
+  }
+}

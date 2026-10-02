@@ -1,0 +1,562 @@
+[
+ {
+  "test_id": "NSG-P1-0001",
+  "query": "nho",
+  "kind": "exact",
+  "interpretation": "trái nho",
+  "dev_reason": "2/10 sp top-10 không thỏa (đỏ đầu tiên: #9)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0004",
+  "query": "đồ ăn hàn",
+  "kind": "concept",
+  "interpretation": "đồ ăn Hàn Quốc",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0009",
+  "query": "hop qua tết kinh đô",
+  "kind": "typo",
+  "interpretation": "hộp quà Tết Kinh Đô",
+  "dev_reason": "6/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0010",
+  "query": "bnh kinh do",
+  "kind": "typo",
+  "interpretation": "bánh Kinh Đô",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0014",
+  "query": "dưa hâu",
+  "kind": "typo",
+  "interpretation": "dưa hấu",
+  "dev_reason": "4/10 sp top-10 không thỏa (đỏ đầu tiên: #7)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0017",
+  "query": "kệ để đồ đa năng",
+  "kind": "exact",
+  "interpretation": "kệ để đồ",
+  "dev_reason": "5/8 sp top-8 không thỏa (đỏ đầu tiên: #4)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0020",
+  "query": "gochujang",
+  "kind": "brand",
+  "interpretation": "tương ớt gochujang",
+  "dev_reason": "1/7 sp top-10 không thỏa (đỏ đầu tiên: #7)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0021",
+  "query": "nước hoa nam",
+  "kind": "exact",
+  "interpretation": "nước hoa (nam)",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0022",
+  "query": "hạt dưa",
+  "kind": "exact",
+  "interpretation": "hạt dưa",
+  "dev_reason": "2/5 sp top-5 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0026",
+  "query": "củ hành tím",
+  "kind": "exact",
+  "interpretation": "hành tím",
+  "dev_reason": "3/8 sp top-8 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0029",
+  "query": "trái thanh long",
+  "kind": "exact",
+  "interpretation": "thanh long",
+  "dev_reason": "2/10 sp top-10 không thỏa (đỏ đầu tiên: #9)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0033",
+  "query": "わさび",
+  "kind": "foreign",
+  "interpretation": "JA: wasabi / mù tạt",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0034",
+  "query": "라면",
+  "kind": "foreign",
+  "interpretation": "KO: mì ramen",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #4)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0036",
+  "query": "kit cat",
+  "kind": "typo",
+  "interpretation": "brand KitKat",
+  "dev_reason": "6/7 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0037",
+  "query": "netsle",
+  "kind": "typo",
+  "interpretation": "brand Nestlé",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #8)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0039",
+  "query": "đồ ăn nhật",
+  "kind": "concept",
+  "interpretation": "đồ ăn Nhật",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0043",
+  "query": "nuowc",
+  "kind": "typo",
+  "interpretation": "nước (gõ telex sót)",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0044",
+  "query": "giỏ quà tết",
+  "kind": "exact",
+  "interpretation": "giỏ/hộp quà Tết",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0047",
+  "query": "bếp từ",
+  "kind": "exact",
+  "interpretation": "bếp (từ, nướng, ga...)",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0048",
+  "query": "đồ ăn cho người giảm cân",
+  "kind": "concept",
+  "interpretation": "thực phẩm giảm cân / ít calo",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0049",
+  "query": "chế độ ăn eat clean",
+  "kind": "concept",
+  "interpretation": "thực phẩm eat clean / giảm cân",
+  "dev_reason": "5/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0050",
+  "query": "đồ ăn organic",
+  "kind": "exact",
+  "interpretation": "thực phẩm organic / hữu cơ",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0051",
+  "query": "protein tăng cơ",
+  "kind": "exact",
+  "interpretation": "protein / whey",
+  "dev_reason": "2/2 sp top-2 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0056",
+  "query": "yên mạch giảm cân",
+  "kind": "typo",
+  "interpretation": "yến mạch",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #5)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0058",
+  "query": "mỹ phẩm thiên nhiên",
+  "kind": "concept",
+  "interpretation": "mỹ phẩm thiên nhiên / organic",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0059",
+  "query": "ốc bươu",
+  "kind": "exact",
+  "interpretation": "ốc bươu",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0063",
+  "query": "đồ chơi trẻ em thông minh",
+  "kind": "exact",
+  "interpretation": "đồ chơi",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #4)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0064",
+  "query": "trái sầu riêng",
+  "kind": "exact",
+  "interpretation": "sầu riêng",
+  "dev_reason": "4/10 sp top-10 không thỏa (đỏ đầu tiên: #5)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0065",
+  "query": "thức ăn dặm cho bé 6 tháng",
+  "kind": "exact",
+  "interpretation": "đồ ăn dặm",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #8)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0071",
+  "query": "dâu ăn",
+  "kind": "typo",
+  "interpretation": "dầu ăn (QA chấp nhận xen dâu tây)",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #10)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0073",
+  "query": "colgate",
+  "kind": "brand",
+  "interpretation": "brand Colgate",
+  "dev_reason": "1/1 sp top-1 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0076",
+  "query": "otto",
+  "kind": "brand",
+  "interpretation": "brand Ottogi / Otto",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0077",
+  "query": "しょうゆ",
+  "kind": "foreign",
+  "interpretation": "JA: nước tương / xì dầu",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0078",
+  "query": "피시소스",
+  "kind": "foreign",
+  "interpretation": "KO: nước mắm",
+  "dev_reason": "5/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0079",
+  "query": "mỹ phẩm",
+  "kind": "concept",
+  "interpretation": "mỹ phẩm (chăm sóc da, trang điểm)",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #8)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0080",
+  "query": "trái me",
+  "kind": "exact",
+  "interpretation": "trái me",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0088",
+  "query": "oshi lays",
+  "kind": "brand",
+  "interpretation": "brand Oshi / Lay's",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0093",
+  "query": "cá diêu hồng",
+  "kind": "exact",
+  "interpretation": "cá diêu hồng",
+  "dev_reason": "1/4 sp top-4 không thỏa (đỏ đầu tiên: #4)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0095",
+  "query": "bông cải xanh",
+  "kind": "exact",
+  "interpretation": "bông cải xanh / súp lơ",
+  "dev_reason": "2/10 sp top-10 không thỏa (đỏ đầu tiên: #9)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0098",
+  "query": "ca cao",
+  "kind": "exact",
+  "interpretation": "ca cao",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0100",
+  "query": "bột bánh bông lan",
+  "kind": "exact",
+  "interpretation": "bột làm bánh (bông lan)",
+  "dev_reason": "4/10 sp top-10 không thỏa (đỏ đầu tiên: #7)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0101",
+  "query": "bơ đậu phộng",
+  "kind": "exact",
+  "interpretation": "bơ đậu phộng",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #8)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0103",
+  "query": "quà cho bố",
+  "kind": "concept",
+  "interpretation": "quà tặng cho bố/nam",
+  "dev_reason": "2/3 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0107",
+  "query": "thực đơn low carb",
+  "kind": "concept",
+  "interpretation": "thực phẩm low carb",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0108",
+  "query": "thực phẩm ít calo",
+  "kind": "concept",
+  "interpretation": "thực phẩm ít calo",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0110",
+  "query": "đồ dùng đi phượt",
+  "kind": "concept",
+  "interpretation": "đồ du lịch / dã ngoại",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0113",
+  "query": "đồ nội trợ",
+  "kind": "concept",
+  "interpretation": "đồ dùng nhà bếp / nội trợ",
+  "dev_reason": "6/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0114",
+  "query": "thực phẩm chức năng hỗ trợ tiêu hóa",
+  "kind": "concept",
+  "interpretation": "TPCN hỗ trợ tiêu hóa",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0115",
+  "query": "áo khoác giữ ấm mùa đông",
+  "kind": "exact",
+  "interpretation": "quần áo giữ ấm",
+  "dev_reason": "2/10 sp top-10 không thỏa (đỏ đầu tiên: #5)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0117",
+  "query": "추석",
+  "kind": "foreign",
+  "interpretation": "KO: Trung thu (Chuseok)",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0119",
+  "query": "Mùa tựu trường",
+  "kind": "concept",
+  "interpretation": "đồ dùng học tập",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0120",
+  "query": "back to school",
+  "kind": "foreign",
+  "interpretation": "EN: đồ dùng học tập",
+  "dev_reason": "3/10 sp top-10 không thỏa (đỏ đầu tiên: #6)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0121",
+  "query": "quay lại trường học",
+  "kind": "concept",
+  "interpretation": "đồ dùng học tập",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #3)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0123",
+  "query": "bia corona",
+  "kind": "brand",
+  "interpretation": "bia Corona",
+  "dev_reason": "3/3 sp top-3 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0127",
+  "query": "cải cúc",
+  "kind": "exact",
+  "interpretation": "cải cúc / tần ô",
+  "dev_reason": "2/2 sp top-2 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0128",
+  "query": "cá quả",
+  "kind": "exact",
+  "interpretation": "cá quả / cá lóc",
+  "dev_reason": "3/5 sp top-5 không thỏa (đỏ đầu tiên: #3)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0129",
+  "query": "dụng cụ vệ sinh nhà cửa",
+  "kind": "concept",
+  "interpretation": "dụng cụ vệ sinh nhà cửa",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0130",
+  "query": "canh chua cá lóc",
+  "kind": "exact",
+  "interpretation": "canh chua / cá lóc",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0132",
+  "query": "chay",
+  "kind": "exact",
+  "interpretation": "thực phẩm chay",
+  "dev_reason": "1/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0133",
+  "query": "dầu gội dau lchoice",
+  "kind": "typo",
+  "interpretation": "dầu gội Choice L",
+  "dev_reason": "1/1 sp top-1 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0134",
+  "query": "tương ớt hàn quốc",
+  "kind": "exact",
+  "interpretation": "tương ớt Hàn Quốc",
+  "dev_reason": "7/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0138",
+  "query": "sandwich",
+  "kind": "exact",
+  "interpretation": "bánh sandwich",
+  "dev_reason": "2/10 sp top-10 không thỏa (đỏ đầu tiên: #9)",
+  "prod_verdict": "PASSED"
+ },
+ {
+  "test_id": "NSG-P1-0140",
+  "query": "nước điện giải",
+  "kind": "exact",
+  "interpretation": "nước điện giải",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #3)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0142",
+  "query": "bao tay",
+  "kind": "exact",
+  "interpretation": "bao tay / găng tay",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #3)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0143",
+  "query": "roi",
+  "kind": "typo",
+  "interpretation": "trái roi / mận (thiếu dấu)",
+  "dev_reason": "8/10 sp top-10 không thỏa (đỏ đầu tiên: #2)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0152",
+  "query": "돼지파",
+  "kind": "foreign",
+  "interpretation": "KO: củ kiệu (염교)",
+  "dev_reason": "4/4 sp top-4 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0154",
+  "query": "腌藠头",
+  "kind": "foreign",
+  "interpretation": "ZH: kiệu ngâm",
+  "dev_reason": "4/4 sp top-4 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0155",
+  "query": "선물 바구니",
+  "kind": "foreign",
+  "interpretation": "KO: giỏ quà",
+  "dev_reason": "9/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0156",
+  "query": "礼篮",
+  "kind": "foreign",
+  "interpretation": "ZH: giỏ quà",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1-0157",
+  "query": "正月ギフトバスケット",
+  "kind": "foreign",
+  "interpretation": "JA: giỏ quà Tết",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ }
+]

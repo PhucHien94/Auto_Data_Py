@@ -1,0 +1,240 @@
+{
+  "store": "nsg",
+  "updatedAt": "2026-09-10T16:30:01.642656",
+  "entries": {
+    "NSG-ALL-1157": {
+      "test_id": "NSG-ALL-1157",
+      "query": "món tráng miệng lạnh",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:09:26.771Z"
+    },
+    "NSG-ALL-1152": {
+      "test_id": "NSG-ALL-1152",
+      "query": "trái sung",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:09:42.420Z"
+    },
+    "NSG-ALL-1154": {
+      "test_id": "NSG-ALL-1154",
+      "query": "đèn pin tích điện",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:09:45.766Z"
+    },
+    "NSG-ALL-1168": {
+      "test_id": "NSG-ALL-1168",
+      "query": "trái đủ đủ",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:00.427Z"
+    },
+    "NSG-ALL-1183": {
+      "test_id": "NSG-ALL-1183",
+      "query": "bánh pizza mang về",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:14.175Z"
+    },
+    "NSG-ALL-1185": {
+      "test_id": "NSG-ALL-1185",
+      "query": "bút viết đi làm",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:24.840Z"
+    },
+    "NSG-ALL-1194": {
+      "test_id": "NSG-ALL-1194",
+      "query": "lồng nuôi thú cưng",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:36.091Z"
+    },
+    "NSG-ALL-1198": {
+      "test_id": "NSG-ALL-1198",
+      "query": "bánh cống",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:42.031Z"
+    },
+    "NSG-ALL-1200": {
+      "test_id": "NSG-ALL-1200",
+      "query": "bột báng",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:46.816Z"
+    },
+    "NSG-ALL-1204": {
+      "test_id": "NSG-ALL-1204",
+      "query": "loa bluetooth mini",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:53.911Z"
+    },
+    "NSG-ALL-1205": {
+      "test_id": "NSG-ALL-1205",
+      "query": "mascara chống lem nước",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:10:56.693Z"
+    },
+    "NSG-ALL-1214": {
+      "test_id": "NSG-ALL-1214",
+      "query": "quà tặng đồng nghiệp",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:07.314Z"
+    },
+    "NSG-ALL-1216": {
+      "test_id": "NSG-ALL-1216",
+      "query": "quả ổi xá",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:10.186Z"
+    },
+    "NSG-ALL-1217": {
+      "test_id": "NSG-ALL-1217",
+      "query": "rèm cửa",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:12.511Z"
+    },
+    "NSG-ALL-1219": {
+      "test_id": "NSG-ALL-1219",
+      "query": "tai nghe không dây",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:15.039Z"
+    },
+    "NSG-ALL-1222": {
+      "test_id": "NSG-ALL-1222",
+      "query": "trái ổi xá lị",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:19.081Z"
+    },
+    "NSG-ALL-1225": {
+      "test_id": "NSG-ALL-1225",
+      "query": "váy đầm dự tiệc",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:22.801Z"
+    },
+    "NSG-ALL-1227": {
+      "test_id": "NSG-ALL-1227",
+      "query": "yếm chống thấm",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:29.064Z"
+    },
+    "NSG-ALL-1231": {
+      "test_id": "NSG-ALL-1231",
+      "query": "đường phổi",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-08T09:11:33.475Z"
+    },
+    "NSG-ALL-2123": {
+      "test_id": "NSG-ALL-2123",
+      "query": "chè bắp",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-08T09:11:40.915Z"
+    },
+    "NSG-ALL-2319": {
+      "test_id": "NSG-ALL-2319",
+      "query": "phụ kiện dắt chó đi dạo",
+      "dimension": "semantic_phrase",
+      "markedAt": "2026-09-08T09:11:53.425Z"
+    },
+    "NSG-ALL-2322": {
+      "test_id": "NSG-ALL-2322",
+      "query": "bánh sinh nhật đặt sẵn",
+      "dimension": "semantic_phrase",
+      "markedAt": "2026-09-08T09:11:55.982Z"
+    },
+    "NSG-ALL-2383": {
+      "test_id": "NSG-ALL-2383",
+      "query": "trang trí phòng ngủ ấm cúng",
+      "dimension": "semantic_phrase",
+      "markedAt": "2026-09-08T09:12:09.039Z"
+    },
+    "NSG-ALL-2386": {
+      "test_id": "NSG-ALL-2386",
+      "query": "đồ dùng ngoài sân vườn",
+      "dimension": "semantic_phrase",
+      "markedAt": "2026-09-08T09:12:10.705Z"
+    },
+    "NSG-ALL-1683": {
+      "test_id": "NSG-ALL-1683",
+      "query": "nước giặt xả blue hương nước hoa cho máy giặt cửa trước và cửa trên túi 2.1l",
+      "dimension": "history_verification",
+      "markedAt": "2026-09-08T09:12:43.278Z"
+    },
+    "NSG-ALL-0103": {
+      "test_id": "NSG-ALL-0103",
+      "query": "corona",
+      "dimension": "synonym_variant",
+      "markedAt": "2026-09-09T08:01:08.789Z"
+    },
+    "NSG-ALL-2061": {
+      "test_id": "NSG-ALL-2061",
+      "query": "thực phẩm cho người bận rộn",
+      "dimension": "generic_vague_intent",
+      "markedAt": "2026-09-09T08:24:02.758Z"
+    },
+    "NSG-ALL-2083": {
+      "test_id": "NSG-ALL-2083",
+      "query": "bánh tét",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-09T08:32:39.082Z"
+    },
+    "NSG-ALL-2089": {
+      "test_id": "NSG-ALL-2089",
+      "query": "đường thẻ",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-09T08:32:40.845Z"
+    },
+    "NSG-ALL-2067": {
+      "test_id": "NSG-ALL-2067",
+      "query": "sản phẩm chăm sóc sức khỏe gia đình",
+      "dimension": "generic_vague_intent",
+      "markedAt": "2026-09-09T08:36:08.297Z"
+    },
+    "NSG-ALL-2124": {
+      "test_id": "NSG-ALL-2124",
+      "query": "chè trôi nước",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-09T08:36:20.963Z"
+    },
+    "NSG-ALL-2112": {
+      "test_id": "NSG-ALL-2112",
+      "query": "trái bần",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-09T08:39:27.611Z"
+    },
+    "NSG-ALL-2113": {
+      "test_id": "NSG-ALL-2113",
+      "query": "trái cóc",
+      "dimension": "regional_dialect",
+      "markedAt": "2026-09-09T08:52:33.554Z"
+    },
+    "NSG-ALL-2174": {
+      "test_id": "NSG-ALL-2174",
+      "query": "núm vú giả",
+      "dimension": "synonym_variant",
+      "markedAt": "2026-09-09T08:57:05.960Z"
+    },
+    "NSG-ALL-0500": {
+      "test_id": "NSG-ALL-0500",
+      "query": "vifon",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-10T09:21:34.715Z"
+    },
+    "NSG-ALL-0512": {
+      "test_id": "NSG-ALL-0512",
+      "query": "nước giặt lix",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-10T09:21:41.660Z"
+    },
+    "NSG-ALL-0538": {
+      "test_id": "NSG-ALL-0538",
+      "query": "laurier",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-10T09:23:31.093Z"
+    },
+    "NSG-ALL-0544": {
+      "test_id": "NSG-ALL-0544",
+      "query": "cholimex",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-10T09:23:39.095Z"
+    },
+    "NSG-ALL-0748": {
+      "test_id": "NSG-ALL-0748",
+      "query": "bo bo",
+      "dimension": "benchmark_raw",
+      "markedAt": "2026-09-10T09:24:09.126Z"
+    }
+  }
+}

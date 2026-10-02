@@ -1,0 +1,2515 @@
+{
+ "about": "Intent AI (agent search-judge) cho judge_search_results.py - key = query normalize",
+ "intents": {
+  "nho": {
+   "kind": "exact",
+   "interpretation": "trái nho",
+   "core": [
+    [
+     "nho"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nước giac": {
+   "kind": "typo",
+   "interpretation": "nước giặt",
+   "core": [
+    [
+     "nước giặt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "ca hoi": {
+   "kind": "typo",
+   "interpretation": "cá hồi (thiếu dấu)",
+   "core": [
+    [
+     "cá hồi"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ ăn hàn": {
+   "kind": "concept",
+   "interpretation": "đồ ăn Hàn Quốc",
+   "core": [
+    [
+     "hàn quốc",
+     "hàn",
+     "korea",
+     "korean"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sua": {
+   "kind": "typo",
+   "interpretation": "sữa / sứa (thiếu dấu)",
+   "core": [
+    [
+     "sữa",
+     "sứa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "comfort": {
+   "kind": "brand",
+   "interpretation": "brand Comfort (nước xả vải)",
+   "core": [
+    [
+     "comfort"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "redbull": {
+   "kind": "brand",
+   "interpretation": "brand Red Bull",
+   "core": [
+    [
+     "red bull",
+     "redbull"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "mắm": {
+   "kind": "exact",
+   "interpretation": "mắm / nước mắm",
+   "core": [
+    [
+     "mắm"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "hop qua tết kinh đô": {
+   "kind": "typo",
+   "interpretation": "hộp quà Tết Kinh Đô",
+   "core": [
+    [
+     "kinh đô"
+    ],
+    [
+     "hộp",
+     "quà",
+     "tết"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bnh kinh do": {
+   "kind": "typo",
+   "interpretation": "bánh Kinh Đô",
+   "core": [
+    [
+     "kinh đô",
+     "kinh do"
+    ],
+    [
+     "bánh"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "lays": {
+   "kind": "brand",
+   "interpretation": "brand Lay's",
+   "core": [
+    [
+     "lay's",
+     "lays"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "lê hàn quốc": {
+   "kind": "exact",
+   "interpretation": "trái lê (Hàn Quốc)",
+   "core": [
+    [
+     "lê"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "hộp đựng thực phẩm thủy tinh": {
+   "kind": "exact",
+   "interpretation": "hộp thủy tinh đựng thực phẩm",
+   "core": [
+    [
+     "hộp",
+     "thố"
+    ],
+    [
+     "thủy tinh",
+     "glass"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dưa hâu": {
+   "kind": "typo",
+   "interpretation": "dưa hấu",
+   "core": [
+    [
+     "dưa hấu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nem rán": {
+   "kind": "exact",
+   "interpretation": "nem rán / chả giò",
+   "core": [
+    [
+     "nem",
+     "chả giò"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "exclude": [
+    "nem nướng"
+   ]
+  },
+  "bột giạt": {
+   "kind": "typo",
+   "interpretation": "bột giặt",
+   "core": [
+    [
+     "bột giặt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "kệ để đồ đa năng": {
+   "kind": "exact",
+   "interpretation": "kệ để đồ",
+   "core": [
+    [
+     "kệ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "tăng cân healthy": {
+   "kind": "concept",
+   "interpretation": "sp tăng cân",
+   "core": [
+    [
+     "tăng cân",
+     "weight gain",
+     "mass"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bành mì": {
+   "kind": "typo",
+   "interpretation": "bánh mì",
+   "core": [
+    [
+     "bánh mì"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "gochujang": {
+   "kind": "brand",
+   "interpretation": "tương ớt gochujang",
+   "core": [
+    [
+     "gochujang",
+     "gochungjang",
+     "고추장",
+     "tương ớt hàn quốc",
+     "tương ớt hàn"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nước hoa nam": {
+   "kind": "exact",
+   "interpretation": "nước hoa (nam)",
+   "core": [
+    [
+     "nước hoa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "exclude": [
+    "nước hoa hồng"
+   ]
+  },
+  "hạt dưa": {
+   "kind": "exact",
+   "interpretation": "hạt dưa",
+   "core": [
+    [
+     "hạt dưa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "rice": {
+   "kind": "foreign",
+   "interpretation": "EN: gạo / cơm",
+   "core": [
+    [
+     "gạo",
+     "cơm",
+     "rice"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "mi": {
+   "kind": "typo",
+   "interpretation": "mì / mỳ (thiếu dấu)",
+   "core": [
+    [
+     "mì",
+     "mỳ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "gel vuốt tóc": {
+   "kind": "exact",
+   "interpretation": "gel/sáp vuốt tóc",
+   "core": [
+    [
+     "vuốt tóc",
+     "tạo kiểu tóc",
+     "wax",
+     "sáp vuốt",
+     "gel tóc",
+     "keo xịt tóc",
+     "gôm xịt tóc",
+     "tạo kiểu",
+     "giữ nếp"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "củ hành tím": {
+   "kind": "exact",
+   "interpretation": "hành tím",
+   "core": [
+    [
+     "hành tím"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "rau tần ô": {
+   "kind": "exact",
+   "interpretation": "rau tần ô (cải cúc)",
+   "core": [
+    [
+     "tần ô",
+     "cải cúc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "củ kiệu": {
+   "kind": "exact",
+   "interpretation": "củ kiệu",
+   "core": [
+    [
+     "kiệu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "trái thanh long": {
+   "kind": "exact",
+   "interpretation": "thanh long",
+   "core": [
+    [
+     "thanh long"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thực phẩm tươi sống": {
+   "kind": "concept",
+   "interpretation": "thực phẩm tươi sống (thịt, cá, rau, trái cây...)",
+   "core": [
+    [
+     "thịt",
+     "cá",
+     "tôm",
+     "mực",
+     "rau",
+     "trái",
+     "quả",
+     "nghêu",
+     "sò",
+     "cua",
+     "gà",
+     "bò",
+     "heo",
+     "tươi",
+     "ốc",
+     "hải sản",
+     "cải",
+     "nấm",
+     "trứng",
+     "ba chỉ",
+     "sườn",
+     "fillet",
+     "phi lê"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "THỰC PHẨM TƯƠI SỐNG"
+   ]
+  },
+  "chống lão hóa": {
+   "kind": "concept",
+   "interpretation": "sp chống lão hóa",
+   "core": [
+    [
+     "lão hóa",
+     "anti-aging",
+     "anti aging",
+     "collagen"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cocacola": {
+   "kind": "brand",
+   "interpretation": "brand Coca-Cola",
+   "core": [
+    [
+     "coca-cola",
+     "coca cola",
+     "cocacola",
+     "coca"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "わさび": {
+   "kind": "foreign",
+   "interpretation": "JA: wasabi / mù tạt",
+   "core": [
+    [
+     "wasabi",
+     "mù tạt",
+     "와사비"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "라면": {
+   "kind": "foreign",
+   "interpretation": "KO: mì ramen",
+   "core": [
+    [
+     "mì",
+     "mỳ",
+     "ramen",
+     "ramyun",
+     "라면"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "túi rát": {
+   "kind": "typo",
+   "interpretation": "túi rác",
+   "core": [
+    [
+     "túi rác"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "kit cat": {
+   "kind": "typo",
+   "interpretation": "brand KitKat",
+   "core": [
+    [
+     "kitkat",
+     "kit kat"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "netsle": {
+   "kind": "typo",
+   "interpretation": "brand Nestlé",
+   "core": [
+    [
+     "nestlé",
+     "nestle"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "rổ nhựa đựng đồ": {
+   "kind": "exact",
+   "interpretation": "rổ (nhựa)",
+   "core": [
+    [
+     "rổ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ ăn nhật": {
+   "kind": "concept",
+   "interpretation": "đồ ăn Nhật",
+   "core": [
+    [
+     "nhật",
+     "japan"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "lchoice": {
+   "kind": "typo",
+   "interpretation": "brand Choice L",
+   "core": [
+    [
+     "choice l",
+     "lchoice"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đường cát": {
+   "kind": "exact",
+   "interpretation": "đường cát / đường kính",
+   "core": [
+    [
+     "đường cát",
+     "đường kính",
+     "đường trắng",
+     "đường tinh luyện",
+     "đường vàng",
+     "đường mía",
+     "đường nâu",
+     "đường phèn",
+     "đường hữu cơ",
+     "đường thốt nốt",
+     "đường ăn kiêng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "johnson": {
+   "kind": "brand",
+   "interpretation": "brand Johnson's",
+   "core": [
+    [
+     "johnson"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nuowc": {
+   "kind": "typo",
+   "interpretation": "nước (gõ telex sót)",
+   "core": [
+    [
+     "nước"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "giỏ quà tết": {
+   "kind": "exact",
+   "interpretation": "giỏ/hộp quà Tết",
+   "core": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "power 100": {
+   "kind": "brand",
+   "interpretation": "brand Power 100",
+   "core": [
+    [
+     "power 100",
+     "power100"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "móc quần áo": {
+   "kind": "exact",
+   "interpretation": "móc treo quần áo",
+   "core": [
+    [
+     "móc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "exclude": [
+    "móc khóa",
+    "đồ chơi"
+   ]
+  },
+  "bếp từ": {
+   "kind": "exact",
+   "interpretation": "bếp (từ, nướng, ga...)",
+   "core": [
+    [
+     "bếp từ",
+     "bếp ga",
+     "bếp gas",
+     "bếp hồng ngoại",
+     "bếp nướng",
+     "bếp điện",
+     "bếp cồn",
+     "bếp than",
+     "bếp lẩu",
+     "bếp mini",
+     "bếp đôi",
+     "bếp đơn"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ ăn cho người giảm cân": {
+   "kind": "concept",
+   "interpretation": "thực phẩm giảm cân / ít calo",
+   "core": [
+    [
+     "giảm cân",
+     "ít đường",
+     "không đường",
+     "ít béo",
+     "diet",
+     "keto",
+     "eat clean",
+     "yến mạch",
+     "low carb",
+     "ít calo",
+     "healthy",
+     "hạt chia",
+     "ngũ cốc",
+     "gạo lứt",
+     "whey",
+     "protein",
+     "không béo",
+     "0 calo",
+     "zero"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "chế độ ăn eat clean": {
+   "kind": "concept",
+   "interpretation": "thực phẩm eat clean / giảm cân",
+   "core": [
+    [
+     "giảm cân",
+     "ít đường",
+     "không đường",
+     "ít béo",
+     "diet",
+     "keto",
+     "eat clean",
+     "yến mạch",
+     "low carb",
+     "ít calo",
+     "healthy",
+     "hạt chia",
+     "ngũ cốc",
+     "gạo lứt",
+     "whey",
+     "protein",
+     "không béo",
+     "0 calo",
+     "zero"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ ăn organic": {
+   "kind": "exact",
+   "interpretation": "thực phẩm organic / hữu cơ",
+   "core": [
+    [
+     "organic",
+     "hữu cơ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "protein tăng cơ": {
+   "kind": "exact",
+   "interpretation": "protein / whey",
+   "core": [
+    [
+     "protein",
+     "whey",
+     "tăng cơ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cá kèo": {
+   "kind": "exact",
+   "interpretation": "cá kèo",
+   "core": [
+    [
+     "cá kèo"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "pepci": {
+   "kind": "typo",
+   "interpretation": "brand Pepsi",
+   "core": [
+    [
+     "pepsi"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thớt gỗ nhà bếp": {
+   "kind": "exact",
+   "interpretation": "thớt",
+   "core": [
+    [
+     "thớt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thuốc diệt côn trùng": {
+   "kind": "exact",
+   "interpretation": "thuốc diệt côn trùng/muỗi/gián/kiến",
+   "core": [
+    [
+     "côn trùng",
+     "muỗi",
+     "gián",
+     "kiến",
+     "ruồi",
+     "mối"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "yên mạch giảm cân": {
+   "kind": "typo",
+   "interpretation": "yến mạch",
+   "core": [
+    [
+     "yến mạch",
+     "oat",
+     "oats"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thùng rác thông minh": {
+   "kind": "exact",
+   "interpretation": "thùng rác",
+   "core": [
+    [
+     "thùng rác"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "mỹ phẩm thiên nhiên": {
+   "kind": "concept",
+   "interpretation": "mỹ phẩm thiên nhiên / organic",
+   "core": [
+    [
+     "thiên nhiên",
+     "tự nhiên",
+     "organic",
+     "hữu cơ",
+     "natural",
+     "chiết xuất"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "ốc bươu": {
+   "kind": "exact",
+   "interpretation": "ốc bươu",
+   "core": [
+    [
+     "ốc bươu",
+     "ốc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "gói hút ẩm chống mốc": {
+   "kind": "exact",
+   "interpretation": "gói hút ẩm",
+   "core": [
+    [
+     "hút ẩm",
+     "chống ẩm",
+     "chống mốc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nc mắm": {
+   "kind": "typo",
+   "interpretation": "nước mắm (viết tắt)",
+   "core": [
+    [
+     "nước mắm"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "tổ iến": {
+   "kind": "typo",
+   "interpretation": "tổ yến",
+   "core": [
+    [
+     "tổ yến",
+     "yến sào",
+     "nước yến",
+     "yến chưng",
+     "súp yến",
+     "yến"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "exclude": [
+    "yến mạch"
+   ]
+  },
+  "đồ chơi trẻ em thông minh": {
+   "kind": "exact",
+   "interpretation": "đồ chơi",
+   "core": [
+    [
+     "đồ chơi"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "trái sầu riêng": {
+   "kind": "exact",
+   "interpretation": "sầu riêng",
+   "core": [
+    [
+     "sầu riêng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thức ăn dặm cho bé 6 tháng": {
+   "kind": "exact",
+   "interpretation": "đồ ăn dặm",
+   "core": [
+    [
+     "ăn dặm"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bình nước giữ nhiệt thể thao": {
+   "kind": "exact",
+   "interpretation": "bình nước / giữ nhiệt",
+   "core": [
+    [
+     "bình nước",
+     "bình giữ nhiệt",
+     "ly giữ nhiệt",
+     "bình thể thao",
+     "bình nhựa",
+     "bình inox",
+     "bình đựng nước",
+     "chai nước",
+     "bình lưỡng tính"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bánh hotteok": {
+   "kind": "exact",
+   "interpretation": "bánh hotteok",
+   "core": [
+    [
+     "hotteok"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "khan giấy": {
+   "kind": "typo",
+   "interpretation": "khăn giấy",
+   "core": [
+    [
+     "khăn giấy",
+     "giấy ăn",
+     "giấy vệ sinh",
+     "giấy lau",
+     "khăn ướt",
+     "giấy rút"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "rượu vang đỏ khai vị": {
+   "kind": "exact",
+   "interpretation": "rượu vang",
+   "core": [
+    [
+     "vang"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sủa tươi": {
+   "kind": "typo",
+   "interpretation": "sữa tươi",
+   "core": [
+    [
+     "sữa tươi"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dâu ăn": {
+   "kind": "typo",
+   "interpretation": "dầu ăn (QA chấp nhận xen dâu tây)",
+   "core": [
+    [
+     "dâu",
+     "dầu ăn",
+     "dầu thực vật",
+     "dầu đậu nành",
+     "dầu hướng dương",
+     "dầu ô liu",
+     "dầu oliu",
+     "dầu olive",
+     "dầu mè",
+     "dầu phộng",
+     "dầu cải",
+     "dầu gạo",
+     "dầu dừa",
+     "dầu hạt",
+     "dầu đậu phộng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cam sành": {
+   "kind": "exact",
+   "interpretation": "cam (sành, vàng, xoàn...)",
+   "core": [
+    [
+     "cam"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "require_cats": [
+    "Trái Cây"
+   ]
+  },
+  "colgate": {
+   "kind": "brand",
+   "interpretation": "brand Colgate",
+   "core": [
+    [
+     "colgate"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bim bim": {
+   "kind": "exact",
+   "interpretation": "bim bim / snack",
+   "core": [
+    [
+     "bim bim",
+     "snack",
+     "bánh"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "hạ long": {
+   "kind": "brand",
+   "interpretation": "brand Hạ Long",
+   "core": [
+    [
+     "hạ long"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "otto": {
+   "kind": "brand",
+   "interpretation": "brand Ottogi / Otto",
+   "core": [
+    [
+     "ottogi",
+     "otto"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "しょうゆ": {
+   "kind": "foreign",
+   "interpretation": "JA: nước tương / xì dầu",
+   "core": [
+    [
+     "nước tương",
+     "xì dầu",
+     "soy",
+     "shoyu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "피시소스": {
+   "kind": "foreign",
+   "interpretation": "KO: nước mắm",
+   "core": [
+    [
+     "nước mắm",
+     "피시소스",
+     "액젓"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "mỹ phẩm": {
+   "kind": "concept",
+   "interpretation": "mỹ phẩm (chăm sóc da, trang điểm)",
+   "core": [
+    [
+     "kem dưỡng",
+     "kem nền",
+     "kem chống nắng",
+     "kem trị",
+     "kem mắt",
+     "son",
+     "sữa rửa mặt",
+     "toner",
+     "serum",
+     "mặt nạ",
+     "phấn",
+     "tẩy trang",
+     "dưỡng da",
+     "dưỡng ẩm",
+     "dưỡng môi",
+     "nước hoa hồng",
+     "mascara",
+     "chống nắng",
+     "tẩy tế bào chết",
+     "mỹ phẩm",
+     "lotion",
+     "cushion",
+     "kẻ mắt",
+     "má hồng",
+     "trang điểm",
+     "sữa dưỡng",
+     "essence"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "trái me": {
+   "kind": "exact",
+   "interpretation": "trái me",
+   "core": [
+    [
+     "me"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "hồng sâm hàn quốc": {
+   "kind": "exact",
+   "interpretation": "hồng sâm / nhân sâm",
+   "core": [
+    [
+     "sâm"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "ca phê": {
+   "kind": "typo",
+   "interpretation": "cà phê",
+   "core": [
+    [
+     "cà phê",
+     "coffee",
+     "cafe",
+     "café"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "double rich": {
+   "kind": "brand",
+   "interpretation": "brand Double Rich",
+   "core": [
+    [
+     "double rich"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nước ion": {
+   "kind": "exact",
+   "interpretation": "nước ion / i-on",
+   "core": [
+    [
+     "ion",
+     "i-on"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đầu cá hồi": {
+   "kind": "exact",
+   "interpretation": "cá hồi (đầu cá hồi)",
+   "core": [
+    [
+     "cá hồi"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dứa": {
+   "kind": "exact",
+   "interpretation": "trái dứa (thơm) - không phải sáp thơm",
+   "core": [
+    [
+     "dứa",
+     "trái thơm",
+     "quả thơm",
+     "thơm mật"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "ngủ cốc": {
+   "kind": "typo",
+   "interpretation": "ngũ cốc",
+   "core": [
+    [
+     "ngũ cốc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "oshi lays": {
+   "kind": "brand",
+   "interpretation": "brand Oshi / Lay's",
+   "core": [
+    [
+     "oshi",
+     "lay's",
+     "lays"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dầu dừa vietcoco": {
+   "kind": "brand",
+   "interpretation": "dầu dừa Vietcoco",
+   "core": [
+    [
+     "vietcoco",
+     "dầu dừa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dầu dừa": {
+   "kind": "exact",
+   "interpretation": "dầu dừa",
+   "core": [
+    [
+     "dầu dừa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sensodyne": {
+   "kind": "brand",
+   "interpretation": "brand Sensodyne",
+   "core": [
+    [
+     "sensodyne"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "gạo st25": {
+   "kind": "exact",
+   "interpretation": "gạo ST25",
+   "core": [
+    [
+     "st25",
+     "st 25"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cá diêu hồng": {
+   "kind": "exact",
+   "interpretation": "cá diêu hồng",
+   "core": [
+    [
+     "diêu hồng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sữa tắm choice l": {
+   "kind": "brand",
+   "interpretation": "sữa tắm brand Choice L",
+   "core": [
+    [
+     "sữa tắm"
+    ],
+    [
+     "choice l",
+     "lchoice"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bông cải xanh": {
+   "kind": "exact",
+   "interpretation": "bông cải xanh / súp lơ",
+   "core": [
+    [
+     "bông cải",
+     "súp lơ",
+     "broccoli"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "kem chống nắng": {
+   "kind": "exact",
+   "interpretation": "kem chống nắng",
+   "core": [
+    [
+     "chống nắng",
+     "sunscreen"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "băng vệ sinh hàng ngày": {
+   "kind": "exact",
+   "interpretation": "băng vệ sinh",
+   "core": [
+    [
+     "băng vệ sinh"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "ca cao": {
+   "kind": "exact",
+   "interpretation": "ca cao",
+   "core": [
+    [
+     "ca cao",
+     "cacao",
+     "cocoa"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "gia vị": {
+   "kind": "concept",
+   "interpretation": "gia vị nấu ăn",
+   "core": [
+    [
+     "gia vị",
+     "hạt nêm",
+     "bột ngọt",
+     "bột nêm",
+     "nước mắm",
+     "nước tương",
+     "xì dầu",
+     "dầu hào",
+     "bột canh",
+     "sa tế",
+     "mì chính",
+     "giấm",
+     "ngũ vị hương",
+     "tiêu đen",
+     "tiêu xay",
+     "hạt tiêu",
+     "muối ăn",
+     "muối tôm",
+     "ớt bột",
+     "tương ớt",
+     "quế",
+     "hoa hồi",
+     "sốt ướp",
+     "muối"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "Dầu Ăn, Gia Vị"
+   ]
+  },
+  "bột bánh bông lan": {
+   "kind": "exact",
+   "interpretation": "bột làm bánh (bông lan)",
+   "core": [
+    [
+     "bột"
+    ],
+    [
+     "bánh",
+     "bông lan",
+     "bột mì",
+     "bột nở",
+     "bột năng",
+     "bột bắp"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bơ đậu phộng": {
+   "kind": "exact",
+   "interpretation": "bơ đậu phộng",
+   "core": [
+    [
+     "bơ đậu phộng",
+     "peanut butter"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bao cao": {
+   "kind": "typo",
+   "interpretation": "bao cao su",
+   "core": [
+    [
+     "bao cao su"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "quà cho bố": {
+   "kind": "concept",
+   "interpretation": "quà tặng cho bố/nam",
+   "core": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트",
+     "rượu",
+     "cho nam",
+     "nam giới",
+     "for men",
+     "dao cạo",
+     "nước hoa nam"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "rèm cửa": {
+   "kind": "exact",
+   "interpretation": "rèm cửa",
+   "core": [
+    [
+     "rèm"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ dùng học tập": {
+   "kind": "concept",
+   "interpretation": "dụng cụ học tập",
+   "core": [
+    [
+     "bút",
+     "vở",
+     "tập vở",
+     "thước",
+     "gôm",
+     "bút xóa",
+     "sổ",
+     "balo",
+     "ba lô",
+     "hộp bút",
+     "bìa",
+     "kéo",
+     "hồ dán",
+     "keo dán",
+     "bút màu",
+     "sáp màu",
+     "màu nước",
+     "compa",
+     "cặp sách",
+     "bảng con",
+     "phấn viết",
+     "chuốt",
+     "gọt bút",
+     "nhãn vở",
+     "học sinh",
+     "viết",
+     "hình học",
+     "bút chì",
+     "giấy kiểm tra",
+     "giấy note",
+     "đồng phục",
+     "tập",
+     "tập sinh viên",
+     "tập học sinh",
+     "giấy dán",
+     "ghi chú",
+     "bảng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ khô": {
+   "kind": "concept",
+   "interpretation": "đồ khô (khô, sấy, hạt, nấm, miến...)",
+   "core": [
+    [
+     "khô",
+     "sấy",
+     "hạt điều",
+     "hạt dinh dưỡng",
+     "nấm hương",
+     "nấm mèo",
+     "miến",
+     "bún khô",
+     "gạo",
+     "đậu xanh",
+     "đậu đỏ",
+     "đậu đen",
+     "phở khô",
+     "hủ tiếu",
+     "nui",
+     "mì"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "THỰC PHẨM KHÔ / Thực Phẩm Khô",
+    "Gạo, Mì, Bún, Đậu"
+   ]
+  },
+  "thực đơn low carb": {
+   "kind": "concept",
+   "interpretation": "thực phẩm low carb",
+   "core": [
+    [
+     "giảm cân",
+     "ít đường",
+     "không đường",
+     "ít béo",
+     "diet",
+     "keto",
+     "eat clean",
+     "yến mạch",
+     "low carb",
+     "ít calo",
+     "healthy",
+     "hạt chia",
+     "ngũ cốc",
+     "gạo lứt",
+     "whey",
+     "protein",
+     "không béo",
+     "0 calo",
+     "zero"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thực phẩm ít calo": {
+   "kind": "concept",
+   "interpretation": "thực phẩm ít calo",
+   "core": [
+    [
+     "giảm cân",
+     "ít đường",
+     "không đường",
+     "ít béo",
+     "diet",
+     "keto",
+     "eat clean",
+     "yến mạch",
+     "low carb",
+     "ít calo",
+     "healthy",
+     "hạt chia",
+     "ngũ cốc",
+     "gạo lứt",
+     "whey",
+     "protein",
+     "không béo",
+     "0 calo",
+     "zero"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thực phẩm giàu chất xơ": {
+   "kind": "concept",
+   "interpretation": "thực phẩm giàu chất xơ",
+   "core": [
+    [
+     "chất xơ",
+     "fiber",
+     "yến mạch",
+     "ngũ cốc",
+     "hạt chia",
+     "rau",
+     "trái",
+     "quả",
+     "gạo lứt",
+     "khoai",
+     "đậu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ dùng đi phượt": {
+   "kind": "concept",
+   "interpretation": "đồ du lịch / dã ngoại",
+   "core": [
+    [
+     "du lịch",
+     "dã ngoại",
+     "cắm trại",
+     "đèn pin",
+     "túi ngủ",
+     "túi du lịch",
+     "balo",
+     "ba lô",
+     "lều",
+     "áo mưa",
+     "sạc dự phòng",
+     "gối",
+     "vali",
+     "bình giữ nhiệt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "đồ điện gia dụng": {
+   "kind": "concept",
+   "interpretation": "đồ điện gia dụng",
+   "core": [
+    [
+     "nồi cơm",
+     "nồi chiên",
+     "nồi điện",
+     "nồi lẩu",
+     "bếp",
+     "máy",
+     "quạt",
+     "ấm đun",
+     "ấm siêu tốc",
+     "bàn ủi",
+     "lò vi sóng",
+     "lò nướng",
+     "ổ cắm",
+     "bình đun",
+     "đèn"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "Điện Gia Dụng"
+   ]
+  },
+  "đồ ăn nhanh": {
+   "kind": "concept",
+   "interpretation": "đồ ăn nhanh / ăn liền",
+   "core": [
+    [
+     "mì",
+     "snack",
+     "bánh mì",
+     "bánh bao",
+     "xúc xích",
+     "hamburger",
+     "pizza",
+     "gà rán",
+     "khoai tây chiên",
+     "đồ hộp",
+     "cháo",
+     "ăn liền",
+     "sandwich",
+     "nugget",
+     "cá viên",
+     "bò viên",
+     "phở",
+     "hủ tiếu",
+     "chế biến sẵn"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "Món Ăn Nhanh"
+   ]
+  },
+  "đồ nội trợ": {
+   "kind": "concept",
+   "interpretation": "đồ dùng nhà bếp / nội trợ",
+   "core": [
+    [
+     "nồi",
+     "chảo",
+     "dao",
+     "thớt",
+     "muỗng",
+     "đũa",
+     "chén",
+     "bát",
+     "rổ",
+     "hộp đựng thực phẩm",
+     "hộp nhựa",
+     "hộp thủy tinh",
+     "khăn lau",
+     "khăn bếp",
+     "găng tay",
+     "miếng rửa",
+     "nước rửa chén",
+     "màng bọc",
+     "giấy bạc",
+     "vá",
+     "kéo",
+     "ly",
+     "dĩa",
+     "đĩa",
+     "tạp dề"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "exclude": [
+    "đồ chơi"
+   ]
+  },
+  "thực phẩm chức năng hỗ trợ tiêu hóa": {
+   "kind": "concept",
+   "interpretation": "TPCN hỗ trợ tiêu hóa",
+   "core": [
+    [
+     "tiêu hóa",
+     "nghệ",
+     "men vi sinh",
+     "men tiêu hóa",
+     "probiotic",
+     "lợi khuẩn",
+     "chất xơ",
+     "enzyme"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "áo khoác giữ ấm mùa đông": {
+   "kind": "exact",
+   "interpretation": "quần áo giữ ấm",
+   "core": [
+    [
+     "áo",
+     "quần",
+     "vớ",
+     "tất",
+     "khăn choàng",
+     "găng tay",
+     "mũ",
+     "nón"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "THỜI TRANG"
+   ]
+  },
+  "chuẩn bị năm học mới": {
+   "kind": "concept",
+   "interpretation": "đồ dùng học tập",
+   "core": [
+    [
+     "bút",
+     "vở",
+     "tập vở",
+     "thước",
+     "gôm",
+     "bút xóa",
+     "sổ",
+     "balo",
+     "ba lô",
+     "hộp bút",
+     "bìa",
+     "kéo",
+     "hồ dán",
+     "keo dán",
+     "bút màu",
+     "sáp màu",
+     "màu nước",
+     "compa",
+     "cặp sách",
+     "bảng con",
+     "phấn viết",
+     "chuốt",
+     "gọt bút",
+     "nhãn vở",
+     "học sinh",
+     "viết",
+     "hình học",
+     "bút chì",
+     "giấy kiểm tra",
+     "giấy note",
+     "đồng phục",
+     "tập",
+     "tập sinh viên",
+     "tập học sinh",
+     "giấy dán",
+     "ghi chú",
+     "bảng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "추석": {
+   "kind": "foreign",
+   "interpretation": "KO: Trung thu (Chuseok)",
+   "core": [
+    [
+     "trung thu",
+     "bánh nướng",
+     "bánh dẻo",
+     "lồng đèn",
+     "đèn lồng",
+     "mooncake",
+     "추석",
+     "월병",
+     "송편",
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "moon festival": {
+   "kind": "foreign",
+   "interpretation": "EN: Trung thu",
+   "core": [
+    [
+     "trung thu",
+     "bánh nướng",
+     "bánh dẻo",
+     "lồng đèn",
+     "đèn lồng",
+     "mooncake",
+     "추석",
+     "월병",
+     "송편",
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "mùa tựu trường": {
+   "kind": "concept",
+   "interpretation": "đồ dùng học tập",
+   "core": [
+    [
+     "bút",
+     "vở",
+     "tập vở",
+     "thước",
+     "gôm",
+     "bút xóa",
+     "sổ",
+     "balo",
+     "ba lô",
+     "hộp bút",
+     "bìa",
+     "kéo",
+     "hồ dán",
+     "keo dán",
+     "bút màu",
+     "sáp màu",
+     "màu nước",
+     "compa",
+     "cặp sách",
+     "bảng con",
+     "phấn viết",
+     "chuốt",
+     "gọt bút",
+     "nhãn vở",
+     "học sinh",
+     "viết",
+     "hình học",
+     "bút chì",
+     "giấy kiểm tra",
+     "giấy note",
+     "đồng phục",
+     "tập",
+     "tập sinh viên",
+     "tập học sinh",
+     "giấy dán",
+     "ghi chú",
+     "bảng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "back to school": {
+   "kind": "foreign",
+   "interpretation": "EN: đồ dùng học tập",
+   "core": [
+    [
+     "bút",
+     "vở",
+     "tập vở",
+     "thước",
+     "gôm",
+     "bút xóa",
+     "sổ",
+     "balo",
+     "ba lô",
+     "hộp bút",
+     "bìa",
+     "kéo",
+     "hồ dán",
+     "keo dán",
+     "bút màu",
+     "sáp màu",
+     "màu nước",
+     "compa",
+     "cặp sách",
+     "bảng con",
+     "phấn viết",
+     "chuốt",
+     "gọt bút",
+     "nhãn vở",
+     "học sinh",
+     "viết",
+     "hình học",
+     "bút chì",
+     "giấy kiểm tra",
+     "giấy note",
+     "đồng phục",
+     "tập",
+     "tập sinh viên",
+     "tập học sinh",
+     "giấy dán",
+     "ghi chú",
+     "bảng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "quay lại trường học": {
+   "kind": "concept",
+   "interpretation": "đồ dùng học tập",
+   "core": [
+    [
+     "bút",
+     "vở",
+     "tập vở",
+     "thước",
+     "gôm",
+     "bút xóa",
+     "sổ",
+     "balo",
+     "ba lô",
+     "hộp bút",
+     "bìa",
+     "kéo",
+     "hồ dán",
+     "keo dán",
+     "bút màu",
+     "sáp màu",
+     "màu nước",
+     "compa",
+     "cặp sách",
+     "bảng con",
+     "phấn viết",
+     "chuốt",
+     "gọt bút",
+     "nhãn vở",
+     "học sinh",
+     "viết",
+     "hình học",
+     "bút chì",
+     "giấy kiểm tra",
+     "giấy note",
+     "đồng phục",
+     "tập",
+     "tập sinh viên",
+     "tập học sinh",
+     "giấy dán",
+     "ghi chú",
+     "bảng"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "tía tô": {
+   "kind": "exact",
+   "interpretation": "rau tía tô",
+   "core": [
+    [
+     "tía tô"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bia corona": {
+   "kind": "brand",
+   "interpretation": "bia Corona",
+   "core": [
+    [
+     "corona"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "banh": {
+   "kind": "typo",
+   "interpretation": "bánh / banh (thiếu dấu)",
+   "core": [
+    [
+     "bánh",
+     "banh"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "giay": {
+   "kind": "typo",
+   "interpretation": "giấy / giày (thiếu dấu)",
+   "core": [
+    [
+     "giấy",
+     "giày"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "thit": {
+   "kind": "typo",
+   "interpretation": "thịt (thiếu dấu)",
+   "core": [
+    [
+     "thịt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cải cúc": {
+   "kind": "exact",
+   "interpretation": "cải cúc / tần ô",
+   "core": [
+    [
+     "cải cúc",
+     "tần ô"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "cá quả": {
+   "kind": "exact",
+   "interpretation": "cá quả / cá lóc",
+   "core": [
+    [
+     "cá quả",
+     "cá lóc"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dụng cụ vệ sinh nhà cửa": {
+   "kind": "concept",
+   "interpretation": "dụng cụ vệ sinh nhà cửa",
+   "core": [
+    [
+     "chổi",
+     "cây lau",
+     "lau nhà",
+     "nước lau",
+     "khăn lau",
+     "giẻ",
+     "miếng rửa",
+     "bàn chải cọ",
+     "cọ toilet",
+     "cọ bồn cầu",
+     "bồn cầu",
+     "xô",
+     "thùng rác",
+     "hốt rác",
+     "găng tay",
+     "nước tẩy",
+     "tẩy rửa",
+     "lau kính",
+     "bông lau",
+     "xịt đa năng",
+     "xịt tẩy",
+     "lau sàn",
+     "lau bếp"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "Hóa Phẩm, Vệ Sinh"
+   ]
+  },
+  "canh chua cá lóc": {
+   "kind": "exact",
+   "interpretation": "canh chua / cá lóc",
+   "core": [
+    [
+     "cá lóc",
+     "canh chua"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "nứơc ngọt": {
+   "kind": "typo",
+   "interpretation": "nước ngọt (sai vị trí dấu)",
+   "core": [
+    [
+     "nước ngọt",
+     "coca",
+     "pepsi",
+     "7up",
+     "7 up",
+     "sprite",
+     "fanta",
+     "mirinda",
+     "nước giải khát",
+     "soda",
+     "sarsi",
+     "mountain dew",
+     "schweppes"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "chay": {
+   "kind": "exact",
+   "interpretation": "thực phẩm chay",
+   "core": [
+    [
+     "chay"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dầu gội dau lchoice": {
+   "kind": "typo",
+   "interpretation": "dầu gội Choice L",
+   "core": [
+    [
+     "dầu gội"
+    ],
+    [
+     "choice l",
+     "lchoice"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "tương ớt hàn quốc": {
+   "kind": "exact",
+   "interpretation": "tương ớt Hàn Quốc",
+   "core": [
+    [
+     "tương ớt",
+     "gochujang",
+     "gochungjang"
+    ],
+    [
+     "hàn quốc",
+     "gochujang",
+     "gochungjang",
+     "sempio",
+     "cj",
+     "ottogi",
+     "daesang",
+     "chung jung one",
+     "o'food",
+     "bibigo",
+     "haechandle"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "promess": {
+   "kind": "brand",
+   "interpretation": "brand Promess",
+   "core": [
+    [
+     "promess"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "oatside": {
+   "kind": "brand",
+   "interpretation": "brand Oatside",
+   "core": [
+    [
+     "oatside"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "diana": {
+   "kind": "brand",
+   "interpretation": "brand Diana",
+   "core": [
+    [
+     "diana"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sandwich": {
+   "kind": "exact",
+   "interpretation": "bánh sandwich",
+   "core": [
+    [
+     "sandwich"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "quần áo thể thao nam": {
+   "kind": "exact",
+   "interpretation": "quần áo thể thao",
+   "core": [
+    [
+     "thể thao",
+     "thể dục",
+     "sport",
+     "gym",
+     "jogger"
+    ],
+    [
+     "quần",
+     "áo",
+     "bộ",
+     "đồ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "cats": [
+    "THỜI TRANG / Thể Thao"
+   ]
+  },
+  "nước điện giải": {
+   "kind": "exact",
+   "interpretation": "nước điện giải",
+   "core": [
+    [
+     "điện giải",
+     "ion",
+     "i-on",
+     "pocari",
+     "oresol",
+     "electrolyte",
+     "revive"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "clear": {
+   "kind": "brand",
+   "interpretation": "brand Clear",
+   "core": [
+    [
+     "clear"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bao tay": {
+   "kind": "exact",
+   "interpretation": "bao tay / găng tay",
+   "core": [
+    [
+     "bao tay",
+     "găng tay"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "roi": {
+   "kind": "typo",
+   "interpretation": "trái roi / mận (thiếu dấu)",
+   "core": [
+    [
+     "roi",
+     "mận"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "kem dưỡng ẩm cerave 170g": {
+   "kind": "brand",
+   "interpretation": "kem dưỡng CeraVe",
+   "core": [
+    [
+     "cerave"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "dép lào": {
+   "kind": "exact",
+   "interpretation": "dép (lào, kẹp)",
+   "core": [
+    [
+     "dép"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "trái bơ": {
+   "kind": "exact",
+   "interpretation": "trái bơ (không phải bơ lạt/bơ thực vật)",
+   "core": [
+    [
+     "bơ"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02",
+   "require_cats": [
+    "Trái Cây"
+   ]
+  },
+  "x-men": {
+   "kind": "brand",
+   "interpretation": "brand X-Men",
+   "core": [
+    [
+     "x-men",
+     "xmen"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "hộp quà": {
+   "kind": "exact",
+   "interpretation": "hộp quà",
+   "core": [
+    [
+     "hộp quà",
+     "quà"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "sữa bột p": {
+   "kind": "exact",
+   "interpretation": "sữa bột (gõ dở)",
+   "core": [
+    [
+     "sữa bột"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "bột giặt": {
+   "kind": "exact",
+   "interpretation": "bột giặt",
+   "core": [
+    [
+     "bột giặt"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "수박씨": {
+   "kind": "foreign",
+   "interpretation": "KO: hạt dưa",
+   "core": [
+    [
+     "hạt dưa",
+     "수박씨"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "돼지파": {
+   "kind": "foreign",
+   "interpretation": "KO: củ kiệu (염교)",
+   "core": [
+    [
+     "kiệu",
+     "염교",
+     "락교"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "маринованный лук кьеу": {
+   "kind": "foreign",
+   "interpretation": "RU: kiệu ngâm",
+   "core": [
+    [
+     "kiệu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "腌藠头": {
+   "kind": "foreign",
+   "interpretation": "ZH: kiệu ngâm",
+   "core": [
+    [
+     "kiệu"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "선물 바구니": {
+   "kind": "foreign",
+   "interpretation": "KO: giỏ quà",
+   "core": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "礼篮": {
+   "kind": "foreign",
+   "interpretation": "ZH: giỏ quà",
+   "core": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  },
+  "正月ギフトバスケット": {
+   "kind": "foreign",
+   "interpretation": "JA: giỏ quà Tết",
+   "core": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트",
+     "tết"
+    ]
+   ],
+   "by": "claude",
+   "added": "2026-10-02"
+  }
+ }
+}

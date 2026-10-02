@@ -1,0 +1,1089 @@
+{
+ "summary": {
+  "generated": "2026-10-02T15:44:28",
+  "label": "part1ko_v3",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_part1ko_20261002_131002.json",
+  "asis_cache": "D:\\Testing\\Project\\2026_MartRenew\\Auto_Data_Py\\SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache_ko.json",
+  "topk": 10,
+  "min_ok": 2,
+  "total": 3,
+  "dev": {
+   "PASSED": 1,
+   "FAILED": 2,
+   "N/A": 0
+  },
+  "prod": {
+   "PASSED": 0,
+   "FAILED": 3,
+   "N/A": 0
+  },
+  "dev_ndcg10": 0.224,
+  "prod_ndcg10": 0.0,
+  "dev_p10": 0.333,
+  "prod_p10": 0.0,
+  "prod_missing": 0,
+  "dev_fail_prod_pass": 0,
+  "ai_scored_pairs": 40,
+  "pending_ai": 0
+ },
+ "results": [
+  {
+   "test_id": "NSG-P1KO-0001",
+   "query": "수박씨",
+   "qa_note": "[Multilanguage #1] Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt M",
+   "kind": "foreign",
+   "interpretation": "KO: hạt dưa",
+   "type": [
+    [
+     "hạt dưa",
+     "수박씨"
+    ]
+   ],
+   "constraints": [],
+   "catalog_ok": 5,
+   "k_eff": 5,
+   "dev": {
+    "verdict": "PASSED",
+    "reason": "top-3 đều điểm >= 2",
+    "total": 3,
+    "ndcg10": 0.671,
+    "p10": 1.0,
+    "dist10": {
+     "3": 3
+    },
+    "pending_ai": 0,
+    "items": [
+     {
+      "rank": 1,
+      "sku": "8934760132249",
+      "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G",
+      "cat": "THỰC PHẨM KHÔ / Bánh Kẹo",
+      "rule_score": 3,
+      "score": 3,
+      "reason": "Đúng loại (수박씨) và thỏa mọi ràng buộc",
+      "source": "luật"
+     },
+     {
+      "rank": 2,
+      "sku": "8934680093156",
+      "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G",
+      "cat": "THỰC PHẨM KHÔ / Bánh Kẹo",
+      "rule_score": 3,
+      "score": 3,
+      "reason": "Đúng loại (수박씨) và thỏa mọi ràng buộc",
+      "source": "luật"
+     },
+     {
+      "rank": 3,
+      "sku": "8934680095242",
+      "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G",
+      "cat": "THỰC PHẨM KHÔ / Bánh Kẹo",
+      "rule_score": 3,
+      "score": 3,
+      "reason": "Đúng loại (수박씨) và thỏa mọi ràng buộc",
+      "source": "luật"
+     }
+    ]
+   },
+   "prod": {
+    "verdict": "FAILED",
+    "reason": "top-5: 5 sp không liên quan (0), 0 sp sai loại (1) - đầu tiên #1",
+    "total": 10,
+    "ndcg10": 0.0,
+    "p10": 0.0,
+    "dist10": {
+     "0": 10
+    },
+    "pending_ai": 0,
+    "items": [
+     {
+      "rank": 1,
+      "sku": "8859578600257",
+      "name": "Playmore 수박 캔디 22G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Kẹo vị dưa hấu, không phải hạt dưa",
+      "source": "AI"
+     },
+     {
+      "rank": 2,
+      "sku": "8809004644287",
+      "name": "Twizel 수박 맛 젤리 스틱 70g",
+      "cat": "THỰC PHẨM KHÔ / Bánh Kẹo",
+      "rule_score": 1,
+      "score": 0,
+      "reason": "Thạch vị dưa hấu, không phải hạt dưa",
+      "source": "AI"
+     },
+     {
+      "rank": 3,
+      "sku": "0400317870004",
+      "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 M 2.6kg",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Trái Cây",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Trái dưa hấu không hạt, chỉ trùng chữ 수박",
+      "source": "AI"
+     },
+     {
+      "rank": 4,
+      "sku": "0400317880003",
+      "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 L 3.2kg",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Trái Cây",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Trái dưa hấu không hạt, chỉ trùng chữ 수박",
+      "source": "AI"
+     },
+     {
+      "rank": 5,
+      "sku": "0400317860005",
+      "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 S 2kg",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Trái Cây",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Trái dưa hấu không hạt, chỉ trùng chữ 수박",
+      "source": "AI"
+     },
+     {
+      "rank": 6,
+      "sku": "8935256611217",
+      "name": "Forange Block FC8292-6 과일 블록 수박 조립 (119조각)",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Đồ chơi lắp ráp, không liên quan",
+      "source": "AI"
+     },
+     {
+      "rank": 7,
+      "sku": "8809531280170",
+      "name": "Meet Seoul 수박 과일주스 230ml 파우치",
+      "cat": "THỰC PHẨM KHÔ / Đồ Uống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Nước ép dưa hấu, không phải hạt dưa",
+      "source": "AI"
+     },
+     {
+      "rank": 8,
+      "sku": "2311670000008",
+      "name": "일본종 수박 2.9kg",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Trái Cây",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Trái dưa hấu, không phải hạt dưa",
+      "source": "AI"
+     },
+     {
+      "rank": 9,
+      "sku": "2311600000009",
+      "name": "1등급 수박 2.7kg",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Trái Cây",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Trái dưa hấu, không phải hạt dưa",
+      "source": "AI"
+     },
+     {
+      "rank": 10,
+      "sku": "8936149091413",
+      "name": "Unisex 수박 무늬 버킷 모자",
+      "cat": "THỜI TRANG / Thời Trang",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Mũ thời trang, không liên quan",
+      "source": "AI"
+     }
+    ]
+   }
+  },
+  {
+   "test_id": "NSG-P1KO-0002",
+   "query": "돼지파",
+   "qa_note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+   "kind": "foreign",
+   "interpretation": "KO: củ kiệu (염교)",
+   "type": [
+    [
+     "kiệu",
+     "염교",
+     "락교"
+    ]
+   ],
+   "constraints": [],
+   "catalog_ok": 4,
+   "k_eff": 4,
+   "dev": {
+    "verdict": "FAILED",
+    "reason": "top-4: 4 sp không liên quan (0), 0 sp sai loại (1) - đầu tiên #1",
+    "total": 50,
+    "ndcg10": 0.0,
+    "p10": 0.0,
+    "dist10": {
+     "0": 10
+    },
+    "pending_ai": 0,
+    "items": [
+     {
+      "rank": 1,
+      "sku": "8936146448302",
+      "name": "G Kitchen 돼지 사태 300G (EA)",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 2,
+      "sku": "2211820000004",
+      "name": "Sagri 허브 돼지족 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 3,
+      "sku": "2204430000007",
+      "name": "365 Fresh 돼지고기 족발 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 4,
+      "sku": "2088850000003",
+      "name": "돼지 염통 400G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 5,
+      "sku": "2204450000001",
+      "name": "365 Fresh 돼지족발 500g",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 6,
+      "sku": "8936194975560",
+      "name": "Japfa 뼈 없는 돼지 앞다리살 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 7,
+      "sku": "8936146441051",
+      "name": "G Kitchen 돼지고기 뒷다리살 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 8,
+      "sku": "2211990000002",
+      "name": "Sagri 허브 돼지고기 등뼈 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 9,
+      "sku": "8936194975355",
+      "name": "Japfa 돼지 넓적다리살 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 10,
+      "sku": "8936207132010",
+      "name": "Meaty Chopshop 소고기 사태 250G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 11,
+      "sku": "8936146448296",
+      "name": "G Kitchen 돼지고기 앞다리 뼈 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 12,
+      "sku": "2211930000000",
+      "name": "Sagri 허브 돼지고기 다리살 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 13,
+      "sku": "2319130000001",
+      "name": "Organic TTC 유기농 호주산 소고기 사태살 슬라이스 250G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 14,
+      "sku": "2211800000000",
+      "name": "Sagri 허브 돼지고기 족발 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 15,
+      "sku": "8936194975409",
+      "name": "Japfa 돼지 목심 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 16,
+      "sku": "8936194975454",
+      "name": "Japfa 돼지 갈비 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 17,
+      "sku": "2306260000001",
+      "name": "365 Fresh 호주산 소고기 사태 200G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 18,
+      "sku": "8936146448272",
+      "name": "G Kitchen 돼지 사골 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 19,
+      "sku": "2212270000002",
+      "name": "돼지꼬리 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 20,
+      "sku": "8936194975348",
+      "name": "Japfa 다진 돼지고기 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 21,
+      "sku": "2310250000001",
+      "name": "365 Fresh 소고기 사태 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 22,
+      "sku": "2211980000005",
+      "name": "Sagri 허브 돼지고기 경골 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 23,
+      "sku": "8936194975317",
+      "name": "Japfa 돼지 삼겹살 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 24,
+      "sku": "2204440000004",
+      "name": "365 Fresh 뼈없는 돼지족발 300g",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 25,
+      "sku": "2204490000009",
+      "name": "365 Fresh 돼지 등심 300g",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 26,
+      "sku": "8935128778390",
+      "name": "365 Fresh 호주산 소 부채살 스테이크용 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 27,
+      "sku": "8936146445776",
+      "name": "G Kitchen 돼지고기 편육 475G",
+      "cat": "THỰC PHẨM KHÔ / Thực Phẩm Đông Lạnh",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 28,
+      "sku": "2252050000006",
+      "name": "365 Fresh 돼지고기 다짐육 볼 300g",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 29,
+      "sku": "8936194975416",
+      "name": "Japfa 돼지 등심 300G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 30,
+      "sku": "8938546870080",
+      "name": "오키니 일본산 눈꽃 돼지고기 등심 250G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     }
+    ]
+   },
+   "prod": {
+    "verdict": "FAILED",
+    "reason": "top-4: 4 sp không liên quan (0), 0 sp sai loại (1) - đầu tiên #1",
+    "total": 20,
+    "ndcg10": 0.0,
+    "p10": 0.0,
+    "dist10": {
+     "0": 10
+    },
+    "pending_ai": 0,
+    "items": [
+     {
+      "rank": 1,
+      "sku": "2089130000003",
+      "name": "돼지 사골뼈 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 2,
+      "sku": "2089120000006",
+      "name": "돼지 꼬리뼈  500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 3,
+      "sku": "2211970000008",
+      "name": "Sagri 허브 돼지 꼬리뼈  500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 4,
+      "sku": "8850987101014",
+      "name": "마마 다진 돼지 라면 60G",
+      "cat": "THỰC PHẨM KHÔ / Gạo, Mì, Bún, Đậu",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 5,
+      "sku": "8936146442614",
+      "name": "Feddy 돼지 피 400G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 6,
+      "sku": "8936035440943",
+      "name": "Truong Vinh 돼지 핫도그 500G",
+      "cat": "THỰC PHẨM KHÔ / Thực Phẩm Đông Lạnh",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 7,
+      "sku": "3537580701388",
+      "name": "PATE 돼지 간 32% HENAFF 130G",
+      "cat": "THỰC PHẨM KHÔ / Thực Phẩm Khô",
+      "rule_score": 1,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 8,
+      "sku": "8936146445189",
+      "name": "Wyn 돼지 간 파테 150G",
+      "cat": "THỰC PHẨM KHÔ / Thực Phẩm Khô",
+      "rule_score": 1,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 9,
+      "sku": "2088850000003",
+      "name": "돼지 염통 400G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 10,
+      "sku": "2204490000009",
+      "name": "365 Fresh 돼지 등심 300g",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Thịt heo/sp khác, chỉ trùng chữ 돼지 (heo), không phải củ kiệu",
+      "source": "AI"
+     },
+     {
+      "rank": 11,
+      "sku": "8936043371895",
+      "name": "Hoang My Gia 돼지 치실 누룽지 120G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 12,
+      "sku": "2211830000001",
+      "name": "Sagri 허브 뼈없는 돼지 족발 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 13,
+      "sku": "8936146445875",
+      "name": "Wyn 돼지 껍데기& 베트남 녹색 고추 햄 450G",
+      "cat": "THỰC PHẨM KHÔ / Thực Phẩm Đông Lạnh",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 14,
+      "sku": "2204480000002",
+      "name": "365 Fresh 돼지 등심 500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 15,
+      "sku": "2248580000005",
+      "name": "미국산 돼지 갈비  500G",
+      "cat": "THỰC PHẨM TƯƠI SỐNG / Thịt",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 16,
+      "sku": "8936244040309",
+      "name": "Japfa 돼지 등심 300G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 17,
+      "sku": "8936244040248",
+      "name": "Japfa 돼지 넓적다리살 300G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 18,
+      "sku": "8936244040293",
+      "name": "Japfa 돼지 목심 300G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 19,
+      "sku": "8936244040347",
+      "name": "Japfa 돼지 갈비 300G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 20,
+      "sku": "8936244040378",
+      "name": "Japfa 뼈 없는 돼지 앞다리살 300G",
+      "cat": null,
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     }
+    ]
+   }
+  },
+  {
+   "test_id": "NSG-P1KO-0003",
+   "query": "선물 바구니",
+   "qa_note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+   "kind": "foreign",
+   "interpretation": "KO: giỏ quà",
+   "type": [
+    [
+     "quà",
+     "hộp quà",
+     "giỏ quà",
+     "gift",
+     "선물",
+     "기프트"
+    ]
+   ],
+   "constraints": [],
+   "catalog_ok": 30,
+   "k_eff": 10,
+   "dev": {
+    "verdict": "FAILED",
+    "reason": "top-10: 10 sp không liên quan (0), 0 sp sai loại (1) - đầu tiên #1",
+    "total": 50,
+    "ndcg10": 0.0,
+    "p10": 0.0,
+    "dist10": {
+     "0": 10
+    },
+    "pending_ai": 0,
+    "items": [
+     {
+      "rank": 1,
+      "sku": "8936192562168",
+      "name": "인형 키 체인 2168 18x16cm (랜덤 배송)",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Đồ chơi thú bông, không phải giỏ quà",
+      "source": "AI"
+     },
+     {
+      "rank": 2,
+      "sku": "8936230480904",
+      "name": "데이지 꽃다발 봉제인형 50cm",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Đồ chơi thú bông, không phải giỏ quà",
+      "source": "AI"
+     },
+     {
+      "rank": 3,
+      "sku": "8936039277422",
+      "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 4,
+      "sku": "8936039277408",
+      "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 5,
+      "sku": "8936039277552",
+      "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 6,
+      "sku": "8936039277538",
+      "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 7,
+      "sku": "4710731091029",
+      "name": "Farcent 향기주머니 라벤더향 10G",
+      "cat": "HÀNG PHI THỰC PHẨM / Hóa Phẩm, Vệ Sinh",
+      "rule_score": 1,
+      "score": 0,
+      "reason": "Túi thơm, không phải giỏ quà",
+      "source": "AI"
+     },
+     {
+      "rank": 8,
+      "sku": "8935243506755",
+      "name": "Mr.Fresh GSG09 장미 향기 복주머니 10Gx3개입",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Túi thơm, không phải giỏ quà",
+      "source": "AI"
+     },
+     {
+      "rank": 9,
+      "sku": "8936039277477",
+      "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 10,
+      "sku": "8936039277453",
+      "name": "초이스엘 사각형 프라스틱 바구니 29.6 x 29.6 x 8.8cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Rổ nhựa, chỉ trùng chữ 바구니 (giỏ)",
+      "source": "AI"
+     },
+     {
+      "rank": 11,
+      "sku": "8936039277446",
+      "name": "초이스엘 직사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 12,
+      "sku": "8936053921448",
+      "name": "대형 곰 봉제 인형",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 13,
+      "sku": "8935275213065",
+      "name": "Inochi Yoko 고급 바스켓 23CM (컬러랜덤)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 14,
+      "sku": "8936190717591",
+      "name": "바이오홈 꽃무늬 세탁 바구니 45x46cm",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 15,
+      "sku": "8936039277569",
+      "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 16,
+      "sku": "4710731091050",
+      "name": "Farcent 향기주머니 프레쉬향 10G",
+      "cat": "HÀNG PHI THỰC PHẨM / Hóa Phẩm, Vệ Sinh",
+      "rule_score": 1,
+      "score": 1,
+      "reason": "Cùng ngành hàng (HÀNG PHI THỰC PHẨM / Hóa Phẩm, Vệ Sinh) nhưng sai loại sp",
+      "source": "luật"
+     },
+     {
+      "rank": 17,
+      "sku": "8936039277484",
+      "name": "타원형 대야 및 바구니 세트33 x 29 x 12.5cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 18,
+      "sku": "8936039277415",
+      "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 19,
+      "sku": "8936039277521",
+      "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 20,
+      "sku": "8935243506779",
+      "name": "Mr.Fresh GSG09 라벤더 향기 복주머니 10Gx3개입",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 21,
+      "sku": "8936039277514",
+      "name": "원형 대야 및 바구니 세트 35 x 39.2 x 14.5cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 22,
+      "sku": "8935243505598",
+      "name": "Pure Aroma 로맨틱 앰버향 향낭 26G",
+      "cat": "HÀNG PHI THỰC PHẨM / Hóa Phẩm, Vệ Sinh",
+      "rule_score": 1,
+      "score": 1,
+      "reason": "Cùng ngành hàng (HÀNG PHI THỰC PHẨM / Hóa Phẩm, Vệ Sinh) nhưng sai loại sp",
+      "source": "luật"
+     },
+     {
+      "rank": 23,
+      "sku": "8936039277507",
+      "name": "원형 대야 및 바구니 세트 31 x 35 x 13.2cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 24,
+      "sku": "4894680039889",
+      "name": "Zuru Fuggler 골드 퍼그스 15708 (랜덤배송)",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 25,
+      "sku": "4894680036857",
+      "name": "Mini Brands 수집용 장난감 스낵클즈 77572 (랜덤배송)",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 26,
+      "sku": "8936053920045",
+      "name": "펭귄 봉제인형",
+      "cat": "HÀNG PHI THỰC PHẨM / Mẹ Và Bé",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 27,
+      "sku": "8936053922056",
+      "name": "대형 각종 등불 (랜덤배송)",
+      "cat": "Virtual cat / Trung Thu / Đồ Chơi Trung Thu",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 28,
+      "sku": "8936039277439",
+      "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (연회색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 29,
+      "sku": "8935275213072",
+      "name": "Inochi Yoko 고급 바스켓 30CM (컬러랜덤)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     },
+     {
+      "rank": 30,
+      "sku": "8936039277545",
+      "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (황록색)",
+      "cat": "HÀNG PHI THỰC PHẨM / Nhà Cửa Đời Sống",
+      "rule_score": 0,
+      "score": 0,
+      "reason": "Không liên quan",
+      "source": "luật"
+     }
+    ]
+   },
+   "prod": {
+    "verdict": "FAILED",
+    "reason": "0 kết quả",
+    "total": 0,
+    "ndcg10": 0.0,
+    "p10": 0.0,
+    "dist10": {},
+    "pending_ai": 0,
+    "items": []
+   }
+  }
+ ]
+}

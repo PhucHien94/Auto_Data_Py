@@ -1,0 +1,1632 @@
+{
+  "timestamp": "2026-10-02T09:29:26.329159",
+  "expected_file": "SmartSearch\\test_data\\json\\batches\\NSG_ExpectedData_ko_20260917.json",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_ko_20261002_091805.json",
+  "asis_cache_file": "SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache_ko.json",
+  "asis_match_threshold_pct": 50,
+  "asis_scenarios_used": 778,
+  "asis_newly_fetched": 0,
+  "total_scenarios": 778,
+  "matched_by_test_id": 778,
+  "matched_by_query": 0,
+  "unmatched_scenarios": 0,
+  "exact_order_count": 0,
+  "exact_order_pct": 0.0,
+  "set_match_count": 0,
+  "set_match_pct": 0.0,
+  "top1_match_count": 0,
+  "top1_match_pct": 0.0,
+  "mismatch_count": 778,
+  "mismatch_pct": 100.0,
+  "zero_result_count": 0,
+  "avg_overlap_pct": 0.0,
+  "avg_top5_overlap_pct": 0.0,
+  "avg_top10_overlap_pct": 0.0,
+  "avg_top20_overlap_pct": 0.0,
+  "breakdown_by_category": {
+    "100_PERCENT_EXACT": 0,
+    "100_PERCENT_SET": 0,
+    "HIGH_MATCH": 243,
+    "PARTIAL_MATCH": 279,
+    "LOW_MATCH": 132,
+    "ZERO_RESULT": 0,
+    "NO_MATCH": 75
+  },
+  "scoring_top_n": 30,
+  "passed_count": 292,
+  "failed_count": 486,
+  "na_count": 0,
+  "asis_zero_count": 0,
+  "failed_no_bug_count": 486,
+  "has_bug_count": 0,
+  "reviewed_count": 0,
+  "not_reviewed_count": 778,
+  "regression_count": 3,
+  "regression_alerts": [
+    {
+      "test_id": "NSG-KO-00167",
+      "query": "봉투",
+      "dimension": "real_search_history",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00212",
+      "query": "lays",
+      "dimension": "real_search_history",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00759",
+      "query": "hand",
+      "dimension": "real_search_history",
+      "prev_status": "passed",
+      "current_status": "failed",
+      "kind": "regressed",
+      "match_category": "NO_MATCH",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    }
+  ],
+  "response_changed_count": 193,
+  "ac_passed_count": 0,
+  "ac_failed_count": 0,
+  "ac_na_count": 778,
+  "ac_regression_alerts": [],
+  "discussion_count": 0,
+  "removed_scenarios_count": 2,
+  "response_change_alerts": [
+    {
+      "test_id": "NSG-KO-00002",
+      "query": "치즈",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00003",
+      "query": "커피",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00005",
+      "query": "김치",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00006",
+      "query": "계란",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00009",
+      "query": "쌀",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00012",
+      "query": "과자",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00013",
+      "query": "세제",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00014",
+      "query": "젤리",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00017",
+      "query": "티슈",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00020",
+      "query": "새우",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00028",
+      "query": "바디워시",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00029",
+      "query": "바나나",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00031",
+      "query": "소스",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00037",
+      "query": "소고기",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00038",
+      "query": "레몬",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00041",
+      "query": "초콜릿",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00044",
+      "query": "올리브",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00048",
+      "query": "소시지",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00050",
+      "query": "땅콩",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00051",
+      "query": "스파게티",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00056",
+      "query": "오징어",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00059",
+      "query": "고구마",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00060",
+      "query": "쌀국수",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00061",
+      "query": "캔디",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00068",
+      "query": "와인",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00079",
+      "query": "an",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00087",
+      "query": "파스타",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00088",
+      "query": "현미",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00089",
+      "query": "요거트",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00101",
+      "query": "샴푸",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00102",
+      "query": "오렌지",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00107",
+      "query": "밀가루",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00113",
+      "query": "떡볶이",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00116",
+      "query": "닭",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00119",
+      "query": "과일",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00127",
+      "query": "샤워",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00128",
+      "query": "콜게이트",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00130",
+      "query": "coffee",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00131",
+      "query": "복숭아",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00135",
+      "query": "크림",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00136",
+      "query": "오트밀",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00144",
+      "query": "건망고",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00167",
+      "query": "봉투",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00176",
+      "query": "찹쌀",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00179",
+      "query": "녹차",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00187",
+      "query": "양념",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00188",
+      "query": "소주",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00193",
+      "query": "coco",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00194",
+      "query": "라이스페이퍼",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00196",
+      "query": "꿀",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00199",
+      "query": "콩",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00200",
+      "query": "차",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00203",
+      "query": "365",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00204",
+      "query": "쓰레기",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00207",
+      "query": "물",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00212",
+      "query": "lays",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00213",
+      "query": "레몬즙",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00227",
+      "query": "용기",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00229",
+      "query": "acnes",
+      "dimension": "real_search_history",
+      "match_category": "100_PERCENT_SET",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00230",
+      "query": "vina milk",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00231",
+      "query": "tafa",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00236",
+      "query": "lay",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00241",
+      "query": "thd",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00246",
+      "query": "bap",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00247",
+      "query": "oat",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00250",
+      "query": "프라이팬",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00251",
+      "query": "banh",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00262",
+      "query": "choice L",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00265",
+      "query": "타월",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00267",
+      "query": "고기",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00282",
+      "query": "vina",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00291",
+      "query": "케이크",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00297",
+      "query": "냄비",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00300",
+      "query": "탑젤리",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00310",
+      "query": "닭다리",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00315",
+      "query": "올리브오일",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00319",
+      "query": "콜게이트 후레쉬 치약",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00320",
+      "query": "지퍼백",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00321",
+      "query": "단무지",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00324",
+      "query": "그릭",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00327",
+      "query": "golden farm",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00345",
+      "query": "면도기",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00346",
+      "query": "tra",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00350",
+      "query": "염색",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00353",
+      "query": "멸치",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00362",
+      "query": "뉴케어",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00368",
+      "query": "스팸",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00374",
+      "query": "choice",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00375",
+      "query": "pocari",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00377",
+      "query": "멜론",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00378",
+      "query": "colgate kem danh",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00388",
+      "query": "milo",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00392",
+      "query": "biore",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00397",
+      "query": "초이스",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00398",
+      "query": "king",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00402",
+      "query": "cheese",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00406",
+      "query": "마스크",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00410",
+      "query": "국간장",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00411",
+      "query": "밀크",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00414",
+      "query": "스테이크",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00416",
+      "query": "nescafe",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00424",
+      "query": "아티초크",
+      "dimension": "real_search_history",
+      "match_category": "100_PERCENT_SET",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00426",
+      "query": "봉지",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00434",
+      "query": "보리차",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00440",
+      "query": "베개",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00442",
+      "query": "락스",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00446",
+      "query": "oreo",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00450",
+      "query": "bia",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00458",
+      "query": "엑스트라 버진 올리브오일",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00470",
+      "query": "세정",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00476",
+      "query": "쌀국수면",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00482",
+      "query": "monster",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00493",
+      "query": "고양이",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00495",
+      "query": "울샴푸",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00498",
+      "query": "생강차",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00502",
+      "query": "슬리퍼",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00503",
+      "query": "golden",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00505",
+      "query": "다짐육",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00507",
+      "query": "마늘쫑",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00511",
+      "query": "화장솜",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00512",
+      "query": "화이트",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00513",
+      "query": "밥",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00517",
+      "query": "일회용",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00526",
+      "query": "미림",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00530",
+      "query": "비빔면",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00537",
+      "query": "1.5",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00542",
+      "query": "욕실",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00547",
+      "query": "팬티",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00553",
+      "query": "열라면",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00554",
+      "query": "langfarm",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00555",
+      "query": "spam",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00556",
+      "query": "greek",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00560",
+      "query": "딸기쨈",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00561",
+      "query": "김가루",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00566",
+      "query": "coconut",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00569",
+      "query": "farm",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00572",
+      "query": "Pocari Sweat 음료 (500ml x 6개입)",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00576",
+      "query": "cafe",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00583",
+      "query": "pillow",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00584",
+      "query": "sprite",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00596",
+      "query": "fresh",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00601",
+      "query": "두부면",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00604",
+      "query": "썬크림",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00607",
+      "query": "ong cha va",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00610",
+      "query": "바닐라",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00613",
+      "query": "ga",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00618",
+      "query": "스파게티 소스",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00625",
+      "query": "고추가루",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00627",
+      "query": "xoai",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00628",
+      "query": "오뎅",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00630",
+      "query": "olive",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00631",
+      "query": "senka",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00641",
+      "query": "알룰로스",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00649",
+      "query": "그릭요거트",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00651",
+      "query": "냉면",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00656",
+      "query": "pillows",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00657",
+      "query": "dua",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00658",
+      "query": "com",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00662",
+      "query": "쯔유",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00665",
+      "query": "chinsu",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00673",
+      "query": "마스크팩",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00675",
+      "query": "dasani",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00676",
+      "query": "샤워볼",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00678",
+      "query": "아티소",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00680",
+      "query": "mr viet",
+      "dimension": "real_search_history",
+      "match_category": "100_PERCENT_SET",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00681",
+      "query": "물엿",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00682",
+      "query": "bag",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00683",
+      "query": "과일청",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00684",
+      "query": "한국쌀",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00691",
+      "query": "올리브 오일",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00694",
+      "query": "dh foods",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00699",
+      "query": "아이스",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00700",
+      "query": "치킨스톡",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00704",
+      "query": "ahh",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00705",
+      "query": "green",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00708",
+      "query": "팩",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00711",
+      "query": "프링글스",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00716",
+      "query": "trung nguyen",
+      "dimension": "real_search_history",
+      "match_category": "100_PERCENT_SET",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00725",
+      "query": "표고버섯",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00729",
+      "query": "좋은데이",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00735",
+      "query": "등갈비",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00739",
+      "query": "해바라기",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00743",
+      "query": "consoc",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00744",
+      "query": "barilla",
+      "dimension": "real_search_history",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00745",
+      "query": "바나나우유",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00746",
+      "query": "ca",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00750",
+      "query": "스틱",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00754",
+      "query": "만두피",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00759",
+      "query": "hand",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00766",
+      "query": "일본",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00769",
+      "query": "true milk",
+      "dimension": "real_search_history",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00774",
+      "query": "스낵면",
+      "dimension": "real_search_history",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    },
+    {
+      "test_id": "NSG-KO-00776",
+      "query": "max",
+      "dimension": "real_search_history",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-28T17:44:42.377248"
+    }
+  ],
+  "pass_fail_state_file": "SmartSearch\\test_data\\compare\\pass_fail_state_nsg.json",
+  "pass_fail_store": "nsg"
+}

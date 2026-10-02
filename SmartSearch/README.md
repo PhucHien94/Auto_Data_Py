@@ -134,7 +134,9 @@ python scripts\automation\runner_text_search.py --excel SmartSearch\text_testdat
 - `scripts/automation/runner_text_search.py` — earlier ad-hoc runner, still usable standalone
 - `scripts/testcase/add_results_template.py`, `preview_testcase.py`, `translate_excel.py`, `combine_req_testcases.py`, `search_testcases_keywords.py`, `extract_ss_scr_002*.py` — test-case workbook tooling (combine REQ+testcases, preview, translate, keyword/ID search)
 - `scripts/testdata/export_full_store_catalog.py`, `export_smartsearch_testdata.py`, `generate_testcase_datasets.py` — full-catalog export and Smart Search test-data/dev-deliverable exporters
-- `data/ProductInfo/` — source NDJSON product datasets (EN/VI/KR per store), shared at repo root
+- `data/ProductInfo_v1.1/v1.1/` — NDJSON nguồn cho store **nsg**, ảnh chụp production 28/08/2026 (18.122 SKU)
+- `data/ProductInfo/` — NDJSON nguồn cho 20 store còn lại, ảnh chụp 27/07/2026 (bản nsg trong đây đã cũ, KHÔNG dùng)
+- `scripts/product_source.py` — nơi DUY NHẤT quyết định store nào đọc từ thư mục nào; đổi nguồn thì sửa file này
 - `data/glossary/` — synonym/regional/related-term CSVs (see file headers for schema), shared at repo root
 - `SmartSearch/testcases/`, `SmartSearch/qna/` — delivered MART SmartSearch test-case and QnA-log workbooks
 - `docs/` (repo root) — additional documentation (e.g. image test data usage)

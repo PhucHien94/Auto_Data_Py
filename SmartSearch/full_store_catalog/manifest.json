@@ -1,12 +1,14 @@
 [
   {
     "store": "nsg",
-    "count": 16340,
-    "size_mb": 13.46
+    "count": 18122,
+    "size_mb": 12.82,
+    "source_dir": "data/ProductInfo_v1.1/v1.1"
   },
   {
     "store": "wle",
     "count": 15508,
-    "size_mb": 12.66
+    "size_mb": 10.92,
+    "source_dir": "data/ProductInfo"
   }
 ]

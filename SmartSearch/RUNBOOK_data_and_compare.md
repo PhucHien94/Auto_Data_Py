@@ -79,7 +79,7 @@ Batch nằm ở `SmartSearch/test_data/json/batches/<PREFIX>_ExpectedData_<range
 python scripts\testdata\generate_master_testset.py --store nsg --out-dir SmartSearch\golden_testsets\nsg
 python scripts\testdata\generate_master_testset.py --all-stores --out-dir SmartSearch\golden_testsets
 ```
-Sinh theo 8 dimension (exact/lowercase/partial/typo/no_diacritics/synonym/regional/related), lấy mẫu ≤300 sản phẩm/store từ `data/ProductInfo/`.
+Sinh theo 8 dimension (exact/lowercase/partial/typo/no_diacritics/synonym/regional/related), lấy mẫu ≤300 sản phẩm/store từ nguồn do `scripts/product_source.py` chọn (nsg → `data/ProductInfo_v1.1/v1.1/`, store khác → `data/ProductInfo/`).
 
 ### 2c. Lấy ACTUAL (gọi API thật, môi trường dev-gateway)
 

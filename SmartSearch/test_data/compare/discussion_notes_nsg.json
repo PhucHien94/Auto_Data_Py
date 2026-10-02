@@ -1,0 +1,436 @@
+{
+  "store": "nsg",
+  "updatedAt": "2026-09-17T17:32:19.281056",
+  "entries": {
+    "NSG-ALL-1190": {
+      "test_id": "NSG-ALL-1190",
+      "query": "nhu yếu phẩm",
+      "dimension": "benchmark_raw",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "chưa xác định dc expect",
+      "screenshot": null,
+      "markedAt": "2026-09-08T08:35:10.227Z"
+    },
+    "NSG-ALL-0779": {
+      "test_id": "NSG-ALL-0779",
+      "query": "đậu bắp",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "đậu phộng, đậu hà lan có nên nằm trong search result k , hay toàn bộ đẩy qua recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-08T09:39:35.839Z"
+    },
+    "NSG-ALL-0047": {
+      "test_id": "NSG-ALL-0047",
+      "query": "củ hành tím",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "",
+      "screenshot": null,
+      "markedAt": "2026-09-08T10:09:41.755Z"
+    },
+    "NSG-ALL-1434": {
+      "test_id": "NSG-ALL-1434",
+      "query": "nuoc man",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "NO_MATCH",
+      "note": "theo ngữ nghĩa có cần bổ sung nước mắm và đẩy lên top k",
+      "screenshot": null,
+      "markedAt": "2026-09-10T08:53:04.455Z"
+    },
+    "NSG-ALL-0029": {
+      "test_id": "NSG-ALL-0029",
+      "query": "tui thuc pham",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "Xem xét có hiển thị thêm các sản phẩm hộp thực phẩm, màng bọc thực phẩm hay không",
+      "screenshot": null,
+      "markedAt": "2026-09-09T02:39:13.028Z"
+    },
+    "NSG-ALL-0275": {
+      "test_id": "NSG-ALL-0275",
+      "query": "bao tay",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "các sản phẩm tẩy tế bào chết có nên hiển thị trong list này?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T02:53:48.280Z"
+    },
+    "NSG-ALL-0452": {
+      "test_id": "NSG-ALL-0452",
+      "query": "dưa",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "có hiển thị các sản phẩm dừa k? (PROD có)",
+      "screenshot": null,
+      "markedAt": "2026-09-09T03:04:23.127Z"
+    },
+    "NSG-ALL-0359": {
+      "test_id": "NSG-ALL-0359",
+      "query": "heineken",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "các loại rượu có nên hiển thị trong list result này không? hay ở section recommend",
+      "screenshot": null,
+      "markedAt": "2026-09-09T06:24:15.517Z"
+    },
+    "NSG-ALL-0941": {
+      "test_id": "NSG-ALL-0941",
+      "query": "kokomi",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "HIGH_MATCH",
+      "note": "có nên show list này trong search result?\nSocola Sữa Beatitude 450G (8935042909566)\nSocola Hạnh Nhân Lotte Gói 70g (8801062634354)\nSocola Sữa Viên Henk Nhân Hạt Mắc Ca Nón Lá Hộp 120G (8936013566740)\nKẹo Socola Viên Đá Lotte Gói 90g (8801062629190)\nChân Giò Heo Muối Vị Tayaki Ngọc Thơm Foods 450G (8938529045832)\nBánh Mochi Mè Đen Với Cơm Dừa 152G (4711931029522)\nSocola Vifranco Tổng Hợp Túi 300g (8935042901997)\nKẹo Socola Sữa Popit Doremon Túi 95.4G (8935006359369)\nKẹo Socola ABC Lotte Gói 187g (8801062629992)\nSocola Ferrero Rocher 5 Viên 62.5G (0000080135906)",
+      "screenshot": null,
+      "markedAt": "2026-09-09T06:26:33.181Z"
+    },
+    "NSG-ALL-0504": {
+      "test_id": "NSG-ALL-0504",
+      "query": "muoi",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "\"cà phê muối đang hiển thị sau vá gỗ \n10\t\nVá Gỗ Nhỏ Choice L\nSKU: 8936190941644 | 42,900 đ\t+ Extra\n11\t\nNui Ống Dài Meizan Gói 400G\nSKU: 8938509627119 | 24,500 đ\t+ Extra\n12\t\nNui Gạo Meizan Cao Cấp Hình Ống Dài 400G\nSKU: 8938509627218 | 23,500 đ\t+ Extra\n13\t\nCà Phê Muối Hòa Tan SaltCoffee Vị Gừng Hộp 9 Gói x 20G\"",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:04:31.233Z"
+    },
+    "NSG-ALL-0525": {
+      "test_id": "NSG-ALL-0525",
+      "query": "ca",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "mắc ca đang hiển thị trước cá . cần thảo luận lại thứ tự hiển thị",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:06:02.074Z"
+    },
+    "NSG-ALL-0679": {
+      "test_id": "NSG-ALL-0679",
+      "query": "măng tây",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "Măng Lay Tây Bắc Kim Bôi 300g (ea)\nSKU: 8938500075117 đang k hiển thị, các loại sản phẩm khác cần đẩy qua recommend",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:09:40.516Z"
+    },
+    "NSG-ALL-0760": {
+      "test_id": "NSG-ALL-0760",
+      "query": "khoai mỡ",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "\"thiếu sp Khoai mỡ 500g\nSKU: 2292270000004, các loại sản phẩm khác cần đẩy qua recommend\"",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:11:16.870Z"
+    },
+    "NSG-ALL-0832": {
+      "test_id": "NSG-ALL-0832",
+      "query": "giò sống",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "tất cả sản phẩm giò sống đang hết hàng -> vẫn hiển thị ở top . sau đó các sản phẩm thịt heo khác hiển thị ở recommend đúng k",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:19:16.577Z"
+    },
+    "NSG-ALL-0972": {
+      "test_id": "NSG-ALL-0972",
+      "query": "ga",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "cần ưu tiên gà trước hay sản phẩm có ga, gas?\n1\t6970399925786\tNước Khoáng Có Ga Genki Vị Vải Lon 330ml\n2\t6970399920576\tNước Khoáng Có Ga Genki Vị Đào Lon 330ml\n3\t8801223100179\tNước Uống Có Gas Chojung 500ml\n4\t8935004500794\tNước Khoáng Thiên Nhiên Có Ga Choice L Chai 500ml\n5\t8445291045750\tNước Khoáng Có Ga Maison Perrier Hương Chanh Vàng Lon 250ml\n6\t8934840000185\tNước Khoáng Thiên Nhiên Có Ga Vĩnh Hảo Chai 500ML\n7\t8809495076482\tNước Soda Cloop Vị Táo Xanh Không Đường 500ml\n8\t8934588690112\tNước Có Gas Aquafina Soda Lốc 6 Lon 320 ml\n9\t8801223010478\tNước Uống Có Gas BRRR Vị Cola Không Đường Lon 250ml\n10\t8801223012243\tNước Uống Có Gas BRRR Vị Cola Không Cafein Không Đường Lon 250ml",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:23:00.191Z"
+    },
+    "NSG-ALL-2059": {
+      "test_id": "NSG-ALL-2059",
+      "query": "thực phẩm đóng gói sẵn",
+      "dimension": "generic_vague_intent",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "cần trao đổi lại ",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:28:28.182Z"
+    },
+    "NSG-ALL-2110": {
+      "test_id": "NSG-ALL-2110",
+      "query": "bông so đũa",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:39:08.936Z"
+    },
+    "NSG-ALL-2111": {
+      "test_id": "NSG-ALL-2111",
+      "query": "bông điên điển",
+      "dimension": "regional_dialect",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "sai bộ result. nếu k có result thì hiển thị 0, kèm thêm recommend đúng k",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:39:16.826Z"
+    },
+    "NSG-ALL-2134": {
+      "test_id": "NSG-ALL-2134",
+      "query": "lẩu mắm",
+      "dimension": "regional_dialect",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "zero result kèm recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:56:07.692Z"
+    },
+    "NSG-ALL-2142": {
+      "test_id": "NSG-ALL-2142",
+      "query": "máy đánh trứng",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "zero result kèm recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:56:24.771Z"
+    },
+    "NSG-ALL-2151": {
+      "test_id": "NSG-ALL-2151",
+      "query": "băng cá nhân",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "zero result kèm recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:56:33.171Z"
+    },
+    "NSG-ALL-2168": {
+      "test_id": "NSG-ALL-2168",
+      "query": "loa di động",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "zero result kèm recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:56:51.395Z"
+    },
+    "NSG-ALL-2172": {
+      "test_id": "NSG-ALL-2172",
+      "query": "bình sữa cho bé",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "Hiện k có sản phẩm bình sữa cho bé. -> HIển thị zero result kèm section recommendation (nước rửa bình sữa, bình thủy tinh, bình nước nhựa ) đúng k?",
+      "screenshot": null,
+      "markedAt": "2026-09-17T10:29:54.138Z"
+    },
+    "NSG-ALL-2180": {
+      "test_id": "NSG-ALL-2180",
+      "query": "tăm nước vệ sinh răng",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "NO_MATCH",
+      "note": "zero result kèm recommend?",
+      "screenshot": null,
+      "markedAt": "2026-09-09T08:57:13.364Z"
+    },
+    "NSG-ALL-2201": {
+      "test_id": "NSG-ALL-2201",
+      "query": "bao đựng rác tự phân hủy",
+      "dimension": "synonym_variant",
+      "route": "keyword_ai",
+      "match_category": "LOW_MATCH",
+      "note": "Ưu tiên hiển thị túi rác thông thường hay ưu tiên các sản phẩm tự phân hủy (túi đựng thực phẩm, bao tay)",
+      "screenshot": null,
+      "markedAt": "2026-09-17T10:28:11.685Z"
+    },
+    "NSG-ALL-0294": {
+      "test_id": "NSG-ALL-0294",
+      "query": "sandwich",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "có hiển thị các loại bánh quy, bánh kem hay k?\nhay đẩy hết về discussion",
+      "screenshot": null,
+      "markedAt": "2026-09-09T09:52:47.071Z"
+    },
+    "NSG-ALL-0396": {
+      "test_id": "NSG-ALL-0396",
+      "query": "bò viên",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "cá viên, hải sản viên có hiển thị trong result k . hãy sẽ nằm riêng ở api recommend",
+      "screenshot": null,
+      "markedAt": "2026-09-10T08:56:29.088Z"
+    },
+    "NSG-ALL-0198": {
+      "test_id": "NSG-ALL-0198",
+      "query": "tôm",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "nghêu nằm ở search result hay recommend",
+      "screenshot": null,
+      "markedAt": "2026-09-10T09:17:41.611Z"
+    },
+    "NSG-ALL-0224": {
+      "test_id": "NSG-ALL-0224",
+      "query": "oatside",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "các sản phẩm này hiển thị ở recommend hay search result\n7\t\nBữa Ăn 1 Phút Oatta yến mạch trái cây hạnh nhân phô mai túi 300g\nSKU: 8935011861239 | 125,500 đ\t+ Extra\n8\t\nHạt Chia Oh Smile Nuts 500G\nSKU: 8935319200303 | 118,000 đ\t+ Extra\n9\t\nBữa Ăn 1 Phút Oatta yến mạch trái cây hạnh nhân phô mai túi 800g\nSKU: 8935011861130 | 265,900 đ\t+ Extra\n10\t\nYến Mạch Trái Cây Matcha Oatta Gói 250G\nSKU: 8935011805820 | 86,500 đ\t+ Extra\n11\t\nMù Tạt Wasabi Ottogi Tuýp 35G\nSKU: 8801045450377 | 43,700 đ\t+ Extra",
+      "screenshot": null,
+      "markedAt": "2026-09-10T09:19:31.518Z"
+    },
+    "NSG-ALL-0522": {
+      "test_id": "NSG-ALL-0522",
+      "query": "viên giặt",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "bột giặt, nước giặt hiển thị ở search result hay recommend",
+      "screenshot": null,
+      "markedAt": "2026-09-10T09:22:18.253Z"
+    },
+    "NSG-ALL-0593": {
+      "test_id": "NSG-ALL-0593",
+      "query": "ba chỉ bò",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "HIGH_MATCH",
+      "note": "có bao gồm Giò Bê Ba Chỉ Tứ Phương 500G, Thịt Ba Rọi Heo Rút Sườn G Kitchen 300G (EA)  trong search result k?",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:35:18.299Z"
+    },
+    "NSG-ALL-0467": {
+      "test_id": "NSG-ALL-0467",
+      "query": "bột giặt omo",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "search resutl có bao gồm nước giặt hay k?\ncó bao gồm Bột Giặt Surf , Ariel hay không (hay nằm ở recommendation)",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:43:32.342Z"
+    },
+    "NSG-ALL-0573": {
+      "test_id": "NSG-ALL-0573",
+      "query": "nồi cơm điện",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "sp nồi đất, nổi lẩu có nằm trong search result k, hay ở recommendation (hiện tại đang ở search result)",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:45:09.041Z"
+    },
+    "NSG-ALL-0575": {
+      "test_id": "NSG-ALL-0575",
+      "query": "tương ớt cholimex",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "HIGH_MATCH",
+      "note": "đang hiển thị xen kẽ các brand khác ",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:46:03.265Z"
+    },
+    "NSG-ALL-0727": {
+      "test_id": "NSG-ALL-0727",
+      "query": "củ cải trắng",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "đang hiển thị xen kẽ củ đậu, bông cải xanh, bông cải trắng, củ riềng",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:46:49.160Z"
+    },
+    "NSG-ALL-1470": {
+      "test_id": "NSG-ALL-1470",
+      "query": "dưa hấu vàng",
+      "dimension": "history_verification",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "đang hiển thị thêm dưa lưới, dưa lê",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:50:26.377Z"
+    },
+    "NSG-ALL-1802": {
+      "test_id": "NSG-ALL-1802",
+      "query": "bình thuỷ tinh",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "hiển thị thêm các sp chén thủy tinh, bình nước nhựa",
+      "screenshot": null,
+      "markedAt": "2026-09-14T04:51:25.613Z"
+    },
+    "NSG-ALL-1544": {
+      "test_id": "NSG-ALL-1544",
+      "query": "khô cá cơm",
+      "dimension": "history_verification",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "đang hiển thị khô cá mai, khô cá chỉ vàng, khô cá bống,....",
+      "screenshot": null,
+      "markedAt": "2026-09-14T06:02:17.616Z"
+    },
+    "NSG-ALL-1537": {
+      "test_id": "NSG-ALL-1537",
+      "query": "chả chay",
+      "dimension": "history_verification",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "đang hiển thị thêm chả bò, chả giò, chả tôm,....",
+      "screenshot": null,
+      "markedAt": "2026-09-14T06:02:59.060Z"
+    },
+    "NSG-ALL-0225": {
+      "test_id": "NSG-ALL-0225",
+      "query": "sữa hạt",
+      "dimension": "benchmark_raw",
+      "route": "keyword",
+      "match_category": "PARTIAL_MATCH",
+      "note": "đang hiển thị thêm sữa đậu đen, sữa yến mạch",
+      "screenshot": null,
+      "markedAt": "2026-09-14T06:03:44.540Z"
+    },
+    "NSG-ALL-0013": {
+      "test_id": "NSG-ALL-0013",
+      "query": "protein tăng cơ",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "keyword_ai",
+      "match_category": "PARTIAL_MATCH",
+      "note": "Các sản phẩm nước tăng lực có nên hiển thị k ? cần ưu tiên bộ sp ntn",
+      "screenshot": null,
+      "markedAt": "2026-09-17T09:50:36.010Z"
+    },
+    "NSG-ALL-0015": {
+      "test_id": "NSG-ALL-0015",
+      "query": "cá kèo",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "các loại cá bò, cá thu, cá mó, cá cơm có hiển thị ở search result hay không?",
+      "screenshot": null,
+      "markedAt": "2026-09-17T09:53:10.986Z"
+    },
+    "NSG-ALL-0022": {
+      "test_id": "NSG-ALL-0022",
+      "query": "nho",
+      "dimension": "manual_demo_asis_vs_actual",
+      "route": "keyword",
+      "match_category": "LOW_MATCH",
+      "note": "các sản phẩm vị nho có nên hiển thị không (kẹo vị nho, phô mai vị nho)",
+      "screenshot": null,
+      "markedAt": "2026-09-17T10:06:28.535Z"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+
+=======================================================
+🎉 SO SÁNH HOÀN TẤT & ĐÃ TẠO HTML CÓ TOOLTIP!
+📂 Thư mục output: SmartSearch\test_data\compare\run_all_exp0916c_act1002_20261002_095233
+🕰️  As-Is: hiển thị cho 2505/2505 scenario (mọi mức % khớp, miễn có trong cache) - 0 query mới phải gọi hệ thống cũ thật (chỉ tự động gọi khi ≤50% khớp), 2505 lấy từ cache có sẵn. Cache: SmartSearch\test_data\json\actual\AsIs_NSG_cache.json
+✅ Passed: 1724  ❌ Failed: 617
+🔴 543 keyword FAILED nhưng CHƯA ghi bug (đã ghi bug: 133) - lọc bằng tab 'Failed chưa ghi bug'
+💬 43 keyword đang đánh dấu CẦN THẢO LUẬN (lọc bằng tab Discussion)
+⚠️  52 keyword đổi trạng thái Pass/Fail so với lần compare trước:
+    - NSG-ALL-0095: "tra sua" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0215: "xịt côn trùng" (failed -> passed, cải thiện, PARTIAL_MATCH)
+    - NSG-ALL-0225: "sữa hạt" (failed -> passed, cải thiện, HIGH_MATCH)
+    - NSG-ALL-0275: "bao tay" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0432: "sa tế" (failed -> passed, cải thiện, HIGH_MATCH)
+    - NSG-ALL-0493: "clear" (failed -> passed, cải thiện, PARTIAL_MATCH)
+    - NSG-ALL-0510: "sốt mì ý" (passed -> failed, regressed, PARTIAL_MATCH)
+    - NSG-ALL-0528: "trai cay" (failed -> passed, cải thiện, NO_MATCH)
+    - NSG-ALL-0563: "thịt heo xay" (failed -> passed, cải thiện, PARTIAL_MATCH)
+    - NSG-ALL-0566: "bang ve sinh" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0594: "kimchi" (passed -> failed, regressed, PARTIAL_MATCH)
+    - NSG-ALL-0610: "bột canh" (passed -> failed, regressed, PARTIAL_MATCH)
+    - NSG-ALL-0669: "xịt côn trùng raid" (failed -> passed, cải thiện, PARTIAL_MATCH)
+    - NSG-ALL-0732: "khan giay" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0835: "hải sản" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0938: "cá khô" (failed -> passed, cải thiện, LOW_MATCH)
+    - NSG-ALL-0988: "khan giay uot" (passed -> failed, regressed, LOW_MATCH)
+    - NSG-ALL-1090: "bánh bao chay" (failed -> passed, cải thiện, PARTIAL_MATCH)
+    - NSG-ALL-1240: "sua hanh nhan" (failed -> passed, cải thiện, NO_MATCH)
+    - NSG-ALL-1254: "ca cao" (failed -> passed, cải thiện, LOW_MATCH)
+    ... và 32 keyword khác, xem đầy đủ trong compare_report.html
+🔄 906 keyword có Actual đổi so với lần compare trước (kể cả khi không đổi Pass/Fail):
+    - NSG-ALL-0001: "l choice" (NO_MATCH, passed)
+    - NSG-ALL-0003: "johnson" (PARTIAL_MATCH, passed)
+    - NSG-ALL-0004: "nuowc" (NO_MATCH, failed)
+    - NSG-ALL-0005: "đồ ăn nhật" (LOW_MATCH, failed)
+    - NSG-ALL-0006: "giỏ quà tết" (LOW_MATCH, failed)
+    - NSG-ALL-0007: "power 100" (LOW_MATCH, passed)
+    - NSG-ALL-0009: "bếp từ" (LOW_MATCH, failed)
+    - NSG-ALL-0010: "đồ ăn cho người giảm cân" (NO_MATCH, failed)
+    - NSG-ALL-0011: "chế độ ăn eat clean" (NO_MATCH, failed)
+    - NSG-ALL-0012: "đồ ăn organic" (NO_MATCH, failed)
+    - NSG-ALL-0013: "protein tăng cơ" (PARTIAL_MATCH, failed)
+    - NSG-ALL-0014: "nước rửa chuyên dụng bình sữa" (LOW_MATCH, passed)
+    - NSG-ALL-0018: "rổ nhựa đựng đồ" (HIGH_MATCH, failed)
+    - NSG-ALL-0019: "thuốc diệt côn trùng" (PARTIAL_MATCH, failed)
+    - NSG-ALL-0020: "nước giac" (LOW_MATCH, passed)
+    - NSG-ALL-0021: "túi rát" (HIGH_MATCH, passed)
+    - NSG-ALL-0022: "nho" (LOW_MATCH, failed)
+    - NSG-ALL-0023: "ca hoi" (HIGH_MATCH, failed)
+    - NSG-ALL-0024: "đồ ăn hàn" (NO_MATCH, failed)
+    - NSG-ALL-0025: "sua" (NO_MATCH, failed)
+    ... và 886 keyword khác, xem đầy đủ trong compare_report.html
+🗂️  Pass/Fail state (dùng cho lần compare tiếp theo): SmartSearch\test_data\compare\pass_fail_state_nsg.json
+=======================================================
+

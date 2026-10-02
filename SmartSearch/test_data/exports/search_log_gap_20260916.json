@@ -1,0 +1,3512 @@
+{
+ "note": "Từ khoá có trong search log T3-T8/2026 nhưng chưa có trong bộ test 2.355.",
+ "logTerms": 49348,
+ "logVolume": 39053015,
+ "coveredTerms": 3169,
+ "coveredVolume": 30024809,
+ "missingTerms": 46179,
+ "missingVolume": 9028206,
+ "missingZeroHit": 0,
+ "top500Missing": [
+  {
+   "q": "cholimex",
+   "count": 6352,
+   "hits_max": 80,
+   "last": "2026-08-24",
+   "qaRemoved": true
+  },
+  {
+   "q": "bo bo",
+   "count": 4918,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": true
+  },
+  {
+   "q": "dao cạo râu",
+   "count": 3693,
+   "hits_max": 62,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "oat",
+   "count": 3692,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo bạc hà",
+   "count": 3684,
+   "hits_max": 83,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt mè rang",
+   "count": 3683,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột ngũ cốc",
+   "count": 3680,
+   "hits_max": 93,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gia vị phở",
+   "count": 3675,
+   "hits_max": 25,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "cháo gấu đỏ",
+   "count": 3665,
+   "hits_max": 19,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "heo xay",
+   "count": 3661,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "màng nhôm",
+   "count": 3660,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kun",
+   "count": 3653,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thịt hộp",
+   "count": 3649,
+   "hits_max": 73,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dĩa nhựa",
+   "count": 3646,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa tắm lifebouy",
+   "count": 3646,
+   "hits_max": 287,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "neptune",
+   "count": 3639,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "olive",
+   "count": 3631,
+   "hits_max": 39,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bắp mỹ",
+   "count": 3622,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước lọc",
+   "count": 3620,
+   "hits_max": 51,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà phê đen",
+   "count": 3616,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hàu",
+   "count": 3616,
+   "hits_max": 32,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa bịch",
+   "count": 3613,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "aqua",
+   "count": 3610,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột rau câu",
+   "count": 3608,
+   "hits_max": 33,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cá ngừ hộp",
+   "count": 3607,
+   "hits_max": 233,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trà bí đao",
+   "count": 3606,
+   "hits_max": 1,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "tương ớt nam dương",
+   "count": 3599,
+   "hits_max": 16,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa rửa tay",
+   "count": 3596,
+   "hits_max": 138,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì gấu đỏ",
+   "count": 3594,
+   "hits_max": 27,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà phê hạt",
+   "count": 3592,
+   "hits_max": 323,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tẩy đa năng",
+   "count": 3589,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "yomost",
+   "count": 3586,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cải chua",
+   "count": 3583,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "muối tiêu",
+   "count": 3581,
+   "hits_max": 17,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà phê chồn",
+   "count": 3575,
+   "hits_max": 22,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dăm bông",
+   "count": 3574,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sương sáo",
+   "count": 3574,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ba rọi heo",
+   "count": 3573,
+   "hits_max": 29,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau dền",
+   "count": 3567,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lá mè",
+   "count": 3559,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tea",
+   "count": 3557,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì cung đình",
+   "count": 3553,
+   "hits_max": 17,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "kem đánh răng sensodyne",
+   "count": 3550,
+   "hits_max": 136,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo alpenliebe",
+   "count": 3550,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột tỏi",
+   "count": 3546,
+   "hits_max": 4,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "siu kay",
+   "count": 3536,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thùng",
+   "count": 3536,
+   "hits_max": 190,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "chân gà rút xương",
+   "count": 3533,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột giặt lix",
+   "count": 3529,
+   "hits_max": 38,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước rửa tay lifebuoy",
+   "count": 3522,
+   "hits_max": 27,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo sâm",
+   "count": 3520,
+   "hits_max": 8,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "pin aa",
+   "count": 3510,
+   "hits_max": 5,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "vang đà lạt",
+   "count": 3507,
+   "hits_max": 42,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh ngọt",
+   "count": 3501,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rượu vang đỏ",
+   "count": 3497,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt ướp",
+   "count": 3495,
+   "hits_max": 20,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bào ngư",
+   "count": 3490,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "giò",
+   "count": 3488,
+   "hits_max": 119,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tẩy quần áo",
+   "count": 3488,
+   "hits_max": 32,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bún gạo lứt",
+   "count": 3463,
+   "hits_max": 49,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "solite",
+   "count": 3458,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vải",
+   "count": 3458,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "miến khoai lang",
+   "count": 3457,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau hỗn hợp",
+   "count": 3445,
+   "hits_max": 92,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì kokomi",
+   "count": 3443,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì miliket",
+   "count": 3439,
+   "hits_max": 13,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì siukay",
+   "count": 3439,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hạt hạnh nhân",
+   "count": 3437,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lc foods",
+   "count": 3431,
+   "hits_max": 38,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lotte mart",
+   "count": 3426,
+   "hits_max": 14747,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chén nhựa",
+   "count": 3424,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nấm rơm",
+   "count": 3424,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dalatmilk",
+   "count": 3412,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "listerine",
+   "count": 3400,
+   "hits_max": 17,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt hàn quốc",
+   "count": 3397,
+   "hits_max": 99,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cốt lết",
+   "count": 3381,
+   "hits_max": 5,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bắp rang",
+   "count": 3374,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn ướt đa năng",
+   "count": 3372,
+   "hits_max": 21,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "trà atiso",
+   "count": 3372,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "meizan",
+   "count": 3364,
+   "hits_max": 43,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "băng vệ sinh laurier",
+   "count": 3362,
+   "hits_max": 145,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước ép cam",
+   "count": 3361,
+   "hits_max": 120,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sinh tố",
+   "count": 3349,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xương heo",
+   "count": 3349,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "susu",
+   "count": 3344,
+   "hits_max": 19,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước hoa",
+   "count": 3342,
+   "hits_max": 221,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tương hàn quốc",
+   "count": 3342,
+   "hits_max": 99,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "mù tạt",
+   "count": 3339,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "giấy choice l",
+   "count": 3337,
+   "hits_max": 566,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa nguyên kem",
+   "count": 3336,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tokpokki",
+   "count": 3332,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hỗn hợp",
+   "count": 3324,
+   "hits_max": 63,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh cosy",
+   "count": 3315,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước giặt surf",
+   "count": 3315,
+   "hits_max": 130,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "phô mai mozzarella",
+   "count": 3315,
+   "hits_max": 334,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau xà lách",
+   "count": 3315,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh mì que",
+   "count": 3311,
+   "hits_max": 123,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sò điệp",
+   "count": 3311,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn bếp",
+   "count": 3309,
+   "hits_max": 11,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "vang",
+   "count": 3308,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "pepero",
+   "count": 3307,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đá",
+   "count": 3307,
+   "hits_max": 622,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà phê phin",
+   "count": 3297,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sunsilk",
+   "count": 3295,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "choco",
+   "count": 3288,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hồng",
+   "count": 3286,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kem đánh răng ps",
+   "count": 3284,
+   "hits_max": 151,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh lotte",
+   "count": 3281,
+   "hits_max": 41,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nồi cơm",
+   "count": 3277,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bàn ủi",
+   "count": 3270,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa kun",
+   "count": 3270,
+   "hits_max": 10,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hành ngò",
+   "count": 3266,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "surf",
+   "count": 3264,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rong biển ăn liền",
+   "count": 3262,
+   "hits_max": 26,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa tắm enchanteur",
+   "count": 3261,
+   "hits_max": 289,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hạt dẻ cười",
+   "count": 3260,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chanh mật ong",
+   "count": 3259,
+   "hits_max": 119,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nghệ",
+   "count": 3259,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cosy",
+   "count": 3257,
+   "hits_max": 13,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì rau củ",
+   "count": 3257,
+   "hits_max": 85,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "túi giặt",
+   "count": 3257,
+   "hits_max": 131,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì vifon",
+   "count": 3244,
+   "hits_max": 26,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột matcha",
+   "count": 3237,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đường mía",
+   "count": 3236,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sấy",
+   "count": 3235,
+   "hits_max": 139,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bông",
+   "count": 3232,
+   "hits_max": 286,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dầu ăn simply",
+   "count": 3224,
+   "hits_max": 64,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa hạt vinamilk",
+   "count": 3221,
+   "hits_max": 175,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xịt",
+   "count": 3219,
+   "hits_max": 188,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn mặt",
+   "count": 3209,
+   "hits_max": 33,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vinacafe",
+   "count": 3207,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tăng lực",
+   "count": 3206,
+   "hits_max": 50,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "barona",
+   "count": 3204,
+   "hits_max": 32,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "túi thơm",
+   "count": 3204,
+   "hits_max": 36,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gà rán",
+   "count": 3201,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu đen",
+   "count": 3199,
+   "hits_max": 33,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy ăn",
+   "count": 3197,
+   "hits_max": 81,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ớt bột",
+   "count": 3190,
+   "hits_max": 6,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "tim",
+   "count": 3187,
+   "hits_max": 72,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nho xanh",
+   "count": 3181,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trai",
+   "count": 3178,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cá cơm",
+   "count": 3177,
+   "hits_max": 45,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "one one",
+   "count": 3172,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trứng cá",
+   "count": 3169,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa hàn quốc",
+   "count": 3167,
+   "hits_max": 91,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hạt óc chó",
+   "count": 3164,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tủ",
+   "count": 3159,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "găng tay cao su",
+   "count": 3148,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "custas",
+   "count": 3147,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lá",
+   "count": 3147,
+   "hits_max": 192,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "malto",
+   "count": 3145,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua nha đam",
+   "count": 3145,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kim chi cải",
+   "count": 3142,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu cove",
+   "count": 3139,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "túi rác đen",
+   "count": 3136,
+   "hits_max": 27,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bếp",
+   "count": 3133,
+   "hits_max": 28,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "giấy thấm dầu",
+   "count": 3126,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thùng mì",
+   "count": 3126,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sườn bò",
+   "count": 3124,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hương thảo",
+   "count": 3123,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chanh muối",
+   "count": 3122,
+   "hits_max": 32,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "magic",
+   "count": 3121,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "langfarm",
+   "count": 3117,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nissin",
+   "count": 3117,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hũ",
+   "count": 3113,
+   "hits_max": 519,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau ngót",
+   "count": 3113,
+   "hits_max": 8,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "viên tẩy bồn cầu",
+   "count": 3113,
+   "hits_max": 19,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "th true yogurt",
+   "count": 3112,
+   "hits_max": 139,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ostar",
+   "count": 3103,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "băng vệ sinh ban đêm",
+   "count": 3102,
+   "hits_max": 149,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bò xay",
+   "count": 3097,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dh",
+   "count": 3090,
+   "hits_max": 73,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "snack tôm",
+   "count": 3090,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thọ phát",
+   "count": 3088,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "củ dền",
+   "count": 3078,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trang",
+   "count": 3078,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trà xanh c2",
+   "count": 3071,
+   "hits_max": 14,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "cọ toilet",
+   "count": 3070,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "pantene",
+   "count": 3064,
+   "hits_max": 33,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "phú hương",
+   "count": 3064,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua dalat",
+   "count": 3064,
+   "hits_max": 231,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "gạo nhật",
+   "count": 3063,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lá giang",
+   "count": 3061,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh cuốn",
+   "count": 3058,
+   "hits_max": 30,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nghêu",
+   "count": 3054,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ngò rí",
+   "count": 3054,
+   "hits_max": 1,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "thùng sữa vinamilk",
+   "count": 3046,
+   "hits_max": 195,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "gà ác",
+   "count": 3044,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ổ điện",
+   "count": 3040,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xì dầu",
+   "count": 3036,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua dalat milk",
+   "count": 3035,
+   "hits_max": 27,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước lau bếp",
+   "count": 3033,
+   "hits_max": 88,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "tường an",
+   "count": 3032,
+   "hits_max": 50,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì tô",
+   "count": 3031,
+   "hits_max": 24,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau lang",
+   "count": 3031,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cúc",
+   "count": 3030,
+   "hits_max": 74,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bento",
+   "count": 3029,
+   "hits_max": 22,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kem dưỡng ẩm",
+   "count": 3029,
+   "hits_max": 163,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thịt nguội",
+   "count": 3029,
+   "hits_max": 185,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nón bảo hiểm",
+   "count": 3025,
+   "hits_max": 34,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau cải",
+   "count": 3019,
+   "hits_max": 9,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "dầu ăn tường an",
+   "count": 3017,
+   "hits_max": 71,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì ottogi",
+   "count": 3011,
+   "hits_max": 35,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "365 fresh",
+   "count": 3010,
+   "hits_max": 177,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chậu",
+   "count": 3010,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh socola",
+   "count": 3008,
+   "hits_max": 88,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa tắm lux",
+   "count": 3008,
+   "hits_max": 1,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "closeup",
+   "count": 3005,
+   "hits_max": 21,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "khóm",
+   "count": 3003,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thăn bò",
+   "count": 3000,
+   "hits_max": 22,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì indomie",
+   "count": 2999,
+   "hits_max": 4,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "aji mayo",
+   "count": 2997,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "muối xí muội",
+   "count": 2991,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dầu xả pantene",
+   "count": 2986,
+   "hits_max": 71,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khoai lang tím",
+   "count": 2986,
+   "hits_max": 36,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nhuộm tóc",
+   "count": 2981,
+   "hits_max": 47,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì đệ nhất",
+   "count": 2973,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo trái cây",
+   "count": 2971,
+   "hits_max": 253,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đệ nhất",
+   "count": 2971,
+   "hits_max": 8,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy lụa",
+   "count": 2966,
+   "hits_max": 75,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thùng bia",
+   "count": 2963,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hạt bí",
+   "count": 2962,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh sandwich",
+   "count": 2961,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "canh ăn liền",
+   "count": 2955,
+   "hits_max": 178,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bắp rang bơ",
+   "count": 2949,
+   "hits_max": 56,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "xá xị",
+   "count": 2948,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thảo mộc",
+   "count": 2947,
+   "hits_max": 44,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "cool air",
+   "count": 2946,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột ớt",
+   "count": 2938,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tứ xuyên",
+   "count": 2937,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ngò gai",
+   "count": 2930,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ớt bột hàn quốc",
+   "count": 2926,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dưa leo baby",
+   "count": 2919,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bàn",
+   "count": 2911,
+   "hits_max": 274,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh ăn dặm",
+   "count": 2911,
+   "hits_max": 95,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh hộp",
+   "count": 2910,
+   "hits_max": 294,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa th ít đường",
+   "count": 2910,
+   "hits_max": 93,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh đa",
+   "count": 2907,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột phô mai",
+   "count": 2906,
+   "hits_max": 340,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "giấy đa năng",
+   "count": 2901,
+   "hits_max": 106,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu hũ non",
+   "count": 2898,
+   "hits_max": 76,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ngôi sao phương nam",
+   "count": 2889,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sủi cảo",
+   "count": 2888,
+   "hits_max": 10,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "hazeline",
+   "count": 2885,
+   "hits_max": 17,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì phô mai",
+   "count": 2883,
+   "hits_max": 336,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hộp cơm",
+   "count": 2879,
+   "hits_max": 17,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "xí muội",
+   "count": 2878,
+   "hits_max": 8,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "snack rong biển",
+   "count": 2877,
+   "hits_max": 142,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước rửa bát",
+   "count": 2871,
+   "hits_max": 84,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "lườn cá hồi",
+   "count": 2870,
+   "hits_max": 58,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "enchanteur",
+   "count": 2867,
+   "hits_max": 54,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nguyen",
+   "count": 2864,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước xả vải downy",
+   "count": 2864,
+   "hits_max": 75,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "thủy tinh",
+   "count": 2864,
+   "hits_max": 124,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "giữ nhiệt",
+   "count": 2860,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "băng quần",
+   "count": 2859,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rong biển bibigo",
+   "count": 2858,
+   "hits_max": 133,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "hy lạp",
+   "count": 2851,
+   "hits_max": 15,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "miếng lót",
+   "count": 2845,
+   "hits_max": 59,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "long",
+   "count": 2840,
+   "hits_max": 36,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tăm tre",
+   "count": 2836,
+   "hits_max": 26,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lá chanh",
+   "count": 2832,
+   "hits_max": 19,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lưới rửa chén",
+   "count": 2828,
+   "hits_max": 68,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua sấy",
+   "count": 2828,
+   "hits_max": 217,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy khô",
+   "count": 2826,
+   "hits_max": 80,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dầu xả dove",
+   "count": 2823,
+   "hits_max": 69,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cồn",
+   "count": 2820,
+   "hits_max": 167,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "cháo tươi",
+   "count": 2818,
+   "hits_max": 21,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau mồng tơi",
+   "count": 2816,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "3 miền",
+   "count": 2811,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cá nục",
+   "count": 2807,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chả lụa chay",
+   "count": 2794,
+   "hits_max": 28,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "pin aaa",
+   "count": 2791,
+   "hits_max": 11,
+   "last": "2026-08-19",
+   "qaRemoved": false
+  },
+  {
+   "q": "chăn",
+   "count": 2788,
+   "hits_max": 71,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "rửa chén sunlight",
+   "count": 2787,
+   "hits_max": 68,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh hộp thiếc",
+   "count": 2782,
+   "hits_max": 48,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khoai tây bi",
+   "count": 2779,
+   "hits_max": 130,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "con bò cười",
+   "count": 2777,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "viet",
+   "count": 2777,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bình xịt côn trùng jumbo vape không mùi 600ml",
+   "count": 2776,
+   "hits_max": 19,
+   "last": "2026-08-04",
+   "qaRemoved": false
+  },
+  {
+   "q": "trân châu",
+   "count": 2775,
+   "hits_max": 18,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "zero",
+   "count": 2774,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cải xanh",
+   "count": 2772,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vĩnh hảo",
+   "count": 2772,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xôi",
+   "count": 2771,
+   "hits_max": 29,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bắp cải tím",
+   "count": 2761,
+   "hits_max": 9,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "ba khánh",
+   "count": 2759,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bút bi",
+   "count": 2749,
+   "hits_max": 35,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hershey",
+   "count": 2746,
+   "hits_max": 8,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu hũ chiên",
+   "count": 2741,
+   "hits_max": 74,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "ferrero",
+   "count": 2740,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gan gà",
+   "count": 2736,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xúc xích đức việt",
+   "count": 2734,
+   "hits_max": 19,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hến",
+   "count": 2733,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo cao su",
+   "count": 2726,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ly giữ nhiệt",
+   "count": 2723,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "flan",
+   "count": 2720,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nam việt quất",
+   "count": 2720,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước giặt lix hương nước hoa 3.6kg",
+   "count": 2717,
+   "hits_max": 199,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "cocoon",
+   "count": 2715,
+   "hits_max": 29,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua dalatmilk",
+   "count": 2713,
+   "hits_max": 220,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trắng",
+   "count": 2713,
+   "hits_max": 25,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước mắm hạnh phúc",
+   "count": 2706,
+   "hits_max": 12,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh dừa",
+   "count": 2701,
+   "hits_max": 75,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu lăng",
+   "count": 2700,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột bánh xèo",
+   "count": 2698,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước rửa chén 20l",
+   "count": 2695,
+   "hits_max": 49,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cham",
+   "count": 2692,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gấu đỏ",
+   "count": 2692,
+   "hits_max": 18,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo lotte",
+   "count": 2692,
+   "hits_max": 31,
+   "last": "2026-08-19",
+   "qaRemoved": false
+  },
+  {
+   "q": "lá lốt",
+   "count": 2689,
+   "hits_max": 4,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "aji quick",
+   "count": 2681,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ép cam",
+   "count": 2681,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua probi",
+   "count": 2679,
+   "hits_max": 217,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy choice l",
+   "count": 2677,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sụn gà",
+   "count": 2677,
+   "hits_max": 4,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "thùng sữa",
+   "count": 2673,
+   "hits_max": 74,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt lẩu thái",
+   "count": 2670,
+   "hits_max": 38,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa tắm on",
+   "count": 2668,
+   "hits_max": 286,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nướng",
+   "count": 2664,
+   "hits_max": 183,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "thịt nướng",
+   "count": 2664,
+   "hits_max": 29,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hoa tươi",
+   "count": 2661,
+   "hits_max": 63,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "xốt",
+   "count": 2661,
+   "hits_max": 172,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hắc xì dầu",
+   "count": 2660,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà phê việt",
+   "count": 2658,
+   "hits_max": 310,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tôm thẻ",
+   "count": 2658,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "modern",
+   "count": 2657,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước mắm hồng hạnh",
+   "count": 2656,
+   "hits_max": 11,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "an",
+   "count": 2652,
+   "hits_max": 529,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ngũ vị hương",
+   "count": 2646,
+   "hits_max": 97,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xương ống",
+   "count": 2643,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "burger",
+   "count": 2642,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cháo ăn liền",
+   "count": 2641,
+   "hits_max": 157,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì ly modern",
+   "count": 2636,
+   "hits_max": 42,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bbq",
+   "count": 2633,
+   "hits_max": 3,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa yến mạch oatside",
+   "count": 2630,
+   "hits_max": 32,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hạt nêm nấm",
+   "count": 2629,
+   "hits_max": 65,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "dầu gội olive",
+   "count": 2626,
+   "hits_max": 404,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bắp non",
+   "count": 2625,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh gạo one one",
+   "count": 2623,
+   "hits_max": 6,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh orion",
+   "count": 2622,
+   "hits_max": 36,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kenju",
+   "count": 2618,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "diếp cá",
+   "count": 2614,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "túi thực đựng thực phẩm",
+   "count": 2613,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cơm ăn liền",
+   "count": 2611,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh custas",
+   "count": 2610,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "quần lót nữ",
+   "count": 2609,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gia vị lẩu",
+   "count": 2608,
+   "hits_max": 160,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh mỳ",
+   "count": 2607,
+   "hits_max": 10,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "ăn sáng",
+   "count": 2606,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chà bông heo",
+   "count": 2604,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lòng",
+   "count": 2604,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước aquafina",
+   "count": 2603,
+   "hits_max": 6,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "cà pháo",
+   "count": 2602,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "alpenliebe",
+   "count": 2601,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lọc",
+   "count": 2599,
+   "hits_max": 72,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước giặt omo matic",
+   "count": 2598,
+   "hits_max": 23,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "đồ hộp",
+   "count": 2594,
+   "hits_max": 65,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "cải kale",
+   "count": 2593,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sấy choice l",
+   "count": 2593,
+   "hits_max": 555,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chè",
+   "count": 2591,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "trứng gà ta",
+   "count": 2591,
+   "hits_max": 50,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "quà",
+   "count": 2584,
+   "hits_max": 139,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "chà là",
+   "count": 2580,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột bánh bao",
+   "count": 2579,
+   "hits_max": 93,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tắc xí muội",
+   "count": 2573,
+   "hits_max": 9,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "rong biển trộn",
+   "count": 2572,
+   "hits_max": 132,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh goute",
+   "count": 2567,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thuỷ tinh",
+   "count": 2567,
+   "hits_max": 127,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gà phi lê",
+   "count": 2566,
+   "hits_max": 35,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "vi",
+   "count": 2564,
+   "hits_max": 35,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bobby",
+   "count": 2563,
+   "hits_max": 20,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "o",
+   "count": 2558,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chảo sunhouse",
+   "count": 2557,
+   "hits_max": 14,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dưỡng thể",
+   "count": 2555,
+   "hits_max": 46,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gelatin",
+   "count": 2552,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "phở khô",
+   "count": 2552,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bình",
+   "count": 2550,
+   "hits_max": 115,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bia hà nội",
+   "count": 2547,
+   "hits_max": 11,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước tẩy quần áo",
+   "count": 2547,
+   "hits_max": 10,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "trung thu",
+   "count": 2545,
+   "hits_max": 121,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì modern",
+   "count": 2542,
+   "hits_max": 3,
+   "last": "2026-08-20",
+   "qaRemoved": false
+  },
+  {
+   "q": "tre",
+   "count": 2537,
+   "hits_max": 23,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa fami",
+   "count": 2536,
+   "hits_max": 20,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "bia thùng",
+   "count": 2532,
+   "hits_max": 32,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bơ th",
+   "count": 2530,
+   "hits_max": 3,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước mắm chay",
+   "count": 2530,
+   "hits_max": 110,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "choice l soffy",
+   "count": 2527,
+   "hits_max": 16,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "wake up",
+   "count": 2525,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn rút",
+   "count": 2514,
+   "hits_max": 27,
+   "last": "2026-08-19",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh bao không nhân",
+   "count": 2509,
+   "hits_max": 49,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gạo st",
+   "count": 2509,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tôm đông lạnh",
+   "count": 2508,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh quy oreo",
+   "count": 2503,
+   "hits_max": 180,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "băng",
+   "count": 2503,
+   "hits_max": 207,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì bò hầm",
+   "count": 2503,
+   "hits_max": 86,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "cóc",
+   "count": 2502,
+   "hits_max": 96,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thuốc nhuộm tóc",
+   "count": 2499,
+   "hits_max": 42,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "phô mai sợi",
+   "count": 2498,
+   "hits_max": 336,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột nếp",
+   "count": 2496,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dao bào",
+   "count": 2495,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sả cây",
+   "count": 2495,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì gói hàn quốc",
+   "count": 2494,
+   "hits_max": 39,
+   "last": "2026-08-18",
+   "qaRemoved": false
+  },
+  {
+   "q": "tã quần",
+   "count": 2494,
+   "hits_max": 50,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước nha đam",
+   "count": 2492,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh xếp mandu",
+   "count": 2491,
+   "hits_max": 26,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "xịt thơm phòng",
+   "count": 2489,
+   "hits_max": 53,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "ba rọi xông khói",
+   "count": 2487,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lactacyd",
+   "count": 2487,
+   "hits_max": 14,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt salad",
+   "count": 2486,
+   "hits_max": 6,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hủ tiếu nam vang",
+   "count": 2485,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bạc",
+   "count": 2483,
+   "hits_max": 145,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "húng quế",
+   "count": 2482,
+   "hits_max": 3,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "siro",
+   "count": 2482,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột trà xanh",
+   "count": 2476,
+   "hits_max": 2,
+   "last": "2026-08-20",
+   "qaRemoved": false
+  },
+  {
+   "q": "thái dương",
+   "count": 2472,
+   "hits_max": 28,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "chân giò",
+   "count": 2471,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "tiêu đen",
+   "count": 2471,
+   "hits_max": 33,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kim chi cải thảo",
+   "count": 2470,
+   "hits_max": 24,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa ít đường",
+   "count": 2470,
+   "hits_max": 5,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước ép đào",
+   "count": 2469,
+   "hits_max": 97,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "hộp đựng",
+   "count": 2468,
+   "hits_max": 37,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "mỳ hàn quốc",
+   "count": 2465,
+   "hits_max": 89,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "su",
+   "count": 2461,
+   "hits_max": 81,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹp",
+   "count": 2460,
+   "hits_max": 4,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "rau răm",
+   "count": 2458,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "son",
+   "count": 2458,
+   "hits_max": 47,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "balo",
+   "count": 2452,
+   "hits_max": 11,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "haribo",
+   "count": 2451,
+   "hits_max": 17,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vớ",
+   "count": 2449,
+   "hits_max": 102,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lươn",
+   "count": 2444,
+   "hits_max": 15,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh đa cua",
+   "count": 2442,
+   "hits_max": 20,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "la",
+   "count": 2441,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "chả giò hải sản",
+   "count": 2433,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt teriyaki",
+   "count": 2433,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn ướt lotte",
+   "count": 2432,
+   "hits_max": 42,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "thái",
+   "count": 2432,
+   "hits_max": 149,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "bò mỹ",
+   "count": 2426,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy hộp giấy",
+   "count": 2424,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "drap",
+   "count": 2420,
+   "hits_max": 38,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy bỏ túi",
+   "count": 2411,
+   "hits_max": 11,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì cay samyang",
+   "count": 2403,
+   "hits_max": 131,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "đũa tre",
+   "count": 2400,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "huyết",
+   "count": 2396,
+   "hits_max": 5,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ngot",
+   "count": 2396,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dnee",
+   "count": 2393,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "malkist",
+   "count": 2393,
+   "hits_max": 3,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt spaghetti",
+   "count": 2393,
+   "hits_max": 11,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "choice",
+   "count": 2386,
+   "hits_max": 626,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cá hú",
+   "count": 2380,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mirinda",
+   "count": 2380,
+   "hits_max": 20,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vỏ gối",
+   "count": 2379,
+   "hits_max": 79,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa meadow fresh",
+   "count": 2378,
+   "hits_max": 23,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "miến dong",
+   "count": 2377,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nhựa",
+   "count": 2376,
+   "hits_max": 178,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bánh cracker cà phê krisma 100g",
+   "count": 2374,
+   "hits_max": 9,
+   "last": "2026-08-16",
+   "qaRemoved": false
+  },
+  {
+   "q": "táo xanh",
+   "count": 2370,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu hủ non",
+   "count": 2370,
+   "hits_max": 76,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lu",
+   "count": 2365,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "gối cao su",
+   "count": 2363,
+   "hits_max": 93,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "hưng thịnh",
+   "count": 2361,
+   "hits_max": 6,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn giấy l choice",
+   "count": 2360,
+   "hits_max": 59,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "phô mai kem",
+   "count": 2359,
+   "hits_max": 335,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "xúc xích heo",
+   "count": 2354,
+   "hits_max": 155,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "ăn liền",
+   "count": 2354,
+   "hits_max": 154,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "lựu",
+   "count": 2349,
+   "hits_max": 34,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "th true milk nguyên chất",
+   "count": 2348,
+   "hits_max": 63,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột bánh rán",
+   "count": 2346,
+   "hits_max": 40,
+   "last": "2026-08-18",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước giặt ariel sức mạnh giặt sạch 10x cho máy giặt cửa trước túi 2.7kg",
+   "count": 2346,
+   "hits_max": 75,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "lau đa năng",
+   "count": 2339,
+   "hits_max": 101,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "vaseline",
+   "count": 2338,
+   "hits_max": 13,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "nĩa",
+   "count": 2337,
+   "hits_max": 16,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "do hop",
+   "count": 2335,
+   "hits_max": 64,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "khăn choice l",
+   "count": 2332,
+   "hits_max": 597,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "bột khoai tây",
+   "count": 2329,
+   "hits_max": 141,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nước mắm chinsu",
+   "count": 2322,
+   "hits_max": 115,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "phở trộn",
+   "count": 2317,
+   "hits_max": 14,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì khô",
+   "count": 2316,
+   "hits_max": 30,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "marine boy",
+   "count": 2309,
+   "hits_max": 6,
+   "last": "2026-08-22",
+   "qaRemoved": false
+  },
+  {
+   "q": "rong nho",
+   "count": 2308,
+   "hits_max": 2,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "senka",
+   "count": 2304,
+   "hits_max": 20,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt chấm",
+   "count": 2300,
+   "hits_max": 7,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "dừa xiêm",
+   "count": 2299,
+   "hits_max": 7,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu phụ",
+   "count": 2298,
+   "hits_max": 12,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "bia 333",
+   "count": 2297,
+   "hits_max": 4,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "há cảo bamboo",
+   "count": 2296,
+   "hits_max": 48,
+   "last": "2026-08-19",
+   "qaRemoved": false
+  },
+  {
+   "q": "nestle",
+   "count": 2290,
+   "hits_max": 34,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "súp",
+   "count": 2290,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sốt trứng muối",
+   "count": 2290,
+   "hits_max": 48,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "viên rửa chén",
+   "count": 2290,
+   "hits_max": 74,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "kẹo không đường",
+   "count": 2288,
+   "hits_max": 49,
+   "last": "2026-08-23",
+   "qaRemoved": false
+  },
+  {
+   "q": "keo trai cay",
+   "count": 2287,
+   "hits_max": 1,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "mì vị hương",
+   "count": 2287,
+   "hits_max": 232,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "xoài keo",
+   "count": 2280,
+   "hits_max": 31,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "cao đạm",
+   "count": 2279,
+   "hits_max": 10,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "nem nướng",
+   "count": 2278,
+   "hits_max": 4,
+   "last": "2026-08-21",
+   "qaRemoved": false
+  },
+  {
+   "q": "tiramisu",
+   "count": 2278,
+   "hits_max": 9,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "đậu trắng",
+   "count": 2278,
+   "hits_max": 23,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa chua greek",
+   "count": 2276,
+   "hits_max": 215,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  },
+  {
+   "q": "sữa đặc ông thọ",
+   "count": 2274,
+   "hits_max": 13,
+   "last": "2026-08-24",
+   "qaRemoved": false
+  }
+ ]
+}

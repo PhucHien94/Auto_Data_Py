@@ -15,10 +15,17 @@
   // Glossaries — curated against NSG's real catalog (grocery/convenience
   // mart: THỰC PHẨM KHÔ, HÀNG PHI THỰC PHẨM, THỰC PHẨM TƯƠI SỐNG, THỜI
   // TRANG, BỮA ĂN NGON). Every target keyword below was checked to have
-  // >=1 real match in data/ProductInfo/mart_vi_nsg_product.ndjson.
+  // >=1 real match in the NSG source NDJSON (nay la
+  // data/ProductInfo_v1.1/v1.1/mart_vi_nsg_product.ndjson - xem scripts/product_source.py).
   // ---------------------------------------------------------------------
 
   const SYNONYMS = [
+    // Spec v1 trang 2 & 6 nêu đích danh 4 cặp đồng nghĩa vùng miền phải bung
+    // 2 chiều qua synonym_graph. Rà lại 2026-09-16: chỉ "mì tôm/mì gói" đã có
+    // sẵn, 3 cặp dưới đây còn thiếu nên bổ sung đúng theo spec.
+    ["thịt lợn", "thịt heo"], ["thịt heo", "thịt lợn"],
+    ["dưa chuột", "dưa leo"], ["dưa leo", "dưa chuột"],
+    ["bột canh", "bột nêm"], ["bột nêm", "bột canh"],
     ["đồ uống", "thức uống"],
     ["heo", "lợn"], ["lợn", "heo"],
     ["tôm", "tép"],
@@ -607,6 +614,80 @@
     "cá viên xúc xích": "Cá Viên, Xúc Xích",
   };
 
+  // ---------------------------------------------------------------------
+  // AUTOCOMPLETE_ENRICH — bảng làm giàu gợi ý do AI đề xuất (DẠNG 2)
+  // ---------------------------------------------------------------------
+  // Spec user 2026-09-07: autocomplete có 2 dạng chính —
+  //   Dạng 1: query gần đúng tên sản phẩm -> sinh keyword TỪ tên sản phẩm
+  //           (xem candidateKeywords() bước 1, không cần bảng này).
+  //   Dạng 2: KHÔNG có sản phẩm nào khớp để sinh gợi ý -> nhờ AI làm giàu
+  //           dần, VD gõ "giỏ" mà không có sản phẩm nào tên "giỏ" thì gợi ý
+  //           "giỏ quà"… "nhưng vẫn cần đảm bảo có sản phẩm tồn tại".
+  //
+  // Hai điều bắt buộc với mọi entry ở đây:
+  //   1. CHỈ dùng khi bước 1 không neo được gợi ý nào (anchoredCount === 0) —
+  //      không được lấn dạng 1.
+  //   2. Groundedness KHÔNG được miễn: autocomplete() vẫn chạy
+  //      search(index, phrase) và loại thẳng phrase nào 0 sản phẩm. Nên bảng
+  //      này chỉ ĐỀ XUẤT, catalog mới là bên quyết định — thêm entry sai
+  //      không sinh ra gợi ý rác, nó chỉ đơn giản bị bỏ.
+  //
+  // Khóa là dạng đã bỏ dấu (normalize()) để người dùng gõ thiếu dấu vẫn khớp.
+  // Khớp theo prefix của cả cụm HOẶC prefix của token đầu, vì autocomplete
+  // luôn là trạng thái gõ dở.
+  //
+  // ĐO THỰC TẾ 2026-09-07 (quan trọng khi thêm entry mới): bảng này CỐ TÌNH
+  // rất ngắn. Bản nháp đầu tiên có 22 khóa tự nghĩ ra theo nhóm nhu cầu
+  // (quà tặng / đồ dã ngoại / ăn chay / nấu lẩu / khử mùi...) thì đo được
+  // 21/22 KHÔNG BAO GIỜ kích hoạt: catalog NSG 16.340 SKU quá rộng nên hầu
+  // hết query kiểu đó đã có sản phẩm khớp tên -> dạng 1 lo xong, dạng 2 đứng
+  // ngoài (đúng thiết kế). Thêm entry theo cảm tính chỉ tạo code chết.
+  //
+  // Quét 744 query (demo + generic) tìm chỗ engine trả 0 gợi ý: 43 query, mà
+  // 41/43 API THẬT CŨNG trả 0 (query tiếng Nhật/Nga/Trung/Hàn, "ốc bươu",
+  // "ốc len", "đồ ăn low carb"...) -> làm giàu mấy cái đó chỉ khiến engine mô
+  // phỏng LỆCH khỏi hệ thống thật, không phải cải thiện. 2 query còn lại
+  // ("quà cho mẹ"/"quà cho bố") thì API thật chỉ ra kết quả nhờ trùng âm
+  // "quà" -> "quả" (Mentos "Quả Mọng", "Thú Nhồi Bông Hình Quả Dừa") - đó là
+  // nhiễu, càng không nên bắt chước.
+  //
+  // => Cách thêm entry ĐÚNG: lấy từ log tìm kiếm thật 6 tháng
+  // (data/common_data/) - query người dùng thật đã gõ mà hệ thống trả 0 kết
+  // quả, VÀ tồn tại cụm mở rộng có sản phẩm thật. Không tự nghĩ.
+  const AUTOCOMPLETE_ENRICH = {
+    // Ví dụ user đưa trong spec 2026-09-07 ("gõ giỏ, nhưng k có sản phẩm nào
+    // là giỏ thì AI sẽ làm giàu = giỏ quà"). Giữ lại làm entry tham chiếu của
+    // cơ chế: catalog NSG hiện CÓ "Giỏ Nhựa"/"Giỏ Giặt" nên dạng 1 lo được và
+    // entry này đứng ngoài - đúng như spec yêu cầu ("nếu k có sản phẩm nào
+    // phù hợp" mới làm giàu). Nếu catalog sau này không còn sản phẩm "giỏ",
+    // entry này tự động có hiệu lực.
+    "gio": ["giỏ quà", "quà tết", "giỏ nhựa", "giỏ giặt"],
+    "gio qua": ["giỏ quà", "quà tết", "hộp quà"],
+    // Entry DUY NHẤT trong bản nháp thực sự kích hoạt được khi đo: không có
+    // sản phẩm nào tên chứa "khuya" nên dạng 1 bó tay, và 3 cụm dưới đây đều
+    // có sản phẩm thật.
+    "do an khuya": ["mì ly", "bánh snack", "xúc xích"],
+  };
+
+  // Trả các phrase làm giàu ứng với query (dạng 2). Khớp prefix để hỗ trợ
+  // trạng thái gõ dở: "gi" chưa đủ (>=3 ký tự mới xét prefix, tránh nổ gợi ý
+  // vô nghĩa ở 1-2 ký tự đầu), "gio"/"gio q" thì khớp "gio qua".
+  function autocompleteEnrichFor(qNorm, qTokens) {
+    const out = [];
+    const q = String(qNorm || "").trim();
+    if (q.length < 3) return out;
+    for (const key of Object.keys(AUTOCOMPLETE_ENRICH)) {
+      const exact = key === q;
+      const keyStartsWithQuery = key.startsWith(q);   // user đang gõ dở khóa dài hơn
+      const queryStartsWithKey = q.startsWith(key);   // user đã gõ quá khóa
+      const firstTokenHit = qTokens.length === 1 && key === qTokens[0];
+      if (exact || keyStartsWithQuery || queryStartsWithKey || firstTokenHit) {
+        for (const phrase of AUTOCOMPLETE_ENRICH[key]) out.push(phrase);
+      }
+    }
+    return out;
+  }
+
   // Words/phrases a suggestion must NEVER surface as — matches SS-SCR-001-
   // SC3-TC3 in the production test suite ("Keywords with 0 results or
   // banned words are never shown"). This is a SEPARATE rule from
@@ -930,12 +1011,50 @@
   // own). Deliberately NARROWER than "any [ONL]/[Deal Sốc]-prefixed name" —
   // "[Deal Sốc] - Nước Giặt Lix..." etc. ARE real discounted products and
   // must stay searchable; only the tặng/gift-trigger phrasing is excluded.
+  // Ưu Tiên 1 của spec (trang 8): "Sản phẩm CÒN HÀNG (1) xếp trước 100%.
+  // Sản phẩm HẾT HÀNG (0) tự động dồn xuống đáy (OOS Demote)." Catalog rút
+  // gọn mang số tồn ở trường `stock` (nguồn: stock_qty của BOS) - coi >0 là
+  // còn hàng. Thiếu trường thì mặc định CÒN HÀNG: không có bằng chứng hết
+  // hàng thì không được tự ý dìm sản phẩm xuống đáy.
+  function inStockRank(p) {
+    if (!p || p.stock === undefined || p.stock === null) return 1;
+    return Number(p.stock) > 0 ? 1 : 0;
+  }
+
   function isPromoGiftTrigger(p) {
     return /^\[ONL\]-/.test(p.name || "") && /tặng|mua đơn/i.test(p.name || "");
   }
 
+  // Hàng 0đ / 1đ = dòng khuyến mãi, KHÔNG phải sản phẩm bán thật (user 2026-09-16).
+  // Trùng đúng bug QA đã ghi ở NSG-ALL-0051 "thực phẩm tươi sống": hai SKU tặng
+  // 1đ (CLCACAPELIN300G, ONLTHUMSUP320) chiếm top 1-2, user ghi "(expect ẩn)".
+  //
+  // Bằng chứng đây là dòng khuyến mãi chứ không phải hàng bán (đo trên catalog
+  // NSG 2026-09-16, 2.643/18.122 sản phẩm = 14,6%):
+  //   - Hàng giá bình thường : 15.477/15.479 (100%) có SKU dạng mã vạch EAN.
+  //   - Hàng 0đ/1đ           : 22/2.643 (0,8%) có EAN. Còn lại mang tiền tố nội
+  //     bộ P24xx/P25xx/LLNSGW/ONL/PBG - mã dòng khuyến mãi, không phải SKU thật.
+  //   - 22 ca có EAN đều là price=0 VÀ stock=0 (hàng ngừng bán), nên loại luôn
+  //     cũng đúng.
+  //   - Tên hàng lộ rõ bản chất: "... Trị Giá 40k", "... (Quấn Kèm)", hoặc chỉ
+  //     có tên thương hiệu trần không quy cách ("Mì Koreno", "Khăn", "Hộp Bút").
+  //
+  // isPromoGiftTrigger cũ chỉ bắt được 3 dòng "[ONL]-...tặng/mua đơn" - quá hẹp,
+  // bỏ lọt toàn bộ 2.643 dòng này.
+  //
+  // CHỈ loại khi price là số thật <= 1. Thiếu trường price thì GIỮ: không có
+  // bằng chứng thì không được tự ý ẩn sản phẩm khỏi kết quả tìm kiếm.
+  function isZeroOrOneDongItem(p) {
+    if (!p || p.price === undefined || p.price === null || p.price === "") return false;
+    const price = Number(p.price);
+    return Number.isFinite(price) && price <= 1;
+  }
+
   function buildIndex(products) {
-    products = products.filter(isActiveProduct).filter((p) => !isPromoGiftTrigger(p));
+    products = products
+      .filter(isActiveProduct)
+      .filter((p) => !isPromoGiftTrigger(p))
+      .filter((p) => !isZeroOrOneDongItem(p));
     const entries = products.map((p) => ({
       p,
       nameCaseFoldTokens: tokensCaseFold(p.name),
@@ -1595,9 +1714,45 @@
     // typeIntentBoost ranks ABOVE matchedWords — see detectTypeIntent() comment:
     // the user's ask was for the non-matching type to show dead last, not just
     // lose a same-score tiebreak.
-    results.sort((a, b) => b.typeIntentBoost - a.typeIntentBoost || b.matchedWords - a.matchedWords || b.score - a.score || b.popularity - a.popularity);
+    // -------------------------------------------------------------------
+    // 5 TẦNG ƯU TIÊN theo MART_Search_Mechanism_and_Rules_Specification_v1
+    // (trang 4 & 8). Trước bản này engine xếp hạng thuần theo độ khớp, thiếu
+    // hẳn tầng tồn kho - tức sai lệch so với hệ thống thật ở tầng ƯU TIÊN
+    // SỐ 1, tầng mà spec ghi là "bắt buộc" và "tự động 100%".
+    //
+    //   Ưu Tiên 1: in_stock DESC  - hàng còn tồn đứng trước 100%, hết tồn
+    //              (OOS) dồn xuống đáy. Spec: "Loại bỏ hoàn toàn tình trạng
+    //              khách bấm vào sản phẩm thấy hết hàng."
+    //   Ưu Tiên 2: _score DESC    - độ phù hợp (giữ nguyên thang điểm cũ:
+    //              typeIntentBoost > matchedWords > score > popularity).
+    //   Ưu Tiên 3: Category Dial  - KHÔNG cài. Spec trang 12 ghi pipeline
+    //              đồng bộ trọng số "đang được chuẩn bị để kích hoạt", chưa
+    //              phục vụ Search Serving nên mô phỏng sẽ sai nếu bật.
+    //   Ưu Tiên 4: Campaign Pin   - KHÔNG cài. Spec lặp lại 8 lần rằng tính
+    //              năng này "hiện tại chưa test, mới chỉ là thử nghiệm chưa
+    //              chốt". Cài vào là mô phỏng thứ không tồn tại.
+    //   Ưu Tiên 5: tie-break _id  - dùng sku cho ổn định phân trang, để hai
+    //              lần chạy cùng dữ liệu không đảo thứ tự sản phẩm hoà điểm.
+    // -------------------------------------------------------------------
+    results.sort((a, b) =>
+      inStockRank(b.product) - inStockRank(a.product) ||
+      b.typeIntentBoost - a.typeIntentBoost ||
+      b.matchedWords - a.matchedWords ||
+      b.score - a.score ||
+      b.popularity - a.popularity ||
+      String(a.product.sku || "").localeCompare(String(b.product.sku || "")));
     let finalResults = diversifyByBrand(results);
     if (excludeDomesticVn) finalResults = finalResults.filter((r) => !isDomesticVnBrand(r.product.brand));
+    // OOS Demote phải là bước NGOÀI CÙNG. diversifyByBrand() xáo lại thứ tự
+    // để tránh một thương hiệu chiếm hết trang, và chính nó phá vỡ thứ tự tồn
+    // kho vừa sắp ở trên (phát hiện 2026-09-16 khi test "bỉm": sản phẩm hết
+    // hàng bị đẩy lên trước sản phẩm còn hàng). Spec xếp tồn kho là Ưu Tiên 1
+    // "bắt buộc", nên nó phải thắng mọi bước sắp xếp khác - kể cả đa dạng hoá
+    // thương hiệu. Partition ổn định: giữ nguyên thứ tự tương đối trong từng
+    // nhóm, chỉ tách còn-hàng lên trước hết-hàng.
+    const inStockPool = [], oosPool = [];
+    for (const r of finalResults) (inStockRank(r.product) ? inStockPool : oosPool).push(r);
+    finalResults = inStockPool.concat(oosPool);
     return limit === Infinity ? finalResults : finalResults.slice(0, limit);
   }
 
@@ -1605,65 +1760,220 @@
   // Autocomplete: candidate keyword generation + groundedness validation
   // ---------------------------------------------------------------------
 
+  // Query-anchored window: liệu TỪ này của tên sản phẩm có phải là từ khóa
+  // người dùng đang gõ. So cả 2 mức chặt (giữ dấu) và lỏng (bỏ dấu), và cho
+  // khớp PREFIX vì autocomplete vốn là gõ dở ("john" -> "Johnson's",
+  // "gio" -> "Giỏ"). Dùng cho bước 1 của candidateKeywords().
+  // QUAN TRỌNG (bug tự gây ra & sửa 2026-09-07): prefix CHỈ được áp trên
+  // token GIỮ DẤU. Cho prefix trên token bỏ dấu thì "gio" (từ "giỏ") khớp cả
+  // "giống", "giới", "giông" — hoàn toàn khác nghĩa; API thật cho q="giỏ"
+  // trả "giò"/"giò lụa"/"giò heo" (khớp bỏ dấu ĐÚNG BẰNG, chấp nhận lệch
+  // dấu) và tuyệt đối không trả "giống". Chữ có dấu khác nhau ngay ở mức ký
+  // tự nên prefix giữ dấu vẫn an toàn: "giống".startsWith("giỏ") === false,
+  // trong khi "johnson's".startsWith("john") === true (gõ dở vẫn khớp).
+  function wordMatchesQuery(word, qCaseFoldSet, qNormSet) {
+    for (const t of tokensCaseFold(word)) {
+      if (qCaseFoldSet.has(t)) return true;
+      for (const q of qCaseFoldSet) if (q.length >= 3 && t.startsWith(q)) return true;
+    }
+    for (const t of tokens(word)) {
+      if (qNormSet.has(t)) return true; // bằng đúng, KHÔNG prefix - xem comment trên
+    }
+    return false;
+  }
+
+  // Bao nhiêu token của query xuất hiện trong keyword ứng viên - tín hiệu
+  // RELEVANCE để xếp hạng (xem sort trong autocomplete()). Trước 2026-09-07
+  // mọi ứng viên đều best_score=100 nên chỉ còn popularity quyết định, khiến
+  // gợi ý generic phổ biến ("Sữa Tắm", "Khăn Ướt") luôn đè lên gợi ý thật sự
+  // chứa từ khóa ("Sữa Tắm Johnson's").
+  function queryTokenCoverage(keyword, qCaseFoldSet, qNormSet) {
+    if (!qCaseFoldSet.size && !qNormSet.size) return 0;
+    const kwCase = new Set(tokensCaseFold(keyword));
+    const kwNorm = new Set(tokens(keyword));
+    let hit = 0;
+    for (const q of qCaseFoldSet) {
+      let found = kwCase.has(q);
+      if (!found && q.length >= 3) for (const t of kwCase) if (t.startsWith(q)) { found = true; break; }
+      if (found) hit++;
+    }
+    if (!hit) {
+      // Nhánh bỏ dấu: bằng đúng, KHÔNG prefix — cùng lý do ở wordMatchesQuery().
+      for (const q of qNormSet) if (kwNorm.has(q)) hit++;
+    }
+    const total = qCaseFoldSet.size || qNormSet.size;
+    return total ? hit / total : 0;
+  }
+
   function candidateKeywords(index, query) {
     const raw = stripLeadingVerbs(String(query || "").trim());
     const qTokens = tokens(raw);
     const qCaseFoldTokens = tokensCaseFold(raw);
     const qNorm = normalize(raw);
-    const out = new Set();
+    const qCaseFoldSet = new Set(qCaseFoldTokens);
+    const qNormSet = new Set(qTokens);
+    // Map phrase -> {kind, type}. Giữ kind lần đầu gặp: "anchored" (neo đúng
+    // vị trí từ khóa trong tên sản phẩm) mạnh hơn "prefix" (2-3 từ đầu tên),
+    // nên chỉ nâng cấp chứ không hạ cấp.
+    const out = new Map();
+    const KIND_RANK = { anchored: 4, product_full: 3, glossary: 2, prefix: 1, category: 0, enrich: 2 };
+    const addCand = (phrase, kind, type) => {
+      if (!phrase) return;
+      const p = String(phrase).trim();
+      if (!p) return;
+      const prev = out.get(p);
+      if (prev && KIND_RANK[prev.kind] >= KIND_RANK[kind]) return;
+      out.set(p, { kind, type: type || "term" });
+    };
 
-    // 1) direct matches -> pull short keyword fragments from matched product names
-    const direct = search(index, raw, { limit: 60 });
+    // 1) direct matches -> keyword lấy từ tên sản phẩm khớp (DẠNG 1 theo spec
+    //    user 2026-09-07: "gần đúng tên sản phẩm -> ra keyword").
+    // limit 40 (trước là 60): mỗi ứng viên sinh ra tốn 1 lần search() để kiểm
+    // groundedness, mà topN mặc định chỉ 30 và API thật trả tối đa 8 - lấy 60
+    // sản phẩm nguồn chỉ làm nặng thêm chứ không đổi top.
+    const direct = search(index, raw, { limit: 40 });
+    let anchoredCount = 0;
+    let fullNameQuota = 20;
     for (const r of direct) {
-      const words = (r.product.name || "").split(/\s+/).filter(Boolean);
-      if (words.length) {
-        out.add(words.slice(0, Math.min(3, words.length)).join(" "));
+      const name = r.product.name || "";
+      const words = name.split(/\s+/).filter(Boolean);
+      if (!words.length) continue;
+
+      // 1a) cửa sổ NEO tại vị trí từ khóa xuất hiện trong tên. Sửa 2026-09-07:
+      //     trước đây chỉ lấy 2-3 từ ĐẦU nên từ khóa nằm giữa tên bị mất hẳn
+      //     ("Trứng Gà Ta V.food Giỏ 10 Quả" + query "giỏ" -> "Trứng Gà").
+      let anchor = -1;
+      for (let i = 0; i < words.length; i++) {
+        if (wordMatchesQuery(words[i], qCaseFoldSet, qNormSet)) { anchor = i; break; }
       }
-      if (words.length > 3) out.add(words.slice(0, 2).join(" "));
+      if (anchor >= 0) {
+        anchoredCount++;
+        for (const len of [2, 3]) {
+          if (anchor + len <= words.length) addCand(words.slice(anchor, anchor + len).join(" "), "anchored");
+        }
+        // từ khóa đứng cuối tên thì cửa sổ tiến không có gì - lùi lại 1 từ
+        if (anchor + 2 > words.length && anchor > 0) {
+          addCand(words.slice(anchor - 1, anchor + 1).join(" "), "anchored");
+        }
+      }
+
+      // 1b) TÊN SẢN PHẨM ĐẦY ĐỦ - đối ứng type="product" của API thật (API
+      //     thật trả nguyên tên sản phẩm làm gợi ý, engine cũ không hề sinh
+      //     dạng này nên 2 bên không có gì để đối chiếu).
+      if (anchor >= 0 && name.length <= 80 && fullNameQuota > 0) {
+        addCand(name, "product_full", "product");
+        fullNameQuota--;
+      }
+
+      // 1c) 2-3 từ đầu tên (hành vi cũ) - vẫn giữ làm gợi ý duyệt danh mục,
+      //     nhưng xếp hạng thấp hơn nhóm neo ở trên.
+      addCand(words.slice(0, Math.min(3, words.length)).join(" "), "prefix");
+      if (words.length > 3) addCand(words.slice(0, 2).join(" "), "prefix");
     }
 
     // 2) glossary-driven expansions relevant to the query (exact-phrase gated, see expandQueryTerms)
-    for (const alt of expandQueryTerms(qTokens, qCaseFoldTokens, qNorm)) out.add(alt.phrase);
-    for (const it of intentTargets(qTokens)) out.add(it.phrase);
-    for (const ct of categoryTargets(qTokens)) out.add(ct.label);
+    for (const alt of expandQueryTerms(qTokens, qCaseFoldTokens, qNorm)) addCand(alt.phrase, "glossary");
+    for (const it of intentTargets(qTokens)) addCand(it.phrase, "glossary");
+    for (const ct of categoryTargets(qTokens)) addCand(ct.label, "glossary");
     // 2b) intent/category PHRASES themselves as autocomplete-style prefix
     // completions (e.g. typing "gy" should be able to suggest the phrase
     // "gym"), word-boundary safe
     if (qNorm.length >= 2) {
       for (const key of Object.keys(INTENT)) {
-        if (phraseContains(tokens(key), qTokens, true)) out.add(key);
+        if (phraseContains(tokens(key), qTokens, true)) addCand(key, "glossary");
       }
       for (const key of Object.keys(CATEGORY)) {
-        if (phraseContains(tokens(key), qTokens, true)) out.add(key);
+        if (phraseContains(tokens(key), qTokens, true)) addCand(key, "glossary");
       }
+    }
+
+    // 2c) DẠNG 2 (spec user 2026-09-07): không có sản phẩm nào khớp để neo ra
+    //     keyword thì mới nhờ bảng làm giàu do AI đề xuất (VD gõ "giỏ" mà
+    //     catalog không có sản phẩm nào tên "giỏ" -> "giỏ quà"). Chỉ bật khi
+    //     anchoredCount === 0 để không lấn dạng 1; mọi phrase vẫn phải qua
+    //     kiểm tra groundedness trong autocomplete() (phải có sản phẩm THẬT).
+    if (anchoredCount === 0) {
+      for (const phrase of autocompleteEnrichFor(qNorm, qTokens)) addCand(phrase, "enrich");
     }
 
     // 3) category names of matched products (browsing suggestions)
     for (const r of direct.slice(0, 15)) {
-      if (r.product.cat) out.add(r.product.cat.toLowerCase());
+      if (r.product.cat) addCand(r.product.cat.toLowerCase(), "category");
     }
 
-    return Array.from(out).filter((k) => k && k.length >= 2 && k.length <= 40);
+    const list = [];
+    for (const [phrase, meta] of out) {
+      const maxLen = meta.type === "product" ? 80 : 40;
+      if (phrase.length >= 2 && phrase.length <= maxLen) {
+        list.push({
+          phrase,
+          kind: meta.kind,
+          type: meta.type,
+          coverage: queryTokenCoverage(phrase, qCaseFoldSet, qNormSet),
+        });
+      }
+    }
+    return list;
   }
 
   function autocomplete(index, query, topN) {
     topN = topN || 30;
     const candidates = candidateKeywords(index, query);
+    // Xếp ứng viên theo TẦNG relevance TRƯỚC khi kiểm groundedness. Lý do
+    // (tối ưu 2026-09-07): mỗi ứng viên tốn 1 lần search() để xác thực, mà
+    // coverage tính được thuần bằng chuỗi (miễn phí) và LÀ khóa sắp xếp
+    // chính - nên duyệt tầng coverage cao trước rồi dừng khi đã đủ topN giúp
+    // bỏ hẳn phần lớn lần search() vô ích. Vẫn CHÍNH XÁC vì chỉ dừng khi đã
+    // duyệt XONG cả tầng hiện tại (trong cùng tầng, thứ tự do best_score/
+    // popularity quyết định nên không được cắt giữa tầng).
+    const KIND_RANK2 = { anchored: 4, product_full: 3, glossary: 2, enrich: 2, prefix: 1, category: 0 };
+    candidates.sort((a, b) =>
+      b.coverage - a.coverage || (KIND_RANK2[b.kind] || 0) - (KIND_RANK2[a.kind] || 0));
     const scored = [];
-    for (const kw of candidates) {
+    // Đếm theo keyword ĐÃ DEDUP (không phải scored.length): các ứng viên khác
+    // nhau vẫn có thể trùng keyword sau khi hạ chữ thường, nên đếm thô sẽ
+    // break sớm và trả thiếu hàng. Đúng lỗi này làm query "cần mua rượu vang"
+    // ra 29 thay vì 30 gợi ý khi so với bản không break.
+    const groundedKeys = new Set();
+    let curTier = null;
+    for (const cand of candidates) {
+      const tier = cand.coverage;
+      if (curTier !== null && tier !== curTier && groundedKeys.size >= topN) break; // xong tầng trước & đủ hàng
+      curTier = tier;
+      const kw = cand.phrase;
       if (isBannedKeyword(kw)) continue; // never shown, independent of groundedness
       const hits = search(index, kw, { limit: 5, skipTypo: true });
       if (hits.length > 0) {
+        groundedKeys.add(kw.toLowerCase());
         scored.push({
           keyword: kw,
           verified_product_count: hits.length === 5 ? "5+" : hits.length,
           best_score: hits[0].score,
           popularity: hits[0].popularity,
+          // Đối ứng type của API thật: "term" = từ khóa ngắn, "product" =
+          // tên sản phẩm đầy đủ. Thêm 2026-09-07 để Expected và Actual so
+          // được cùng loại với nhau (trước đó engine chỉ sinh keyword ngắn
+          // nên toàn bộ gợi ý type="product" của API thật không có gì đối
+          // chiếu -> % trùng luôn bằng 0 dù không bên nào sai).
+          type: cand.type,
+          // Nguồn sinh ra gợi ý, để truy vết khi review: anchored/
+          // product_full = dạng 1 (từ tên sản phẩm), enrich = dạng 2 (bảng
+          // AI làm giàu), glossary/prefix/category = mở rộng sẵn có.
+          source: cand.kind,
+          query_coverage: Math.round(cand.coverage * 100) / 100,
         });
       }
       // groundedness requirement: if hits.length === 0, candidate is dropped entirely
     }
-    scored.sort((a, b) => b.best_score - a.best_score || b.popularity - a.popularity);
+    // Relevance (bao nhiêu phần từ khóa query nằm trong gợi ý) xếp TRÊN
+    // best_score/popularity - xem queryTokenCoverage(). Sửa 2026-09-07: mọi
+    // ứng viên gần như luôn best_score=100 nên trước đây chỉ popularity
+    // quyết định, đẩy gợi ý generic phổ biến lên đầu và loại hết gợi ý thật
+    // sự chứa từ người dùng đang gõ.
+    scored.sort((a, b) =>
+      b.query_coverage - a.query_coverage ||
+      b.best_score - a.best_score ||
+      b.popularity - a.popularity);
     const seen = new Set();
     const out = [];
     for (const s of scored) {
@@ -1765,5 +2075,6 @@
     return { confidence, route, routeLabel };
   }
 
-  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, isPromoGiftTrigger, matchedWordCount, isSingleExactMatch, pickYouMightLike, detectTypeIntent, typeIntentMatches, diversifyByBrand, isImportQuery, isDomesticVnBrand, VN_DOMESTIC_BRANDS, isFoodScopedQuery };
+  return { buildIndex, search, autocomplete, normalize, SYNONYMS, REGIONAL, INTENT, CATEGORY,
+    AUTOCOMPLETE_ENRICH, autocompleteEnrichFor, routeFor, TIER_BRANCH, CONFIDENCE_THRESHOLD, BANNED_WORDS, isBannedKeyword, isActiveProduct, isPromoGiftTrigger, isZeroOrOneDongItem, matchedWordCount, isSingleExactMatch, pickYouMightLike, detectTypeIntent, typeIntentMatches, diversifyByBrand, isImportQuery, isDomesticVnBrand, VN_DOMESTIC_BRANDS, isFoodScopedQuery };
 });

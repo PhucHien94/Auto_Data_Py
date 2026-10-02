@@ -72,7 +72,12 @@ BATCHES_DIR_DEFAULT = "SmartSearch/test_data/json/batches"
 # batch can be discovered too - NSG and WLE batches can share the same range string
 # (both have a "0-1000"), so discover_batches always filters by store_prefix to avoid
 # one silently shadowing the other in the {range: path} dict.
-BATCH_FILE_RE = re.compile(r"(NSG|WLE)_ExpectedData_(.+)_(\d{8})\.json$")
+# Hậu tố chữ sau ngày (20260916b, 20260916c) là cách đặt tên đang dùng cho
+# các bản sinh lại trong CÙNG một ngày. Regex cũ chỉ nhận đúng 8 chữ số nên
+# các bản đó bị bỏ qua HOÀN TOÀN và script âm thầm lùi về file cũ hơn -
+# đúng lỗi làm bộ Actual 16/09 chạy trên Expected ngày 07/09 mà không ai hay.
+# So sánh chuỗi vẫn đúng thứ tự: "20260916c" > "20260916b" > "20260916".
+BATCH_FILE_RE = re.compile(r"(NSG|WLE)_ExpectedData_(.+)_(\d{8}[a-z]?)\.json$")
 
 
 def discover_batches(batches_dir, store_prefix="NSG"):

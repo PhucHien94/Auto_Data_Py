@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Result Comparison Dashboard</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card-bg: #ffffff;
+    --card-border: #dde1ea;
+    --text-primary: #14181f;
+    --text-secondary: #565f70;
+    --text-muted: #7b8494;
+    --accent: #0284c7;
+    --accent-hover: #0369a1;
+    --green: #16a34a;
+    --green-bg: rgba(22, 163, 74, 0.12);
+    --yellow: #b45309;
+    --yellow-bg: rgba(217, 119, 6, 0.12);
+    --red: #dc2626;
+    --red-bg: rgba(220, 38, 38, 0.10);
+    --blue: #2563eb;
+    --blue-bg: rgba(37, 99, 235, 0.10);
+    --purple: #7e22ce;
+    --purple-bg: rgba(126, 34, 206, 0.10);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding: 24px;
+  }
+
+  .container { max-width: 1440px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .header h1 { font-size: 24px; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 10px; }
+  .header p { color: var(--text-secondary); font-size: 14px; margin-top: 4px; }
+  .meta-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #eef1f6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #3f4a5c;
+    margin-right: 6px;
+  }
+
+  /* Tooltip Container */
+  [data-tooltip] {
+    position: relative;
+    cursor: help;
+  }
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #090d16;
+    color: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: normal;
+    width: max-content;
+    max-width: 280px;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #475569;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    pointer-events: none;
+    text-transform: none;
+    text-align: left;
+  }
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    overflow: visible;
+  }
+  .kpi-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .kpi-card.green::before { background: var(--green); }
+  .kpi-card.yellow::before { background: var(--yellow); }
+  .kpi-card.purple::before { background: var(--purple); }
+  .kpi-card.blue::before { background: var(--blue); }
+  .kpi-card.red::before { background: var(--red); }
+
+  .kpi-title { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+  .kpi-value { font-size: 26px; font-weight: 700; color: var(--text-primary); margin: 4px 0 2px 0; }
+  .kpi-sub { font-size: 12px; color: var(--text-muted); }
+  .info-icon { font-size: 13px; color: var(--text-muted); margin-left: 4px; }
+
+  /* Controls & Search */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .search-box {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+  }
+  .search-input {
+    width: 100%;
+    padding: 10px 16px 10px 38px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+  }
+  .search-input:focus { border-color: var(--accent); }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { background: #eef1f6; color: var(--text-primary); }
+  .tab-btn.active {
+    background: var(--accent);
+    color: #0f172a;
+    font-weight: 700;
+    border-color: var(--accent);
+  }
+
+  /* Scenario List */
+  .scenario-list { display: flex; flex-direction: column; gap: 16px; }
+  .scenario-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    /* NOT overflow:hidden - clips tooltips (data-tooltip::after) that pop up
+       from badges near the card's top/right edge, e.g. the "Fix Expected"
+       button (2026-08-28 bug report: tooltip visibly cut off on hover).
+       Corner-clipping is handled per-element below instead (only
+       .scenario-header has a visible background box that could otherwise
+       poke past the card's rounded corners - .scenario-body/.bug-panel are
+       transparent/self-contained and don't need it). */
+    transition: border-color 0.2s;
+  }
+  .scenario-card:hover { border-color: #b7c0d1; }
+
+  /* Query phải bôi đen/copy được (user 2026-09-08). Header có
+     user-select:none + onclick mở panel, nên phải gỡ CẢ HAI cho riêng vùng
+     query: user-select:text ở CSS và stopPropagation ở onclick. */
+  .query-vi {
+    user-select: text;
+    cursor: text;
+    font-size: 12px;
+    color: #1d4ed8;
+    background: #eef6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 5px;
+    padding: 1px 7px;
+    margin-left: 2px;
+    white-space: nowrap;
+  }
+  /* Hàng nghĩa 5 ngoại ngữ dưới keyword (user 2026-09-15).
+     flex-basis:100% để tự xuống dòng riêng, không chen vào hàng badge.
+     user-select:text + stopPropagation ở onclick để copy được mà không mở panel. */
+  .ml-row {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 2px;
+  }
+  .ml-chip {
+    user-select: text;
+    cursor: text;
+    font-size: 11.5px;
+    line-height: 1.5;
+    border-radius: 5px;
+    padding: 1px 7px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .ml-chip b {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    opacity: .75;
+    margin-right: 4px;
+    user-select: none;
+  }
+  .ml-en { color:#0369a1; background:#f0f9ff; border-color:#bae6fd; }
+  .ml-ko { color:#9d174d; background:#fdf2f8; border-color:#fbcfe8; }
+  .ml-ja { color:#9a3412; background:#fff7ed; border-color:#fed7aa; }
+  .ml-ru { color:#3730a3; background:#eef2ff; border-color:#c7d2fe; }
+  .ml-zh { color:#166534; background:#f0fdf4; border-color:#bbf7d0; }
+  .scenario-header {
+    padding: 14px 20px;
+    background: rgba(15,23,42,0.02);
+    border-bottom: 1px solid var(--card-border);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .scenario-title-area { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .scenario-id { font-weight: 700; font-size: 13px; color: var(--accent); font-family: monospace; }
+  /* user-select/cursor: query phải bôi đen + copy được (user 2026-09-08);
+     header cha đang để user-select:none nên phải gỡ riêng ở đây. */
+  .scenario-query {
+    font-size: 16px; font-weight: 600; color: var(--text-primary);
+    user-select: text; cursor: text;
+  }
+  .scenario-query:hover { background: rgba(59,130,246,0.10); border-radius: 4px; }
+  .scenario-badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+  .badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-exact { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+  .badge-set { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple); }
+  .badge-high { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue); }
+  .badge-partial { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow); }
+  .badge-low { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+  .badge-zero { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+  .badge-passed { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+  .badge-failed { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+  .badge-review { background: rgba(100,116,139,0.14); color: #46536b; border: 1px solid #8a94a6; }
+  .badge-regression {
+    background: #7f1d1d; color: #fff; border: 1px solid #7f1d1d;
+    animation: regression-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes regression-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.72; } }
+
+  /* Regression alert banner - user request 2026-09-03: keywords that were
+     "passed" (per the previous compare run's persisted verdict) but fell
+     into partial/low/zero/no-match THIS run get called out here, separate
+     from the normal scenario list, so a regression can't get lost scrolling
+     through hundreds of otherwise-fine rows. */
+  .regression-banner {
+    background: #fef2f2;
+    border: 1px solid #dc2626;
+    border-left: 5px solid #dc2626;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .regression-banner h2 { font-size: 16px; color: #7f1d1d; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .regression-banner p { font-size: 13px; color: #7f1d1d; margin-bottom: 12px; }
+  .regression-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+  .regression-row {
+    background: #fff;
+    border: 1px solid #f3c6c6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .regression-row:hover { border-color: #dc2626; }
+  .regression-row .rr-query { font-weight: 600; color: var(--text-primary); }
+  .regression-row .rr-arrow { color: #7f1d1d; font-family: monospace; font-size: 12px; }
+
+  .scenario-body {
+    padding: 20px;
+    display: none;
+  }
+  .scenario-body.open { display: block; }
+
+  .compare-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .compare-columns.has-asis { grid-template-columns: 1fr 1fr 1fr; }
+  /* Expected panel is hide-by-default (checkbox opt-in, "showExpandedToggle")
+     - these 2 variants cover HAS_ASIS with Expected hidden (2 cols: As-Is +
+     Actual) and no As-Is at all with Expected hidden (1 col: Actual only). */
+  .compare-columns.has-asis-no-expected { grid-template-columns: 1fr 1fr; }
+  .compare-columns.no-expected { grid-template-columns: 1fr; }
+  @media (max-width: 1200px) {
+    .compare-columns.has-asis { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 900px) {
+    .compare-columns,
+    .compare-columns.has-asis,
+    .compare-columns.has-asis-no-expected,
+    .compare-columns.no-expected { grid-template-columns: 1fr; }
+  }
+  .col-box.asis-box { border-color: #c4933f; }
+  .col-box.asis-box .col-title { color: #92660a; }
+  .col-box.rec-box { border-color: #4a9c6d; border-style: dashed; }
+  .col-box.rec-box .col-title { color: #2f7a4d; }
+  /* Autocomplete section (2026-09-07) - khối riêng dưới lưới so sánh search,
+     view-only, không dính vào scoring. */
+  .ac-section {
+    border-top: 2px dashed #b9a6d6;
+    padding-top: 14px;
+  }
+  .ac-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6d4aa0;
+    margin-bottom: 10px;
+  }
+  .col-box.ac-box { border-color: #8b6cc0; }
+  .col-box.ac-box .col-title { color: #5b3f8c; }
+
+  .col-box {
+    background: #f6f7fb;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .col-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Product Tables */
+  /* Panel cuộn cho danh sách sản phẩm. Từ 2026-09-17 danh sách hiển thị TOÀN BỘ
+   kết quả (trước đây cắt ở top-30), nên phải có chiều cao trần + cuộn, nếu
+   không một keyword 50 sản phẩm sẽ đẩy trang dài gấp đôi. */
+.prod-scroll { max-height: 460px; overflow-y: auto; border-radius: 6px; }
+.prod-scroll thead th { position: sticky; top: 0; z-index: 2; }
+/* Ranh giới cửa sổ chấm điểm: mọi dòng DƯỚI vạch này chỉ để xem, không tham
+   gia tính % khớp hay Pass/Fail. */
+tr.window-edge td {
+  background: #fffbeb; border-top: 2px dashed #f59e0b; border-bottom: 1px solid #fde68a;
+  color: #92400e; font-size: 11px; font-weight: 600; padding: 5px 8px; text-align: center;
+}
+.prod-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .prod-table th {
+    text-align: left;
+    padding: 6px 8px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--card-border);
+    font-weight: 600;
+  }
+  .prod-table td {
+    padding: 8px;
+    border-bottom: 1px solid #eef1f6;
+    vertical-align: middle;
+  }
+  .prod-table tr:hover { background: rgba(15,23,42,0.03); }
+
+  .rank-num {
+    font-weight: 700;
+    color: var(--text-muted);
+    width: 24px;
+    display: inline-block;
+  }
+  .item-name { color: var(--text-primary); font-weight: 500; display: block; max-width: 260px; word-break: break-word; }
+  .item-meta { font-size: 11px; color: var(--text-muted); }
+
+  .tag-status {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .tag-exact { background: var(--green-bg); color: var(--green); }
+  .tag-shift { background: var(--yellow-bg); color: var(--yellow); }
+  .tag-outside { background: rgba(100, 116, 139, 0.12); color: #46536b; }
+  .tag-missing { background: var(--red-bg); color: var(--red); }
+  .tag-extra { background: var(--blue-bg); color: var(--blue); }
+
+  .pagination-info {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pagination-controls button,
+  .pagination-controls select,
+  .sort-control select {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .pagination-controls button { cursor: pointer; }
+  .pagination-controls button:hover:not(:disabled) { border-color: var(--accent); }
+  .pagination-controls button:disabled { cursor: not-allowed; opacity: 0.45; }
+  .sort-control { display: flex; align-items: center; gap: 8px; }
+  .sort-control label { color: var(--text-secondary); font-size: 12px; }
+
+  /* Bug marking - per-keyword */
+  .bug-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .target-label .target-badge {
+    display: inline-block; font-weight: 700; font-size: 13px;
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 6px; padding: 5px 12px; color: var(--text-primary);
+  }
+  .badge-reviewed { background:#ecfeff; color:#0e7490; border:1px solid #a5f3fc; }
+  .bug-btn:hover { border-color: var(--red); color: var(--red); }
+  /* 2 nút Discussion + Remove dùng chung khung với .bug-btn, chỉ khác màu nhấn */
+  .disc-btn, .rm-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .disc-btn:hover { border-color: #3b82f6; color: #1d4ed8; }
+  .disc-btn.marked { background: #eef6ff; border-color: #93c5fd; color: #1d4ed8; }
+  .rm-btn:hover { border-color: #ef4444; color: #b91c1c; }
+  .rm-btn.marked { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .bug-btn.marked {
+    background: var(--red-bg);
+    border-color: var(--red);
+    color: var(--red);
+  }
+
+  .pf-override-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .pf-override-btn:hover { border-color: var(--green); color: var(--green); }
+  .pf-override-btn.marked { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+
+  .bug-panel {
+    display: none;
+    margin-top: 14px;
+    background: var(--red-bg);
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .bug-panel.open { display: block; }
+  .bug-panel-title { font-size: 13px; font-weight: 700; color: var(--red); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .bug-field-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; display: block; font-weight: 600; }
+  .bug-textarea {
+    width: 100%;
+    min-height: 70px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 13px;
+    padding: 10px;
+    resize: vertical;
+    font-family: inherit;
+    margin-bottom: 12px;
+  }
+  .bug-textarea:focus { outline: none; border-color: var(--red); }
+  .paste-zone {
+    border: 2px dashed var(--card-border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: text;
+    margin-bottom: 12px;
+    transition: border-color 0.15s, background 0.15s;
+    outline: none;
+  }
+  .paste-zone:focus, .paste-zone.dragover { border-color: var(--accent); background: rgba(56,189,248,0.06); }
+  .paste-zone.has-image { padding: 8px; border-style: solid; }
+  .bug-thumb { max-width: 100%; max-height: 260px; border-radius: 6px; display: block; margin: 0 auto; }
+  .bug-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .bug-save-btn, .bug-remove-btn, .bug-cancel-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--text-primary);
+  }
+  .bug-save-btn { background: var(--red); border-color: var(--red); color: #fff; }
+  .bug-save-btn:hover { background: #dc2626; }
+  .bug-remove-btn { color: var(--red); }
+  .bug-remove-btn:hover { border-color: var(--red); }
+  .bug-saved-note { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+  .bug-file-input { display: none; }
+  .bug-pick-file { color: var(--accent); text-decoration: underline; cursor: pointer; }
+
+  .export-bug-btn {
+    background: var(--red-bg);
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .export-bug-btn:hover { background: var(--red); color: #fff; }
+  .export-bug-btn:disabled { opacity: 0.4; cursor: not-allowed; background: var(--card-bg); color: var(--text-muted); border-color: var(--card-border); }
+  .export-bug-group { display: flex; gap: 8px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>🔍 Search Result Comparison</h1>
+    </div>
+    <div style="text-align: right;">
+      <span class="meta-tag" data-tooltip="Thời gian thực thi đối soát">📅 2026-09-29 16:11:09</span>
+      <span class="meta-tag" data-tooltip="Mã chi nhánh siêu thị được test">🏢 Store: nsg</span>
+      <span class="meta-tag" data-tooltip="Tổng số kịch bản test trong đợt đối soát">📊 Total: 3 Scenarios</span>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- Comparison mode + sort - moved to the very top (user request 2026-09-03:
+       "move dropdown so sánh lên đầu"). Default is As-Is<->Actual (also per
+       request) - the KPI cards below and every scenario badge/sort/filter
+       are computed from whichever pair is selected here. -->
+  <div class="toolbar" style="margin-bottom: 12px;">
+    <!-- Chọn ĐỐI TƯỢNG so sánh (user 2026-09-07). Khác với modeSelect bên
+         cạnh (chọn 2 NGUỒN dữ liệu): dropdown này chọn so sánh KẾT QUẢ
+         SEARCH hay GỢI Ý AUTOCOMPLETE. Đổi nó thì toàn bộ KPI, % overlap,
+         badge Pass/Fail, số đếm filter tab đều tính lại theo đối tượng đang
+         chọn - Pass/Fail của autocomplete được lưu ở nhánh state RIÊNG
+         (entries_autocomplete) nên không ghi đè phán quyết của search. -->
+    <!-- Đối tượng là NHÃN TĨNH, không phải dropdown (user 2026-09-10): mỗi
+         báo cáo phục vụ đúng 1 đối tượng và có kho bug/discussion riêng
+         (bug_notes_* vs bug_ac_notes_*). Cho đổi tại chỗ sẽ dẫn tới xem % của
+         đối tượng này bằng ghi chú của đối tượng kia. Muốn xem cái còn lại thì
+         mở báo cáo tương ứng. -->
+    <div class="sort-control target-label" data-tooltip="Báo cáo này dành RIÊNG cho kết quả Search. Bug và discussion lưu ở bug_notes_*.json / discussion_notes_*.json. Muốn xem gợi ý AutoComplete thì mở báo cáo dựng bằng --target autocomplete.">
+      <label>Đối tượng:</label>
+      <span class="target-badge">🔍 Search Result</span>
+    </div>
+    <div class="sort-control" data-tooltip="Chọn 2 nguồn dữ liệu dùng để tính TOÀN BỘ 7 chỉ số KPI bên dưới, %matching, badge và sắp xếp cho từng scenario. Panel As-Is/Actual LUÔN hiển thị; panel Expected ẩn/hiện riêng theo checkbox bên cạnh - lựa chọn ở đây chỉ đổi cách tính điểm matching, không tự ẩn/hiện panel nào.">
+      <label for="modeSelect">So sánh:</label>
+      <select id="modeSelect" aria-label="Chọn 2 nguồn dữ liệu để so sánh">
+        <option value="asis_actual" selected>🕰️ As-Is ↔ 🚀 Actual</option>
+        <option value="expected_actual">📋 Expected ↔ 🚀 Actual</option>
+      </select>
+    </div>
+    <div class="sort-control" data-tooltip="Sắp xếp theo tỷ lệ SKU trùng khớp trong Top-20, tính theo chế độ so sánh đang chọn ở trên. 0% là lệch hoàn toàn; tỷ lệ càng cao thì matching càng tốt.">
+      <label for="sortSelect">Matching:</label>
+      <select id="sortSelect" aria-label="Sắp xếp theo độ matching">
+        <option value="default">Mặc định</option>
+        <option value="low">Thấp nhất trước</option>
+        <option value="high">Cao nhất trước</option>
+      </select>
+    </div>
+    <div class="sort-control" id="expectedToggleWrap" data-tooltip="Panel Expected mặc định ẨN để gọn màn hình (đặc biệt hữu ích với file không có Expected, ví dụ file demo) - tick vào đây nếu cần xem lại Expected.">
+      <label for="showExpectedToggle" style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+        <input type="checkbox" id="showExpectedToggle">
+        Hiển thị panel Expected
+      </label>
+    </div>
+  </div>
+
+  <!-- KPI Cards - values are recomputed live in JS (updateAllStats()) from
+       whichever comparisonMode is selected above; the stats-dict values
+       below are just the server-computed Expected-vs-Actual numbers used
+       as the very first paint before JS runs. -->
+  <div class="kpi-grid">
+    <!-- 100% SET MATCH / 100% EXACT ORDER / TOP-1 MATCH cards removed from
+         the UI per user request (2026-09-04) - same treatment as the
+         PASSED/FAILED cards below: filter tabs (100% Exact/100% Set) and
+         underlying stats/JS are untouched, this only hides these 3 summary
+         cards from the grid. -->
+    <div class="kpi-card yellow" data-tooltip="[Mục 4] Tỷ lệ phần trăm trùng khớp trung bình giữa 5 sản phẩm đầu tiên của Actual so với nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">📈 ĐỘ PHỦ TOP-5 <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-top5-value">0.0%</div>
+      <div class="kpi-sub">Avg Top-5 Overlap</div>
+    </div>
+    <div class="kpi-card blue" data-tooltip="[Mục 5] Tỷ lệ phần trăm trùng khớp trung bình giữa 20 sản phẩm đầu tiên của Actual so với nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">🌐 ĐỘ PHỦ TOP-20 <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-top20-value">0.0%</div>
+      <div class="kpi-sub">Avg Top-20 Overlap</div>
+    </div>
+    <div class="kpi-card red" data-tooltip="[Mục 6] Tổng số scenario có sự sai lệch (về vị trí, thiếu SKU hoặc có SKU lạ xuất hiện) cần xem xét, theo nguồn đang chọn ở dropdown.">
+      <div class="kpi-title">⚠️ MISMATCHED / DIFF <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-mismatch-value">3</div>
+      <div class="kpi-sub" id="kpi-mismatch-sub">100.0% có độ lệch</div>
+    </div>
+    <div class="kpi-card red" data-tooltip="[Mục 7] Số scenario mà nguồn thứ 2 (Actual) trả về 0 kết quả (rỗng) trong khi nguồn thứ 1 đang chọn có kết quả.">
+      <div class="kpi-title">🚫 ZERO RESULT <span class="info-icon">ⓘ</span></div>
+      <div class="kpi-value" id="kpi-zero-value">0</div>
+      <div class="kpi-sub">Không có kết quả trả về</div>
+    </div>
+    <!-- PASSED/FAILED KPI cards removed from the UI per user request
+         (2026-09-04) - the Pass/Fail filter tabs/export buttons below are
+         untouched, this only hides the 2 summary cards from the grid. -->
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="[Mục 15] Tìm theo từ khóa, test_id, SKU hoặc tên sản phẩm..." data-tooltip="[Mục 15] Gõ từ khóa tìm kiếm, mã Test ID, mã SKU hoặc tên sản phẩm để lọc tức thì.">
+    </div>
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-filter="all" data-tooltip="[Mục 8] Xem toàn bộ tất cả các scenarios">Tất cả (<span id="cnt-all">3</span>)</button>
+      <button class="tab-btn" data-filter="HIGH_MATCH" data-tooltip="[Mục 11] Lọc các query có độ trùng khớp cao từ 70% trở lên">🔵 Khớp cao (&ge;70%)</button>
+      <button class="tab-btn" data-filter="PARTIAL_MATCH" data-tooltip="[Mục 12] Lọc các query có độ trùng khớp từ 30% đến 69%">🟡 Khớp 1 phần (30-69%)</button>
+      <button class="tab-btn" data-filter="LOW_MATCH" data-tooltip="[Mục 13] Lọc các query có độ lệch lớn (độ trùng dưới 30%)">🔴 Khớp thấp / Lệch</button>
+      <button class="tab-btn" data-filter="ZERO_RESULT" data-tooltip="[Mục 14] Lọc các query bị lỗi trả về 0 kết quả">🚫 Zero Result (<span id="cnt-zero">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_REGRESSION" style="border-color:#dc2626;color:#dc2626;" data-tooltip="Keyword mà trạng thái Pass/Fail ĐỔI so với lần compare trước (passed->failed hoặc failed->passed) - tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo), không đổi theo dropdown So sánh. Bấm để xổ ra danh sách.">⚠️ Regression (0)</button>
+      <button class="tab-btn" data-filter="PF_RESPONSE_CHANGED" style="border-color:#2563eb;color:#2563eb;" data-tooltip="Keyword mà Actual trả về danh sách sản phẩm KHÁC so với lần compare trước - kể cả khi Pass/Fail không đổi bucket. Bấm để xổ ra danh sách.">🔄 Response Changed (0)</button>
+      <button class="tab-btn" data-filter="PF_REVIEWED" style="border-color:#0891b2;color:#0e7490;" data-tooltip="Keyword QA ĐÃ rà soát tay và tự chấm Pass/Fail - gồm cả case chấm TRÙNG với kết quả máy (không ghi đè gì nhưng đã được xem qua). Dùng để biết đã duyệt tới đâu trong tổng số kịch bản.">👁 Đã duyệt tay (<span id="cnt-reviewed">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_NOT_REVIEWED" style="border-color:#64748b;color:#475569;" data-tooltip="Keyword CHƯA có ai rà soát tay - đang lấy nguyên kết quả máy tự chấm.">⬚ Chưa duyệt (<span id="cnt-not-reviewed">3</span>)</button>
+      <button class="tab-btn" data-filter="PF_FAILED_NO_BUG" style="border-color:#dc2626;color:#b91c1c;font-weight:700;" data-tooltip="Query KHÔNG ĐẠT nhưng CHƯA ghi bug - đây là việc còn phải làm: cần xem và ghi bug (hoặc đánh giá lại thành Passed nếu thực ra kết quả hợp lệ). Tính cả bug vừa đánh dấu trong phiên này chưa xuất.">🔴 Failed chưa ghi bug (<span id="cnt-failed-nobug">3</span>)</button>
+      <button class="tab-btn" data-filter="PF_HAS_BUG" style="border-color:#f97316;color:#c2410c;" data-tooltip="Query ĐÃ ghi bug (bug note lưu vĩnh viễn qua --apply-bug-notes, hoặc vừa đánh dấu trong phiên này). Không phân biệt Pass/Fail.">🐞 Đã ghi bug (<span id="cnt-has-bug">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_ASIS_ZERO" style="border-color:#3b82f6;color:#1d4ed8;" data-tooltip="Hệ cũ (As-Is) trả 0 kết quả nhưng hệ mới CÓ kết quả - đây là nhóm hệ mới cứu được. Không tự chấm đạt/không đạt vì không có gì để đối chiếu; cần người xem xác nhận sản phẩm trả về có đúng ý không. Đánh Passed/Failed tay ở đây vẫn được giữ vĩnh viễn.">🆕 As-Is 0 KQ (<span id="cnt-pf-asiszero">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_NA" data-tooltip="Query KHÔNG có dữ liệu As-Is để đối chiếu (chưa crawl được hệ cũ) - không thể kết luận đạt/không đạt.">➖ Chưa có As-Is (<span id="cnt-pf-na">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_DISCUSSION" style="border-color:#1d4ed8;color:#1d4ed8;" data-tooltip="Keyword đã được đánh dấu 'Cần thảo luận' (💬) - chưa chốt đúng/sai, kèm comment. Đánh dấu ở từng scenario rồi Xuất Discussion, chạy lại compare với --apply-discussions để giữ vĩnh viễn.">💬 Discussion (<span id="cnt-discussion">0</span>)</button>
+      <button class="tab-btn" data-filter="VIS_HIDDEN" style="border-color:#be123c;color:#9f1239;" data-tooltip="Keyword ĐẶC BIỆT: kết quả có chứa sản phẩm bị ẨN HOÀN TOÀN trên production (visibility_search=false VÀ visibility_catalog=false) - không tìm ra được, cũng không có trong danh mục. search_engine.js chưa đọc hai cờ này nên Expected vẫn trả về chúng, dẫn tới mismatch GIẢ khi so với Actual. Danh sách đầy đủ + diễn giải hai cờ: SmartSearch/test_data/exports/visibility_special_keywords_20260917.json">🚷 SP bị ẩn (<span id="cnt-vis-hidden">0</span>)</button>
+      <button class="tab-btn" data-filter="VIS_SEARCH_ONLY" style="border-color:#a16207;color:#854d0e;" data-tooltip="Kết quả có chứa sản phẩm CHỈ TÌM KIẾM RA ĐƯỢC, không bày trong danh mục (visibility_search=true, visibility_catalog=false). Đây KHÔNG phải lỗi - trả về nhóm này là hợp lệ. Trong catalog NSG, 2.555/2.585 sản phẩm nhóm này là hàng giá 0đ/1đ (đã bị luật 0đ/1đ loại sẵn), chỉ 30 cái thật sự vào index.">🔍 Chỉ tìm kiếm ra (<span id="cnt-vis-searchonly">0</span>)</button>
+      <button class="tab-btn" data-filter="MODE_LEXICAL" style="border-color:#0891b2;color:#0e7490;" data-tooltip="Backend THẬT xử lý query này bằng nhánh LEXICAL - thuần khớp từ khoá (BM25), KHÔNG dùng semantic. Lấy từ response_meta.resolvedMode của chính response Actual.">🔤 Lexical (<span id="cnt-mode-lexical">0</span>)</button>
+      <button class="tab-btn" data-filter="MODE_HYBRID" style="border-color:#7c3aed;color:#6d28d9;" data-tooltip="Backend THẬT xử lý query này bằng nhánh HYBRID - CÓ dùng semantic/vector kết hợp với khớp từ khoá. Lấy từ response_meta.resolvedMode của response Actual. Thường xảy ra khi lexicalConfidence thấp.">🧠 Hybrid / semantic (<span id="cnt-mode-hybrid">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_PASSED" data-tooltip="Pass/Fail LUÔN tính theo As-Is↔Actual (hệ cũ đang chạy thật), không phụ thuộc dropdown chế độ - vì Expected do search_engine.js mô phỏng sinh ra, lệch với nó không chứng minh backend sai. Query không có dữ liệu As-Is để so thì là 'n/a', không bị tính là Failed. Số này ĐỔI theo dropdown 'Đối tượng': chọn AutoComplete thì đếm Pass/Fail của autocomplete.">✅ Passed (<span id="cnt-pf-passed">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_FAILED" data-tooltip="Pass/Fail LUÔN tính theo As-Is↔Actual (hệ cũ đang chạy thật), không phụ thuộc dropdown chế độ - vì Expected do search_engine.js mô phỏng sinh ra, lệch với nó không chứng minh backend sai. Query không có dữ liệu As-Is để so thì là 'n/a', không bị tính là Failed. Số này ĐỔI theo dropdown 'Đối tượng': chọn AutoComplete thì đếm Pass/Fail của autocomplete.">❌ Failed (<span id="cnt-pf-failed">3</span>)</button>
+    </div>
+    <div class="export-bug-group">
+      <button id="exportBugJsonBtn" type="button" class="export-bug-btn" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Bug' (UI/data thật sai) ra 1 file JSON - kèm ảnh + ghi chú Expected đúng phải là gì. Truyền lại qua --apply-bug-notes ở lần compare sau để lưu vĩnh viễn.">🐞 Xuất Bug (<span id="bugCountJson">0</span>)</button>
+      <button id="exportDiscussionBtn" type="button" class="export-bug-btn" style="background:#1d4ed8;" disabled data-tooltip="Xuất các keyword đã đánh dấu 'Cần thảo luận' kèm comment. Truyền lại qua --apply-discussions ở lần compare sau để giữ vĩnh viễn và lọc bằng tab 💬 Discussion.">💬 Xuất Discussion (<span id="discussionCount">0</span>)</button>
+      <button id="exportRemoveBtn" type="button" class="export-bug-btn" style="background:#b91c1c;" disabled data-tooltip="Xuất danh sách keyword cần LOẠI khỏi bộ test. Truyền lại qua --apply-removals ở lần compare sau - các keyword này sẽ không còn xuất hiện trong báo cáo nữa.">🗑 Xuất Remove (<span id="removeCount">0</span>)</button>
+      <button id="exportEngineJsonBtn" type="button" class="export-bug-btn" style="border-color:var(--yellow);color:var(--yellow);" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Cải thiện Engine' (search_engine.js sai, chỉ có ở chế độ Expected↔Actual) ra 1 file JSON. Truyền lại qua --apply-engine-notes ở lần compare sau để lưu vĩnh viễn.">⚙️ Xuất cải thiện Engine (<span id="engineCountJson">0</span>)</button>
+      <button id="exportOverrideBtn" type="button" class="export-bug-btn" style="border-color:var(--green);color:var(--green);" disabled data-tooltip="Xuất các keyword vừa bấm 'Đánh giá lại' ra 1 file JSON - truyền file này qua --apply-overrides ở lần chạy compare_results.py tiếp theo để LƯU VĨNH VIỄN đánh giá tay (không mất khi đóng báo cáo này).">✔️ Xuất Pass/Fail (<span id="overrideCount">0</span>)</button>
+    </div>
+  </div>
+
+  <!-- Scenario List Container -->
+  <div id="scenarioList" class="scenario-list"></div>
+  <div id="paginationInfo" class="pagination-info"></div>
+  <div class="pagination-controls" data-tooltip="Dùng các nút để xem đủ scenarios sau khi lọc. Chọn 'Tất cả' nếu muốn hiển thị toàn bộ kết quả trên một trang.">
+    <button id="prevPage" type="button" aria-label="Trang trước">← Trang trước</button>
+    <button id="nextPage" type="button" aria-label="Trang sau">Trang sau →</button>
+    <label for="pageSizeSelect">Số dòng/trang</label>
+    <select id="pageSizeSelect" aria-label="Số dòng mỗi trang">
+      <option value="25">25</option>
+      <option value="50" selected>50</option>
+      <option value="100">100</option>
+      <option value="all">Tất cả</option>
+    </select>
+  </div>
+</div>
+
+<script>
+const scenarios = [{"test_id": "NSG-P1KO-0001", "query": "수박씨", "dimension": "part1_multilanguage", "route": null, "match_category": "NO_MATCH", "is_100_percent_exact_order": false, "is_100_percent_set_match": false, "top1_match": false, "top5_overlap_count": 0, "top5_overlap_pct": 0, "top10_overlap_count": 0, "top10_overlap_pct": 0, "top20_overlap_count": 0, "top20_overlap_pct": 0, "top30_overlap_count": 0, "top30_overlap_pct": 0, "expected_count": 0, "actual_count": 3, "expected_total_before_cap": 0, "actual_total_before_cap": 3, "overlap_count": 0, "overlap_pct": 0, "missing_count": 0, "extra_count": 3, "expected_items": [], "actual_items": [{"rank": 1, "sku": "8934760132249", "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G", "price": 68000, "category": "추석", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 2, "sku": "8934680093156", "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G", "price": 80000, "category": "추석", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 3, "sku": "8934680095242", "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G", "price": 85000, "category": "추석", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}], "missing_skus": [], "extra_skus": ["8934760132249", "8934680093156", "8934680095242"], "asis_items": [{"rank": 1, "sku": "8859578600257", "name": "Playmore 수박 캔디 22G", "price": 33900}, {"rank": 2, "sku": "8809004644287", "name": "Twizel 수박 맛 젤리 스틱 70g", "price": 19000}, {"rank": 3, "sku": "0400317870004", "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 M 2.6kg", "price": 99000}, {"rank": 4, "sku": "0400317880003", "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 L 3.2kg", "price": 115000}, {"rank": 5, "sku": "0400317860005", "name": "365 Fresh 씨없는 붉은 태양 수박 사이즈 S 2kg", "price": 79000}, {"rank": 6, "sku": "8935256611217", "name": "Forange Block FC8292-6 과일 블록 수박 조립 (119조각)", "price": 99000}, {"rank": 7, "sku": "8809531280170", "name": "Meet Seoul 수박 과일주스 230ml 파우치", "price": 17900}, {"rank": 8, "sku": "2311670000008", "name": "일본종 수박 2.9kg", "price": 49010}, {"rank": 9, "sku": "2311600000009", "name": "1등급 수박 2.7kg", "price": 45630}, {"rank": 10, "sku": "8936149091413", "name": "Unisex 수박 무늬 버킷 모자", "price": 55900}], "asis_total_before_cap": 10, "asis_cached": true, "actual_latency_ms": 307, "resolved_mode": "lexical", "lexical_confidence": 0.7073985448344432, "fallback_used": false, "actual_total_hits": 3, "recommendation_triggered": true, "recommendation_items": [{"rank": 1, "sku": "2292190000009", "name": "수세미 500G", "price": 17450}, {"rank": 2, "sku": "8936235530215", "name": "VITEC FARM 일본식 고구마 및 우유 고구마 혼합 1kg", "price": 49900}, {"rank": 3, "sku": "8809641613707", "name": "한국 백만송이 버섯 150G", "price": 33900}, {"rank": 4, "sku": "8936200652249", "name": "Bio Ngon 유기농 수세미오이 200G", "price": 17900}, {"rank": 5, "sku": "8936005871647", "name": "Doi Dua Vang 냉동스위트콘 400G", "price": 60900}, {"rank": 6, "sku": "2292110000003", "name": "미국종 땅콩호박 1.2kg", "price": 23880}, {"rank": 7, "sku": "8936138400028", "name": "옥수수 200G", "price": 17900}, {"rank": 8, "sku": "8936138400035", "name": "찰옥수수 (2개입)", "price": 20500}, {"rank": 9, "sku": "8936138400042", "name": "365 Fresh 미국종 옥수수 (2개)", "price": 18900}, {"rank": 10, "sku": "8852849147086", "name": "Good Farm 달콤한 옥수수 425G", "price": 28700}, {"rank": 11, "sku": "8936235530208", "name": "VITEC FARM 스위트 밀크 고구마 1kg", "price": 49900}, {"rank": 12, "sku": "8935023100074", "name": "Agri Foods Co 달랏 냉동 스위트콘 500G", "price": 41900}, {"rank": 13, "sku": "2311600000009", "name": "1등급 수박 2.7kg", "price": 37530}, {"rank": 14, "sku": "8938505002293", "name": "Phu Minh Tam 찹쌀 1KG", "price": 44900}, {"rank": 15, "sku": "8809261532730", "name": "오늘좋은 그래놀라 후르츠&아몬드 570G", "price": 181700}, {"rank": 16, "sku": "8936200652119", "name": "Bio Ngon 유기농 박 500G", "price": 38900}, {"rank": 17, "sku": "8850015152803", "name": "Taste-T 옥수수 통조림 420G", "price": 29500}, {"rank": 18, "sku": "2297260000002", "name": "콩호박 1KG", "price": 83900}, {"rank": 19, "sku": "8809010968261", "name": "오늘좋은 국내산 19곡 크리스피롤 미니 초코 130G", "price": 54000}, {"rank": 20, "sku": "8936006344645", "name": "Jojo 고추 소금맛 초록호박씨 50G", "price": 28900}], "autocomplete_actual_items": [{"rank": 1, "text": "Huu Nghi 녹두 수박씨 무계란 월병 180G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 2, "text": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 3, "text": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}], "autocomplete_expected_items": [], "autocomplete_has_expected": false, "autocomplete_comparable_count": 0, "autocomplete_actual_in_expected_count": 0, "autocomplete_actual_in_expected_pct": null, "autocomplete_expected_topk_hit_count": 0, "autocomplete_expected_topk_size": 0, "autocomplete_expected_topk_pct": null, "autocomplete_overlap_count": 0, "autocomplete_overlap_pct": null, "autocomplete_products": [{"rank": 1, "sku": "8934760132249", "name": "Huu Nghi 녹두 수박씨 무계란 월병 180G", "price": 68000}, {"rank": 2, "sku": "8934680095242", "name": "Kinh Do 녹두 수박씨 한 알 계란 찹쌀 월병 230G", "price": 85000}, {"rank": 3, "sku": "8934680093156", "name": "Kinh Do 검은깨 수박씨 달걀 없음 월병 150G", "price": 80000}], "autocomplete_error": null, "autocomplete_latency_ms": 315, "autocomplete_asis_items": [], "autocomplete_asis_cached": false, "asis_match_category": "NO_MATCH", "ac_match_category": "NO_EXPECTED_AC", "ac_pass_fail_manual_override": false, "ac_pass_fail_reviewed": false, "ac_pass_fail_status": "n/a", "ac_prev_pass_fail_status": null, "ac_is_regression": false, "ac_regression_kind": null, "pass_fail_manual_override": false, "pass_fail_reviewed": false, "pass_fail_status": "failed", "prev_pass_fail_status": null, "prev_actual_top_items": [], "prev_run_at": null, "prev_compare_dir": null, "bug_note": null, "discussion_note": null, "engine_note": null, "is_regression": false, "regression_kind": null, "response_changed": false, "vis_hidden_skus": [], "vis_search_only_skus": []}, {"test_id": "NSG-P1KO-0002", "query": "돼지파", "dimension": "part1_multilanguage", "route": null, "match_category": "LOW_MATCH", "is_100_percent_exact_order": false, "is_100_percent_set_match": false, "top1_match": false, "top5_overlap_count": 0, "top5_overlap_pct": 0, "top10_overlap_count": 0, "top10_overlap_pct": 0, "top20_overlap_count": 0, "top20_overlap_pct": 0, "top30_overlap_count": 0, "top30_overlap_pct": 0, "expected_count": 0, "actual_count": 30, "expected_total_before_cap": 0, "actual_total_before_cap": 50, "overlap_count": 0, "overlap_pct": 0, "missing_count": 0, "extra_count": 30, "expected_items": [], "actual_items": [{"rank": 1, "sku": "8936146448302", "name": "G Kitchen 돼지 사태 300G (EA)", "price": 55000, "category": "족발", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 2, "sku": "2211820000004", "name": "Sagri 허브 돼지족 500G", "price": 90000, "category": "기타 돼지고기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 3, "sku": "2204430000007", "name": "365 Fresh 돼지고기 족발 500G", "price": 62500, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 4, "sku": "2088850000003", "name": "돼지 염통 400G", "price": 136000, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 5, "sku": "2204450000001", "name": "365 Fresh 돼지족발 500g", "price": 80000, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 6, "sku": "8936194975560", "name": "Japfa 뼈 없는 돼지 앞다리살 300G", "price": 55000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 7, "sku": "8936146441051", "name": "G Kitchen 돼지고기 뒷다리살 300G", "price": 59000, "category": "안심", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 8, "sku": "2211990000002", "name": "Sagri 허브 돼지고기 등뼈 500G", "price": 74000, "category": "뼈", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 9, "sku": "8936194975355", "name": "Japfa 돼지 넓적다리살 300G", "price": 53000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 10, "sku": "8936207132010", "name": "Meaty Chopshop 소고기 사태 250G", "price": 129000, "category": "사태", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 11, "sku": "8936146448296", "name": "G Kitchen 돼지고기 앞다리 뼈 300G", "price": 59000, "category": "기타 돼지고기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 12, "sku": "2211930000000", "name": "Sagri 허브 돼지고기 다리살 500G", "price": 74500, "category": "안심", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 13, "sku": "2319130000001", "name": "Organic TTC 유기농 호주산 소고기 사태살 슬라이스 250G", "price": 159750, "category": "사태", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 14, "sku": "2211800000000", "name": "Sagri 허브 돼지고기 족발 500G", "price": 83500, "category": "족발", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 15, "sku": "8936194975409", "name": "Japfa 돼지 목심 300G", "price": 49000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 16, "sku": "8936194975454", "name": "Japfa 돼지 갈비 300G", "price": 49500, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 17, "sku": "2306260000001", "name": "365 Fresh 호주산 소고기 사태 200G", "price": 139800, "category": "사태", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 18, "sku": "8936146448272", "name": "G Kitchen 돼지 사골 300G", "price": 39000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 19, "sku": "2212270000002", "name": "돼지꼬리 500G", "price": 114500, "category": "기타 돼지고기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 20, "sku": "8936194975348", "name": "Japfa 다진 돼지고기 300G", "price": 35000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 21, "sku": "2310250000001", "name": "365 Fresh 소고기 사태 300G", "price": 104700, "category": "사태", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 22, "sku": "2211980000005", "name": "Sagri 허브 돼지고기 경골 500G", "price": 74000, "category": "뼈", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 23, "sku": "8936194975317", "name": "Japfa 돼지 삼겹살 300G", "price": 75000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 24, "sku": "2204440000004", "name": "365 Fresh 뼈없는 돼지족발 300g", "price": 64500, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 25, "sku": "2204490000009", "name": "365 Fresh 돼지 등심 300g", "price": 47700, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 26, "sku": "8935128778390", "name": "365 Fresh 호주산 소 부채살 스테이크용 300G", "price": 195000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 27, "sku": "8936146445776", "name": "G Kitchen 돼지고기 편육 475G", "price": 89000, "category": "중국 소시지, 쩌짜", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 28, "sku": "2252050000006", "name": "365 Fresh 돼지고기 다짐육 볼 300g", "price": 43500, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 29, "sku": "8936194975416", "name": "Japfa 돼지 등심 300G", "price": 39000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 30, "sku": "8938546870080", "name": "오키니 일본산 눈꽃 돼지고기 등심 250G", "price": 93000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 31, "sku": "2204320000001", "name": "365 Fresh 돼지고기 다리살 300G", "price": 43500, "category": "안심", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 32, "sku": "2220360000009", "name": "365 Fresh 돼지고기 목심 300G", "price": 59700, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 33, "sku": "2215460000004", "name": "PTV 소고기 사태 300G", "price": 97500, "category": "사태", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 34, "sku": "2088870000007", "name": "돼지콩팥 300G", "price": 58500, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 35, "sku": "8936045450598", "name": "Nipponham 돼지간 파테 200G", "price": 40900, "category": "기타 레디투잇", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 36, "sku": "8936146447312", "name": "G Kitchen 돼지 꼬리뼈 300G (EA)", "price": 39000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 37, "sku": "8936146442362", "name": "G Kitchen 다진 돼지고기 300G (EA)", "price": 45000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 38, "sku": "8936146447930", "name": "G Kitchen 슬라이스 삼겹살 300G (EA)", "price": 79000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 39, "sku": "2211950000004", "name": "Sagri 허브 돼지고기 목심 500G", "price": 74500, "category": "안심", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 40, "sku": "2215500000001", "name": "Phuc Thinh Vuong 양지머리 300G", "price": 73500, "category": "다짐육", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 41, "sku": "8936146442614", "name": "Feddy 돼지 피 400G", "price": 27000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 42, "sku": "2089120000006", "name": "돼지 꼬리뼈 500G", "price": 54500, "category": "SPECIAL CATEGORIES", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 43, "sku": "2088890000001", "name": "G-Kitchen 돼지 혀", "price": 126000, "category": "기타 돼지고기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 44, "sku": "8936146447923", "name": "G Kitchen 슬라이스 삼겹살 300G (EA)", "price": 79000, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 45, "sku": "2319040000009", "name": "Organic TTC 유기농 호주 소고기 다리살 슬라이스 250G", "price": 162250, "category": "기타 소고기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 46, "sku": "8935101604319", "name": "Đức Việt 염장 족발 450G", "price": 109000, "category": "중국 소시지, 쩌짜", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 47, "sku": "8934572221902", "name": "비산 돼지 간 파테 팩 150G", "price": 17900, "category": "기타 레디투잇", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 48, "sku": "2204360000009", "name": "365 Fresh 돼지고기 다짐육 300G", "price": 43500, "category": "60분배송", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 49, "sku": "2211780000007", "name": "Sagri 허브 돼지고기 삼겹살 500G", "price": 144500, "category": "삼겹살", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 50, "sku": "2204150000004", "name": "365 Fresh 뼈없는 갈비살 삼겹 500g", "price": 125000, "category": "365 Fresh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}], "missing_skus": [], "extra_skus": ["8936146448302", "2211820000004", "2204430000007", "2088850000003", "2204450000001", "8936194975560", "8936146441051", "2211990000002", "8936194975355", "8936207132010", "8936146448296", "2211930000000", "2319130000001", "2211800000000", "8936194975409", "8936194975454", "2306260000001", "8936146448272", "2212270000002", "8936194975348", "2310250000001", "2211980000005", "8936194975317", "2204440000004", "2204490000009", "8935128778390", "8936146445776", "2252050000006", "8936194975416", "8938546870080"], "asis_items": [{"rank": 1, "sku": "2089130000003", "name": "돼지 사골뼈 500G", "price": 49500}, {"rank": 2, "sku": "2089120000006", "name": "돼지 꼬리뼈  500G", "price": 54500}, {"rank": 3, "sku": "2211970000008", "name": "Sagri 허브 돼지 꼬리뼈  500G", "price": 74000}, {"rank": 4, "sku": "8850987101014", "name": "마마 다진 돼지 라면 60G", "price": 8900}, {"rank": 5, "sku": "8936146442614", "name": "Feddy 돼지 피 400G", "price": 27000}, {"rank": 6, "sku": "8936035440943", "name": "Truong Vinh 돼지 핫도그 500G", "price": 94900}, {"rank": 7, "sku": "3537580701388", "name": "PATE 돼지 간 32% HENAFF 130G", "price": 63900}, {"rank": 8, "sku": "8936146445189", "name": "Wyn 돼지 간 파테 150G", "price": 30500}, {"rank": 9, "sku": "2088850000003", "name": "돼지 염통 400G", "price": 136000}, {"rank": 10, "sku": "2204490000009", "name": "365 Fresh 돼지 등심 300g", "price": 47700}, {"rank": 11, "sku": "8936043371895", "name": "Hoang My Gia 돼지 치실 누룽지 120G", "price": 37900}, {"rank": 12, "sku": "2211830000001", "name": "Sagri 허브 뼈없는 돼지 족발 500G", "price": 100000}, {"rank": 13, "sku": "8936146445875", "name": "Wyn 돼지 껍데기& 베트남 녹색 고추 햄 450G", "price": 72500}, {"rank": 14, "sku": "2204480000002", "name": "365 Fresh 돼지 등심 500G", "price": 74500}, {"rank": 15, "sku": "2248580000005", "name": "미국산 돼지 갈비  500G", "price": 107500}, {"rank": 16, "sku": "8936244040309", "name": "Japfa 돼지 등심 300G", "price": 41500}, {"rank": 17, "sku": "8936244040248", "name": "Japfa 돼지 넓적다리살 300G", "price": 39000}, {"rank": 18, "sku": "8936244040293", "name": "Japfa 돼지 목심 300G", "price": 70000}, {"rank": 19, "sku": "8936244040347", "name": "Japfa 돼지 갈비 300G", "price": 68000}, {"rank": 20, "sku": "8936244040378", "name": "Japfa 뼈 없는 돼지 앞다리살 300G", "price": 55000}], "asis_total_before_cap": 45, "asis_cached": true, "actual_latency_ms": 532, "resolved_mode": "hybrid", "lexical_confidence": 0, "fallback_used": false, "actual_total_hits": 100, "recommendation_triggered": false, "recommendation_items": [], "autocomplete_actual_items": [{"rank": 1, "text": "Vissan 돼지간 파테 170G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 2, "text": "Vissan 돼지고기 파테 397G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 3, "text": "Nipponham 돼지간 파테 200G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 4, "text": "Vissan 돼지고기 파테 170G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 5, "text": "Seaspimex 돼지고기 파테 170G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 6, "text": "Wyn 돼지 간 파테 150G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 7, "text": "비산 돼지 간 파테 팩 150G", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}, {"rank": 8, "text": "Barona 새우 돼지고기 볶음용 완성 양념소스 80G 파우치", "type": "product", "hit_count": null, "comparable": false, "matched_expected": false}], "autocomplete_expected_items": [], "autocomplete_has_expected": false, "autocomplete_comparable_count": 0, "autocomplete_actual_in_expected_count": 0, "autocomplete_actual_in_expected_pct": null, "autocomplete_expected_topk_hit_count": 0, "autocomplete_expected_topk_size": 0, "autocomplete_expected_topk_pct": null, "autocomplete_overlap_count": 0, "autocomplete_overlap_pct": null, "autocomplete_products": [{"rank": 1, "sku": "8934572070012", "name": "Vissan 돼지간 파테 170G", "price": 26200}, {"rank": 2, "sku": "8934572000217", "name": "Vissan 돼지고기 파테 397G", "price": 56200}, {"rank": 3, "sku": "8936045450598", "name": "Nipponham 돼지간 파테 200G", "price": 40900}, {"rank": 4, "sku": "8934572000019", "name": "Vissan 돼지고기 파테 170G", "price": 32500}, {"rank": 5, "sku": "8935025530091", "name": "Seaspimex 돼지고기 파테 170G", "price": 28400}], "autocomplete_error": null, "autocomplete_latency_ms": 286, "autocomplete_asis_items": [], "autocomplete_asis_cached": false, "asis_match_category": "LOW_MATCH", "ac_match_category": "NO_EXPECTED_AC", "ac_pass_fail_manual_override": false, "ac_pass_fail_reviewed": false, "ac_pass_fail_status": "n/a", "ac_prev_pass_fail_status": null, "ac_is_regression": false, "ac_regression_kind": null, "pass_fail_manual_override": false, "pass_fail_reviewed": false, "pass_fail_status": "failed", "prev_pass_fail_status": null, "prev_actual_top_items": [], "prev_run_at": null, "prev_compare_dir": null, "bug_note": null, "discussion_note": null, "engine_note": null, "is_regression": false, "regression_kind": null, "response_changed": false, "vis_hidden_skus": [], "vis_search_only_skus": []}, {"test_id": "NSG-P1KO-0003", "query": "선물 바구니", "dimension": "part1_multilanguage", "route": null, "match_category": "NO_MATCH", "is_100_percent_exact_order": false, "is_100_percent_set_match": false, "top1_match": false, "top5_overlap_count": 0, "top5_overlap_pct": 0, "top10_overlap_count": 0, "top10_overlap_pct": 0, "top20_overlap_count": 0, "top20_overlap_pct": 0, "top30_overlap_count": 0, "top30_overlap_pct": 0, "expected_count": 0, "actual_count": 30, "expected_total_before_cap": 0, "actual_total_before_cap": 50, "overlap_count": 0, "overlap_pct": 0, "missing_count": 0, "extra_count": 30, "expected_items": [], "actual_items": [{"rank": 1, "sku": "8936192562168", "name": "인형 키 체인 2168 18x16cm (랜덤 배송)", "price": 95000, "category": "남아완구", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 2, "sku": "8936230480904", "name": "데이지 꽃다발 봉제인형 50cm", "price": 109000, "category": "인형", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 3, "sku": "8936039277422", "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (연회색)", "price": 28900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 4, "sku": "8936039277408", "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (연회색)", "price": 28900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 5, "sku": "8936039277552", "name": "초이스엘 직사각형 프라스틱 바구니 25.2 x 19.5 x 10.5cm (황록색)", "price": 28900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 6, "sku": "8936039277538", "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (황록색)", "price": 50900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 7, "sku": "4710731091029", "name": "Farcent 향기주머니 라벤더향 10G", "price": 21900, "category": "방향제", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 8, "sku": "8935243506755", "name": "Mr.Fresh GSG09 장미 향기 복주머니 10Gx3개입", "price": 43900, "category": "캔들", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 9, "sku": "8936039277477", "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (연회색)", "price": 57900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 10, "sku": "8936039277453", "name": "초이스엘 사각형 프라스틱 바구니 29.6 x 29.6 x 8.8cm (연회색)", "price": 71900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 11, "sku": "8936039277446", "name": "초이스엘 직사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (연회색)", "price": 49900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 12, "sku": "8936053921448", "name": "대형 곰 봉제 인형", "price": 157000, "category": "Trang Trí Giáng Sinh", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 13, "sku": "8935275213065", "name": "Inochi Yoko 고급 바스켓 23CM (컬러랜덤)", "price": 29900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 14, "sku": "8936190717591", "name": "바이오홈 꽃무늬 세탁 바구니 45x46cm", "price": 159000, "category": "수납장", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 15, "sku": "8936039277569", "name": "초이스엘 직사각형 프라스틱 바구니 35.3 x 29.2 x 13.5cm (황록색)", "price": 57900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 16, "sku": "4710731091050", "name": "Farcent 향기주머니 프레쉬향 10G", "price": 21900, "category": "방향제", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 17, "sku": "8936039277484", "name": "타원형 대야 및 바구니 세트33 x 29 x 12.5cm (황록색)", "price": 60900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 18, "sku": "8936039277415", "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (연회색)", "price": 17900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 19, "sku": "8936039277521", "name": "초이스엘 직사각형 프라스틱 바구니 25.8 x 17.5 x 7.3cm (황록색)", "price": 28900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 20, "sku": "8935243506779", "name": "Mr.Fresh GSG09 라벤더 향기 복주머니 10Gx3개입", "price": 43900, "category": "캔들", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 21, "sku": "8936039277514", "name": "원형 대야 및 바구니 세트 35 x 39.2 x 14.5cm (황록색)", "price": 103900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 22, "sku": "8935243505598", "name": "Pure Aroma 로맨틱 앰버향 향낭 26G", "price": 29900, "category": "방향제", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 23, "sku": "8936039277507", "name": "원형 대야 및 바구니 세트 31 x 35 x 13.2cm (황록색)", "price": 72900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 24, "sku": "4894680039889", "name": "Zuru Fuggler 골드 퍼그스 15708 (랜덤배송)", "price": 399000, "category": "남아완구", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 25, "sku": "4894680036857", "name": "Mini Brands 수집용 장난감 스낵클즈 77572 (랜덤배송)", "price": 299000, "category": "남아완구", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 26, "sku": "8936053920045", "name": "펭귄 봉제인형", "price": 142100, "category": "인형", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 27, "sku": "8936053922056", "name": "대형 각종 등불 (랜덤배송)", "price": 43500, "category": "추석", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 28, "sku": "8936039277439", "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (연회색)", "price": 22900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 29, "sku": "8935275213072", "name": "Inochi Yoko 고급 바스켓 30CM (컬러랜덤)", "price": 46900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 30, "sku": "8936039277545", "name": "초이스엘 직사각형 프라스틱 바구니 19.5 x 13.7 x 6cm (황록색)", "price": 17900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": true}, {"rank": 31, "sku": "8935243506786", "name": "Mr.Fresh GSG09 대양 향기 복주머니 10Gx3개입", "price": 43900, "category": "캔들", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 32, "sku": "8936039277590", "name": "초이스엘 직사각형 프라스틱 바구니 29.6 x 29.6 x 13cm (황록색)", "price": 71900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 33, "sku": "8936036831139", "name": "호파코 투명 비누받침대", "price": 18900, "category": "수납장", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 34, "sku": "8936039277460", "name": "초이스엘 직사각형 프라스틱 바구니 34.8 x 25.8 x 8cm (연회색)", "price": 50900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 35, "sku": "8936039277576", "name": "초이스엘 사각형 프라스틱 바구니 16.8 x 16.8 x 10cm (황록색)", "price": 22900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 36, "sku": "8936039277583", "name": "초이스엘 사각형 프라스틱 바구니 23.8 x 23.8 x 11.5cm (황록색)", "price": 49900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 37, "sku": "8935275211542", "name": "Inochi 사각형 플라스틱 뚜껑 티슈", "price": 58900, "category": "밀폐용기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 38, "sku": "4710731091012", "name": "Farcent 향기주머니 로즈향 10G", "price": 21900, "category": "방향제", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 39, "sku": "8936236550342", "name": "Bioplas 플라스틱 바구니 2종 세트 22cm - 26cm (랜덤배송)", "price": 62900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 40, "sku": "8936053926603", "name": "동물 인형 60x35cm (랜덤 배송)", "price": 250000, "category": "인형", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 41, "sku": "8935243506762", "name": "Mr.Fresh GSG09 재스민 향기 복주머니 10Gx 3개입", "price": 43900, "category": "캔들", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 42, "sku": "8936106085974", "name": "초이스엘 돼지 인형 75cm", "price": 230000, "category": "인형", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 43, "sku": "8935007728560", "name": "Duy Tân Crystal 플라스틱 아이스 버킷 3.5L (색상 랜덤 발송)", "price": 74900, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 44, "sku": "8809696920256", "name": "초이스엘 RE:EARTH 친환경백 사이즈 S 그린 31x13x42cm", "price": 12900, "category": "클리어화일", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 45, "sku": "8936050473247", "name": "Choice L 친환경 생활백 대형 40x45x22cm", "price": 14300, "category": "클리어화일", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 46, "sku": "8936053922155", "name": "작은 장난감 북 (랜덤배송)", "price": 98000, "category": "추석", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 47, "sku": "6976693309086", "name": "Weibo 필통 1개입 9827 (색상 란덤 배송)", "price": 95000, "category": "기타 페이셜케어", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 48, "sku": "8936053921004", "name": "문어 인형", "price": 198000, "category": "여아완구", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 49, "sku": "8804513004485", "name": "Sta Ami 내추럴채반_중", "price": 186400, "category": "기타 주방용품", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}, {"rank": 50, "sku": "8935275211504", "name": "Inochi 원형 플라스틱 뚜껑 티슈", "price": 48900, "category": "밀폐용기", "tier": "", "score": null, "status": "extra", "expected_rank": null, "in_window": false}], "missing_skus": [], "extra_skus": ["8936192562168", "8936230480904", "8936039277422", "8936039277408", "8936039277552", "8936039277538", "4710731091029", "8935243506755", "8936039277477", "8936039277453", "8936039277446", "8936053921448", "8935275213065", "8936190717591", "8936039277569", "4710731091050", "8936039277484", "8936039277415", "8936039277521", "8935243506779", "8936039277514", "8935243505598", "8936039277507", "4894680039889", "4894680036857", "8936053920045", "8936053922056", "8936039277439", "8935275213072", "8936039277545"], "asis_items": [], "asis_total_before_cap": 0, "asis_cached": true, "actual_latency_ms": 536, "resolved_mode": "hybrid", "lexical_confidence": 0, "fallback_used": false, "actual_total_hits": 100, "recommendation_triggered": false, "recommendation_items": [], "autocomplete_actual_items": [], "autocomplete_expected_items": [], "autocomplete_has_expected": false, "autocomplete_comparable_count": 0, "autocomplete_actual_in_expected_count": 0, "autocomplete_actual_in_expected_pct": null, "autocomplete_expected_topk_hit_count": 0, "autocomplete_expected_topk_size": 0, "autocomplete_expected_topk_pct": null, "autocomplete_overlap_count": 0, "autocomplete_overlap_pct": null, "autocomplete_products": [], "autocomplete_error": null, "autocomplete_latency_ms": 295, "autocomplete_asis_items": [], "autocomplete_asis_cached": false, "asis_match_category": "ASIS_ZERO", "ac_match_category": "NO_EXPECTED_AC", "ac_pass_fail_manual_override": false, "ac_pass_fail_reviewed": false, "ac_pass_fail_status": "n/a", "ac_prev_pass_fail_status": null, "ac_is_regression": false, "ac_regression_kind": null, "pass_fail_manual_override": false, "pass_fail_reviewed": false, "pass_fail_status": "failed", "prev_pass_fail_status": null, "prev_actual_top_items": [], "prev_run_at": null, "prev_compare_dir": null, "bug_note": null, "discussion_note": null, "engine_note": null, "is_regression": false, "regression_kind": null, "response_changed": false, "vis_hidden_skus": [], "vis_search_only_skus": []}];
+const QUERY_TRANSLATIONS = {};
+// vi -> 5 ngoại ngữ, hiện ngay dưới keyword để QA copy đi tra cứu/đối chiếu.
+const QUERY_MULTILANG = {};
+const ML_ORDER = [['en','EN'],['ko','KO'],['ja','JA'],['ru','RU'],['zh','ZH']];
+const HAS_ASIS = true;
+// Multi-select filter (user 2026-09-07). Trước đây là 1 chuỗi duy nhất
+// (currentFilter) nên chỉ lọc được 1 badge; giờ là TẬP các filter đang bật.
+// currentFilter vẫn được giữ như "filter cuối cùng vừa bấm" - chỉ dùng cho
+// updateBannerVisibility(), không dùng để lọc nữa.
+// Cửa sổ chấm điểm (--topn). Danh sách sản phẩm hiển thị TOÀN BỘ, nhưng chỉ
+// 30 sản phẩm đầu tham gia tính % khớp và Pass/Fail.
+const SCORING_TOP_N = 30;
+let activeFilters = new Set();
+let currentFilter = 'all';
+
+// Mỗi filter thuộc 1 nhóm; cùng nhóm OR với nhau, khác nhóm AND với nhau.
+const FILTER_GROUP = {
+  PF_PASSED: 'passfail', PF_FAILED: 'passfail',
+  PF_REGRESSION: 'passfail', PF_RESPONSE_CHANGED: 'passfail', PF_DISCUSSION: 'passfail', PF_NA: 'passfail', PF_ASIS_ZERO: 'passfail',
+  PF_FAILED_NO_BUG: 'passfail', PF_HAS_BUG: 'passfail',
+  PF_REVIEWED: 'passfail', PF_NOT_REVIEWED: 'passfail',
+  MODE_LEXICAL: 'mode', MODE_HYBRID: 'mode',
+  VIS_HIDDEN: 'visibility', VIS_SEARCH_ONLY: 'visibility',
+};
+function filterGroupOf(f) { return FILTER_GROUP[f] || 'category'; }
+
+// Nhãn hiển thị cho TỪNG SKU trong danh sách sản phẩm. Hai cờ này lấy từ
+// catalog production (visibility_search / visibility_catalog); Python đã gom
+// sẵn thành 2 mảng SKU trên mỗi scenario nên ở đây chỉ cần kiểm tra thành viên.
+// Vạch phân cách cửa sổ chấm điểm. Chèn ngay TRƯỚC sản phẩm đầu tiên nằm
+// ngoài top-N, để không ai nhầm sản phẩm rank 45 cũng được tính điểm.
+function windowEdgeRow(i, cols) {
+  if (i !== SCORING_TOP_N) return '';
+  return `<tr class="window-edge"><td colspan="${cols}">⌄ từ đây trở xuống CHỈ ĐỂ XEM - không tính vào % khớp và Pass/Fail (cửa sổ chấm là Top-${SCORING_TOP_N})</td></tr>`;
+}
+
+function visTagHtml(s, sku) {
+  sku = String(sku || '');
+  if (s.vis_hidden_skus && s.vis_hidden_skus.indexOf(sku) !== -1) {
+    return `<span class="meta-tag" style="margin:0 0 0 6px;background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;" data-tooltip="SKU ${sku}: visibility_search=false VÀ visibility_catalog=false - trên production sản phẩm này KHÔNG tìm ra được qua ô tìm kiếm (gõ đúng nguyên tên cũng không ra) và cũng KHÔNG hiện khi duyệt danh mục. Engine mô phỏng chưa đọc hai cờ này nên vẫn trả về nó.">🚷 bị ẩn</span>`;
+  }
+  if (s.vis_search_only_skus && s.vis_search_only_skus.indexOf(sku) !== -1) {
+    return `<span class="meta-tag" style="margin:0 0 0 6px;background:#fefce8;border:1px solid #fde68a;color:#854d0e;" data-tooltip="SKU ${sku}: visibility_search=true nhưng visibility_catalog=false - tìm kiếm RA ĐƯỢC, nhưng KHÔNG hiện khi duyệt theo danh mục. Đây không phải lỗi. Trong catalog NSG phần lớn nhóm này là hàng khuyến mãi 0đ/1đ.">🔍 chỉ tìm kiếm</span>`;
+  }
+  return '';
+}
+
+function matchesOneFilter(s, f) {
+  switch (f) {
+    case 'PF_REGRESSION':       return comparisonTarget === 'autocomplete' ? !!s.ac_is_regression : !!s.is_regression;
+    case 'PF_RESPONSE_CHANGED': return !!s.response_changed;
+    case 'PF_PASSED':           return effectiveStatus(s) === 'passed';
+    case 'PF_FAILED':           return effectiveStatus(s) === 'failed';
+    case 'PF_NA':               return effectiveStatus(s) === 'n/a';
+    case 'PF_ASIS_ZERO':        return effectiveStatus(s) === 'discussion';
+    // Tính CẢ bug đã lưu phía Python (s.bug_note) LẪN bug vừa đánh dấu trong
+    // phiên này mà chưa export (bugStore) - nếu chỉ xét s.bug_note thì vừa ghi
+    // bug xong keyword vẫn nằm trong danh sách "chưa ghi", rất dễ ghi trùng.
+    case 'PF_FAILED_NO_BUG':    return effectiveStatus(s) === 'failed' && !hasBug(s);
+    case 'PF_HAS_BUG':          return hasBug(s);
+    case 'PF_REVIEWED':         return reviewedOf(s);
+    case 'PF_NOT_REVIEWED':     return !reviewedOf(s);
+    // Discussion: tính CẢ đánh dấu đã lưu vĩnh viễn phía Python (s.discussion_note)
+    // lẫn đánh dấu mới trong phiên này chưa export (discussionStore).
+    case 'PF_DISCUSSION':       return !!(s.discussion_note || discussionStore[s.test_id]);
+    // resolvedMode lấy thẳng từ response Actual - "hybrid" nghĩa là backend
+    // đã dùng semantic, "lexical" là thuần khớp từ khoá.
+    // Hai cờ hiển thị của catalog production. 'ẩn hoàn toàn' = không tìm ra
+    // được VÀ không có trong danh mục -> Expected trả về là mismatch giả.
+    case 'VIS_HIDDEN':          return !!(s.vis_hidden_skus && s.vis_hidden_skus.length);
+    case 'VIS_SEARCH_ONLY':     return !!(s.vis_search_only_skus && s.vis_search_only_skus.length);
+    case 'MODE_LEXICAL':        return s.resolved_mode === 'lexical';
+    case 'MODE_HYBRID':         return s.resolved_mode === 'hybrid';
+    default:                    return s.__m.match_category === f;
+  }
+}
+
+function matchesActiveFilters(s) {
+  if (!activeFilters.size) return true;
+  const byGroup = {};
+  activeFilters.forEach(f => {
+    const g = filterGroupOf(f);
+    (byGroup[g] = byGroup[g] || []).push(f);
+  });
+  // AND giữa các nhóm, OR trong cùng nhóm
+  return Object.values(byGroup).every(fs => fs.some(f => matchesOneFilter(s, f)));
+}
+
+let searchQuery = '';
+let currentPage = 1;
+let selectedPageSize = 50;
+let sortOrder = 'default';
+// ĐỐI TƯỢNG so sánh (user 2026-09-07): 'search' | 'autocomplete'. Đổi giá trị
+// này thì mọi KPI, % overlap, badge Pass/Fail, số đếm filter tab và vị trí
+// panel đều đổi theo - xem getModeMetrics(), effectiveStatus(),
+// currentStatusOf() và renderScenarios().
+let comparisonTarget = "search";
+// Which 2 panels drive %matching/badge/sort/filter for every scenario card.
+// Both panels of EITHER mode - and the 3rd, non-driving one - stay visible;
+// this only changes which pair's overlap is scored (user request 2026-08-31).
+let comparisonMode = 'asis_actual'; // or 'expected_actual' - default per 2026-09-03 request
+// Expected panel is hidden by default (checkbox opt-in) - user request
+// 2026-08-31: "thêm option ẩn expected panel đi, nếu chọn hiển thị thì mới
+// hiển thị lên." As-Is and Actual always show regardless of this toggle.
+let showExpected = false;
+
+function panelsClass() {
+  if (HAS_ASIS && showExpected) return 'has-asis';
+  if (HAS_ASIS && !showExpected) return 'has-asis-no-expected';
+  if (!HAS_ASIS && !showExpected) return 'no-expected';
+  return ''; // !HAS_ASIS && showExpected - the original 2-col default (Expected + Actual)
+}
+
+// Client-side overlap scoring for a (base, other) item-list pair - mirrors
+// the Python-side compare_scenario() math (Top-5/Top-20 fixed windows, same
+// match_category thresholds) so switching comparisonMode doesn't need a
+// second server-computed stat set embedded per scenario. Order-fidelity
+// (100_PERCENT_EXACT) isn't replicated here - As-Is is reference-only, not
+// scored for rank precision - a full base/other set match always reports as
+// 100_PERCENT_SET regardless of order.
+function computeOverlapMetrics(baseItems, otherItems) {
+  const base = (baseItems || []).map(i => String(i.sku));
+  const otherSet = new Set((otherItems || []).map(i => String(i.sku)));
+  const top5Base = base.slice(0, 5);
+  const top5Count = top5Base.filter(sku => otherSet.has(sku)).length;
+  const top5Pct = top5Base.length ? Math.round((top5Count / top5Base.length) * 1000) / 10 : 0;
+  const top20Base = base.slice(0, 20);
+  const top20Count = top20Base.filter(sku => otherSet.has(sku)).length;
+  const top20Pct = top20Base.length ? Math.round((top20Count / top20Base.length) * 1000) / 10 : 0;
+  const baseSet = new Set(base);
+  const fullSetMatch = base.length > 0 && base.every(sku => otherSet.has(sku)) &&
+    (otherItems || []).every(i => baseSet.has(String(i.sku)));
+  const top1Match = base.length > 0 && (otherItems || []).length > 0 &&
+    base[0] === String(otherItems[0].sku);
+  let matchCategory;
+  if (base.length === 0) matchCategory = 'ZERO_RESULT';
+  else if (fullSetMatch) matchCategory = '100_PERCENT_SET';
+  else if (top20Pct >= 70) matchCategory = 'HIGH_MATCH';
+  else if (top20Pct >= 30) matchCategory = 'PARTIAL_MATCH';
+  else if (top20Pct > 0) matchCategory = 'LOW_MATCH';
+  else matchCategory = 'NO_MATCH';
+  return {
+    top5_overlap_count: top5Count, top5_overlap_pct: top5Pct,
+    top20_overlap_count: top20Count, top20_overlap_pct: top20Pct,
+    overlap_count: top20Count, overlap_pct: top20Pct,
+    match_category: matchCategory, top1_match: top1Match,
+    expected_count: base.length,
+  };
+}
+
+// Per-scenario metrics for whichever comparisonMode is active. In the
+// default mode this is a free pass-through of the stats compare_results.py
+// already computed server-side; in As-Is mode it's computed fresh from the
+// already-embedded asis_items/actual_items (no extra data needed, no server
+// call). A scenario with no As-Is data cached gets its own category so it
+// doesn't silently look like "no match" in filters/sort.
+// Overlap metrics cho ĐỐI TƯỢNG AUTOCOMPLETE - so keyword string thay vì SKU.
+// Mẫu số dùng min(base, other) chứ không phải len(base): engine sinh 30 gợi ý
+// còn API thật chỉ trả 8 (limit=8), lấy 30 làm mẫu số thì trần chỉ 26.7% và
+// mọi case đều đọc ra như fail (cùng cái bẫy đã xử lý ở panel autocomplete).
+function acKey(t) { return String(t || '').trim().toLowerCase().replace(/\s+/g, ' '); }
+function computeAcOverlapMetrics(baseItems, otherItems) {
+  const base = (baseItems || []).map(i => acKey(i.text)).filter(Boolean);
+  const other = (otherItems || []).map(i => acKey(i.text)).filter(Boolean);
+  const otherSet = new Set(other);
+  const denomAll = Math.max(1, Math.min(base.length, other.length));
+  const inter = base.filter(k => otherSet.has(k)).length;
+  const pctAll = base.length && other.length ? Math.round((inter / denomAll) * 1000) / 10 : 0;
+  const top5Base = base.slice(0, 5);
+  const top5Count = top5Base.filter(k => otherSet.has(k)).length;
+  const top5Pct = top5Base.length ? Math.round((top5Count / top5Base.length) * 1000) / 10 : 0;
+  const top20Base = base.slice(0, 20);
+  const top20Count = top20Base.filter(k => otherSet.has(k)).length;
+  const top20Denom = Math.max(1, Math.min(top20Base.length, other.length));
+  const top20Pct = top20Base.length && other.length ? Math.round((top20Count / top20Denom) * 1000) / 10 : 0;
+  const baseSet = new Set(base);
+  const fullSet = base.length > 0 && base.every(k => otherSet.has(k)) && other.every(k => baseSet.has(k));
+  const exactOrder = base.length > 0 && base.length === other.length && base.every((k, i) => k === other[i]);
+  const top1 = base.length > 0 && other.length > 0 && base[0] === other[0];
+  let cat;
+  if (!base.length) cat = 'NO_EXPECTED_AC';
+  else if (exactOrder) cat = '100_PERCENT_EXACT';
+  else if (fullSet) cat = '100_PERCENT_SET';
+  else if (!other.length) cat = 'ZERO_RESULT';
+  else if (top20Pct >= 70) cat = 'HIGH_MATCH';
+  else if (top20Pct >= 30) cat = 'PARTIAL_MATCH';
+  else if (top20Pct > 0) cat = 'LOW_MATCH';
+  else cat = 'NO_MATCH';
+  return {
+    top5_overlap_count: top5Count, top5_overlap_pct: top5Pct,
+    top20_overlap_count: top20Count, top20_overlap_pct: top20Pct,
+    overlap_count: inter, overlap_pct: pctAll,
+    match_category: cat, top1_match: top1, expected_count: base.length,
+  };
+}
+
+function getModeMetrics(s) {
+  // Đối tượng AUTOCOMPLETE: base là Expected-autocomplete hoặc As-Is-
+  // autocomplete tuỳ dropdown nguồn; other luôn là Actual-autocomplete.
+  if (comparisonTarget === 'autocomplete') {
+    if (comparisonMode === 'asis_actual') {
+      const asisAc = s.autocomplete_asis_items || [];
+      if (!asisAc.length) {
+        // As-Is autocomplete chưa được crawl (xem panel As-Is) - báo đúng là
+        // "chưa có dữ liệu" thay vì tính thành 0% khớp.
+        return { top5_overlap_count: 0, top5_overlap_pct: 0, top20_overlap_count: 0, top20_overlap_pct: 0,
+                 overlap_count: 0, overlap_pct: 0, match_category: 'NO_ASIS_DATA', top1_match: false,
+                 expected_count: 0 };
+      }
+      return computeAcOverlapMetrics(asisAc, s.autocomplete_actual_items);
+    }
+    return computeAcOverlapMetrics(s.autocomplete_expected_items, s.autocomplete_actual_items);
+  }
+  if (comparisonMode === 'asis_actual') {
+    // Not cached at all (never queried) - distinct from "queried, genuinely
+    // 0 results" (s.asis_cached === true, empty items), which falls through
+    // to computeOverlapMetrics() below and correctly reports ZERO_RESULT.
+    if (!s.asis_cached) {
+      return {
+        top5_overlap_count: 0, top5_overlap_pct: 0, top20_overlap_count: 0, top20_overlap_pct: 0,
+        overlap_count: 0, overlap_pct: 0, match_category: 'NO_ASIS_DATA', top1_match: false,
+        expected_count: 0,
+      };
+    }
+    // Cắt về cửa sổ chấm - actual_items là danh sách ĐẦY ĐỦ để hiển thị,
+    // không phải tập dùng để tính điểm (xem SCORING_TOP_N).
+    return computeOverlapMetrics(s.asis_items, s.actual_items.slice(0, SCORING_TOP_N));
+  }
+  return {
+    top5_overlap_count: s.top5_overlap_count, top5_overlap_pct: s.top5_overlap_pct,
+    top20_overlap_count: s.top20_overlap_count, top20_overlap_pct: s.top20_overlap_pct,
+    overlap_count: s.overlap_count, overlap_pct: s.overlap_pct,
+    match_category: s.match_category, top1_match: s.top1_match, expected_count: s.expected_count,
+  };
+}
+
+function updateAllStats() {
+  // Recomputes BOTH the filter-tab counts AND the 7 KPI cards live from
+  // s.__m (assumes it was already (re)computed for every scenario by the
+  // caller, renderScenarios(), right before this, for the active
+  // comparisonMode) - user request 2026-09-03: "sau khi chọn so sánh từ
+  // dropdown thì 7 mục so sánh sẽ load data tương ứng". Single pass over
+  // scenarios for both.
+  const total = scenarios.length;
+  let exact = 0, set = 0, zero = 0, top1 = 0, mismatch = 0;
+  let sumTop5 = 0, sumTop20 = 0, countedForAvg = 0;
+  scenarios.forEach(s => {
+    const m = s.__m || getModeMetrics(s);
+    if (m.match_category === '100_PERCENT_EXACT') exact++;
+    if (m.match_category === '100_PERCENT_SET') set++;
+    if (m.match_category === 'ZERO_RESULT') zero++;
+    if (m.top1_match) top1++;
+    if (m.match_category !== '100_PERCENT_EXACT' && m.match_category !== '100_PERCENT_SET') mismatch++;
+    // NO_ASIS_DATA scenarios have no real overlap to average in (they'd drag
+    // the average down as fake 0%s) - excluded from the Top-5/Top-20 avg,
+    // still counted everywhere else (they're genuinely not a match).
+    if (m.match_category !== 'NO_ASIS_DATA') {
+      sumTop5 += Number(m.top5_overlap_pct || 0);
+      sumTop20 += Number(m.top20_overlap_pct || 0);
+      countedForAvg++;
+    }
+  });
+  const pct = (n) => total ? Math.round((n / total) * 1000) / 10 : 0;
+  const avg = (sum) => countedForAvg ? Math.round((sum / countedForAvg) * 10) / 10 : 0;
+  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+
+  setText('cnt-all', total);
+  setText('cnt-exact', exact);
+  setText('cnt-set', set);
+  setText('cnt-zero', zero);
+
+  setText('kpi-set-value', set);
+  setText('kpi-set-sub', pct(set) + '% tổng scenarios');
+  setText('kpi-exact-value', exact);
+  setText('kpi-exact-sub', pct(exact) + '% khớp tuyệt đối thứ tự');
+  setText('kpi-top1-value', top1);
+  setText('kpi-top1-sub', pct(top1) + '% top-1 trùng khớp');
+  setText('kpi-top5-value', avg(sumTop5) + '%');
+  setText('kpi-top20-value', avg(sumTop20) + '%');
+  setText('kpi-mismatch-value', mismatch);
+  setText('kpi-mismatch-sub', pct(mismatch) + '% có độ lệch');
+  setText('kpi-zero-value', zero);
+
+  // Số đếm tab Passed/Failed phải theo ĐỐI TƯỢNG đang chọn (user 2026-09-07).
+  // Trước đây 2 số này in cứng từ stats phía Python nên đổi sang autocomplete
+  // là hiển thị sai ngay.
+  let nPassed = 0, nFailed = 0, nAsisZero = 0;
+  scenarios.forEach(s => {
+    const st = effectiveStatus(s);
+    if (st === 'passed') nPassed++;
+    else if (st === 'failed') nFailed++;
+    else if (st === 'discussion') nAsisZero++;
+  });
+  setText('cnt-pf-passed', nPassed);
+  setText('cnt-pf-failed', nFailed);
+  setText('cnt-pf-asiszero', nAsisZero);
+  setText('cnt-failed-nobug', scenarios.filter(s => effectiveStatus(s) === 'failed' && !hasBug(s)).length);
+  setText('cnt-has-bug', scenarios.filter(s => hasBug(s)).length);
+  setText('cnt-reviewed', scenarios.filter(s => reviewedOf(s)).length);
+  setText('cnt-not-reviewed', scenarios.filter(s => !reviewedOf(s)).length);
+
+  // resolvedMode là thuộc tính CỦA RESPONSE ACTUAL nên không đổi theo
+  // comparisonMode/target - đếm 1 lần từ dữ liệu gốc.
+  setText('cnt-pf-na', scenarios.filter(s => effectiveStatus(s) === 'n/a').length);
+  setText('cnt-discussion', scenarios.filter(s => s.discussion_note || discussionStore[s.test_id]).length);
+  setText('cnt-vis-hidden', scenarios.filter(s => s.vis_hidden_skus && s.vis_hidden_skus.length).length);
+  setText('cnt-vis-searchonly', scenarios.filter(s => s.vis_search_only_skus && s.vis_search_only_skus.length).length);
+  setText('cnt-mode-lexical', scenarios.filter(s => s.resolved_mode === 'lexical').length);
+  setText('cnt-mode-hybrid', scenarios.filter(s => s.resolved_mode === 'hybrid').length);
+}
+
+// --- Bug tracking (per-keyword "cần fix Expected" marker) ---------------
+// localStorage is shared across ALL file:// pages in most browsers, so every
+// key is namespaced by REPORT_ID (derived from this report's own output
+// folder) to avoid one report's bugs leaking into another report opened
+// later in the same browser.
+const REPORT_ID = "SmartSearch/test_data/compare/run_PART1_KO_act0929_20260929_161057";
+const REPORT_TARGET = "search";
+const BUG_STORAGE_KEY = 'smartsearch_bugs::' + REPORT_ID;
+const PF_STORE_NAME = "nsg";
+
+// --- Pass/Fail manual override, BOTH directions (user 2026-09-03) ---------
+// Same localStorage-then-export pattern as bugStore below: a click here only
+// takes effect PERMANENTLY (future compare runs too) once exported and fed
+// back via `--apply-overrides` - see apply_manual_overrides() in the Python
+// script. Namespaced by REPORT_ID like bugStore, for the same reason.
+const PF_OVERRIDE_STORAGE_KEY = 'smartsearch_pf_override::' + REPORT_ID;
+let overrideStore = {}; // test_id -> 'passed'|'failed' (marked by hand, not yet exported/applied)
+
+function loadOverrideStore() {
+  try {
+    const raw = localStorage.getItem(PF_OVERRIDE_STORAGE_KEY);
+    overrideStore = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    overrideStore = {};
+  }
+}
+function persistOverrideStore() {
+  try { localStorage.setItem(PF_OVERRIDE_STORAGE_KEY, JSON.stringify(overrideStore)); } catch (e) {}
+}
+function toggleOverride(testId, targetStatus) {
+  // Key mang tiền tố "AC::" khi đang ở đối tượng AutoComplete (user
+  // 2026-09-07) - nếu dùng thẳng test_id thì một cú đánh giá cho autocomplete
+  // sẽ ghi đè luôn phán quyết search của cùng keyword.
+  const key = comparisonTarget === 'autocomplete' ? 'AC::' + testId : testId;
+  if (overrideStore[key]) delete overrideStore[key]; // already pending -> un-mark
+  else overrideStore[key] = targetStatus;
+  persistOverrideStore();
+  updateOverrideExportCount();
+  renderScenarios();
+}
+function updateOverrideExportCount() {
+  const count = Object.keys(overrideStore).length;
+  const btn = document.getElementById('exportOverrideBtn');
+  const countEl = document.getElementById('overrideCount');
+  if (countEl) countEl.textContent = count;
+  if (btn) btn.disabled = count === 0;
+}
+function exportOverrides() {
+  // Tách 2 nhánh theo tiền tố "AC::" để Python áp vào đúng nhánh state
+  // (entries vs entries_autocomplete). Key "overrides" giữ nguyên tên/định
+  // dạng cũ nên --apply-overrides của các bản export trước vẫn đọc được.
+  const ovSearch = {}, ovAc = {};
+  Object.keys(overrideStore).forEach(k => {
+    if (k.startsWith('AC::')) ovAc[k.slice(4)] = overrideStore[k];
+    else ovSearch[k] = overrideStore[k];
+  });
+  const payload = { store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    overrides: ovSearch, overrides_autocomplete: ovAc };
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'pass_fail_overrides/pass_fail_overrides_' + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}
+// A keyword the SERVER already recorded as manually-overridden (from a prior
+// --apply-overrides) already carries the override in s.pass_fail_status - no
+// client bookkeeping needed for those. overrideStore only tracks NEW,
+// not-yet-exported clicks made in this browser this session, and wins over
+// the server value if both exist (the user is actively changing their mind).
+// Pass/Fail thô của đối tượng đang chọn (chưa tính override client-side).
+// Autocomplete có bộ ac_* riêng do Python tính + lưu ở nhánh state
+// entries_autocomplete (user 2026-09-07).
+function baseStatusOf(s) {
+  return comparisonTarget === 'autocomplete' ? (s.ac_pass_fail_status || 'n/a') : s.pass_fail_status;
+}
+// overrideStore là click chưa export của phiên này; key phải TÁCH theo đối
+// tượng, nếu không thì đánh Passed cho autocomplete sẽ vô tình đổi luôn
+// phán quyết search của cùng test_id.
+function overrideKeyOf(s) {
+  return comparisonTarget === 'autocomplete' ? 'AC::' + s.test_id : s.test_id;
+}
+function effectiveStatus(s) { return overrideStore[overrideKeyOf(s)] || baseStatusOf(s); }
+function isEffectivelyPassed(s) { return effectiveStatus(s) === 'passed'; }
+function hasBug(s) { return !!(s.bug_note || bugStore[s.test_id]); }
+// Đã duyệt tay = có override đã lưu (dù trùng hay khác kết quả máy), HOẶC vừa
+// bấm trong phiên này. Theo đúng đối tượng đang chọn ở dropdown.
+function reviewedOf(s) {
+  const saved = comparisonTarget === 'autocomplete' ? s.ac_pass_fail_reviewed : s.pass_fail_reviewed;
+  return !!(saved || overrideStore[overrideKeyOf(s)]);
+}
+loadOverrideStore();
+
+// Bug marking + Engine-improvement marking (user, 2026-09-03): a Failed
+// keyword splits into 2 causes QA marks by hand - same UI shape (screenshot +
+// "Expected đúng phải là" text), different meaning and different export/
+// --apply-* target on the Python side (bug_notes_<store>.json vs
+// engine_notes_<store>.json - see apply_notes() there). Kept as 2 separate
+// localStorage-backed stores (not generalized into one kind-parameterized
+// set of functions) so the existing, already-verified bug-marking code path
+// stays untouched - engine-improvement duplicates the same small set of
+// functions under an Engine-suffixed name.
+const ENGINE_STORAGE_KEY = 'smartsearch_engine_notes::' + REPORT_ID;
+let bugStore = {};       // persisted (localStorage): test_id -> {query, dimension, route, note, screenshot, markedAt}
+let bugDraft = {};       // in-memory, unsaved edits while a panel is open: test_id -> {note, screenshot}
+let openBugPanels = {};  // test_id -> bool
+let engineStore = {};
+let engineDraft = {};
+let openEnginePanels = {};
+// Discussion + Remove (user 2026-09-08). Cùng cơ chế localStorage + export
+// JSON + --apply-* như bug/engine note, nhưng khác mục đích:
+//   - discussion: keyword CHƯA chốt đúng/sai, cần bàn -> hiện badge 💬 và lọc
+//     được, kèm comment.
+//   - remove: keyword loại HẲN khỏi bộ test -> lần compare sau không xuất
+//     hiện nữa (danh sách loại lưu vĩnh viễn phía Python).
+const DISCUSSION_STORAGE_KEY = 'smartsearch_discussion::' + REPORT_ID;
+const REMOVE_STORAGE_KEY = 'smartsearch_removed::' + REPORT_ID;
+let discussionStore = {};
+let discussionDraft = {};
+let openDiscussionPanels = {};
+let removeStore = {};
+
+function loadDiscussionStore() {
+  try {
+    const raw = localStorage.getItem(DISCUSSION_STORAGE_KEY);
+    discussionStore = raw ? JSON.parse(raw) : {};
+  } catch (e) { discussionStore = {}; }
+}
+function persistDiscussionStore() {
+  try { localStorage.setItem(DISCUSSION_STORAGE_KEY, JSON.stringify(discussionStore)); } catch (e) {}
+}
+function loadRemoveStore() {
+  try {
+    const raw = localStorage.getItem(REMOVE_STORAGE_KEY);
+    removeStore = raw ? JSON.parse(raw) : {};
+  } catch (e) { removeStore = {}; }
+}
+function persistRemoveStore() {
+  try { localStorage.setItem(REMOVE_STORAGE_KEY, JSON.stringify(removeStore)); } catch (e) {}
+}
+// KHÔNG nhận query qua tham số: nhúng JSON.stringify(query) vào onclick="..."
+// làm dấu nháy kép trong chuỗi đóng sớm thuộc tính HTML -> handler vỡ cú pháp,
+// bấm nút không chạy gì. Tra ngược từ mảng scenarios cho an toàn tuyệt đối.
+function toggleRemove(testId) {
+  if (removeStore[testId]) delete removeStore[testId];
+  else {
+    const sc = scenarios.find(x => x.test_id === testId);
+    removeStore[testId] = { test_id: testId, query: sc ? sc.query : '',
+                             dimension: sc ? sc.dimension : null,
+                             markedAt: new Date().toISOString() };
+  }
+  persistRemoveStore();
+  updateRemoveExportCount();
+  renderScenarios();
+}
+function updateRemoveExportCount() {
+  const n = Object.keys(removeStore).length;
+  const el = document.getElementById('removeCount');
+  const btn = document.getElementById('exportRemoveBtn');
+  if (el) el.textContent = n;
+  if (btn) btn.disabled = n === 0;
+}
+function updateDiscussionExportCount() {
+  const n = Object.keys(discussionStore).length;
+  const el = document.getElementById('discussionCount');
+  const btn = document.getElementById('exportDiscussionBtn');
+  if (el) el.textContent = n;
+  if (btn) btn.disabled = n === 0;
+}
+function exportRemovals() {
+  const payload = { store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    reportId: REPORT_ID, removals: removeStore };
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'removed_scenarios/removed_scenarios_' + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}
+function exportDiscussions() {
+  const payload = { store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    reportId: REPORT_ID, target: REPORT_TARGET, notes: discussionStore };
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'discussion_notes/discussion_notes_' + (REPORT_TARGET === 'search' ? '' : REPORT_TARGET + '_')
+    + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}
+loadDiscussionStore();
+loadRemoveStore();
+
+function loadBugStore() {
+  try {
+    const raw = localStorage.getItem(BUG_STORAGE_KEY);
+    bugStore = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    console.warn('Không đọc được bug đã lưu trước đó:', e);
+    bugStore = {};
+  }
+}
+
+function persistBugStore() {
+  try {
+    localStorage.setItem(BUG_STORAGE_KEY, JSON.stringify(bugStore));
+  } catch (e) {
+    alert('Không lưu được vào bộ nhớ trình duyệt (có thể do đầy dung lượng). '
+      + 'Bug vẫn được giữ tạm trong phiên xem này - hãy Xuất Bug ngay để không bị mất. Lỗi: ' + e.message);
+  }
+}
+
+function loadEngineStore() {
+  try {
+    const raw = localStorage.getItem(ENGINE_STORAGE_KEY);
+    engineStore = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    engineStore = {};
+  }
+}
+
+function persistEngineStore() {
+  try { localStorage.setItem(ENGINE_STORAGE_KEY, JSON.stringify(engineStore)); }
+  catch (e) {
+    alert('Không lưu được vào bộ nhớ trình duyệt. Ghi chú vẫn giữ tạm trong phiên xem này - hãy xuất ngay để không bị mất. Lỗi: ' + e.message);
+  }
+}
+
+function updateExportButtonCount() {
+  const bugCount = Object.keys(bugStore).length;
+  const bugBtn = document.getElementById('exportBugJsonBtn');
+  const bugCountEl = document.getElementById('bugCountJson');
+  if (bugCountEl) bugCountEl.textContent = bugCount;
+  if (bugBtn) bugBtn.disabled = bugCount === 0;
+
+  const engineCount = Object.keys(engineStore).length;
+  const engineBtn = document.getElementById('exportEngineJsonBtn');
+  const engineCountEl = document.getElementById('engineCountJson');
+  if (engineCountEl) engineCountEl.textContent = engineCount;
+  if (engineBtn) engineBtn.disabled = engineCount === 0;
+
+  // saveNote() gọi hàm này cho MỌI kind, nên discussion phải cập nhật ở đây
+  // luôn - nếu không, đánh dấu discussion xong nút Xuất vẫn disabled.
+  if (typeof updateDiscussionExportCount === 'function') updateDiscussionExportCount();
+  if (typeof updateRemoveExportCount === 'function') updateRemoveExportCount();
+}
+
+function downloadBlob(content, mimeType, filename) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function _kindRefs(kind) {
+  if (kind === 'engine')
+    return { store: engineStore, draft: engineDraft, open: openEnginePanels, persist: persistEngineStore };
+  if (kind === 'discussion')
+    return { store: discussionStore, draft: discussionDraft, open: openDiscussionPanels, persist: persistDiscussionStore };
+  return { store: bugStore, draft: bugDraft, open: openBugPanels, persist: persistBugStore };
+}
+
+function noteExportFilename(kind, ext) {
+  // A browser tab (even a local file:// page) has NO way to force-save to an
+  // arbitrary absolute filesystem path - that's a hard security boundary in
+  // every browser, not something any web page can bypass. The one thing a
+  // plain download CAN do is a subfolder relative to the browser's own
+  // configured Downloads directory (Chrome/Edge honor a "sub/dir/name.ext"
+  // path in the `download` attribute). To get exports landing directly in
+  // the repo, either point your browser's default download location at the
+  // matching SmartSearch/test_data/... folder once (Settings -> Downloads),
+  // or hand the downloaded file to Claude to move it over.
+  const folder = kind === 'engine' ? 'engine_improvement_notes' : 'bug_report';
+  return folder + '/' + folder + '_' + REPORT_ID.replace(/[^a-zA-Z0-9_-]+/g, '_')
+    + '_' + new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-') + '.' + ext;
+}
+
+function syncDraftNoteFromDOM(kind, testId) {
+  const r = _kindRefs(kind);
+  const ta = document.getElementById(kind + 'text-' + testId);
+  if (!r.draft[testId]) r.draft[testId] = { note: '', screenshot: null };
+  if (ta) r.draft[testId].note = ta.value;
+}
+
+function toggleNotePanel(kind, testId) {
+  const r = _kindRefs(kind);
+  const opening = !r.open[testId];
+  r.open[testId] = opening;
+  if (opening && !r.draft[testId]) {
+    const existing = r.store[testId];
+    r.draft[testId] = {
+      note: existing ? existing.note : '',
+      screenshot: existing ? existing.screenshot : null,
+    };
+  }
+  renderScenarios();
+  const panel = document.getElementById(kind + 'panel-' + testId);
+  if (panel && panel.classList.contains('open')) {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+// Backward-compat name, kept in case any inline onclick still references the
+// old bug-only name.
+function toggleBugPanel(testId) { toggleNotePanel('bug', testId); }
+
+function resizeImageDataUrl(dataUrl, maxWidth, callback) {
+  const img = new Image();
+  img.onload = () => {
+    let w = img.width, h = img.height;
+    if (w > maxWidth) { h = Math.round(h * (maxWidth / w)); w = maxWidth; }
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      callback(canvas.toDataURL('image/jpeg', 0.82));
+    } catch (e) {
+      callback(dataUrl);
+    }
+  };
+  img.onerror = () => callback(dataUrl);
+  img.src = dataUrl;
+}
+
+function readImageFile(file, callback) {
+  if (!file || !file.type || file.type.indexOf('image/') !== 0) return;
+  const reader = new FileReader();
+  reader.onload = (e) => resizeImageDataUrl(e.target.result, 1000, callback);
+  reader.readAsDataURL(file);
+}
+
+function setDraftScreenshot(kind, testId, dataUrl) {
+  syncDraftNoteFromDOM(kind, testId);
+  _kindRefs(kind).draft[testId].screenshot = dataUrl;
+  renderScenarios();
+}
+
+function handleNotePaste(kind, event, testId) {
+  event.preventDefault();
+  const items = (event.clipboardData || window.clipboardData || {}).items || [];
+  for (const item of items) {
+    if (item.type && item.type.indexOf('image/') === 0) {
+      readImageFile(item.getAsFile(), (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
+      break;
+    }
+  }
+}
+
+function handleNoteDrop(kind, event, testId) {
+  event.preventDefault();
+  event.currentTarget.classList.remove('dragover');
+  const files = (event.dataTransfer && event.dataTransfer.files) || [];
+  if (files.length > 0) readImageFile(files[0], (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
+}
+
+function handleNoteFile(kind, event, testId) {
+  const file = event.target.files && event.target.files[0];
+  if (file) readImageFile(file, (dataUrl) => setDraftScreenshot(kind, testId, dataUrl));
+}
+
+function saveNote(kind, testId) {
+  syncDraftNoteFromDOM(kind, testId);
+  const r = _kindRefs(kind);
+  const draft = r.draft[testId] || {};
+  const sc = scenarios.find(x => x.test_id === testId) || {};
+  r.store[testId] = {
+    test_id: testId,
+    query: sc.query || '',
+    dimension: sc.dimension || '',
+    route: sc.route || '',
+    match_category: sc.match_category || '',
+    note: draft.note || '',
+    screenshot: draft.screenshot || null,
+    markedAt: new Date().toISOString(),
+  };
+  r.persist();
+  updateExportButtonCount();
+  r.open[testId] = false;
+  renderScenarios();
+}
+
+function removeNote(kind, testId) {
+  const label = kind === 'engine' ? 'ghi chú cải thiện Engine'
+    : kind === 'discussion' ? 'đánh dấu Cần thảo luận' : 'đánh dấu Bug';
+  if (!confirm('Bỏ ' + label + ' cho keyword này?')) return;
+  const r = _kindRefs(kind);
+  delete r.store[testId];
+  delete r.draft[testId];
+  r.persist();
+  updateExportButtonCount();
+  renderScenarios();
+}
+
+function escapeHtmlText(str) {
+  const div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
+// Single JSON export per kind (user, 2026-09-03: "nút export sẽ có 3 nút" -
+// bug / engine-improvement / pass-fail, no separate HTML variant anymore).
+// Shape matches what apply_notes() on the Python side expects:
+// {store, notes: {test_id: {...} }} - screenshot included inline (base64)
+// so this ONE file is both readable-ish and fully re-importable, no separate
+// HTML-with-images export needed.
+function exportNotesJson(kind) {
+  const r = _kindRefs(kind);
+  const entries = Object.values(r.store).sort((a, b) => (a.markedAt || '').localeCompare(b.markedAt || ''));
+  if (entries.length === 0) {
+    alert('Chưa có ghi chú nào được ghi nhận.');
+    return;
+  }
+  const notes = {};
+  for (const e of entries) notes[e.test_id] = e;
+  const payload = { store: PF_STORE_NAME, exportedAt: new Date().toISOString(), reportId: REPORT_ID,
+                     target: REPORT_TARGET, notes };
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json', noteExportFilename(kind, 'json'));
+}
+
+loadBugStore();
+loadEngineStore();
+// Seed from whatever the SERVER already baked in (a prior --apply-bug-notes/
+// --apply-engine-notes run) - user 2026-09-03 point 4: reopening a freshly
+// regenerated report must show bug/engine notes without depending on this
+// browser's localStorage. localStorage (this browser's own in-progress
+// edits) wins if both exist for the same test_id.
+for (const s of scenarios) {
+  if (s.bug_note && !bugStore[s.test_id]) bugStore[s.test_id] = s.bug_note;
+  if (s.engine_note && !engineStore[s.test_id]) engineStore[s.test_id] = s.engine_note;
+}
+
+// Pass/Fail badge (user, 2026-09-03) - ALWAYS from s.pass_fail_status/
+// s.is_regression (fixed, Expected<->Actual, server-computed), independent
+// of whichever comparisonMode the dropdown is currently on.
+// 3-way regression detail (user, 2026-09-03 point 5): "hiển thị actual lần
+// chạy trước, actual lần chạy hiện tại, và as-is system cũ" - only rendered
+// for scenarios flagged is_regression. prev_actual_top_items is a lightweight
+// {sku,name} snapshot saved into pass_fail_state_<store>.json at the END of
+// the PREVIOUS run (see the Python classification loop) - current actual/
+// as-is are already embedded normally (s.actual_items/s.asis_items).
+function miniProductListHtml(items, emptyLabel) {
+  if (!items || !items.length) return `<div style="color:var(--text-muted);font-size:12px;padding:8px 0;">${emptyLabel || '(không có dữ liệu)'}</div>`;
+  return '<ol style="margin:0;padding-left:20px;font-size:12px;line-height:1.6;">' +
+    items.slice(0, 20).map(it => `<li>${escapeHtmlText(it.name || it.sku || '')} <span style="color:var(--text-muted);">(${escapeHtmlText(it.sku || '')})</span></li>`).join('') +
+    '</ol>';
+}
+function getRegressionDetailHtml(s) {
+  const prevAt = s.prev_run_at ? new Date(s.prev_run_at).toLocaleString() : 'không rõ';
+  // Title differs depending on WHY this panel is showing (2026-09-04): a
+  // real Pass/Fail flip (is_regression) vs. just the Actual list changing
+  // without crossing a bucket (response_changed only) - don't claim a
+  // "Regression" status flip happened when it didn't.
+  const detailTitle = s.is_regression
+    ? `📉 Chi tiết Regression - đổi trạng thái ${s.prev_pass_fail_status} &rarr; ${s.pass_fail_status}`
+    : `🔄 Chi tiết Response Changed - Actual đổi (Pass/Fail vẫn ${s.pass_fail_status}, không đổi bucket)`;
+  return `
+        <div class="regression-banner" style="margin-bottom: 16px;">
+          <h2 style="font-size:14px;">${detailTitle}</h2>
+          <p>So sánh Actual lần chạy TRƯỚC (${prevAt}${s.prev_compare_dir ? ', thư mục: ' + escapeHtmlText(s.prev_compare_dir) : ''}) vs Actual lần này vs As-Is (hệ thống cũ) - top 20 mỗi cột.</p>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <div class="col-box"><div class="col-title">Actual (lần trước)</div>${miniProductListHtml(s.prev_actual_top_items, 'Chưa có dữ liệu lần chạy trước')}</div>
+            <div class="col-box"><div class="col-title">Actual (lần này)</div>${miniProductListHtml(s.actual_items, 'Actual rỗng')}</div>
+            <div class="col-box asis-box"><div class="col-title">As-Is (hệ thống cũ)</div>${miniProductListHtml(s.asis_items, s.asis_cached ? 'As-Is rỗng' : 'Chưa có As-Is trong cache')}</div>
+          </div>
+        </div>`;
+}
+
+// Autocomplete panel (2026-09-07) - API products/autocomplete gọi riêng cho
+// mỗi query khi lấy Actual data. View-only: KHÔNG tính vào Pass/Fail hay bất
+// kỳ % so khớp nào của search (giống Recommendations backfill).
+// - Cột Actual: gợi ý thật từ API, tách nhãn type "term" (từ khóa, có
+//   hitCount) vs "product" (tên sản phẩm).
+// - Cột Expected: chỉ có ở batch nào Expected mang field
+//   autocomplete_suggestions (hiện tại: realsearch_history) - lúc đó tô màu
+//   gợi ý trùng/không trùng 2 chiều để QA đối chiếu nhanh.
+function getAutocompleteHtml(s) {
+  const act = s.autocomplete_actual_items || [];
+  const exp = s.autocomplete_expected_items || [];
+  const asisAc = s.autocomplete_asis_items || [];
+  // Panel Expected của autocomplete (user 2026-09-07): CHỈ hiện khi cả 2 điều
+  // kiện đúng - dropdown đang chọn "Expected -> Actual" VÀ checkbox "hiển thị
+  // panel Expected" đang tick. Ở chế độ As-Is <-> Actual thì Expected không
+  // liên quan (Expected là kỳ vọng cho hệ thống MỚI) nên ẩn hẳn, kéo theo cả
+  // cột "Có ở Expected?" trong bảng Actual.
+  const showExpAc = !!(exp.length && comparisonMode === 'expected_actual' && showExpected);
+  if (!act.length && !showExpAc && !s.autocomplete_error && comparisonMode !== 'asis_actual') return '';
+
+  const typeTag = (t) => t
+    ? `<span class="meta-tag" style="margin:0 0 0 6px;font-size:10px;">${escapeHtmlText(t)}</span>`
+    : '';
+  const matchDot = (ok) => ok
+    ? `<span style="color:#15803d;font-weight:700;" data-tooltip="Gợi ý này có ở cả Expected và Actual">✓</span>`
+    : `<span style="color:#b91c1c;font-weight:700;" data-tooltip="Gợi ý này chỉ có ở một bên">✗</span>`;
+  // type="product" (tên sản phẩm đầy đủ) KHÔNG so được với Expected - engine
+  // mô phỏng chỉ sinh từ khóa ngắn, nên tô ✗ đỏ ở đây là sai bản chất.
+  const notComparable = `<span style="color:var(--text-muted);" data-tooltip="Gợi ý dạng tên sản phẩm (type=product) - engine mô phỏng chỉ sinh từ khóa ngắn nên không có cơ sở đối chiếu, KHÔNG phải dự đoán sai.">–</span>`;
+
+  const actRows = act.length
+    ? act.map(it => `
+        <tr>
+          <td><span class="rank-num">${it.rank}</span></td>
+          <td>
+            <span class="item-name">${escapeHtmlText(it.text)}</span>${typeTag(it.type)}
+            ${it.hit_count != null ? `<span class="item-meta">hitCount: ${it.hit_count}</span>` : ''}
+          </td>
+          ${showExpAc ? `<td>${it.comparable ? matchDot(it.matched_expected) : notComparable}</td>` : ''}
+        </tr>`).join('')
+    : `<tr><td colspan="${showExpAc ? 3 : 2}" style="color:var(--text-muted);padding:12px 8px;">${
+        s.autocomplete_error
+          ? 'Lỗi khi gọi autocomplete: ' + escapeHtmlText(s.autocomplete_error)
+          : 'API autocomplete trả về 0 gợi ý cho query này.'}</td></tr>`;
+
+  const expBox = showExpAc ? `
+          <div class="col-box">
+            <div class="col-title">
+              <span>📋 Autocomplete Expected (${exp.length})</span>
+              <span data-tooltip="Engine mô phỏng (search_engine.js) sinh 30 gợi ý từ khóa ngắn, còn API thật trả tối đa 8 (limit=8 như UI thật) và chỉ ${s.autocomplete_comparable_count} trong đó là type=term so được. Nên KHÔNG dùng 'trùng/30' làm điểm. Cửa sổ ngang nhau: trong ${s.autocomplete_expected_topk_size} gợi ý ĐẦU của Expected có ${s.autocomplete_expected_topk_hit_count} cái xuất hiện ở Actual. Tổng trùng trên cả 30: ${s.autocomplete_overlap_count}.">${
+                s.autocomplete_comparable_count
+                  ? `TOP-${s.autocomplete_expected_topk_size} TRÙNG: ${s.autocomplete_expected_topk_hit_count}/${s.autocomplete_expected_topk_size}${s.autocomplete_expected_topk_pct != null ? ` (${s.autocomplete_expected_topk_pct}%)` : ''}`
+                  : 'CHƯA ĐỐI CHIẾU ĐƯỢC'} ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th><th>Có ở Actual?</th></tr></thead>
+              <tbody>
+                ${exp.map(it => `
+                  <tr>
+                    <td><span class="rank-num">${it.rank}</span></td>
+                    <td><span class="item-name">${escapeHtmlText(it.text)}</span></td>
+                    <td>${matchDot(it.matched_actual)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>` : '';
+
+  // Panel As-Is autocomplete (user 2026-09-07) - CHỈ hiện khi dropdown đang
+  // chọn "As-Is <-> Actual". Dữ liệu sẽ do lần chạy tới gọi API thật của hệ
+  // thống CŨ; hiện chưa có nên panel hiện đúng trạng thái "chưa gọi" kèm
+  // endpoint + response shape, để QA đối chiếu được ngay khi có data.
+  const ASIS_AC_ENDPOINT = 'GET https://www.lottemart.vn/v1/p/mart/es/vi_nsg/search/suggestion?q=&lt;query&gt;&amp;size=10';
+  const asisAcBox = comparisonMode !== 'asis_actual' ? '' : `
+          <div class="col-box asis-box">
+            <div class="col-title">
+              <span>🕰️ Autocomplete As-Is (${asisAc.length})</span>
+              <span data-tooltip="Gợi ý autocomplete của hệ thống ĐANG chạy thật trên lottemart.vn (không phải hệ thống mới đang test) - chỉ để tham khảo, không tính Pass/Fail. Response của API này chỉ là mảng STRING tên sản phẩm, không có type/hitCount như API mới.">${
+                s.autocomplete_asis_cached ? 'HỆ THỐNG CŨ' : 'CHƯA GỌI API'} ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th></tr></thead>
+              <tbody>
+                ${asisAc.length
+                  ? asisAc.map(it => `
+                    <tr>
+                      <td><span class="rank-num">${it.rank}</span></td>
+                      <td><span class="item-name">${escapeHtmlText(it.text)}</span></td>
+                    </tr>`).join('')
+                  : `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;line-height:1.7;">
+                      ${s.autocomplete_asis_cached
+                        ? 'Đã gọi API As-Is cho query này - hệ thống cũ trả về 0 gợi ý thật.'
+                        : `<b>Chưa có dữ liệu</b> - lần chạy tới sẽ gọi API thật để lấy.<br>
+                           <span style="font-family:ui-monospace,monospace;font-size:11px;">${ASIS_AC_ENDPOINT}</span><br>
+                           Response: <span style="font-family:ui-monospace,monospace;font-size:11px;">{"data": ["Thịt Hến 300G", ...]}</span><br>
+                           Đã verify endpoint không cần auth; cấu hình ở <span style="font-family:ui-monospace,monospace;font-size:11px;">config/environments.yaml &rarr; legacy.autocomplete_api</span>.`}
+                    </td></tr>`}
+              </tbody>
+            </table>
+          </div>`;
+
+  const prodBox = (s.autocomplete_products && s.autocomplete_products.length) ? `
+          <div class="col-box ac-box">
+            <div class="col-title">
+              <span>🛒 Autocomplete ACTUAL - Product preview (${s.autocomplete_products.length})</span>
+              <span data-tooltip="CŨNG LÀ ACTUAL: mảng products[] mà CHÍNH lần gọi API products/autocomplete ở trên trả về (hiện ngay trong dropdown gợi ý), tách riêng khỏi mảng suggestions[] chứ không phải nguồn dữ liệu khác. Vì vậy khối này xếp ngay dưới khối Autocomplete Actual, không xếp ngang hàng với Expected.">CÙNG 1 RESPONSE VỚI TRÊN ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>SKU / Sản phẩm</th></tr></thead>
+              <tbody>
+                ${s.autocomplete_products.map(it => `
+                  <tr>
+                    <td><span class="rank-num">${it.rank}</span></td>
+                    <td>
+                      <span class="item-name">${escapeHtmlText(it.name)}</span>
+                      <span class="item-meta">SKU: ${escapeHtmlText(it.sku)} | ${Number(it.price || 0).toLocaleString()} đ</span>
+                    </td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>` : '';
+
+  return `
+        <div class="ac-section" style="margin-top:16px;">
+          <div class="ac-section-title">⌨️ Autocomplete (API riêng - chỉ để xem, không tính Pass/Fail)${
+            s.autocomplete_latency_ms != null ? ` <span style="font-weight:400;color:var(--text-muted);font-size:11px;">${s.autocomplete_latency_ms}ms</span>` : ''}</div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+            <!-- Cột Actual: gợi ý (suggestions[]) xếp TRÊN, product preview
+                 (products[]) xếp NGAY DƯỚI - cả hai đều là Actual, cùng đến
+                 từ MỘT lần gọi products/autocomplete (user 2026-09-07: "cả
+                 mục A và B đều là actual... move B sang hiển thị bên dưới A,
+                 vì rule là A chỉ show 8 record thôi"). Trước đây product
+                 preview nằm thành cột thứ 3 ngang hàng với Expected, dễ bị
+                 đọc nhầm thành một nguồn dữ liệu riêng. -->
+            <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="col-box ac-box">
+              <div class="col-title">
+                <span>💡 Autocomplete Actual (${act.length})</span>
+                <span data-tooltip="Gợi ý thật từ API products/autocomplete?q=<query>&limit=N. type=term là từ khóa gợi ý (có hitCount), type=product là tên sản phẩm - chỉ type=term mới đối chiếu được với Expected.">${
+                  !showExpAc
+                    ? 'API THẬT'
+                    : (s.autocomplete_comparable_count
+                        ? `CÓ Ở EXPECTED: ${s.autocomplete_actual_in_expected_count}/${s.autocomplete_comparable_count} gợi ý type=term${s.autocomplete_actual_in_expected_pct != null ? ` (${s.autocomplete_actual_in_expected_pct}%)` : ''}`
+                        : 'KHÔNG CÓ type=term - không đối chiếu được')} ⓘ</span>
+              </div>
+              <table class="prod-table">
+                <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th>${showExpAc ? '<th>Có ở Expected?</th>' : ''}</tr></thead>
+                <tbody>${actRows}</tbody>
+              </table>
+            </div>
+            ${prodBox}
+            </div>
+            ${asisAcBox}
+            ${expBox}
+          </div>
+        </div>`;
+}
+
+// Hàng nghĩa 5 ngoại ngữ dưới keyword. Trả chuỗi rỗng khi keyword không nằm
+// trong bộ dịch tay (typo/brand/vốn đã là ngoại ngữ) - im lặng bỏ qua là đúng,
+// không dựng dòng trống.
+function mlRowHtml(query) {
+  const m = QUERY_MULTILANG[query];
+  if (!m) return '';
+  const chips = ML_ORDER
+    .filter(([code]) => m[code])
+    .map(([code, label]) =>
+      `<span class="ml-chip ml-${code}" onclick="event.stopPropagation();"`
+      + ` data-tooltip="Nghĩa ${label} của &quot;${escapeHtmlText(query)}&quot; - bản dịch tay của QA, dùng để copy đi thử trên hệ thống hoặc đối chiếu. KHÔNG phải dữ liệu do hệ thống trả về.">`
+      + `<b>${label}</b>${escapeHtmlText(m[code])}</span>`)
+    .join('');
+  return chips ? `<div class="ml-row">${chips}</div>` : '';
+}
+
+function getPassFailBadgeHtml(s) {
+  if (s.pass_fail_status === 'n/a') return ''; // Expected-less file (demo) - no Pass/Fail concept
+  const eff = effectiveStatus(s);
+  // As-Is 0 KQ nhưng Actual có KQ (user 2026-09-08): KHÔNG tự chấm đạt/không
+  // đạt - chờ người xem quyết. Override tay (nếu có) vẫn thắng, nên chỉ hiện
+  // nhãn này khi eff vẫn còn là 'discussion'.
+  if (eff === 'discussion') return `<span class="badge" style="background:#eef6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Hệ cũ (As-Is) không trả về kết quả nào, hệ mới trả về ${(s.actual_items || []).length} sản phẩm. Không có gì để đối chiếu nên không tự chấm - cần người xem xác nhận sản phẩm trả về có đúng ý không.">💬 As-Is 0 KQ - cần xem</span>`;
+  const kindLabel = s.regression_kind === 'improved' ? 'CẢI THIỆN' : 'REGRESSION';
+  const regressionTag = s.is_regression
+    ? `<span class="badge badge-regression" data-tooltip="Lần compare TRƯỚC keyword này ${s.prev_pass_fail_status}, lần này ${s.pass_fail_status} (${s.match_category}) - xem lịch sử ở SmartSearch/test_data/compare/pass_fail_state_*.json">⚠️ ${kindLabel}</span>`
+    : '';
+  // Response-changed tag (2026-09-04) - fires whenever Actual's top-N SKU
+  // list differs from last run's snapshot, independent of is_regression
+  // (which only fires on a Pass/Fail bucket flip) - both can be true at once.
+  const responseChangedTag = s.response_changed
+    ? `<span class="badge" style="background:#eff6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Actual lần này khác lần compare trước (danh sách/thứ hạng sản phẩm đổi), dù Pass/Fail có thể không đổi bucket - xem chi tiết 'Actual lần trước' bên dưới.">🔄 Actual đổi</span>`
+    : '';
+  // Manually overridden already SAVED server-side (from a prior
+  // --apply-overrides run) vs. a NEW click pending export in this browser -
+  // both display with a distinct tag so it's clear this wasn't the
+  // auto-classifier's own verdict.
+  const pending = overrideStore[s.test_id];
+  // 3 trạng thái khác nhau, KHÔNG gộp (user 2026-09-09):
+  //   - đã ghi đè tay (khác kết quả máy)  -> "Điều chỉnh tay"
+  //   - đã duyệt tay, TRÙNG kết quả máy   -> "Đã duyệt" (trước đây không có
+  //     nhãn nào, nên 71 case QA đã xem qua trông y như case máy tự chấm)
+  //   - vừa bấm trong phiên này, chưa xuất -> "Vừa điều chỉnh"
+  const reviewedTag = reviewedOf(s)
+    ? `<span class="badge badge-reviewed" data-tooltip="QA đã rà soát tay và chấm ${eff} - kết quả này TRÙNG với kết quả máy tự chấm nên không có gì bị ghi đè, nhưng keyword ĐÃ được người xem qua. Lưu vĩnh viễn qua --apply-overrides.">👁 Đã duyệt</span>`
+    : '';
+  const overrideTag = s.pass_fail_manual_override
+    ? `<span class="badge badge-review" data-tooltip="Đã điều chỉnh tay thành ${eff} (máy tự chấm ra khác) - lưu vĩnh viễn qua --apply-overrides">✔️ Điều chỉnh tay</span>`
+    : (pending ? `<span class="badge badge-review" data-tooltip="Vừa đánh dấu ${pending} trong trình duyệt này - bấm 'Xuất đánh giá Pass/Fail' rồi truyền lại qua --apply-overrides ở lần compare sau để lưu vĩnh viễn, nếu không sẽ mất khi đóng báo cáo này.">✔️ Vừa điều chỉnh (chưa xuất)</span>` : reviewedTag);
+  if (eff === 'passed') return regressionTag + responseChangedTag + `<span class="badge badge-passed" data-tooltip="Hệ mới trả về kết quả khớp cao với hệ cũ đang chạy thật (HIGH_MATCH hoặc 100% SET). Pass/Fail LUÔN tính theo As-Is↔Actual, không đổi theo dropdown chế độ.">✅ Passed</span>` + overrideTag;
+  return regressionTag + responseChangedTag + `<span class="badge badge-failed" data-tooltip="Kết quả hệ mới lệch nhiều so với hệ cũ (khớp 1 phần/khớp thấp/không khớp), hoặc cả hai cùng 0 kết quả. Pass/Fail LUÔN tính theo As-Is↔Actual.">❌ Failed</span>` + overrideTag;
+}
+
+// "Đánh giá lại" toggle - works BOTH directions (user 2026-09-03): Passed can
+// be clicked down to Failed and vice versa. Clicking a pending override again
+// un-marks it back to whatever the server/auto-classify already says.
+function getOverrideButtonHtml(s) {
+  if (s.pass_fail_status === 'n/a') return '';
+  const eff = effectiveStatus(s);
+  const pending = overrideStore[s.test_id];
+  if (pending) {
+    return `<button type="button" class="pf-override-btn marked"
+                    data-tooltip="Đang đánh dấu tay là ${pending}, chưa xuất - bấm để bỏ đánh dấu này."
+                    onclick="event.stopPropagation(); toggleOverride('${s.test_id}', '${pending}')">↩️ Bỏ đánh giá lại</button>`;
+  }
+  // Từ trạng thái 'discussion' (As-Is 0 KQ) phải chọn được CẢ HAI hướng -
+  // nút 2 chiều thông thường chỉ lật passed<->failed nên sẽ không bao giờ tới
+  // được 'failed'.
+  if (eff === 'discussion') {
+    return `<button type="button" class="pf-override-btn"
+                    data-tooltip="Xác nhận sản phẩm hệ mới trả về là ĐÚNG ý người dùng."
+                    onclick="event.stopPropagation(); toggleOverride('${s.test_id}', 'passed')">✅ Đánh giá: Passed</button>
+            <button type="button" class="pf-override-btn"
+                    data-tooltip="Sản phẩm hệ mới trả về KHÔNG đúng ý người dùng."
+                    onclick="event.stopPropagation(); toggleOverride('${s.test_id}', 'failed')">❌ Đánh giá: Failed</button>`;
+  }
+  const target = eff === 'passed' ? 'failed' : 'passed';
+  const label = target === 'passed' ? '✅ Đánh giá lại: Passed' : '❌ Đánh giá lại: Failed';
+  return `<button type="button" class="pf-override-btn"
+                  data-tooltip="Tự đánh giá keyword này là ${target} dù auto-classify/trạng thái hiện tại là ${eff} (${s.match_category}) - nhớ bấm 'Xuất đánh giá Pass/Fail' ở thanh công cụ rồi truyền file đó qua --apply-overrides ở lần compare sau để lưu vĩnh viễn."
+                  onclick="event.stopPropagation(); toggleOverride('${s.test_id}', '${target}')">${label}</button>`;
+}
+
+// Jump from the regression banner to that scenario's card further down the
+// page - forces filter=all + full page size so the card is guaranteed to be
+// on-screen regardless of whatever filter/pagination the user had active.
+function jumpToScenario(testId) {
+  if (!testId) return;
+  // Xoá HẾT filter đang bật (multi-select) chứ không chỉ đặt lại currentFilter,
+  // nếu không thì scenario cần nhảy tới vẫn có thể bị lọc mất.
+  activeFilters.clear();
+  currentFilter = 'all';
+  syncTabHighlight();
+  searchQuery = '';
+  document.getElementById('searchInput').value = '';
+  selectedPageSize = 'all';
+  document.getElementById('pageSizeSelect').value = 'all';
+  currentPage = 1;
+  renderScenarios();
+  requestAnimationFrame(() => {
+    const card = document.getElementById('card-' + testId);
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('body-' + testId)?.classList.add('open');
+    card.style.outline = '2px solid #dc2626';
+    setTimeout(() => { card.style.outline = ''; }, 2000);
+  });
+}
+
+function getBadgeHtml(cat, pct) {
+  if (cat === '100_PERCENT_EXACT') return `<span class="badge badge-exact" data-tooltip="Khớp hoàn hảo 100% đúng từng vị trí">⭐ 100% Exact</span>`;
+  if (cat === '100_PERCENT_SET') return `<span class="badge badge-set" data-tooltip="Khớp đủ tất cả SKU (có thể đảo vị trí)">🟣 100% Set Match</span>`;
+  if (cat === 'HIGH_MATCH') return `<span class="badge badge-high" data-tooltip="Độ trùng khớp cao trong Top-20">Khớp ${pct}%</span>`;
+  if (cat === 'PARTIAL_MATCH') return `<span class="badge badge-partial" data-tooltip="Độ trùng khớp trung bình trong Top-20">Khớp ${pct}%</span>`;
+  if (cat === 'LOW_MATCH') return `<span class="badge badge-low" data-tooltip="Độ lệch lớn, trùng khớp ít">Lệch nhiều (${pct}%)</span>`;
+  if (cat === 'ZERO_RESULT') return `<span class="badge badge-zero" data-tooltip="API trả về danh sách rỗng (0 sản phẩm)">Zero Result</span>`;
+  if (cat === 'NO_ASIS_DATA') return `<span class="badge badge-zero" data-tooltip="Chưa có dữ liệu As-Is trong cache cho query này - chạy compare_results.py để gọi/lưu cache rồi mở lại report.">Chưa có As-Is</span>`;
+  return `<span class="badge badge-low" data-tooltip="Không trùng khớp sản phẩm nào">No Match (0%)</span>`;
+}
+
+function getStatusTagHtml(status, rank, column, baseLabel) {
+  baseLabel = baseLabel || 'Expected';
+  if (status === 'exact_rank') return `<span class="tag-status tag-exact" data-tooltip="[Mục 20] Sản phẩm đứng đúng chính xác vị trí thứ hạng ở cả ${baseLabel} và Actual">✓ Đúng Rank</span>`;
+  if (status === 'rank_shifted') return `<span class="tag-status tag-shift" data-tooltip="[Mục 23] Sản phẩm có xuất hiện nhưng bị trồi/sụt đến vị trí Rank ${rank}">↕ Rank ${rank}</span>`;
+  if (status === 'outside_top') {
+    const tooltip = column === 'actual'
+      ? `[Mục 22] SKU này nằm ngoài Top 20 của ${baseLabel} (${baseLabel} rank ${rank}), nhưng Actual đã đưa vào Top 20.`
+      : `[Mục 22] SKU này có trong ${baseLabel} Top 20 nhưng Actual đẩy xuống ngoài Top 20 (Actual rank ${rank}).`;
+    return `<span class="tag-status tag-outside" data-tooltip="${tooltip}">Out Top (${rank})</span>`;
+  }
+  if (status === 'missing') return `<span class="tag-status tag-missing" data-tooltip="[Mục 21] Sản phẩm mong đợi trong Top 20 nhưng Actual KHÔNG tìm thấy trong Top 20">✗ Missing</span>`;
+  if (status === 'extra') return `<span class="tag-status tag-extra" data-tooltip="Sản phẩm lạ do Actual trả về, không nằm trong danh sách của ${baseLabel}">+ Extra</span>`;
+  return '';
+}
+
+// Per-actual-item status relative to a BASE list (As-Is), mirroring the
+// server-side exp_rank_map/act_details logic in compare_scenario() but
+// computed client-side since As-Is has no server-computed per-item cross-
+// reference. Simpler than the Expected version - As-Is items already ARE
+// the full available list (no separate "beyond the display window" case),
+// so only exact_rank/rank_shifted/extra are ever produced (no missing/
+// outside_top, those describe a base-item's own row, not an actual-item's).
+function computeActualStatusVsBase(actualItems, baseItems) {
+  const baseRankMap = new Map();
+  (baseItems || []).forEach((it, idx) => { baseRankMap.set(String(it.sku), idx + 1); });
+  return (actualItems || []).map((it, idx) => {
+    const rank = idx + 1;
+    const baseRank = baseRankMap.has(String(it.sku)) ? baseRankMap.get(String(it.sku)) : null;
+    let status;
+    if (baseRank === rank) status = 'exact_rank';
+    else if (baseRank !== null) status = 'rank_shifted';
+    else status = 'extra';
+    return { ...it, status, base_rank: baseRank };
+  });
+}
+
+function renderScenarios() {
+  const listEl = document.getElementById('scenarioList');
+  const pagEl = document.getElementById('paginationInfo');
+
+  // Recompute per-scenario metrics for the active comparisonMode and stash
+  // them on the scenario object (s.__m) - cheap (plain array ops over
+  // already-embedded items, no server round-trip) and keeps every other `s.*`
+  // reference below (query/test_id/expected_items/actual_items/asis_items/...)
+  // untouched regardless of mode.
+  scenarios.forEach(s => { s.__m = getModeMetrics(s); });
+  updateAllStats();
+
+  const filtered = scenarios.filter(s => {
+    // Multi-select filter (user 2026-09-07: "cho phép multiple selection
+    // badge (combine filter)"). Quy tắc kết hợp:
+    //   - CÙNG nhóm  -> OR  (VD chọn Passed + Failed = xem cả hai)
+    //   - KHÁC nhóm  -> AND (VD Failed + Hybrid = chỉ case vừa Failed vừa
+    //                        đi nhánh semantic)
+    // Không chọn gì / chọn "all" = không lọc. 3 nhóm: match category,
+    // trạng thái Pass-Fail, và nhánh xử lý resolvedMode.
+    const matchFilter = matchesActiveFilters(s);
+    if (!matchFilter) return false;
+
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return s.query.toLowerCase().includes(q) ||
+           s.test_id.toLowerCase().includes(q) ||
+           s.expected_items.some(i => i.name.toLowerCase().includes(q) || i.sku.includes(q)) ||
+           s.actual_items.some(i => i.name.toLowerCase().includes(q) || i.sku.includes(q));
+  });
+
+  if (sortOrder !== 'default') {
+    filtered.sort((a, b) => {
+      const difference = Number(a.__m.top20_overlap_pct || 0) - Number(b.__m.top20_overlap_pct || 0);
+      return sortOrder === 'low' ? difference : -difference;
+    });
+  }
+
+  const total = filtered.length;
+  const pageSize = selectedPageSize === 'all' ? total || 1 : selectedPageSize;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  currentPage = Math.min(currentPage, totalPages);
+  const start = (currentPage - 1) * pageSize;
+  const paged = filtered.slice(start, start + pageSize);
+
+  if (total === 0) {
+    listEl.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted); background: var(--card-bg); border-radius: 12px;">Không tìm thấy scenario phù hợp bộ lọc.</div>`;
+    pagEl.innerHTML = 'Không có dữ liệu trong trang này.';
+    updatePaginationControls(1, 1);
+    return;
+  }
+
+  listEl.innerHTML = paged.map(s => `
+    <div class="scenario-card" id="card-${s.test_id}">
+      <div class="scenario-header" onclick="toggleCard('${s.test_id}')">
+        <div class="scenario-title-area">
+          <span class="scenario-id">${s.test_id}</span>
+          <span class="scenario-query" onclick="event.stopPropagation();"
+                ${QUERY_TRANSLATIONS[s.query] ? `data-tooltip="Nghĩa tiếng Việt: ${escapeHtmlText(QUERY_TRANSLATIONS[s.query])}"` : ''}
+                >"${s.query}"</span>${QUERY_TRANSLATIONS[s.query]
+                  ? `<span class="query-vi" onclick="event.stopPropagation();" data-tooltip="Bản dịch do Claude cung cấp để dễ kiểm tra kết quả - không phải dữ liệu từ hệ thống.">→ ${escapeHtmlText(QUERY_TRANSLATIONS[s.query])}</span>`
+                  : ''}
+          ${mlRowHtml(s.query)}
+          ${getBadgeHtml(s.__m.match_category, s.__m.top20_overlap_pct)}
+          ${s.__m.top1_match ? '<span class="badge badge-exact" data-tooltip="Sản phẩm Top-1 khớp chính xác giữa 2 nguồn đang so sánh">Top-1 Match</span>' : ''}
+          ${getPassFailBadgeHtml(s)}
+          ${(s.discussion_note || discussionStore[s.test_id]) ? `<span class="badge" style="background:#eef6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Cần thảo luận: ${escapeHtmlText(((s.discussion_note && s.discussion_note.note) || (discussionStore[s.test_id] && discussionStore[s.test_id].note) || '').slice(0,180))}">💬 Discussion</span>` : ''}
+          ${removeStore[s.test_id] ? '<span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;" data-tooltip="Đã đánh dấu loại khỏi bộ test - sẽ biến mất sau khi Xuất Remove và chạy lại compare với --apply-removals">🗑 Sẽ bị loại</span>' : ''}
+        </div>
+        <div class="scenario-badges">
+          ${s.actual_latency_ms != null ? `<span class="meta-tag" data-tooltip="Thời gian API search (Actual) thực sự phản hồi khi lấy dữ liệu này - đo lúc chạy data test, lưu sẵn trong file actual.">⏱️ ${s.actual_latency_ms}ms</span>` : ''}
+          ${(s.vis_search_only_skus && s.vis_search_only_skus.length) ? `<span class="meta-tag" style="background:#fefce8;border:1px solid #fde68a;color:#854d0e;" data-tooltip="Kết quả có ${s.vis_search_only_skus.length} sản phẩm CHỈ TÌM KIẾM RA ĐƯỢC, không hiện khi duyệt danh mục (visibility_search=true, visibility_catalog=false). Không phải lỗi. SKU: ${s.vis_search_only_skus.join(', ')}">🔍 ${s.vis_search_only_skus.length} SP chỉ tìm kiếm</span>` : ''}
+          ${(s.vis_hidden_skus && s.vis_hidden_skus.length) ? `<span class="meta-tag" style="background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;" data-tooltip="Kết quả có ${s.vis_hidden_skus.length} sản phẩm bị ẨN HOÀN TOÀN trên production (visibility_search=false và visibility_catalog=false): không tìm ra được, cũng không có trong danh mục. SKU: ${s.vis_hidden_skus.join(', ')}. Engine chưa đọc hai cờ này nên vẫn trả về chúng - lệch với Actual ở đây nhiều khả năng là mismatch GIẢ.">🚷 ${s.vis_hidden_skus.length} SP bị ẩn</span>` : ''}
+          ${s.resolved_mode ? `<span class="meta-tag" style="${s.resolved_mode === 'hybrid' ? 'background:#f5f3ff;border:1px solid #ddd6fe;color:#6d28d9;' : 'background:#ecfeff;border:1px solid #a5f3fc;color:#0e7490;'}" data-tooltip="Nhánh backend THẬT đã dùng cho query này (response_meta.resolvedMode). hybrid = CÓ semantic; lexical = thuần khớp từ khoá.${s.lexical_confidence != null ? ' lexicalConfidence: ' + Number(s.lexical_confidence).toFixed(3) : ''}">${s.resolved_mode === 'hybrid' ? '🧠 hybrid' : '🔤 lexical'}</span>` : ''}
+          <span class="meta-tag" style="background: rgba(2, 132, 199, 0.12); color: #0369a1; font-weight: 600;" data-tooltip="[Mục 17] Số SKU trùng khớp trong 20 kết quả đầu tiên, theo chế độ so sánh đang chọn (${s.__m.top20_overlap_count}/${s.__m.expected_count} sản phẩm)">Top-20: ${s.__m.top20_overlap_count}/${s.__m.expected_count} (${s.__m.top20_overlap_pct}%)</span>
+          ${getOverrideButtonHtml(s)}
+          <button type="button" class="bug-btn ${bugStore[s.test_id] ? 'marked' : ''}" id="bugbtn-${s.test_id}"
+                  data-tooltip="Failed là BUG thật (UI/data thật đang sai) - đánh dấu kèm ảnh chụp UI thực tế và ghi chú Expected đúng phải là gì"
+                  onclick="event.stopPropagation(); toggleNotePanel('bug', '${s.test_id}')">🐞 ${bugStore[s.test_id] ? 'Đã ghi Bug' : 'Đánh dấu Bug'}</button>
+          ${ (comparisonMode === 'expected_actual' && effectiveStatus(s) === 'failed') ? `
+          <button type="button" class="engine-btn ${engineStore[s.test_id] ? 'marked' : ''}" id="enginebtn-${s.test_id}"
+                  data-tooltip="Failed do SEARCH ENGINE của mình sai (Expected tự sinh ra không đúng, không phải lỗi UI/data thật) - chỉ có ở chế độ Expected↔Actual. Đánh dấu kèm ghi chú Expected đúng phải là gì để cải thiện search_engine.js."
+                  onclick="event.stopPropagation(); toggleNotePanel('engine', '${s.test_id}')">⚙️ ${engineStore[s.test_id] ? 'Đã ghi cải thiện Engine' : 'Cải thiện Engine'}</button>` : '' }
+          <button type="button" class="disc-btn ${discussionStore[s.test_id] ? 'marked' : ''}" id="discbtn-${s.test_id}"
+                  data-tooltip="Đánh dấu keyword này CẦN THẢO LUẬN (chưa chốt đúng/sai) - kèm comment. Lần compare sau sẽ hiện badge 💬 và lọc được theo tab Discussion."
+                  onclick="event.stopPropagation(); toggleNotePanel('discussion', '${s.test_id}')">💬 ${discussionStore[s.test_id] ? 'Đã ghi Discussion' : 'Mark discussion'}</button>
+          <button type="button" class="rm-btn ${removeStore[s.test_id] ? 'marked' : ''}" id="rmbtn-${s.test_id}"
+                  data-tooltip="Loại keyword này KHỎI bộ test. Sau khi Xuất và chạy lại compare, keyword sẽ không còn xuất hiện trong báo cáo nữa (danh sách loại được lưu vĩnh viễn ở removed_scenarios_<store>.json)."
+                  onclick="event.stopPropagation(); toggleRemove('${s.test_id}')">${removeStore[s.test_id] ? '↩️ Bỏ đánh dấu xoá' : '🗑 Remove khỏi scenario'}</button>
+          <span style="color: var(--text-muted); font-size: 12px;">▼</span>
+        </div>
+      </div>
+      <div class="bug-panel ${openBugPanels[s.test_id] ? 'open' : ''}" id="bugpanel-${s.test_id}">
+        <div class="bug-panel-title">🐞 Đánh dấu Bug - cần sửa lại Expected cho keyword "${s.query}"</div>
+        <span class="bug-field-label">Ảnh chụp UI thực tế (dán bằng Ctrl+V sau khi click vào khung dưới đây, hoặc chọn file):</span>
+        <div class="paste-zone ${(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot) ? 'has-image' : ''}" id="bugpastezone-${s.test_id}"
+             tabindex="0" contenteditable="true"
+             onpaste="handleNotePaste('bug', event, '${s.test_id}')"
+             ondragover="event.preventDefault(); this.classList.add('dragover');"
+             ondragleave="this.classList.remove('dragover');"
+             ondrop="handleNoteDrop('bug', event, '${s.test_id}')">${(bugDraft[s.test_id] && bugDraft[s.test_id].screenshot)
+              ? `<img class="bug-thumb" src="${bugDraft[s.test_id].screenshot}">`
+              : 'Click vào đây rồi dán ảnh (Ctrl+V), hoặc kéo-thả ảnh vào'}</div>
+        <div style="margin: 6px 0 12px;">
+          <span class="bug-pick-file" onclick="document.getElementById('bugfile-${s.test_id}').click()">📎 hoặc chọn file ảnh...</span>
+        </div>
+        <input type="file" accept="image/*" class="bug-file-input" id="bugfile-${s.test_id}" onchange="handleNoteFile('bug', event, '${s.test_id}')">
+        <span class="bug-field-label">Expected đúng phải là (ghi rõ để BA/Dev fix lại dữ liệu/UI thật):</span>
+        <textarea class="bug-textarea" id="bugtext-${s.test_id}" placeholder="Ví dụ: SKU 123456 phải xếp Top-1 vì khớp tên chính xác, UI thật hiện đang hiển thị sai...">${(bugDraft[s.test_id] && bugDraft[s.test_id].note) || ''}</textarea>
+        <div class="bug-actions">
+          <button type="button" class="bug-save-btn" onclick="saveNote('bug', '${s.test_id}')">💾 Lưu Bug</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('bug', '${s.test_id}')">Đóng</button>
+          ${bugStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('bug', '${s.test_id}')">🗑 Bỏ đánh dấu</button>` : ''}
+          ${bugStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${new Date(bugStore[s.test_id].markedAt).toLocaleString()}</span>` : ''}
+        </div>
+      </div>
+      <div class="bug-panel ${openEnginePanels[s.test_id] ? 'open' : ''}" id="enginepanel-${s.test_id}" style="background: var(--yellow-bg); border-color: var(--yellow);">
+        <div class="bug-panel-title" style="color: var(--yellow);">⚙️ Cải thiện Search Engine - "${s.query}" (chỉ áp dụng khi so Expected↔Actual)</div>
+        <span class="bug-field-label">Ảnh chụp UI thực tế/Actual (tuỳ chọn, dán Ctrl+V hoặc chọn file):</span>
+        <div class="paste-zone ${(engineDraft[s.test_id] && engineDraft[s.test_id].screenshot) ? 'has-image' : ''}" id="enginepastezone-${s.test_id}"
+             tabindex="0" contenteditable="true"
+             onpaste="handleNotePaste('engine', event, '${s.test_id}')"
+             ondragover="event.preventDefault(); this.classList.add('dragover');"
+             ondragleave="this.classList.remove('dragover');"
+             ondrop="handleNoteDrop('engine', event, '${s.test_id}')">${(engineDraft[s.test_id] && engineDraft[s.test_id].screenshot)
+              ? `<img class="bug-thumb" src="${engineDraft[s.test_id].screenshot}">`
+              : 'Click vào đây rồi dán ảnh (Ctrl+V), hoặc kéo-thả ảnh vào'}</div>
+        <div style="margin: 6px 0 12px;">
+          <span class="bug-pick-file" onclick="document.getElementById('enginefile-${s.test_id}').click()">📎 hoặc chọn file ảnh...</span>
+        </div>
+        <input type="file" accept="image/*" class="bug-file-input" id="enginefile-${s.test_id}" onchange="handleNoteFile('engine', event, '${s.test_id}')">
+        <span class="bug-field-label">Expected đúng phải là (search_engine.js cần sửa gì để ra được kết quả này):</span>
+        <textarea class="bug-textarea" id="enginetext-${s.test_id}" placeholder="Ví dụ: Actual xếp SKU X lên top vì đúng ngữ nghĩa hơn, engine hiện đang ưu tiên sai tier/thiếu synonym Y...">${(engineDraft[s.test_id] && engineDraft[s.test_id].note) || ''}</textarea>
+        <div class="bug-actions">
+          <button type="button" class="bug-save-btn" onclick="saveNote('engine', '${s.test_id}')">💾 Lưu ghi chú</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('engine', '${s.test_id}')">Đóng</button>
+          ${engineStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('engine', '${s.test_id}')">🗑 Bỏ đánh dấu</button>` : ''}
+          ${engineStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${new Date(engineStore[s.test_id].markedAt).toLocaleString()}</span>` : ''}
+        </div>
+      </div>
+      <div class="bug-panel ${openDiscussionPanels[s.test_id] ? 'open' : ''}" id="discussionpanel-${s.test_id}" style="background:#eef6ff; border-color:#3b82f6;">
+        <div class="bug-panel-title" style="color:#1d4ed8;">💬 Cần thảo luận - "${s.query}"</div>
+        <span class="bug-field-label">Nội dung cần bàn (vì sao chưa chốt được đúng/sai, cần ai xác nhận điều gì):</span>
+        <textarea class="bug-textarea" id="discussiontext-${s.test_id}" placeholder="Ví dụ: chưa rõ nghiệp vụ - query này nên ưu tiên nhóm sản phẩm nào? Cần BA xác nhận.">${(discussionDraft[s.test_id] && discussionDraft[s.test_id].note) || ''}</textarea>
+        <div class="bug-actions">
+          <button type="button" class="bug-save-btn" onclick="saveNote('discussion', '${s.test_id}')">💾 Lưu Discussion</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('discussion', '${s.test_id}')">Đóng</button>
+          ${discussionStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('discussion', '${s.test_id}')">🗑 Bỏ đánh dấu</button>` : ''}
+          ${discussionStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${new Date(discussionStore[s.test_id].markedAt).toLocaleString()}</span>` : ''}
+        </div>
+      </div>
+      <div class="scenario-body" id="body-${s.test_id}">
+        ${(s.is_regression || s.response_changed) ? getRegressionDetailHtml(s) : ''}
+        <!-- Đối tượng AUTOCOMPLETE (user 2026-09-07): panel autocomplete lên
+             TRÊN phần search result. Ở đối tượng Search Result thì panel này
+             ẩn hẳn (xem cuối scenario-body: chỉ render 1 trong 2 chỗ). -->
+        ${comparisonTarget === 'autocomplete' ? getAutocompleteHtml(s) : ''}
+        <div class="compare-columns ${panelsClass()}">
+          ${HAS_ASIS ? `
+          <!-- As-Is Column (current/legacy production system - reference only, not scored) -->
+          <div class="col-box asis-box">
+            <div class="col-title">
+              <span>🕰️ As-Is (Hệ thống hiện tại) (${s.asis_items.length})</span>
+              <span data-tooltip="Kết quả từ hệ thống search ĐANG chạy thật trên lottemart.vn hôm nay (không phải hệ thống mới đang test) - chỉ để tham khảo, không tính điểm/so khớp với Expected.">TOTAL BEFORE CAP: ${s.asis_total_before_cap ?? '-'} ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead>
+                <tr>
+                  <th style="width: 30px;">#</th>
+                  <th>SKU / Sản phẩm</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${s.asis_items.length ? s.asis_items.map(it => `
+                  <tr>
+                    <td><span class="rank-num">${it.rank}</span></td>
+                    <td>
+                      <span class="item-name">${it.name}</span>
+                      <span class="item-meta">SKU: ${it.sku} | ${Number(it.price || 0).toLocaleString()} đ</span>
+                    </td>
+                  </tr>
+                `).join('') : (s.asis_cached
+                    ? `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;">Đã gọi hệ thống As-Is cho query này - hệ thống hiện tại (lottemart.vn) trả về 0 kết quả thật (không phải do chưa lấy dữ liệu).</td></tr>`
+                    : `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;">(Chưa có dữ liệu As-Is cho query này trong cache)</td></tr>`)}
+              </tbody>
+            </table>
+          </div>
+          ` : ''}
+
+          ${showExpected ? `
+          <!-- Expected Column -->
+          <div class="col-box">
+            <div class="col-title">
+              <span data-tooltip="Danh sách hiển thị TOÀN BỘ sản phẩm Expected trả về. Chỉ ${SCORING_TOP_N} sản phẩm đầu tham gia tính % khớp và Pass/Fail - phần dưới vạch vàng chỉ để xem.">📋 Expected — hiện ${s.expected_items.length} SP, chấm ${Math.min(s.expected_items.length, SCORING_TOP_N)}</span>
+              <span data-tooltip="[Mục 18] Tổng số sản phẩm thỏa mãn tìm kiếm trong catalog gốc trước khi lấy Top 20 (hoặc Cap 80)">TOTAL BEFORE CAP: ${s.expected_total_before_cap} ⓘ</span>
+            </div>
+            <div class="prod-scroll"><table class="prod-table">
+              <thead>
+                <tr>
+                  <th style="width: 30px;">#</th>
+                  <th>SKU / Sản phẩm</th>
+                  <th>Tier / Score</th>
+                  <th>Trạng thái Actual</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${s.expected_items.map((it, i) => `
+                  ${windowEdgeRow(i, 4)}
+                  <tr${it.in_window === false ? ' style="opacity:.62;"' : ''}>
+                    <td><span class="rank-num">${it.rank}</span></td>
+                    <td>
+                      <span class="item-name">${it.name}</span>
+                      <span class="item-meta">SKU: ${it.sku} | ${Number(it.price || 0).toLocaleString()} đ${visTagHtml(s, it.sku)}</span>
+                    </td>
+                    <td><span class="meta-tag" style="margin:0;" data-tooltip="Tier chấm điểm và độ liên quan của sản phẩm">${it.tier || '-'} (${it.score || '-'})</span></td>
+                    <td>${getStatusTagHtml(it.status, it.actual_rank, 'expected')}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table></div>
+          </div>
+          ` : ''}
+
+          <!-- Actual Column - when comparisonMode is As-Is<->Actual, the
+               Tier/Score column drops (that's Expected-only scoring, not
+               applicable to a reference-only system) and the status column
+               compares against As-Is instead of Expected (user request
+               2026-09-03). -->
+          <div class="col-box">
+            <div class="col-title">
+              <span data-tooltip="Danh sách hiển thị TOÀN BỘ sản phẩm Actual trả về (tối đa 50 - đúng pageSize lúc crawl, không phải toàn bộ totalHits). Chỉ ${SCORING_TOP_N} sản phẩm đầu tham gia tính % khớp và Pass/Fail.">🚀 Actual — hiện ${s.actual_items.length} SP, chấm ${Math.min(s.actual_items.length, SCORING_TOP_N)}</span>
+              <span data-tooltip="[Mục 19] Tổng số sản phẩm do hệ thống Actual tìm thấy trước khi phân trang hiển thị Top 20">TOTAL BEFORE CAP: ${s.actual_total_before_cap} ⓘ</span>
+            </div>
+            <div class="prod-scroll"><table class="prod-table">
+              <thead>
+                <tr>
+                  <th style="width: 30px;">#</th>
+                  <th>SKU / Sản phẩm</th>
+                  ${comparisonMode === 'asis_actual' ? '' : '<th>Tier / Score</th>'}
+                  <th>${comparisonMode === 'asis_actual' ? 'So với As-Is' : 'So với Expected'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${(comparisonMode === 'asis_actual' ? computeActualStatusVsBase(s.actual_items, s.asis_items) : s.actual_items).map((it, i) => `
+                  ${windowEdgeRow(i, comparisonMode === 'asis_actual' ? 3 : 4)}
+                  <tr${it.in_window === false ? ' style="opacity:.62;"' : ''}>
+                    <td><span class="rank-num">${it.rank}</span></td>
+                    <td>
+                      <span class="item-name">${it.name}</span>
+                      <span class="item-meta">SKU: ${it.sku} | ${Number(it.price || 0).toLocaleString()} đ${visTagHtml(s, it.sku)}</span>
+                    </td>
+                    ${comparisonMode === 'asis_actual' ? '' : `<td><span class="meta-tag" style="margin:0;" data-tooltip="Chế độ search mode và điểm số của backend">${it.tier || '-'} (${it.score || '-'})</span></td>`}
+                    <td>${comparisonMode === 'asis_actual'
+                        ? getStatusTagHtml(it.status, it.base_rank, 'actual', 'As-Is')
+                        : getStatusTagHtml(it.status, it.expected_rank, 'actual')}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+        ${s.recommendation_triggered ? `
+        <!-- Recommendations backfill (2026-09-07): only called when Actual
+             search_results <= 20 sản phẩm - hiển thị riêng, KHÔNG tính vào
+             match_category/Pass-Fail (chỉ để QA xem thử recommendations trả
+             về gì cho query này). Full-width, bên dưới lưới so sánh chính. -->
+        <div class="col-box rec-box" style="margin-top:16px;">
+          <div class="col-title">
+            <span>🎁 Recommendations backfill (${s.recommendation_items.length})</span>
+            <span data-tooltip="API products/recommendations được gọi thêm vì Actual search chỉ trả về ${s.actual_items.length} sản phẩm (<= 20) - chỉ để xem tham khảo, KHÔNG tính vào Pass/Fail hay bất kỳ % so khớp nào.">CHỈ ĐỂ XEM - KHÔNG TÍNH ĐIỂM ⓘ</span>
+          </div>
+          <table class="prod-table">
+            <thead>
+              <tr>
+                <th style="width: 30px;">#</th>
+                <th>SKU / Sản phẩm</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${s.recommendation_items.length ? s.recommendation_items.map(it => `
+                <tr>
+                  <td><span class="rank-num">${it.rank}</span></td>
+                  <td>
+                    <span class="item-name">${it.name}</span>
+                    <span class="item-meta">SKU: ${it.sku} | ${Number(it.price || 0).toLocaleString()} đ</span>
+                  </td>
+                </tr>
+              `).join('') : `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;">Đã gọi recommendations cho query này nhưng API trả về 0 sản phẩm.</td></tr>`}
+            </tbody>
+          </table>
+        </div>
+        ` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  pagEl.innerHTML = `Hiển thị ${start + 1} - ${Math.min(start + pageSize, total)} trên tổng số ${total} scenarios (trang ${currentPage}/${totalPages})`;
+  updatePaginationControls(currentPage, totalPages);
+}
+
+function updatePaginationControls(page, totalPages) {
+  document.getElementById('prevPage').disabled = page <= 1;
+  document.getElementById('nextPage').disabled = page >= totalPages;
+}
+
+function toggleCard(id) {
+  const body = document.getElementById('body-' + id);
+  if (body) body.classList.toggle('open');
+}
+
+// Tô sáng ĐÚNG các badge đang bật (nhiều badge cùng lúc). "Tất cả" chỉ sáng
+// khi không có filter nào được chọn.
+function syncTabHighlight() {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const f = b.getAttribute('data-filter');
+    const on = (f === 'all') ? activeFilters.size === 0 : activeFilters.has(f);
+    b.classList.toggle('active', on);
+  });
+}
+
+// Event Listeners
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    // currentTarget (not target) - the count is now wrapped in a <span> inside
+    // some tab labels, so a click landing on the digits would otherwise miss
+    // data-filter/active entirely.
+    // Multi-select (user 2026-09-07): bấm để BẬT/TẮT từng badge, chọn được
+    // nhiều cái cùng lúc. Riêng "Tất cả" là nút xoá hết lựa chọn.
+    const f = e.currentTarget.getAttribute('data-filter');
+    if (f === 'all') {
+      activeFilters.clear();
+    } else if (activeFilters.has(f)) {
+      activeFilters.delete(f);
+    } else {
+      activeFilters.add(f);
+    }
+    currentFilter = f;
+    syncTabHighlight();
+    currentPage = 1;
+    updateBannerVisibility();
+    renderScenarios();
+  });
+});
+
+// Regression/Response-Changed banners (2026-09-04): hidden by default on
+// page load - only shown when the matching filter tab is the ACTIVE one,
+// not permanently at the top of the page. Both start with the `hidden`
+// attribute in the markup; this just toggles it alongside currentFilter.
+function updateBannerVisibility() {
+  const regressionBanner = document.getElementById('regressionBanner');
+  const responseChangedBanner = document.getElementById('responseChangedBanner');
+  // Dùng activeFilters (multi-select) thay cho currentFilter: banner hiện khi
+  // filter tương ứng ĐANG BẬT, kể cả khi bật kèm filter khác.
+  if (regressionBanner) regressionBanner.hidden = !activeFilters.has('PF_REGRESSION');
+  if (responseChangedBanner) responseChangedBanner.hidden = !activeFilters.has('PF_RESPONSE_CHANGED');
+}
+
+// checkbox 'Hiển thị panel Expected' và nút 'Xuất cải thiện Engine' chỉ có
+// ý nghĩa ở chế độ Expected↔Actual (As-Is không có panel Expected riêng và
+// không có khái niệm 'cải thiện search_engine.js') - user request 2026-09-07:
+// ẩn cả 2 khi ở As-Is↔Actual, hiện lại khi chuyển sang Expected↔Actual.
+function updateModeVisibility() {
+  const isAsis = comparisonMode === 'asis_actual';
+  const toggleWrap = document.getElementById('expectedToggleWrap');
+  const engineBtn = document.getElementById('exportEngineJsonBtn');
+  if (toggleWrap) toggleWrap.style.display = isAsis ? 'none' : '';
+  if (engineBtn) engineBtn.style.display = isAsis ? 'none' : '';
+}
+
+document.getElementById('modeSelect').addEventListener('change', (e) => {
+  comparisonMode = e.target.value;
+  currentPage = 1;
+  updateModeVisibility();
+  renderScenarios();
+});
+
+// Dropdown ĐỐI TƯỢNG (user 2026-09-07): đổi giữa Search Result và AutoComplete.
+// renderScenarios() tự recompute s.__m qua getModeMetrics() rồi gọi
+// updateAllStats(), nên KPI/%/badge/số đếm tab đều cập nhật theo đối tượng.
+document.getElementById('showExpectedToggle').addEventListener('change', (e) => {
+  showExpected = e.target.checked;
+  renderScenarios();
+});
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  currentPage = 1;
+  renderScenarios();
+});
+
+document.getElementById('prevPage').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage -= 1;
+    renderScenarios();
+    window.scrollTo({ top: document.getElementById('scenarioList').offsetTop - 16, behavior: 'smooth' });
+  }
+});
+
+document.getElementById('nextPage').addEventListener('click', () => {
+  currentPage += 1;
+  renderScenarios();
+  window.scrollTo({ top: document.getElementById('scenarioList').offsetTop - 16, behavior: 'smooth' });
+});
+
+document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
+  selectedPageSize = e.target.value === 'all' ? 'all' : Number(e.target.value);
+  currentPage = 1;
+  renderScenarios();
+});
+
+document.getElementById('sortSelect').addEventListener('change', (e) => {
+  sortOrder = e.target.value;
+  currentPage = 1;
+  renderScenarios();
+});
+
+document.getElementById('exportBugJsonBtn').addEventListener('click', () => exportNotesJson('bug'));
+document.getElementById('exportEngineJsonBtn').addEventListener('click', () => exportNotesJson('engine'));
+document.getElementById('exportOverrideBtn').addEventListener('click', exportOverrides);
+document.getElementById('exportDiscussionBtn').addEventListener('click', exportDiscussions);
+document.getElementById('exportRemoveBtn').addEventListener('click', exportRemovals);
+updateDiscussionExportCount();
+updateRemoveExportCount();
+updateExportButtonCount();
+updateOverrideExportCount();
+updateModeVisibility();
+
+// Initial render
+renderScenarios();
+</script>
+</body>
+</html>

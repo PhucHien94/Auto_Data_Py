@@ -1,0 +1,1669 @@
+{
+  "description": "Sản phẩm ACTIVE, hiện trong tìm kiếm, còn hàng, không phải SKU khuyến mãi, có TÊN chứa NGUYÊN TỪ khoá - nhưng backend tự báo totalHits ít hơn số đó. Đây là bằng chứng backend không tìm ra sản phẩm (thiếu index), đã loại 3 nguồn dương tính giả: khớp chuỗi con giữa từ, sản phẩm ẩn khỏi tìm kiếm, SKU khuyến mãi/hết hàng.",
+  "generatedDate": "2026-09-08",
+  "catalogVersion": "v1.1",
+  "filtersApplied": [
+    "status=1",
+    "visibility_search=true",
+    "stock>0",
+    "SKU không bắt đầu bằng P",
+    "khớp nguyên từ (word boundary)",
+    "query >= 4 ký tự"
+  ],
+  "totalQueriesScanned": 2394,
+  "queriesWithEvidence": 60,
+  "findings": [
+    {
+      "test_id": "NSG-ALL-0796",
+      "query": "double rich",
+      "catalog_word_matches": 26,
+      "api_total_hits": 8,
+      "gap": 18,
+      "returned": 8,
+      "resolved_mode": "lexical",
+      "missing_count": 19,
+      "missing_examples": [
+        {
+          "sku": "8935030218168",
+          "name": "Gel Dưỡng Tóc Double Rich Giữ Nếp Tóc Thẳng 250ml"
+        },
+        {
+          "sku": "8935030218182",
+          "name": "Gel Dưỡng Tóc Double Rich Tạo Kiểu Cho Tóc Uốn 250ml"
+        },
+        {
+          "sku": "8935030218250",
+          "name": "Nước Dưỡng Tóc Double Rich Nutrition 120ml"
+        },
+        {
+          "sku": "8935030218229",
+          "name": "Nước Dưỡng Tóc Double Rich UV Protection 250ml"
+        },
+        {
+          "sku": "8935030218243",
+          "name": "Nước Dưỡng Tóc Double Rich Nutrition 250ml"
+        },
+        {
+          "sku": "8935030218151",
+          "name": "Keo Tạo Nếp & Dưỡng Tóc Double Rich 170ml"
+        },
+        {
+          "sku": "8935030218816",
+          "name": "Sữa Tắm Double Rich Dưỡng Ẩm Da Hương Hoa Iris 200g"
+        },
+        {
+          "sku": "8935030218793",
+          "name": "Sữa Tắm Double Rich Dưỡng Ẩm Da Hương Hoa Iris 550g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1066",
+      "query": "rượu soju",
+      "catalog_word_matches": 35,
+      "api_total_hits": 21,
+      "gap": 14,
+      "returned": 21,
+      "resolved_mode": "lexical",
+      "missing_count": 16,
+      "missing_examples": [
+        {
+          "sku": "8801022024072",
+          "name": "Rượu Soju Saero Hương Mơ Không Đường 12% ABV Chai 375ml"
+        },
+        {
+          "sku": "8801022024140",
+          "name": "Rượu Soju Saero Hương Vải Không Đường 12% ABV Chai 375ml"
+        },
+        {
+          "sku": "8801048181421",
+          "name": "Rượu Soju Jinro Chanh Vàng 13% ABV Chai 360ml"
+        },
+        {
+          "sku": "8801147124176",
+          "name": "Rượu Soju Korice Hương Mận 12% ABV 360ml"
+        },
+        {
+          "sku": "8801147125456",
+          "name": "Rượu Soju Korice Hương Dâu 12% ABV 360ml"
+        },
+        {
+          "sku": "8801147123872",
+          "name": "Rượu Soju Korice Hương Nho Xanh 12% ABV 360ml"
+        },
+        {
+          "sku": "8809414661645",
+          "name": "Rượu Soju Korice Hương Mơ 12% ABV 360ml"
+        },
+        {
+          "sku": "8801147123858",
+          "name": "Rượu Soju Korice Hương Dưa Lưới 12% ABV 360ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0283",
+      "query": "soju",
+      "catalog_word_matches": 36,
+      "api_total_hits": 24,
+      "gap": 12,
+      "returned": 24,
+      "resolved_mode": "lexical",
+      "missing_count": 17,
+      "missing_examples": [
+        {
+          "sku": "ONLTIGERSOJU",
+          "name": "ONL-Tiger Soju 330ml"
+        },
+        {
+          "sku": "8801022024072",
+          "name": "Rượu Soju Saero Hương Mơ Không Đường 12% ABV Chai 375ml"
+        },
+        {
+          "sku": "8801022024140",
+          "name": "Rượu Soju Saero Hương Vải Không Đường 12% ABV Chai 375ml"
+        },
+        {
+          "sku": "8801048181421",
+          "name": "Rượu Soju Jinro Chanh Vàng 13% ABV Chai 360ml"
+        },
+        {
+          "sku": "8801147124176",
+          "name": "Rượu Soju Korice Hương Mận 12% ABV 360ml"
+        },
+        {
+          "sku": "8801147125456",
+          "name": "Rượu Soju Korice Hương Dâu 12% ABV 360ml"
+        },
+        {
+          "sku": "8801147123872",
+          "name": "Rượu Soju Korice Hương Nho Xanh 12% ABV 360ml"
+        },
+        {
+          "sku": "8809414661645",
+          "name": "Rượu Soju Korice Hương Mơ 12% ABV 360ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1391",
+      "query": "bình xịt",
+      "catalog_word_matches": 32,
+      "api_total_hits": 22,
+      "gap": 10,
+      "returned": 22,
+      "resolved_mode": "lexical",
+      "missing_count": 10,
+      "missing_examples": [
+        {
+          "sku": "8936013255132",
+          "name": "Bình Xịt Phòng Oasis Hương Chanh & Tre Thanh Mát 320ml"
+        },
+        {
+          "sku": "8934732202222",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa Và Trà 300ml"
+        },
+        {
+          "sku": "8936013257051",
+          "name": "Bình Xịt Côn Trùng Red Foxx Power Hương Chanh 600ml"
+        },
+        {
+          "sku": "8934889801217",
+          "name": "Bình Xịt Phòng Glade Hương Hoa 280ml Lô 2 Chai"
+        },
+        {
+          "sku": "8936013257310",
+          "name": "Bình Xịt Côn Trùng Ars Jet Gold 600ml"
+        },
+        {
+          "sku": "8934889801200",
+          "name": "Bình Xịt Phòng Glade Hương Lavender 280ml Lô 2 Chai"
+        },
+        {
+          "sku": "8936013257112",
+          "name": "Bình Xịt Muỗi Ars Jet Blue Plus 600ml"
+        },
+        {
+          "sku": "8936013257136",
+          "name": "Bình Xịt Côn Trùng Ars Jet BLue Lavender 600ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0231",
+      "query": "rửa chén",
+      "catalog_word_matches": 63,
+      "api_total_hits": 54,
+      "gap": 9,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 15,
+      "missing_examples": [
+        {
+          "sku": "8936063011993",
+          "name": "Lưới Rửa Chén HM 17055 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8938509527853",
+          "name": "Lô 2 Chai Nước Rửa Chén True Care Hương Chanh Nhiệt Đới 750ml"
+        },
+        {
+          "sku": "8934988503364",
+          "name": "Nước Rửa Chén Power100 Tiết Kiệm Hương Chanh Can 3.5kg"
+        },
+        {
+          "sku": "8934868182702",
+          "name": "Nước Rửa Chén Sunlight Thiên Nhiên Hương Gừng Can 3.5kg"
+        },
+        {
+          "sku": "8934868182658",
+          "name": "Nước Rửa Chén Sunlight Thiên Nhiên Hương Lô Hội Can 3.5kg"
+        },
+        {
+          "sku": "8936195102682",
+          "name": "Nước Rửa Chén Fily Hương Chanh Sả Túi 3.5kg"
+        },
+        {
+          "sku": "8934868182573",
+          "name": "Nước Rửa Chén Sunlight Khử Mùi Tanh Hương Matcha Trà Nhật Chai 750G"
+        },
+        {
+          "sku": "8936156731647",
+          "name": "Nước Rửa Chén Blue Phiên Bản Không Mùi Túi 3.2L"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0797",
+      "query": "măng",
+      "catalog_word_matches": 18,
+      "api_total_hits": 11,
+      "gap": 7,
+      "returned": 11,
+      "resolved_mode": "lexical",
+      "missing_count": 7,
+      "missing_examples": [
+        {
+          "sku": "8938500075100",
+          "name": "Măng Nứa Khô Kim Bôi 500G"
+        },
+        {
+          "sku": "8938500075117",
+          "name": "Măng Lay Tây Bắc Kim Bôi 300g (ea)"
+        },
+        {
+          "sku": "8938500075131",
+          "name": "Măng Trúc Quân Tử Kim Bôi 300G"
+        },
+        {
+          "sku": "8938500075148",
+          "name": "Măng Giang Đặc Sản Kim Bôi 300G"
+        },
+        {
+          "sku": "8938500075339",
+          "name": "Măng Muối Ớt Dổi Kim Bôi 750G (ea)"
+        },
+        {
+          "sku": "8938500075070",
+          "name": "Măng Nứa Tươi Kim Bôi 500G"
+        },
+        {
+          "sku": "0400203180002",
+          "name": "Bún Măng Gà 500g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0839",
+      "query": "x-men",
+      "catalog_word_matches": 67,
+      "api_total_hits": 61,
+      "gap": 6,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 17,
+      "missing_examples": [
+        {
+          "sku": "8935136817159",
+          "name": "Sữa Tắm Nước Hoa X-Men Active Fire 650g"
+        },
+        {
+          "sku": "8935136807150",
+          "name": "Sữa Tắm Nước Hoa X-Men Wood Sport 650g"
+        },
+        {
+          "sku": "8935136801370",
+          "name": "Dầu Tắm Gội X-Men 2In1 Wood Sport 650g"
+        },
+        {
+          "sku": "8935136873209",
+          "name": "Xịt Ngăn Mùi X-Men For Boss Intense Chai 150ml"
+        },
+        {
+          "sku": "8935136860315",
+          "name": "Gel Vuốt Tóc X-Men For Boss Gold 150g"
+        },
+        {
+          "sku": "8935136860452",
+          "name": "Dầu Gội X-Men For Boss Luxury 650g"
+        },
+        {
+          "sku": "8935136860469",
+          "name": "Sữa Tắm X-Men For Boss Luxury Chai 650G"
+        },
+        {
+          "sku": "8935136860902",
+          "name": "Dầu Gội Nước Hoa X-Men Wood Sport Thơm Lâu 180g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1890",
+      "query": "diana sensi",
+      "catalog_word_matches": 19,
+      "api_total_hits": 13,
+      "gap": 6,
+      "returned": 13,
+      "resolved_mode": "lexical",
+      "missing_count": 7,
+      "missing_examples": [
+        {
+          "sku": "8934755010255",
+          "name": "Băng Vệ Sinh Diana Sensi Siêu Mỏng Cánh 23cm Gói 8 Miếng"
+        },
+        {
+          "sku": "8934755010323",
+          "name": "Băng Vệ Sinh Diana Sensi Night Ban Đêm Có Cánh 35cm Gói 12 Miếng"
+        },
+        {
+          "sku": "8934755010262",
+          "name": "Băng Vệ Sinh Diana Sensi Ban Đêm Có Cánh 35cm Gói 3 Miếng"
+        },
+        {
+          "sku": "8934755020049",
+          "name": "Băng Vệ Sinh Diana Sensi Cool Fresh Siêu Mỏng Cánh 23cm Gói 8 Miếng"
+        },
+        {
+          "sku": "8934755014314",
+          "name": "Băng Vệ Sinh Diana Sensi Hàng Ngày Cool Fresh Gói 20 Miếng"
+        },
+        {
+          "sku": "8934755020056",
+          "name": "Băng Vệ Sinh Diana Sensi Cool Fresh Siêu Mỏng Không Cánh 23cm Gói 8 Miếng"
+        },
+        {
+          "sku": "8934755020100",
+          "name": "Băng Vệ Sinh Diana Sensi Cool Fresh Mát Dịu Siêu Mỏng Cánh 23cm Gói 8 Miếng"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0168",
+      "query": "khăn ướt",
+      "catalog_word_matches": 42,
+      "api_total_hits": 37,
+      "gap": 5,
+      "returned": 37,
+      "resolved_mode": "lexical",
+      "missing_count": 12,
+      "missing_examples": [
+        {
+          "sku": "BVSKOTEX",
+          "name": "Bộ Quà Tặng Gồm: 200 Gói Kotex Ban Đêm Lưới, 32 Gói Kotex Ban Đêm Bông, 56 Gói Kotex Hằng Ngày, 7 Khăn Ướt Và 8 Gối Tựa Lưng"
+        },
+        {
+          "sku": "8936013330136",
+          "name": "Khăn Ướt Em Bé Mamamy Thơm Mát 30 Miếng"
+        },
+        {
+          "sku": "8934755035036",
+          "name": "Khăn Ướt Pressi Care For All 20 Miếng"
+        },
+        {
+          "sku": "8936040071750",
+          "name": "Khăn Ướt Lau Bếp Let-green Gói 30 Miếng"
+        },
+        {
+          "sku": "8936072190672",
+          "name": "Khăn Ướt Baby Care Không Mùi 80 Tờ"
+        },
+        {
+          "sku": "8936072191242",
+          "name": "Lốc 5 Gói Khăn Ướt Wonder Care Hương Phấn Thơm 10 Miếng (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "0412173370000",
+          "name": "[Deal Sốc] - Combo 3 Gói Khăn Ướt Choice L 120 Tờ"
+        },
+        {
+          "sku": "4897024510587",
+          "name": "Khăn Ướt Tempo Protect Mini Túi 6 Gói"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0240",
+      "query": "bàn chải",
+      "catalog_word_matches": 97,
+      "api_total_hits": 92,
+      "gap": 5,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 47,
+      "missing_examples": [
+        {
+          "sku": "8904280103340",
+          "name": "Bộ 2 Bàn Chải Đánh Răng Oral Clean Nova Dual Soft (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936039271932",
+          "name": "Hộp Treo Bàn Chải Tự Lập TL128 Vỉ 3 Cái (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8934839123727",
+          "name": "Bàn Chải Đánh Răng Trẻ Em P/S Siêu Mềm 7-11 Tuổi (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8936039272342",
+          "name": "Kệ Bàn Chải Tự Lập TL129 150x40x50mm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "7038513866304",
+          "name": "Bàn Chải Đánh Răng Trẻ Em Jordan Step 1 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8934868195061",
+          "name": "Bàn Chải P/S Chuyên Gia Chăm Sóc Nướu Và Sạch Êm Dịu Nướu (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8851007108112",
+          "name": "Lô 3 Cây Bàn Chải Đánh Răng Sensodyne Repair & Protect Extra Soft Chăm Sóc Răng Ê Buốt (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8934868195030",
+          "name": "Bộ 2 Bàn Chải P/S Chuyên Gia Chăm Sóc Sạch Êm Dịu Nướu"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0723",
+      "query": "bánh xếp",
+      "catalog_word_matches": 23,
+      "api_total_hits": 18,
+      "gap": 5,
+      "returned": 18,
+      "resolved_mode": "lexical",
+      "missing_count": 5,
+      "missing_examples": [
+        {
+          "sku": "8934717402258",
+          "name": "Bánh Xếp bibigo Hải Sản Gói 770G"
+        },
+        {
+          "sku": "8934717402241",
+          "name": "Bánh Xếp Mandu bibigo Thịt 770G"
+        },
+        {
+          "sku": "8934717402357",
+          "name": "Bánh Xếp Mandu Đậu Nấm Rau Củ bibigo 350G"
+        },
+        {
+          "sku": "8934717401305",
+          "name": "Bánh Xếp Hàn Quốc Nhân Thịt bibigo Gói 175G"
+        },
+        {
+          "sku": "8934717402302",
+          "name": "Bánh Xếp bibigo Kiểu Hàn Quốc 365 Thịt Và Rau Củ 350G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1816",
+      "query": "cao su",
+      "catalog_word_matches": 29,
+      "api_total_hits": 24,
+      "gap": 5,
+      "returned": 24,
+      "resolved_mode": "lexical",
+      "missing_count": 7,
+      "missing_examples": [
+        {
+          "sku": "ONLADEGSOBUADONGDINH",
+          "name": "Búa Đóng Đinh Cán Cao Su ADEGSO 500G"
+        },
+        {
+          "sku": "8934726223912",
+          "name": "Dắt Dao Gỗ Cao Su Đức Thành Size Trung 20x16x8.5cm"
+        },
+        {
+          "sku": "5010232955233",
+          "name": "Bao Cao Su Durex Performa (Hộp 3 cái)"
+        },
+        {
+          "sku": "5038483234198",
+          "name": "Bao Cao Su Durex Pleasuremax Hộp 3 Cái"
+        },
+        {
+          "sku": "9556073212327",
+          "name": "Găng Tay Cao Su Rubberex RNU11 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "5052197050264",
+          "name": "Bao Cao Su Durex Invisible Hộp 10 Cái"
+        },
+        {
+          "sku": "4806534410003",
+          "name": "Bao Cao Su Durex Sensual Hương Dâu Hộp 3 Cái 99G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1836",
+      "query": "dung dịch",
+      "catalog_word_matches": 39,
+      "api_total_hits": 34,
+      "gap": 5,
+      "returned": 34,
+      "resolved_mode": "lexical",
+      "missing_count": 8,
+      "missing_examples": [
+        {
+          "sku": "ROHTODUONGAMKHO",
+          "name": "Túi Refill Dung Dịch Dưỡng Ẩm Hada Labo Advance Nourish Hyaluronic Acid Cho Da Khô 170ml"
+        },
+        {
+          "sku": "ROHTODUONGAMTHUONG",
+          "name": "Túi Refill Dung Dịch Dưỡng Ẩm Hada Labo Advance Nourish Hyaluronic Acid Cho Da Dầu 170ml"
+        },
+        {
+          "sku": "ROHTOREFILLHALADABO",
+          "name": "Túi Refill Dung Dịch Hada Labo"
+        },
+        {
+          "sku": "8936123410063",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Lactacyd Soft & Silky 150ml"
+        },
+        {
+          "sku": "8936123410070",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Lactacyd Soft & Silky 250ml"
+        },
+        {
+          "sku": "8936123410223",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Lactacyd Pro Sensitive 250ml"
+        },
+        {
+          "sku": "8934755018039",
+          "name": "Dung Dịch Vệ Sinh Phụ Nữ Diana Fresh & Care Cool Chai 250ml"
+        },
+        {
+          "sku": "8938541635059",
+          "name": "Dung Dịch Vệ Sinh Nam Nerman Hương Nước Hoa Sanda Elagent Chai 100ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0280",
+      "query": "tăm bông",
+      "catalog_word_matches": 15,
+      "api_total_hits": 11,
+      "gap": 4,
+      "returned": 11,
+      "resolved_mode": "lexical",
+      "missing_count": 4,
+      "missing_examples": [
+        {
+          "sku": "8938504294644",
+          "name": "Tăm Bông Hana Cao Cấp Hộp Trái Tim 250 Que"
+        },
+        {
+          "sku": "8938503008365",
+          "name": "Tăm Bông Kháng Khuẩn Sakura Xoắn TB03 Hộp 200 Cây 94G"
+        },
+        {
+          "sku": "8936097106153",
+          "name": "Tăm Bông Trẻ Em Niva Túi 200 Que"
+        },
+        {
+          "sku": "8936009650521",
+          "name": "Tăm Bông Choice L Trang Điểm Túi 100 Que"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0461",
+      "query": "hàn quốc",
+      "catalog_word_matches": 86,
+      "api_total_hits": 82,
+      "gap": 4,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 36,
+      "missing_examples": [
+        {
+          "sku": "8938508492282",
+          "name": "Gói canh nấm đông trùng hạ thảo kiểu Hàn Quốc gói 70g (ea)"
+        },
+        {
+          "sku": "8801136361759",
+          "name": "Sữa Đậu Đen Óc Chó Hạnh Nhân Hàn Quốc Túi 190ml"
+        },
+        {
+          "sku": "4987176246042",
+          "name": "Nước Xả Vải Downy Hương Hoa & Trái Cây Xuân Hàn Quốc Túi 3L"
+        },
+        {
+          "sku": "8936231022769",
+          "name": "Xà Lách Lolo Xanh Giống Hàn Quốc Việt F.A.R.M 300G"
+        },
+        {
+          "sku": "8801136361933",
+          "name": "Sữa Đậu Đen Óc Chó Và Hạnh Nhân Hàn Quốc Hộp 950ml"
+        },
+        {
+          "sku": "8936028042345",
+          "name": "Sốt Gia Vị Hoàn Chỉnh Thịt Nướng Kiểu Hàn Quốc Barona 80G"
+        },
+        {
+          "sku": "8935304201070",
+          "name": "Sốt Gà Chiên O'Food Vị Phô Mai Hàn Quốc 120g"
+        },
+        {
+          "sku": "8936036028225",
+          "name": "Snack Khoai Tây Vị Kim Chi Hàn Quốc O'Star Gói 152g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0530",
+      "query": "cầu tre",
+      "catalog_word_matches": 52,
+      "api_total_hits": 48,
+      "gap": 4,
+      "returned": 48,
+      "resolved_mode": "lexical",
+      "missing_count": 6,
+      "missing_examples": [
+        {
+          "sku": "8935297104150",
+          "name": "Xốt Kho Tiêu Cầu Tre Gói 80G"
+        },
+        {
+          "sku": "8935297104228",
+          "name": "Xốt Lẩu Gà Hoàn Chỉnh Cầu Tre Gói 120G"
+        },
+        {
+          "sku": "8935297104211",
+          "name": "Xốt Lẩu Kimchi Hoàn Chỉnh Cầu Tre Gói 120G"
+        },
+        {
+          "sku": "8934717266591",
+          "name": "Chả Ram Cầu Tre Kiểu Miền Trung Nhân Tôm Thịt 210G"
+        },
+        {
+          "sku": "8934717271021",
+          "name": "Há Cảo Cầu Tre Gói 500G"
+        },
+        {
+          "sku": "8935297107120",
+          "name": "Cơm Chiên Tỏi Hoàng Kim Cầu Tre 180G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0569",
+      "query": "jumbo vape",
+      "catalog_word_matches": 16,
+      "api_total_hits": 12,
+      "gap": 4,
+      "returned": 12,
+      "resolved_mode": "lexical",
+      "missing_count": 5,
+      "missing_examples": [
+        {
+          "sku": "8934732202222",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa Và Trà 300ml"
+        },
+        {
+          "sku": "8934732104212",
+          "name": "Nhang Muỗi Jumbo Vape Ít Khói Hương Rừng Hộp 10 Khoanh"
+        },
+        {
+          "sku": "8934732104311",
+          "name": "Nhang Muỗi Jumbo Vape S2 Ít Khói Hộp 10 Khoanh"
+        },
+        {
+          "sku": "8934732700728",
+          "name": "Bộ Xông Đuổi Muỗi Jumbo Vape L5 Hương Hoa Lily"
+        },
+        {
+          "sku": "8934732202215",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa & Trà 600ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0889",
+      "query": "omo matic",
+      "catalog_word_matches": 15,
+      "api_total_hits": 11,
+      "gap": 4,
+      "returned": 11,
+      "resolved_mode": "lexical",
+      "missing_count": 4,
+      "missing_examples": [
+        {
+          "sku": "0411937450002",
+          "name": "[Deal Sốc] - Nước Giặt OMO Matic Comfort Cho Máy Giặt Cửa Trên Túi 2.8kg"
+        },
+        {
+          "sku": "8934868184201",
+          "name": "Nước Giặt OMO Matic Comfort Tinh Dầu Nước Hoa Tinh Tế Cho Máy Giặt Cửa Trên Túi 2.8kg"
+        },
+        {
+          "sku": "8934868190356",
+          "name": "Túi 30 Viên Giặt OMO Matic 3 Trong 1 Hương Tươi Mát 10.5G"
+        },
+        {
+          "sku": "8934868196297",
+          "name": "Nước Giặt OMO Matic Sạch Sâu Vượt Trội Cho Máy Giặt Cửa Trên Túi 2.9kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0274",
+      "query": "ba rọi",
+      "catalog_word_matches": 23,
+      "api_total_hits": 20,
+      "gap": 3,
+      "returned": 20,
+      "resolved_mode": "lexical",
+      "missing_count": 4,
+      "missing_examples": [
+        {
+          "sku": "2313890000004",
+          "name": "Combo Thịt Heo Ba Rọi Và Nạc Dăm Heo Nướng BBQ 365 Fresh 700G"
+        },
+        {
+          "sku": "2252070000000",
+          "name": "Ba Rọi Heo Dày 2cm 365 Fresh 300g"
+        },
+        {
+          "sku": "2220340000005",
+          "name": "Ba Rọi Heo Cắt Khúc 365 Fresh 300G"
+        },
+        {
+          "sku": "2211790000004",
+          "name": "Ba Rọi Rút Sườn Heo Thảo Mộc Sagri 500G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0305",
+      "query": "găng tay",
+      "catalog_word_matches": 15,
+      "api_total_hits": 12,
+      "gap": 3,
+      "returned": 12,
+      "resolved_mode": "lexical",
+      "missing_count": 3,
+      "missing_examples": [
+        {
+          "sku": "ADEGSOGANGTAYVAI",
+          "name": "Găng tay vải phủ nhựa dẻo Adegso"
+        },
+        {
+          "sku": "8936007984260",
+          "name": "Găng Tay Chuyên Dụng Lau Rửa Xe"
+        },
+        {
+          "sku": "9556073212327",
+          "name": "Găng Tay Cao Su Rubberex RNU11 (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0903",
+      "query": "bồn cầu",
+      "catalog_word_matches": 19,
+      "api_total_hits": 16,
+      "gap": 3,
+      "returned": 16,
+      "resolved_mode": "lexical",
+      "missing_count": 6,
+      "missing_examples": [
+        {
+          "sku": "8809174900213",
+          "name": "Chai Thả Vệ Sinh Bồn Cầu Chung Blue Hương Hoa 180g"
+        },
+        {
+          "sku": "8809415200386",
+          "name": "Tẩy Rửa Bồn Cầu Mr.Fresh Màu Hồng 180g"
+        },
+        {
+          "sku": "8809415200379",
+          "name": "Tẩy Rửa Bồn Cầu Mr.Fresh Màu Xanh 180g"
+        },
+        {
+          "sku": "8934868187318",
+          "name": "Viên Vệ Sinh Bồn Cầu Vim Hương Lavender 50G"
+        },
+        {
+          "sku": "8934889801354",
+          "name": "Nước Tẩy Rửa Bồn Cầu Duck Hương Oải Hương 900ml"
+        },
+        {
+          "sku": "8809174900138",
+          "name": "Chai Thả Vệ Sinh Bồn Cầu Chung Blue Hương Hoa 180g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1326",
+      "query": "hada labo",
+      "catalog_word_matches": 36,
+      "api_total_hits": 33,
+      "gap": 3,
+      "returned": 33,
+      "resolved_mode": "lexical",
+      "missing_count": 5,
+      "missing_examples": [
+        {
+          "sku": "ROHTODUONGAMKHO",
+          "name": "Túi Refill Dung Dịch Dưỡng Ẩm Hada Labo Advance Nourish Hyaluronic Acid Cho Da Khô 170ml"
+        },
+        {
+          "sku": "ROHTOGELCHONGNANG",
+          "name": "Gel Chống Nắng Dưỡng Ẩm Hada Labo Koi-Gokujyun Perfect Uv Gel (Sunscreen) SPF50+ PA++++ 50g"
+        },
+        {
+          "sku": "ROHTODUONGAMTHUONG",
+          "name": "Túi Refill Dung Dịch Dưỡng Ẩm Hada Labo Advance Nourish Hyaluronic Acid Cho Da Dầu 170ml"
+        },
+        {
+          "sku": "ROHTOREFILLHALADABO",
+          "name": "Túi Refill Dung Dịch Hada Labo"
+        },
+        {
+          "sku": "8935006543140",
+          "name": "Kem Rửa Mặt Hada Labo Acne Care Cho Da Mụn Và Nhạy Cảm Tuýp 80g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1329",
+      "query": "old spice",
+      "catalog_word_matches": 5,
+      "api_total_hits": 2,
+      "gap": 3,
+      "returned": 2,
+      "resolved_mode": "lexical",
+      "missing_count": 3,
+      "missing_examples": [
+        {
+          "sku": "0012044040898",
+          "name": "Sáp Ngăn Mùi Dành Cho Nam Old Spice Timber Chai 73G"
+        },
+        {
+          "sku": "0012044039632",
+          "name": "Sáp Ngăn Mùi Dành Cho Nam Old Spice Bearglove Chai 73G"
+        },
+        {
+          "sku": "0012044045961",
+          "name": "Dầu Gội Old Spice 2In1 Hương Thể Thao 650ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1749",
+      "query": "lên men",
+      "catalog_word_matches": 40,
+      "api_total_hits": 37,
+      "gap": 3,
+      "returned": 37,
+      "resolved_mode": "lexical",
+      "missing_count": 6,
+      "missing_examples": [
+        {
+          "sku": "8936026265050",
+          "name": "Sữa Uống Lên Men Betagen Hương Cam Lốc 4 Chai 85ml"
+        },
+        {
+          "sku": "8850393801942",
+          "name": "Nước Lên Men Betagen Kombucha 335ml"
+        },
+        {
+          "sku": "8934822171292",
+          "name": "Nước Trái Cây Lên Men Strongbow Dark Fruit 4.5% Lon 320ml"
+        },
+        {
+          "sku": "8934822111298",
+          "name": "Nước Trái Cây Lên Men Strongbow Gold Apple 4.5% ABV Lon 320ml"
+        },
+        {
+          "sku": "8934822121297",
+          "name": "Nước Trái Cây Lên Men Strongbow Red Beries 4.5% ABV Lon 320ml"
+        },
+        {
+          "sku": "8938501434043",
+          "name": "Lốc 10 Chai Sữa Chua Uống Lên Men Yakult 65ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0087",
+      "query": "cá hồi",
+      "catalog_word_matches": 54,
+      "api_total_hits": 52,
+      "gap": 2,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 5,
+      "missing_examples": [
+        {
+          "sku": "8850477013698",
+          "name": "Bánh Thưởng Cho Mèo Me-O Dạng Kem Vị Cá Hồi 60g"
+        },
+        {
+          "sku": "0400312200004",
+          "name": "Pizza Cá Hồi Cheese & Dough 45cm 1.1kg"
+        },
+        {
+          "sku": "8934679450892",
+          "name": "Cháo Dinh Dưỡng Asim Vị Đậu Đen Cá Hồi Rong Biển Gói 72G"
+        },
+        {
+          "sku": "0400242320001",
+          "name": "Cơm Nắm Cá Hồi Mayo Wasabi Yorihada 130G (ea)"
+        },
+        {
+          "sku": "8936136163048",
+          "name": "Nước Mắm Chinsu Hương Cá Hồi Chai 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0176",
+      "query": "sunlight bioshield",
+      "catalog_word_matches": 3,
+      "api_total_hits": 1,
+      "gap": 2,
+      "returned": 1,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934868172727",
+          "name": "Nước Lau Sàn Sunlight BIOSHIELD Hương Chanh Yuzu và Sả Chai 1kg"
+        },
+        {
+          "sku": "8934868172734",
+          "name": "Nước Lau Sàn Sunlight BIOSHIELD Hương Quế và Cam Bergamot Túi 3.4kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0309",
+      "query": "việt quất",
+      "catalog_word_matches": 53,
+      "api_total_hits": 51,
+      "gap": 2,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 7,
+      "missing_examples": [
+        {
+          "sku": "8935212805650",
+          "name": "Sữa Tắm Gervenne Trắng Da Hương Việt Quất và Lan Nam Phi Chai 900G"
+        },
+        {
+          "sku": "8935212805643",
+          "name": "Sữa Tắm Gervenne Trắng Da Hương Việt Quất và Lan Nam Phi Chai 450G"
+        },
+        {
+          "sku": "8809531280132",
+          "name": "Nước Trái Cây Meet Seoul Việt Quất Gói 230ml"
+        },
+        {
+          "sku": "8935358700055",
+          "name": "Nước Pororo Hương Việt Quất Chai 235ml"
+        },
+        {
+          "sku": "8935217412211",
+          "name": "Sữa Chua Uống Tiệt Trùng TH True Yogurt Hương Việt Quất Lốc 4 Hộp X 180ml"
+        },
+        {
+          "sku": "8801147123650",
+          "name": "Rượu Soju Korice Hương Việt Quất 12% ABV 360ml"
+        },
+        {
+          "sku": "8801030000488",
+          "name": "Rượu Soju Chum-Churum Vị Việt Quất 12% ABV Chai 360ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0391",
+      "query": "bless you",
+      "catalog_word_matches": 18,
+      "api_total_hits": 16,
+      "gap": 2,
+      "returned": 16,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934964126068",
+          "name": "Khăn Bếp Đa Năng Bless You À La Vie 2 Lớp Lốc 2 Cuộn"
+        },
+        {
+          "sku": "8934964124507",
+          "name": "Khăn Giấy Lụa Bless You Famille 2 Lớp 200 Tờ"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1471",
+      "query": "bình xịt côn trùng jumbo vape",
+      "catalog_word_matches": 8,
+      "api_total_hits": 6,
+      "gap": 2,
+      "returned": 6,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934732202222",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa Và Trà 300ml"
+        },
+        {
+          "sku": "8934732202215",
+          "name": "Bình Xịt Côn Trùng Jumbo Vape Hương Hoa & Trà 600ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1477",
+      "query": "đa năng",
+      "catalog_word_matches": 59,
+      "api_total_hits": 57,
+      "gap": 2,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 10,
+      "missing_examples": [
+        {
+          "sku": "8936190718574",
+          "name": "Kệ Inox Chữ Nhật Bioplas Đa Năng 3 Tầng (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "4902430855150",
+          "name": "Dao Cạo Râu Gillette Styler 4 Trong 1 Đa Năng Hộp 1 Cán Và 4 Đầu"
+        },
+        {
+          "sku": "8935259817265",
+          "name": "Bộ Lau Nhà Đa Năng Sunhouse SH-CL3211 (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "4897024517241",
+          "name": "Lốc 3 Khăn Bếp Đa Năng Siêu Thấm Tempo 3 Lớp 60 Tờ"
+        },
+        {
+          "sku": "8934964126068",
+          "name": "Khăn Bếp Đa Năng Bless You À La Vie 2 Lớp Lốc 2 Cuộn"
+        },
+        {
+          "sku": "8935270963149",
+          "name": "Khăn Đa Năng Salina SNTC0100 3 Cái (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935259817272",
+          "name": "Cây Lau Nhà Sunhouse Tự Vắt Đa Năng SH-MO3211PW"
+        },
+        {
+          "sku": "6923472900620",
+          "name": "Cây Lăn Bụi Cán Dài Đa Năng Keyide 60 Lớp 24cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1674",
+      "query": "cindy bloom",
+      "catalog_word_matches": 11,
+      "api_total_hits": 9,
+      "gap": 2,
+      "returned": 9,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934662102937",
+          "name": "Nước Hoa Cindy Bloom Aroma Flower Chai 50ml"
+        },
+        {
+          "sku": "8934662102944",
+          "name": "Nước Hoa Cindy Bloom Fresh Ocean Chai 50ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0036",
+      "query": "nem rán",
+      "catalog_word_matches": 2,
+      "api_total_hits": 1,
+      "gap": 1,
+      "returned": 1,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934717266560",
+          "name": "Nem Rán Hà Nội Thịt Đặc Biệt CJ Gói 300G"
+        },
+        {
+          "sku": "8934717266546",
+          "name": "Nem Rán Hà Nội Hải Sản Đặc Biệt CJ Gói 300G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0399",
+      "query": "ớt chuông",
+      "catalog_word_matches": 6,
+      "api_total_hits": 5,
+      "gap": 1,
+      "returned": 5,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936231021120",
+          "name": "Ớt Chuông Đỏ 365 Fresh 180G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0507",
+      "query": "nạc dăm",
+      "catalog_word_matches": 6,
+      "api_total_hits": 5,
+      "gap": 1,
+      "returned": 5,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "2313890000004",
+          "name": "Combo Thịt Heo Ba Rọi Và Nạc Dăm Heo Nướng BBQ 365 Fresh 700G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0520",
+      "query": "trứng cút",
+      "catalog_word_matches": 12,
+      "api_total_hits": 11,
+      "gap": 1,
+      "returned": 11,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "0400203700002",
+          "name": "Bánh Bao Trứng Cút Thọ Phát"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0523",
+      "query": "bông cải",
+      "catalog_word_matches": 8,
+      "api_total_hits": 7,
+      "gap": 1,
+      "returned": 7,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "2283790000001",
+          "name": "Bông cải xanh Úc Perfection Fresh Koja 325g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0542",
+      "query": "hoành thánh",
+      "catalog_word_matches": 7,
+      "api_total_hits": 6,
+      "gap": 1,
+      "returned": 6,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8934572356642",
+          "name": "Hoành Thánh Mini Vissan 200G"
+        },
+        {
+          "sku": "8936077110163",
+          "name": "Hoành thánh GN tôm soup Bamboo 250G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0559",
+      "query": "đường phèn",
+      "catalog_word_matches": 13,
+      "api_total_hits": 12,
+      "gap": 1,
+      "returned": 12,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8935015513394",
+          "name": "Đường Phèn Vàng Thiên Nhiên Biên Hòa Pro Gói 1kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0585",
+      "query": "cải thảo",
+      "catalog_word_matches": 22,
+      "api_total_hits": 21,
+      "gap": 1,
+      "returned": 21,
+      "resolved_mode": "lexical",
+      "missing_count": 4,
+      "missing_examples": [
+        {
+          "sku": "8935101608119",
+          "name": "Kim Chi Cải Thảo Ít Cay Jongga 450G"
+        },
+        {
+          "sku": "8935297102941",
+          "name": "Kim Chi Cải Thảo Cắt Lát Ít Cay Bibigo Hộp 500g"
+        },
+        {
+          "sku": "8936100290688",
+          "name": "Kim Chi Cải Thảo Mr Lee 100G"
+        },
+        {
+          "sku": "8936100290664",
+          "name": "Kim Chi Cải Thảo Mr Lee Gói 1kg"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0600",
+      "query": "nước súc miệng",
+      "catalog_word_matches": 30,
+      "api_total_hits": 29,
+      "gap": 1,
+      "returned": 29,
+      "resolved_mode": "lexical",
+      "missing_count": 10,
+      "missing_examples": [
+        {
+          "sku": "CUOITUANNSMTARTAR",
+          "name": "Nước Súc Miệng Listerine 750ml"
+        },
+        {
+          "sku": "ONLORDER600K",
+          "name": "Nước Súc Miệng Listerine 500ml"
+        },
+        {
+          "sku": "8850007811695",
+          "name": "Nước Súc Miệng Listerine Tartar Protection 750ml"
+        },
+        {
+          "sku": "8850007811251",
+          "name": "Nước Súc Miệng Listerine Cool Mint 750ml"
+        },
+        {
+          "sku": "8850007811657",
+          "name": "Nước Súc Miệng Listerine Tartar Protection 250ML"
+        },
+        {
+          "sku": "8850007812173",
+          "name": "Nước Súc Miệng Listerine Total Care Chăm Sóc Toàn Diện Chai 250ml"
+        },
+        {
+          "sku": "8850007800071",
+          "name": "Combo 2 Chai Nước Súc Miệng Listerine Cool Mint 750ml"
+        },
+        {
+          "sku": "8850007813385",
+          "name": "Nước Súc Miệng Listerine Healthy Bright 750ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0714",
+      "query": "mồng tơi",
+      "catalog_word_matches": 8,
+      "api_total_hits": 7,
+      "gap": 1,
+      "returned": 7,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936063130588",
+          "name": "Hạt Giống Phú Nông Mồng Tơi Cao Sản"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0800",
+      "query": "cà ri",
+      "catalog_word_matches": 14,
+      "api_total_hits": 13,
+      "gap": 1,
+      "returned": 13,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936049052637",
+          "name": "Bột Cà Ri Vị Hơi Cay Ottogi Gói 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0871",
+      "query": "ông thọ",
+      "catalog_word_matches": 13,
+      "api_total_hits": 12,
+      "gap": 1,
+      "returned": 12,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8934673310505",
+          "name": "Sữa Đặc Ông Thọ Trắng Nắp Khui 380G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-0934",
+      "query": "pororo",
+      "catalog_word_matches": 18,
+      "api_total_hits": 17,
+      "gap": 1,
+      "returned": 17,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "8935358700024",
+          "name": "Nước Pororo Hương Sữa Chai 235ml"
+        },
+        {
+          "sku": "8935358700055",
+          "name": "Nước Pororo Hương Việt Quất Chai 235ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1014",
+      "query": "bí ngòi",
+      "catalog_word_matches": 3,
+      "api_total_hits": 2,
+      "gap": 1,
+      "returned": 2,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936117051616",
+          "name": "Bí Ngòi Xanh 300G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1016",
+      "query": "hạt dẻ",
+      "catalog_word_matches": 19,
+      "api_total_hits": 18,
+      "gap": 1,
+      "returned": 18,
+      "resolved_mode": "lexical",
+      "missing_count": 3,
+      "missing_examples": [
+        {
+          "sku": "8936037330563",
+          "name": "Kem Nhuộm Tóc Bạc Young Phủ Bạc 205 Nâu Hạt Dẻ"
+        },
+        {
+          "sku": "4987205931253",
+          "name": "Kem Nhuộm Tóc Bigen Speedy 3 Nâu Hạt Dẻ Ánh Đỏ"
+        },
+        {
+          "sku": "4987205931277",
+          "name": "Kem Nhuộm Tóc Bigen Speedy 5 Nâu Hạt Dẻ Đậm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1244",
+      "query": "bánh flan",
+      "catalog_word_matches": 8,
+      "api_total_hits": 7,
+      "gap": 1,
+      "returned": 7,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8935117700104",
+          "name": "Bánh Flan Ánh Hồng Lốc 6 Hũ 100G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1279",
+      "query": "tafa",
+      "catalog_word_matches": 5,
+      "api_total_hits": 4,
+      "gap": 1,
+      "returned": 4,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8938513029428",
+          "name": "Trứng Gà Tafa Vỉ 10 Trứng (EA)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1317",
+      "query": "sea crown",
+      "catalog_word_matches": 11,
+      "api_total_hits": 10,
+      "gap": 1,
+      "returned": 10,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8850229102823",
+          "name": "Cá Ngừ Cắt Lát Ngâm Dầu Đậu Nành Sea Crown Lon 140G"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1487",
+      "query": "nước ion",
+      "catalog_word_matches": 4,
+      "api_total_hits": 3,
+      "gap": 1,
+      "returned": 3,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8935339200024",
+          "name": "Nước Ion Kiềm Ocany 500ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1632",
+      "query": "super chef",
+      "catalog_word_matches": 16,
+      "api_total_hits": 15,
+      "gap": 1,
+      "returned": 15,
+      "resolved_mode": "lexical",
+      "missing_count": 3,
+      "missing_examples": [
+        {
+          "sku": "4945181001070",
+          "name": "Dao Super Chef Chặt Xương 15.2cm"
+        },
+        {
+          "sku": "4945186402230",
+          "name": "Rổ Inox Super Chef 2 Quai SC PHB0223 22.5cm"
+        },
+        {
+          "sku": "4945181003012",
+          "name": "Dao Thái Super Chef Cán Gỗ 17cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1634",
+      "query": "dalat hasfarm",
+      "catalog_word_matches": 56,
+      "api_total_hits": 55,
+      "gap": 1,
+      "returned": 50,
+      "resolved_mode": "lexical",
+      "missing_count": 6,
+      "missing_examples": [
+        {
+          "sku": "8935077356175",
+          "name": "Chậu Sống Đời Mini Kép Dalat Hasfarm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935077356137",
+          "name": "Chậu Hoa Thu Hải Đường Dalat Hasfarm (Giao Màu Ngẫu Nhiên)"
+        },
+        {
+          "sku": "8935077378252",
+          "name": "Chậu Cây Xanh 8 Họ Xương Rồng Dalat Hasfarm"
+        },
+        {
+          "sku": "8935077378221",
+          "name": "Tùng Thơm Dalat Hasfarm Chậu 40cm"
+        },
+        {
+          "sku": "8935077378238",
+          "name": "Chậu Cây Xanh Số 6 Dalat Hasfarm"
+        },
+        {
+          "sku": "8935077380019",
+          "name": "Chậu Hoa Hồng Gói Dalat Hasfarm (Giao Màu Ngẫu Nhiên)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1636",
+      "query": "ichi",
+      "catalog_word_matches": 6,
+      "api_total_hits": 5,
+      "gap": 1,
+      "returned": 5,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936000751050",
+          "name": "Tàu Hũ Chiên Ichi Sakura Gói 500g"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1790",
+      "query": "fuze tea",
+      "catalog_word_matches": 17,
+      "api_total_hits": 16,
+      "gap": 1,
+      "returned": 16,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "88935049510761",
+          "name": "Lốc 6 Chai Trà Chanh Sả Fuze Tea Plus 1L/Chai"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1800",
+      "query": "linh chi",
+      "catalog_word_matches": 5,
+      "api_total_hits": 4,
+      "gap": 1,
+      "returned": 4,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8809013350544",
+          "name": "Trà Linh Chi 3G*100 Gói"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1841",
+      "query": "bánh croissant",
+      "catalog_word_matches": 6,
+      "api_total_hits": 5,
+      "gap": 1,
+      "returned": 5,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "0400276060003",
+          "name": "Hộp 6 Bánh Croissant Mini POONGMISO (25G x 6 Cái)"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1870",
+      "query": "thát lát",
+      "catalog_word_matches": 7,
+      "api_total_hits": 6,
+      "gap": 1,
+      "returned": 6,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "2152710000004",
+          "name": "Cá Thát Lát Nạo Nguyên Chất 300G"
+        },
+        {
+          "sku": "0400253410005",
+          "name": "Canh Khổ Qua Cá Thát Lát 365 Fresh"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-1931",
+      "query": "rổ inox",
+      "catalog_word_matches": 9,
+      "api_total_hits": 8,
+      "gap": 1,
+      "returned": 8,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "4945186402230",
+          "name": "Rổ Inox Super Chef 2 Quai SC PHB0223 22.5cm"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-2090",
+      "query": "đường thốt nốt",
+      "catalog_word_matches": 3,
+      "api_total_hits": 2,
+      "gap": 1,
+      "returned": 2,
+      "resolved_mode": "lexical",
+      "missing_count": 1,
+      "missing_examples": [
+        {
+          "sku": "8936217700933",
+          "name": "Tẩy Tế Bào Chết Toàn Thân Cocoon Đường Thốt Nốt An Giang Hũ 200ml"
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-ALL-2287",
+      "query": "kimbap",
+      "catalog_word_matches": 10,
+      "api_total_hits": 9,
+      "gap": 1,
+      "returned": 9,
+      "resolved_mode": "lexical",
+      "missing_count": 2,
+      "missing_examples": [
+        {
+          "sku": "0400291250007",
+          "name": "Kimbap Chả Cá Hàn Quốc Yorihada Big Size 350G (ea)"
+        },
+        {
+          "sku": "0400297530004",
+          "name": "Kimbap Xúc Xích Phô Mai Size Lớn Yorihada"
+        }
+      ]
+    }
+  ]
+}

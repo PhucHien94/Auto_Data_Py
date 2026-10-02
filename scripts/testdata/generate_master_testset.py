@@ -30,6 +30,11 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import product_source as _product_source  # noqa: E402
+
+
 LANGS = ("en", "vi", "kr")
 TITLE_KEYS = ("title", "name", "product_name", "name_en", "name_vi", "name_kr")
 SKU_KEYS = ("sku", "sku_code", "id", "product_id")
@@ -86,8 +91,13 @@ def popularity(obj):
 
 
 def load_store_lang(product_dir, lang, store):
-    path = Path(product_dir) / f"mart_{lang}_{store}_product.ndjson"
-    if not path.exists():
+    # product_dir=None: de scripts/product_source.py chon theo tung store
+    # (nsg -> anh chup v1.1 2026-08-28; store khac -> v1 2026-07-27).
+    if product_dir is None:
+        path = _product_source.ndjson(store, lang)
+    else:
+        path = Path(product_dir) / f"mart_{lang}_{store}_product.ndjson"
+    if path is None or not path.exists():
         return {}
     out = {}
     for raw in stream_ndjson(path):
@@ -235,7 +245,9 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--store")
     p.add_argument("--all-stores", action="store_true")
-    p.add_argument("--product-dir", default="data/ProductInfo")
+    p.add_argument("--product-dir", default=None,
+                    help="bỏ trống thì nguồn do scripts/product_source.py quyết định "
+                         "(nsg -> ảnh chụp v1.1 2026-08-28; store khác -> v1 2026-07-27)")
     p.add_argument("--glossary-dir", default="data/glossary")
     p.add_argument("--max-products", type=int, default=300)
     p.add_argument("--topn", type=int, default=10, help="suggestion list size for autocomplete_expected")
@@ -245,11 +257,12 @@ def main():
     if not args.store and not args.all_stores:
         p.error("provide --store <code> or --all-stores")
 
-    product_dir = Path(args.product_dir)
+    product_dir = Path(args.product_dir) if args.product_dir else None
     if args.all_stores:
+        scan = [product_dir] if product_dir else _product_source.SOURCES
         stores = sorted({
             f.name.split("_", 2)[2].rsplit("_product.ndjson", 1)[0]
-            for f in product_dir.glob("mart_en_*_product.ndjson")
+            for d in scan for f in Path(d).glob("mart_en_*_product.ndjson")
         })
     else:
         stores = [args.store]

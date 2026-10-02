@@ -32,6 +32,7 @@ Usage:
     --actual "C:/Users/Admin/Downloads/test1_outputs 1.json"
 """
 import argparse
+import glob
 import html
 import json
 import os
@@ -55,6 +56,21 @@ from lib_search_client import (call_api, ApiError, load_env_config, resolve_head
 # this file (see fetch_and_cache_asis() below) - never re-call for a query
 # that's already cached, no matter how many scenarios/compare runs share it.
 ASIS_CACHE_PATH = Path("SmartSearch/test_data/json/actual/AsIs_NSG_cache.json")
+
+# Hệ CŨ và hệ MỚI gọi tiếng Hàn bằng hai mã khác nhau: dev gateway dùng "ko"
+# (/api/v2/ko/nsg/), còn production dùng tên index Elasticsearch "kr"
+# (/es/kr_nsg/). Nhầm chỗ này thì As-Is trả 0 kết quả mà không báo lỗi.
+ASIS_LANG_MAP = {"ko": "kr", "kr": "kr", "en": "en", "vi": "vi"}
+
+
+def asis_cache_path_for(lang):
+    """Mỗi ngôn ngữ một cache riêng. Dùng chung một file là hỏng: cùng chuỗi
+    query nhưng gọi lang khác nhau cho ra tập sản phẩm khác nhau, ghi đè lẫn
+    nhau sẽ tạo ra dữ liệu As-Is sai mà không có cách nào phát hiện."""
+    lang = (lang or "vi").lower()
+    if lang in ("vi", ""):
+        return ASIS_CACHE_PATH
+    return ASIS_CACHE_PATH.with_name(f"AsIs_NSG_cache_{lang}.json")
 # Only scenarios at/under this Top-20-overlap match% trigger an As-Is lookup/
 # fetch at all - per user's explicit ask (2026-08-28), don't touch the As-Is
 # system (production, costs money) for scenarios that already match well.
@@ -79,8 +95,166 @@ STATUS_PASS_CATEGORIES = {"100_PERCENT_EXACT", "100_PERCENT_SET", "HIGH_MATCH"}
 PASS_FAIL_STATE_DIR = Path("SmartSearch/test_data/compare")
 
 
+# Nghĩa tiếng Việt của các query ngoại ngữ (Anh/Hàn/Nhật/Nga/Trung) - user
+# 2026-09-08: không đọc được thì không verify được kết quả trả về đúng hay sai.
+# Hiện dưới dạng tooltip khi rê chuột vào query trên báo cáo.
+QUERY_TRANSLATIONS = {
+    "라면": "mì ăn liền (ramyeon)",
+    "피시소스": "nước mắm",
+    "라이스페이퍼": "bánh tráng",
+    "베트남 커피": "cà phê Việt Nam",
+    "쌀국수": "phở / bún gạo",
+    "베트남 소시지": "chả lụa / xúc xích Việt Nam",
+    "캐슈넛": "hạt điều",
+    "삼겹살": "ba chỉ heo (samgyeopsal)",
+    "계란": "trứng gà",
+    "두부": "đậu hũ",
+    "맥주": "bia",
+    "쌀": "gạo",
+    "돼지고기": "thịt heo",
+    "물": "nước",
+    "빵": "bánh mì",
+    "우유": "sữa",
+    "김치": "kim chi",
+    "소주": "rượu soju",
+    "고추장": "tương ớt Hàn Quốc (gochujang)",
+    "간장": "nước tương / xì dầu",
+    "미역": "rong biển wakame",
+    "즉석밥": "cơm ăn liền",
+    "わさび": "mù tạt wasabi",
+    "みそ": "tương miso",
+    "しょうゆ": "nước tương / xì dầu",
+    "すし": "sushi",
+    "рыбный соус": "nước mắm",
+    "рисовая бумага": "bánh tráng",
+    "вьетнамский кофе": "cà phê Việt Nam",
+    "фо": "phở",
+    "вьетнамская колбаса": "chả lụa",
+    "кешью": "hạt điều",
+    "пиво": "bia",
+    "рис": "gạo",
+    "перечная паста": "tương ớt",
+    "молоко": "sữa",
+    "яйца": "trứng",
+    "вода": "nước",
+    "хлеб": "bánh mì",
+    "лапша быстрого приготовления": "mì ăn liền",
+    "свинина": "thịt heo",
+    "свиная грудинка": "ba chỉ heo",
+    "кимчи": "kim chi",
+    "соджу": "rượu soju",
+    "тофу": "đậu hũ",
+    "шоколад": "sô cô la",
+    "сахар": "đường",
+    "чай": "trà",
+    "кофе": "cà phê",
+    "鱼露": "nước mắm",
+    "米纸": "bánh tráng",
+    "越南咖啡": "cà phê Việt Nam",
+    "河粉": "phở",
+    "越南香肠": "chả lụa",
+    "腰果": "hạt điều",
+    "牛奶": "sữa",
+    "啤酒": "bia",
+    "大米": "gạo",
+    "泡菜": "kim chi",
+    "方便面": "mì ăn liền",
+    "猪肉": "thịt heo",
+    "鸡蛋": "trứng gà",
+    "五花肉": "ba chỉ heo",
+    "烧酒": "rượu soju",
+    "豆腐": "đậu hũ",
+    "辣椒酱": "tương ớt",
+    "水": "nước",
+    "面包": "bánh mì",
+    "抹茶": "trà xanh matcha",
+    "shampoo": "dầu gội",
+    "toothpaste": "kem đánh răng",
+    "diaper": "tã / bỉm",
+    "instant noodle": "mì ăn liền",
+    "cooking oil": "dầu ăn",
+    "soy sauce": "nước tương / xì dầu",
+    "toilet paper": "giấy vệ sinh",
+    "laundry detergent": "bột giặt / nước giặt",
+    "hand sanitizer": "nước rửa tay khô",
+    "sunscreen": "kem chống nắng",
+    "baby formula": "sữa công thức cho bé",
+    "green tea": "trà xanh",
+    "potato chips": "snack khoai tây",
+    "sugar": "đường",
+    "salt": "muối",
+    "butter": "bơ",
+    "yogurt": "sữa chua",
+    "cereal": "ngũ cốc",
+    "orange juice": "nước cam",
+    "mineral water": "nước khoáng",
+    "tissue paper": "khăn giấy",
+    "dish soap": "nước rửa chén",
+    "body wash": "sữa tắm",
+    "conditioner": "dầu xả",
+    "cotton bud": "tăm bông",
+    "baby wipes": "khăn ướt cho bé",
+    "ramyeon": "mì ramyeon Hàn Quốc",
+    "bibimbap": "cơm trộn Hàn Quốc",
+    "tteokbokki": "bánh gạo cay",
+    "makgeolli": "rượu gạo Hàn Quốc",
+    "japchae": "miến trộn Hàn Quốc",
+    "kimbap": "cơm cuộn rong biển",
+    "samgyeopsal sauce": "xốt chấm thịt ba chỉ nướng",
+    "korean seaweed": "rong biển Hàn Quốc",
+    "wasabi": "mù tạt wasabi",
+    "miso": "tương miso",
+    "soba": "mì soba",
+    "sushi rice": "gạo làm sushi",
+    "sake": "rượu sake",
+    "mirin": "rượu mirin (dùng nấu ăn)",
+    "dashi": "nước dùng dashi",
+    "nori": "rong biển nori",
+    "japanese curry": "cà ri Nhật",
+    "furikake": "gia vị rắc cơm furikake"
+}
+
+
 def compute_pass_fail_status(match_category):
     return "passed" if match_category in STATUS_PASS_CATEGORIES else "failed"
+
+
+def compute_asis_match_category(asis_items, actual_items):
+    """Phân loại độ khớp AS-IS ↔ ACTUAL - bản Python soi gương đúng từng dòng
+    computeOverlapMetrics() bên JS (ngưỡng 70/30, mẫu số là top-20 của As-Is,
+    100_PERCENT_SET đòi khớp CẢ HAI CHIỀU).
+
+    Pass/Fail lấy từ đây chứ không lấy từ Expected (user 2026-09-08:
+    "pass fail luôn là asis -> actual"). Lý do: Expected do search_engine.js
+    mô phỏng sinh ra, không phải chuẩn nghiệp vụ - lệch với nó không chứng
+    minh backend sai. As-Is là hệ đang chạy thật, so với nó mới có nghĩa.
+
+    Phải tách BA tình huống, gộp lại là sai (đã mắc 2 lần):
+      - None       : KHÔNG có dữ liệu As-Is (chưa crawl) -> "n/a", không có gì
+                     để so thì không được kết luận đạt/không đạt.
+      - ASIS_ZERO  : ĐÃ crawl, hệ cũ trả 0 KQ, hệ mới CÓ KQ -> "discussion"
+                     (user 2026-09-08). Không tự chấm đạt: hệ mới có trả về
+                     sản phẩm không đồng nghĩa sản phẩm đó đúng ý người dùng,
+                     và cũng không có gì để đối chiếu -> để người xem quyết.
+      - NO_MATCH   : cả hai cùng 0 KQ -> không ai tìm ra gì, là không đạt.
+    """
+    if asis_items is None:
+        return None
+    if not asis_items:
+        return "ASIS_ZERO" if actual_items else "NO_MATCH"
+    base = [str(i.get("sku")) for i in asis_items]
+    other = [str(i.get("sku")) for i in (actual_items or [])]
+    other_set = set(other)
+    base_set = set(base)
+    top20 = base[:20]
+    pct = round(sum(1 for s in top20 if s in other_set) / len(top20) * 1000) / 10 if top20 else 0
+    if other and all(s in other_set for s in base) and all(s in base_set for s in other):
+        return "100_PERCENT_SET"
+    if pct >= 70:
+        return "HIGH_MATCH"
+    if pct >= 30:
+        return "PARTIAL_MATCH"
+    return "LOW_MATCH" if pct > 0 else "NO_MATCH"
 
 
 # Demo-file Pass/Fail rule (user, 2026-09-04): a file with NO Expected data
@@ -119,6 +293,47 @@ def compute_asis_vs_actual_match_category(asis_items, actual_items, asis_cached)
     return "NO_MATCH"
 
 
+# Pass/Fail cho ĐỐI TƯỢNG AUTOCOMPLETE (user 2026-09-07: dropdown "Đối tượng"
+# đổi cả % lẫn Pass/Fail). Dùng CHÍNH thang phân loại của search để 2 đối
+# tượng đọc nhất quán, chỉ khác đơn vị so sánh: keyword string thay vì SKU.
+#
+# So khớp keyword phải chuẩn hoá (casefold + gộp khoảng trắng) nhưng GIỮ DẤU -
+# cùng lý do như _normalize_suggestion_text(): "ca" và "cá" là 2 gợi ý khác
+# nhau, bỏ dấu sẽ gộp sai.
+#
+# Cơ sở so sánh: Expected-autocomplete <-> Actual-autocomplete khi Expected có
+# dữ liệu; không có thì trả "NO_EXPECTED_AC" (không tự chuyển sang As-Is như
+# nhánh demo của search, vì As-Is autocomplete hiện chưa được crawl - xem
+# build_asis_autocomplete_items()).
+def compute_autocomplete_match_category(exp_items, act_items, top_n=20):
+    exp = [_normalize_suggestion_text(x.get("text")) for x in (exp_items or [])]
+    act = [_normalize_suggestion_text(x.get("text")) for x in (act_items or [])]
+    exp = [x for x in exp if x][:top_n]
+    act = [x for x in act if x][:top_n]
+    if not exp:
+        return "NO_EXPECTED_AC"
+    if exp == act and exp:
+        return "100_PERCENT_EXACT"
+    if set(exp) == set(act) and exp:
+        return "100_PERCENT_SET"
+    if not act:
+        return "ZERO_RESULT"
+    # Mẫu số là min(len(exp), len(act)) chứ KHÔNG phải len(exp): engine sinh 30
+    # gợi ý còn API thật chỉ trả 8 (limit=8), lấy mẫu số 30 thì trần chỉ 26.7%
+    # và mọi case đều đọc ra như fail - đúng cái bẫy đã gặp ở panel autocomplete
+    # (xem build_autocomplete_items).
+    denom = max(1, min(len(exp), len(act)))
+    overlap = len(set(exp) & set(act))
+    overlap_pct = round(overlap / denom * 100, 1)
+    if overlap_pct >= 70:
+        return "HIGH_MATCH"
+    if overlap_pct >= 30:
+        return "PARTIAL_MATCH"
+    if overlap_pct > 0:
+        return "LOW_MATCH"
+    return "NO_MATCH"
+
+
 def pass_fail_state_path(store):
     return PASS_FAIL_STATE_DIR / f"pass_fail_state_{store}.json"
 
@@ -126,10 +341,16 @@ def pass_fail_state_path(store):
 def load_pass_fail_state(store):
     path = pass_fail_state_path(store)
     if not path.exists():
-        return {"store": store, "updatedAt": None, "entries": {}}
+        return {"store": store, "updatedAt": None, "entries": {}, "entries_autocomplete": {}}
     with open(path, "r", encoding="utf-8") as f:
         state = json.load(f)
     state.setdefault("entries", {})
+    # Nhánh RIÊNG cho Pass/Fail của autocomplete (user 2026-09-07: dropdown
+    # "Đối tượng" đổi cả Pass/Fail). Cố tình KHÔNG trộn vào "entries": nhánh đó
+    # đang giữ 4915 entry + 101 manual override là phán quyết cho SEARCH, trộn
+    # vào sẽ ghi đè lẫn nhau và làm hỏng lịch sử regression của cả hai. File
+    # state cũ không có key này thì tự sinh rỗng - không cần migrate gì.
+    state.setdefault("entries_autocomplete", {})
     return state
 
 
@@ -155,17 +376,28 @@ def apply_manual_overrides(overrides_path, store=None):
     with open(overrides_path, "r", encoding="utf-8") as f:
         payload = json.load(f)
     store = store or payload.get("store") or "nsg"
-    overrides = payload.get("overrides") or {}
     state = load_pass_fail_state(store)
     applied, cleared = 0, 0
-    for test_id, value in overrides.items():
-        if value in ("passed", "failed"):
-            entry = state["entries"].setdefault(test_id, {"query": None, "status": None, "match_category": None, "last_run_at": None})
-            entry["manual_override"] = value
-            applied += 1
-        elif test_id in state["entries"]:
-            if state["entries"][test_id].pop("manual_override", None):
-                cleared += 1
+
+    # 2 nhánh độc lập (user 2026-09-07, dropdown "Đối tượng"): "overrides" là
+    # phán quyết cho SEARCH (giữ nguyên tên cũ nên file export cũ vẫn đọc
+    # được), "overrides_autocomplete" là phán quyết cho AUTOCOMPLETE và đi vào
+    # nhánh state riêng để 2 bên không ghi đè nhau.
+    def _apply_bucket(overrides, bucket_key):
+        nonlocal applied, cleared
+        bucket = state.setdefault(bucket_key, {})
+        for test_id, value in (overrides or {}).items():
+            if value in ("passed", "failed"):
+                entry = bucket.setdefault(test_id, {"query": None, "status": None,
+                                                    "match_category": None, "last_run_at": None})
+                entry["manual_override"] = value
+                applied += 1
+            elif test_id in bucket:
+                if bucket[test_id].pop("manual_override", None):
+                    cleared += 1
+
+    _apply_bucket(payload.get("overrides"), "entries")
+    _apply_bucket(payload.get("overrides_autocomplete"), "entries_autocomplete")
     save_pass_fail_state(state, store)
     return store, applied, cleared
 
@@ -178,6 +410,15 @@ def apply_manual_overrides(overrides_path, store=None):
 # overrides: an export button in the report + `--apply-bug-notes`/
 # `--apply-engine-notes` merges it in, PERMANENTLY, so a freshly regenerated
 # report shows every note baked in without relying on browser localStorage.
+# Bug/discussion của AUTOCOMPLETE phải lưu TÁCH khỏi Search Result
+# (user 2026-09-10). Cùng 1 test_id nhưng là 2 vấn đề khác nhau: search có thể
+# đúng trong khi gợi ý autocomplete sai, và ngược lại. Gộp chung 1 file thì ghi
+# bug cho autocomplete sẽ hiện nhầm ở search và không bao giờ tách lại được.
+# Cách tách: thêm hậu tố "_ac" vào KIND -> ra file riêng bug_ac_notes_<store>.json
+def note_kind(base, target):
+    return base if target == "search" else f"{base}_ac"
+
+
 def _notes_state_path(kind, store):
     return PASS_FAIL_STATE_DIR / f"{kind}_notes_{store}.json"
 
@@ -201,9 +442,12 @@ def save_notes_state(kind, state, store):
 
 
 def apply_notes(kind, notes_path, store=None):
+    """kind là loại ghi chú GỐC ('bug'/'discussion'); đối tượng (search hay
+    autocomplete) đọc từ chính file export nên không thể áp nhầm kho."""
     with open(notes_path, "r", encoding="utf-8") as f:
         payload = json.load(f)
     store = store or payload.get("store") or "nsg"
+    kind = note_kind(kind, payload.get("target") or "search")
     notes = payload.get("notes") or {}
     state = load_notes_state(kind, store)
     applied, cleared = 0, 0
@@ -218,10 +462,57 @@ def apply_notes(kind, notes_path, store=None):
     return store, applied, cleared
 
 
+# Danh sách keyword bị LOẠI khỏi bộ test (user 2026-09-08). Cố tình lưu thành
+# DANH SÁCH LOẠI riêng thay vì xoá thẳng scenario khỏi file Expected/Actual:
+#   - hoàn tác được (chỉ cần xoá entry trong file này), xoá thẳng thì mất luôn
+#     cả search_results/autocomplete đã tốn hàng giờ tính;
+#   - file Expected/Actual vẫn khớp 1-1 với nhau và với các lần đo trước, không
+#     làm lệch mọi so sánh lịch sử.
+# Hiệu quả nhìn thấy vẫn đúng yêu cầu: keyword không bao giờ xuất hiện lại
+# trong báo cáo (lọc ngay khi dựng compared_list).
+def removed_state_path(store):
+    return PASS_FAIL_STATE_DIR / f"removed_scenarios_{store}.json"
+
+
+def load_removed_state(store):
+    path = removed_state_path(store)
+    if not path.exists():
+        return {"store": store, "updatedAt": None, "entries": {}}
+    with open(path, "r", encoding="utf-8") as f:
+        state = json.load(f)
+    state.setdefault("entries", {})
+    return state
+
+
+def apply_removals(removals_path, store=None):
+    with open(removals_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+    store = store or payload.get("store") or "nsg"
+    removals = payload.get("removals") or {}
+    state = load_removed_state(store)
+    applied, cleared = 0, 0
+    for test_id, entry in removals.items():
+        if entry:
+            state["entries"][test_id] = entry
+            applied += 1
+        elif test_id in state["entries"]:
+            del state["entries"][test_id]
+            cleared += 1
+    path = removed_state_path(store)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    state["updatedAt"] = datetime.now().isoformat()
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+    return store, applied, cleared
+
+
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import product_source as _product_source  # noqa: E402
 
 _CATALOG_CACHE = {}  # store -> {sku: {name, price, category}} - loaded at most once per store per run
 
@@ -233,8 +524,12 @@ def load_catalog(store):
     if store in _CATALOG_CACHE:
         return _CATALOG_CACHE[store]
     out = {}
-    path = Path("data/ProductInfo") / f"mart_vi_{store}_product.ndjson"
-    if path.exists():
+    # Nguồn do scripts/product_source.py quyết định - nsg lấy từ ảnh chụp v1.1,
+    # các store khác vẫn từ v1. Trước đây dòng này ghi cứng data/ProductInfo nên
+    # report đọc catalog nsg CŨ (16.340 SKU) trong khi Expected đã dựng trên
+    # v1.1 (18.122 SKU).
+    path = _product_source.ndjson(store)
+    if path is not None and path.exists():
         with open(path, "r", encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
@@ -249,6 +544,14 @@ def load_catalog(store):
                     "name": (d.get("name") or "").strip(),
                     "price": d.get("price_default") or 0,
                     "category": cat_path[1] if len(cat_path) > 1 else (cat_path[0] if cat_path else ""),
+                    # Hai cờ hiển thị của catalog. visibility_search = sản phẩm có
+                    # TÌM THẤY QUA Ô TÌM KIẾM hay không (false = gõ đúng nguyên tên
+                    # cũng không ra - đã kiểm chứng trên production 17/09).
+                    # visibility_catalog = có hiện khi DUYỆT THEO DANH MỤC hay không.
+                    # search_engine.js KHÔNG đọc hai cờ này, nên Expected có thể trả
+                    # về sản phẩm hệ thống thật không bao giờ hiện -> mismatch giả.
+                    "visibility_search": d.get("visibility_search"),
+                    "visibility_catalog": d.get("visibility_catalog"),
                 }
     _CATALOG_CACHE[store] = out
     return out
@@ -304,7 +607,10 @@ _LABEL_PREFIXES = [
 def derive_label(*paths):
     for p in paths:
         name = Path(p).stem
-        name = re.sub(r"_\d{8}(_\d{6})?$", "", name)  # trailing _YYYYMMDD or _YYYYMMDD_HHMMSS
+        # Hậu tố chữ sau ngày (20260916c) là quy ước cho các bản sinh lại trong
+        # CÙNG một ngày. Regex cũ đòi đúng 8 chữ số ở cuối nên không cắt được,
+        # làm phần ngày lọt nguyên vào tên thư mục report.
+        name = re.sub(r"_\d{8}[a-z]?(_\d{6})?$", "", name)  # _YYYYMMDD[c][_HHMMSS]
         for prefix in _LABEL_PREFIXES:
             if name.startswith(prefix):
                 name = name[len(prefix):]
@@ -313,6 +619,20 @@ def derive_label(*paths):
         if name:
             return name
     return "compare"
+
+
+def short_date_token(path):
+    """'NSG_ExpectedData_all_20260916c.json' -> '0916c'; '..._20260917_143705' -> '0917'.
+
+    Dùng để gắn mốc dữ liệu vào TÊN thư mục report. Trước đây tên thư mục chỉ
+    vô tình mang ngày của Expected (do lỗi regex ở derive_label) và không hề
+    nói gì về Actual - đúng khoảng mù khiến một report chạy trên bộ Actual CŨ
+    nằm im không ai thấy (user bắt được qua 'power 100', 2026-09-17).
+    """
+    if not path:
+        return ""
+    m = re.search(r"_(\d{4})(\d{2})(\d{2})([a-z]?)", Path(path).name)
+    return f"{m.group(2)}{m.group(3)}{m.group(4)}" if m else ""
 
 
 def next_free_dir(preferred):
@@ -363,7 +683,7 @@ def save_asis_cache(cache, path=ASIS_CACHE_PATH):
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
-def fetch_legacy_result(query):
+def fetch_legacy_result(query, asis_lang=None):
     """One real call to the legacy/As-Is production search (config/
     environments.yaml's "legacy" env - no auth, verified public 2026-08-28).
     Returns (search_results, total_before_cap) in the same {rank,sku,name,
@@ -372,7 +692,7 @@ def fetch_legacy_result(query):
     swallows a failed real call)."""
     cfg = load_env_config("legacy")
     store = cfg.get("store") or "nsg"
-    lang = cfg.get("lang", "vi")
+    lang = ASIS_LANG_MAP.get((asis_lang or "").lower(), asis_lang) or cfg.get("lang", "vi")
     search_api = resolve_template(cfg.get("search_api"), store, lang)
     method = cfg.get("search_method", "POST")
     param = cfg.get("search_param", "where.query")
@@ -397,7 +717,8 @@ def fetch_legacy_result(query):
     return search_results, total
 
 
-def get_or_fetch_asis(query, cache, allow_fetch=True, log=print, cache_path=ASIS_CACHE_PATH):
+def get_or_fetch_asis(query, cache, allow_fetch=True, log=print, cache_path=ASIS_CACHE_PATH,
+                      asis_lang=None):
     """The ONLY place that may call the real legacy/As-Is system. Cache-first,
     always: a query already present in `cache["entries"]` is NEVER re-fetched
     (production system, real cost per call - see ASIS_CACHE_PATH's docstring).
@@ -407,11 +728,15 @@ def get_or_fetch_asis(query, cache, allow_fetch=True, log=print, cache_path=ASIS
     entry = cache["entries"].get(key)
     if entry is not None:
         return {"search_results": entry.get("search_results", []),
-                "search_results_total_before_cap": entry.get("search_results_total_before_cap")}
+                "search_results_total_before_cap": entry.get("search_results_total_before_cap"),
+                # Gợi ý autocomplete của hệ thống cũ - có từ bản crawl đầy đủ
+                # 2026-09-08 trở đi (cache cũ không có field này, khi đó trả
+                # None và panel As-Is autocomplete tự hiện "chưa gọi API").
+                "autocomplete_suggestions": entry.get("autocomplete_suggestions")}
     if not allow_fetch:
         return None
     try:
-        search_results, total = fetch_legacy_result(query)
+        search_results, total = fetch_legacy_result(query, asis_lang)
     except ApiError as e:
         log(f"  [as-is] Gọi hệ thống cũ thất bại cho query {query!r}: {e}")
         return None
@@ -443,6 +768,242 @@ def build_asis_items(asis_sc, top_n):
             "price": _normalize_price(item.get("price")),
         })
     return out
+
+
+def build_recommendation_items(act_sc, top_n):
+    """Plain reference list (like build_asis_items) for the recommendations
+    backfill (2026-09-07: real backend now calls a separate products/
+    recommendations API whenever the Actual search itself returns <=20
+    sản phẩm). View-only per user request ("chỉ cần view result trên UI
+    thôi") - never scored, never affects match_category/Pass-Fail."""
+    results = (act_sc.get("recommendation_results") or [])[:top_n]
+    out = []
+    for idx, item in enumerate(results, start=1):
+        out.append({
+            "rank": idx,
+            "sku": str(item.get("sku", "")),
+            "name": item.get("name", ""),
+            "price": _normalize_price(item.get("price")),
+        })
+    return out
+
+
+def _normalize_suggestion_text(s):
+    """Loose key for matching an Expected autocomplete keyword against an
+    Actual autocomplete suggestion - casefold + collapse whitespace only
+    (KHÔNG bỏ dấu: dấu tiếng Việt là khác biệt thật, "ca" vs "cá" không
+    phải cùng một gợi ý)."""
+    return " ".join(str(s or "").strip().casefold().split())
+
+
+def build_asis_autocomplete_items(asis_sc):
+    """Gợi ý autocomplete của hệ thống CŨ (As-Is), lấy từ cache As-Is nếu có.
+
+    API As-Is (curl user cung cấp 2026-09-07, đã verify no-auth):
+      GET https://www.lottemart.vn/v1/p/mart/es/vi_nsg/search/suggestion?q=<q>&size=10
+      -> {"data": ["Thịt Hến 300G", "Mì Vifon Vị Thịt Bằm...", ...]}
+    Mỗi item là STRING tên sản phẩm (không có type/hitCount như API mới), nên
+    hàm này nhận cả string và dict để không phụ thuộc vào việc cache lưu kiểu
+    nào. Chưa có dữ liệu thì trả list rỗng - panel bên UI sẽ hiện trạng thái
+    "chưa gọi API" kèm thông tin endpoint, thay vì biến mất im lặng.
+    """
+    if not asis_sc:
+        return []
+    raw = asis_sc.get("autocomplete_suggestions") or []
+    out = []
+    for idx, item in enumerate(raw, start=1):
+        if isinstance(item, dict):
+            text = item.get("text") or item.get("keyword") or item.get("name") or ""
+        else:
+            text = str(item)
+        text = text.strip()
+        if text:
+            out.append({"rank": idx, "text": text})
+    return out
+
+
+def build_autocomplete_items(act_sc, exp_sc, asis_sc=None):
+    """Autocomplete panel data (2026-09-07, user cung cấp curl API
+    products/autocomplete). View-only như recommendations: KHÔNG tính vào
+    match_category/Pass-Fail (những chỉ số đó chỉ dựa trên search_results).
+
+    Actual autocomplete trả 2 danh sách độc lập:
+      - suggestions: {text, type: "term"|"product", hitCount}
+      - products: preview sản phẩm hiện ngay trong dropdown
+    Expected chỉ có ở batch realsearch_history (field autocomplete_suggestions
+    với key "keyword") - khi có thì đánh dấu gợi ý nào trùng (matched) để QA
+    đối chiếu nhanh; batch không có Expected thì chỉ hiển thị Actual.
+    """
+    act_suggestions = act_sc.get("autocomplete_suggestions") or []
+    exp_suggestions = exp_sc.get("autocomplete_suggestions") or []
+
+    exp_keys = {}
+    for item in exp_suggestions:
+        kw = item.get("keyword") if isinstance(item, dict) else item
+        key = _normalize_suggestion_text(kw)
+        if key:
+            exp_keys.setdefault(key, kw)
+
+    # Chỉ gợi ý type="term" (từ khóa ngắn) là so được với Expected: engine mô
+    # phỏng search_engine.js chỉ sinh CANDIDATE KEYWORD ngắn, không bao giờ
+    # sinh tên sản phẩm đầy đủ. Đo trên toàn bộ demo batch 2026-09-07: 11/11
+    # scenario có gợi ý type="term" đều trùng >0, còn 26 scenario chỉ có
+    # type="product" thì trùng 0 tuyệt đối - tức 0% đó là do KHÁC LOẠI dữ
+    # liệu, không phải do engine dự đoán sai. Nên type="product" được đánh
+    # dấu "không so được" (comparable=False) chứ không tô ✗ đỏ gây hiểu nhầm.
+    act_items = []
+    act_keys = set()
+    for idx, item in enumerate(act_suggestions, start=1):
+        text = item.get("text") if isinstance(item, dict) else item
+        key = _normalize_suggestion_text(text)
+        sugg_type = (item.get("type") if isinstance(item, dict) else None) or ""
+        comparable = sugg_type == "term"
+        if comparable:
+            act_keys.add(key)
+        act_items.append({
+            "rank": idx,
+            "text": text or "",
+            "type": sugg_type,
+            "hit_count": item.get("hitCount") if isinstance(item, dict) else None,
+            "comparable": comparable,
+            "matched_expected": comparable and bool(exp_keys) and key in exp_keys,
+        })
+
+    exp_items = []
+    for idx, item in enumerate(exp_suggestions, start=1):
+        kw = item.get("keyword") if isinstance(item, dict) else item
+        key = _normalize_suggestion_text(kw)
+        exp_items.append({
+            "rank": idx,
+            "text": kw or "",
+            "matched_actual": key in act_keys,
+        })
+
+    # Hai chỉ số 2 CHIỀU, cố tình KHÔNG gộp thành một con số "% trùng" duy
+    # nhất: Expected sinh 30 gợi ý (topN của engine mô phỏng) còn Actual chỉ
+    # trả 8 (limit=8 - đúng giá trị UI thật đang dùng), nên "trùng / 30" luôn
+    # bị trần 26.7% và đọc ra như thất bại dù thực tế không phải.
+    #   - precision: trong các gợi ý Actual THẬT, bao nhiêu cái engine mô phỏng
+    #     có dự đoán (đo chất lượng dự đoán của Expected).
+    #   - recall@k: lấy đúng k = số gợi ý Actual để so cửa sổ ngang nhau, trong
+    #     k gợi ý ĐẦU của Expected có bao nhiêu cái thật sự xuất hiện ở Actual.
+    comparable_items = [it for it in act_items if it["comparable"]]
+    n_cmp = len(comparable_items)
+    precision_hit = sum(1 for it in comparable_items if it["matched_expected"])
+    window = exp_items[:n_cmp] if n_cmp else []
+    recall_hit = sum(1 for it in window if it["matched_actual"])
+    overlap_all = sum(1 for it in exp_items if it["matched_actual"])
+    return {
+        "autocomplete_actual_items": act_items,
+        "autocomplete_expected_items": exp_items,
+        "autocomplete_has_expected": bool(exp_items),
+        # Số gợi ý Actual thuộc diện so được (type="term") - mẫu số của mọi
+        # chỉ số dưới đây; 0 nghĩa là query này API chỉ trả tên sản phẩm nên
+        # không có gì để đối chiếu với Expected (không phải "sai 100%").
+        "autocomplete_comparable_count": n_cmp,
+        "autocomplete_actual_in_expected_count": precision_hit,
+        "autocomplete_actual_in_expected_pct": round(precision_hit / n_cmp * 100, 1) if n_cmp else None,
+        "autocomplete_expected_topk_hit_count": recall_hit,
+        "autocomplete_expected_topk_size": len(window),
+        "autocomplete_expected_topk_pct": round(recall_hit / len(window) * 100, 1) if window else None,
+        "autocomplete_overlap_count": overlap_all,
+        "autocomplete_overlap_pct": round(overlap_all / len(exp_items) * 100, 1) if exp_items else None,
+        "autocomplete_products": [
+            {"rank": idx, "sku": str(p.get("sku", "")), "name": p.get("name", ""),
+             "price": _normalize_price(p.get("price"))}
+            for idx, p in enumerate(act_sc.get("autocomplete_products") or [], start=1)
+        ],
+        "autocomplete_error": act_sc.get("autocomplete_api_error"),
+        "autocomplete_latency_ms": act_sc.get("autocomplete_api_latency_ms"),
+        # Autocomplete của hệ thống CŨ (As-Is) - chỉ hiện ở chế độ so sánh
+        # As-Is <-> Actual. Hiện chưa có dữ liệu (cache As-Is đang chỉ lưu
+        # search_results); lần chạy tới sẽ gọi thật endpoint
+        # /search/suggestion (đã khai báo ở config/environments.yaml, mục
+        # legacy.autocomplete_api) và điền vào đây.
+        "autocomplete_asis_items": build_asis_autocomplete_items(asis_sc),
+        "autocomplete_asis_cached": bool(asis_sc and asis_sc.get("autocomplete_suggestions") is not None),
+    }
+
+
+def annotate_visibility(results, store):
+    """Đánh dấu scenario có dính sản phẩm bị ẩn khỏi tìm kiếm trên production.
+
+    Xem SmartSearch/test_data/exports/visibility_special_keywords_*.json để biết
+    đầy đủ danh sách và phần diễn giải hai cờ. Ở đây chỉ gắn cờ lên từng scenario
+    để report lọc riêng ra xem được.
+    """
+    catalog = load_catalog(store)
+    if not catalog:
+        return
+    hidden = {sku for sku, c in catalog.items()
+              if c.get("visibility_search") is False and c.get("visibility_catalog") is False}
+    search_only = {sku for sku, c in catalog.items()
+                   if c.get("visibility_search") is True and c.get("visibility_catalog") is False}
+    for r in results:
+        seen_hidden, seen_search_only = [], []
+        for key in ("expected_items", "actual_items"):
+            for it in r.get(key) or []:
+                sku = str(it.get("sku") or "")
+                if sku in hidden and sku not in seen_hidden:
+                    seen_hidden.append(sku)
+                elif sku in search_only and sku not in seen_search_only:
+                    seen_search_only.append(sku)
+        r["vis_hidden_skus"] = seen_hidden
+        r["vis_search_only_skus"] = seen_search_only
+
+
+ACTUAL_DIR = "SmartSearch/test_data/json/actual"
+BATCHES_DIR = "SmartSearch/test_data/json/batches"
+
+
+def newest_data_file(dirpath, pattern):
+    """File mới nhất khớp pattern, xét theo NGÀY TRONG TÊN trước rồi mới tới mtime.
+
+    Xét ngày trong tên chứ không chỉ mtime vì file cũ hay bị chép/đụng lại
+    (vd bộ 07/09 có mtime 10/09), lấy mtime sẽ chọn nhầm bản cũ.
+    """
+    best = None
+    for f in glob.glob(str(Path(dirpath) / pattern)):
+        m = re.search(r"_(\d{8})", Path(f).name)
+        key = (m.group(1) if m else "00000000", os.path.getmtime(f))
+        if best is None or key > best[0]:
+            best = (key, f)
+    return best[1] if best else None
+
+
+def resolve_newest_inputs(args, prev_stats=None):
+    """Chọn bộ Expected/Actual MỚI NHẤT khi người chạy không chỉ định rõ.
+
+    Vì sao cần: trước đây --report-dir lấy lại y nguyên đường dẫn ghi trong
+    summary_stats của lần chạy trước, nên sau khi crawl Actual mới xong, report
+    vẫn lặng lẽ đọc bộ Actual CŨ. Đúng lỗi làm 'power 100' hiện 1 sản phẩm
+    trong report trong khi hệ thống thật trả 14 (user phát hiện 2026-09-17).
+    """
+    store = (args.store or "nsg").upper()
+    if not args.actual:
+        newest = newest_data_file(ACTUAL_DIR, f"{store}_ActualData_all_*.json")
+        prev = (prev_stats or {}).get("actual_file")
+        if newest:
+            args.actual = newest
+            if prev and Path(prev).name != Path(newest).name:
+                print(f"[nguồn] Actual: dùng bản MỚI NHẤT {Path(newest).name}")
+                print(f"        (report trước dùng {Path(prev).name} - đã cũ hơn)")
+            else:
+                print(f"[nguồn] Actual  : {Path(newest).name}")
+        elif prev:
+            args.actual = prev
+    if not args.expected:
+        newest = newest_data_file(BATCHES_DIR, f"{store}_ExpectedData_all_*.json")
+        prev = (prev_stats or {}).get("expected_file")
+        if newest:
+            args.expected = newest
+            if prev and Path(prev).name != Path(newest).name:
+                print(f"[nguồn] Expected: dùng bản MỚI NHẤT {Path(newest).name}")
+                print(f"        (report trước dùng {Path(prev).name} - đã cũ hơn)")
+            else:
+                print(f"[nguồn] Expected: {Path(newest).name}")
+        elif prev:
+            args.expected = prev
 
 
 def compare_scenario(exp_sc, act_sc, top_n=20, asis_sc=None):
@@ -527,9 +1088,15 @@ def compare_scenario(exp_sc, act_sc, top_n=20, asis_sc=None):
     # Extras in actual top N (not present anywhere in expected results)
     extra_in_top_n = [sku for sku in act_top_skus if sku not in exp_all_sku_set]
 
-    # Detailed items comparison
+    # Detailed items comparison.
+    # Duyệt TOÀN BỘ kết quả chứ không chỉ top_n (user 2026-09-17: "show all,
+    # panel hiển thị scroll"). MỌI phép chấm phía trên vẫn chạy trên exp_top/
+    # act_top = [:top_n] - nên mở rộng chỗ này KHÔNG đụng tới điểm số,
+    # Pass/Fail hay % khớp. Trường "in_window" đánh dấu dòng nào thực sự nằm
+    # trong cửa sổ chấm, để UI vẽ ranh giới - nếu không người đọc sẽ tưởng
+    # sản phẩm ở rank 45 cũng được tính điểm.
     exp_details = []
-    for idx, item in enumerate(exp_top, start=1):
+    for idx, item in enumerate(exp_results, start=1):
         sku = str(item.get("sku", ""))
         act_rank = act_rank_map.get(sku)
         if act_rank == idx:
@@ -550,11 +1117,12 @@ def compare_scenario(exp_sc, act_sc, top_n=20, asis_sc=None):
             "tier": item.get("tier", ""),
             "score": item.get("score"),
             "status": status,
-            "actual_rank": act_rank
+            "actual_rank": act_rank,
+            "in_window": idx <= top_n,
         })
 
     act_details = []
-    for idx, item in enumerate(act_top, start=1):
+    for idx, item in enumerate(act_results, start=1):
         sku = str(item.get("sku", ""))
         exp_rank = exp_rank_map.get(sku)
         if exp_rank == idx:
@@ -575,7 +1143,8 @@ def compare_scenario(exp_sc, act_sc, top_n=20, asis_sc=None):
             "tier": item.get("tier", ""),
             "score": item.get("score"),
             "status": status,
-            "expected_rank": exp_rank
+            "expected_rank": exp_rank,
+            "in_window": idx <= top_n,
         })
 
     # Categorize status
@@ -632,13 +1201,77 @@ def compare_scenario(exp_sc, act_sc, top_n=20, asis_sc=None):
         # differently in the UI than "never looked up" ("chưa có dữ liệu As-Is").
         "asis_cached": asis_sc is not None,
         "actual_latency_ms": actual_latency_ms,
+        # Nhánh xử lý mà backend THẬT đã dùng cho query này, lấy từ
+        # response_meta.resolvedMode của chính response Actual (user
+        # 2026-09-07: "từ response actual, có xác định được result có bao gồm
+        # semantic hay k"). "lexical" = thuần khớp từ khoá BM25; "hybrid" =
+        # có nhúng semantic/vector. Kèm lexicalConfidence để giải thích vì sao
+        # backend chọn nhánh đó (confidence thấp -> phải nhờ semantic).
+        "resolved_mode": (act_sc.get("response_meta") or {}).get("resolvedMode"),
+        "lexical_confidence": (act_sc.get("response_meta") or {}).get("lexicalConfidence"),
+        "fallback_used": (act_sc.get("response_meta") or {}).get("fallbackUsed"),
+        "actual_total_hits": (act_sc.get("response_meta") or {}).get("totalHits"),
+        # Recommendations backfill (2026-09-07) - view-only reference panel,
+        # not part of any scoring (match_category/overlap/Pass-Fail above are
+        # all computed BEFORE this point, from search_results only).
+        "recommendation_triggered": bool(act_sc.get("recommendation_triggered")),
+        "recommendation_items": build_recommendation_items(act_sc, top_n),
+        # Autocomplete (2026-09-07) - cũng view-only, tách hoàn toàn khỏi
+        # scoring của search ở trên.
+        **build_autocomplete_items(act_sc, exp_sc, asis_sc),
     }
 
 
-def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_id=None):
+def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_id=None, target="search"):
     scenarios_json = json.dumps(scenarios, ensure_ascii=False)
+    # Cửa sổ chấm điểm, để template nói rõ cho người đọc biết phần nào tính
+    # điểm và phần nào chỉ để xem.
+    scoring_top_n = stats.get("scoring_top_n", 30)
+    # Chỉ nhúng phần từ điển thực sự dùng tới, tránh phình file báo cáo.
+    _qs = {sc.get("query") for sc in scenarios}
+    translations_json = json.dumps({k: v for k, v in QUERY_TRANSLATIONS.items() if k in _qs},
+                                   ensure_ascii=False)
+    # Nghĩa 5 ngoại ngữ cho từng keyword tiếng Việt (user 2026-09-15): lấy từ bộ
+    # dịch TAY ở SmartSearch/test_data/multilang/translations.json (bộ dùng cho
+    # bài test đa ngôn ngữ). Chỉ 1.561/2.355 keyword có bản dịch - phần còn lại
+    # là typo/brand/đã-là-ngoại-ngữ nên cố tình không dịch; những thẻ đó sẽ
+    # không hiện dòng nghĩa, KHÔNG phải lỗi thiếu dữ liệu.
+    multilang_json = "{}"
+    _ml_path = Path("SmartSearch/test_data/multilang/translations.json")
+    if _ml_path.exists():
+        try:
+            _ml = json.loads(_ml_path.read_text(encoding="utf-8"))
+            multilang_json = json.dumps(
+                {i["vi"]: {k: i[k] for k in ("en", "ko", "ja", "ru", "zh") if i.get(k)}
+                 for i in _ml.get("items", []) if i.get("vi") in _qs},
+                ensure_ascii=False)
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"[multilang] Bỏ qua bộ dịch ngoại ngữ ({e}) - báo cáo vẫn dựng bình thường.")
     stats_json = json.dumps(stats, ensure_ascii=False)
-    report_id_json = json.dumps(report_id or Path(out_file).parent.name)
+    # Gắn target vào REPORT_ID: mọi khoá localStorage (bug/discussion/override
+    # chưa xuất) đều dựng từ nó, nên báo cáo autocomplete và báo cáo search
+    # KHÔNG dùng chung bộ nhớ trình duyệt dù cùng thư mục.
+    _rid = report_id or Path(out_file).parent.name
+    if target != "search":
+        _rid = f"{_rid}#{target}"
+    report_id_json = json.dumps(_rid)
+    target_json = json.dumps(target)
+    is_ac = target == "autocomplete"
+    target_title = "AutoComplete" if is_ac else "Search Result"
+    target_icon = "⌨️" if is_ac else "🔍"
+    target_tip = (
+        "Báo cáo này dành RIÊNG cho gợi ý AutoComplete. Toàn bộ KPI, % khớp và Pass/Fail đều tính "
+        "theo autocomplete; bug và discussion lưu ở kho riêng (bug_ac_notes_*.json, "
+        "discussion_ac_notes_*.json) nên không lẫn với Search Result. Muốn xem Search Result thì mở "
+        "báo cáo compare thường."
+        if is_ac else
+        "Báo cáo này dành RIÊNG cho kết quả Search. Bug và discussion lưu ở bug_notes_*.json / "
+        "discussion_notes_*.json. Muốn xem gợi ý AutoComplete thì mở báo cáo dựng bằng "
+        "--target autocomplete.")
+    # Báo cáo autocomplete chỉ nên xem ở đúng đối tượng của nó: kho bug/
+    # discussion đang là kho AC, xem sang Search Result sẽ thấy % của search
+    # nhưng ghi chú lại là của autocomplete -> hiểu sai. Khoá luôn cho gọn.
+    target_lock_js = ""   # đối tượng giờ là nhãn tĩnh, không còn gì để khoá
     has_asis_json = json.dumps(bool(stats.get("asis_cache_file")))
     pf_store_json = json.dumps(stats.get("pass_fail_store") or "nsg")
 
@@ -701,7 +1334,7 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart Search Result Comparison Dashboard</title>
+<title>{target_title} Comparison Dashboard</title>
 <style>
   :root {{
     --bg: #f6f7fb;
@@ -903,6 +1536,54 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   }}
   .scenario-card:hover {{ border-color: #b7c0d1; }}
 
+  /* Query phải bôi đen/copy được (user 2026-09-08). Header có
+     user-select:none + onclick mở panel, nên phải gỡ CẢ HAI cho riêng vùng
+     query: user-select:text ở CSS và stopPropagation ở onclick. */
+  .query-vi {{
+    user-select: text;
+    cursor: text;
+    font-size: 12px;
+    color: #1d4ed8;
+    background: #eef6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 5px;
+    padding: 1px 7px;
+    margin-left: 2px;
+    white-space: nowrap;
+  }}
+  /* Hàng nghĩa 5 ngoại ngữ dưới keyword (user 2026-09-15).
+     flex-basis:100% để tự xuống dòng riêng, không chen vào hàng badge.
+     user-select:text + stopPropagation ở onclick để copy được mà không mở panel. */
+  .ml-row {{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 2px;
+  }}
+  .ml-chip {{
+    user-select: text;
+    cursor: text;
+    font-size: 11.5px;
+    line-height: 1.5;
+    border-radius: 5px;
+    padding: 1px 7px;
+    border: 1px solid;
+    white-space: nowrap;
+  }}
+  .ml-chip b {{
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    opacity: .75;
+    margin-right: 4px;
+    user-select: none;
+  }}
+  .ml-en {{ color:#0369a1; background:#f0f9ff; border-color:#bae6fd; }}
+  .ml-ko {{ color:#9d174d; background:#fdf2f8; border-color:#fbcfe8; }}
+  .ml-ja {{ color:#9a3412; background:#fff7ed; border-color:#fed7aa; }}
+  .ml-ru {{ color:#3730a3; background:#eef2ff; border-color:#c7d2fe; }}
+  .ml-zh {{ color:#166534; background:#f0fdf4; border-color:#bbf7d0; }}
   .scenario-header {{
     padding: 14px 20px;
     background: rgba(15,23,42,0.02);
@@ -919,7 +1600,13 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   }}
   .scenario-title-area {{ display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }}
   .scenario-id {{ font-weight: 700; font-size: 13px; color: var(--accent); font-family: monospace; }}
-  .scenario-query {{ font-size: 16px; font-weight: 600; color: var(--text-primary); }}
+  /* user-select/cursor: query phải bôi đen + copy được (user 2026-09-08);
+     header cha đang để user-select:none nên phải gỡ riêng ở đây. */
+  .scenario-query {{
+    font-size: 16px; font-weight: 600; color: var(--text-primary);
+    user-select: text; cursor: text;
+  }}
+  .scenario-query:hover {{ background: rgba(59,130,246,0.10); border-radius: 4px; }}
   .scenario-badges {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 
   .badge {{
@@ -1005,6 +1692,22 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   }}
   .col-box.asis-box {{ border-color: #c4933f; }}
   .col-box.asis-box .col-title {{ color: #92660a; }}
+  .col-box.rec-box {{ border-color: #4a9c6d; border-style: dashed; }}
+  .col-box.rec-box .col-title {{ color: #2f7a4d; }}
+  /* Autocomplete section (2026-09-07) - khối riêng dưới lưới so sánh search,
+     view-only, không dính vào scoring. */
+  .ac-section {{
+    border-top: 2px dashed #b9a6d6;
+    padding-top: 14px;
+  }}
+  .ac-section-title {{
+    font-size: 13px;
+    font-weight: 700;
+    color: #6d4aa0;
+    margin-bottom: 10px;
+  }}
+  .col-box.ac-box {{ border-color: #8b6cc0; }}
+  .col-box.ac-box .col-title {{ color: #5b3f8c; }}
 
   .col-box {{
     background: #f6f7fb;
@@ -1025,7 +1728,18 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   }}
 
   /* Product Tables */
-  .prod-table {{
+  /* Panel cuộn cho danh sách sản phẩm. Từ 2026-09-17 danh sách hiển thị TOÀN BỘ
+   kết quả (trước đây cắt ở top-30), nên phải có chiều cao trần + cuộn, nếu
+   không một keyword 50 sản phẩm sẽ đẩy trang dài gấp đôi. */
+.prod-scroll {{ max-height: 460px; overflow-y: auto; border-radius: 6px; }}
+.prod-scroll thead th {{ position: sticky; top: 0; z-index: 2; }}
+/* Ranh giới cửa sổ chấm điểm: mọi dòng DƯỚI vạch này chỉ để xem, không tham
+   gia tính % khớp hay Pass/Fail. */
+tr.window-edge td {{
+  background: #fffbeb; border-top: 2px dashed #f59e0b; border-bottom: 1px solid #fde68a;
+  color: #92400e; font-size: 11px; font-weight: 600; padding: 5px 8px; text-align: center;
+}}
+.prod-table {{
     width: 100%;
     border-collapse: collapse;
     font-size: 12px;
@@ -1109,7 +1823,30 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     transition: all 0.15s;
     white-space: nowrap;
   }}
+  .target-label .target-badge {{
+    display: inline-block; font-weight: 700; font-size: 13px;
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 6px; padding: 5px 12px; color: var(--text-primary);
+  }}
+  .badge-reviewed {{ background:#ecfeff; color:#0e7490; border:1px solid #a5f3fc; }}
   .bug-btn:hover {{ border-color: var(--red); color: var(--red); }}
+  /* 2 nút Discussion + Remove dùng chung khung với .bug-btn, chỉ khác màu nhấn */
+  .disc-btn, .rm-btn {{
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }}
+  .disc-btn:hover {{ border-color: #3b82f6; color: #1d4ed8; }}
+  .disc-btn.marked {{ background: #eef6ff; border-color: #93c5fd; color: #1d4ed8; }}
+  .rm-btn:hover {{ border-color: #ef4444; color: #b91c1c; }}
+  .rm-btn.marked {{ background: #fef2f2; border-color: #fecaca; color: #b91c1c; }}
   .bug-btn.marked {{
     background: var(--red-bg);
     border-color: var(--red);
@@ -1211,14 +1948,12 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
   <!-- Header -->
   <div class="header">
     <div>
-      <h1>🔍 Smart Search Result Comparison</h1>
-      <p>Báo cáo đối soát chi tiết Expected vs Actual Search Results (Di chuột vào các mục để xem giải thích)</p>
+      <h1>{target_icon} {target_title} Comparison</h1>
     </div>
     <div style="text-align: right;">
       <span class="meta-tag" data-tooltip="Thời gian thực thi đối soát">📅 {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</span>
       <span class="meta-tag" data-tooltip="Mã chi nhánh siêu thị được test">🏢 Store: {html.escape(exp_meta.get("store", "NSG"))}</span>
       <span class="meta-tag" data-tooltip="Tổng số kịch bản test trong đợt đối soát">📊 Total: {stats["total_scenarios"]} Scenarios</span>
-      {f'<span class="meta-tag" style="background:rgba(180,131,10,0.14);color:#92660a;" data-tooltip="As-Is (hệ thống hiện tại đang chạy thật trên lottemart.vn) chỉ tra/gọi cho scenario có %khớp Top-30 <= {stats.get("asis_match_threshold_pct")}% - {stats.get("asis_scenarios_used") or 0} scenario dùng As-Is ({stats.get("asis_newly_fetched") or 0} query mới phải gọi thật, còn lại lấy từ cache có sẵn - không gọi lại hệ thống production).">🕰️ As-Is: {stats.get("asis_scenarios_used") or 0} scenario ({stats.get("asis_newly_fetched") or 0} mới gọi)</span>' if stats.get("asis_cache_file") else ''}
     </div>
   </div>
 
@@ -1230,6 +1965,21 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
        request) - the KPI cards below and every scenario badge/sort/filter
        are computed from whichever pair is selected here. -->
   <div class="toolbar" style="margin-bottom: 12px;">
+    <!-- Chọn ĐỐI TƯỢNG so sánh (user 2026-09-07). Khác với modeSelect bên
+         cạnh (chọn 2 NGUỒN dữ liệu): dropdown này chọn so sánh KẾT QUẢ
+         SEARCH hay GỢI Ý AUTOCOMPLETE. Đổi nó thì toàn bộ KPI, % overlap,
+         badge Pass/Fail, số đếm filter tab đều tính lại theo đối tượng đang
+         chọn - Pass/Fail của autocomplete được lưu ở nhánh state RIÊNG
+         (entries_autocomplete) nên không ghi đè phán quyết của search. -->
+    <!-- Đối tượng là NHÃN TĨNH, không phải dropdown (user 2026-09-10): mỗi
+         báo cáo phục vụ đúng 1 đối tượng và có kho bug/discussion riêng
+         (bug_notes_* vs bug_ac_notes_*). Cho đổi tại chỗ sẽ dẫn tới xem % của
+         đối tượng này bằng ghi chú của đối tượng kia. Muốn xem cái còn lại thì
+         mở báo cáo tương ứng. -->
+    <div class="sort-control target-label" data-tooltip="{target_tip}">
+      <label>Đối tượng:</label>
+      <span class="target-badge">{target_icon} {target_title}</span>
+    </div>
     <div class="sort-control" data-tooltip="Chọn 2 nguồn dữ liệu dùng để tính TOÀN BỘ 7 chỉ số KPI bên dưới, %matching, badge và sắp xếp cho từng scenario. Panel As-Is/Actual LUÔN hiển thị; panel Expected ẩn/hiện riêng theo checkbox bên cạnh - lựa chọn ở đây chỉ đổi cách tính điểm matching, không tự ẩn/hiện panel nào.">
       <label for="modeSelect">So sánh:</label>
       <select id="modeSelect" aria-label="Chọn 2 nguồn dữ liệu để so sánh">
@@ -1245,7 +1995,7 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
         <option value="high">Cao nhất trước</option>
       </select>
     </div>
-    <div class="sort-control" data-tooltip="Panel Expected mặc định ẨN để gọn màn hình (đặc biệt hữu ích với file không có Expected, ví dụ file demo) - tick vào đây nếu cần xem lại Expected.">
+    <div class="sort-control" id="expectedToggleWrap" data-tooltip="Panel Expected mặc định ẨN để gọn màn hình (đặc biệt hữu ích với file không có Expected, ví dụ file demo) - tick vào đây nếu cần xem lại Expected.">
       <label for="showExpectedToggle" style="display:flex;align-items:center;gap:6px;cursor:pointer;">
         <input type="checkbox" id="showExpectedToggle">
         Hiển thị panel Expected
@@ -1296,19 +2046,30 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
     </div>
     <div class="filter-tabs">
       <button class="tab-btn active" data-filter="all" data-tooltip="[Mục 8] Xem toàn bộ tất cả các scenarios">Tất cả (<span id="cnt-all">{stats["total_scenarios"]}</span>)</button>
-      <button class="tab-btn" data-filter="100_PERCENT_EXACT" data-tooltip="[Mục 9] Lọc các query đạt chuẩn 100% khớp đúng từng vị trí thứ hạng. Chỉ tính được ở chế độ Expected↔Actual - As-Is↔Actual không phân biệt exact-order, luôn gộp vào 100% Set.">⭐ 100% Exact (<span id="cnt-exact">{stats["exact_order_count"]}</span>)</button>
-      <button class="tab-btn" data-filter="100_PERCENT_SET" data-tooltip="[Mục 10] Lọc các query khớp 100% tập SKU (chứa đủ các sản phẩm)">🟣 100% Set (<span id="cnt-set">{stats["set_match_count"]}</span>)</button>
       <button class="tab-btn" data-filter="HIGH_MATCH" data-tooltip="[Mục 11] Lọc các query có độ trùng khớp cao từ 70% trở lên">🔵 Khớp cao (&ge;70%)</button>
       <button class="tab-btn" data-filter="PARTIAL_MATCH" data-tooltip="[Mục 12] Lọc các query có độ trùng khớp từ 30% đến 69%">🟡 Khớp 1 phần (30-69%)</button>
       <button class="tab-btn" data-filter="LOW_MATCH" data-tooltip="[Mục 13] Lọc các query có độ lệch lớn (độ trùng dưới 30%)">🔴 Khớp thấp / Lệch</button>
       <button class="tab-btn" data-filter="ZERO_RESULT" data-tooltip="[Mục 14] Lọc các query bị lỗi trả về 0 kết quả">🚫 Zero Result (<span id="cnt-zero">{stats["zero_result_count"]}</span>)</button>
       <button class="tab-btn" data-filter="PF_REGRESSION" style="border-color:#dc2626;color:#dc2626;" data-tooltip="Keyword mà trạng thái Pass/Fail ĐỔI so với lần compare trước (passed->failed hoặc failed->passed) - tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo), không đổi theo dropdown So sánh. Bấm để xổ ra danh sách.">⚠️ Regression ({stats["regression_count"]})</button>
       <button class="tab-btn" data-filter="PF_RESPONSE_CHANGED" style="border-color:#2563eb;color:#2563eb;" data-tooltip="Keyword mà Actual trả về danh sách sản phẩm KHÁC so với lần compare trước - kể cả khi Pass/Fail không đổi bucket. Bấm để xổ ra danh sách.">🔄 Response Changed ({stats["response_changed_count"]})</button>
-      <button class="tab-btn" data-filter="PF_PASSED" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">✅ Passed ({stats["passed_count"]})</button>
-      <button class="tab-btn" data-filter="PF_FAILED" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">❌ Failed ({stats["failed_count"]})</button>
+      <button class="tab-btn" data-filter="PF_REVIEWED" style="border-color:#0891b2;color:#0e7490;" data-tooltip="Keyword QA ĐÃ rà soát tay và tự chấm Pass/Fail - gồm cả case chấm TRÙNG với kết quả máy (không ghi đè gì nhưng đã được xem qua). Dùng để biết đã duyệt tới đâu trong tổng số kịch bản.">👁 Đã duyệt tay (<span id="cnt-reviewed">{stats.get("reviewed_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_NOT_REVIEWED" style="border-color:#64748b;color:#475569;" data-tooltip="Keyword CHƯA có ai rà soát tay - đang lấy nguyên kết quả máy tự chấm.">⬚ Chưa duyệt (<span id="cnt-not-reviewed">{stats.get("not_reviewed_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_FAILED_NO_BUG" style="border-color:#dc2626;color:#b91c1c;font-weight:700;" data-tooltip="Query KHÔNG ĐẠT nhưng CHƯA ghi bug - đây là việc còn phải làm: cần xem và ghi bug (hoặc đánh giá lại thành Passed nếu thực ra kết quả hợp lệ). Tính cả bug vừa đánh dấu trong phiên này chưa xuất.">🔴 Failed chưa ghi bug (<span id="cnt-failed-nobug">{stats.get("failed_no_bug_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_HAS_BUG" style="border-color:#f97316;color:#c2410c;" data-tooltip="Query ĐÃ ghi bug (bug note lưu vĩnh viễn qua --apply-bug-notes, hoặc vừa đánh dấu trong phiên này). Không phân biệt Pass/Fail.">🐞 Đã ghi bug (<span id="cnt-has-bug">{stats.get("has_bug_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_ASIS_ZERO" style="border-color:#3b82f6;color:#1d4ed8;" data-tooltip="Hệ cũ (As-Is) trả 0 kết quả nhưng hệ mới CÓ kết quả - đây là nhóm hệ mới cứu được. Không tự chấm đạt/không đạt vì không có gì để đối chiếu; cần người xem xác nhận sản phẩm trả về có đúng ý không. Đánh Passed/Failed tay ở đây vẫn được giữ vĩnh viễn.">🆕 As-Is 0 KQ (<span id="cnt-pf-asiszero">{stats.get("asis_zero_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_NA" data-tooltip="Query KHÔNG có dữ liệu As-Is để đối chiếu (chưa crawl được hệ cũ) - không thể kết luận đạt/không đạt.">➖ Chưa có As-Is (<span id="cnt-pf-na">{stats.get("na_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="PF_DISCUSSION" style="border-color:#1d4ed8;color:#1d4ed8;" data-tooltip="Keyword đã được đánh dấu 'Cần thảo luận' (💬) - chưa chốt đúng/sai, kèm comment. Đánh dấu ở từng scenario rồi Xuất Discussion, chạy lại compare với --apply-discussions để giữ vĩnh viễn.">💬 Discussion (<span id="cnt-discussion">{stats.get("discussion_count", 0)}</span>)</button>
+      <button class="tab-btn" data-filter="VIS_HIDDEN" style="border-color:#be123c;color:#9f1239;" data-tooltip="Keyword ĐẶC BIỆT: kết quả có chứa sản phẩm bị ẨN HOÀN TOÀN trên production (visibility_search=false VÀ visibility_catalog=false) - không tìm ra được, cũng không có trong danh mục. search_engine.js chưa đọc hai cờ này nên Expected vẫn trả về chúng, dẫn tới mismatch GIẢ khi so với Actual. Danh sách đầy đủ + diễn giải hai cờ: SmartSearch/test_data/exports/visibility_special_keywords_20260917.json">🚷 SP bị ẩn (<span id="cnt-vis-hidden">0</span>)</button>
+      <button class="tab-btn" data-filter="VIS_SEARCH_ONLY" style="border-color:#a16207;color:#854d0e;" data-tooltip="Kết quả có chứa sản phẩm CHỈ TÌM KIẾM RA ĐƯỢC, không bày trong danh mục (visibility_search=true, visibility_catalog=false). Đây KHÔNG phải lỗi - trả về nhóm này là hợp lệ. Trong catalog NSG, 2.555/2.585 sản phẩm nhóm này là hàng giá 0đ/1đ (đã bị luật 0đ/1đ loại sẵn), chỉ 30 cái thật sự vào index.">🔍 Chỉ tìm kiếm ra (<span id="cnt-vis-searchonly">0</span>)</button>
+      <button class="tab-btn" data-filter="MODE_LEXICAL" style="border-color:#0891b2;color:#0e7490;" data-tooltip="Backend THẬT xử lý query này bằng nhánh LEXICAL - thuần khớp từ khoá (BM25), KHÔNG dùng semantic. Lấy từ response_meta.resolvedMode của chính response Actual.">🔤 Lexical (<span id="cnt-mode-lexical">0</span>)</button>
+      <button class="tab-btn" data-filter="MODE_HYBRID" style="border-color:#7c3aed;color:#6d28d9;" data-tooltip="Backend THẬT xử lý query này bằng nhánh HYBRID - CÓ dùng semantic/vector kết hợp với khớp từ khoá. Lấy từ response_meta.resolvedMode của response Actual. Thường xảy ra khi lexicalConfidence thấp.">🧠 Hybrid / semantic (<span id="cnt-mode-hybrid">0</span>)</button>
+      <button class="tab-btn" data-filter="PF_PASSED" data-tooltip="Pass/Fail LUÔN tính theo As-Is↔Actual (hệ cũ đang chạy thật), không phụ thuộc dropdown chế độ - vì Expected do search_engine.js mô phỏng sinh ra, lệch với nó không chứng minh backend sai. Query không có dữ liệu As-Is để so thì là 'n/a', không bị tính là Failed. Số này ĐỔI theo dropdown 'Đối tượng': chọn AutoComplete thì đếm Pass/Fail của autocomplete.">✅ Passed (<span id="cnt-pf-passed">{stats["passed_count"]}</span>)</button>
+      <button class="tab-btn" data-filter="PF_FAILED" data-tooltip="Pass/Fail LUÔN tính theo As-Is↔Actual (hệ cũ đang chạy thật), không phụ thuộc dropdown chế độ - vì Expected do search_engine.js mô phỏng sinh ra, lệch với nó không chứng minh backend sai. Query không có dữ liệu As-Is để so thì là 'n/a', không bị tính là Failed. Số này ĐỔI theo dropdown 'Đối tượng': chọn AutoComplete thì đếm Pass/Fail của autocomplete.">❌ Failed (<span id="cnt-pf-failed">{stats["failed_count"]}</span>)</button>
     </div>
     <div class="export-bug-group">
       <button id="exportBugJsonBtn" type="button" class="export-bug-btn" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Bug' (UI/data thật sai) ra 1 file JSON - kèm ảnh + ghi chú Expected đúng phải là gì. Truyền lại qua --apply-bug-notes ở lần compare sau để lưu vĩnh viễn.">🐞 Xuất Bug (<span id="bugCountJson">0</span>)</button>
+      <button id="exportDiscussionBtn" type="button" class="export-bug-btn" style="background:#1d4ed8;" disabled data-tooltip="Xuất các keyword đã đánh dấu 'Cần thảo luận' kèm comment. Truyền lại qua --apply-discussions ở lần compare sau để giữ vĩnh viễn và lọc bằng tab 💬 Discussion.">💬 Xuất Discussion (<span id="discussionCount">0</span>)</button>
+      <button id="exportRemoveBtn" type="button" class="export-bug-btn" style="background:#b91c1c;" disabled data-tooltip="Xuất danh sách keyword cần LOẠI khỏi bộ test. Truyền lại qua --apply-removals ở lần compare sau - các keyword này sẽ không còn xuất hiện trong báo cáo nữa.">🗑 Xuất Remove (<span id="removeCount">0</span>)</button>
       <button id="exportEngineJsonBtn" type="button" class="export-bug-btn" style="border-color:var(--yellow);color:var(--yellow);" disabled data-tooltip="Xuất toàn bộ keyword đã đánh dấu 'Cải thiện Engine' (search_engine.js sai, chỉ có ở chế độ Expected↔Actual) ra 1 file JSON. Truyền lại qua --apply-engine-notes ở lần compare sau để lưu vĩnh viễn.">⚙️ Xuất cải thiện Engine (<span id="engineCountJson">0</span>)</button>
       <button id="exportOverrideBtn" type="button" class="export-bug-btn" style="border-color:var(--green);color:var(--green);" disabled data-tooltip="Xuất các keyword vừa bấm 'Đánh giá lại' ra 1 file JSON - truyền file này qua --apply-overrides ở lần chạy compare_results.py tiếp theo để LƯU VĨNH VIỄN đánh giá tay (không mất khi đóng báo cáo này).">✔️ Xuất Pass/Fail (<span id="overrideCount">0</span>)</button>
     </div>
@@ -1332,12 +2093,103 @@ def generate_html_report(stats, scenarios, exp_meta, act_meta, out_file, report_
 
 <script>
 const scenarios = {scenarios_json};
+const QUERY_TRANSLATIONS = {translations_json};
+// vi -> 5 ngoại ngữ, hiện ngay dưới keyword để QA copy đi tra cứu/đối chiếu.
+const QUERY_MULTILANG = {multilang_json};
+const ML_ORDER = [['en','EN'],['ko','KO'],['ja','JA'],['ru','RU'],['zh','ZH']];
 const HAS_ASIS = {has_asis_json};
+// Multi-select filter (user 2026-09-07). Trước đây là 1 chuỗi duy nhất
+// (currentFilter) nên chỉ lọc được 1 badge; giờ là TẬP các filter đang bật.
+// currentFilter vẫn được giữ như "filter cuối cùng vừa bấm" - chỉ dùng cho
+// updateBannerVisibility(), không dùng để lọc nữa.
+// Cửa sổ chấm điểm (--topn). Danh sách sản phẩm hiển thị TOÀN BỘ, nhưng chỉ
+// {scoring_top_n} sản phẩm đầu tham gia tính % khớp và Pass/Fail.
+const SCORING_TOP_N = {scoring_top_n};
+let activeFilters = new Set();
 let currentFilter = 'all';
+
+// Mỗi filter thuộc 1 nhóm; cùng nhóm OR với nhau, khác nhóm AND với nhau.
+const FILTER_GROUP = {{
+  PF_PASSED: 'passfail', PF_FAILED: 'passfail',
+  PF_REGRESSION: 'passfail', PF_RESPONSE_CHANGED: 'passfail', PF_DISCUSSION: 'passfail', PF_NA: 'passfail', PF_ASIS_ZERO: 'passfail',
+  PF_FAILED_NO_BUG: 'passfail', PF_HAS_BUG: 'passfail',
+  PF_REVIEWED: 'passfail', PF_NOT_REVIEWED: 'passfail',
+  MODE_LEXICAL: 'mode', MODE_HYBRID: 'mode',
+  VIS_HIDDEN: 'visibility', VIS_SEARCH_ONLY: 'visibility',
+}};
+function filterGroupOf(f) {{ return FILTER_GROUP[f] || 'category'; }}
+
+// Nhãn hiển thị cho TỪNG SKU trong danh sách sản phẩm. Hai cờ này lấy từ
+// catalog production (visibility_search / visibility_catalog); Python đã gom
+// sẵn thành 2 mảng SKU trên mỗi scenario nên ở đây chỉ cần kiểm tra thành viên.
+// Vạch phân cách cửa sổ chấm điểm. Chèn ngay TRƯỚC sản phẩm đầu tiên nằm
+// ngoài top-N, để không ai nhầm sản phẩm rank 45 cũng được tính điểm.
+function windowEdgeRow(i, cols) {{
+  if (i !== SCORING_TOP_N) return '';
+  return `<tr class="window-edge"><td colspan="${{cols}}">⌄ từ đây trở xuống CHỈ ĐỂ XEM - không tính vào % khớp và Pass/Fail (cửa sổ chấm là Top-${{SCORING_TOP_N}})</td></tr>`;
+}}
+
+function visTagHtml(s, sku) {{
+  sku = String(sku || '');
+  if (s.vis_hidden_skus && s.vis_hidden_skus.indexOf(sku) !== -1) {{
+    return `<span class="meta-tag" style="margin:0 0 0 6px;background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;" data-tooltip="SKU ${{sku}}: visibility_search=false VÀ visibility_catalog=false - trên production sản phẩm này KHÔNG tìm ra được qua ô tìm kiếm (gõ đúng nguyên tên cũng không ra) và cũng KHÔNG hiện khi duyệt danh mục. Engine mô phỏng chưa đọc hai cờ này nên vẫn trả về nó.">🚷 bị ẩn</span>`;
+  }}
+  if (s.vis_search_only_skus && s.vis_search_only_skus.indexOf(sku) !== -1) {{
+    return `<span class="meta-tag" style="margin:0 0 0 6px;background:#fefce8;border:1px solid #fde68a;color:#854d0e;" data-tooltip="SKU ${{sku}}: visibility_search=true nhưng visibility_catalog=false - tìm kiếm RA ĐƯỢC, nhưng KHÔNG hiện khi duyệt theo danh mục. Đây không phải lỗi. Trong catalog NSG phần lớn nhóm này là hàng khuyến mãi 0đ/1đ.">🔍 chỉ tìm kiếm</span>`;
+  }}
+  return '';
+}}
+
+function matchesOneFilter(s, f) {{
+  switch (f) {{
+    case 'PF_REGRESSION':       return comparisonTarget === 'autocomplete' ? !!s.ac_is_regression : !!s.is_regression;
+    case 'PF_RESPONSE_CHANGED': return !!s.response_changed;
+    case 'PF_PASSED':           return effectiveStatus(s) === 'passed';
+    case 'PF_FAILED':           return effectiveStatus(s) === 'failed';
+    case 'PF_NA':               return effectiveStatus(s) === 'n/a';
+    case 'PF_ASIS_ZERO':        return effectiveStatus(s) === 'discussion';
+    // Tính CẢ bug đã lưu phía Python (s.bug_note) LẪN bug vừa đánh dấu trong
+    // phiên này mà chưa export (bugStore) - nếu chỉ xét s.bug_note thì vừa ghi
+    // bug xong keyword vẫn nằm trong danh sách "chưa ghi", rất dễ ghi trùng.
+    case 'PF_FAILED_NO_BUG':    return effectiveStatus(s) === 'failed' && !hasBug(s);
+    case 'PF_HAS_BUG':          return hasBug(s);
+    case 'PF_REVIEWED':         return reviewedOf(s);
+    case 'PF_NOT_REVIEWED':     return !reviewedOf(s);
+    // Discussion: tính CẢ đánh dấu đã lưu vĩnh viễn phía Python (s.discussion_note)
+    // lẫn đánh dấu mới trong phiên này chưa export (discussionStore).
+    case 'PF_DISCUSSION':       return !!(s.discussion_note || discussionStore[s.test_id]);
+    // resolvedMode lấy thẳng từ response Actual - "hybrid" nghĩa là backend
+    // đã dùng semantic, "lexical" là thuần khớp từ khoá.
+    // Hai cờ hiển thị của catalog production. 'ẩn hoàn toàn' = không tìm ra
+    // được VÀ không có trong danh mục -> Expected trả về là mismatch giả.
+    case 'VIS_HIDDEN':          return !!(s.vis_hidden_skus && s.vis_hidden_skus.length);
+    case 'VIS_SEARCH_ONLY':     return !!(s.vis_search_only_skus && s.vis_search_only_skus.length);
+    case 'MODE_LEXICAL':        return s.resolved_mode === 'lexical';
+    case 'MODE_HYBRID':         return s.resolved_mode === 'hybrid';
+    default:                    return s.__m.match_category === f;
+  }}
+}}
+
+function matchesActiveFilters(s) {{
+  if (!activeFilters.size) return true;
+  const byGroup = {{}};
+  activeFilters.forEach(f => {{
+    const g = filterGroupOf(f);
+    (byGroup[g] = byGroup[g] || []).push(f);
+  }});
+  // AND giữa các nhóm, OR trong cùng nhóm
+  return Object.values(byGroup).every(fs => fs.some(f => matchesOneFilter(s, f)));
+}}
+
 let searchQuery = '';
 let currentPage = 1;
 let selectedPageSize = 50;
 let sortOrder = 'default';
+// ĐỐI TƯỢNG so sánh (user 2026-09-07): 'search' | 'autocomplete'. Đổi giá trị
+// này thì mọi KPI, % overlap, badge Pass/Fail, số đếm filter tab và vị trí
+// panel đều đổi theo - xem getModeMetrics(), effectiveStatus(),
+// currentStatusOf() và renderScenarios().
+let comparisonTarget = {target_json};
 // Which 2 panels drive %matching/badge/sort/filter for every scenario card.
 // Both panels of EITHER mode - and the 3rd, non-driving one - stay visible;
 // this only changes which pair's overlap is scored (user request 2026-08-31).
@@ -1397,7 +2249,63 @@ function computeOverlapMetrics(baseItems, otherItems) {{
 // already-embedded asis_items/actual_items (no extra data needed, no server
 // call). A scenario with no As-Is data cached gets its own category so it
 // doesn't silently look like "no match" in filters/sort.
+// Overlap metrics cho ĐỐI TƯỢNG AUTOCOMPLETE - so keyword string thay vì SKU.
+// Mẫu số dùng min(base, other) chứ không phải len(base): engine sinh 30 gợi ý
+// còn API thật chỉ trả 8 (limit=8), lấy 30 làm mẫu số thì trần chỉ 26.7% và
+// mọi case đều đọc ra như fail (cùng cái bẫy đã xử lý ở panel autocomplete).
+function acKey(t) {{ return String(t || '').trim().toLowerCase().replace(/\\s+/g, ' '); }}
+function computeAcOverlapMetrics(baseItems, otherItems) {{
+  const base = (baseItems || []).map(i => acKey(i.text)).filter(Boolean);
+  const other = (otherItems || []).map(i => acKey(i.text)).filter(Boolean);
+  const otherSet = new Set(other);
+  const denomAll = Math.max(1, Math.min(base.length, other.length));
+  const inter = base.filter(k => otherSet.has(k)).length;
+  const pctAll = base.length && other.length ? Math.round((inter / denomAll) * 1000) / 10 : 0;
+  const top5Base = base.slice(0, 5);
+  const top5Count = top5Base.filter(k => otherSet.has(k)).length;
+  const top5Pct = top5Base.length ? Math.round((top5Count / top5Base.length) * 1000) / 10 : 0;
+  const top20Base = base.slice(0, 20);
+  const top20Count = top20Base.filter(k => otherSet.has(k)).length;
+  const top20Denom = Math.max(1, Math.min(top20Base.length, other.length));
+  const top20Pct = top20Base.length && other.length ? Math.round((top20Count / top20Denom) * 1000) / 10 : 0;
+  const baseSet = new Set(base);
+  const fullSet = base.length > 0 && base.every(k => otherSet.has(k)) && other.every(k => baseSet.has(k));
+  const exactOrder = base.length > 0 && base.length === other.length && base.every((k, i) => k === other[i]);
+  const top1 = base.length > 0 && other.length > 0 && base[0] === other[0];
+  let cat;
+  if (!base.length) cat = 'NO_EXPECTED_AC';
+  else if (exactOrder) cat = '100_PERCENT_EXACT';
+  else if (fullSet) cat = '100_PERCENT_SET';
+  else if (!other.length) cat = 'ZERO_RESULT';
+  else if (top20Pct >= 70) cat = 'HIGH_MATCH';
+  else if (top20Pct >= 30) cat = 'PARTIAL_MATCH';
+  else if (top20Pct > 0) cat = 'LOW_MATCH';
+  else cat = 'NO_MATCH';
+  return {{
+    top5_overlap_count: top5Count, top5_overlap_pct: top5Pct,
+    top20_overlap_count: top20Count, top20_overlap_pct: top20Pct,
+    overlap_count: inter, overlap_pct: pctAll,
+    match_category: cat, top1_match: top1, expected_count: base.length,
+  }};
+}}
+
 function getModeMetrics(s) {{
+  // Đối tượng AUTOCOMPLETE: base là Expected-autocomplete hoặc As-Is-
+  // autocomplete tuỳ dropdown nguồn; other luôn là Actual-autocomplete.
+  if (comparisonTarget === 'autocomplete') {{
+    if (comparisonMode === 'asis_actual') {{
+      const asisAc = s.autocomplete_asis_items || [];
+      if (!asisAc.length) {{
+        // As-Is autocomplete chưa được crawl (xem panel As-Is) - báo đúng là
+        // "chưa có dữ liệu" thay vì tính thành 0% khớp.
+        return {{ top5_overlap_count: 0, top5_overlap_pct: 0, top20_overlap_count: 0, top20_overlap_pct: 0,
+                 overlap_count: 0, overlap_pct: 0, match_category: 'NO_ASIS_DATA', top1_match: false,
+                 expected_count: 0 }};
+      }}
+      return computeAcOverlapMetrics(asisAc, s.autocomplete_actual_items);
+    }}
+    return computeAcOverlapMetrics(s.autocomplete_expected_items, s.autocomplete_actual_items);
+  }}
   if (comparisonMode === 'asis_actual') {{
     // Not cached at all (never queried) - distinct from "queried, genuinely
     // 0 results" (s.asis_cached === true, empty items), which falls through
@@ -1409,7 +2317,9 @@ function getModeMetrics(s) {{
         expected_count: 0,
       }};
     }}
-    return computeOverlapMetrics(s.asis_items, s.actual_items);
+    // Cắt về cửa sổ chấm - actual_items là danh sách ĐẦY ĐỦ để hiển thị,
+    // không phải tập dùng để tính điểm (xem SCORING_TOP_N).
+    return computeOverlapMetrics(s.asis_items, s.actual_items.slice(0, SCORING_TOP_N));
   }}
   return {{
     top5_overlap_count: s.top5_overlap_count, top5_overlap_pct: s.top5_overlap_pct,
@@ -1465,6 +2375,33 @@ function updateAllStats() {{
   setText('kpi-mismatch-value', mismatch);
   setText('kpi-mismatch-sub', pct(mismatch) + '% có độ lệch');
   setText('kpi-zero-value', zero);
+
+  // Số đếm tab Passed/Failed phải theo ĐỐI TƯỢNG đang chọn (user 2026-09-07).
+  // Trước đây 2 số này in cứng từ stats phía Python nên đổi sang autocomplete
+  // là hiển thị sai ngay.
+  let nPassed = 0, nFailed = 0, nAsisZero = 0;
+  scenarios.forEach(s => {{
+    const st = effectiveStatus(s);
+    if (st === 'passed') nPassed++;
+    else if (st === 'failed') nFailed++;
+    else if (st === 'discussion') nAsisZero++;
+  }});
+  setText('cnt-pf-passed', nPassed);
+  setText('cnt-pf-failed', nFailed);
+  setText('cnt-pf-asiszero', nAsisZero);
+  setText('cnt-failed-nobug', scenarios.filter(s => effectiveStatus(s) === 'failed' && !hasBug(s)).length);
+  setText('cnt-has-bug', scenarios.filter(s => hasBug(s)).length);
+  setText('cnt-reviewed', scenarios.filter(s => reviewedOf(s)).length);
+  setText('cnt-not-reviewed', scenarios.filter(s => !reviewedOf(s)).length);
+
+  // resolvedMode là thuộc tính CỦA RESPONSE ACTUAL nên không đổi theo
+  // comparisonMode/target - đếm 1 lần từ dữ liệu gốc.
+  setText('cnt-pf-na', scenarios.filter(s => effectiveStatus(s) === 'n/a').length);
+  setText('cnt-discussion', scenarios.filter(s => s.discussion_note || discussionStore[s.test_id]).length);
+  setText('cnt-vis-hidden', scenarios.filter(s => s.vis_hidden_skus && s.vis_hidden_skus.length).length);
+  setText('cnt-vis-searchonly', scenarios.filter(s => s.vis_search_only_skus && s.vis_search_only_skus.length).length);
+  setText('cnt-mode-lexical', scenarios.filter(s => s.resolved_mode === 'lexical').length);
+  setText('cnt-mode-hybrid', scenarios.filter(s => s.resolved_mode === 'hybrid').length);
 }}
 
 // --- Bug tracking (per-keyword "cần fix Expected" marker) ---------------
@@ -1473,6 +2410,7 @@ function updateAllStats() {{
 // folder) to avoid one report's bugs leaking into another report opened
 // later in the same browser.
 const REPORT_ID = {report_id_json};
+const REPORT_TARGET = {target_json};
 const BUG_STORAGE_KEY = 'smartsearch_bugs::' + REPORT_ID;
 const PF_STORE_NAME = {pf_store_json};
 
@@ -1496,8 +2434,12 @@ function persistOverrideStore() {{
   try {{ localStorage.setItem(PF_OVERRIDE_STORAGE_KEY, JSON.stringify(overrideStore)); }} catch (e) {{}}
 }}
 function toggleOverride(testId, targetStatus) {{
-  if (overrideStore[testId]) delete overrideStore[testId]; // already pending -> un-mark
-  else overrideStore[testId] = targetStatus;
+  // Key mang tiền tố "AC::" khi đang ở đối tượng AutoComplete (user
+  // 2026-09-07) - nếu dùng thẳng test_id thì một cú đánh giá cho autocomplete
+  // sẽ ghi đè luôn phán quyết search của cùng keyword.
+  const key = comparisonTarget === 'autocomplete' ? 'AC::' + testId : testId;
+  if (overrideStore[key]) delete overrideStore[key]; // already pending -> un-mark
+  else overrideStore[key] = targetStatus;
   persistOverrideStore();
   updateOverrideExportCount();
   renderScenarios();
@@ -1510,7 +2452,16 @@ function updateOverrideExportCount() {{
   if (btn) btn.disabled = count === 0;
 }}
 function exportOverrides() {{
-  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(), overrides: overrideStore }};
+  // Tách 2 nhánh theo tiền tố "AC::" để Python áp vào đúng nhánh state
+  // (entries vs entries_autocomplete). Key "overrides" giữ nguyên tên/định
+  // dạng cũ nên --apply-overrides của các bản export trước vẫn đọc được.
+  const ovSearch = {{}}, ovAc = {{}};
+  Object.keys(overrideStore).forEach(k => {{
+    if (k.startsWith('AC::')) ovAc[k.slice(4)] = overrideStore[k];
+    else ovSearch[k] = overrideStore[k];
+  }});
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    overrides: ovSearch, overrides_autocomplete: ovAc }};
   downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
     'pass_fail_overrides/pass_fail_overrides_' + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
 }}
@@ -1519,8 +2470,27 @@ function exportOverrides() {{
 // client bookkeeping needed for those. overrideStore only tracks NEW,
 // not-yet-exported clicks made in this browser this session, and wins over
 // the server value if both exist (the user is actively changing their mind).
-function effectiveStatus(s) {{ return overrideStore[s.test_id] || s.pass_fail_status; }}
+// Pass/Fail thô của đối tượng đang chọn (chưa tính override client-side).
+// Autocomplete có bộ ac_* riêng do Python tính + lưu ở nhánh state
+// entries_autocomplete (user 2026-09-07).
+function baseStatusOf(s) {{
+  return comparisonTarget === 'autocomplete' ? (s.ac_pass_fail_status || 'n/a') : s.pass_fail_status;
+}}
+// overrideStore là click chưa export của phiên này; key phải TÁCH theo đối
+// tượng, nếu không thì đánh Passed cho autocomplete sẽ vô tình đổi luôn
+// phán quyết search của cùng test_id.
+function overrideKeyOf(s) {{
+  return comparisonTarget === 'autocomplete' ? 'AC::' + s.test_id : s.test_id;
+}}
+function effectiveStatus(s) {{ return overrideStore[overrideKeyOf(s)] || baseStatusOf(s); }}
 function isEffectivelyPassed(s) {{ return effectiveStatus(s) === 'passed'; }}
+function hasBug(s) {{ return !!(s.bug_note || bugStore[s.test_id]); }}
+// Đã duyệt tay = có override đã lưu (dù trùng hay khác kết quả máy), HOẶC vừa
+// bấm trong phiên này. Theo đúng đối tượng đang chọn ở dropdown.
+function reviewedOf(s) {{
+  const saved = comparisonTarget === 'autocomplete' ? s.ac_pass_fail_reviewed : s.pass_fail_reviewed;
+  return !!(saved || overrideStore[overrideKeyOf(s)]);
+}}
 loadOverrideStore();
 
 // Bug marking + Engine-improvement marking (user, 2026-09-03): a Failed
@@ -1539,6 +2509,81 @@ let openBugPanels = {{}};  // test_id -> bool
 let engineStore = {{}};
 let engineDraft = {{}};
 let openEnginePanels = {{}};
+// Discussion + Remove (user 2026-09-08). Cùng cơ chế localStorage + export
+// JSON + --apply-* như bug/engine note, nhưng khác mục đích:
+//   - discussion: keyword CHƯA chốt đúng/sai, cần bàn -> hiện badge 💬 và lọc
+//     được, kèm comment.
+//   - remove: keyword loại HẲN khỏi bộ test -> lần compare sau không xuất
+//     hiện nữa (danh sách loại lưu vĩnh viễn phía Python).
+const DISCUSSION_STORAGE_KEY = 'smartsearch_discussion::' + REPORT_ID;
+const REMOVE_STORAGE_KEY = 'smartsearch_removed::' + REPORT_ID;
+let discussionStore = {{}};
+let discussionDraft = {{}};
+let openDiscussionPanels = {{}};
+let removeStore = {{}};
+
+function loadDiscussionStore() {{
+  try {{
+    const raw = localStorage.getItem(DISCUSSION_STORAGE_KEY);
+    discussionStore = raw ? JSON.parse(raw) : {{}};
+  }} catch (e) {{ discussionStore = {{}}; }}
+}}
+function persistDiscussionStore() {{
+  try {{ localStorage.setItem(DISCUSSION_STORAGE_KEY, JSON.stringify(discussionStore)); }} catch (e) {{}}
+}}
+function loadRemoveStore() {{
+  try {{
+    const raw = localStorage.getItem(REMOVE_STORAGE_KEY);
+    removeStore = raw ? JSON.parse(raw) : {{}};
+  }} catch (e) {{ removeStore = {{}}; }}
+}}
+function persistRemoveStore() {{
+  try {{ localStorage.setItem(REMOVE_STORAGE_KEY, JSON.stringify(removeStore)); }} catch (e) {{}}
+}}
+// KHÔNG nhận query qua tham số: nhúng JSON.stringify(query) vào onclick="..."
+// làm dấu nháy kép trong chuỗi đóng sớm thuộc tính HTML -> handler vỡ cú pháp,
+// bấm nút không chạy gì. Tra ngược từ mảng scenarios cho an toàn tuyệt đối.
+function toggleRemove(testId) {{
+  if (removeStore[testId]) delete removeStore[testId];
+  else {{
+    const sc = scenarios.find(x => x.test_id === testId);
+    removeStore[testId] = {{ test_id: testId, query: sc ? sc.query : '',
+                             dimension: sc ? sc.dimension : null,
+                             markedAt: new Date().toISOString() }};
+  }}
+  persistRemoveStore();
+  updateRemoveExportCount();
+  renderScenarios();
+}}
+function updateRemoveExportCount() {{
+  const n = Object.keys(removeStore).length;
+  const el = document.getElementById('removeCount');
+  const btn = document.getElementById('exportRemoveBtn');
+  if (el) el.textContent = n;
+  if (btn) btn.disabled = n === 0;
+}}
+function updateDiscussionExportCount() {{
+  const n = Object.keys(discussionStore).length;
+  const el = document.getElementById('discussionCount');
+  const btn = document.getElementById('exportDiscussionBtn');
+  if (el) el.textContent = n;
+  if (btn) btn.disabled = n === 0;
+}}
+function exportRemovals() {{
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    reportId: REPORT_ID, removals: removeStore }};
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'removed_scenarios/removed_scenarios_' + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}}
+function exportDiscussions() {{
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(),
+                    reportId: REPORT_ID, target: REPORT_TARGET, notes: discussionStore }};
+  downloadBlob(JSON.stringify(payload, null, 2), 'application/json',
+    'discussion_notes/discussion_notes_' + (REPORT_TARGET === 'search' ? '' : REPORT_TARGET + '_')
+    + PF_STORE_NAME + '_' + new Date().toISOString().slice(0, 10) + '.json');
+}}
+loadDiscussionStore();
+loadRemoveStore();
 
 function loadBugStore() {{
   try {{
@@ -1587,6 +2632,11 @@ function updateExportButtonCount() {{
   const engineCountEl = document.getElementById('engineCountJson');
   if (engineCountEl) engineCountEl.textContent = engineCount;
   if (engineBtn) engineBtn.disabled = engineCount === 0;
+
+  // saveNote() gọi hàm này cho MỌI kind, nên discussion phải cập nhật ở đây
+  // luôn - nếu không, đánh dấu discussion xong nút Xuất vẫn disabled.
+  if (typeof updateDiscussionExportCount === 'function') updateDiscussionExportCount();
+  if (typeof updateRemoveExportCount === 'function') updateRemoveExportCount();
 }}
 
 function downloadBlob(content, mimeType, filename) {{
@@ -1602,9 +2652,11 @@ function downloadBlob(content, mimeType, filename) {{
 }}
 
 function _kindRefs(kind) {{
-  return kind === 'engine'
-    ? {{ store: engineStore, draft: engineDraft, open: openEnginePanels, persist: persistEngineStore }}
-    : {{ store: bugStore, draft: bugDraft, open: openBugPanels, persist: persistBugStore }};
+  if (kind === 'engine')
+    return {{ store: engineStore, draft: engineDraft, open: openEnginePanels, persist: persistEngineStore }};
+  if (kind === 'discussion')
+    return {{ store: discussionStore, draft: discussionDraft, open: openDiscussionPanels, persist: persistDiscussionStore }};
+  return {{ store: bugStore, draft: bugDraft, open: openBugPanels, persist: persistBugStore }};
 }}
 
 function noteExportFilename(kind, ext) {{
@@ -1726,7 +2778,8 @@ function saveNote(kind, testId) {{
 }}
 
 function removeNote(kind, testId) {{
-  const label = kind === 'engine' ? 'ghi chú cải thiện Engine' : 'đánh dấu Bug';
+  const label = kind === 'engine' ? 'ghi chú cải thiện Engine'
+    : kind === 'discussion' ? 'đánh dấu Cần thảo luận' : 'đánh dấu Bug';
   if (!confirm('Bỏ ' + label + ' cho keyword này?')) return;
   const r = _kindRefs(kind);
   delete r.store[testId];
@@ -1757,7 +2810,8 @@ function exportNotesJson(kind) {{
   }}
   const notes = {{}};
   for (const e of entries) notes[e.test_id] = e;
-  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(), reportId: REPORT_ID, notes }};
+  const payload = {{ store: PF_STORE_NAME, exportedAt: new Date().toISOString(), reportId: REPORT_ID,
+                     target: REPORT_TARGET, notes }};
   downloadBlob(JSON.stringify(payload, null, 2), 'application/json', noteExportFilename(kind, 'json'));
 }}
 
@@ -1785,7 +2839,7 @@ for (const s of scenarios) {{
 function miniProductListHtml(items, emptyLabel) {{
   if (!items || !items.length) return `<div style="color:var(--text-muted);font-size:12px;padding:8px 0;">${{emptyLabel || '(không có dữ liệu)'}}</div>`;
   return '<ol style="margin:0;padding-left:20px;font-size:12px;line-height:1.6;">' +
-    items.slice(0, 10).map(it => `<li>${{escapeHtmlText(it.name || it.sku || '')}} <span style="color:var(--text-muted);">(${{escapeHtmlText(it.sku || '')}})</span></li>`).join('') +
+    items.slice(0, 20).map(it => `<li>${{escapeHtmlText(it.name || it.sku || '')}} <span style="color:var(--text-muted);">(${{escapeHtmlText(it.sku || '')}})</span></li>`).join('') +
     '</ol>';
 }}
 function getRegressionDetailHtml(s) {{
@@ -1800,7 +2854,7 @@ function getRegressionDetailHtml(s) {{
   return `
         <div class="regression-banner" style="margin-bottom: 16px;">
           <h2 style="font-size:14px;">${{detailTitle}}</h2>
-          <p>So sánh Actual lần chạy TRƯỚC (${{prevAt}}${{s.prev_compare_dir ? ', thư mục: ' + escapeHtmlText(s.prev_compare_dir) : ''}}) vs Actual lần này vs As-Is (hệ thống cũ) - top 10 mỗi cột.</p>
+          <p>So sánh Actual lần chạy TRƯỚC (${{prevAt}}${{s.prev_compare_dir ? ', thư mục: ' + escapeHtmlText(s.prev_compare_dir) : ''}}) vs Actual lần này vs As-Is (hệ thống cũ) - top 20 mỗi cột.</p>
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
             <div class="col-box"><div class="col-title">Actual (lần trước)</div>${{miniProductListHtml(s.prev_actual_top_items, 'Chưa có dữ liệu lần chạy trước')}}</div>
             <div class="col-box"><div class="col-title">Actual (lần này)</div>${{miniProductListHtml(s.actual_items, 'Actual rỗng')}}</div>
@@ -1809,9 +2863,186 @@ function getRegressionDetailHtml(s) {{
         </div>`;
 }}
 
+// Autocomplete panel (2026-09-07) - API products/autocomplete gọi riêng cho
+// mỗi query khi lấy Actual data. View-only: KHÔNG tính vào Pass/Fail hay bất
+// kỳ % so khớp nào của search (giống Recommendations backfill).
+// - Cột Actual: gợi ý thật từ API, tách nhãn type "term" (từ khóa, có
+//   hitCount) vs "product" (tên sản phẩm).
+// - Cột Expected: chỉ có ở batch nào Expected mang field
+//   autocomplete_suggestions (hiện tại: realsearch_history) - lúc đó tô màu
+//   gợi ý trùng/không trùng 2 chiều để QA đối chiếu nhanh.
+function getAutocompleteHtml(s) {{
+  const act = s.autocomplete_actual_items || [];
+  const exp = s.autocomplete_expected_items || [];
+  const asisAc = s.autocomplete_asis_items || [];
+  // Panel Expected của autocomplete (user 2026-09-07): CHỈ hiện khi cả 2 điều
+  // kiện đúng - dropdown đang chọn "Expected -> Actual" VÀ checkbox "hiển thị
+  // panel Expected" đang tick. Ở chế độ As-Is <-> Actual thì Expected không
+  // liên quan (Expected là kỳ vọng cho hệ thống MỚI) nên ẩn hẳn, kéo theo cả
+  // cột "Có ở Expected?" trong bảng Actual.
+  const showExpAc = !!(exp.length && comparisonMode === 'expected_actual' && showExpected);
+  if (!act.length && !showExpAc && !s.autocomplete_error && comparisonMode !== 'asis_actual') return '';
+
+  const typeTag = (t) => t
+    ? `<span class="meta-tag" style="margin:0 0 0 6px;font-size:10px;">${{escapeHtmlText(t)}}</span>`
+    : '';
+  const matchDot = (ok) => ok
+    ? `<span style="color:#15803d;font-weight:700;" data-tooltip="Gợi ý này có ở cả Expected và Actual">✓</span>`
+    : `<span style="color:#b91c1c;font-weight:700;" data-tooltip="Gợi ý này chỉ có ở một bên">✗</span>`;
+  // type="product" (tên sản phẩm đầy đủ) KHÔNG so được với Expected - engine
+  // mô phỏng chỉ sinh từ khóa ngắn, nên tô ✗ đỏ ở đây là sai bản chất.
+  const notComparable = `<span style="color:var(--text-muted);" data-tooltip="Gợi ý dạng tên sản phẩm (type=product) - engine mô phỏng chỉ sinh từ khóa ngắn nên không có cơ sở đối chiếu, KHÔNG phải dự đoán sai.">–</span>`;
+
+  const actRows = act.length
+    ? act.map(it => `
+        <tr>
+          <td><span class="rank-num">${{it.rank}}</span></td>
+          <td>
+            <span class="item-name">${{escapeHtmlText(it.text)}}</span>${{typeTag(it.type)}}
+            ${{it.hit_count != null ? `<span class="item-meta">hitCount: ${{it.hit_count}}</span>` : ''}}
+          </td>
+          ${{showExpAc ? `<td>${{it.comparable ? matchDot(it.matched_expected) : notComparable}}</td>` : ''}}
+        </tr>`).join('')
+    : `<tr><td colspan="${{showExpAc ? 3 : 2}}" style="color:var(--text-muted);padding:12px 8px;">${{
+        s.autocomplete_error
+          ? 'Lỗi khi gọi autocomplete: ' + escapeHtmlText(s.autocomplete_error)
+          : 'API autocomplete trả về 0 gợi ý cho query này.'}}</td></tr>`;
+
+  const expBox = showExpAc ? `
+          <div class="col-box">
+            <div class="col-title">
+              <span>📋 Autocomplete Expected (${{exp.length}})</span>
+              <span data-tooltip="Engine mô phỏng (search_engine.js) sinh 30 gợi ý từ khóa ngắn, còn API thật trả tối đa 8 (limit=8 như UI thật) và chỉ ${{s.autocomplete_comparable_count}} trong đó là type=term so được. Nên KHÔNG dùng 'trùng/30' làm điểm. Cửa sổ ngang nhau: trong ${{s.autocomplete_expected_topk_size}} gợi ý ĐẦU của Expected có ${{s.autocomplete_expected_topk_hit_count}} cái xuất hiện ở Actual. Tổng trùng trên cả 30: ${{s.autocomplete_overlap_count}}.">${{
+                s.autocomplete_comparable_count
+                  ? `TOP-${{s.autocomplete_expected_topk_size}} TRÙNG: ${{s.autocomplete_expected_topk_hit_count}}/${{s.autocomplete_expected_topk_size}}${{s.autocomplete_expected_topk_pct != null ? ` (${{s.autocomplete_expected_topk_pct}}%)` : ''}}`
+                  : 'CHƯA ĐỐI CHIẾU ĐƯỢC'}} ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th><th>Có ở Actual?</th></tr></thead>
+              <tbody>
+                ${{exp.map(it => `
+                  <tr>
+                    <td><span class="rank-num">${{it.rank}}</span></td>
+                    <td><span class="item-name">${{escapeHtmlText(it.text)}}</span></td>
+                    <td>${{matchDot(it.matched_actual)}}</td>
+                  </tr>`).join('')}}
+              </tbody>
+            </table>
+          </div>` : '';
+
+  // Panel As-Is autocomplete (user 2026-09-07) - CHỈ hiện khi dropdown đang
+  // chọn "As-Is <-> Actual". Dữ liệu sẽ do lần chạy tới gọi API thật của hệ
+  // thống CŨ; hiện chưa có nên panel hiện đúng trạng thái "chưa gọi" kèm
+  // endpoint + response shape, để QA đối chiếu được ngay khi có data.
+  const ASIS_AC_ENDPOINT = 'GET https://www.lottemart.vn/v1/p/mart/es/vi_nsg/search/suggestion?q=&lt;query&gt;&amp;size=10';
+  const asisAcBox = comparisonMode !== 'asis_actual' ? '' : `
+          <div class="col-box asis-box">
+            <div class="col-title">
+              <span>🕰️ Autocomplete As-Is (${{asisAc.length}})</span>
+              <span data-tooltip="Gợi ý autocomplete của hệ thống ĐANG chạy thật trên lottemart.vn (không phải hệ thống mới đang test) - chỉ để tham khảo, không tính Pass/Fail. Response của API này chỉ là mảng STRING tên sản phẩm, không có type/hitCount như API mới.">${{
+                s.autocomplete_asis_cached ? 'HỆ THỐNG CŨ' : 'CHƯA GỌI API'}} ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th></tr></thead>
+              <tbody>
+                ${{asisAc.length
+                  ? asisAc.map(it => `
+                    <tr>
+                      <td><span class="rank-num">${{it.rank}}</span></td>
+                      <td><span class="item-name">${{escapeHtmlText(it.text)}}</span></td>
+                    </tr>`).join('')
+                  : `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;line-height:1.7;">
+                      ${{s.autocomplete_asis_cached
+                        ? 'Đã gọi API As-Is cho query này - hệ thống cũ trả về 0 gợi ý thật.'
+                        : `<b>Chưa có dữ liệu</b> - lần chạy tới sẽ gọi API thật để lấy.<br>
+                           <span style="font-family:ui-monospace,monospace;font-size:11px;">${{ASIS_AC_ENDPOINT}}</span><br>
+                           Response: <span style="font-family:ui-monospace,monospace;font-size:11px;">{{"data": ["Thịt Hến 300G", ...]}}</span><br>
+                           Đã verify endpoint không cần auth; cấu hình ở <span style="font-family:ui-monospace,monospace;font-size:11px;">config/environments.yaml &rarr; legacy.autocomplete_api</span>.`}}
+                    </td></tr>`}}
+              </tbody>
+            </table>
+          </div>`;
+
+  const prodBox = (s.autocomplete_products && s.autocomplete_products.length) ? `
+          <div class="col-box ac-box">
+            <div class="col-title">
+              <span>🛒 Autocomplete ACTUAL - Product preview (${{s.autocomplete_products.length}})</span>
+              <span data-tooltip="CŨNG LÀ ACTUAL: mảng products[] mà CHÍNH lần gọi API products/autocomplete ở trên trả về (hiện ngay trong dropdown gợi ý), tách riêng khỏi mảng suggestions[] chứ không phải nguồn dữ liệu khác. Vì vậy khối này xếp ngay dưới khối Autocomplete Actual, không xếp ngang hàng với Expected.">CÙNG 1 RESPONSE VỚI TRÊN ⓘ</span>
+            </div>
+            <table class="prod-table">
+              <thead><tr><th style="width:30px;">#</th><th>SKU / Sản phẩm</th></tr></thead>
+              <tbody>
+                ${{s.autocomplete_products.map(it => `
+                  <tr>
+                    <td><span class="rank-num">${{it.rank}}</span></td>
+                    <td>
+                      <span class="item-name">${{escapeHtmlText(it.name)}}</span>
+                      <span class="item-meta">SKU: ${{escapeHtmlText(it.sku)}} | ${{Number(it.price || 0).toLocaleString()}} đ</span>
+                    </td>
+                  </tr>`).join('')}}
+              </tbody>
+            </table>
+          </div>` : '';
+
+  return `
+        <div class="ac-section" style="margin-top:16px;">
+          <div class="ac-section-title">⌨️ Autocomplete (API riêng - chỉ để xem, không tính Pass/Fail)${{
+            s.autocomplete_latency_ms != null ? ` <span style="font-weight:400;color:var(--text-muted);font-size:11px;">${{s.autocomplete_latency_ms}}ms</span>` : ''}}</div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+            <!-- Cột Actual: gợi ý (suggestions[]) xếp TRÊN, product preview
+                 (products[]) xếp NGAY DƯỚI - cả hai đều là Actual, cùng đến
+                 từ MỘT lần gọi products/autocomplete (user 2026-09-07: "cả
+                 mục A và B đều là actual... move B sang hiển thị bên dưới A,
+                 vì rule là A chỉ show 8 record thôi"). Trước đây product
+                 preview nằm thành cột thứ 3 ngang hàng với Expected, dễ bị
+                 đọc nhầm thành một nguồn dữ liệu riêng. -->
+            <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="col-box ac-box">
+              <div class="col-title">
+                <span>💡 Autocomplete Actual (${{act.length}})</span>
+                <span data-tooltip="Gợi ý thật từ API products/autocomplete?q=<query>&limit=N. type=term là từ khóa gợi ý (có hitCount), type=product là tên sản phẩm - chỉ type=term mới đối chiếu được với Expected.">${{
+                  !showExpAc
+                    ? 'API THẬT'
+                    : (s.autocomplete_comparable_count
+                        ? `CÓ Ở EXPECTED: ${{s.autocomplete_actual_in_expected_count}}/${{s.autocomplete_comparable_count}} gợi ý type=term${{s.autocomplete_actual_in_expected_pct != null ? ` (${{s.autocomplete_actual_in_expected_pct}}%)` : ''}}`
+                        : 'KHÔNG CÓ type=term - không đối chiếu được')}} ⓘ</span>
+              </div>
+              <table class="prod-table">
+                <thead><tr><th style="width:30px;">#</th><th>Gợi ý</th>${{showExpAc ? '<th>Có ở Expected?</th>' : ''}}</tr></thead>
+                <tbody>${{actRows}}</tbody>
+              </table>
+            </div>
+            ${{prodBox}}
+            </div>
+            ${{asisAcBox}}
+            ${{expBox}}
+          </div>
+        </div>`;
+}}
+
+// Hàng nghĩa 5 ngoại ngữ dưới keyword. Trả chuỗi rỗng khi keyword không nằm
+// trong bộ dịch tay (typo/brand/vốn đã là ngoại ngữ) - im lặng bỏ qua là đúng,
+// không dựng dòng trống.
+function mlRowHtml(query) {{
+  const m = QUERY_MULTILANG[query];
+  if (!m) return '';
+  const chips = ML_ORDER
+    .filter(([code]) => m[code])
+    .map(([code, label]) =>
+      `<span class="ml-chip ml-${{code}}" onclick="event.stopPropagation();"`
+      + ` data-tooltip="Nghĩa ${{label}} của &quot;${{escapeHtmlText(query)}}&quot; - bản dịch tay của QA, dùng để copy đi thử trên hệ thống hoặc đối chiếu. KHÔNG phải dữ liệu do hệ thống trả về.">`
+      + `<b>${{label}}</b>${{escapeHtmlText(m[code])}}</span>`)
+    .join('');
+  return chips ? `<div class="ml-row">${{chips}}</div>` : '';
+}}
+
 function getPassFailBadgeHtml(s) {{
   if (s.pass_fail_status === 'n/a') return ''; // Expected-less file (demo) - no Pass/Fail concept
   const eff = effectiveStatus(s);
+  // As-Is 0 KQ nhưng Actual có KQ (user 2026-09-08): KHÔNG tự chấm đạt/không
+  // đạt - chờ người xem quyết. Override tay (nếu có) vẫn thắng, nên chỉ hiện
+  // nhãn này khi eff vẫn còn là 'discussion'.
+  if (eff === 'discussion') return `<span class="badge" style="background:#eef6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Hệ cũ (As-Is) không trả về kết quả nào, hệ mới trả về ${{(s.actual_items || []).length}} sản phẩm. Không có gì để đối chiếu nên không tự chấm - cần người xem xác nhận sản phẩm trả về có đúng ý không.">💬 As-Is 0 KQ - cần xem</span>`;
   const kindLabel = s.regression_kind === 'improved' ? 'CẢI THIỆN' : 'REGRESSION';
   const regressionTag = s.is_regression
     ? `<span class="badge badge-regression" data-tooltip="Lần compare TRƯỚC keyword này ${{s.prev_pass_fail_status}}, lần này ${{s.pass_fail_status}} (${{s.match_category}}) - xem lịch sử ở SmartSearch/test_data/compare/pass_fail_state_*.json">⚠️ ${{kindLabel}}</span>`
@@ -1827,11 +3058,19 @@ function getPassFailBadgeHtml(s) {{
   // both display with a distinct tag so it's clear this wasn't the
   // auto-classifier's own verdict.
   const pending = overrideStore[s.test_id];
+  // 3 trạng thái khác nhau, KHÔNG gộp (user 2026-09-09):
+  //   - đã ghi đè tay (khác kết quả máy)  -> "Điều chỉnh tay"
+  //   - đã duyệt tay, TRÙNG kết quả máy   -> "Đã duyệt" (trước đây không có
+  //     nhãn nào, nên 71 case QA đã xem qua trông y như case máy tự chấm)
+  //   - vừa bấm trong phiên này, chưa xuất -> "Vừa điều chỉnh"
+  const reviewedTag = reviewedOf(s)
+    ? `<span class="badge badge-reviewed" data-tooltip="QA đã rà soát tay và chấm ${{eff}} - kết quả này TRÙNG với kết quả máy tự chấm nên không có gì bị ghi đè, nhưng keyword ĐÃ được người xem qua. Lưu vĩnh viễn qua --apply-overrides.">👁 Đã duyệt</span>`
+    : '';
   const overrideTag = s.pass_fail_manual_override
-    ? `<span class="badge badge-review" data-tooltip="Đã điều chỉnh tay thành ${{eff}} (auto-classify vẫn ra ${{s.match_category}}) - lưu vĩnh viễn qua --apply-overrides">✔️ Điều chỉnh tay</span>`
-    : (pending ? `<span class="badge badge-review" data-tooltip="Vừa đánh dấu ${{pending}} trong trình duyệt này - bấm 'Xuất đánh giá Pass/Fail' rồi truyền lại qua --apply-overrides ở lần compare sau để lưu vĩnh viễn, nếu không sẽ mất khi đóng báo cáo này.">✔️ Vừa điều chỉnh (chưa xuất)</span>` : '');
-  if (eff === 'passed') return regressionTag + responseChangedTag + `<span class="badge badge-passed" data-tooltip="Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo), không đổi theo dropdown So sánh">✅ Passed</span>` + overrideTag;
-  return regressionTag + responseChangedTag + `<span class="badge badge-failed" data-tooltip="Khớp 1 phần/khớp thấp/zero result/no match - Pass/Fail tính theo Expected↔Actual (hoặc As-Is↔Actual nếu file không có Expected, như file demo)">❌ Failed</span>` + overrideTag;
+    ? `<span class="badge badge-review" data-tooltip="Đã điều chỉnh tay thành ${{eff}} (máy tự chấm ra khác) - lưu vĩnh viễn qua --apply-overrides">✔️ Điều chỉnh tay</span>`
+    : (pending ? `<span class="badge badge-review" data-tooltip="Vừa đánh dấu ${{pending}} trong trình duyệt này - bấm 'Xuất đánh giá Pass/Fail' rồi truyền lại qua --apply-overrides ở lần compare sau để lưu vĩnh viễn, nếu không sẽ mất khi đóng báo cáo này.">✔️ Vừa điều chỉnh (chưa xuất)</span>` : reviewedTag);
+  if (eff === 'passed') return regressionTag + responseChangedTag + `<span class="badge badge-passed" data-tooltip="Hệ mới trả về kết quả khớp cao với hệ cũ đang chạy thật (HIGH_MATCH hoặc 100% SET). Pass/Fail LUÔN tính theo As-Is↔Actual, không đổi theo dropdown chế độ.">✅ Passed</span>` + overrideTag;
+  return regressionTag + responseChangedTag + `<span class="badge badge-failed" data-tooltip="Kết quả hệ mới lệch nhiều so với hệ cũ (khớp 1 phần/khớp thấp/không khớp), hoặc cả hai cùng 0 kết quả. Pass/Fail LUÔN tính theo As-Is↔Actual.">❌ Failed</span>` + overrideTag;
 }}
 
 // "Đánh giá lại" toggle - works BOTH directions (user 2026-09-03): Passed can
@@ -1846,6 +3085,17 @@ function getOverrideButtonHtml(s) {{
                     data-tooltip="Đang đánh dấu tay là ${{pending}}, chưa xuất - bấm để bỏ đánh dấu này."
                     onclick="event.stopPropagation(); toggleOverride('${{s.test_id}}', '${{pending}}')">↩️ Bỏ đánh giá lại</button>`;
   }}
+  // Từ trạng thái 'discussion' (As-Is 0 KQ) phải chọn được CẢ HAI hướng -
+  // nút 2 chiều thông thường chỉ lật passed<->failed nên sẽ không bao giờ tới
+  // được 'failed'.
+  if (eff === 'discussion') {{
+    return `<button type="button" class="pf-override-btn"
+                    data-tooltip="Xác nhận sản phẩm hệ mới trả về là ĐÚNG ý người dùng."
+                    onclick="event.stopPropagation(); toggleOverride('${{s.test_id}}', 'passed')">✅ Đánh giá: Passed</button>
+            <button type="button" class="pf-override-btn"
+                    data-tooltip="Sản phẩm hệ mới trả về KHÔNG đúng ý người dùng."
+                    onclick="event.stopPropagation(); toggleOverride('${{s.test_id}}', 'failed')">❌ Đánh giá: Failed</button>`;
+  }}
   const target = eff === 'passed' ? 'failed' : 'passed';
   const label = target === 'passed' ? '✅ Đánh giá lại: Passed' : '❌ Đánh giá lại: Failed';
   return `<button type="button" class="pf-override-btn"
@@ -1858,9 +3108,11 @@ function getOverrideButtonHtml(s) {{
 // on-screen regardless of whatever filter/pagination the user had active.
 function jumpToScenario(testId) {{
   if (!testId) return;
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.tab-btn[data-filter="all"]')?.classList.add('active');
+  // Xoá HẾT filter đang bật (multi-select) chứ không chỉ đặt lại currentFilter,
+  // nếu không thì scenario cần nhảy tới vẫn có thể bị lọc mất.
+  activeFilters.clear();
   currentFilter = 'all';
+  syncTabHighlight();
   searchQuery = '';
   document.getElementById('searchInput').value = '';
   selectedPageSize = 'all';
@@ -1937,15 +3189,14 @@ function renderScenarios() {{
   updateAllStats();
 
   const filtered = scenarios.filter(s => {{
-    // PF_* filters read s.pass_fail_status/s.is_regression directly - these
-    // are FIXED (always Expected<->Actual, computed once server-side), unlike
-    // s.__m.match_category which changes with the comparisonMode dropdown.
-    const matchFilter = (currentFilter === 'all')
-      || (currentFilter === 'PF_REGRESSION' ? s.is_regression
-          : currentFilter === 'PF_RESPONSE_CHANGED' ? s.response_changed
-          : currentFilter === 'PF_PASSED' ? effectiveStatus(s) === 'passed'
-          : currentFilter === 'PF_FAILED' ? effectiveStatus(s) === 'failed'
-          : s.__m.match_category === currentFilter);
+    // Multi-select filter (user 2026-09-07: "cho phép multiple selection
+    // badge (combine filter)"). Quy tắc kết hợp:
+    //   - CÙNG nhóm  -> OR  (VD chọn Passed + Failed = xem cả hai)
+    //   - KHÁC nhóm  -> AND (VD Failed + Hybrid = chỉ case vừa Failed vừa
+    //                        đi nhánh semantic)
+    // Không chọn gì / chọn "all" = không lọc. 3 nhóm: match category,
+    // trạng thái Pass-Fail, và nhánh xử lý resolvedMode.
+    const matchFilter = matchesActiveFilters(s);
     if (!matchFilter) return false;
 
     if (!searchQuery) return true;
@@ -1982,16 +3233,23 @@ function renderScenarios() {{
       <div class="scenario-header" onclick="toggleCard('${{s.test_id}}')">
         <div class="scenario-title-area">
           <span class="scenario-id">${{s.test_id}}</span>
-          <span class="scenario-query">"${{s.query}}"</span>
+          <span class="scenario-query" onclick="event.stopPropagation();"
+                ${{QUERY_TRANSLATIONS[s.query] ? `data-tooltip="Nghĩa tiếng Việt: ${{escapeHtmlText(QUERY_TRANSLATIONS[s.query])}}"` : ''}}
+                >"${{s.query}}"</span>${{QUERY_TRANSLATIONS[s.query]
+                  ? `<span class="query-vi" onclick="event.stopPropagation();" data-tooltip="Bản dịch do Claude cung cấp để dễ kiểm tra kết quả - không phải dữ liệu từ hệ thống.">→ ${{escapeHtmlText(QUERY_TRANSLATIONS[s.query])}}</span>`
+                  : ''}}
+          ${{mlRowHtml(s.query)}}
           ${{getBadgeHtml(s.__m.match_category, s.__m.top20_overlap_pct)}}
           ${{s.__m.top1_match ? '<span class="badge badge-exact" data-tooltip="Sản phẩm Top-1 khớp chính xác giữa 2 nguồn đang so sánh">Top-1 Match</span>' : ''}}
           ${{getPassFailBadgeHtml(s)}}
+          ${{(s.discussion_note || discussionStore[s.test_id]) ? `<span class="badge" style="background:#eef6ff;color:#1d4ed8;border:1px solid #93c5fd;" data-tooltip="Cần thảo luận: ${{escapeHtmlText(((s.discussion_note && s.discussion_note.note) || (discussionStore[s.test_id] && discussionStore[s.test_id].note) || '').slice(0,180))}}">💬 Discussion</span>` : ''}}
+          ${{removeStore[s.test_id] ? '<span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;" data-tooltip="Đã đánh dấu loại khỏi bộ test - sẽ biến mất sau khi Xuất Remove và chạy lại compare với --apply-removals">🗑 Sẽ bị loại</span>' : ''}}
         </div>
         <div class="scenario-badges">
-          <span class="meta-tag" data-tooltip="Chiều kiểm thử / Dimension của từ khóa">Dim: ${{s.dimension}}</span>
-          <span class="meta-tag" data-tooltip="Luồng xử lý route (keyword hoặc keyword_ai)">Route: ${{s.route || 'auto'}}</span>
           ${{s.actual_latency_ms != null ? `<span class="meta-tag" data-tooltip="Thời gian API search (Actual) thực sự phản hồi khi lấy dữ liệu này - đo lúc chạy data test, lưu sẵn trong file actual.">⏱️ ${{s.actual_latency_ms}}ms</span>` : ''}}
-          <span class="meta-tag" data-tooltip="[Mục 16] Số SKU trùng khớp trong 5 kết quả đầu tiên, theo chế độ so sánh đang chọn (${{s.__m.top5_overlap_count}}/5 sản phẩm)">Top-5: ${{s.__m.top5_overlap_count}}/5 (${{s.__m.top5_overlap_pct}}%)</span>
+          ${{(s.vis_search_only_skus && s.vis_search_only_skus.length) ? `<span class="meta-tag" style="background:#fefce8;border:1px solid #fde68a;color:#854d0e;" data-tooltip="Kết quả có ${{s.vis_search_only_skus.length}} sản phẩm CHỈ TÌM KIẾM RA ĐƯỢC, không hiện khi duyệt danh mục (visibility_search=true, visibility_catalog=false). Không phải lỗi. SKU: ${{s.vis_search_only_skus.join(', ')}}">🔍 ${{s.vis_search_only_skus.length}} SP chỉ tìm kiếm</span>` : ''}}
+          ${{(s.vis_hidden_skus && s.vis_hidden_skus.length) ? `<span class="meta-tag" style="background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;" data-tooltip="Kết quả có ${{s.vis_hidden_skus.length}} sản phẩm bị ẨN HOÀN TOÀN trên production (visibility_search=false và visibility_catalog=false): không tìm ra được, cũng không có trong danh mục. SKU: ${{s.vis_hidden_skus.join(', ')}}. Engine chưa đọc hai cờ này nên vẫn trả về chúng - lệch với Actual ở đây nhiều khả năng là mismatch GIẢ.">🚷 ${{s.vis_hidden_skus.length}} SP bị ẩn</span>` : ''}}
+          ${{s.resolved_mode ? `<span class="meta-tag" style="${{s.resolved_mode === 'hybrid' ? 'background:#f5f3ff;border:1px solid #ddd6fe;color:#6d28d9;' : 'background:#ecfeff;border:1px solid #a5f3fc;color:#0e7490;'}}" data-tooltip="Nhánh backend THẬT đã dùng cho query này (response_meta.resolvedMode). hybrid = CÓ semantic; lexical = thuần khớp từ khoá.${{s.lexical_confidence != null ? ' lexicalConfidence: ' + Number(s.lexical_confidence).toFixed(3) : ''}}">${{s.resolved_mode === 'hybrid' ? '🧠 hybrid' : '🔤 lexical'}}</span>` : ''}}
           <span class="meta-tag" style="background: rgba(2, 132, 199, 0.12); color: #0369a1; font-weight: 600;" data-tooltip="[Mục 17] Số SKU trùng khớp trong 20 kết quả đầu tiên, theo chế độ so sánh đang chọn (${{s.__m.top20_overlap_count}}/${{s.__m.expected_count}} sản phẩm)">Top-20: ${{s.__m.top20_overlap_count}}/${{s.__m.expected_count}} (${{s.__m.top20_overlap_pct}}%)</span>
           ${{getOverrideButtonHtml(s)}}
           <button type="button" class="bug-btn ${{bugStore[s.test_id] ? 'marked' : ''}}" id="bugbtn-${{s.test_id}}"
@@ -2001,6 +3259,12 @@ function renderScenarios() {{
           <button type="button" class="engine-btn ${{engineStore[s.test_id] ? 'marked' : ''}}" id="enginebtn-${{s.test_id}}"
                   data-tooltip="Failed do SEARCH ENGINE của mình sai (Expected tự sinh ra không đúng, không phải lỗi UI/data thật) - chỉ có ở chế độ Expected↔Actual. Đánh dấu kèm ghi chú Expected đúng phải là gì để cải thiện search_engine.js."
                   onclick="event.stopPropagation(); toggleNotePanel('engine', '${{s.test_id}}')">⚙️ ${{engineStore[s.test_id] ? 'Đã ghi cải thiện Engine' : 'Cải thiện Engine'}}</button>` : '' }}
+          <button type="button" class="disc-btn ${{discussionStore[s.test_id] ? 'marked' : ''}}" id="discbtn-${{s.test_id}}"
+                  data-tooltip="Đánh dấu keyword này CẦN THẢO LUẬN (chưa chốt đúng/sai) - kèm comment. Lần compare sau sẽ hiện badge 💬 và lọc được theo tab Discussion."
+                  onclick="event.stopPropagation(); toggleNotePanel('discussion', '${{s.test_id}}')">💬 ${{discussionStore[s.test_id] ? 'Đã ghi Discussion' : 'Mark discussion'}}</button>
+          <button type="button" class="rm-btn ${{removeStore[s.test_id] ? 'marked' : ''}}" id="rmbtn-${{s.test_id}}"
+                  data-tooltip="Loại keyword này KHỎI bộ test. Sau khi Xuất và chạy lại compare, keyword sẽ không còn xuất hiện trong báo cáo nữa (danh sách loại được lưu vĩnh viễn ở removed_scenarios_<store>.json)."
+                  onclick="event.stopPropagation(); toggleRemove('${{s.test_id}}')">${{removeStore[s.test_id] ? '↩️ Bỏ đánh dấu xoá' : '🗑 Remove khỏi scenario'}}</button>
           <span style="color: var(--text-muted); font-size: 12px;">▼</span>
         </div>
       </div>
@@ -2052,8 +3316,23 @@ function renderScenarios() {{
           ${{engineStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${{new Date(engineStore[s.test_id].markedAt).toLocaleString()}}</span>` : ''}}
         </div>
       </div>
+      <div class="bug-panel ${{openDiscussionPanels[s.test_id] ? 'open' : ''}}" id="discussionpanel-${{s.test_id}}" style="background:#eef6ff; border-color:#3b82f6;">
+        <div class="bug-panel-title" style="color:#1d4ed8;">💬 Cần thảo luận - "${{s.query}}"</div>
+        <span class="bug-field-label">Nội dung cần bàn (vì sao chưa chốt được đúng/sai, cần ai xác nhận điều gì):</span>
+        <textarea class="bug-textarea" id="discussiontext-${{s.test_id}}" placeholder="Ví dụ: chưa rõ nghiệp vụ - query này nên ưu tiên nhóm sản phẩm nào? Cần BA xác nhận.">${{(discussionDraft[s.test_id] && discussionDraft[s.test_id].note) || ''}}</textarea>
+        <div class="bug-actions">
+          <button type="button" class="bug-save-btn" onclick="saveNote('discussion', '${{s.test_id}}')">💾 Lưu Discussion</button>
+          <button type="button" class="bug-cancel-btn" onclick="toggleNotePanel('discussion', '${{s.test_id}}')">Đóng</button>
+          ${{discussionStore[s.test_id] ? `<button type="button" class="bug-remove-btn" onclick="removeNote('discussion', '${{s.test_id}}')">🗑 Bỏ đánh dấu</button>` : ''}}
+          ${{discussionStore[s.test_id] ? `<span class="bug-saved-note">Đã lưu lúc ${{new Date(discussionStore[s.test_id].markedAt).toLocaleString()}}</span>` : ''}}
+        </div>
+      </div>
       <div class="scenario-body" id="body-${{s.test_id}}">
         ${{(s.is_regression || s.response_changed) ? getRegressionDetailHtml(s) : ''}}
+        <!-- Đối tượng AUTOCOMPLETE (user 2026-09-07): panel autocomplete lên
+             TRÊN phần search result. Ở đối tượng Search Result thì panel này
+             ẩn hẳn (xem cuối scenario-body: chỉ render 1 trong 2 chỗ). -->
+        ${{comparisonTarget === 'autocomplete' ? getAutocompleteHtml(s) : ''}}
         <div class="compare-columns ${{panelsClass()}}">
           ${{HAS_ASIS ? `
           <!-- As-Is Column (current/legacy production system - reference only, not scored) -->
@@ -2090,10 +3369,10 @@ function renderScenarios() {{
           <!-- Expected Column -->
           <div class="col-box">
             <div class="col-title">
-              <span>📋 Expected Top Results (${{s.expected_items.length}})</span>
+              <span data-tooltip="Danh sách hiển thị TOÀN BỘ sản phẩm Expected trả về. Chỉ ${{SCORING_TOP_N}} sản phẩm đầu tham gia tính % khớp và Pass/Fail - phần dưới vạch vàng chỉ để xem.">📋 Expected — hiện ${{s.expected_items.length}} SP, chấm ${{Math.min(s.expected_items.length, SCORING_TOP_N)}}</span>
               <span data-tooltip="[Mục 18] Tổng số sản phẩm thỏa mãn tìm kiếm trong catalog gốc trước khi lấy Top 20 (hoặc Cap 80)">TOTAL BEFORE CAP: ${{s.expected_total_before_cap}} ⓘ</span>
             </div>
-            <table class="prod-table">
+            <div class="prod-scroll"><table class="prod-table">
               <thead>
                 <tr>
                   <th style="width: 30px;">#</th>
@@ -2103,19 +3382,20 @@ function renderScenarios() {{
                 </tr>
               </thead>
               <tbody>
-                ${{s.expected_items.map(it => `
-                  <tr>
+                ${{s.expected_items.map((it, i) => `
+                  ${{windowEdgeRow(i, 4)}}
+                  <tr${{it.in_window === false ? ' style="opacity:.62;"' : ''}}>
                     <td><span class="rank-num">${{it.rank}}</span></td>
                     <td>
                       <span class="item-name">${{it.name}}</span>
-                      <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ</span>
+                      <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ${{visTagHtml(s, it.sku)}}</span>
                     </td>
                     <td><span class="meta-tag" style="margin:0;" data-tooltip="Tier chấm điểm và độ liên quan của sản phẩm">${{it.tier || '-'}} (${{it.score || '-'}})</span></td>
                     <td>${{getStatusTagHtml(it.status, it.actual_rank, 'expected')}}</td>
                   </tr>
                 `).join('')}}
               </tbody>
-            </table>
+            </table></div>
           </div>
           ` : ''}}
 
@@ -2126,10 +3406,10 @@ function renderScenarios() {{
                2026-09-03). -->
           <div class="col-box">
             <div class="col-title">
-              <span>🚀 Actual Top Results (${{s.actual_items.length}})</span>
+              <span data-tooltip="Danh sách hiển thị TOÀN BỘ sản phẩm Actual trả về (tối đa 50 - đúng pageSize lúc crawl, không phải toàn bộ totalHits). Chỉ ${{SCORING_TOP_N}} sản phẩm đầu tham gia tính % khớp và Pass/Fail.">🚀 Actual — hiện ${{s.actual_items.length}} SP, chấm ${{Math.min(s.actual_items.length, SCORING_TOP_N)}}</span>
               <span data-tooltip="[Mục 19] Tổng số sản phẩm do hệ thống Actual tìm thấy trước khi phân trang hiển thị Top 20">TOTAL BEFORE CAP: ${{s.actual_total_before_cap}} ⓘ</span>
             </div>
-            <table class="prod-table">
+            <div class="prod-scroll"><table class="prod-table">
               <thead>
                 <tr>
                   <th style="width: 30px;">#</th>
@@ -2139,12 +3419,13 @@ function renderScenarios() {{
                 </tr>
               </thead>
               <tbody>
-                ${{(comparisonMode === 'asis_actual' ? computeActualStatusVsBase(s.actual_items, s.asis_items) : s.actual_items).map(it => `
-                  <tr>
+                ${{(comparisonMode === 'asis_actual' ? computeActualStatusVsBase(s.actual_items, s.asis_items) : s.actual_items).map((it, i) => `
+                  ${{windowEdgeRow(i, comparisonMode === 'asis_actual' ? 3 : 4)}}
+                  <tr${{it.in_window === false ? ' style="opacity:.62;"' : ''}}>
                     <td><span class="rank-num">${{it.rank}}</span></td>
                     <td>
                       <span class="item-name">${{it.name}}</span>
-                      <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ</span>
+                      <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ${{visTagHtml(s, it.sku)}}</span>
                     </td>
                     ${{comparisonMode === 'asis_actual' ? '' : `<td><span class="meta-tag" style="margin:0;" data-tooltip="Chế độ search mode và điểm số của backend">${{it.tier || '-'}} (${{it.score || '-'}})</span></td>`}}
                     <td>${{comparisonMode === 'asis_actual'
@@ -2153,9 +3434,40 @@ function renderScenarios() {{
                   </tr>
                 `).join('')}}
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
+        ${{s.recommendation_triggered ? `
+        <!-- Recommendations backfill (2026-09-07): only called when Actual
+             search_results <= 20 sản phẩm - hiển thị riêng, KHÔNG tính vào
+             match_category/Pass-Fail (chỉ để QA xem thử recommendations trả
+             về gì cho query này). Full-width, bên dưới lưới so sánh chính. -->
+        <div class="col-box rec-box" style="margin-top:16px;">
+          <div class="col-title">
+            <span>🎁 Recommendations backfill (${{s.recommendation_items.length}})</span>
+            <span data-tooltip="API products/recommendations được gọi thêm vì Actual search chỉ trả về ${{s.actual_items.length}} sản phẩm (<= 20) - chỉ để xem tham khảo, KHÔNG tính vào Pass/Fail hay bất kỳ % so khớp nào.">CHỈ ĐỂ XEM - KHÔNG TÍNH ĐIỂM ⓘ</span>
+          </div>
+          <table class="prod-table">
+            <thead>
+              <tr>
+                <th style="width: 30px;">#</th>
+                <th>SKU / Sản phẩm</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${{s.recommendation_items.length ? s.recommendation_items.map(it => `
+                <tr>
+                  <td><span class="rank-num">${{it.rank}}</span></td>
+                  <td>
+                    <span class="item-name">${{it.name}}</span>
+                    <span class="item-meta">SKU: ${{it.sku}} | ${{Number(it.price || 0).toLocaleString()}} đ</span>
+                  </td>
+                </tr>
+              `).join('') : `<tr><td colspan="2" style="color:var(--text-muted);padding:12px 8px;">Đã gọi recommendations cho query này nhưng API trả về 0 sản phẩm.</td></tr>`}}
+            </tbody>
+          </table>
+        </div>
+        ` : ''}}
       </div>
     </div>
   `).join('');
@@ -2174,15 +3486,34 @@ function toggleCard(id) {{
   if (body) body.classList.toggle('open');
 }}
 
+// Tô sáng ĐÚNG các badge đang bật (nhiều badge cùng lúc). "Tất cả" chỉ sáng
+// khi không có filter nào được chọn.
+function syncTabHighlight() {{
+  document.querySelectorAll('.tab-btn').forEach(b => {{
+    const f = b.getAttribute('data-filter');
+    const on = (f === 'all') ? activeFilters.size === 0 : activeFilters.has(f);
+    b.classList.toggle('active', on);
+  }});
+}}
+
 // Event Listeners
 document.querySelectorAll('.tab-btn').forEach(btn => {{
   btn.addEventListener('click', (e) => {{
     // currentTarget (not target) - the count is now wrapped in a <span> inside
     // some tab labels, so a click landing on the digits would otherwise miss
     // data-filter/active entirely.
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-    currentFilter = e.currentTarget.getAttribute('data-filter');
+    // Multi-select (user 2026-09-07): bấm để BẬT/TẮT từng badge, chọn được
+    // nhiều cái cùng lúc. Riêng "Tất cả" là nút xoá hết lựa chọn.
+    const f = e.currentTarget.getAttribute('data-filter');
+    if (f === 'all') {{
+      activeFilters.clear();
+    }} else if (activeFilters.has(f)) {{
+      activeFilters.delete(f);
+    }} else {{
+      activeFilters.add(f);
+    }}
+    currentFilter = f;
+    syncTabHighlight();
     currentPage = 1;
     updateBannerVisibility();
     renderScenarios();
@@ -2196,16 +3527,34 @@ document.querySelectorAll('.tab-btn').forEach(btn => {{
 function updateBannerVisibility() {{
   const regressionBanner = document.getElementById('regressionBanner');
   const responseChangedBanner = document.getElementById('responseChangedBanner');
-  if (regressionBanner) regressionBanner.hidden = currentFilter !== 'PF_REGRESSION';
-  if (responseChangedBanner) responseChangedBanner.hidden = currentFilter !== 'PF_RESPONSE_CHANGED';
+  // Dùng activeFilters (multi-select) thay cho currentFilter: banner hiện khi
+  // filter tương ứng ĐANG BẬT, kể cả khi bật kèm filter khác.
+  if (regressionBanner) regressionBanner.hidden = !activeFilters.has('PF_REGRESSION');
+  if (responseChangedBanner) responseChangedBanner.hidden = !activeFilters.has('PF_RESPONSE_CHANGED');
+}}
+
+// checkbox 'Hiển thị panel Expected' và nút 'Xuất cải thiện Engine' chỉ có
+// ý nghĩa ở chế độ Expected↔Actual (As-Is không có panel Expected riêng và
+// không có khái niệm 'cải thiện search_engine.js') - user request 2026-09-07:
+// ẩn cả 2 khi ở As-Is↔Actual, hiện lại khi chuyển sang Expected↔Actual.
+function updateModeVisibility() {{
+  const isAsis = comparisonMode === 'asis_actual';
+  const toggleWrap = document.getElementById('expectedToggleWrap');
+  const engineBtn = document.getElementById('exportEngineJsonBtn');
+  if (toggleWrap) toggleWrap.style.display = isAsis ? 'none' : '';
+  if (engineBtn) engineBtn.style.display = isAsis ? 'none' : '';
 }}
 
 document.getElementById('modeSelect').addEventListener('change', (e) => {{
   comparisonMode = e.target.value;
   currentPage = 1;
+  updateModeVisibility();
   renderScenarios();
 }});
 
+// Dropdown ĐỐI TƯỢNG (user 2026-09-07): đổi giữa Search Result và AutoComplete.
+// renderScenarios() tự recompute s.__m qua getModeMetrics() rồi gọi
+// updateAllStats(), nên KPI/%/badge/số đếm tab đều cập nhật theo đối tượng.
 document.getElementById('showExpectedToggle').addEventListener('change', (e) => {{
   showExpected = e.target.checked;
   renderScenarios();
@@ -2246,8 +3595,13 @@ document.getElementById('sortSelect').addEventListener('change', (e) => {{
 document.getElementById('exportBugJsonBtn').addEventListener('click', () => exportNotesJson('bug'));
 document.getElementById('exportEngineJsonBtn').addEventListener('click', () => exportNotesJson('engine'));
 document.getElementById('exportOverrideBtn').addEventListener('click', exportOverrides);
+document.getElementById('exportDiscussionBtn').addEventListener('click', exportDiscussions);
+document.getElementById('exportRemoveBtn').addEventListener('click', exportRemovals);
+updateDiscussionExportCount();
+updateRemoveExportCount();{target_lock_js}
 updateExportButtonCount();
 updateOverrideExportCount();
+updateModeVisibility();
 
 // Initial render
 renderScenarios();
@@ -2266,6 +3620,10 @@ def main():
     parser.add_argument("--no-asis", action="store_true",
                          help="skip the As-Is panel entirely (no cache lookup, no legacy calls) - "
                               "the normal offline expected-vs-actual compare only.")
+    parser.add_argument("--asis-lang", default=None,
+                        help="ngôn ngữ gọi hệ thống CŨ. Bỏ trống thì lấy trường 'lang' trong "
+                             "chính file Expected. Tự quy đổi ko->kr vì production dùng tên "
+                             "index kr_nsg còn dev gateway dùng ko.")
     parser.add_argument("--no-asis-fetch", action="store_true",
                          help="use the As-Is cache for already-cached queries but never call the "
                               "real legacy system for a cache miss (still free/offline) - use this "
@@ -2294,6 +3652,20 @@ def main():
     parser.add_argument("--apply-bug-notes", default=None,
                          help="path to a bug_notes_*.json exported from the report's '🐞 Xuất Bug' "
                               "button - merges into bug_notes_<store>.json (permanent).")
+    parser.add_argument("--target", choices=["search", "autocomplete"], default="search",
+                         help="Đối tượng chính của báo cáo. 'autocomplete' dựng 1 báo cáo RIÊNG cho "
+                              "gợi ý autocomplete: panel autocomplete lên trên, Pass/Fail tính theo "
+                              "autocomplete, và bug/discussion lưu vào file RIÊNG "
+                              "(bug_ac_notes_<store>.json) để không lẫn với Search Result.")
+    parser.add_argument("--apply-discussions",
+                         help="path tới discussion_notes_*.json xuất từ nút '💬 Xuất Discussion' - "
+                              "merge vào discussion_notes_<store>.json (vĩnh viễn), hiện badge 💬 và "
+                              "lọc được bằng tab Discussion.")
+    parser.add_argument("--apply-removals",
+                         help="path tới removed_scenarios_*.json xuất từ nút '🗑 Xuất Remove' - các "
+                              "keyword trong đó bị LOẠI khỏi mọi báo cáo compare từ nay (lưu ở "
+                              "removed_scenarios_<store>.json; file Expected/Actual KHÔNG bị sửa nên "
+                              "hoàn tác được bằng cách xoá entry trong file đó).")
     parser.add_argument("--apply-engine-notes", default=None,
                          help="path to an engine_improvement_notes_*.json exported from the report's "
                               "'⚙️ Xuất cải thiện Engine' button - merges into "
@@ -2320,13 +3692,34 @@ def main():
             sys.exit(f"--report-dir {args.report_dir} không có summary_stats.json - không phải thư mục output hợp lệ.")
         with open(prev_stats_path, "r", encoding="utf-8") as f:
             prev_stats = json.load(f)
-        args.expected = args.expected or prev_stats.get("expected_file")
-        args.actual = args.actual or prev_stats.get("actual_file")
+        # KHÔNG lấy lại y nguyên đường dẫn của lần chạy trước: nếu đã có bộ
+        # Actual/Expected mới hơn trên đĩa thì phải dùng bản mới, và nói rõ ra.
+        resolve_newest_inputs(args, prev_stats)
+
+    else:
+        # Chạy --apply-* MỘT MÌNH (không --expected/--actual/--report-dir) là chế
+        # độ "chỉ cập nhật trạng thái đã lưu, không sinh report". Tự điền file
+        # mới nhất ở đây sẽ phá chế độ đó - lần nào cũng đẻ thêm một thư mục
+        # report mà người chạy không hề yêu cầu.
+        _standalone_apply = (
+            (args.apply_overrides or args.apply_bug_notes or args.apply_engine_notes
+             or args.apply_discussions or args.apply_removals)
+            and not args.expected and not args.actual)
+        if not _standalone_apply:
+            resolve_newest_inputs(args)
 
     if args.apply_overrides:
         ov_store, ov_applied, ov_cleared = apply_manual_overrides(args.apply_overrides, args.store)
         print(f"[đánh giá lại] Đã áp dụng {ov_applied} override và gỡ {ov_cleared} override cũ "
               f"vào {pass_fail_state_path(ov_store)}")
+    if args.apply_discussions:
+        d_store, d_applied, d_cleared = apply_notes("discussion", args.apply_discussions, args.store)
+        print(f"[discussion] Đã áp dụng {d_applied} ghi chú thảo luận, gỡ {d_cleared} vào "
+              f"{_notes_state_path('discussion', d_store)}")
+    if args.apply_removals:
+        r_store, r_applied, r_cleared = apply_removals(args.apply_removals, args.store)
+        print(f"[remove] Đã loại {r_applied} keyword khỏi bộ test, khôi phục {r_cleared} vào "
+              f"{removed_state_path(r_store)}")
     if args.apply_bug_notes:
         bn_store, bn_applied, bn_cleared = apply_notes("bug", args.apply_bug_notes, args.store)
         print(f"[bug] Đã áp dụng {bn_applied} ghi chú bug, gỡ {bn_cleared} vào {_notes_state_path('bug', bn_store)}")
@@ -2334,7 +3727,8 @@ def main():
         en_store, en_applied, en_cleared = apply_notes("engine", args.apply_engine_notes, args.store)
         print(f"[engine] Đã áp dụng {en_applied} ghi chú cải thiện engine, gỡ {en_cleared} vào {_notes_state_path('engine', en_store)}")
 
-    if (args.apply_overrides or args.apply_bug_notes or args.apply_engine_notes) and not (args.expected and args.actual):
+    if (args.apply_overrides or args.apply_bug_notes or args.apply_engine_notes
+            or args.apply_discussions or args.apply_removals) and not (args.expected and args.actual):
         return
 
     if not args.expected or not args.actual:
@@ -2372,7 +3766,13 @@ def main():
     # Expected-vs-Actual match is at/under ASIS_MATCH_THRESHOLD_PCT (50%);
     # a real legacy-system call happens ONLY on a genuine cache miss for
     # such a scenario, and only if --no-asis-fetch wasn't passed.
-    asis_cache = load_asis_cache() if not args.no_asis else None
+    # Ngôn ngữ của bộ này: --asis-lang thắng, không có thì lấy từ chính file Expected.
+    asis_lang = args.asis_lang or exp_data.get("lang") or act_data.get("lang") or "vi"
+    asis_cache_file = asis_cache_path_for(asis_lang)
+    if asis_lang.lower() not in ("vi", ""):
+        print(f"[as-is] ngôn ngữ {asis_lang} -> gọi production bằng "
+              f"'{ASIS_LANG_MAP.get(asis_lang.lower(), asis_lang)}', cache riêng: {asis_cache_file.name}")
+    asis_cache = load_asis_cache(asis_cache_file) if not args.no_asis else None
     asis_lookups = 0
     asis_fetched_new = 0
 
@@ -2382,9 +3782,23 @@ def main():
     matched_by_query_count = 0
     unmatched_count = 0
 
+    # Keyword đã bị loại khỏi bộ test (user 2026-09-08, nút "🗑 Remove khỏi
+    # scenario"). Lọc NGAY ở đây nên nó biến mất khỏi mọi thứ phía sau: bảng
+    # scenario, mọi KPI, số đếm filter, Pass/Fail state, report client.
+    # Khớp theo CẢ test_id lẫn query chuẩn hoá: bộ gộp đánh lại test_id
+    # (NSG-ALL-xxxx) nên nếu sau này đánh số lại, khớp theo query vẫn giữ được
+    # quyết định loại.
+    removed_state = load_removed_state(exp_data.get("store") or act_data.get("store") or "nsg")
+    removed_ids = set(removed_state["entries"].keys())
+    removed_queries = {normalize_query(e.get("query")) for e in removed_state["entries"].values() if e.get("query")}
+    n_removed_skipped = 0
+
     for act_sc in act_scenarios:
         test_id = act_sc.get("test_id")
         query_norm = normalize_query(act_sc.get("query"))
+        if test_id in removed_ids or query_norm in removed_queries:
+            n_removed_skipped += 1
+            continue
 
         exp_sc = None
         if test_id and test_id in exp_by_id:
@@ -2408,7 +3822,8 @@ def main():
             query_text = exp_sc.get("query") or act_sc.get("query") or ""
             was_cached = normalize_query(query_text) in asis_cache["entries"]
             allow_fetch = (not args.no_asis_fetch) and res["top30_overlap_pct"] <= ASIS_MATCH_THRESHOLD_PCT
-            asis_sc = get_or_fetch_asis(query_text, asis_cache, allow_fetch=allow_fetch)
+            asis_sc = get_or_fetch_asis(query_text, asis_cache, allow_fetch=allow_fetch,
+                                        cache_path=asis_cache_file, asis_lang=asis_lang)
             if asis_sc is not None:
                 asis_lookups += 1
                 if not was_cached:
@@ -2416,6 +3831,21 @@ def main():
                 res["asis_items"] = build_asis_items(asis_sc, args.topn)
                 res["asis_total_before_cap"] = asis_sc.get("search_results_total_before_cap")
                 res["asis_cached"] = True
+                # Autocomplete As-Is phải vá ở ĐÂY chứ không thể để
+                # build_autocomplete_items() lo: compare_scenario() chạy TRƯỚC
+                # bước tra cache này nên asis_sc lúc đó luôn None (đúng lỗi làm
+                # panel As-Is autocomplete rỗng dù cache đã có 1.950 entry).
+                res["autocomplete_asis_items"] = build_asis_autocomplete_items(asis_sc)
+                res["autocomplete_asis_cached"] = asis_sc.get("autocomplete_suggestions") is not None
+                # Pass/Fail dựa trên As-Is (user 2026-09-08) - phải tính ở ĐÂY,
+                # sau khi asis_items đã có, và trước vòng lặp Pass/Fail bên dưới.
+                # PHẢI cắt về cửa sổ chấm. Từ 2026-09-17 actual_items chứa
+                # TOÀN BỘ kết quả (để hiển thị), nhưng tập đối chiếu Pass/Fail
+                # vẫn phải là top-N như trước - nếu truyền cả 50 vào đây thì
+                # other_set to ra, % khớp tăng giả và hàng loạt keyword nhảy
+                # từ failed sang passed mà backend không hề đổi.
+                res["asis_match_category"] = compute_asis_match_category(
+                    res["asis_items"], (res.get("actual_items") or [])[:args.topn])
 
         compared_list.append(res)
 
@@ -2427,8 +3857,9 @@ def main():
     # colliding across runs since it's always the same non-key).
     store = exp_data.get("store") or act_data.get("store") or "nsg"
     pf_state = load_pass_fail_state(store)
-    bug_notes_state = load_notes_state("bug", store)
-    engine_notes_state = load_notes_state("engine", store)
+    bug_notes_state = load_notes_state(note_kind("bug", args.target), store)
+    discussion_state = load_notes_state(note_kind("discussion", args.target), store)
+    engine_notes_state = load_notes_state(note_kind("engine", args.target), store)
     run_timestamp = datetime.now().isoformat()
     regression_alerts = []
     response_change_alerts = []
@@ -2454,6 +3885,51 @@ def main():
     # NO_MATCH. Skip the whole Pass/Fail/regression machinery + state
     # persistence for it - the report is for As-Is<->Actual eyeballing only.
     pf_enabled = any((s.get("search_results") or []) for s in exp_scenarios)
+
+    # --- Pass/Fail cho ĐỐI TƯỢNG AUTOCOMPLETE (user 2026-09-07) -------------
+    # Chạy cho MỌI scenario, độc lập hoàn toàn với nhánh search bên dưới:
+    # state riêng (entries_autocomplete), override riêng, regression riêng.
+    # Client (dropdown "Đối tượng") chọn đọc bộ ac_* này hay bộ của search.
+    ac_regression_alerts = []
+    for res in compared_list:
+        ac_key = str(res.get("test_id") or f"query:{normalize_query(res.get('query'))}")
+        ac_cat = compute_autocomplete_match_category(
+            res.get("autocomplete_expected_items"), res.get("autocomplete_actual_items"))
+        res["ac_match_category"] = ac_cat
+        # NO_EXPECTED_AC = không có Expected autocomplete để so -> "n/a", KHÔNG
+        # đánh Failed (khác với search: ở đây thiếu dữ liệu đối chiếu là do bộ
+        # Expected chưa sinh cho query đó, không phải do hệ thống trả sai).
+        ac_status = "n/a" if ac_cat == "NO_EXPECTED_AC" else compute_pass_fail_status(ac_cat)
+        ac_prev = pf_state["entries_autocomplete"].get(ac_key)
+        ac_prev_status = ac_prev.get("status") if ac_prev else None
+        ac_override = ac_prev.get("manual_override") if ac_prev else None
+        if ac_override in ("passed", "failed") and ac_status != ac_override:
+            ac_status = ac_override
+            res["ac_pass_fail_manual_override"] = True
+        else:
+            res["ac_pass_fail_manual_override"] = False
+        res["ac_pass_fail_reviewed"] = ac_override in ("passed", "failed")
+        res["ac_pass_fail_status"] = ac_status
+        res["ac_prev_pass_fail_status"] = ac_prev_status
+        ac_is_reg = (ac_prev_status is not None and ac_prev_status != ac_status
+                     and ac_prev_status != "n/a" and ac_status != "n/a")
+        res["ac_is_regression"] = ac_is_reg
+        res["ac_regression_kind"] = ("regressed" if ac_status == "failed" else "improved") if ac_is_reg else None
+        if ac_is_reg:
+            ac_regression_alerts.append({
+                "test_id": res.get("test_id"), "query": res["query"], "dimension": res.get("dimension"),
+                "prev_status": ac_prev_status, "current_status": ac_status,
+                "kind": res["ac_regression_kind"], "match_category": ac_cat,
+            })
+        pf_state["entries_autocomplete"][ac_key] = {
+            "query": res["query"], "status": ac_status, "match_category": ac_cat,
+            "last_run_at": run_timestamp,
+            "actual_top_items": [
+                {"text": it.get("text")} for it in (res.get("autocomplete_actual_items") or [])[:ACTUAL_SNAPSHOT_TOPN]
+            ],
+            **({"manual_override": ac_override} if ac_override else {}),
+        }
+
     for res in compared_list:
         if not pf_enabled:
             # Demo-file rule (2026-09-04): no Expected anywhere -> score
@@ -2480,6 +3956,7 @@ def main():
                 res["pass_fail_manual_override"] = True
             else:
                 res["pass_fail_manual_override"] = False
+            res["pass_fail_reviewed"] = demo_manual_override in ("passed", "failed")
             res["pass_fail_status"] = demo_status
             res["prev_pass_fail_status"] = demo_prev_status
             res["prev_actual_top_items"] = (demo_prev_entry or {}).get("actual_top_items") or []
@@ -2491,6 +3968,7 @@ def main():
             # again via --apply-bug-notes on this kind of file - same lookup
             # key as the normal pf_enabled path below).
             res["bug_note"] = bug_notes_state["entries"].get(demo_pf_key)
+            res["discussion_note"] = discussion_state["entries"].get(demo_pf_key)
             res["engine_note"] = engine_notes_state["entries"].get(demo_pf_key)
             # Regression tracking now works for demo-style (no-Expected)
             # files too (fixed 2026-09-04, "so sánh với file gần nhất để ra
@@ -2528,7 +4006,16 @@ def main():
             pf_state["entries"][demo_pf_key] = demo_new_entry
             continue
         pf_key = str(res.get("test_id") or f"query:{normalize_query(res.get('query'))}")
-        status = compute_pass_fail_status(res["match_category"])
+        # Chấm theo AS-IS ↔ ACTUAL, không theo Expected (user 2026-09-08).
+        # Không có dữ liệu As-Is thì để "n/a": không có gì để so thì không
+        # được phép kết luận đạt hay không đạt.
+        asis_cat = res.get("asis_match_category")
+        if asis_cat is None:
+            status = "n/a"                 # chưa crawl As-Is - không có gì để so
+        elif asis_cat == "ASIS_ZERO":
+            status = "discussion"          # hệ cũ 0 KQ, hệ mới có KQ - người quyết
+        else:
+            status = compute_pass_fail_status(asis_cat)
         prev_entry = pf_state["entries"].get(pf_key)
         prev_status = prev_entry.get("status") if prev_entry else None
         manual_override = prev_entry.get("manual_override") if prev_entry else None
@@ -2541,12 +4028,18 @@ def main():
             res["pass_fail_manual_override"] = True
         else:
             res["pass_fail_manual_override"] = False
+        # Cờ "ĐÃ DUYỆT TAY" tách RIÊNG khỏi cờ "đã ghi đè" (user 2026-09-09).
+        # Trước đây chỉ đánh dấu khi override KHÁC kết quả máy, nên 71 case QA
+        # duyệt và chấm Passed TRÙNG với máy trông y như case máy tự chấm -
+        # không biết đã có người xem qua hay chưa.
+        res["pass_fail_reviewed"] = manual_override in ("passed", "failed")
         res["pass_fail_status"] = status
         res["prev_pass_fail_status"] = prev_status
         res["prev_actual_top_items"] = (prev_entry or {}).get("actual_top_items") or []
         res["prev_run_at"] = (prev_entry or {}).get("last_run_at")
         res["prev_compare_dir"] = (prev_entry or {}).get("last_compare_dir")
         res["bug_note"] = bug_notes_state["entries"].get(pf_key)
+        res["discussion_note"] = discussion_state["entries"].get(pf_key)
         res["engine_note"] = engine_notes_state["entries"].get(pf_key)
         # Any status FLIP vs the last run - either direction - goes into the
         # regression filter (user, 2026-09-03: "nếu lần chạy này passed nhưng
@@ -2612,7 +4105,7 @@ def main():
         "timestamp": datetime.now().isoformat(),
         "expected_file": str(exp_path),
         "actual_file": str(act_path),
-        "asis_cache_file": str(ASIS_CACHE_PATH) if asis_cache is not None else None,
+        "asis_cache_file": str(asis_cache_file) if asis_cache is not None else None,
         "asis_match_threshold_pct": ASIS_MATCH_THRESHOLD_PCT if asis_cache is not None else None,
         "asis_scenarios_used": asis_lookups if asis_cache is not None else None,
         "asis_newly_fetched": asis_fetched_new if asis_cache is not None else None,
@@ -2644,15 +4137,53 @@ def main():
         },
         # Pass/Fail (user, 2026-09-03) - see compute_pass_fail_status()'s
         # docstring for exactly which match_category maps to which bucket.
+        # Cửa sổ chấm điểm. Danh sách sản phẩm hiển thị TOÀN BỘ, nhưng chỉ
+        # top-N đầu tham gia tính % khớp và Pass/Fail - HTML đọc số này để vẽ
+        # vạch ranh giới đúng chỗ khi chạy với --topn khác mặc định.
+        "scoring_top_n": args.topn,
         "passed_count": sum(1 for s in compared_list if s["pass_fail_status"] == "passed"),
         "failed_count": sum(1 for s in compared_list if s["pass_fail_status"] == "failed"),
+        "na_count": sum(1 for s in compared_list if s["pass_fail_status"] == "n/a"),
+        "asis_zero_count": sum(1 for s in compared_list if s["pass_fail_status"] == "discussion"),
+        "failed_no_bug_count": sum(1 for s in compared_list
+                                   if s["pass_fail_status"] == "failed" and not s.get("bug_note")),
+        "has_bug_count": sum(1 for s in compared_list if s.get("bug_note")),
+        "reviewed_count": sum(1 for s in compared_list if s.get("pass_fail_reviewed")),
+        "not_reviewed_count": sum(1 for s in compared_list if not s.get("pass_fail_reviewed")),
         "regression_count": len(regression_alerts),
         "regression_alerts": regression_alerts,
         "response_changed_count": len(response_change_alerts),
+        # Số liệu của đối tượng AUTOCOMPLETE (dropdown "Đối tượng") - tách
+        # riêng khỏi passed_count/failed_count của search ở trên.
+        "ac_passed_count": sum(1 for s in compared_list if s.get("ac_pass_fail_status") == "passed"),
+        "ac_failed_count": sum(1 for s in compared_list if s.get("ac_pass_fail_status") == "failed"),
+        "ac_na_count": sum(1 for s in compared_list if s.get("ac_pass_fail_status") == "n/a"),
+        "ac_regression_alerts": ac_regression_alerts,
+        "discussion_count": sum(1 for x in compared_list if x.get("discussion_note")),
+        "removed_scenarios_count": n_removed_skipped,
         "response_change_alerts": response_change_alerts,
         "pass_fail_state_file": str(pass_fail_state_path(store)),
         "pass_fail_store": store,
     }
+
+    # Số IN SẴN trong HTML phải là số của ĐÚNG đối tượng báo cáo (user
+    # 2026-09-10). JS có tính lại khi tải xong, nhưng để nguyên số của search
+    # thì: (a) nhấp nháy số sai lúc mở, (b) console in sai, (c) JS lỗi là
+    # người đọc thấy số của đối tượng khác mà không biết.
+    if args.target == "autocomplete":
+        _acs = lambda st: sum(1 for x in compared_list if x.get("ac_pass_fail_status") == st)
+        _hasbug = lambda x: bool(x.get("bug_note"))
+        stats.update({
+            "passed_count": _acs("passed"),
+            "failed_count": _acs("failed"),
+            "na_count": _acs("n/a"),
+            "asis_zero_count": _acs("discussion"),
+            "reviewed_count": sum(1 for x in compared_list if x.get("ac_pass_fail_reviewed")),
+            "not_reviewed_count": sum(1 for x in compared_list if not x.get("ac_pass_fail_reviewed")),
+            "failed_no_bug_count": sum(1 for x in compared_list
+                                       if x.get("ac_pass_fail_status") == "failed" and not _hasbug(x)),
+            "has_bug_count": sum(1 for x in compared_list if _hasbug(x)),
+        })
 
     # Determine out_dir: ALWAYS date+time-marked (not just date - two runs on
     # the same day must get visibly different folder names on their own,
@@ -2673,8 +4204,25 @@ def main():
         preferred_out_dir = Path(args.report_dir)
     else:
         label = derive_label(exp_path, act_path)
+        # Bộ theo ngôn ngữ thì viết HOA mã ngôn ngữ trong tên thư mục, để
+        # run_KO_... / run_EN_... nhìn là phân biệt ngay với bộ tiếng Việt
+        # (user 2026-09-17: "tên report compare nhớ thêm KO, EN để dễ phân biệt").
+        if label.lower() in ("ko", "kr", "en", "ja", "ru", "zh"):
+            label = label.upper()
         ts_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-        preferred_out_dir = Path(f"SmartSearch/test_data/compare/run_{label}_{ts_str}")
+        # Gắn mốc dữ liệu của CẢ Expected lẫn Actual vào tên thư mục (user
+        # 2026-09-17), để nhìn tên là biết report chạy trên bộ nào - không phải
+        # mở summary_stats mới biết.
+        _exp_tok = short_date_token(exp_path)
+        _act_tok = short_date_token(act_path)
+        if _exp_tok:
+            label += f"_exp{_exp_tok}"
+        if _act_tok:
+            label += f"_act{_act_tok}"
+        # Gắn đối tượng vào tên thư mục: 2 báo cáo cùng ngày mà không phân biệt
+        # được search hay autocomplete thì rất dễ mở nhầm.
+        _suffix = "" if args.target == "search" else "_autocomplete"
+        preferred_out_dir = Path(f"SmartSearch/test_data/compare/run_{label}{_suffix}_{ts_str}")
     if args.overwrite:
         out_dir = preferred_out_dir
         print(f"[overwrite] Ghi đè trực tiếp vào {out_dir} (không tạo thư mục mới).")
@@ -2714,7 +4262,11 @@ def main():
     save_json(out_dir / "summary_stats.json", stats)
 
     # Generate HTML Dashboard with Tooltips
+    # Gắn cờ hiển thị TRƯỚC khi sinh HTML, để filter "Sản phẩm bị ẩn" có dữ liệu.
+    annotate_visibility(compared_list, act_data.get("store", "nsg"))
+
     generate_html_report(stats, compared_list, exp_data, act_data, out_dir / "compare_report.html",
+                         target=args.target,
                           report_id=str(out_dir).replace("\\", "/"))
 
     print(f"\n=======================================================")
@@ -2723,8 +4275,25 @@ def main():
     if asis_cache is not None:
         print(f"🕰️  As-Is: hiển thị cho {asis_lookups}/{total} scenario (mọi mức % khớp, miễn có trong cache) - "
               f"{asis_fetched_new} query mới phải gọi hệ thống cũ thật (chỉ tự động gọi khi ≤{ASIS_MATCH_THRESHOLD_PCT}% khớp), "
-              f"{asis_lookups - asis_fetched_new} lấy từ cache có sẵn. Cache: {ASIS_CACHE_PATH}")
-    print(f"✅ Passed: {stats['passed_count']}  ❌ Failed: {stats['failed_count']}")
+              f"{asis_lookups - asis_fetched_new} lấy từ cache có sẵn. Cache: {asis_cache_file}")
+    if args.target == "autocomplete":
+        print(f"⌨️  ĐỐI TƯỢNG: AUTOCOMPLETE (bug/discussion lưu riêng ở "
+              f"{_notes_state_path('bug_ac', store).name} / {_notes_state_path('discussion_ac', store).name})")
+        print(f"✅ Passed: {stats.get('ac_passed_count', 0)}  ❌ Failed: {stats.get('ac_failed_count', 0)}"
+              f"  ➖ n/a: {sum(1 for x in compared_list if x.get('ac_pass_fail_status') == 'n/a')}"
+              f"   (Search Result: {sum(1 for x in compared_list if x.get('pass_fail_status') == 'passed')}"
+              f"/{sum(1 for x in compared_list if x.get('pass_fail_status') == 'failed')}"
+              f" - không phải đối tượng của báo cáo này)")
+    else:
+        print(f"✅ Passed: {stats['passed_count']}  ❌ Failed: {stats['failed_count']}")
+    if stats.get("failed_no_bug_count"):
+        print(f"🔴 {stats['failed_no_bug_count']} keyword FAILED nhưng CHƯA ghi bug "
+              f"(đã ghi bug: {stats.get('has_bug_count', 0)}) - lọc bằng tab 'Failed chưa ghi bug'")
+    if stats.get("discussion_count"):
+        print(f"💬 {stats['discussion_count']} keyword đang đánh dấu CẦN THẢO LUẬN (lọc bằng tab Discussion)")
+    if stats.get("removed_scenarios_count"):
+        print(f"🗑  {stats['removed_scenarios_count']} keyword đã bị LOẠI khỏi bộ test (danh sách: "
+              f"{removed_state_path(store)}) - không còn xuất hiện trong báo cáo")
     if regression_alerts:
         print(f"⚠️  {len(regression_alerts)} keyword đổi trạng thái Pass/Fail so với lần compare trước:")
         for r in regression_alerts[:20]:

@@ -1,0 +1,64 @@
+{
+  "generatedDate": "2026-09-29",
+  "store": "nsg",
+  "batchRange": "part1ko",
+  "lang": "ko",
+  "source": "Part1_SmartSearch_QueryList (1).xlsx",
+  "totalScenarios": 3,
+  "scenarios": [
+    {
+      "test_id": "NSG-P1KO-0001",
+      "query": "수박씨",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #1] Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt M",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 1,
+          "raw_query": "hạt dưa/수박씨",
+          "actual_expected": "Tiếng hàn bị thiếu mất 1 2 sp có chứa hạt dưa (8934609602117, 8934680090063)\nVN : \nSTT\tSKU\tProduct Name\tStock Qty\n1\t8934609602117\tBánh Trung Thu Dẻo Bibica Nhân Hạt Sen Hạt Dưa Không Trứng 150G\t141\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n4\t8934680090063\tBánh Trung Thu Kinh Đô Nhân Sữa Dừa Hạt Dưa Hai Trứng Đặc Biệt 210G\t85\n5\t0400317880003\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size L 3.2kg\t100\n6\t0400317870004\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size M 2.6kg\t100\n7\t0400317860005\tDưa Hấu Không Hạt Mặt Trời Đỏ 365 Fresh Size S 2kg\t100\n8\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0\nKO :\n1\t8934760132249\tBánh Trung Thu Hữu Nghị Nhân Đậu Xanh Hạt Dưa Không Trứng 180G\t22\n2\t8934680093156\tBánh Trung Thu Kinh Đô Nhân Mè Đen Hạt Dưa Không Trứng 150G\t73\n3\t8934680095242\tBánh Trung Thu Dẻo Kinh Đô Nhân Đậu Xanh Hạt Dưa Một Trứng 230G\t0",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1KO-0002",
+      "query": "돼지파",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #2] KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướ",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": 2,
+          "raw_query": "củ kiệu / 돼지파/ маринованный лук кьеу / 腌藠头",
+          "actual_expected": "KO: k show dc của kiệu\n1\t8936146448302\tBắp Giò Heo G Kitchen 300G (EA)\t6\n2\t8936207132010\tBắp Bò Úc Meaty Chopshop 250G\t33\n3\t2211820000004\tDựng Heo Thảo Mộc Sagri 500G\t100\n4\t2204430000007\tChân Giò Heo 365 Fresh 500g\t100\n5\t2088850000003\tTim heo 400g\nRU: show nhiều sp k liên quan\n6\t0078895120332\tSốt Đậu Hũ Tứ Xuyên Lee Kum Kee Gói 80G\t170\n7\t8938500844409\tĐậu Hũ Ky Cọng Tươi Vị Nguyên 200G\t104\n8\t0078895153767\tHắc Xì Dầu Lee Kum Kee Thượng Hạng Chai 500ml\t156\n9\t0078895144840\tSốt Ướp Đồ Nướng LEE KUM KEE 45G\t202\n10\t8938504001785\tTàu Hũ Ky Tojy 80G\t79\n11\t6978198821018\tHủ Trúc Cuộn Haidilao 120G\nZH: k show được sp củ kiệu\n1\t8935118500482\tCá tẩm cốm dẹp Việt Sin 500g\t64\n2\t8935297104167\tXốt Chiên Nước Mắm Cầu Tre Gói 80G\t73\n3\t8934637513782\tNước Mắm Ăn Liền Cholimex Pet Chai 290G\t72\n4\t8936035340656\tMắm Tôm Chua Sông Hương Hũ 430G\t28\n5\t8936191317820\tBộ Gia Vị X2 Hoàn Chỉnh Thịt Nướng Và Chiên Tứ Xuyên Má Bảy Gói 80G\t15",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    },
+    {
+      "test_id": "NSG-P1KO-0003",
+      "query": "선물 바구니",
+      "dimension": "part1_multilanguage",
+      "note": "[Multilanguage #None] KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+      "sources": [
+        {
+          "sheet": "Multilanguage",
+          "no": null,
+          "raw_query": "giỏ quà tết / 선물 바구니 / 礼篮/ 正月ギフトバスケット",
+          "actual_expected": "KO: k show dc các sp dùng làm quà (tương tự cho các ngôn ngữ khác)\n1\t8936192562168\tĐồ Chơi Móc Khóa Thú Bông 2168 18x16cm (Giao Mẫu Ngẫu Nhiên)\t96\n2\t8936230480904\tThú Nhồi Bông Túi Quà Thú Bông Hoa Cúc 50cm\t5\n3\t8936039277422\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.2 x 19.5 x 10.5cm\t12\n4\t8936039277408\tRổ Nhựa Hình Chữ Nhật Màu Xám Sữa Choice L 25.8 x 17.5 x 7.3cm\t35\n5\t8936039277552\tRổ Nhựa Hình Chữ Nhật Màu Xanh Rêu Choice L 25.2 x 19.5 x 10.5cm\t13",
+          "fix_status_sep18": null,
+          "last_fix_date": "Sep 15",
+          "last_fix_status": "OPEN",
+          "note": null
+        }
+      ]
+    }
+  ]
+}

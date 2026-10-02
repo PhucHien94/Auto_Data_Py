@@ -1,0 +1,766 @@
+{
+ "note": "95 keyword chua crawl xong do mat ket noi - moi keyword can 4 request KO/EN/RU/ZH",
+ "count": 95,
+ "items": [
+  {
+   "test_id": "NSG-ALL-0002",
+   "vi": "đường cát",
+   "ko": "백설탕 그래뉴당",
+   "en": "granulated sugar",
+   "ru": "сахарный песок",
+   "zh": "白砂糖"
+  },
+  {
+   "test_id": "NSG-ALL-0005",
+   "vi": "đồ ăn nhật",
+   "ko": "일식",
+   "en": "japanese food",
+   "ru": "японская еда",
+   "zh": "日本料理"
+  },
+  {
+   "test_id": "NSG-ALL-0010",
+   "vi": "đồ ăn cho người giảm cân",
+   "ko": "체중 감량자용 음식",
+   "en": "food for people losing weight",
+   "ru": "еда для худеющих",
+   "zh": "减肥人士食品"
+  },
+  {
+   "test_id": "NSG-ALL-0012",
+   "vi": "đồ ăn organic",
+   "ko": "유기농 음식",
+   "en": "organic food",
+   "ru": "органическая еда",
+   "zh": "有机食品"
+  },
+  {
+   "test_id": "NSG-ALL-0024",
+   "vi": "đồ ăn hàn",
+   "ko": "한식",
+   "en": "korean food",
+   "ru": "корейская еда",
+   "zh": "韩国料理"
+  },
+  {
+   "test_id": "NSG-ALL-0062",
+   "vi": "ốc bươu",
+   "ko": "우렁이",
+   "en": "apple snail",
+   "ru": "ампулярия улитка",
+   "zh": "田螺"
+  },
+  {
+   "test_id": "NSG-ALL-0066",
+   "vi": "đồ chơi trẻ em thông minh",
+   "ko": "어린이 스마트 완구",
+   "en": "smart toys for children",
+   "ru": "умные игрушки для детей",
+   "zh": "儿童智能玩具"
+  },
+  {
+   "test_id": "NSG-ALL-0167",
+   "vi": "đường",
+   "ko": "설탕",
+   "en": "sugar",
+   "ru": "сахар",
+   "zh": "糖"
+  },
+  {
+   "test_id": "NSG-ALL-0241",
+   "vi": "ức gà",
+   "ko": "닭가슴살",
+   "en": "chicken breast",
+   "ru": "куриная грудка",
+   "zh": "鸡胸肉"
+  },
+  {
+   "test_id": "NSG-ALL-0254",
+   "vi": "đậu phộng",
+   "ko": "땅콩",
+   "en": "peanut",
+   "ru": "арахис",
+   "zh": "花生"
+  },
+  {
+   "test_id": "NSG-ALL-0264",
+   "vi": "ớt",
+   "ko": "고추",
+   "en": "chili pepper",
+   "ru": "перец чили",
+   "zh": "辣椒"
+  },
+  {
+   "test_id": "NSG-ALL-0266",
+   "vi": "đậu hũ",
+   "ko": "두부",
+   "en": "tofu",
+   "ru": "тофу",
+   "zh": "豆腐"
+  },
+  {
+   "test_id": "NSG-ALL-0321",
+   "vi": "đậu",
+   "ko": "콩",
+   "en": "bean",
+   "ru": "бобы фасоль",
+   "zh": "豆"
+  },
+  {
+   "test_id": "NSG-ALL-0323",
+   "vi": "đũa",
+   "ko": "젓가락",
+   "en": "chopsticks",
+   "ru": "палочки для еды",
+   "zh": "筷子"
+  },
+  {
+   "test_id": "NSG-ALL-0326",
+   "vi": "ống hút",
+   "ko": "빨대",
+   "en": "drinking straw",
+   "ru": "трубочка для питья",
+   "zh": "吸管"
+  },
+  {
+   "test_id": "NSG-ALL-0364",
+   "vi": "đậu hủ",
+   "ko": "두부",
+   "en": "tofu",
+   "ru": "тофу",
+   "zh": "豆腐"
+  },
+  {
+   "test_id": "NSG-ALL-0374",
+   "vi": "đậu hà lan",
+   "ko": "완두콩",
+   "en": "green pea",
+   "ru": "зелёный горошек",
+   "zh": "豌豆"
+  },
+  {
+   "test_id": "NSG-ALL-0376",
+   "vi": "đùi gà",
+   "ko": "닭다리",
+   "en": "chicken drumstick",
+   "ru": "куриная голень",
+   "zh": "鸡腿"
+  },
+  {
+   "test_id": "NSG-ALL-0399",
+   "vi": "ớt chuông",
+   "ko": "파프리카 피망",
+   "en": "bell pepper",
+   "ru": "болгарский перец",
+   "zh": "甜椒"
+  },
+  {
+   "test_id": "NSG-ALL-0494",
+   "vi": "đồ chơi",
+   "ko": "장난감",
+   "en": "toy",
+   "ru": "игрушка",
+   "zh": "玩具"
+  },
+  {
+   "test_id": "NSG-ALL-0541",
+   "vi": "ổi",
+   "ko": "구아바",
+   "en": "guava",
+   "ru": "гуава",
+   "zh": "番石榴"
+  },
+  {
+   "test_id": "NSG-ALL-0559",
+   "vi": "đường phèn",
+   "ko": "얼음설탕",
+   "en": "rock sugar",
+   "ru": "леденцовый сахар",
+   "zh": "冰糖"
+  },
+  {
+   "test_id": "NSG-ALL-0598",
+   "vi": "ống hút giấy",
+   "ko": "종이 빨대",
+   "en": "paper straw",
+   "ru": "бумажная трубочка",
+   "zh": "纸吸管"
+  },
+  {
+   "test_id": "NSG-ALL-0601",
+   "vi": "ớt hàn quốc",
+   "ko": "한국 고추",
+   "en": "korean chili",
+   "ru": "корейский перец чили",
+   "zh": "韩国辣椒"
+  },
+  {
+   "test_id": "NSG-ALL-0647",
+   "vi": "đậu xanh",
+   "ko": "녹두",
+   "en": "mung bean",
+   "ru": "маш",
+   "zh": "绿豆"
+  },
+  {
+   "test_id": "NSG-ALL-0779",
+   "vi": "đậu bắp",
+   "ko": "오크라",
+   "en": "okra",
+   "ru": "бамия окра",
+   "zh": "秋葵"
+  },
+  {
+   "test_id": "NSG-ALL-0805",
+   "vi": "đậu đỏ",
+   "ko": "팥",
+   "en": "red bean",
+   "ru": "красная фасоль адзуки",
+   "zh": "红豆"
+  },
+  {
+   "test_id": "NSG-ALL-0866",
+   "vi": "đậu nành",
+   "ko": "대두 콩",
+   "en": "soybean",
+   "ru": "соя",
+   "zh": "黄豆"
+  },
+  {
+   "test_id": "NSG-ALL-0958",
+   "vi": "đậu que",
+   "ko": "줄기콩 그린빈",
+   "en": "green bean",
+   "ru": "стручковая фасоль",
+   "zh": "四季豆"
+  },
+  {
+   "test_id": "NSG-ALL-0980",
+   "vi": "kệ",
+   "ko": "선반",
+   "en": "shelf rack",
+   "ru": "полка",
+   "zh": "架子"
+  },
+  {
+   "test_id": "NSG-ALL-0984",
+   "vi": "đường ăn kiêng",
+   "ko": "다이어트 감미료",
+   "en": "diet sweetener sugar",
+   "ru": "диетический сахарозаменитель",
+   "zh": "代糖"
+  },
+  {
+   "test_id": "NSG-ALL-1032",
+   "vi": "ốc",
+   "ko": "고둥 소라",
+   "en": "snail",
+   "ru": "улитки",
+   "zh": "螺"
+  },
+  {
+   "test_id": "NSG-ALL-1052",
+   "vi": "đường biên hòa",
+   "ko": "비엔호아 설탕",
+   "en": "bien hoa sugar",
+   "ru": "сахар bien hoa",
+   "zh": "边和糖"
+  },
+  {
+   "test_id": "NSG-ALL-1097",
+   "vi": "đầu cá hồi",
+   "ko": "연어 머리",
+   "en": "salmon head",
+   "ru": "голова лосося",
+   "zh": "三文鱼头"
+  },
+  {
+   "test_id": "NSG-ALL-1156",
+   "vi": "đồ điện gia dụng",
+   "ko": "생활 가전",
+   "en": "home electrical appliances",
+   "ru": "бытовая электротехника",
+   "zh": "家用电器"
+  },
+  {
+   "test_id": "NSG-ALL-1163",
+   "vi": "đồ khô",
+   "ko": "건조 식품 건어물",
+   "en": "dried goods",
+   "ru": "сухие продукты",
+   "zh": "干货"
+  },
+  {
+   "test_id": "NSG-ALL-1186",
+   "vi": "đồ ăn nhanh gọn",
+   "ko": "간편 빠른 식사",
+   "en": "quick easy food",
+   "ru": "быстрая простая еда",
+   "zh": "快捷简餐"
+  },
+  {
+   "test_id": "NSG-ALL-1196",
+   "vi": "đồ dùng đi phượt",
+   "ko": "백패킹 여행 용품",
+   "en": "backpacking travel gear",
+   "ru": "снаряжение для похода",
+   "zh": "背包旅行装备"
+  },
+  {
+   "test_id": "NSG-ALL-1197",
+   "vi": "đồ dùng cá nhân",
+   "ko": "개인 용품",
+   "en": "personal items",
+   "ru": "личные принадлежности",
+   "zh": "个人用品"
+  },
+  {
+   "test_id": "NSG-ALL-1230",
+   "vi": "đường phèng",
+   "ko": "얼음설탕",
+   "en": "rock sugar",
+   "ru": "леденцовый сахар",
+   "zh": "冰糖"
+  },
+  {
+   "test_id": "NSG-ALL-1232",
+   "vi": "đồ ăn eat clean",
+   "ko": "클린이팅 음식",
+   "en": "eat clean food",
+   "ru": "еда чистого питания",
+   "zh": "清洁饮食食品"
+  },
+  {
+   "test_id": "NSG-ALL-1233",
+   "vi": "đồ ăn low carb",
+   "ko": "저탄수 음식",
+   "en": "low carb food",
+   "ru": "низкоуглеводная еда",
+   "zh": "低碳水食品"
+  },
+  {
+   "test_id": "NSG-ALL-1234",
+   "vi": "ếch đồng",
+   "ko": "논 개구리",
+   "en": "field frog",
+   "ru": "полевая лягушка",
+   "zh": "田鸡"
+  },
+  {
+   "test_id": "NSG-ALL-1235",
+   "vi": "ốc len",
+   "ko": "작은 고둥",
+   "en": "mud creeper snail",
+   "ru": "мелкие улитки",
+   "zh": "小螺"
+  },
+  {
+   "test_id": "NSG-ALL-1295",
+   "vi": "đậu đóng hộp",
+   "ko": "콩 통조림",
+   "en": "canned beans",
+   "ru": "консервированная фасоль",
+   "zh": "豆类罐头"
+  },
+  {
+   "test_id": "NSG-ALL-1367",
+   "vi": "đậu phộng tỏi ớt",
+   "ko": "마늘 고추 땅콩",
+   "en": "garlic chili peanut",
+   "ru": "арахис с чесноком и чили",
+   "zh": "蒜香辣花生"
+  },
+  {
+   "test_id": "NSG-ALL-1452",
+   "vi": "đường vàng",
+   "ko": "황설탕",
+   "en": "brown sugar",
+   "ru": "коричневый сахар",
+   "zh": "黄糖"
+  },
+  {
+   "test_id": "NSG-ALL-1462",
+   "vi": "đậu phộng tân tân",
+   "ko": "떤떤 땅콩",
+   "en": "tan tan peanut",
+   "ru": "арахис tan tan",
+   "zh": "tan tan 花生"
+  },
+  {
+   "test_id": "NSG-ALL-1478",
+   "vi": "ấm đun",
+   "ko": "주전자",
+   "en": "kettle",
+   "ru": "чайник",
+   "zh": "水壶"
+  },
+  {
+   "test_id": "NSG-ALL-1579",
+   "vi": "ổ cắm điện",
+   "ko": "전기 콘센트 멀티탭",
+   "en": "power socket outlet",
+   "ru": "электрическая розетка",
+   "zh": "电源插座"
+  },
+  {
+   "test_id": "NSG-ALL-1594",
+   "vi": "đũa inox",
+   "ko": "스테인리스 젓가락",
+   "en": "stainless steel chopsticks",
+   "ru": "палочки из нержавеющей стали",
+   "zh": "不锈钢筷"
+  },
+  {
+   "test_id": "NSG-ALL-1602",
+   "vi": "ấm đun siêu tốc",
+   "ko": "전기 포트",
+   "en": "electric kettle",
+   "ru": "электрочайник",
+   "zh": "电热水壶"
+  },
+  {
+   "test_id": "NSG-ALL-1690",
+   "vi": "ớt xanh",
+   "ko": "청고추",
+   "en": "green chili",
+   "ru": "зелёный чили",
+   "zh": "青辣椒"
+  },
+  {
+   "test_id": "NSG-ALL-1728",
+   "vi": "đựng thực phẩm",
+   "ko": "식품 보관",
+   "en": "food storage",
+   "ru": "хранение продуктов",
+   "zh": "食品储存"
+  },
+  {
+   "test_id": "NSG-ALL-1736",
+   "vi": "đức việt",
+   "ko": "득비엣",
+   "en": "duc viet",
+   "ru": "duc viet",
+   "zh": "duc viet"
+  },
+  {
+   "test_id": "NSG-ALL-1773",
+   "vi": "đùi tỏi gà",
+   "ko": "닭 봉 윗날개",
+   "en": "chicken drumette",
+   "ru": "куриные крылышки голень",
+   "zh": "鸡翅根"
+  },
+  {
+   "test_id": "NSG-ALL-1982",
+   "vi": "đồ ăn keto",
+   "ko": "키토 음식",
+   "en": "keto food",
+   "ru": "кето еда",
+   "zh": "生酮食品"
+  },
+  {
+   "test_id": "NSG-ALL-1986",
+   "vi": "đồ ăn healthy",
+   "ko": "건강식",
+   "en": "healthy food",
+   "ru": "здоровая еда",
+   "zh": "健康食品"
+  },
+  {
+   "test_id": "NSG-ALL-2011",
+   "vi": "đường dành cho người tiểu đường",
+   "ko": "당뇨 환자용 감미료",
+   "en": "sugar for diabetics",
+   "ru": "сахар для диабетиков",
+   "zh": "糖尿病人用糖"
+  },
+  {
+   "test_id": "NSG-ALL-2012",
+   "vi": "đồ dùng gia dụng",
+   "ko": "생활 가정용품",
+   "en": "household items",
+   "ru": "хозяйственные товары",
+   "zh": "家居用品"
+  },
+  {
+   "test_id": "NSG-ALL-2013",
+   "vi": "đồ gia dụng thông minh",
+   "ko": "스마트 가전 생활용품",
+   "en": "smart household appliances",
+   "ru": "умная бытовая техника",
+   "zh": "智能家居用品"
+  },
+  {
+   "test_id": "NSG-ALL-2015",
+   "vi": "đồ bếp inox",
+   "ko": "스테인리스 주방용품",
+   "en": "stainless steel kitchenware",
+   "ru": "кухонная утварь из нержавейки",
+   "zh": "不锈钢厨具"
+  },
+  {
+   "test_id": "NSG-ALL-2028",
+   "vi": "đồ dùng phòng tắm",
+   "ko": "화장실 욕실 용품",
+   "en": "bathroom supplies",
+   "ru": "товары для ванной комнаты",
+   "zh": "卫浴用品"
+  },
+  {
+   "test_id": "NSG-ALL-2029",
+   "vi": "đồ dùng nhà tắm",
+   "ko": "욕실 용품",
+   "en": "bathroom items",
+   "ru": "принадлежности для ванной",
+   "zh": "浴室用品"
+  },
+  {
+   "test_id": "NSG-ALL-2031",
+   "vi": "đồ đựng gia vị",
+   "ko": "양념통",
+   "en": "spice container",
+   "ru": "ёмкость для специй",
+   "zh": "调味盒"
+  },
+  {
+   "test_id": "NSG-ALL-2035",
+   "vi": "đồ chơi giáo dục cho bé",
+   "ko": "유아 교육 완구",
+   "en": "educational toys for kids",
+   "ru": "развивающие игрушки для детей",
+   "zh": "儿童益智玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2038",
+   "vi": "đồ ăn vặt văn phòng",
+   "ko": "사무실 간식",
+   "en": "office snacks",
+   "ru": "офисные снеки",
+   "zh": "办公室零食"
+  },
+  {
+   "test_id": "NSG-ALL-2039",
+   "vi": "đồ dùng cắm trại",
+   "ko": "캠핑 용품",
+   "en": "camping supplies",
+   "ru": "туристическое снаряжение",
+   "zh": "露营用品"
+  },
+  {
+   "test_id": "NSG-ALL-2041",
+   "vi": "đồ dùng dã ngoại",
+   "ko": "야외 나들이 용품",
+   "en": "picnic outdoor supplies",
+   "ru": "принадлежности для пикника",
+   "zh": "户外野餐用品"
+  },
+  {
+   "test_id": "NSG-ALL-2045",
+   "vi": "đồ dùng đi du lịch",
+   "ko": "여행 용품",
+   "en": "travel supplies",
+   "ru": "дорожные принадлежности",
+   "zh": "旅行用品"
+  },
+  {
+   "test_id": "NSG-ALL-2046",
+   "vi": "đồ dùng văn phòng",
+   "ko": "사무용품",
+   "en": "office supplies",
+   "ru": "офисные принадлежности",
+   "zh": "办公用品"
+  },
+  {
+   "test_id": "NSG-ALL-2048",
+   "vi": "đồ ăn",
+   "ko": "음식",
+   "en": "food",
+   "ru": "еда",
+   "zh": "食物"
+  },
+  {
+   "test_id": "NSG-ALL-2050",
+   "vi": "đồ uống có ga",
+   "ko": "탄산음료",
+   "en": "carbonated drink",
+   "ru": "газированный напиток",
+   "zh": "碳酸饮料"
+  },
+  {
+   "test_id": "NSG-ALL-2054",
+   "vi": "đồ nội trợ",
+   "ko": "살림 주방 용품",
+   "en": "housekeeping items",
+   "ru": "товары для домашнего хозяйства",
+   "zh": "家务用品"
+  },
+  {
+   "test_id": "NSG-ALL-2057",
+   "vi": "đồ dùng cho mẹ và bé",
+   "ko": "엄마와 아기 용품",
+   "en": "mother and baby supplies",
+   "ru": "товары для мамы и малыша",
+   "zh": "母婴用品"
+  },
+  {
+   "test_id": "NSG-ALL-2062",
+   "vi": "đồ ăn cho dân văn phòng",
+   "ko": "직장인 식사",
+   "en": "food for office workers",
+   "ru": "еда для офисных работников",
+   "zh": "上班族食品"
+  },
+  {
+   "test_id": "NSG-ALL-2065",
+   "vi": "đồ uống sau khi tập gym",
+   "ko": "운동 후 음료",
+   "en": "post workout drink",
+   "ru": "напиток после тренировки",
+   "zh": "健身后饮品"
+  },
+  {
+   "test_id": "NSG-ALL-2069",
+   "vi": "đồ dùng chăm sóc thú cưng",
+   "ko": "반려동물 케어 용품",
+   "en": "pet care supplies",
+   "ru": "товары по уходу за питомцами",
+   "zh": "宠物护理用品"
+  },
+  {
+   "test_id": "NSG-ALL-2070",
+   "vi": "đồ chơi cho thú cưng",
+   "ko": "반려동물 장난감",
+   "en": "pet toys",
+   "ru": "игрушки для питомцев",
+   "zh": "宠物玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2074",
+   "vi": "đồ dùng nhà bếp thông minh",
+   "ko": "스마트 주방 용품",
+   "en": "smart kitchen items",
+   "ru": "умные кухонные принадлежности",
+   "zh": "智能厨房用品"
+  },
+  {
+   "test_id": "NSG-ALL-2090",
+   "vi": "đường thốt nốt",
+   "ko": "팜슈가",
+   "en": "palm sugar",
+   "ru": "пальмовый сахар",
+   "zh": "棕榈糖"
+  },
+  {
+   "test_id": "NSG-ALL-2310",
+   "vi": "đồ mặc đi biển",
+   "ko": "해변용 의류 비치웨어",
+   "en": "beachwear",
+   "ru": "пляжная одежда",
+   "zh": "沙滩装"
+  },
+  {
+   "test_id": "NSG-ALL-2313",
+   "vi": "đồ lót nam thoải mái",
+   "ko": "편안한 남성 속옷",
+   "en": "comfortable men underwear",
+   "ru": "удобное мужское бельё",
+   "zh": "舒适男士内衣"
+  },
+  {
+   "test_id": "NSG-ALL-2316",
+   "vi": "đồ chơi cho chó nhỏ",
+   "ko": "소형견 장난감",
+   "en": "toys for small dogs",
+   "ru": "игрушки для маленьких собак",
+   "zh": "小型犬玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2351",
+   "vi": "đồ uống có cồn cho tiệc cuối năm",
+   "ko": "연말 파티용 주류",
+   "en": "alcoholic drinks for year end party",
+   "ru": "алкогольные напитки для новогодней вечеринки",
+   "zh": "年终派对酒类"
+  },
+  {
+   "test_id": "NSG-ALL-2363",
+   "vi": "đồ dùng chuẩn bị năm học mới",
+   "ko": "새 학기 준비 용품",
+   "en": "back to school supplies",
+   "ru": "принадлежности к новому учебному году",
+   "zh": "新学期用品"
+  },
+  {
+   "test_id": "NSG-ALL-2365",
+   "vi": "đồ chơi cho bé 1 tuổi",
+   "ko": "1세 아기 장난감",
+   "en": "toys for 1 year old baby",
+   "ru": "игрушки для годовалого малыша",
+   "zh": "1岁宝宝玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2366",
+   "vi": "đồ chơi xếp hình phát triển trí tuệ",
+   "ko": "지능 발달 블록 퍼즐",
+   "en": "puzzle blocks for intelligence development",
+   "ru": "пазлы и блоки для развития интеллекта",
+   "zh": "益智拼装积木"
+  },
+  {
+   "test_id": "NSG-ALL-2367",
+   "vi": "đồ chơi ngoài trời cho trẻ em",
+   "ko": "어린이 야외 놀이기구",
+   "en": "outdoor toys for children",
+   "ru": "уличные игрушки для детей",
+   "zh": "儿童户外玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2370",
+   "vi": "đồ chơi tắm cho bé sơ sinh",
+   "ko": "신생아 목욕 장난감",
+   "en": "bath toys for newborn",
+   "ru": "игрушки для купания новорождённых",
+   "zh": "新生儿洗澡玩具"
+  },
+  {
+   "test_id": "NSG-ALL-2372",
+   "vi": "đồ ăn kiểu Nhật tại nhà",
+   "ko": "집에서 먹는 일식",
+   "en": "japanese style food at home",
+   "ru": "японская еда дома",
+   "zh": "居家日式料理"
+  },
+  {
+   "test_id": "NSG-ALL-2378",
+   "vi": "đồ ăn cho tiệc sinh nhật trẻ em",
+   "ko": "어린이 생일파티 음식",
+   "en": "food for kids birthday party",
+   "ru": "еда для детского дня рождения",
+   "zh": "儿童生日派对食品"
+  },
+  {
+   "test_id": "NSG-ALL-2381",
+   "vi": "đồ dùng phòng bếp hiện đại",
+   "ko": "모던 주방 용품",
+   "en": "modern kitchen supplies",
+   "ru": "современные кухонные принадлежности",
+   "zh": "现代厨房用品"
+  },
+  {
+   "test_id": "NSG-ALL-2384",
+   "vi": "đồ decor phòng khách",
+   "ko": "거실 인테리어 소품",
+   "en": "living room decor items",
+   "ru": "декор для гостиной",
+   "zh": "客厅装饰品"
+  },
+  {
+   "test_id": "NSG-ALL-2394",
+   "vi": "đồ dùng chăm sóc sức khỏe người cao tuổi",
+   "ko": "노인 건강 관리 용품",
+   "en": "elderly health care supplies",
+   "ru": "товары для ухода за пожилыми",
+   "zh": "老年人保健用品"
+  }
+ ]
+}

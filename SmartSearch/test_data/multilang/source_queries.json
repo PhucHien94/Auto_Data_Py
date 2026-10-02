@@ -1,0 +1,6250 @@
+{
+ "note": "1561 query tiếng Việt có dấu, đủ điều kiện dịch sang KO/EN/RU/ZH",
+ "count": 1561,
+ "items": [
+  {
+   "test_id": "NSG-ALL-0002",
+   "query": "đường cát"
+  },
+  {
+   "test_id": "NSG-ALL-0005",
+   "query": "đồ ăn nhật"
+  },
+  {
+   "test_id": "NSG-ALL-0006",
+   "query": "giỏ quà tết"
+  },
+  {
+   "test_id": "NSG-ALL-0008",
+   "query": "móc quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-0009",
+   "query": "bếp từ"
+  },
+  {
+   "test_id": "NSG-ALL-0010",
+   "query": "đồ ăn cho người giảm cân"
+  },
+  {
+   "test_id": "NSG-ALL-0011",
+   "query": "chế độ ăn eat clean"
+  },
+  {
+   "test_id": "NSG-ALL-0012",
+   "query": "đồ ăn organic"
+  },
+  {
+   "test_id": "NSG-ALL-0013",
+   "query": "protein tăng cơ"
+  },
+  {
+   "test_id": "NSG-ALL-0014",
+   "query": "nước rửa chuyên dụng bình sữa"
+  },
+  {
+   "test_id": "NSG-ALL-0015",
+   "query": "cá kèo"
+  },
+  {
+   "test_id": "NSG-ALL-0017",
+   "query": "thớt gỗ nhà bếp"
+  },
+  {
+   "test_id": "NSG-ALL-0018",
+   "query": "rổ nhựa đựng đồ"
+  },
+  {
+   "test_id": "NSG-ALL-0019",
+   "query": "thuốc diệt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0020",
+   "query": "nước giac"
+  },
+  {
+   "test_id": "NSG-ALL-0021",
+   "query": "túi rát"
+  },
+  {
+   "test_id": "NSG-ALL-0024",
+   "query": "đồ ăn hàn"
+  },
+  {
+   "test_id": "NSG-ALL-0028",
+   "query": "mắm"
+  },
+  {
+   "test_id": "NSG-ALL-0030",
+   "query": "hop qua tết kinh đô"
+  },
+  {
+   "test_id": "NSG-ALL-0033",
+   "query": "lê hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0034",
+   "query": "hộp đựng thực phẩm thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-0035",
+   "query": "dưa hâu"
+  },
+  {
+   "test_id": "NSG-ALL-0036",
+   "query": "nem rán"
+  },
+  {
+   "test_id": "NSG-ALL-0037",
+   "query": "bột giạt"
+  },
+  {
+   "test_id": "NSG-ALL-0038",
+   "query": "kệ để đồ đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-0039",
+   "query": "tăng cân healthy"
+  },
+  {
+   "test_id": "NSG-ALL-0040",
+   "query": "bành mì"
+  },
+  {
+   "test_id": "NSG-ALL-0042",
+   "query": "nước hoa nam"
+  },
+  {
+   "test_id": "NSG-ALL-0043",
+   "query": "hạt dưa"
+  },
+  {
+   "test_id": "NSG-ALL-0046",
+   "query": "gel vuốt tóc"
+  },
+  {
+   "test_id": "NSG-ALL-0047",
+   "query": "củ hành tím"
+  },
+  {
+   "test_id": "NSG-ALL-0048",
+   "query": "rau tần ô"
+  },
+  {
+   "test_id": "NSG-ALL-0049",
+   "query": "củ kiệu"
+  },
+  {
+   "test_id": "NSG-ALL-0050",
+   "query": "trái thanh long"
+  },
+  {
+   "test_id": "NSG-ALL-0051",
+   "query": "thực phẩm tươi sống"
+  },
+  {
+   "test_id": "NSG-ALL-0052",
+   "query": "chống lão hóa"
+  },
+  {
+   "test_id": "NSG-ALL-0059",
+   "query": "yên mạch giảm cân"
+  },
+  {
+   "test_id": "NSG-ALL-0060",
+   "query": "thùng rác thông minh"
+  },
+  {
+   "test_id": "NSG-ALL-0061",
+   "query": "mỹ phẩm thiên nhiên"
+  },
+  {
+   "test_id": "NSG-ALL-0062",
+   "query": "ốc bươu"
+  },
+  {
+   "test_id": "NSG-ALL-0063",
+   "query": "gói hút ẩm chống mốc"
+  },
+  {
+   "test_id": "NSG-ALL-0064",
+   "query": "nc mắm"
+  },
+  {
+   "test_id": "NSG-ALL-0065",
+   "query": "tổ iến"
+  },
+  {
+   "test_id": "NSG-ALL-0066",
+   "query": "đồ chơi trẻ em thông minh"
+  },
+  {
+   "test_id": "NSG-ALL-0067",
+   "query": "trái sầu riêng"
+  },
+  {
+   "test_id": "NSG-ALL-0068",
+   "query": "bình xịt côn trùng jumbo vape không mùi"
+  },
+  {
+   "test_id": "NSG-ALL-0069",
+   "query": "hộp cơm giữ nhiệt"
+  },
+  {
+   "test_id": "NSG-ALL-0070",
+   "query": "vali du lịch"
+  },
+  {
+   "test_id": "NSG-ALL-0071",
+   "query": "thức ăn dặm cho bé 6 tháng"
+  },
+  {
+   "test_id": "NSG-ALL-0072",
+   "query": "bình nước giữ nhiệt thể thao"
+  },
+  {
+   "test_id": "NSG-ALL-0073",
+   "query": "bánh hotteok"
+  },
+  {
+   "test_id": "NSG-ALL-0074",
+   "query": "khan giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0075",
+   "query": "rượu vang đỏ khai vị"
+  },
+  {
+   "test_id": "NSG-ALL-0076",
+   "query": "sủa tươi"
+  },
+  {
+   "test_id": "NSG-ALL-0077",
+   "query": "bột tẩy lồng máy giặt"
+  },
+  {
+   "test_id": "NSG-ALL-0078",
+   "query": "dâu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-0079",
+   "query": "mì"
+  },
+  {
+   "test_id": "NSG-ALL-0081",
+   "query": "dưỡng da"
+  },
+  {
+   "test_id": "NSG-ALL-0082",
+   "query": "mít sấy"
+  },
+  {
+   "test_id": "NSG-ALL-0083",
+   "query": "tía tô"
+  },
+  {
+   "test_id": "NSG-ALL-0085",
+   "query": "bí"
+  },
+  {
+   "test_id": "NSG-ALL-0086",
+   "query": "nấm"
+  },
+  {
+   "test_id": "NSG-ALL-0087",
+   "query": "cá hồi"
+  },
+  {
+   "test_id": "NSG-ALL-0088",
+   "query": "thịt heo"
+  },
+  {
+   "test_id": "NSG-ALL-0089",
+   "query": "xúc xích"
+  },
+  {
+   "test_id": "NSG-ALL-0090",
+   "query": "giấy vệ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-0091",
+   "query": "bánh kẹo"
+  },
+  {
+   "test_id": "NSG-ALL-0092",
+   "query": "bánh"
+  },
+  {
+   "test_id": "NSG-ALL-0093",
+   "query": "sữa"
+  },
+  {
+   "test_id": "NSG-ALL-0100",
+   "query": "bột nêm"
+  },
+  {
+   "test_id": "NSG-ALL-0101",
+   "query": "bao rác"
+  },
+  {
+   "test_id": "NSG-ALL-0142",
+   "query": "sữa chua"
+  },
+  {
+   "test_id": "NSG-ALL-0143",
+   "query": "xoài"
+  },
+  {
+   "test_id": "NSG-ALL-0144",
+   "query": "tương ớt chinsu"
+  },
+  {
+   "test_id": "NSG-ALL-0145",
+   "query": "lẩu tự sôi"
+  },
+  {
+   "test_id": "NSG-ALL-0146",
+   "query": "hồng sâm hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0147",
+   "query": "sữa tắm"
+  },
+  {
+   "test_id": "NSG-ALL-0148",
+   "query": "gạo"
+  },
+  {
+   "test_id": "NSG-ALL-0149",
+   "query": "mì omachi"
+  },
+  {
+   "test_id": "NSG-ALL-0150",
+   "query": "chống nắng"
+  },
+  {
+   "test_id": "NSG-ALL-0151",
+   "query": "nước giặt"
+  },
+  {
+   "test_id": "NSG-ALL-0152",
+   "query": "tẩy trang"
+  },
+  {
+   "test_id": "NSG-ALL-0153",
+   "query": "thịt bò"
+  },
+  {
+   "test_id": "NSG-ALL-0154",
+   "query": "dầu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-0155",
+   "query": "phô mai"
+  },
+  {
+   "test_id": "NSG-ALL-0156",
+   "query": "sữa tươi"
+  },
+  {
+   "test_id": "NSG-ALL-0157",
+   "query": "nước rửa chén"
+  },
+  {
+   "test_id": "NSG-ALL-0158",
+   "query": "rong biển"
+  },
+  {
+   "test_id": "NSG-ALL-0159",
+   "query": "băng vệ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-0160",
+   "query": "kẹo"
+  },
+  {
+   "test_id": "NSG-ALL-0161",
+   "query": "kem đánh răng"
+  },
+  {
+   "test_id": "NSG-ALL-0162",
+   "query": "cà phê"
+  },
+  {
+   "test_id": "NSG-ALL-0163",
+   "query": "gà"
+  },
+  {
+   "test_id": "NSG-ALL-0164",
+   "query": "dầu gội"
+  },
+  {
+   "test_id": "NSG-ALL-0165",
+   "query": "trứng"
+  },
+  {
+   "test_id": "NSG-ALL-0166",
+   "query": "bánh bao"
+  },
+  {
+   "test_id": "NSG-ALL-0167",
+   "query": "đường"
+  },
+  {
+   "test_id": "NSG-ALL-0168",
+   "query": "khăn ướt"
+  },
+  {
+   "test_id": "NSG-ALL-0169",
+   "query": "khăn giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0170",
+   "query": "nước mắm"
+  },
+  {
+   "test_id": "NSG-ALL-0171",
+   "query": "tương ớt"
+  },
+  {
+   "test_id": "NSG-ALL-0173",
+   "query": "bánh mì"
+  },
+  {
+   "test_id": "NSG-ALL-0174",
+   "query": "cá"
+  },
+  {
+   "test_id": "NSG-ALL-0175",
+   "query": "giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0177",
+   "query": "sữa đặc"
+  },
+  {
+   "test_id": "NSG-ALL-0181",
+   "query": "túi rác"
+  },
+  {
+   "test_id": "NSG-ALL-0182",
+   "query": "trứng gà"
+  },
+  {
+   "test_id": "NSG-ALL-0183",
+   "query": "nước rửa tay"
+  },
+  {
+   "test_id": "NSG-ALL-0185",
+   "query": "cà chua"
+  },
+  {
+   "test_id": "NSG-ALL-0187",
+   "query": "khoai tây"
+  },
+  {
+   "test_id": "NSG-ALL-0188",
+   "query": "ngũ cốc"
+  },
+  {
+   "test_id": "NSG-ALL-0189",
+   "query": "nước tương"
+  },
+  {
+   "test_id": "NSG-ALL-0190",
+   "query": "nước suối"
+  },
+  {
+   "test_id": "NSG-ALL-0192",
+   "query": "bột giặt"
+  },
+  {
+   "test_id": "NSG-ALL-0193",
+   "query": "nước xả"
+  },
+  {
+   "test_id": "NSG-ALL-0194",
+   "query": "nước lau sàn"
+  },
+  {
+   "test_id": "NSG-ALL-0195",
+   "query": "trà"
+  },
+  {
+   "test_id": "NSG-ALL-0197",
+   "query": "bánh gạo"
+  },
+  {
+   "test_id": "NSG-ALL-0198",
+   "query": "tôm"
+  },
+  {
+   "test_id": "NSG-ALL-0199",
+   "query": "xà lách"
+  },
+  {
+   "test_id": "NSG-ALL-0200",
+   "query": "hạt nêm"
+  },
+  {
+   "test_id": "NSG-ALL-0203",
+   "query": "muối"
+  },
+  {
+   "test_id": "NSG-ALL-0204",
+   "query": "bò"
+  },
+  {
+   "test_id": "NSG-ALL-0205",
+   "query": "khăn giấy ướt"
+  },
+  {
+   "test_id": "NSG-ALL-0207",
+   "query": "dưa leo"
+  },
+  {
+   "test_id": "NSG-ALL-0208",
+   "query": "miến"
+  },
+  {
+   "test_id": "NSG-ALL-0211",
+   "query": "mì ly"
+  },
+  {
+   "test_id": "NSG-ALL-0212",
+   "query": "yến mạch quaker"
+  },
+  {
+   "test_id": "NSG-ALL-0213",
+   "query": "táo"
+  },
+  {
+   "test_id": "NSG-ALL-0214",
+   "query": "há cảo"
+  },
+  {
+   "test_id": "NSG-ALL-0215",
+   "query": "xịt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0217",
+   "query": "bánh quy"
+  },
+  {
+   "test_id": "NSG-ALL-0221",
+   "query": "yến mạch"
+  },
+  {
+   "test_id": "NSG-ALL-0223",
+   "query": "mật ong"
+  },
+  {
+   "test_id": "NSG-ALL-0225",
+   "query": "sữa hạt"
+  },
+  {
+   "test_id": "NSG-ALL-0226",
+   "query": "chả giò"
+  },
+  {
+   "test_id": "NSG-ALL-0227",
+   "query": "nước"
+  },
+  {
+   "test_id": "NSG-ALL-0228",
+   "query": "chuối"
+  },
+  {
+   "test_id": "NSG-ALL-0229",
+   "query": "trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-0230",
+   "query": "bắp"
+  },
+  {
+   "test_id": "NSG-ALL-0231",
+   "query": "rửa chén"
+  },
+  {
+   "test_id": "NSG-ALL-0233",
+   "query": "nước giặt omo"
+  },
+  {
+   "test_id": "NSG-ALL-0234",
+   "query": "tỏi"
+  },
+  {
+   "test_id": "NSG-ALL-0235",
+   "query": "chảo"
+  },
+  {
+   "test_id": "NSG-ALL-0236",
+   "query": "kẹo dẻo"
+  },
+  {
+   "test_id": "NSG-ALL-0237",
+   "query": "cà rốt"
+  },
+  {
+   "test_id": "NSG-ALL-0238",
+   "query": "bơ"
+  },
+  {
+   "test_id": "NSG-ALL-0240",
+   "query": "bàn chải"
+  },
+  {
+   "test_id": "NSG-ALL-0241",
+   "query": "ức gà"
+  },
+  {
+   "test_id": "NSG-ALL-0243",
+   "query": "hảo hảo"
+  },
+  {
+   "test_id": "NSG-ALL-0244",
+   "query": "nước xả vải"
+  },
+  {
+   "test_id": "NSG-ALL-0246",
+   "query": "bún"
+  },
+  {
+   "test_id": "NSG-ALL-0247",
+   "query": "hành"
+  },
+  {
+   "test_id": "NSG-ALL-0248",
+   "query": "phở"
+  },
+  {
+   "test_id": "NSG-ALL-0249",
+   "query": "mì ý"
+  },
+  {
+   "test_id": "NSG-ALL-0250",
+   "query": "sữa chua uống"
+  },
+  {
+   "test_id": "NSG-ALL-0252",
+   "query": "cá viên"
+  },
+  {
+   "test_id": "NSG-ALL-0253",
+   "query": "rượu"
+  },
+  {
+   "test_id": "NSG-ALL-0254",
+   "query": "đậu phộng"
+  },
+  {
+   "test_id": "NSG-ALL-0255",
+   "query": "bánh tráng"
+  },
+  {
+   "test_id": "NSG-ALL-0256",
+   "query": "sữa th"
+  },
+  {
+   "test_id": "NSG-ALL-0257",
+   "query": "mì hảo hảo"
+  },
+  {
+   "test_id": "NSG-ALL-0258",
+   "query": "dầu hào"
+  },
+  {
+   "test_id": "NSG-ALL-0259",
+   "query": "gạo st25"
+  },
+  {
+   "test_id": "NSG-ALL-0260",
+   "query": "thịt"
+  },
+  {
+   "test_id": "NSG-ALL-0263",
+   "query": "hành tây"
+  },
+  {
+   "test_id": "NSG-ALL-0264",
+   "query": "ớt"
+  },
+  {
+   "test_id": "NSG-ALL-0265",
+   "query": "bàn chải đánh răng"
+  },
+  {
+   "test_id": "NSG-ALL-0266",
+   "query": "đậu hũ"
+  },
+  {
+   "test_id": "NSG-ALL-0269",
+   "query": "dưa hấu"
+  },
+  {
+   "test_id": "NSG-ALL-0270",
+   "query": "rượu vang"
+  },
+  {
+   "test_id": "NSG-ALL-0271",
+   "query": "sáp thơm"
+  },
+  {
+   "test_id": "NSG-ALL-0274",
+   "query": "ba rọi"
+  },
+  {
+   "test_id": "NSG-ALL-0276",
+   "query": "sốt"
+  },
+  {
+   "test_id": "NSG-ALL-0277",
+   "query": "sữa rửa mặt"
+  },
+  {
+   "test_id": "NSG-ALL-0278",
+   "query": "sữa thanh trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0279",
+   "query": "bột ngọt"
+  },
+  {
+   "test_id": "NSG-ALL-0280",
+   "query": "tăm bông"
+  },
+  {
+   "test_id": "NSG-ALL-0282",
+   "query": "sữa đậu nành"
+  },
+  {
+   "test_id": "NSG-ALL-0284",
+   "query": "sữa vinamilk"
+  },
+  {
+   "test_id": "NSG-ALL-0285",
+   "query": "hạt điều"
+  },
+  {
+   "test_id": "NSG-ALL-0286",
+   "query": "khăn"
+  },
+  {
+   "test_id": "NSG-ALL-0288",
+   "query": "lạp xưởng"
+  },
+  {
+   "test_id": "NSG-ALL-0291",
+   "query": "cải"
+  },
+  {
+   "test_id": "NSG-ALL-0293",
+   "query": "bánh bông lan"
+  },
+  {
+   "test_id": "NSG-ALL-0295",
+   "query": "sữa chua th"
+  },
+  {
+   "test_id": "NSG-ALL-0303",
+   "query": "gia vị"
+  },
+  {
+   "test_id": "NSG-ALL-0305",
+   "query": "găng tay"
+  },
+  {
+   "test_id": "NSG-ALL-0307",
+   "query": "hành lá"
+  },
+  {
+   "test_id": "NSG-ALL-0309",
+   "query": "việt quất"
+  },
+  {
+   "test_id": "NSG-ALL-0311",
+   "query": "bún tươi"
+  },
+  {
+   "test_id": "NSG-ALL-0315",
+   "query": "cháo"
+  },
+  {
+   "test_id": "NSG-ALL-0317",
+   "query": "dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0318",
+   "query": "bí đỏ"
+  },
+  {
+   "test_id": "NSG-ALL-0319",
+   "query": "mực"
+  },
+  {
+   "test_id": "NSG-ALL-0321",
+   "query": "đậu"
+  },
+  {
+   "test_id": "NSG-ALL-0322",
+   "query": "gối"
+  },
+  {
+   "test_id": "NSG-ALL-0323",
+   "query": "đũa"
+  },
+  {
+   "test_id": "NSG-ALL-0324",
+   "query": "lau sàn"
+  },
+  {
+   "test_id": "NSG-ALL-0325",
+   "query": "bình xịt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0326",
+   "query": "ống hút"
+  },
+  {
+   "test_id": "NSG-ALL-0328",
+   "query": "trung nguyên"
+  },
+  {
+   "test_id": "NSG-ALL-0330",
+   "query": "chả lụa"
+  },
+  {
+   "test_id": "NSG-ALL-0331",
+   "query": "gạo lứt"
+  },
+  {
+   "test_id": "NSG-ALL-0333",
+   "query": "miến phú hương"
+  },
+  {
+   "test_id": "NSG-ALL-0334",
+   "query": "thơm"
+  },
+  {
+   "test_id": "NSG-ALL-0335",
+   "query": "dâu"
+  },
+  {
+   "test_id": "NSG-ALL-0336",
+   "query": "nồi"
+  },
+  {
+   "test_id": "NSG-ALL-0339",
+   "query": "thịt xay"
+  },
+  {
+   "test_id": "NSG-ALL-0342",
+   "query": "sả"
+  },
+  {
+   "test_id": "NSG-ALL-0343",
+   "query": "bánh trung thu"
+  },
+  {
+   "test_id": "NSG-ALL-0345",
+   "query": "kem đánh răng colgate"
+  },
+  {
+   "test_id": "NSG-ALL-0346",
+   "query": "gừng"
+  },
+  {
+   "test_id": "NSG-ALL-0347",
+   "query": "chả cá"
+  },
+  {
+   "test_id": "NSG-ALL-0348",
+   "query": "rửa tay"
+  },
+  {
+   "test_id": "NSG-ALL-0349",
+   "query": "mì cay"
+  },
+  {
+   "test_id": "NSG-ALL-0350",
+   "query": "bình giữ nhiệt"
+  },
+  {
+   "test_id": "NSG-ALL-0351",
+   "query": "nước ép"
+  },
+  {
+   "test_id": "NSG-ALL-0352",
+   "query": "giá"
+  },
+  {
+   "test_id": "NSG-ALL-0353",
+   "query": "bánh que"
+  },
+  {
+   "test_id": "NSG-ALL-0354",
+   "query": "cà phê trung nguyên"
+  },
+  {
+   "test_id": "NSG-ALL-0356",
+   "query": "lẩu"
+  },
+  {
+   "test_id": "NSG-ALL-0357",
+   "query": "bông tẩy trang"
+  },
+  {
+   "test_id": "NSG-ALL-0360",
+   "query": "lăn khử mùi"
+  },
+  {
+   "test_id": "NSG-ALL-0362",
+   "query": "tương cà"
+  },
+  {
+   "test_id": "NSG-ALL-0363",
+   "query": "cá ngừ"
+  },
+  {
+   "test_id": "NSG-ALL-0364",
+   "query": "đậu hủ"
+  },
+  {
+   "test_id": "NSG-ALL-0366",
+   "query": "ly giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0367",
+   "query": "bột"
+  },
+  {
+   "test_id": "NSG-ALL-0368",
+   "query": "muỗng"
+  },
+  {
+   "test_id": "NSG-ALL-0370",
+   "query": "hạnh nhân"
+  },
+  {
+   "test_id": "NSG-ALL-0372",
+   "query": "nước khoáng"
+  },
+  {
+   "test_id": "NSG-ALL-0373",
+   "query": "khăn giấy rút"
+  },
+  {
+   "test_id": "NSG-ALL-0374",
+   "query": "đậu hà lan"
+  },
+  {
+   "test_id": "NSG-ALL-0375",
+   "query": "sữa th true milk"
+  },
+  {
+   "test_id": "NSG-ALL-0376",
+   "query": "đùi gà"
+  },
+  {
+   "test_id": "NSG-ALL-0377",
+   "query": "lẩu thái"
+  },
+  {
+   "test_id": "NSG-ALL-0379",
+   "query": "dầu olive"
+  },
+  {
+   "test_id": "NSG-ALL-0381",
+   "query": "cây lau nhà"
+  },
+  {
+   "test_id": "NSG-ALL-0384",
+   "query": "bạc hà"
+  },
+  {
+   "test_id": "NSG-ALL-0385",
+   "query": "hủ tiếu"
+  },
+  {
+   "test_id": "NSG-ALL-0386",
+   "query": "trà xanh"
+  },
+  {
+   "test_id": "NSG-ALL-0387",
+   "query": "tiêu"
+  },
+  {
+   "test_id": "NSG-ALL-0389",
+   "query": "rau muống"
+  },
+  {
+   "test_id": "NSG-ALL-0390",
+   "query": "bắp cải"
+  },
+  {
+   "test_id": "NSG-ALL-0392",
+   "query": "thạch"
+  },
+  {
+   "test_id": "NSG-ALL-0394",
+   "query": "tô"
+  },
+  {
+   "test_id": "NSG-ALL-0395",
+   "query": "miếng rửa chén"
+  },
+  {
+   "test_id": "NSG-ALL-0396",
+   "query": "bò viên"
+  },
+  {
+   "test_id": "NSG-ALL-0397",
+   "query": "mì gói"
+  },
+  {
+   "test_id": "NSG-ALL-0398",
+   "query": "xịt phòng"
+  },
+  {
+   "test_id": "NSG-ALL-0399",
+   "query": "ớt chuông"
+  },
+  {
+   "test_id": "NSG-ALL-0401",
+   "query": "dầu mè"
+  },
+  {
+   "test_id": "NSG-ALL-0405",
+   "query": "mứt"
+  },
+  {
+   "test_id": "NSG-ALL-0407",
+   "query": "cà phê phố"
+  },
+  {
+   "test_id": "NSG-ALL-0408",
+   "query": "chả"
+  },
+  {
+   "test_id": "NSG-ALL-0410",
+   "query": "sườn non"
+  },
+  {
+   "test_id": "NSG-ALL-0411",
+   "query": "hạt"
+  },
+  {
+   "test_id": "NSG-ALL-0414",
+   "query": "bánh ăn sáng"
+  },
+  {
+   "test_id": "NSG-ALL-0415",
+   "query": "snack khoai tây"
+  },
+  {
+   "test_id": "NSG-ALL-0417",
+   "query": "khoai tây chiên"
+  },
+  {
+   "test_id": "NSG-ALL-0418",
+   "query": "sữa bột"
+  },
+  {
+   "test_id": "NSG-ALL-0419",
+   "query": "hành tím"
+  },
+  {
+   "test_id": "NSG-ALL-0420",
+   "query": "sữa yến mạch"
+  },
+  {
+   "test_id": "NSG-ALL-0421",
+   "query": "bột chiên giòn"
+  },
+  {
+   "test_id": "NSG-ALL-0423",
+   "query": "quà tết"
+  },
+  {
+   "test_id": "NSG-ALL-0424",
+   "query": "dưa lưới"
+  },
+  {
+   "test_id": "NSG-ALL-0425",
+   "query": "chân gà"
+  },
+  {
+   "test_id": "NSG-ALL-0426",
+   "query": "cần tây"
+  },
+  {
+   "test_id": "NSG-ALL-0427",
+   "query": "giấy cuộn"
+  },
+  {
+   "test_id": "NSG-ALL-0429",
+   "query": "túi đựng thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-0430",
+   "query": "khổ qua"
+  },
+  {
+   "test_id": "NSG-ALL-0432",
+   "query": "sa tế"
+  },
+  {
+   "test_id": "NSG-ALL-0433",
+   "query": "sườn"
+  },
+  {
+   "test_id": "NSG-ALL-0435",
+   "query": "giấm"
+  },
+  {
+   "test_id": "NSG-ALL-0436",
+   "query": "nước tinh khiết"
+  },
+  {
+   "test_id": "NSG-ALL-0440",
+   "query": "mì trộn"
+  },
+  {
+   "test_id": "NSG-ALL-0441",
+   "query": "xả vải"
+  },
+  {
+   "test_id": "NSG-ALL-0442",
+   "query": "bơ đậu phộng"
+  },
+  {
+   "test_id": "NSG-ALL-0444",
+   "query": "nước tẩy"
+  },
+  {
+   "test_id": "NSG-ALL-0445",
+   "query": "mì lẩu thái"
+  },
+  {
+   "test_id": "NSG-ALL-0446",
+   "query": "chanh dây"
+  },
+  {
+   "test_id": "NSG-ALL-0447",
+   "query": "khô"
+  },
+  {
+   "test_id": "NSG-ALL-0448",
+   "query": "nước dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0449",
+   "query": "chà bông"
+  },
+  {
+   "test_id": "NSG-ALL-0450",
+   "query": "hộp quà tết"
+  },
+  {
+   "test_id": "NSG-ALL-0451",
+   "query": "dâu tây"
+  },
+  {
+   "test_id": "NSG-ALL-0452",
+   "query": "dưa"
+  },
+  {
+   "test_id": "NSG-ALL-0454",
+   "query": "cơm"
+  },
+  {
+   "test_id": "NSG-ALL-0455",
+   "query": "trà túi lọc"
+  },
+  {
+   "test_id": "NSG-ALL-0457",
+   "query": "mì tương đen"
+  },
+  {
+   "test_id": "NSG-ALL-0458",
+   "query": "trà sữa"
+  },
+  {
+   "test_id": "NSG-ALL-0459",
+   "query": "xịt muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-0460",
+   "query": "bí đao"
+  },
+  {
+   "test_id": "NSG-ALL-0461",
+   "query": "hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0462",
+   "query": "bột bánh bông lan"
+  },
+  {
+   "test_id": "NSG-ALL-0463",
+   "query": "sữa không đường"
+  },
+  {
+   "test_id": "NSG-ALL-0464",
+   "query": "sầu riêng"
+  },
+  {
+   "test_id": "NSG-ALL-0465",
+   "query": "mì hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0466",
+   "query": "hạt chia"
+  },
+  {
+   "test_id": "NSG-ALL-0467",
+   "query": "bột giặt omo"
+  },
+  {
+   "test_id": "NSG-ALL-0468",
+   "query": "bơ lạt"
+  },
+  {
+   "test_id": "NSG-ALL-0470",
+   "query": "dầu xả"
+  },
+  {
+   "test_id": "NSG-ALL-0471",
+   "query": "cà phê g7"
+  },
+  {
+   "test_id": "NSG-ALL-0472",
+   "query": "nước rửa chén sunlight"
+  },
+  {
+   "test_id": "NSG-ALL-0475",
+   "query": "thịt gà"
+  },
+  {
+   "test_id": "NSG-ALL-0476",
+   "query": "màng bọc thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-0477",
+   "query": "rau câu"
+  },
+  {
+   "test_id": "NSG-ALL-0478",
+   "query": "cánh gà"
+  },
+  {
+   "test_id": "NSG-ALL-0479",
+   "query": "mì ăn liền"
+  },
+  {
+   "test_id": "NSG-ALL-0481",
+   "query": "sữa tươi không đường"
+  },
+  {
+   "test_id": "NSG-ALL-0483",
+   "query": "sữa chua vinamilk"
+  },
+  {
+   "test_id": "NSG-ALL-0484",
+   "query": "hạt sen"
+  },
+  {
+   "test_id": "NSG-ALL-0487",
+   "query": "dầu gội clear"
+  },
+  {
+   "test_id": "NSG-ALL-0491",
+   "query": "yến"
+  },
+  {
+   "test_id": "NSG-ALL-0494",
+   "query": "đồ chơi"
+  },
+  {
+   "test_id": "NSG-ALL-0495",
+   "query": "sữa chua hy lạp"
+  },
+  {
+   "test_id": "NSG-ALL-0496",
+   "query": "giấy ăn"
+  },
+  {
+   "test_id": "NSG-ALL-0497",
+   "query": "tẩy bồn cầu"
+  },
+  {
+   "test_id": "NSG-ALL-0498",
+   "query": "phô mai lát"
+  },
+  {
+   "test_id": "NSG-ALL-0502",
+   "query": "khăn tắm"
+  },
+  {
+   "test_id": "NSG-ALL-0503",
+   "query": "sâm"
+  },
+  {
+   "test_id": "NSG-ALL-0505",
+   "query": "ca phê"
+  },
+  {
+   "test_id": "NSG-ALL-0506",
+   "query": "tương ớt hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0507",
+   "query": "nạc dăm"
+  },
+  {
+   "test_id": "NSG-ALL-0508",
+   "query": "tàu hủ"
+  },
+  {
+   "test_id": "NSG-ALL-0509",
+   "query": "bánh khoai tây"
+  },
+  {
+   "test_id": "NSG-ALL-0510",
+   "query": "sốt mì ý"
+  },
+  {
+   "test_id": "NSG-ALL-0513",
+   "query": "nước cốt dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0514",
+   "query": "tắc"
+  },
+  {
+   "test_id": "NSG-ALL-0515",
+   "query": "nước tương nam dương"
+  },
+  {
+   "test_id": "NSG-ALL-0516",
+   "query": "dầu oliu"
+  },
+  {
+   "test_id": "NSG-ALL-0517",
+   "query": "củ cải"
+  },
+  {
+   "test_id": "NSG-ALL-0518",
+   "query": "tàu hũ"
+  },
+  {
+   "test_id": "NSG-ALL-0519",
+   "query": "bình nước"
+  },
+  {
+   "test_id": "NSG-ALL-0520",
+   "query": "trứng cút"
+  },
+  {
+   "test_id": "NSG-ALL-0521",
+   "query": "đà lạt milk"
+  },
+  {
+   "test_id": "NSG-ALL-0522",
+   "query": "viên giặt"
+  },
+  {
+   "test_id": "NSG-ALL-0523",
+   "query": "bông cải"
+  },
+  {
+   "test_id": "NSG-ALL-0524",
+   "query": "tăm"
+  },
+  {
+   "test_id": "NSG-ALL-0526",
+   "query": "trái cây sấy"
+  },
+  {
+   "test_id": "NSG-ALL-0527",
+   "query": "mì koreno"
+  },
+  {
+   "test_id": "NSG-ALL-0530",
+   "query": "cầu tre"
+  },
+  {
+   "test_id": "NSG-ALL-0531",
+   "query": "túi"
+  },
+  {
+   "test_id": "NSG-ALL-0532",
+   "query": "mì chay"
+  },
+  {
+   "test_id": "NSG-ALL-0533",
+   "query": "xúc xích vissan"
+  },
+  {
+   "test_id": "NSG-ALL-0535",
+   "query": "phi lê gà"
+  },
+  {
+   "test_id": "NSG-ALL-0536",
+   "query": "bia sài gòn"
+  },
+  {
+   "test_id": "NSG-ALL-0537",
+   "query": "nước lau nhà"
+  },
+  {
+   "test_id": "NSG-ALL-0540",
+   "query": "dứa"
+  },
+  {
+   "test_id": "NSG-ALL-0541",
+   "query": "ổi"
+  },
+  {
+   "test_id": "NSG-ALL-0542",
+   "query": "hoành thánh"
+  },
+  {
+   "test_id": "NSG-ALL-0543",
+   "query": "móc"
+  },
+  {
+   "test_id": "NSG-ALL-0545",
+   "query": "khoai môn"
+  },
+  {
+   "test_id": "NSG-ALL-0547",
+   "query": "hộp nhựa"
+  },
+  {
+   "test_id": "NSG-ALL-0548",
+   "query": "cải thìa"
+  },
+  {
+   "test_id": "NSG-ALL-0549",
+   "query": "rau củ"
+  },
+  {
+   "test_id": "NSG-ALL-0550",
+   "query": "không đường"
+  },
+  {
+   "test_id": "NSG-ALL-0551",
+   "query": "thùng rác"
+  },
+  {
+   "test_id": "NSG-ALL-0552",
+   "query": "dầu"
+  },
+  {
+   "test_id": "NSG-ALL-0553",
+   "query": "giấy rút"
+  },
+  {
+   "test_id": "NSG-ALL-0554",
+   "query": "dầu gội đầu"
+  },
+  {
+   "test_id": "NSG-ALL-0555",
+   "query": "nước mắm nam ngư"
+  },
+  {
+   "test_id": "NSG-ALL-0556",
+   "query": "chén"
+  },
+  {
+   "test_id": "NSG-ALL-0557",
+   "query": "chảo chống dính"
+  },
+  {
+   "test_id": "NSG-ALL-0558",
+   "query": "túi đựng rác"
+  },
+  {
+   "test_id": "NSG-ALL-0559",
+   "query": "đường phèn"
+  },
+  {
+   "test_id": "NSG-ALL-0560",
+   "query": "nha đam"
+  },
+  {
+   "test_id": "NSG-ALL-0561",
+   "query": "hộp quà"
+  },
+  {
+   "test_id": "NSG-ALL-0562",
+   "query": "lau nhà"
+  },
+  {
+   "test_id": "NSG-ALL-0563",
+   "query": "thịt heo xay"
+  },
+  {
+   "test_id": "NSG-ALL-0565",
+   "query": "sữa tắm dove"
+  },
+  {
+   "test_id": "NSG-ALL-0567",
+   "query": "nước trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-0570",
+   "query": "nước giặt cửa trước"
+  },
+  {
+   "test_id": "NSG-ALL-0571",
+   "query": "trà ô long"
+  },
+  {
+   "test_id": "NSG-ALL-0573",
+   "query": "nồi cơm điện"
+  },
+  {
+   "test_id": "NSG-ALL-0575",
+   "query": "tương ớt cholimex"
+  },
+  {
+   "test_id": "NSG-ALL-0576",
+   "query": "bánh gạo an"
+  },
+  {
+   "test_id": "NSG-ALL-0577",
+   "query": "hạt hướng dương"
+  },
+  {
+   "test_id": "NSG-ALL-0579",
+   "query": "cafe trung nguyên"
+  },
+  {
+   "test_id": "NSG-ALL-0580",
+   "query": "sữa chua không đường"
+  },
+  {
+   "test_id": "NSG-ALL-0581",
+   "query": "bánh giò"
+  },
+  {
+   "test_id": "NSG-ALL-0585",
+   "query": "cải thảo"
+  },
+  {
+   "test_id": "NSG-ALL-0586",
+   "query": "bông cải xanh"
+  },
+  {
+   "test_id": "NSG-ALL-0587",
+   "query": "nước lau kính"
+  },
+  {
+   "test_id": "NSG-ALL-0588",
+   "query": "sô cô la"
+  },
+  {
+   "test_id": "NSG-ALL-0589",
+   "query": "tương đen"
+  },
+  {
+   "test_id": "NSG-ALL-0590",
+   "query": "nước tẩy trang"
+  },
+  {
+   "test_id": "NSG-ALL-0591",
+   "query": "kem chống nắng"
+  },
+  {
+   "test_id": "NSG-ALL-0592",
+   "query": "cá hộp"
+  },
+  {
+   "test_id": "NSG-ALL-0593",
+   "query": "ba chỉ bò"
+  },
+  {
+   "test_id": "NSG-ALL-0595",
+   "query": "tân tân"
+  },
+  {
+   "test_id": "NSG-ALL-0596",
+   "query": "gấu bông"
+  },
+  {
+   "test_id": "NSG-ALL-0597",
+   "query": "dĩa"
+  },
+  {
+   "test_id": "NSG-ALL-0598",
+   "query": "ống hút giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0600",
+   "query": "nước súc miệng"
+  },
+  {
+   "test_id": "NSG-ALL-0601",
+   "query": "ớt hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0602",
+   "query": "khẩu trang"
+  },
+  {
+   "test_id": "NSG-ALL-0603",
+   "query": "bộ lau nhà"
+  },
+  {
+   "test_id": "NSG-ALL-0604",
+   "query": "hộp"
+  },
+  {
+   "test_id": "NSG-ALL-0608",
+   "query": "hoa cúc"
+  },
+  {
+   "test_id": "NSG-ALL-0609",
+   "query": "bông tắm"
+  },
+  {
+   "test_id": "NSG-ALL-0610",
+   "query": "bột canh"
+  },
+  {
+   "test_id": "NSG-ALL-0613",
+   "query": "mỳ"
+  },
+  {
+   "test_id": "NSG-ALL-0614",
+   "query": "cà phê hòa tan"
+  },
+  {
+   "test_id": "NSG-ALL-0617",
+   "query": "bánh đậu xanh"
+  },
+  {
+   "test_id": "NSG-ALL-0621",
+   "query": "dép"
+  },
+  {
+   "test_id": "NSG-ALL-0622",
+   "query": "mận"
+  },
+  {
+   "test_id": "NSG-ALL-0624",
+   "query": "chanh vàng"
+  },
+  {
+   "test_id": "NSG-ALL-0626",
+   "query": "xúc xích cp"
+  },
+  {
+   "test_id": "NSG-ALL-0627",
+   "query": "xúc xích phô mai"
+  },
+  {
+   "test_id": "NSG-ALL-0628",
+   "query": "quýt"
+  },
+  {
+   "test_id": "NSG-ALL-0629",
+   "query": "kinh đô"
+  },
+  {
+   "test_id": "NSG-ALL-0633",
+   "query": "sữa tắm lifebuoy"
+  },
+  {
+   "test_id": "NSG-ALL-0635",
+   "query": "khử mùi"
+  },
+  {
+   "test_id": "NSG-ALL-0638",
+   "query": "mì shin"
+  },
+  {
+   "test_id": "NSG-ALL-0639",
+   "query": "khăn lau"
+  },
+  {
+   "test_id": "NSG-ALL-0641",
+   "query": "phi lê"
+  },
+  {
+   "test_id": "NSG-ALL-0643",
+   "query": "rác"
+  },
+  {
+   "test_id": "NSG-ALL-0644",
+   "query": "bưởi"
+  },
+  {
+   "test_id": "NSG-ALL-0645",
+   "query": "dầu ô liu"
+  },
+  {
+   "test_id": "NSG-ALL-0646",
+   "query": "sâm hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0647",
+   "query": "đậu xanh"
+  },
+  {
+   "test_id": "NSG-ALL-0648",
+   "query": "bánh ngũ cốc"
+  },
+  {
+   "test_id": "NSG-ALL-0650",
+   "query": "ngò"
+  },
+  {
+   "test_id": "NSG-ALL-0651",
+   "query": "gạo lức"
+  },
+  {
+   "test_id": "NSG-ALL-0652",
+   "query": "chổi"
+  },
+  {
+   "test_id": "NSG-ALL-0653",
+   "query": "xà bông cục"
+  },
+  {
+   "test_id": "NSG-ALL-0655",
+   "query": "khô bò"
+  },
+  {
+   "test_id": "NSG-ALL-0657",
+   "query": "nước tăng lực"
+  },
+  {
+   "test_id": "NSG-ALL-0658",
+   "query": "xoài sấy dẻo"
+  },
+  {
+   "test_id": "NSG-ALL-0659",
+   "query": "ly nhựa"
+  },
+  {
+   "test_id": "NSG-ALL-0660",
+   "query": "nước uống"
+  },
+  {
+   "test_id": "NSG-ALL-0662",
+   "query": "nước giặt gift"
+  },
+  {
+   "test_id": "NSG-ALL-0665",
+   "query": "sữa tươi vinamilk"
+  },
+  {
+   "test_id": "NSG-ALL-0666",
+   "query": "khăn giấy cuộn"
+  },
+  {
+   "test_id": "NSG-ALL-0668",
+   "query": "bánh mì tươi"
+  },
+  {
+   "test_id": "NSG-ALL-0669",
+   "query": "xịt côn trùng raid"
+  },
+  {
+   "test_id": "NSG-ALL-0670",
+   "query": "bột mì"
+  },
+  {
+   "test_id": "NSG-ALL-0672",
+   "query": "muối hồng"
+  },
+  {
+   "test_id": "NSG-ALL-0673",
+   "query": "xà bông"
+  },
+  {
+   "test_id": "NSG-ALL-0674",
+   "query": "bún khô"
+  },
+  {
+   "test_id": "NSG-ALL-0676",
+   "query": "dung dịch vệ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-0677",
+   "query": "nước giặt ariel"
+  },
+  {
+   "test_id": "NSG-ALL-0678",
+   "query": "mì 3 miền"
+  },
+  {
+   "test_id": "NSG-ALL-0679",
+   "query": "măng tây"
+  },
+  {
+   "test_id": "NSG-ALL-0680",
+   "query": "viên giặt omo"
+  },
+  {
+   "test_id": "NSG-ALL-0681",
+   "query": "giấy ướt"
+  },
+  {
+   "test_id": "NSG-ALL-0682",
+   "query": "trà phúc long"
+  },
+  {
+   "test_id": "NSG-ALL-0685",
+   "query": "phô mai que"
+  },
+  {
+   "test_id": "NSG-ALL-0686",
+   "query": "lê"
+  },
+  {
+   "test_id": "NSG-ALL-0687",
+   "query": "dầu gội dove"
+  },
+  {
+   "test_id": "NSG-ALL-0688",
+   "query": "váng sữa"
+  },
+  {
+   "test_id": "NSG-ALL-0690",
+   "query": "nam ngư"
+  },
+  {
+   "test_id": "NSG-ALL-0692",
+   "query": "bánh pía"
+  },
+  {
+   "test_id": "NSG-ALL-0693",
+   "query": "bánh phô mai"
+  },
+  {
+   "test_id": "NSG-ALL-0694",
+   "query": "cốt dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0695",
+   "query": "rổ"
+  },
+  {
+   "test_id": "NSG-ALL-0696",
+   "query": "nước mắm liên thành"
+  },
+  {
+   "test_id": "NSG-ALL-0697",
+   "query": "nước 5l"
+  },
+  {
+   "test_id": "NSG-ALL-0698",
+   "query": "xịt côn trùng jumbo"
+  },
+  {
+   "test_id": "NSG-ALL-0699",
+   "query": "cá thu"
+  },
+  {
+   "test_id": "NSG-ALL-0700",
+   "query": "mì udon"
+  },
+  {
+   "test_id": "NSG-ALL-0702",
+   "query": "bánh kem"
+  },
+  {
+   "test_id": "NSG-ALL-0703",
+   "query": "quạt"
+  },
+  {
+   "test_id": "NSG-ALL-0704",
+   "query": "hồng sâm"
+  },
+  {
+   "test_id": "NSG-ALL-0706",
+   "query": "gói gia vị"
+  },
+  {
+   "test_id": "NSG-ALL-0707",
+   "query": "xúc xích đức"
+  },
+  {
+   "test_id": "NSG-ALL-0709",
+   "query": "băng vệ sinh diana"
+  },
+  {
+   "test_id": "NSG-ALL-0710",
+   "query": "sữa meiji"
+  },
+  {
+   "test_id": "NSG-ALL-0712",
+   "query": "thịt xông khói"
+  },
+  {
+   "test_id": "NSG-ALL-0714",
+   "query": "mồng tơi"
+  },
+  {
+   "test_id": "NSG-ALL-0717",
+   "query": "mì xào"
+  },
+  {
+   "test_id": "NSG-ALL-0719",
+   "query": "táo đỏ"
+  },
+  {
+   "test_id": "NSG-ALL-0721",
+   "query": "bó xôi"
+  },
+  {
+   "test_id": "NSG-ALL-0723",
+   "query": "bánh xếp"
+  },
+  {
+   "test_id": "NSG-ALL-0724",
+   "query": "ba chỉ"
+  },
+  {
+   "test_id": "NSG-ALL-0725",
+   "query": "sữa tươi thanh trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0727",
+   "query": "củ cải trắng"
+  },
+  {
+   "test_id": "NSG-ALL-0728",
+   "query": "kem béo"
+  },
+  {
+   "test_id": "NSG-ALL-0730",
+   "query": "sữa chua ăn"
+  },
+  {
+   "test_id": "NSG-ALL-0731",
+   "query": "tôm khô"
+  },
+  {
+   "test_id": "NSG-ALL-0733",
+   "query": "cô gái hà lan"
+  },
+  {
+   "test_id": "NSG-ALL-0734",
+   "query": "xương"
+  },
+  {
+   "test_id": "NSG-ALL-0736",
+   "query": "quần lót"
+  },
+  {
+   "test_id": "NSG-ALL-0739",
+   "query": "bọc thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-0740",
+   "query": "nấm đùi gà"
+  },
+  {
+   "test_id": "NSG-ALL-0741",
+   "query": "sữa milo"
+  },
+  {
+   "test_id": "NSG-ALL-0742",
+   "query": "ông chà và"
+  },
+  {
+   "test_id": "NSG-ALL-0746",
+   "query": "trà hoa cúc"
+  },
+  {
+   "test_id": "NSG-ALL-0747",
+   "query": "trứng muối"
+  },
+  {
+   "test_id": "NSG-ALL-0750",
+   "query": "xịt khử mùi"
+  },
+  {
+   "test_id": "NSG-ALL-0752",
+   "query": "sữa hạnh nhân"
+  },
+  {
+   "test_id": "NSG-ALL-0753",
+   "query": "dao cạo"
+  },
+  {
+   "test_id": "NSG-ALL-0754",
+   "query": "trà đào"
+  },
+  {
+   "test_id": "NSG-ALL-0755",
+   "query": "hẹ"
+  },
+  {
+   "test_id": "NSG-ALL-0757",
+   "query": "hữu cơ"
+  },
+  {
+   "test_id": "NSG-ALL-0759",
+   "query": "hộp thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-0760",
+   "query": "khoai mỡ"
+  },
+  {
+   "test_id": "NSG-ALL-0762",
+   "query": "dầu dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0764",
+   "query": "túi thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-0765",
+   "query": "lúa mạch"
+  },
+  {
+   "test_id": "NSG-ALL-0766",
+   "query": "má đùi gà"
+  },
+  {
+   "test_id": "NSG-ALL-0767",
+   "query": "bánh bao thọ phát"
+  },
+  {
+   "test_id": "NSG-ALL-0769",
+   "query": "bích chi"
+  },
+  {
+   "test_id": "NSG-ALL-0774",
+   "query": "nấm đông cô"
+  },
+  {
+   "test_id": "NSG-ALL-0775",
+   "query": "phúc long"
+  },
+  {
+   "test_id": "NSG-ALL-0777",
+   "query": "thịt bò xay"
+  },
+  {
+   "test_id": "NSG-ALL-0779",
+   "query": "đậu bắp"
+  },
+  {
+   "test_id": "NSG-ALL-0781",
+   "query": "nước xả vải comfort"
+  },
+  {
+   "test_id": "NSG-ALL-0784",
+   "query": "cải bó xôi"
+  },
+  {
+   "test_id": "NSG-ALL-0785",
+   "query": "viên"
+  },
+  {
+   "test_id": "NSG-ALL-0787",
+   "query": "sữa tươi 1l"
+  },
+  {
+   "test_id": "NSG-ALL-0789",
+   "query": "khô gà"
+  },
+  {
+   "test_id": "NSG-ALL-0791",
+   "query": "dĩa giấy"
+  },
+  {
+   "test_id": "NSG-ALL-0792",
+   "query": "mặt nạ"
+  },
+  {
+   "test_id": "NSG-ALL-0793",
+   "query": "khăn ướt choice l"
+  },
+  {
+   "test_id": "NSG-ALL-0797",
+   "query": "măng"
+  },
+  {
+   "test_id": "NSG-ALL-0800",
+   "query": "cà ri"
+  },
+  {
+   "test_id": "NSG-ALL-0803",
+   "query": "cà phê sữa"
+  },
+  {
+   "test_id": "NSG-ALL-0804",
+   "query": "sốt cà chua"
+  },
+  {
+   "test_id": "NSG-ALL-0805",
+   "query": "đậu đỏ"
+  },
+  {
+   "test_id": "NSG-ALL-0806",
+   "query": "sữa ông thọ"
+  },
+  {
+   "test_id": "NSG-ALL-0807",
+   "query": "thú nhồi bông"
+  },
+  {
+   "test_id": "NSG-ALL-0808",
+   "query": "bánh afc"
+  },
+  {
+   "test_id": "NSG-ALL-0809",
+   "query": "sữa đà lạt"
+  },
+  {
+   "test_id": "NSG-ALL-0810",
+   "query": "nếp"
+  },
+  {
+   "test_id": "NSG-ALL-0811",
+   "query": "cá trứng"
+  },
+  {
+   "test_id": "NSG-ALL-0812",
+   "query": "bánh snack"
+  },
+  {
+   "test_id": "NSG-ALL-0813",
+   "query": "gà cp"
+  },
+  {
+   "test_id": "NSG-ALL-0814",
+   "query": "cải ngọt"
+  },
+  {
+   "test_id": "NSG-ALL-0819",
+   "query": "bánh mì hoa cúc"
+  },
+  {
+   "test_id": "NSG-ALL-0821",
+   "query": "mỡ"
+  },
+  {
+   "test_id": "NSG-ALL-0823",
+   "query": "dầu gội nguyên xuân"
+  },
+  {
+   "test_id": "NSG-ALL-0824",
+   "query": "nước tẩy bồn cầu"
+  },
+  {
+   "test_id": "NSG-ALL-0826",
+   "query": "dầu ăn 5l"
+  },
+  {
+   "test_id": "NSG-ALL-0827",
+   "query": "dầu đậu nành"
+  },
+  {
+   "test_id": "NSG-ALL-0829",
+   "query": "nước giặt xả"
+  },
+  {
+   "test_id": "NSG-ALL-0830",
+   "query": "khăn giấy ướt choice l"
+  },
+  {
+   "test_id": "NSG-ALL-0831",
+   "query": "mướp"
+  },
+  {
+   "test_id": "NSG-ALL-0832",
+   "query": "giò sống"
+  },
+  {
+   "test_id": "NSG-ALL-0833",
+   "query": "trà lipton"
+  },
+  {
+   "test_id": "NSG-ALL-0835",
+   "query": "hải sản"
+  },
+  {
+   "test_id": "NSG-ALL-0836",
+   "query": "bánh xốp"
+  },
+  {
+   "test_id": "NSG-ALL-0837",
+   "query": "nước yến"
+  },
+  {
+   "test_id": "NSG-ALL-0838",
+   "query": "nhãn"
+  },
+  {
+   "test_id": "NSG-ALL-0840",
+   "query": "bầu"
+  },
+  {
+   "test_id": "NSG-ALL-0841",
+   "query": "mỡ heo"
+  },
+  {
+   "test_id": "NSG-ALL-0842",
+   "query": "tã"
+  },
+  {
+   "test_id": "NSG-ALL-0843",
+   "query": "sữa chua tiệt trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0845",
+   "query": "mì kim chi"
+  },
+  {
+   "test_id": "NSG-ALL-0846",
+   "query": "nồi inox"
+  },
+  {
+   "test_id": "NSG-ALL-0849",
+   "query": "mè đen"
+  },
+  {
+   "test_id": "NSG-ALL-0851",
+   "query": "nho khô"
+  },
+  {
+   "test_id": "NSG-ALL-0852",
+   "query": "bánh bon"
+  },
+  {
+   "test_id": "NSG-ALL-0853",
+   "query": "nấm mèo"
+  },
+  {
+   "test_id": "NSG-ALL-0854",
+   "query": "bánh gấu"
+  },
+  {
+   "test_id": "NSG-ALL-0855",
+   "query": "bánh danisa"
+  },
+  {
+   "test_id": "NSG-ALL-0856",
+   "query": "băng vệ sinh hàng ngày"
+  },
+  {
+   "test_id": "NSG-ALL-0857",
+   "query": "kẹo mút"
+  },
+  {
+   "test_id": "NSG-ALL-0859",
+   "query": "thớt"
+  },
+  {
+   "test_id": "NSG-ALL-0861",
+   "query": "trà chanh"
+  },
+  {
+   "test_id": "NSG-ALL-0862",
+   "query": "bong bóng"
+  },
+  {
+   "test_id": "NSG-ALL-0864",
+   "query": "thì là"
+  },
+  {
+   "test_id": "NSG-ALL-0865",
+   "query": "bánh oreo"
+  },
+  {
+   "test_id": "NSG-ALL-0866",
+   "query": "đậu nành"
+  },
+  {
+   "test_id": "NSG-ALL-0867",
+   "query": "nước lau sàn sunlight"
+  },
+  {
+   "test_id": "NSG-ALL-0868",
+   "query": "bút"
+  },
+  {
+   "test_id": "NSG-ALL-0869",
+   "query": "hướng dương"
+  },
+  {
+   "test_id": "NSG-ALL-0871",
+   "query": "ông thọ"
+  },
+  {
+   "test_id": "NSG-ALL-0872",
+   "query": "há cảo tôm"
+  },
+  {
+   "test_id": "NSG-ALL-0873",
+   "query": "bánh lu"
+  },
+  {
+   "test_id": "NSG-ALL-0875",
+   "query": "bắp bò"
+  },
+  {
+   "test_id": "NSG-ALL-0878",
+   "query": "sữa tắm hazeline"
+  },
+  {
+   "test_id": "NSG-ALL-0879",
+   "query": "ô long"
+  },
+  {
+   "test_id": "NSG-ALL-0881",
+   "query": "kéo"
+  },
+  {
+   "test_id": "NSG-ALL-0883",
+   "query": "phở bò"
+  },
+  {
+   "test_id": "NSG-ALL-0884",
+   "query": "đào"
+  },
+  {
+   "test_id": "NSG-ALL-0885",
+   "query": "chả giò chay"
+  },
+  {
+   "test_id": "NSG-ALL-0886",
+   "query": "nước tương maggi"
+  },
+  {
+   "test_id": "NSG-ALL-0887",
+   "query": "dầu hướng dương"
+  },
+  {
+   "test_id": "NSG-ALL-0888",
+   "query": "sữa tiệt trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0890",
+   "query": "mè"
+  },
+  {
+   "test_id": "NSG-ALL-0891",
+   "query": "sữa 1l"
+  },
+  {
+   "test_id": "NSG-ALL-0893",
+   "query": "nấm hương"
+  },
+  {
+   "test_id": "NSG-ALL-0896",
+   "query": "nước gạo"
+  },
+  {
+   "test_id": "NSG-ALL-0898",
+   "query": "bánh canh"
+  },
+  {
+   "test_id": "NSG-ALL-0899",
+   "query": "thảm"
+  },
+  {
+   "test_id": "NSG-ALL-0900",
+   "query": "vệ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-0903",
+   "query": "bồn cầu"
+  },
+  {
+   "test_id": "NSG-ALL-0904",
+   "query": "nguyên xuân"
+  },
+  {
+   "test_id": "NSG-ALL-0905",
+   "query": "sáp"
+  },
+  {
+   "test_id": "NSG-ALL-0906",
+   "query": "gối ôm"
+  },
+  {
+   "test_id": "NSG-ALL-0907",
+   "query": "màng bọc"
+  },
+  {
+   "test_id": "NSG-ALL-0910",
+   "query": "thịt bằm"
+  },
+  {
+   "test_id": "NSG-ALL-0911",
+   "query": "bò kho"
+  },
+  {
+   "test_id": "NSG-ALL-0912",
+   "query": "heo thảo mộc"
+  },
+  {
+   "test_id": "NSG-ALL-0913",
+   "query": "nước xả downy"
+  },
+  {
+   "test_id": "NSG-ALL-0915",
+   "query": "tẩy"
+  },
+  {
+   "test_id": "NSG-ALL-0916",
+   "query": "trứng vịt"
+  },
+  {
+   "test_id": "NSG-ALL-0917",
+   "query": "đu đủ"
+  },
+  {
+   "test_id": "NSG-ALL-0918",
+   "query": "xúc xích ponnie"
+  },
+  {
+   "test_id": "NSG-ALL-0920",
+   "query": "đà lạt"
+  },
+  {
+   "test_id": "NSG-ALL-0923",
+   "query": "khăn ướt choice l gói 120 tờ"
+  },
+  {
+   "test_id": "NSG-ALL-0924",
+   "query": "óc chó"
+  },
+  {
+   "test_id": "NSG-ALL-0926",
+   "query": "cá lóc"
+  },
+  {
+   "test_id": "NSG-ALL-0927",
+   "query": "sữa tươi th"
+  },
+  {
+   "test_id": "NSG-ALL-0928",
+   "query": "xả"
+  },
+  {
+   "test_id": "NSG-ALL-0929",
+   "query": "giấm táo"
+  },
+  {
+   "test_id": "NSG-ALL-0930",
+   "query": "khoai tây đông lạnh"
+  },
+  {
+   "test_id": "NSG-ALL-0932",
+   "query": "sữa cô gái hà lan"
+  },
+  {
+   "test_id": "NSG-ALL-0933",
+   "query": "hộp thuỷ tinh"
+  },
+  {
+   "test_id": "NSG-ALL-0935",
+   "query": "dầu gội pantene"
+  },
+  {
+   "test_id": "NSG-ALL-0936",
+   "query": "nấm kim châm"
+  },
+  {
+   "test_id": "NSG-ALL-0937",
+   "query": "viên thả lẩu"
+  },
+  {
+   "test_id": "NSG-ALL-0938",
+   "query": "cá khô"
+  },
+  {
+   "test_id": "NSG-ALL-0939",
+   "query": "xông khói"
+  },
+  {
+   "test_id": "NSG-ALL-0940",
+   "query": "bún bò"
+  },
+  {
+   "test_id": "NSG-ALL-0942",
+   "query": "thanh trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0944",
+   "query": "trà gừng"
+  },
+  {
+   "test_id": "NSG-ALL-0945",
+   "query": "lau kính"
+  },
+  {
+   "test_id": "NSG-ALL-0946",
+   "query": "canh rong biển"
+  },
+  {
+   "test_id": "NSG-ALL-0949",
+   "query": "trà lài"
+  },
+  {
+   "test_id": "NSG-ALL-0951",
+   "query": "bánh yến mạch"
+  },
+  {
+   "test_id": "NSG-ALL-0953",
+   "query": "sữa chuối"
+  },
+  {
+   "test_id": "NSG-ALL-0955",
+   "query": "đông lạnh"
+  },
+  {
+   "test_id": "NSG-ALL-0956",
+   "query": "cơm chiên"
+  },
+  {
+   "test_id": "NSG-ALL-0958",
+   "query": "đậu que"
+  },
+  {
+   "test_id": "NSG-ALL-0959",
+   "query": "thạch dừa"
+  },
+  {
+   "test_id": "NSG-ALL-0960",
+   "query": "gạo neptune"
+  },
+  {
+   "test_id": "NSG-ALL-0961",
+   "query": "xúc xích tiệt trùng"
+  },
+  {
+   "test_id": "NSG-ALL-0965",
+   "query": "giao màu ngẫu nhiên"
+  },
+  {
+   "test_id": "NSG-ALL-0966",
+   "query": "gà ta"
+  },
+  {
+   "test_id": "NSG-ALL-0968",
+   "query": "áo"
+  },
+  {
+   "test_id": "NSG-ALL-0969",
+   "query": "cà chua bi"
+  },
+  {
+   "test_id": "NSG-ALL-0970",
+   "query": "rau thơm"
+  },
+  {
+   "test_id": "NSG-ALL-0971",
+   "query": "sữa oatside"
+  },
+  {
+   "test_id": "NSG-ALL-0973",
+   "query": "băng keo"
+  },
+  {
+   "test_id": "NSG-ALL-0974",
+   "query": "mì samyang"
+  },
+  {
+   "test_id": "NSG-ALL-0975",
+   "query": "cà phê hoà tan"
+  },
+  {
+   "test_id": "NSG-ALL-0980",
+   "query": "kệ"
+  },
+  {
+   "test_id": "NSG-ALL-0981",
+   "query": "phô mai qbb"
+  },
+  {
+   "test_id": "NSG-ALL-0982",
+   "query": "quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-0983",
+   "query": "giò heo"
+  },
+  {
+   "test_id": "NSG-ALL-0984",
+   "query": "đường ăn kiêng"
+  },
+  {
+   "test_id": "NSG-ALL-0985",
+   "query": "mì trứng"
+  },
+  {
+   "test_id": "NSG-ALL-0987",
+   "query": "khô mực"
+  },
+  {
+   "test_id": "NSG-ALL-0989",
+   "query": "bột cacao"
+  },
+  {
+   "test_id": "NSG-ALL-0990",
+   "query": "vịt"
+  },
+  {
+   "test_id": "NSG-ALL-0993",
+   "query": "nam dương"
+  },
+  {
+   "test_id": "NSG-ALL-0994",
+   "query": "mì jin"
+  },
+  {
+   "test_id": "NSG-ALL-0995",
+   "query": "dầu gội dau lchoice"
+  },
+  {
+   "test_id": "NSG-ALL-0996",
+   "query": "bánh hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-0997",
+   "query": "mè rang"
+  },
+  {
+   "test_id": "NSG-ALL-0999",
+   "query": "sữa tươi tiệt trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1000",
+   "query": "bột năng"
+  },
+  {
+   "test_id": "NSG-ALL-1001",
+   "query": "liên thành"
+  },
+  {
+   "test_id": "NSG-ALL-1002",
+   "query": "muỗng nhựa"
+  },
+  {
+   "test_id": "NSG-ALL-1003",
+   "query": "mì siu kay"
+  },
+  {
+   "test_id": "NSG-ALL-1005",
+   "query": "lạp xưởng tươi"
+  },
+  {
+   "test_id": "NSG-ALL-1007",
+   "query": "muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1008",
+   "query": "giấy bếp"
+  },
+  {
+   "test_id": "NSG-ALL-1010",
+   "query": "dầu gội sunsilk"
+  },
+  {
+   "test_id": "NSG-ALL-1011",
+   "query": "cà phê gói"
+  },
+  {
+   "test_id": "NSG-ALL-1012",
+   "query": "thạch rau câu"
+  },
+  {
+   "test_id": "NSG-ALL-1014",
+   "query": "bí ngòi"
+  },
+  {
+   "test_id": "NSG-ALL-1015",
+   "query": "quế"
+  },
+  {
+   "test_id": "NSG-ALL-1016",
+   "query": "hạt dẻ"
+  },
+  {
+   "test_id": "NSG-ALL-1017",
+   "query": "xá xíu"
+  },
+  {
+   "test_id": "NSG-ALL-1018",
+   "query": "khăn đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-1019",
+   "query": "ngủ cốc"
+  },
+  {
+   "test_id": "NSG-ALL-1020",
+   "query": "phin cà phê"
+  },
+  {
+   "test_id": "NSG-ALL-1021",
+   "query": "miếng"
+  },
+  {
+   "test_id": "NSG-ALL-1022",
+   "query": "muối ớt"
+  },
+  {
+   "test_id": "NSG-ALL-1023",
+   "query": "nồi chiên không dầu"
+  },
+  {
+   "test_id": "NSG-ALL-1024",
+   "query": "sữa ensure"
+  },
+  {
+   "test_id": "NSG-ALL-1025",
+   "query": "xương gà"
+  },
+  {
+   "test_id": "NSG-ALL-1026",
+   "query": "vá"
+  },
+  {
+   "test_id": "NSG-ALL-1027",
+   "query": "cá ba sa"
+  },
+  {
+   "test_id": "NSG-ALL-1028",
+   "query": "cung đình"
+  },
+  {
+   "test_id": "NSG-ALL-1029",
+   "query": "bún gạo"
+  },
+  {
+   "test_id": "NSG-ALL-1030",
+   "query": "dầu gội rejoice"
+  },
+  {
+   "test_id": "NSG-ALL-1032",
+   "query": "ốc"
+  },
+  {
+   "test_id": "NSG-ALL-1033",
+   "query": "mắm tôm"
+  },
+  {
+   "test_id": "NSG-ALL-1034",
+   "query": "nước ép thơm"
+  },
+  {
+   "test_id": "NSG-ALL-1035",
+   "query": "nước mắm hưng thịnh"
+  },
+  {
+   "test_id": "NSG-ALL-1037",
+   "query": "đèn"
+  },
+  {
+   "test_id": "NSG-ALL-1041",
+   "query": "mì tôm"
+  },
+  {
+   "test_id": "NSG-ALL-1042",
+   "query": "sữa dưỡng thể"
+  },
+  {
+   "test_id": "NSG-ALL-1044",
+   "query": "băng vệ sinh quần"
+  },
+  {
+   "test_id": "NSG-ALL-1045",
+   "query": "giấy vệ sinh choice l"
+  },
+  {
+   "test_id": "NSG-ALL-1046",
+   "query": "mít"
+  },
+  {
+   "test_id": "NSG-ALL-1048",
+   "query": "tần ô"
+  },
+  {
+   "test_id": "NSG-ALL-1049",
+   "query": "nạm bò"
+  },
+  {
+   "test_id": "NSG-ALL-1050",
+   "query": "bánh dừa nướng"
+  },
+  {
+   "test_id": "NSG-ALL-1051",
+   "query": "phô mai mai"
+  },
+  {
+   "test_id": "NSG-ALL-1052",
+   "query": "đường biên hòa"
+  },
+  {
+   "test_id": "NSG-ALL-1053",
+   "query": "gạo 5kg"
+  },
+  {
+   "test_id": "NSG-ALL-1054",
+   "query": "kẹo gum"
+  },
+  {
+   "test_id": "NSG-ALL-1055",
+   "query": "bánh phồng tôm"
+  },
+  {
+   "test_id": "NSG-ALL-1056",
+   "query": "tương"
+  },
+  {
+   "test_id": "NSG-ALL-1057",
+   "query": "bột bắp"
+  },
+  {
+   "test_id": "NSG-ALL-1058",
+   "query": "cá phi lê"
+  },
+  {
+   "test_id": "NSG-ALL-1060",
+   "query": "nước xả comfort"
+  },
+  {
+   "test_id": "NSG-ALL-1062",
+   "query": "sữa chua ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1063",
+   "query": "khô cá"
+  },
+  {
+   "test_id": "NSG-ALL-1064",
+   "query": "nước giặt comfort"
+  },
+  {
+   "test_id": "NSG-ALL-1065",
+   "query": "bánh mì sandwich"
+  },
+  {
+   "test_id": "NSG-ALL-1066",
+   "query": "rượu soju"
+  },
+  {
+   "test_id": "NSG-ALL-1067",
+   "query": "kem đánh răng trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-1068",
+   "query": "phô mai con bò cười"
+  },
+  {
+   "test_id": "NSG-ALL-1069",
+   "query": "cá saba"
+  },
+  {
+   "test_id": "NSG-ALL-1070",
+   "query": "khăn giấy hộp"
+  },
+  {
+   "test_id": "NSG-ALL-1073",
+   "query": "trà cozy"
+  },
+  {
+   "test_id": "NSG-ALL-1074",
+   "query": "cà tím"
+  },
+  {
+   "test_id": "NSG-ALL-1075",
+   "query": "mì mama"
+  },
+  {
+   "test_id": "NSG-ALL-1076",
+   "query": "bánh chocopie"
+  },
+  {
+   "test_id": "NSG-ALL-1077",
+   "query": "nước rửa chén choice l"
+  },
+  {
+   "test_id": "NSG-ALL-1078",
+   "query": "bánh karo"
+  },
+  {
+   "test_id": "NSG-ALL-1079",
+   "query": "bột chiên xù"
+  },
+  {
+   "test_id": "NSG-ALL-1080",
+   "query": "móc áo"
+  },
+  {
+   "test_id": "NSG-ALL-1081",
+   "query": "muối ớt xanh"
+  },
+  {
+   "test_id": "NSG-ALL-1082",
+   "query": "phô mai mascarpone"
+  },
+  {
+   "test_id": "NSG-ALL-1085",
+   "query": "hạt nêm chay"
+  },
+  {
+   "test_id": "NSG-ALL-1087",
+   "query": "thịt ba chỉ"
+  },
+  {
+   "test_id": "NSG-ALL-1088",
+   "query": "sữa chua meiji"
+  },
+  {
+   "test_id": "NSG-ALL-1090",
+   "query": "bánh bao chay"
+  },
+  {
+   "test_id": "NSG-ALL-1091",
+   "query": "muối tôm"
+  },
+  {
+   "test_id": "NSG-ALL-1092",
+   "query": "sữa dalat milk"
+  },
+  {
+   "test_id": "NSG-ALL-1093",
+   "query": "bò úc"
+  },
+  {
+   "test_id": "NSG-ALL-1095",
+   "query": "má đùi"
+  },
+  {
+   "test_id": "NSG-ALL-1096",
+   "query": "kem đánh răng p/s"
+  },
+  {
+   "test_id": "NSG-ALL-1097",
+   "query": "đầu cá hồi"
+  },
+  {
+   "test_id": "NSG-ALL-1098",
+   "query": "giặt"
+  },
+  {
+   "test_id": "NSG-ALL-1099",
+   "query": "trà olong"
+  },
+  {
+   "test_id": "NSG-ALL-1101",
+   "query": "ly thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1102",
+   "query": "giấy a4"
+  },
+  {
+   "test_id": "NSG-ALL-1103",
+   "query": "gà chiên giòn"
+  },
+  {
+   "test_id": "NSG-ALL-1104",
+   "query": "cá basa"
+  },
+  {
+   "test_id": "NSG-ALL-1105",
+   "query": "dầu gội palmolive"
+  },
+  {
+   "test_id": "NSG-ALL-1106",
+   "query": "bánh tươi"
+  },
+  {
+   "test_id": "NSG-ALL-1107",
+   "query": "sữa long thành"
+  },
+  {
+   "test_id": "NSG-ALL-1110",
+   "query": "ba huân"
+  },
+  {
+   "test_id": "NSG-ALL-1111",
+   "query": "trứng gà ba huân"
+  },
+  {
+   "test_id": "NSG-ALL-1113",
+   "query": "giấy bạc"
+  },
+  {
+   "test_id": "NSG-ALL-1114",
+   "query": "túi zip"
+  },
+  {
+   "test_id": "NSG-ALL-1115",
+   "query": "túi zipper"
+  },
+  {
+   "test_id": "NSG-ALL-1117",
+   "query": "mỳ ly"
+  },
+  {
+   "test_id": "NSG-ALL-1118",
+   "query": "mỹ phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1119",
+   "query": "áo polo"
+  },
+  {
+   "test_id": "NSG-ALL-1120",
+   "query": "hạ long"
+  },
+  {
+   "test_id": "NSG-ALL-1123",
+   "query": "ly nhựa mang đi"
+  },
+  {
+   "test_id": "NSG-ALL-1124",
+   "query": "mang đi"
+  },
+  {
+   "test_id": "NSG-ALL-1136",
+   "query": "ba chỉ heo"
+  },
+  {
+   "test_id": "NSG-ALL-1137",
+   "query": "nước ngọt"
+  },
+  {
+   "test_id": "NSG-ALL-1150",
+   "query": "nệm ngủ"
+  },
+  {
+   "test_id": "NSG-ALL-1151",
+   "query": "oreoo bánh"
+  },
+  {
+   "test_id": "NSG-ALL-1153",
+   "query": "trái me"
+  },
+  {
+   "test_id": "NSG-ALL-1155",
+   "query": "trái chôm chôm"
+  },
+  {
+   "test_id": "NSG-ALL-1156",
+   "query": "đồ điện gia dụng"
+  },
+  {
+   "test_id": "NSG-ALL-1158",
+   "query": "giấy in văn phòng"
+  },
+  {
+   "test_id": "NSG-ALL-1159",
+   "query": "quat máy"
+  },
+  {
+   "test_id": "NSG-ALL-1160",
+   "query": "collagen làm đẹp da"
+  },
+  {
+   "test_id": "NSG-ALL-1162",
+   "query": "xe đẩy cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1163",
+   "query": "đồ khô"
+  },
+  {
+   "test_id": "NSG-ALL-1164",
+   "query": "giàu protein"
+  },
+  {
+   "test_id": "NSG-ALL-1165",
+   "query": "nhiều protein"
+  },
+  {
+   "test_id": "NSG-ALL-1166",
+   "query": "băng dán cá nhân"
+  },
+  {
+   "test_id": "NSG-ALL-1167",
+   "query": "tép rang"
+  },
+  {
+   "test_id": "NSG-ALL-1169",
+   "query": "yếm ăn cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1170",
+   "query": "áo mưa đi làm"
+  },
+  {
+   "test_id": "NSG-ALL-1171",
+   "query": "chăn ga gối đệm"
+  },
+  {
+   "test_id": "NSG-ALL-1172",
+   "query": "thực phẩm giảm cân"
+  },
+  {
+   "test_id": "NSG-ALL-1174",
+   "query": "kẹp file tài liệu"
+  },
+  {
+   "test_id": "NSG-ALL-1175",
+   "query": "yến mạch giảm cân"
+  },
+  {
+   "test_id": "NSG-ALL-1176",
+   "query": "cá khô các loại"
+  },
+  {
+   "test_id": "NSG-ALL-1177",
+   "query": "nồi nấu áp suất"
+  },
+  {
+   "test_id": "NSG-ALL-1178",
+   "query": "quà tặng sếp"
+  },
+  {
+   "test_id": "NSG-ALL-1179",
+   "query": "dung dịch lau kính"
+  },
+  {
+   "test_id": "NSG-ALL-1180",
+   "query": "nồi áp suất"
+  },
+  {
+   "test_id": "NSG-ALL-1181",
+   "query": "ghế ăn cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1182",
+   "query": "thực phẩm giàu protein"
+  },
+  {
+   "test_id": "NSG-ALL-1184",
+   "query": "ti giả cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1186",
+   "query": "đồ ăn nhanh gọn"
+  },
+  {
+   "test_id": "NSG-ALL-1188",
+   "query": "xe đẩy em bé"
+  },
+  {
+   "test_id": "NSG-ALL-1189",
+   "query": "trái mít"
+  },
+  {
+   "test_id": "NSG-ALL-1190",
+   "query": "nhu yếu phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1191",
+   "query": "túi xách đi làm"
+  },
+  {
+   "test_id": "NSG-ALL-1192",
+   "query": "bánh ngọt tráng miệng"
+  },
+  {
+   "test_id": "NSG-ALL-1193",
+   "query": "mì tôn"
+  },
+  {
+   "test_id": "NSG-ALL-1195",
+   "query": "set bánh quà tặng"
+  },
+  {
+   "test_id": "NSG-ALL-1196",
+   "query": "đồ dùng đi phượt"
+  },
+  {
+   "test_id": "NSG-ALL-1197",
+   "query": "đồ dùng cá nhân"
+  },
+  {
+   "test_id": "NSG-ALL-1199",
+   "query": "bánh ú"
+  },
+  {
+   "test_id": "NSG-ALL-1202",
+   "query": "giày dép đi mưa"
+  },
+  {
+   "test_id": "NSG-ALL-1203",
+   "query": "kem trị hăm tã"
+  },
+  {
+   "test_id": "NSG-ALL-1206",
+   "query": "máy lọc không khí"
+  },
+  {
+   "test_id": "NSG-ALL-1207",
+   "query": "món ăn tiện lợi"
+  },
+  {
+   "test_id": "NSG-ALL-1208",
+   "query": "nến thơm"
+  },
+  {
+   "test_id": "NSG-ALL-1210",
+   "query": "phụ kiện thú cưng"
+  },
+  {
+   "test_id": "NSG-ALL-1211",
+   "query": "quà tặng khách hàng"
+  },
+  {
+   "test_id": "NSG-ALL-1212",
+   "query": "quà tặng người yêu"
+  },
+  {
+   "test_id": "NSG-ALL-1213",
+   "query": "quà tặng sinh nhật"
+  },
+  {
+   "test_id": "NSG-ALL-1215",
+   "query": "quả soài"
+  },
+  {
+   "test_id": "NSG-ALL-1218",
+   "query": "sản phẩm thiên nhiên"
+  },
+  {
+   "test_id": "NSG-ALL-1220",
+   "query": "thực phẩm ít calo"
+  },
+  {
+   "test_id": "NSG-ALL-1221",
+   "query": "trái khế"
+  },
+  {
+   "test_id": "NSG-ALL-1223",
+   "query": "túi ngủ dã ngoại"
+  },
+  {
+   "test_id": "NSG-ALL-1224",
+   "query": "túi ziplock"
+  },
+  {
+   "test_id": "NSG-ALL-1228",
+   "query": "ít calo"
+  },
+  {
+   "test_id": "NSG-ALL-1229",
+   "query": "ăn uống lành mạnh"
+  },
+  {
+   "test_id": "NSG-ALL-1230",
+   "query": "đường phèng"
+  },
+  {
+   "test_id": "NSG-ALL-1232",
+   "query": "đồ ăn eat clean"
+  },
+  {
+   "test_id": "NSG-ALL-1233",
+   "query": "đồ ăn low carb"
+  },
+  {
+   "test_id": "NSG-ALL-1234",
+   "query": "ếch đồng"
+  },
+  {
+   "test_id": "NSG-ALL-1235",
+   "query": "ốc len"
+  },
+  {
+   "test_id": "NSG-ALL-1236",
+   "query": "táo new zealand"
+  },
+  {
+   "test_id": "NSG-ALL-1237",
+   "query": "cá diêu hồng"
+  },
+  {
+   "test_id": "NSG-ALL-1239",
+   "query": "bịt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1241",
+   "query": "sữa đà lạt milk"
+  },
+  {
+   "test_id": "NSG-ALL-1243",
+   "query": "nước cam"
+  },
+  {
+   "test_id": "NSG-ALL-1244",
+   "query": "bánh flan"
+  },
+  {
+   "test_id": "NSG-ALL-1245",
+   "query": "xịt côn trùng ars"
+  },
+  {
+   "test_id": "NSG-ALL-1246",
+   "query": "bình xịt muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1250",
+   "query": "sữa dưa lưới"
+  },
+  {
+   "test_id": "NSG-ALL-1251",
+   "query": "xịt muỗi côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1252",
+   "query": "bột chiên"
+  },
+  {
+   "test_id": "NSG-ALL-1256",
+   "query": "hạt nêm knorr"
+  },
+  {
+   "test_id": "NSG-ALL-1258",
+   "query": "giấy chống dính"
+  },
+  {
+   "test_id": "NSG-ALL-1261",
+   "query": "tôm sú"
+  },
+  {
+   "test_id": "NSG-ALL-1263",
+   "query": "băng vệ sinh kotex"
+  },
+  {
+   "test_id": "NSG-ALL-1266",
+   "query": "bình xịt côn trùng jumbo vape h1"
+  },
+  {
+   "test_id": "NSG-ALL-1267",
+   "query": "bánh quy malkist"
+  },
+  {
+   "test_id": "NSG-ALL-1268",
+   "query": "mì spaghetti"
+  },
+  {
+   "test_id": "NSG-ALL-1269",
+   "query": "sữa óc chó"
+  },
+  {
+   "test_id": "NSG-ALL-1271",
+   "query": "bình xịt côn trùng raid"
+  },
+  {
+   "test_id": "NSG-ALL-1272",
+   "query": "nấm mỡ"
+  },
+  {
+   "test_id": "NSG-ALL-1273",
+   "query": "khăn lau đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-1274",
+   "query": "táo envy"
+  },
+  {
+   "test_id": "NSG-ALL-1276",
+   "query": "áo thun"
+  },
+  {
+   "test_id": "NSG-ALL-1277",
+   "query": "xịt muỗi jumbo vape f10 hương cam chanh chai 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1283",
+   "query": "giỏ quà"
+  },
+  {
+   "test_id": "NSG-ALL-1284",
+   "query": "miến hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-1286",
+   "query": "kem đánh răng colgate than tre"
+  },
+  {
+   "test_id": "NSG-ALL-1287",
+   "query": "sữa dinh dưỡng"
+  },
+  {
+   "test_id": "NSG-ALL-1288",
+   "query": "nước rửa chén haru"
+  },
+  {
+   "test_id": "NSG-ALL-1289",
+   "query": "bánh cream crackers roma malkist 107g"
+  },
+  {
+   "test_id": "NSG-ALL-1290",
+   "query": "trà sen"
+  },
+  {
+   "test_id": "NSG-ALL-1293",
+   "query": "sữa chua uống th"
+  },
+  {
+   "test_id": "NSG-ALL-1294",
+   "query": "giấy vệ sinh choice l cuộn lớn 600g"
+  },
+  {
+   "test_id": "NSG-ALL-1295",
+   "query": "đậu đóng hộp"
+  },
+  {
+   "test_id": "NSG-ALL-1298",
+   "query": "bánh an"
+  },
+  {
+   "test_id": "NSG-ALL-1299",
+   "query": "phở story"
+  },
+  {
+   "test_id": "NSG-ALL-1301",
+   "query": "bàn chải colgate"
+  },
+  {
+   "test_id": "NSG-ALL-1302",
+   "query": "bánh nabati"
+  },
+  {
+   "test_id": "NSG-ALL-1303",
+   "query": "nước ép trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-1307",
+   "query": "bánh malkist"
+  },
+  {
+   "test_id": "NSG-ALL-1308",
+   "query": "trà c2"
+  },
+  {
+   "test_id": "NSG-ALL-1310",
+   "query": "lau bếp"
+  },
+  {
+   "test_id": "NSG-ALL-1311",
+   "query": "sa tế tôm"
+  },
+  {
+   "test_id": "NSG-ALL-1315",
+   "query": "da cá hồi"
+  },
+  {
+   "test_id": "NSG-ALL-1318",
+   "query": "cafe phố"
+  },
+  {
+   "test_id": "NSG-ALL-1324",
+   "query": "móc treo"
+  },
+  {
+   "test_id": "NSG-ALL-1325",
+   "query": "lá dứa"
+  },
+  {
+   "test_id": "NSG-ALL-1327",
+   "query": "bánh quy bơ"
+  },
+  {
+   "test_id": "NSG-ALL-1330",
+   "query": "gạo tây đô"
+  },
+  {
+   "test_id": "NSG-ALL-1331",
+   "query": "chảo inox"
+  },
+  {
+   "test_id": "NSG-ALL-1333",
+   "query": "sườn heo"
+  },
+  {
+   "test_id": "NSG-ALL-1334",
+   "query": "cam ép"
+  },
+  {
+   "test_id": "NSG-ALL-1335",
+   "query": "mì nongshim"
+  },
+  {
+   "test_id": "NSG-ALL-1336",
+   "query": "nước ép táo"
+  },
+  {
+   "test_id": "NSG-ALL-1337",
+   "query": "nước hồng sâm"
+  },
+  {
+   "test_id": "NSG-ALL-1338",
+   "query": "dầu gội x-men"
+  },
+  {
+   "test_id": "NSG-ALL-1340",
+   "query": "bánh su"
+  },
+  {
+   "test_id": "NSG-ALL-1341",
+   "query": "ajinomoto - giấm táo lên men 400ml"
+  },
+  {
+   "test_id": "NSG-ALL-1342",
+   "query": "sữa trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-1346",
+   "query": "xíu mại"
+  },
+  {
+   "test_id": "NSG-ALL-1348",
+   "query": "thạch trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-1352",
+   "query": "bánh gạo hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-1353",
+   "query": "nến"
+  },
+  {
+   "test_id": "NSG-ALL-1354",
+   "query": "nước xã"
+  },
+  {
+   "test_id": "NSG-ALL-1360",
+   "query": "bánh su kem"
+  },
+  {
+   "test_id": "NSG-ALL-1364",
+   "query": "bình thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1365",
+   "query": "kẹo socola"
+  },
+  {
+   "test_id": "NSG-ALL-1367",
+   "query": "đậu phộng tỏi ớt"
+  },
+  {
+   "test_id": "NSG-ALL-1369",
+   "query": "chai thuỷ tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1371",
+   "query": "rau má"
+  },
+  {
+   "test_id": "NSG-ALL-1372",
+   "query": "bông lan"
+  },
+  {
+   "test_id": "NSG-ALL-1373",
+   "query": "sửa tắm"
+  },
+  {
+   "test_id": "NSG-ALL-1374",
+   "query": "khăn lau bếp"
+  },
+  {
+   "test_id": "NSG-ALL-1376",
+   "query": "mì siu cay"
+  },
+  {
+   "test_id": "NSG-ALL-1377",
+   "query": "tẩy tế bào chết"
+  },
+  {
+   "test_id": "NSG-ALL-1379",
+   "query": "cá kho"
+  },
+  {
+   "test_id": "NSG-ALL-1380",
+   "query": "kẹo xoài"
+  },
+  {
+   "test_id": "NSG-ALL-1381",
+   "query": "quần"
+  },
+  {
+   "test_id": "NSG-ALL-1385",
+   "query": "lương khô"
+  },
+  {
+   "test_id": "NSG-ALL-1386",
+   "query": "bơ tường an"
+  },
+  {
+   "test_id": "NSG-ALL-1391",
+   "query": "bình xịt"
+  },
+  {
+   "test_id": "NSG-ALL-1395",
+   "query": "ruột gối"
+  },
+  {
+   "test_id": "NSG-ALL-1396",
+   "query": "áo polo nam thể thao"
+  },
+  {
+   "test_id": "NSG-ALL-1398",
+   "query": "áo thun nam"
+  },
+  {
+   "test_id": "NSG-ALL-1400",
+   "query": "bánh chà bông"
+  },
+  {
+   "test_id": "NSG-ALL-1401",
+   "query": "sữa tươi th true milk"
+  },
+  {
+   "test_id": "NSG-ALL-1402",
+   "query": "nước cam ép"
+  },
+  {
+   "test_id": "NSG-ALL-1403",
+   "query": "nước giặt blue"
+  },
+  {
+   "test_id": "NSG-ALL-1404",
+   "query": "bún bò huế"
+  },
+  {
+   "test_id": "NSG-ALL-1405",
+   "query": "khoai lang mật"
+  },
+  {
+   "test_id": "NSG-ALL-1406",
+   "query": "chai xịt muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1407",
+   "query": "vinamilk không đường"
+  },
+  {
+   "test_id": "NSG-ALL-1410",
+   "query": "socola đen"
+  },
+  {
+   "test_id": "NSG-ALL-1411",
+   "query": "bộ xông đuổi muỗi jumbo vape l5 hương hoa lily"
+  },
+  {
+   "test_id": "NSG-ALL-1412",
+   "query": "dưỡng tóc"
+  },
+  {
+   "test_id": "NSG-ALL-1413",
+   "query": "long thành"
+  },
+  {
+   "test_id": "NSG-ALL-1414",
+   "query": "bánh quy roma malkist crackers 140g"
+  },
+  {
+   "test_id": "NSG-ALL-1415",
+   "query": "thịt ba rọi"
+  },
+  {
+   "test_id": "NSG-ALL-1418",
+   "query": "quần lót giấy"
+  },
+  {
+   "test_id": "NSG-ALL-1420",
+   "query": "nhang muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1421",
+   "query": "bánh kinh đô"
+  },
+  {
+   "test_id": "NSG-ALL-1422",
+   "query": "sữa chua uống tiệt trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1424",
+   "query": "giò hoa"
+  },
+  {
+   "test_id": "NSG-ALL-1426",
+   "query": "sữa tắm purite"
+  },
+  {
+   "test_id": "NSG-ALL-1427",
+   "query": "omo viên giặt"
+  },
+  {
+   "test_id": "NSG-ALL-1428",
+   "query": "mì cay omachi"
+  },
+  {
+   "test_id": "NSG-ALL-1429",
+   "query": "rượu vang trắng"
+  },
+  {
+   "test_id": "NSG-ALL-1430",
+   "query": "yến sào"
+  },
+  {
+   "test_id": "NSG-ALL-1432",
+   "query": "giấy nến"
+  },
+  {
+   "test_id": "NSG-ALL-1435",
+   "query": "giấy pulppy"
+  },
+  {
+   "test_id": "NSG-ALL-1436",
+   "query": "sốt ướp thịt"
+  },
+  {
+   "test_id": "NSG-ALL-1437",
+   "query": "chả giò cầu tre"
+  },
+  {
+   "test_id": "NSG-ALL-1439",
+   "query": "tiêu xay"
+  },
+  {
+   "test_id": "NSG-ALL-1442",
+   "query": "cá chim"
+  },
+  {
+   "test_id": "NSG-ALL-1443",
+   "query": "túi đựng"
+  },
+  {
+   "test_id": "NSG-ALL-1444",
+   "query": "bình đựng nước"
+  },
+  {
+   "test_id": "NSG-ALL-1445",
+   "query": "tinh dầu"
+  },
+  {
+   "test_id": "NSG-ALL-1446",
+   "query": "cá thác lác"
+  },
+  {
+   "test_id": "NSG-ALL-1447",
+   "query": "heo cao bồi"
+  },
+  {
+   "test_id": "NSG-ALL-1450",
+   "query": "ghế"
+  },
+  {
+   "test_id": "NSG-ALL-1451",
+   "query": "kẹo hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-1452",
+   "query": "đường vàng"
+  },
+  {
+   "test_id": "NSG-ALL-1454",
+   "query": "mền"
+  },
+  {
+   "test_id": "NSG-ALL-1455",
+   "query": "trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-1456",
+   "query": "bông lau nhà"
+  },
+  {
+   "test_id": "NSG-ALL-1457",
+   "query": "bình xịt côn trùng jumbo vape hương hoa và trà 300ml"
+  },
+  {
+   "test_id": "NSG-ALL-1461",
+   "query": "cá viên cầu tre"
+  },
+  {
+   "test_id": "NSG-ALL-1462",
+   "query": "đậu phộng tân tân"
+  },
+  {
+   "test_id": "NSG-ALL-1463",
+   "query": "dầu gội thái dương"
+  },
+  {
+   "test_id": "NSG-ALL-1464",
+   "query": "cây nha đam"
+  },
+  {
+   "test_id": "NSG-ALL-1465",
+   "query": "kẹo hồng sâm"
+  },
+  {
+   "test_id": "NSG-ALL-1470",
+   "query": "dưa hấu vàng"
+  },
+  {
+   "test_id": "NSG-ALL-1471",
+   "query": "bình xịt côn trùng jumbo vape"
+  },
+  {
+   "test_id": "NSG-ALL-1474",
+   "query": "thìa"
+  },
+  {
+   "test_id": "NSG-ALL-1475",
+   "query": "nước tinh khiết aquafina chai 500ml"
+  },
+  {
+   "test_id": "NSG-ALL-1476",
+   "query": "nước giặt choice l"
+  },
+  {
+   "test_id": "NSG-ALL-1477",
+   "query": "đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-1478",
+   "query": "ấm đun"
+  },
+  {
+   "test_id": "NSG-ALL-1482",
+   "query": "sữa tắm cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1483",
+   "query": "tô nhựa"
+  },
+  {
+   "test_id": "NSG-ALL-1484",
+   "query": "băng vệ sinh hằng ngày"
+  },
+  {
+   "test_id": "NSG-ALL-1486",
+   "query": "hũ thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1487",
+   "query": "nước ion"
+  },
+  {
+   "test_id": "NSG-ALL-1495",
+   "query": "jumbo vape hoa lài"
+  },
+  {
+   "test_id": "NSG-ALL-1496",
+   "query": "xịt côn trùng glade"
+  },
+  {
+   "test_id": "NSG-ALL-1497",
+   "query": "chai xịt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1498",
+   "query": "bifnh xông đuổi muỗi jumbo vape"
+  },
+  {
+   "test_id": "NSG-ALL-1500",
+   "query": "trà đen"
+  },
+  {
+   "test_id": "NSG-ALL-1501",
+   "query": "khăn giấy pulppy"
+  },
+  {
+   "test_id": "NSG-ALL-1502",
+   "query": "nước cốt chanh"
+  },
+  {
+   "test_id": "NSG-ALL-1504",
+   "query": "gel rửa tay"
+  },
+  {
+   "test_id": "NSG-ALL-1505",
+   "query": "bộ nồi"
+  },
+  {
+   "test_id": "NSG-ALL-1507",
+   "query": "ngũ cốc ăn sáng"
+  },
+  {
+   "test_id": "NSG-ALL-1508",
+   "query": "bút lông"
+  },
+  {
+   "test_id": "NSG-ALL-1511",
+   "query": "omo matic máy giặt cửa trên + chuyên gia giữ màu"
+  },
+  {
+   "test_id": "NSG-ALL-1513",
+   "query": "bánh ăn kiêng"
+  },
+  {
+   "test_id": "NSG-ALL-1515",
+   "query": "th ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1516",
+   "query": "hút ẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1517",
+   "query": "sữa tắm olay"
+  },
+  {
+   "test_id": "NSG-ALL-1521",
+   "query": "sô-cô-la"
+  },
+  {
+   "test_id": "NSG-ALL-1522",
+   "query": "rau mầm"
+  },
+  {
+   "test_id": "NSG-ALL-1523",
+   "query": "xúc xích xông khói"
+  },
+  {
+   "test_id": "NSG-ALL-1526",
+   "query": "nước giặt đồ"
+  },
+  {
+   "test_id": "NSG-ALL-1527",
+   "query": "phô mai cheddar"
+  },
+  {
+   "test_id": "NSG-ALL-1528",
+   "query": "sữa đậu nành fami"
+  },
+  {
+   "test_id": "NSG-ALL-1530",
+   "query": "gạo hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-1531",
+   "query": "sữa th hilo"
+  },
+  {
+   "test_id": "NSG-ALL-1533",
+   "query": "kẹo dynamite"
+  },
+  {
+   "test_id": "NSG-ALL-1535",
+   "query": "xúc xích lc"
+  },
+  {
+   "test_id": "NSG-ALL-1536",
+   "query": "đông trùng hạ thảo"
+  },
+  {
+   "test_id": "NSG-ALL-1537",
+   "query": "chả chay"
+  },
+  {
+   "test_id": "NSG-ALL-1543",
+   "query": "bánh mì mè"
+  },
+  {
+   "test_id": "NSG-ALL-1544",
+   "query": "khô cá cơm"
+  },
+  {
+   "test_id": "NSG-ALL-1545",
+   "query": "nấm bào ngư"
+  },
+  {
+   "test_id": "NSG-ALL-1546",
+   "query": "muỗng inox"
+  },
+  {
+   "test_id": "NSG-ALL-1548",
+   "query": "chó"
+  },
+  {
+   "test_id": "NSG-ALL-1551",
+   "query": "máy xay"
+  },
+  {
+   "test_id": "NSG-ALL-1552",
+   "query": "mèo"
+  },
+  {
+   "test_id": "NSG-ALL-1553",
+   "query": "mâm xôi"
+  },
+  {
+   "test_id": "NSG-ALL-1554",
+   "query": "bình xịt côn trùng jumbo vape hương cam chanh tự nhiên chai 300ml"
+  },
+  {
+   "test_id": "NSG-ALL-1555",
+   "query": "heo ăn chuối"
+  },
+  {
+   "test_id": "NSG-ALL-1557",
+   "query": "hạt macca"
+  },
+  {
+   "test_id": "NSG-ALL-1560",
+   "query": "mì gói omachi"
+  },
+  {
+   "test_id": "NSG-ALL-1562",
+   "query": "sữa lúa mạch"
+  },
+  {
+   "test_id": "NSG-ALL-1563",
+   "query": "củ cải muối"
+  },
+  {
+   "test_id": "NSG-ALL-1564",
+   "query": "kem đánh răng closeup"
+  },
+  {
+   "test_id": "NSG-ALL-1565",
+   "query": "bình xịt muỗi raid hương lavender chai 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1567",
+   "query": "hoàng gia"
+  },
+  {
+   "test_id": "NSG-ALL-1568",
+   "query": "sữa pha sẵn"
+  },
+  {
+   "test_id": "NSG-ALL-1569",
+   "query": "bánh gạo an an"
+  },
+  {
+   "test_id": "NSG-ALL-1570",
+   "query": "giấy vệ sinh cuộn lớn"
+  },
+  {
+   "test_id": "NSG-ALL-1571",
+   "query": "nước cốt"
+  },
+  {
+   "test_id": "NSG-ALL-1573",
+   "query": "bột bánh canh"
+  },
+  {
+   "test_id": "NSG-ALL-1574",
+   "query": "nước chấm"
+  },
+  {
+   "test_id": "NSG-ALL-1575",
+   "query": "tàu hũ ky"
+  },
+  {
+   "test_id": "NSG-ALL-1576",
+   "query": "máy sấy tóc"
+  },
+  {
+   "test_id": "NSG-ALL-1579",
+   "query": "ổ cắm điện"
+  },
+  {
+   "test_id": "NSG-ALL-1581",
+   "query": "cam sành"
+  },
+  {
+   "test_id": "NSG-ALL-1582",
+   "query": "táo fuji"
+  },
+  {
+   "test_id": "NSG-ALL-1583",
+   "query": "nước giặt cửa trên"
+  },
+  {
+   "test_id": "NSG-ALL-1584",
+   "query": "cá ngừ ngâm dầu"
+  },
+  {
+   "test_id": "NSG-ALL-1585",
+   "query": "mì nissin"
+  },
+  {
+   "test_id": "NSG-ALL-1586",
+   "query": "đào ngâm"
+  },
+  {
+   "test_id": "NSG-ALL-1587",
+   "query": "quần lót nam"
+  },
+  {
+   "test_id": "NSG-ALL-1588",
+   "query": "sữa th true"
+  },
+  {
+   "test_id": "NSG-ALL-1589",
+   "query": "nước giặt downy"
+  },
+  {
+   "test_id": "NSG-ALL-1590",
+   "query": "nước tẩy trắng"
+  },
+  {
+   "test_id": "NSG-ALL-1592",
+   "query": "bánh mochi"
+  },
+  {
+   "test_id": "NSG-ALL-1593",
+   "query": "trứng vịt muối"
+  },
+  {
+   "test_id": "NSG-ALL-1594",
+   "query": "đũa inox"
+  },
+  {
+   "test_id": "NSG-ALL-1596",
+   "query": "tóc"
+  },
+  {
+   "test_id": "NSG-ALL-1597",
+   "query": "nạc vai"
+  },
+  {
+   "test_id": "NSG-ALL-1598",
+   "query": "sữa grow plus"
+  },
+  {
+   "test_id": "NSG-ALL-1602",
+   "query": "ấm đun siêu tốc"
+  },
+  {
+   "test_id": "NSG-ALL-1603",
+   "query": "chà bồn cầu"
+  },
+  {
+   "test_id": "NSG-ALL-1604",
+   "query": "hoa quả"
+  },
+  {
+   "test_id": "NSG-ALL-1607",
+   "query": "gừng mật ong"
+  },
+  {
+   "test_id": "NSG-ALL-1609",
+   "query": "rượu vang nổ"
+  },
+  {
+   "test_id": "NSG-ALL-1610",
+   "query": "sữa meadow"
+  },
+  {
+   "test_id": "NSG-ALL-1615",
+   "query": "rau thơm hỗn hợp hữu cơ gói 150g (ea)"
+  },
+  {
+   "test_id": "NSG-ALL-1616",
+   "query": "kem béo rich"
+  },
+  {
+   "test_id": "NSG-ALL-1617",
+   "query": "bánh quy danisa"
+  },
+  {
+   "test_id": "NSG-ALL-1618",
+   "query": "dịt côn trùng"
+  },
+  {
+   "test_id": "NSG-ALL-1619",
+   "query": "bắp chiên giòn"
+  },
+  {
+   "test_id": "NSG-ALL-1621",
+   "query": "bột ớt hàn quốc"
+  },
+  {
+   "test_id": "NSG-ALL-1623",
+   "query": "trứng bắc thảo"
+  },
+  {
+   "test_id": "NSG-ALL-1626",
+   "query": "lau sàn sunlight"
+  },
+  {
+   "test_id": "NSG-ALL-1630",
+   "query": "sữa tắm bé"
+  },
+  {
+   "test_id": "NSG-ALL-1631",
+   "query": "màn bọc thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1633",
+   "query": "bánh kinh do"
+  },
+  {
+   "test_id": "NSG-ALL-1635",
+   "query": "gà nguyên con"
+  },
+  {
+   "test_id": "NSG-ALL-1638",
+   "query": "kem xả tóc dove"
+  },
+  {
+   "test_id": "NSG-ALL-1639",
+   "query": "sữa thanh trùng meiji"
+  },
+  {
+   "test_id": "NSG-ALL-1641",
+   "query": "tẩy nhà tắm"
+  },
+  {
+   "test_id": "NSG-ALL-1642",
+   "query": "hạt dinh dưỡng"
+  },
+  {
+   "test_id": "NSG-ALL-1645",
+   "query": "xúc xích cocktail"
+  },
+  {
+   "test_id": "NSG-ALL-1647",
+   "query": "khăn giấy ướt l choice"
+  },
+  {
+   "test_id": "NSG-ALL-1648",
+   "query": "nồi chiên không dầu sunhouse"
+  },
+  {
+   "test_id": "NSG-ALL-1651",
+   "query": "mãng cầu"
+  },
+  {
+   "test_id": "NSG-ALL-1652",
+   "query": "nhang muỗi raid hương lavender hộp 10 khoanh"
+  },
+  {
+   "test_id": "NSG-ALL-1653",
+   "query": "ăn dặm"
+  },
+  {
+   "test_id": "NSG-ALL-1654",
+   "query": "truyền thống"
+  },
+  {
+   "test_id": "NSG-ALL-1655",
+   "query": "riềng"
+  },
+  {
+   "test_id": "NSG-ALL-1656",
+   "query": "chanh dây vàng"
+  },
+  {
+   "test_id": "NSG-ALL-1659",
+   "query": "hạt ngũ cốc"
+  },
+  {
+   "test_id": "NSG-ALL-1660",
+   "query": "hồ lô"
+  },
+  {
+   "test_id": "NSG-ALL-1661",
+   "query": "tổ yến"
+  },
+  {
+   "test_id": "NSG-ALL-1665",
+   "query": "quần nam"
+  },
+  {
+   "test_id": "NSG-ALL-1666",
+   "query": "sườn non chay"
+  },
+  {
+   "test_id": "NSG-ALL-1667",
+   "query": "túi môi trường"
+  },
+  {
+   "test_id": "NSG-ALL-1669",
+   "query": "cân"
+  },
+  {
+   "test_id": "NSG-ALL-1670",
+   "query": "sữa anlene"
+  },
+  {
+   "test_id": "NSG-ALL-1671",
+   "query": "nước cốt lẩu"
+  },
+  {
+   "test_id": "NSG-ALL-1673",
+   "query": "rong biển cuộn"
+  },
+  {
+   "test_id": "NSG-ALL-1675",
+   "query": "bột nghệ"
+  },
+  {
+   "test_id": "NSG-ALL-1676",
+   "query": "bánh hoa cúc"
+  },
+  {
+   "test_id": "NSG-ALL-1677",
+   "query": "dầu gội dầu"
+  },
+  {
+   "test_id": "NSG-ALL-1678",
+   "query": "rượu nấu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-1680",
+   "query": "hành tây tím"
+  },
+  {
+   "test_id": "NSG-ALL-1687",
+   "query": "mắc ca"
+  },
+  {
+   "test_id": "NSG-ALL-1689",
+   "query": "gà viên"
+  },
+  {
+   "test_id": "NSG-ALL-1690",
+   "query": "ớt xanh"
+  },
+  {
+   "test_id": "NSG-ALL-1691",
+   "query": "rửa mặt"
+  },
+  {
+   "test_id": "NSG-ALL-1692",
+   "query": "bột cà ri"
+  },
+  {
+   "test_id": "NSG-ALL-1694",
+   "query": "bình xịt côn trùng raid không mùi chai 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1695",
+   "query": "máy xay sinh tố"
+  },
+  {
+   "test_id": "NSG-ALL-1696",
+   "query": "áo nam"
+  },
+  {
+   "test_id": "NSG-ALL-1698",
+   "query": "dầu gội đầu nguyên xuân"
+  },
+  {
+   "test_id": "NSG-ALL-1701",
+   "query": "tăm chỉ"
+  },
+  {
+   "test_id": "NSG-ALL-1702",
+   "query": "kem dưỡng da"
+  },
+  {
+   "test_id": "NSG-ALL-1703",
+   "query": "hộp thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1704",
+   "query": "sữa ngũ cốc"
+  },
+  {
+   "test_id": "NSG-ALL-1706",
+   "query": "xịt côn trùng falcon"
+  },
+  {
+   "test_id": "NSG-ALL-1708",
+   "query": "hộp đựng giấy"
+  },
+  {
+   "test_id": "NSG-ALL-1709",
+   "query": "muỗng gỗ"
+  },
+  {
+   "test_id": "NSG-ALL-1710",
+   "query": "khăn bếp đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-1711",
+   "query": "nước suối aquafina"
+  },
+  {
+   "test_id": "NSG-ALL-1713",
+   "query": "sữa grow"
+  },
+  {
+   "test_id": "NSG-ALL-1714",
+   "query": "dầu hào maggi"
+  },
+  {
+   "test_id": "NSG-ALL-1715",
+   "query": "bàn để ủi"
+  },
+  {
+   "test_id": "NSG-ALL-1716",
+   "query": "nghệ mật ong"
+  },
+  {
+   "test_id": "NSG-ALL-1717",
+   "query": "dầu gội tresemme"
+  },
+  {
+   "test_id": "NSG-ALL-1719",
+   "query": "chảo elmich"
+  },
+  {
+   "test_id": "NSG-ALL-1720",
+   "query": "bánh quy sữa roma"
+  },
+  {
+   "test_id": "NSG-ALL-1722",
+   "query": "tân huê viên"
+  },
+  {
+   "test_id": "NSG-ALL-1723",
+   "query": "bột ăn dặm"
+  },
+  {
+   "test_id": "NSG-ALL-1724",
+   "query": "dầu dừa vietcoco"
+  },
+  {
+   "test_id": "NSG-ALL-1725",
+   "query": "bát"
+  },
+  {
+   "test_id": "NSG-ALL-1728",
+   "query": "đựng thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1729",
+   "query": "xoài cát"
+  },
+  {
+   "test_id": "NSG-ALL-1730",
+   "query": "bún riêu"
+  },
+  {
+   "test_id": "NSG-ALL-1734",
+   "query": "bánh mì bơ"
+  },
+  {
+   "test_id": "NSG-ALL-1736",
+   "query": "đức việt"
+  },
+  {
+   "test_id": "NSG-ALL-1739",
+   "query": "điện giải"
+  },
+  {
+   "test_id": "NSG-ALL-1743",
+   "query": "giò lụa"
+  },
+  {
+   "test_id": "NSG-ALL-1744",
+   "query": "khăn giấy hộp rút"
+  },
+  {
+   "test_id": "NSG-ALL-1746",
+   "query": "thạch xoài"
+  },
+  {
+   "test_id": "NSG-ALL-1748",
+   "query": "mr việt"
+  },
+  {
+   "test_id": "NSG-ALL-1749",
+   "query": "lên men"
+  },
+  {
+   "test_id": "NSG-ALL-1750",
+   "query": "kẹo me"
+  },
+  {
+   "test_id": "NSG-ALL-1751",
+   "query": "nước lau"
+  },
+  {
+   "test_id": "NSG-ALL-1752",
+   "query": "khăn giấy đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-1753",
+   "query": "bình xịt côn trùng jumbo"
+  },
+  {
+   "test_id": "NSG-ALL-1754",
+   "query": "lót"
+  },
+  {
+   "test_id": "NSG-ALL-1757",
+   "query": "nước giặt omo cửa trước"
+  },
+  {
+   "test_id": "NSG-ALL-1759",
+   "query": "lõi vai bò"
+  },
+  {
+   "test_id": "NSG-ALL-1761",
+   "query": "th true milk ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1762",
+   "query": "combo tinh dầu xông đuổi muỗi jumbo vape l5 hương lily"
+  },
+  {
+   "test_id": "NSG-ALL-1763",
+   "query": "bang vệ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-1765",
+   "query": "cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-1766",
+   "query": "dưa gang"
+  },
+  {
+   "test_id": "NSG-ALL-1767",
+   "query": "nước giặt maxkleen"
+  },
+  {
+   "test_id": "NSG-ALL-1768",
+   "query": "cà phê king"
+  },
+  {
+   "test_id": "NSG-ALL-1769",
+   "query": "sữa tươi tiệt trùng vinamilk"
+  },
+  {
+   "test_id": "NSG-ALL-1770",
+   "query": "bánh phồng"
+  },
+  {
+   "test_id": "NSG-ALL-1771",
+   "query": "sữa tắm em bé"
+  },
+  {
+   "test_id": "NSG-ALL-1772",
+   "query": "bánh snack oishi"
+  },
+  {
+   "test_id": "NSG-ALL-1773",
+   "query": "đùi tỏi gà"
+  },
+  {
+   "test_id": "NSG-ALL-1776",
+   "query": "mì chua cay"
+  },
+  {
+   "test_id": "NSG-ALL-1777",
+   "query": "sốt mè"
+  },
+  {
+   "test_id": "NSG-ALL-1778",
+   "query": "vỉ nướng bánh"
+  },
+  {
+   "test_id": "NSG-ALL-1780",
+   "query": "tã dán"
+  },
+  {
+   "test_id": "NSG-ALL-1783",
+   "query": "viên bồn cầu"
+  },
+  {
+   "test_id": "NSG-ALL-1784",
+   "query": "xịt muỗi jumbo chai huống lài"
+  },
+  {
+   "test_id": "NSG-ALL-1786",
+   "query": "men nở"
+  },
+  {
+   "test_id": "NSG-ALL-1787",
+   "query": "vinamilk ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1789",
+   "query": "xịt khử mùi axe"
+  },
+  {
+   "test_id": "NSG-ALL-1792",
+   "query": "gạo st 25"
+  },
+  {
+   "test_id": "NSG-ALL-1793",
+   "query": "bàn chải đánh răng trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-1795",
+   "query": "vá canh"
+  },
+  {
+   "test_id": "NSG-ALL-1796",
+   "query": "bàn chải đánh răng colgate"
+  },
+  {
+   "test_id": "NSG-ALL-1799",
+   "query": "trộn"
+  },
+  {
+   "test_id": "NSG-ALL-1801",
+   "query": "bắp bò úc"
+  },
+  {
+   "test_id": "NSG-ALL-1802",
+   "query": "bình thuỷ tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1803",
+   "query": "bình xịt côn trùng red foxx power hương chanh 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1806",
+   "query": "con sóc"
+  },
+  {
+   "test_id": "NSG-ALL-1807",
+   "query": "mì hải sản"
+  },
+  {
+   "test_id": "NSG-ALL-1808",
+   "query": "xịt muỗi jumbo vape one plus 16ml"
+  },
+  {
+   "test_id": "NSG-ALL-1809",
+   "query": "nước điện giải"
+  },
+  {
+   "test_id": "NSG-ALL-1811",
+   "query": "cà phê vina"
+  },
+  {
+   "test_id": "NSG-ALL-1812",
+   "query": "sữa bột pha sẵn"
+  },
+  {
+   "test_id": "NSG-ALL-1813",
+   "query": "ba cô gái"
+  },
+  {
+   "test_id": "NSG-ALL-1814",
+   "query": "kim chi củ cải"
+  },
+  {
+   "test_id": "NSG-ALL-1815",
+   "query": "cuộn giấy"
+  },
+  {
+   "test_id": "NSG-ALL-1818",
+   "query": "bàn chải điện"
+  },
+  {
+   "test_id": "NSG-ALL-1821",
+   "query": "sốt ướp thịt nướng"
+  },
+  {
+   "test_id": "NSG-ALL-1823",
+   "query": "nước ép vinamilk"
+  },
+  {
+   "test_id": "NSG-ALL-1824",
+   "query": "vợt muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1825",
+   "query": "băng vệ sinh laurier siêu mỏng bảo vệ 30cm gói 8 miếng (ea)"
+  },
+  {
+   "test_id": "NSG-ALL-1826",
+   "query": "sườn non heo"
+  },
+  {
+   "test_id": "NSG-ALL-1828",
+   "query": "kim chi gói"
+  },
+  {
+   "test_id": "NSG-ALL-1829",
+   "query": "ăn kiêng"
+  },
+  {
+   "test_id": "NSG-ALL-1831",
+   "query": "miến trộn"
+  },
+  {
+   "test_id": "NSG-ALL-1832",
+   "query": "hạt nêm gà"
+  },
+  {
+   "test_id": "NSG-ALL-1833",
+   "query": "xịt phòng glade"
+  },
+  {
+   "test_id": "NSG-ALL-1834",
+   "query": "phô mai lát cheddar"
+  },
+  {
+   "test_id": "NSG-ALL-1835",
+   "query": "kẹo marshmallow"
+  },
+  {
+   "test_id": "NSG-ALL-1836",
+   "query": "dung dịch"
+  },
+  {
+   "test_id": "NSG-ALL-1838",
+   "query": "thùng bia tiger"
+  },
+  {
+   "test_id": "NSG-ALL-1839",
+   "query": "hủ thủy tinh"
+  },
+  {
+   "test_id": "NSG-ALL-1841",
+   "query": "bánh croissant"
+  },
+  {
+   "test_id": "NSG-ALL-1843",
+   "query": "bia tiger bạc"
+  },
+  {
+   "test_id": "NSG-ALL-1844",
+   "query": "giấy cuộn l choice"
+  },
+  {
+   "test_id": "NSG-ALL-1847",
+   "query": "kẹo dẻo xoài"
+  },
+  {
+   "test_id": "NSG-ALL-1848",
+   "query": "sữa chua đà lạt milk"
+  },
+  {
+   "test_id": "NSG-ALL-1849",
+   "query": "sọt rác"
+  },
+  {
+   "test_id": "NSG-ALL-1850",
+   "query": "phở bò vifon"
+  },
+  {
+   "test_id": "NSG-ALL-1851",
+   "query": "mì ramen"
+  },
+  {
+   "test_id": "NSG-ALL-1852",
+   "query": "hủ tíu"
+  },
+  {
+   "test_id": "NSG-ALL-1855",
+   "query": "băng vệ sinh dạng quần"
+  },
+  {
+   "test_id": "NSG-ALL-1857",
+   "query": "hằng nga"
+  },
+  {
+   "test_id": "NSG-ALL-1859",
+   "query": "sữa dưỡng thể nivea"
+  },
+  {
+   "test_id": "NSG-ALL-1862",
+   "query": "bánh oishi"
+  },
+  {
+   "test_id": "NSG-ALL-1864",
+   "query": "duy tân"
+  },
+  {
+   "test_id": "NSG-ALL-1865",
+   "query": "mì tươi"
+  },
+  {
+   "test_id": "NSG-ALL-1866",
+   "query": "tả dán"
+  },
+  {
+   "test_id": "NSG-ALL-1868",
+   "query": "trà thái nguyên"
+  },
+  {
+   "test_id": "NSG-ALL-1870",
+   "query": "thát lát"
+  },
+  {
+   "test_id": "NSG-ALL-1871",
+   "query": "mực khô"
+  },
+  {
+   "test_id": "NSG-ALL-1872",
+   "query": "sữa dalat"
+  },
+  {
+   "test_id": "NSG-ALL-1873",
+   "query": "phổ tai"
+  },
+  {
+   "test_id": "NSG-ALL-1875",
+   "query": "móc dán tường"
+  },
+  {
+   "test_id": "NSG-ALL-1876",
+   "query": "dưỡng ẩm jonhson"
+  },
+  {
+   "test_id": "NSG-ALL-1877",
+   "query": "bình xịt côn trùng raid hương cam chanh 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1880",
+   "query": "chà sàn"
+  },
+  {
+   "test_id": "NSG-ALL-1882",
+   "query": "băng vệ sinh laurier siêu mỏng bảo vệ 30cm gói 8 miếng"
+  },
+  {
+   "test_id": "NSG-ALL-1884",
+   "query": "pizza phô mai"
+  },
+  {
+   "test_id": "NSG-ALL-1885",
+   "query": "miến khô"
+  },
+  {
+   "test_id": "NSG-ALL-1886",
+   "query": "thạch  dua"
+  },
+  {
+   "test_id": "NSG-ALL-1887",
+   "query": "kẹo dưa hấu"
+  },
+  {
+   "test_id": "NSG-ALL-1888",
+   "query": "xịt khử mùi toàn thân nam nước hoa axe apollo 135ml"
+  },
+  {
+   "test_id": "NSG-ALL-1889",
+   "query": "ép táo"
+  },
+  {
+   "test_id": "NSG-ALL-1892",
+   "query": "sữa chua vinamilk ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1893",
+   "query": "ca phê phố"
+  },
+  {
+   "test_id": "NSG-ALL-1895",
+   "query": "dăm"
+  },
+  {
+   "test_id": "NSG-ALL-1896",
+   "query": "phở cung đình"
+  },
+  {
+   "test_id": "NSG-ALL-1898",
+   "query": "nhang muỗi ars ít khói hương sakura hộp 10 khoanh"
+  },
+  {
+   "test_id": "NSG-ALL-1899",
+   "query": "cồi sò điệp"
+  },
+  {
+   "test_id": "NSG-ALL-1900",
+   "query": "mắm ruốc huế"
+  },
+  {
+   "test_id": "NSG-ALL-1901",
+   "query": "quần nữ"
+  },
+  {
+   "test_id": "NSG-ALL-1903",
+   "query": "trà pha sẵn"
+  },
+  {
+   "test_id": "NSG-ALL-1904",
+   "query": "an lạc"
+  },
+  {
+   "test_id": "NSG-ALL-1908",
+   "query": "hạt nêm meizan"
+  },
+  {
+   "test_id": "NSG-ALL-1909",
+   "query": "khăn tay"
+  },
+  {
+   "test_id": "NSG-ALL-1910",
+   "query": "trà oolong"
+  },
+  {
+   "test_id": "NSG-ALL-1911",
+   "query": "sữa rửa mặt senka"
+  },
+  {
+   "test_id": "NSG-ALL-1912",
+   "query": "mì 3 miền gold"
+  },
+  {
+   "test_id": "NSG-ALL-1913",
+   "query": "mì xào hảo hảo"
+  },
+  {
+   "test_id": "NSG-ALL-1914",
+   "query": "bơ thực vật"
+  },
+  {
+   "test_id": "NSG-ALL-1915",
+   "query": "dưỡng ẩm"
+  },
+  {
+   "test_id": "NSG-ALL-1919",
+   "query": "gạo hữu cơ"
+  },
+  {
+   "test_id": "NSG-ALL-1921",
+   "query": "chai xịt"
+  },
+  {
+   "test_id": "NSG-ALL-1922",
+   "query": "sữa tắm choice l"
+  },
+  {
+   "test_id": "NSG-ALL-1924",
+   "query": "mì ba miền"
+  },
+  {
+   "test_id": "NSG-ALL-1925",
+   "query": "nồi chiên"
+  },
+  {
+   "test_id": "NSG-ALL-1926",
+   "query": "cải bẹ xanh"
+  },
+  {
+   "test_id": "NSG-ALL-1929",
+   "query": "bún nưa"
+  },
+  {
+   "test_id": "NSG-ALL-1931",
+   "query": "rổ inox"
+  },
+  {
+   "test_id": "NSG-ALL-1932",
+   "query": "bình xịt côn trùng jumbo vape hương hoa oải hương chai 300ml"
+  },
+  {
+   "test_id": "NSG-ALL-1933",
+   "query": "giấy vệ sinh l choice"
+  },
+  {
+   "test_id": "NSG-ALL-1934",
+   "query": "kem khoai môn"
+  },
+  {
+   "test_id": "NSG-ALL-1935",
+   "query": "thuốc xịt muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-1937",
+   "query": "muối tây ninh"
+  },
+  {
+   "test_id": "NSG-ALL-1940",
+   "query": "gia vị hầm"
+  },
+  {
+   "test_id": "NSG-ALL-1941",
+   "query": "kem sữa béo"
+  },
+  {
+   "test_id": "NSG-ALL-1943",
+   "query": "ngũ cốc dinh dưỡng"
+  },
+  {
+   "test_id": "NSG-ALL-1944",
+   "query": "sốt xá xíu"
+  },
+  {
+   "test_id": "NSG-ALL-1945",
+   "query": "xúc xích l"
+  },
+  {
+   "test_id": "NSG-ALL-1946",
+   "query": "xốt mì ý"
+  },
+  {
+   "test_id": "NSG-ALL-1947",
+   "query": "gạo neptune st25 plus lúa tôm túi 5kg"
+  },
+  {
+   "test_id": "NSG-ALL-1948",
+   "query": "tã bobby"
+  },
+  {
+   "test_id": "NSG-ALL-1949",
+   "query": "th true milk thùng"
+  },
+  {
+   "test_id": "NSG-ALL-1951",
+   "query": "xoài cát hòa lộc"
+  },
+  {
+   "test_id": "NSG-ALL-1952",
+   "query": "giò hoa vissan 500g"
+  },
+  {
+   "test_id": "NSG-ALL-1953",
+   "query": "bánh mì kinh đô"
+  },
+  {
+   "test_id": "NSG-ALL-1954",
+   "query": "giò thủ"
+  },
+  {
+   "test_id": "NSG-ALL-1955",
+   "query": "bánh bông lan chà bông"
+  },
+  {
+   "test_id": "NSG-ALL-1956",
+   "query": "bánh quy hộp"
+  },
+  {
+   "test_id": "NSG-ALL-1957",
+   "query": "củ cải vàng"
+  },
+  {
+   "test_id": "NSG-ALL-1958",
+   "query": "gối nằm"
+  },
+  {
+   "test_id": "NSG-ALL-1959",
+   "query": "bột bánh"
+  },
+  {
+   "test_id": "NSG-ALL-1961",
+   "query": "sữa chua lốc"
+  },
+  {
+   "test_id": "NSG-ALL-1962",
+   "query": "bếp điện"
+  },
+  {
+   "test_id": "NSG-ALL-1965",
+   "query": "mì jumbo"
+  },
+  {
+   "test_id": "NSG-ALL-1971",
+   "query": "mì gói hảo hảo"
+  },
+  {
+   "test_id": "NSG-ALL-1972",
+   "query": "dầu gội x men"
+  },
+  {
+   "test_id": "NSG-ALL-1974",
+   "query": "hảo hao"
+  },
+  {
+   "test_id": "NSG-ALL-1975",
+   "query": "banh đậu xanh"
+  },
+  {
+   "test_id": "NSG-ALL-1977",
+   "query": "dầu xả tóc"
+  },
+  {
+   "test_id": "NSG-ALL-1978",
+   "query": "bình xịt côn trùng raid hương lavender 600ml"
+  },
+  {
+   "test_id": "NSG-ALL-1979",
+   "query": "thực phẩm cho người ăn kiêng"
+  },
+  {
+   "test_id": "NSG-ALL-1980",
+   "query": "thực đơn low carb"
+  },
+  {
+   "test_id": "NSG-ALL-1981",
+   "query": "thực phẩm keto"
+  },
+  {
+   "test_id": "NSG-ALL-1982",
+   "query": "đồ ăn keto"
+  },
+  {
+   "test_id": "NSG-ALL-1983",
+   "query": "thực phẩm không đường"
+  },
+  {
+   "test_id": "NSG-ALL-1984",
+   "query": "ít đường"
+  },
+  {
+   "test_id": "NSG-ALL-1985",
+   "query": "thực phẩm hữu cơ"
+  },
+  {
+   "test_id": "NSG-ALL-1986",
+   "query": "đồ ăn healthy"
+  },
+  {
+   "test_id": "NSG-ALL-1987",
+   "query": "tăng cơ bắp"
+  },
+  {
+   "test_id": "NSG-ALL-1988",
+   "query": "tăng cơ"
+  },
+  {
+   "test_id": "NSG-ALL-1989",
+   "query": "thực phẩm tăng cơ"
+  },
+  {
+   "test_id": "NSG-ALL-1990",
+   "query": "chất xơ"
+  },
+  {
+   "test_id": "NSG-ALL-1991",
+   "query": "thực phẩm giàu chất xơ"
+  },
+  {
+   "test_id": "NSG-ALL-1994",
+   "query": "làm đẹp da từ bên trong"
+  },
+  {
+   "test_id": "NSG-ALL-1995",
+   "query": "detox cơ thể"
+  },
+  {
+   "test_id": "NSG-ALL-1996",
+   "query": "thải độc gan"
+  },
+  {
+   "test_id": "NSG-ALL-1997",
+   "query": "dinh dưỡng cho người già"
+  },
+  {
+   "test_id": "NSG-ALL-1998",
+   "query": "sữa cho người già"
+  },
+  {
+   "test_id": "NSG-ALL-1999",
+   "query": "sữa non"
+  },
+  {
+   "test_id": "NSG-ALL-2000",
+   "query": "thực phẩm chức năng"
+  },
+  {
+   "test_id": "NSG-ALL-2001",
+   "query": "viên uống vitamin tổng hợp"
+  },
+  {
+   "test_id": "NSG-ALL-2002",
+   "query": "sữa tách béo"
+  },
+  {
+   "test_id": "NSG-ALL-2003",
+   "query": "sữa không đường lactose"
+  },
+  {
+   "test_id": "NSG-ALL-2004",
+   "query": "ngũ cốc nguyên hạt"
+  },
+  {
+   "test_id": "NSG-ALL-2005",
+   "query": "yến mạch ăn kiêng"
+  },
+  {
+   "test_id": "NSG-ALL-2006",
+   "query": "trà giảm cân"
+  },
+  {
+   "test_id": "NSG-ALL-2007",
+   "query": "trà thảo mộc detox"
+  },
+  {
+   "test_id": "NSG-ALL-2008",
+   "query": "nước ép detox"
+  },
+  {
+   "test_id": "NSG-ALL-2009",
+   "query": "thực phẩm bổ sung canxi"
+  },
+  {
+   "test_id": "NSG-ALL-2010",
+   "query": "thực phẩm cho người tiểu đường"
+  },
+  {
+   "test_id": "NSG-ALL-2011",
+   "query": "đường dành cho người tiểu đường"
+  },
+  {
+   "test_id": "NSG-ALL-2012",
+   "query": "đồ dùng gia dụng"
+  },
+  {
+   "test_id": "NSG-ALL-2013",
+   "query": "đồ gia dụng thông minh"
+  },
+  {
+   "test_id": "NSG-ALL-2014",
+   "query": "dụng cụ nhà bếp"
+  },
+  {
+   "test_id": "NSG-ALL-2015",
+   "query": "đồ bếp inox"
+  },
+  {
+   "test_id": "NSG-ALL-2016",
+   "query": "quạt điều hòa"
+  },
+  {
+   "test_id": "NSG-ALL-2017",
+   "query": "đèn ngủ"
+  },
+  {
+   "test_id": "NSG-ALL-2018",
+   "query": "móc treo quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-2019",
+   "query": "giá phơi đồ"
+  },
+  {
+   "test_id": "NSG-ALL-2020",
+   "query": "thảm lau chân"
+  },
+  {
+   "test_id": "NSG-ALL-2021",
+   "query": "khăn trải bàn"
+  },
+  {
+   "test_id": "NSG-ALL-2022",
+   "query": "bình đun nước siêu tốc"
+  },
+  {
+   "test_id": "NSG-ALL-2023",
+   "query": "máy ép trái cây"
+  },
+  {
+   "test_id": "NSG-ALL-2024",
+   "query": "túi đựng đồ đi chợ"
+  },
+  {
+   "test_id": "NSG-ALL-2025",
+   "query": "giỏ đi chợ"
+  },
+  {
+   "test_id": "NSG-ALL-2026",
+   "query": "bàn ủi hơi nước"
+  },
+  {
+   "test_id": "NSG-ALL-2027",
+   "query": "máy hút bụi cầm tay"
+  },
+  {
+   "test_id": "NSG-ALL-2028",
+   "query": "đồ dùng phòng tắm"
+  },
+  {
+   "test_id": "NSG-ALL-2029",
+   "query": "đồ dùng nhà tắm"
+  },
+  {
+   "test_id": "NSG-ALL-2030",
+   "query": "kệ gia vị"
+  },
+  {
+   "test_id": "NSG-ALL-2031",
+   "query": "đồ đựng gia vị"
+  },
+  {
+   "test_id": "NSG-ALL-2032",
+   "query": "bộ nồi nấu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-2033",
+   "query": "dụng cụ làm bánh"
+  },
+  {
+   "test_id": "NSG-ALL-2034",
+   "query": "khuôn làm bánh"
+  },
+  {
+   "test_id": "NSG-ALL-2035",
+   "query": "đồ chơi giáo dục cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2036",
+   "query": "sản phẩm hữu cơ cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2037",
+   "query": "sữa công thức cho bé sơ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-2038",
+   "query": "đồ ăn vặt văn phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2039",
+   "query": "đồ dùng cắm trại"
+  },
+  {
+   "test_id": "NSG-ALL-2040",
+   "query": "chuẩn bị năm học mới"
+  },
+  {
+   "test_id": "NSG-ALL-2041",
+   "query": "đồ dùng dã ngoại"
+  },
+  {
+   "test_id": "NSG-ALL-2042",
+   "query": "quà cho mẹ"
+  },
+  {
+   "test_id": "NSG-ALL-2043",
+   "query": "quà cho bố"
+  },
+  {
+   "test_id": "NSG-ALL-2044",
+   "query": "quà tết cho gia đình"
+  },
+  {
+   "test_id": "NSG-ALL-2045",
+   "query": "đồ dùng đi du lịch"
+  },
+  {
+   "test_id": "NSG-ALL-2046",
+   "query": "đồ dùng văn phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2047",
+   "query": "hộp quà tết cao cấp"
+  },
+  {
+   "test_id": "NSG-ALL-2048",
+   "query": "đồ ăn"
+  },
+  {
+   "test_id": "NSG-ALL-2049",
+   "query": "thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-2050",
+   "query": "đồ uống có ga"
+  },
+  {
+   "test_id": "NSG-ALL-2051",
+   "query": "gia vị nấu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-2052",
+   "query": "sản phẩm chăm sóc cá nhân"
+  },
+  {
+   "test_id": "NSG-ALL-2053",
+   "query": "thiết bị nhà bếp"
+  },
+  {
+   "test_id": "NSG-ALL-2054",
+   "query": "đồ nội trợ"
+  },
+  {
+   "test_id": "NSG-ALL-2055",
+   "query": "vật dụng hàng ngày"
+  },
+  {
+   "test_id": "NSG-ALL-2056",
+   "query": "sản phẩm không hóa chất"
+  },
+  {
+   "test_id": "NSG-ALL-2057",
+   "query": "đồ dùng cho mẹ và bé"
+  },
+  {
+   "test_id": "NSG-ALL-2058",
+   "query": "sản phẩm cho gia đình"
+  },
+  {
+   "test_id": "NSG-ALL-2059",
+   "query": "thực phẩm đóng gói sẵn"
+  },
+  {
+   "test_id": "NSG-ALL-2060",
+   "query": "bữa ăn nhanh"
+  },
+  {
+   "test_id": "NSG-ALL-2062",
+   "query": "đồ ăn cho dân văn phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2063",
+   "query": "cơm văn phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2064",
+   "query": "thực phẩm cho người tập gym"
+  },
+  {
+   "test_id": "NSG-ALL-2065",
+   "query": "đồ uống sau khi tập gym"
+  },
+  {
+   "test_id": "NSG-ALL-2066",
+   "query": "nước uống thể thao"
+  },
+  {
+   "test_id": "NSG-ALL-2068",
+   "query": "thực phẩm bổ sung sức khỏe"
+  },
+  {
+   "test_id": "NSG-ALL-2069",
+   "query": "đồ dùng chăm sóc thú cưng"
+  },
+  {
+   "test_id": "NSG-ALL-2070",
+   "query": "đồ chơi cho thú cưng"
+  },
+  {
+   "test_id": "NSG-ALL-2071",
+   "query": "sản phẩm làm sạch nhà cửa"
+  },
+  {
+   "test_id": "NSG-ALL-2072",
+   "query": "hóa chất tẩy rửa"
+  },
+  {
+   "test_id": "NSG-ALL-2073",
+   "query": "dụng cụ vệ sinh nhà cửa"
+  },
+  {
+   "test_id": "NSG-ALL-2074",
+   "query": "đồ dùng nhà bếp thông minh"
+  },
+  {
+   "test_id": "NSG-ALL-2075",
+   "query": "trái thơm"
+  },
+  {
+   "test_id": "NSG-ALL-2076",
+   "query": "quả dứa"
+  },
+  {
+   "test_id": "NSG-ALL-2077",
+   "query": "trái khóm"
+  },
+  {
+   "test_id": "NSG-ALL-2078",
+   "query": "cá quả"
+  },
+  {
+   "test_id": "NSG-ALL-2079",
+   "query": "mướp đắng"
+  },
+  {
+   "test_id": "NSG-ALL-2080",
+   "query": "bí xanh"
+  },
+  {
+   "test_id": "NSG-ALL-2081",
+   "query": "củ sắn nước"
+  },
+  {
+   "test_id": "NSG-ALL-2082",
+   "query": "hột vịt"
+  },
+  {
+   "test_id": "NSG-ALL-2084",
+   "query": "bánh chưng"
+  },
+  {
+   "test_id": "NSG-ALL-2085",
+   "query": "trái vải"
+  },
+  {
+   "test_id": "NSG-ALL-2086",
+   "query": "cải cúc"
+  },
+  {
+   "test_id": "NSG-ALL-2087",
+   "query": "cá viên chiên"
+  },
+  {
+   "test_id": "NSG-ALL-2088",
+   "query": "hủ tiếu khô"
+  },
+  {
+   "test_id": "NSG-ALL-2090",
+   "query": "đường thốt nốt"
+  },
+  {
+   "test_id": "NSG-ALL-2091",
+   "query": "khô cá lóc"
+  },
+  {
+   "test_id": "NSG-ALL-2092",
+   "query": "chả bò"
+  },
+  {
+   "test_id": "NSG-ALL-2093",
+   "query": "muối tiêu chanh"
+  },
+  {
+   "test_id": "NSG-ALL-2094",
+   "query": "mắm ruốc"
+  },
+  {
+   "test_id": "NSG-ALL-2095",
+   "query": "trái bơ"
+  },
+  {
+   "test_id": "NSG-ALL-2096",
+   "query": "quả bơ"
+  },
+  {
+   "test_id": "NSG-ALL-2097",
+   "query": "chả quế"
+  },
+  {
+   "test_id": "NSG-ALL-2098",
+   "query": "hạt điều rang muối"
+  },
+  {
+   "test_id": "NSG-ALL-2099",
+   "query": "kẹo dừa"
+  },
+  {
+   "test_id": "NSG-ALL-2100",
+   "query": "mứt tết"
+  },
+  {
+   "test_id": "NSG-ALL-2101",
+   "query": "trái mận bắc"
+  },
+  {
+   "test_id": "NSG-ALL-2102",
+   "query": "trái vú sữa"
+  },
+  {
+   "test_id": "NSG-ALL-2103",
+   "query": "trái nhãn"
+  },
+  {
+   "test_id": "NSG-ALL-2104",
+   "query": "trái măng cụt"
+  },
+  {
+   "test_id": "NSG-ALL-2105",
+   "query": "dưa món"
+  },
+  {
+   "test_id": "NSG-ALL-2106",
+   "query": "dưa cải chua"
+  },
+  {
+   "test_id": "NSG-ALL-2107",
+   "query": "rau đắng"
+  },
+  {
+   "test_id": "NSG-ALL-2108",
+   "query": "rau ngổ"
+  },
+  {
+   "test_id": "NSG-ALL-2110",
+   "query": "bông so đũa"
+  },
+  {
+   "test_id": "NSG-ALL-2111",
+   "query": "bông điên điển"
+  },
+  {
+   "test_id": "NSG-ALL-2114",
+   "query": "cá bống"
+  },
+  {
+   "test_id": "NSG-ALL-2115",
+   "query": "cá rô đồng"
+  },
+  {
+   "test_id": "NSG-ALL-2116",
+   "query": "lươn đồng"
+  },
+  {
+   "test_id": "NSG-ALL-2117",
+   "query": "tôm càng"
+  },
+  {
+   "test_id": "NSG-ALL-2118",
+   "query": "cua đồng"
+  },
+  {
+   "test_id": "NSG-ALL-2119",
+   "query": "bánh xèo"
+  },
+  {
+   "test_id": "NSG-ALL-2120",
+   "query": "bánh khọt"
+  },
+  {
+   "test_id": "NSG-ALL-2121",
+   "query": "bánh ít"
+  },
+  {
+   "test_id": "NSG-ALL-2122",
+   "query": "chè đậu xanh"
+  },
+  {
+   "test_id": "NSG-ALL-2125",
+   "query": "bánh da lợn"
+  },
+  {
+   "test_id": "NSG-ALL-2126",
+   "query": "bánh bò"
+  },
+  {
+   "test_id": "NSG-ALL-2127",
+   "query": "nước mắm nhĩ"
+  },
+  {
+   "test_id": "NSG-ALL-2128",
+   "query": "mắm cá linh"
+  },
+  {
+   "test_id": "NSG-ALL-2129",
+   "query": "mắm cá sặc"
+  },
+  {
+   "test_id": "NSG-ALL-2130",
+   "query": "khô cá dứa"
+  },
+  {
+   "test_id": "NSG-ALL-2131",
+   "query": "khô cá lóc đồng"
+  },
+  {
+   "test_id": "NSG-ALL-2132",
+   "query": "cá lóc kho tộ"
+  },
+  {
+   "test_id": "NSG-ALL-2133",
+   "query": "canh chua cá lóc"
+  },
+  {
+   "test_id": "NSG-ALL-2134",
+   "query": "lẩu mắm"
+  },
+  {
+   "test_id": "NSG-ALL-2135",
+   "query": "bún mắm"
+  },
+  {
+   "test_id": "NSG-ALL-2136",
+   "query": "chuối sứ"
+  },
+  {
+   "test_id": "NSG-ALL-2137",
+   "query": "nước uống bổ sung năng lượng"
+  },
+  {
+   "test_id": "NSG-ALL-2138",
+   "query": "khẩu trang vải kháng khuẩn"
+  },
+  {
+   "test_id": "NSG-ALL-2139",
+   "query": "màng PE bọc thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-2140",
+   "query": "hộp nhựa đựng thực phẩm"
+  },
+  {
+   "test_id": "NSG-ALL-2141",
+   "query": "chảo không dính"
+  },
+  {
+   "test_id": "NSG-ALL-2142",
+   "query": "máy đánh trứng"
+  },
+  {
+   "test_id": "NSG-ALL-2143",
+   "query": "máy đánh kem"
+  },
+  {
+   "test_id": "NSG-ALL-2144",
+   "query": "dầu gội trị gàu"
+  },
+  {
+   "test_id": "NSG-ALL-2145",
+   "query": "dầu gội chống gàu"
+  },
+  {
+   "test_id": "NSG-ALL-2146",
+   "query": "kem đánh răng trắng răng"
+  },
+  {
+   "test_id": "NSG-ALL-2147",
+   "query": "kem đánh răng làm trắng"
+  },
+  {
+   "test_id": "NSG-ALL-2148",
+   "query": "nước súc miệng diệt khuẩn"
+  },
+  {
+   "test_id": "NSG-ALL-2149",
+   "query": "gel rửa tay khô"
+  },
+  {
+   "test_id": "NSG-ALL-2150",
+   "query": "nước rửa tay khô"
+  },
+  {
+   "test_id": "NSG-ALL-2151",
+   "query": "băng cá nhân"
+  },
+  {
+   "test_id": "NSG-ALL-2152",
+   "query": "bông trang điểm"
+  },
+  {
+   "test_id": "NSG-ALL-2153",
+   "query": "kem chống muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-2154",
+   "query": "kem thoa chống muỗi"
+  },
+  {
+   "test_id": "NSG-ALL-2155",
+   "query": "nước hoa xịt phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2156",
+   "query": "xịt phòng thơm"
+  },
+  {
+   "test_id": "NSG-ALL-2157",
+   "query": "nến sáp thơm"
+  },
+  {
+   "test_id": "NSG-ALL-2158",
+   "query": "túi hút chân không"
+  },
+  {
+   "test_id": "NSG-ALL-2159",
+   "query": "kẹp quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-2160",
+   "query": "kẹp phơi đồ"
+  },
+  {
+   "test_id": "NSG-ALL-2161",
+   "query": "dao inox bếp"
+  },
+  {
+   "test_id": "NSG-ALL-2162",
+   "query": "dao bếp inox"
+  },
+  {
+   "test_id": "NSG-ALL-2163",
+   "query": "thớt nhựa"
+  },
+  {
+   "test_id": "NSG-ALL-2164",
+   "query": "bình nước thể thao"
+  },
+  {
+   "test_id": "NSG-ALL-2165",
+   "query": "đèn pin sạc"
+  },
+  {
+   "test_id": "NSG-ALL-2166",
+   "query": "sạc dự phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2167",
+   "query": "pin sạc dự phòng"
+  },
+  {
+   "test_id": "NSG-ALL-2168",
+   "query": "loa di động"
+  },
+  {
+   "test_id": "NSG-ALL-2169",
+   "query": "kem chống hăm cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2170",
+   "query": "sữa tắm gội cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2171",
+   "query": "sữa tắm 2 trong 1"
+  },
+  {
+   "test_id": "NSG-ALL-2172",
+   "query": "bình sữa cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2173",
+   "query": "bình sữa trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-2175",
+   "query": "ghế ăn dặm"
+  },
+  {
+   "test_id": "NSG-ALL-2176",
+   "query": "khăn xô cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2177",
+   "query": "khăn sữa cho bé"
+  },
+  {
+   "test_id": "NSG-ALL-2178",
+   "query": "bàn chải đánh răng điện"
+  },
+  {
+   "test_id": "NSG-ALL-2179",
+   "query": "máy tăm nước"
+  },
+  {
+   "test_id": "NSG-ALL-2180",
+   "query": "tăm nước vệ sinh răng"
+  },
+  {
+   "test_id": "NSG-ALL-2181",
+   "query": "kem cạo râu"
+  },
+  {
+   "test_id": "NSG-ALL-2182",
+   "query": "bọt cạo râu"
+  },
+  {
+   "test_id": "NSG-ALL-2183",
+   "query": "nước hoa nữ"
+  },
+  {
+   "test_id": "NSG-ALL-2184",
+   "query": "sáp vuốt tóc"
+  },
+  {
+   "test_id": "NSG-ALL-2185",
+   "query": "xịt tạo kiểu tóc"
+  },
+  {
+   "test_id": "NSG-ALL-2186",
+   "query": "keo xịt tóc"
+  },
+  {
+   "test_id": "NSG-ALL-2187",
+   "query": "khẩu trang than hoạt tính"
+  },
+  {
+   "test_id": "NSG-ALL-2188",
+   "query": "khẩu trang 4 lớp"
+  },
+  {
+   "test_id": "NSG-ALL-2189",
+   "query": "nước rửa bình sữa"
+  },
+  {
+   "test_id": "NSG-ALL-2190",
+   "query": "nước lau sàn nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2191",
+   "query": "nước lau sàn gỗ"
+  },
+  {
+   "test_id": "NSG-ALL-2192",
+   "query": "viên tẩy lồng máy giặt"
+  },
+  {
+   "test_id": "NSG-ALL-2193",
+   "query": "túi thơm khử mùi tủ quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-2194",
+   "query": "hạt hút ẩm"
+  },
+  {
+   "test_id": "NSG-ALL-2195",
+   "query": "hộp đựng đồ đa năng"
+  },
+  {
+   "test_id": "NSG-ALL-2196",
+   "query": "kệ đựng gia vị treo tường"
+  },
+  {
+   "test_id": "NSG-ALL-2197",
+   "query": "bình xịt xử lý mùi hôi"
+  },
+  {
+   "test_id": "NSG-ALL-2198",
+   "query": "xịt khử mùi giày"
+  },
+  {
+   "test_id": "NSG-ALL-2199",
+   "query": "dung dịch vệ sinh máy giặt"
+  },
+  {
+   "test_id": "NSG-ALL-2200",
+   "query": "khăn giấy lau bếp"
+  },
+  {
+   "test_id": "NSG-ALL-2201",
+   "query": "bao đựng rác tự phân hủy"
+  },
+  {
+   "test_id": "NSG-ALL-2308",
+   "query": "áo thun mặc nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2309",
+   "query": "quần áo đi làm công sở"
+  },
+  {
+   "test_id": "NSG-ALL-2310",
+   "query": "đồ mặc đi biển"
+  },
+  {
+   "test_id": "NSG-ALL-2311",
+   "query": "áo khoác giữ ấm mùa đông"
+  },
+  {
+   "test_id": "NSG-ALL-2312",
+   "query": "trang phục cho trẻ sơ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-2313",
+   "query": "đồ lót nam thoải mái"
+  },
+  {
+   "test_id": "NSG-ALL-2314",
+   "query": "quần áo thể thao nam"
+  },
+  {
+   "test_id": "NSG-ALL-2315",
+   "query": "thức ăn cho mèo con"
+  },
+  {
+   "test_id": "NSG-ALL-2316",
+   "query": "đồ chơi cho chó nhỏ"
+  },
+  {
+   "test_id": "NSG-ALL-2317",
+   "query": "cát vệ sinh cho mèo"
+  },
+  {
+   "test_id": "NSG-ALL-2318",
+   "query": "thức ăn hạt cho chó lớn"
+  },
+  {
+   "test_id": "NSG-ALL-2320",
+   "query": "snack thưởng cho chó"
+  },
+  {
+   "test_id": "NSG-ALL-2321",
+   "query": "sữa tắm cho mèo"
+  },
+  {
+   "test_id": "NSG-ALL-2323",
+   "query": "bánh trung thu cao cấp"
+  },
+  {
+   "test_id": "NSG-ALL-2324",
+   "query": "bánh kem theo yêu cầu"
+  },
+  {
+   "test_id": "NSG-ALL-2325",
+   "query": "bánh mì tươi mỗi sáng"
+  },
+  {
+   "test_id": "NSG-ALL-2326",
+   "query": "hải sản tươi sống nấu lẩu"
+  },
+  {
+   "test_id": "NSG-ALL-2327",
+   "query": "cá hồi làm sashimi"
+  },
+  {
+   "test_id": "NSG-ALL-2328",
+   "query": "thịt bò làm bít tết"
+  },
+  {
+   "test_id": "NSG-ALL-2329",
+   "query": "tôm sú size lớn"
+  },
+  {
+   "test_id": "NSG-ALL-2330",
+   "query": "nguyên liệu nấu lẩu hải sản"
+  },
+  {
+   "test_id": "NSG-ALL-2331",
+   "query": "thịt gà làm gà nướng"
+  },
+  {
+   "test_id": "NSG-ALL-2332",
+   "query": "cá basa làm chả cá"
+  },
+  {
+   "test_id": "NSG-ALL-2333",
+   "query": "mực tươi làm mực nướng"
+  },
+  {
+   "test_id": "NSG-ALL-2334",
+   "query": "sườn heo nấu canh chua"
+  },
+  {
+   "test_id": "NSG-ALL-2335",
+   "query": "nghêu sò làm món hấp"
+  },
+  {
+   "test_id": "NSG-ALL-2336",
+   "query": "trái cây nhập khẩu cao cấp"
+  },
+  {
+   "test_id": "NSG-ALL-2337",
+   "query": "trái cây theo mùa hè"
+  },
+  {
+   "test_id": "NSG-ALL-2338",
+   "query": "hoa quả tráng miệng sau bữa ăn"
+  },
+  {
+   "test_id": "NSG-ALL-2339",
+   "query": "trái cây làm sinh tố"
+  },
+  {
+   "test_id": "NSG-ALL-2340",
+   "query": "quà biếu trái cây cao cấp"
+  },
+  {
+   "test_id": "NSG-ALL-2341",
+   "query": "trái cây ít ngọt cho người tiểu đường"
+  },
+  {
+   "test_id": "NSG-ALL-2342",
+   "query": "hộp quà trái cây nhập khẩu"
+  },
+  {
+   "test_id": "NSG-ALL-2343",
+   "query": "trái cây tươi cho bé ăn dặm"
+  },
+  {
+   "test_id": "NSG-ALL-2344",
+   "query": "trái cây giải nhiệt mùa nóng"
+  },
+  {
+   "test_id": "NSG-ALL-2345",
+   "query": "giỏ trái cây quà tặng"
+  },
+  {
+   "test_id": "NSG-ALL-2346",
+   "query": "rượu vang tặng đối tác"
+  },
+  {
+   "test_id": "NSG-ALL-2347",
+   "query": "bia thủ công nhập khẩu"
+  },
+  {
+   "test_id": "NSG-ALL-2348",
+   "query": "rượu mạnh cho dịp lễ tết"
+  },
+  {
+   "test_id": "NSG-ALL-2349",
+   "query": "set quà rượu cao cấp"
+  },
+  {
+   "test_id": "NSG-ALL-2350",
+   "query": "bia lon uống tại nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2351",
+   "query": "đồ uống có cồn cho tiệc cuối năm"
+  },
+  {
+   "test_id": "NSG-ALL-2352",
+   "query": "rượu whisky quà biếu sếp"
+  },
+  {
+   "test_id": "NSG-ALL-2353",
+   "query": "son môi lì lâu trôi"
+  },
+  {
+   "test_id": "NSG-ALL-2354",
+   "query": "kem nền che khuyết điểm"
+  },
+  {
+   "test_id": "NSG-ALL-2355",
+   "query": "phấn mắt trang điểm dự tiệc"
+  },
+  {
+   "test_id": "NSG-ALL-2356",
+   "query": "bộ trang điểm cơ bản cho người mới"
+  },
+  {
+   "test_id": "NSG-ALL-2357",
+   "query": "nước tẩy trang dịu nhẹ"
+  },
+  {
+   "test_id": "NSG-ALL-2358",
+   "query": "kem chống nắng cho da dầu"
+  },
+  {
+   "test_id": "NSG-ALL-2359",
+   "query": "serum dưỡng trắng da"
+  },
+  {
+   "test_id": "NSG-ALL-2360",
+   "query": "dụng cụ học tập cho học sinh"
+  },
+  {
+   "test_id": "NSG-ALL-2361",
+   "query": "sổ tay ghi chú công việc"
+  },
+  {
+   "test_id": "NSG-ALL-2362",
+   "query": "balo đi học cho trẻ"
+  },
+  {
+   "test_id": "NSG-ALL-2363",
+   "query": "đồ dùng chuẩn bị năm học mới"
+  },
+  {
+   "test_id": "NSG-ALL-2364",
+   "query": "hộp bút màu cho bé vẽ"
+  },
+  {
+   "test_id": "NSG-ALL-2365",
+   "query": "đồ chơi cho bé 1 tuổi"
+  },
+  {
+   "test_id": "NSG-ALL-2366",
+   "query": "đồ chơi xếp hình phát triển trí tuệ"
+  },
+  {
+   "test_id": "NSG-ALL-2367",
+   "query": "đồ chơi ngoài trời cho trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-2368",
+   "query": "búp bê cho bé gái"
+  },
+  {
+   "test_id": "NSG-ALL-2369",
+   "query": "xe điều khiển từ xa cho bé trai"
+  },
+  {
+   "test_id": "NSG-ALL-2370",
+   "query": "đồ chơi tắm cho bé sơ sinh"
+  },
+  {
+   "test_id": "NSG-ALL-2371",
+   "query": "nguyên liệu nấu món Hàn Quốc"
+  },
+  {
+   "test_id": "NSG-ALL-2372",
+   "query": "đồ ăn kiểu Nhật tại nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2373",
+   "query": "nguyên liệu làm kim chi tại nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2374",
+   "query": "món ăn nhanh cho bữa tối"
+  },
+  {
+   "test_id": "NSG-ALL-2375",
+   "query": "thực phẩm chế biến sẵn tiện lợi"
+  },
+  {
+   "test_id": "NSG-ALL-2376",
+   "query": "nguyên liệu nướng BBQ cuối tuần"
+  },
+  {
+   "test_id": "NSG-ALL-2377",
+   "query": "món chay cho người ăn kiêng đạo"
+  },
+  {
+   "test_id": "NSG-ALL-2378",
+   "query": "đồ ăn cho tiệc sinh nhật trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-2379",
+   "query": "món khai vị đãi khách"
+  },
+  {
+   "test_id": "NSG-ALL-2380",
+   "query": "nguyên liệu làm lẩu Thái"
+  },
+  {
+   "test_id": "NSG-ALL-2381",
+   "query": "đồ dùng phòng bếp hiện đại"
+  },
+  {
+   "test_id": "NSG-ALL-2382",
+   "query": "dụng cụ dọn dẹp phòng tắm"
+  },
+  {
+   "test_id": "NSG-ALL-2384",
+   "query": "đồ decor phòng khách"
+  },
+  {
+   "test_id": "NSG-ALL-2385",
+   "query": "vật dụng sắp xếp tủ quần áo"
+  },
+  {
+   "test_id": "NSG-ALL-2387",
+   "query": "thiết bị làm sạch không khí trong nhà"
+  },
+  {
+   "test_id": "NSG-ALL-2388",
+   "query": "dụng cụ nhà bếp cho người mới nấu ăn"
+  },
+  {
+   "test_id": "NSG-ALL-2389",
+   "query": "nước yến bồi bổ sức khỏe"
+  },
+  {
+   "test_id": "NSG-ALL-2390",
+   "query": "thực phẩm chức năng hỗ trợ tiêu hóa"
+  },
+  {
+   "test_id": "NSG-ALL-2391",
+   "query": "viên uống hỗ trợ giấc ngủ"
+  },
+  {
+   "test_id": "NSG-ALL-2392",
+   "query": "sản phẩm tăng đề kháng cho trẻ em"
+  },
+  {
+   "test_id": "NSG-ALL-2393",
+   "query": "thực phẩm bổ sung cho phụ nữ mang thai"
+  },
+  {
+   "test_id": "NSG-ALL-2394",
+   "query": "đồ dùng chăm sóc sức khỏe người cao tuổi"
+  }
+ ]
+}

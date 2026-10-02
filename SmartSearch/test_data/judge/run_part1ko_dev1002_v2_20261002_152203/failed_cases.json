@@ -1,0 +1,18 @@
+[
+ {
+  "test_id": "NSG-P1KO-0002",
+  "query": "돼지파",
+  "kind": "foreign",
+  "interpretation": "KO: củ kiệu (염교)",
+  "dev_reason": "4/4 sp top-4 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ },
+ {
+  "test_id": "NSG-P1KO-0003",
+  "query": "선물 바구니",
+  "kind": "foreign",
+  "interpretation": "KO: giỏ quà",
+  "dev_reason": "10/10 sp top-10 không thỏa (đỏ đầu tiên: #1)",
+  "prod_verdict": "FAILED"
+ }
+]

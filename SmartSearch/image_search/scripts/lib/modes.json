@@ -1,0 +1,15 @@
+{
+  "_doc": "Bảng nhãn/màu của MỌI cơ chế từng chạy. Cơ chế của lần chạy hiện tại lấy theo results/excel_top40 (xem MODES trong config.mjs); các cơ chế cũ vẫn giữ ở đây để vòng đánh giá trước hiện đúng nhãn. Thứ tự = thứ tự cột. Màu lấy từ bảng categorical đã validate (dataviz). Titan Multi Caption Type dùng lại màu cam của Titan vì 2 cơ chế không bao giờ hiện cùng lần chạy (validate 2026-09-28: magenta lẫn với aqua ở dark/deutan ΔE 1.6, cam đạt). Chỗ yếu còn lại là Vector↔Titan Multi ở dark, đã bù bằng sọc chéo (striped).",
+  "modes": [
+    {"mode": "vector", "label": "Vector", "css": "--vector", "light": "#2a78d6", "dark": "#3987e5", "xlsx": "1F4E9A"},
+    {"mode": "vector_titan", "label": "Titan", "css": "--titan", "light": "#eb6834", "dark": "#d95926", "xlsx": "B4531F"},
+    {"mode": "vector_titan_multi", "label": "Titan Multi", "css": "--tmulti", "light": "#4a3aa7", "dark": "#9085e9", "xlsx": "4A3AA7", "striped": true},
+    {"mode": "vector_titan_multi_caption_type", "label": "Titan Multi Caption Type", "css": "--tmct", "light": "#eb6834", "dark": "#d95926", "xlsx": "B4531F"},
+    {"mode": "caption", "label": "NovaLite", "css": "--nova", "light": "#1baf7a", "dark": "#199e70", "xlsx": "1E6B3A"}
+  ],
+  "run_notes": {
+    "2026-09-22": "Lần chạy đầu: Vector, Titan, Titan Multi, NovaLite.",
+    "2026-09-24": "Chạy lại sau khi dev fix bug, cùng 4 cơ chế.",
+    "2026-09-28": "Bỏ Titan (vector_titan), thêm Titan Multi Caption Type (vector_titan_multi_caption_type)."
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "timestamp": "2026-10-02T13:12:30.968571",
+  "expected_file": "SmartSearch\\test_data\\json\\batches\\NSG_ExpectedData_part1vi_20260929.json",
+  "actual_file": "SmartSearch\\test_data\\json\\actual\\NSG_ActualData_part1vi_20261002_131002.json",
+  "asis_cache_file": "SmartSearch\\test_data\\json\\actual\\AsIs_NSG_cache.json",
+  "asis_match_threshold_pct": 50,
+  "asis_scenarios_used": 156,
+  "asis_newly_fetched": 0,
+  "total_scenarios": 156,
+  "matched_by_test_id": 156,
+  "matched_by_query": 0,
+  "unmatched_scenarios": 0,
+  "exact_order_count": 0,
+  "exact_order_pct": 0.0,
+  "set_match_count": 0,
+  "set_match_pct": 0.0,
+  "top1_match_count": 0,
+  "top1_match_pct": 0.0,
+  "mismatch_count": 156,
+  "mismatch_pct": 100.0,
+  "zero_result_count": 0,
+  "avg_overlap_pct": 0.0,
+  "avg_top5_overlap_pct": 0.0,
+  "avg_top10_overlap_pct": 0.0,
+  "avg_top20_overlap_pct": 0.0,
+  "breakdown_by_category": {
+    "100_PERCENT_EXACT": 0,
+    "100_PERCENT_SET": 0,
+    "HIGH_MATCH": 30,
+    "PARTIAL_MATCH": 32,
+    "LOW_MATCH": 17,
+    "ZERO_RESULT": 0,
+    "NO_MATCH": 71
+  },
+  "scoring_top_n": 30,
+  "passed_count": 36,
+  "failed_count": 120,
+  "na_count": 0,
+  "asis_zero_count": 0,
+  "failed_no_bug_count": 120,
+  "has_bug_count": 0,
+  "reviewed_count": 0,
+  "not_reviewed_count": 156,
+  "regression_count": 4,
+  "regression_alerts": [
+    {
+      "test_id": "NSG-P1-0011",
+      "query": "lays",
+      "dimension": "part1_autocomplete+smartsearch",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0019",
+      "query": "bành mì",
+      "dimension": "part1_smartsearch",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0068",
+      "query": "khan giấy",
+      "dimension": "part1_smartsearch",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0131",
+      "query": "nứơc ngọt",
+      "dimension": "part1_smartsearch",
+      "prev_status": "failed",
+      "current_status": "passed",
+      "kind": "improved",
+      "match_category": "HIGH_MATCH",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    }
+  ],
+  "response_changed_count": 43,
+  "ac_passed_count": 0,
+  "ac_failed_count": 0,
+  "ac_na_count": 156,
+  "ac_regression_alerts": [],
+  "discussion_count": 0,
+  "removed_scenarios_count": 1,
+  "response_change_alerts": [
+    {
+      "test_id": "NSG-P1-0001",
+      "query": "nho",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0002",
+      "query": "nước giac",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0003",
+      "query": "ca hoi",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0005",
+      "query": "sua",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0011",
+      "query": "lays",
+      "dimension": "part1_autocomplete+smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0013",
+      "query": "hộp đựng thực phẩm thủy tinh",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0014",
+      "query": "dưa hâu",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0016",
+      "query": "bột giạt",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0018",
+      "query": "tăng cân healthy",
+      "dimension": "part1_smartsearch",
+      "match_category": "100_PERCENT_EXACT",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0019",
+      "query": "bành mì",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0021",
+      "query": "nước hoa nam",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0024",
+      "query": "mi",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0029",
+      "query": "trái thanh long",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0030",
+      "query": "thực phẩm tươi sống",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0035",
+      "query": "túi rát",
+      "dimension": "part1_autocomplete+smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0042",
+      "query": "johnson",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0044",
+      "query": "giỏ quà tết",
+      "dimension": "part1_multilanguage+smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0045",
+      "query": "power 100",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0055",
+      "query": "thuốc diệt côn trùng",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0062",
+      "query": "tổ iến",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0066",
+      "query": "bình nước giữ nhiệt thể thao",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0068",
+      "query": "khan giấy",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0070",
+      "query": "sủa tươi",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0072",
+      "query": "cam sành",
+      "dimension": "part1_smartsearch",
+      "match_category": "100_PERCENT_EXACT",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0079",
+      "query": "mỹ phẩm",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0080",
+      "query": "trái me",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0084",
+      "query": "nước ion",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0086",
+      "query": "dứa",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0087",
+      "query": "ngủ cốc",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0096",
+      "query": "kem chống nắng",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0097",
+      "query": "băng vệ sinh hàng ngày",
+      "dimension": "part1_smartsearch",
+      "match_category": "HIGH_MATCH",
+      "pass_fail_status": "passed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0098",
+      "query": "ca cao",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0099",
+      "query": "gia vị",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0100",
+      "query": "bột bánh bông lan",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0103",
+      "query": "quà cho bố",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0112",
+      "query": "đồ ăn nhanh",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0124",
+      "query": "banh",
+      "dimension": "part1_smartsearch",
+      "match_category": "NO_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0125",
+      "query": "giay",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0126",
+      "query": "thit",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0129",
+      "query": "dụng cụ vệ sinh nhà cửa",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0132",
+      "query": "chay",
+      "dimension": "part1_smartsearch",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0133",
+      "query": "dầu gội dau lchoice",
+      "dimension": "part1_smartsearch",
+      "match_category": "LOW_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    },
+    {
+      "test_id": "NSG-P1-0149",
+      "query": "sữa bột p",
+      "dimension": "part1_autocomplete",
+      "match_category": "PARTIAL_MATCH",
+      "pass_fail_status": "failed",
+      "prev_last_run_at": "2026-09-29T16:10:55.838653"
+    }
+  ],
+  "pass_fail_state_file": "SmartSearch\\test_data\\compare\\pass_fail_state_nsg.json",
+  "pass_fail_store": "nsg"
+}
